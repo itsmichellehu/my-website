@@ -277,9 +277,9 @@
       <div class="wrapper">
         <h2>What's in my toolbox</h2>
         <div class="contentWrapper">
-          <!-- Design tools -->
-          <div class="container">
-            <div class="tools-grid-container">
+          <!-- Design tools (desktop-view)-->
+          <div class="desktop-only"> 
+            <div class="desktop-only tools-grid-container">
               <div class="grid-item">
                 <div id="figma">
                   <img
@@ -326,219 +326,39 @@
                 <p>Sketch</p>
               </div>
               <div class="grid-item">
-                <div id="figma">
+                <div id="adobeXD">
                   <img
-                    src="/assets/images/toolbox-logos/logo-adobeXD.svg"
+                    src="/assets/images/toolbox-logos/logo-adobe-xd.png"
                     alt=""
-                  /> 
+                  />
                 </div>
-                <p>Adobe XD</p> 
+                <p>Adobe XD</p>
               </div>
               <div class="grid-item">
                 <div id="adobe">
                   <img
-                    src="/assets/images/toolbox-logos/logo-photoshop.svg"
+                    src="/assets/images/toolbox-logos/logo-photoshop.png"
                     alt=""
                   />
                 </div>
                 <p>Photoshop</p>
               </div>
               <div class="grid-item">
-                <div id="procreate">
+                <div id="adobe"> 
                   <img
-                    src="/assets/images/toolbox-logos/logo-procreate.png"
+                    src="/assets/images/toolbox-logos/logo-lightroom.svg" 
                     alt=""
                   />
                 </div>
-                <p>Procreate</p>
+                <p>Lightroom</p>
               </div>
-            </div>
-            <p>Design</p>
+            </div> 
+            <p id="desktop-only">Design</p>  
           </div>
-          <!-- Design (mobile-view) -->
-          <div id="frontendTools-swipe">
-            <div class="swiper mySwiper">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide" style="padding-right: 1rem">
-                  <div class="grid-item">
-                    <div>
-                      <img
-                        src="/assets/images/toolbox-logos/logo-html5.png"
-                        alt=""
-                      />
-                    </div>
-                    <p>HTML5</p>
-                  </div>
-                  <div class="grid-item">
-                    <div>
-                      <img
-                        src="/assets/images/toolbox-logos/logo-CSS.png"
-                        alt=""
-                      />
-                    </div>
-                    <p>CSS</p> 
-                  </div>
-                  <div class="grid-item">
-                    <div>
-                      <img
-                        src="/assets/images/toolbox-logos/logo-sass.svg"
-                        alt=""
-                      /> 
-                    </div>
-                    <p>SCSS</p>
-                  </div>
-                  <div class="grid-item">
-                    <div>
-                      <img
-                        src="/assets/images/toolbox-logos/logo-javascript.png"
-                        alt=""
-                      />
-                    </div>
-                    <p>Javascript</p>
-                  </div>
-                  <div class="grid-item">
-                    <div>
-                      <img
-                        src="/assets/images/toolbox-logos/logo-vscode.png"
-                        alt=""
-                      />
-                    </div>
-                    <p>VSCode</p>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="grid-item">
-                    <div id="github">
-                      <img
-                        src="/assets/images/toolbox-logos/logo-github.png"
-                        alt=""
-                      />
-                    </div>
-                    <p>Github</p>
-                  </div>
-                  <div class="grid-item">
-                    <div>
-                      <img
-                        src="/assets/images/toolbox-logos/logo-git.png"
-                        alt=""
-                      />
-                    </div>
-                    <p>Git</p>
-                  </div>
-                  <div class="grid-item">
-                    <div>
-                      <img
-                        src="/assets/images/toolbox-logos/logo-nodejs.png"
-                        alt=""
-                      />
-                    </div>
-                    <p>node.js</p>
-                  </div>
-                  <div class="grid-item">
-                    <div>
-                      <img
-                        src="/assets/images/toolbox-logos/logo-react.png"
-                        alt=""
-                      />
-                    </div>
-                    <p>React</p>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-pagination"></div>
-            </div>
-            <p>Frontend Development</p>
-          </div>
-          <!-- Frontend development (mobile-view) -->
-          <div id="frontendTools-swipe"> 
-            <div class="swiper mySwiper">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide" style="padding-right: 1rem">
-                  <div class="grid-item">
-                    <div>
-                      <img
-                        src="/assets/images/toolbox-logos/logo-html5.png"
-                        alt=""
-                      />
-                    </div>
-                    <p>HTML5</p>
-                  </div>
-                  <div class="grid-item">
-                    <div>
-                      <img
-                        src="/assets/images/toolbox-logos/logo-CSS.png"
-                        alt=""
-                      />
-                    </div>
-                    <p>CSS</p>
-                  </div>
-                  <div class="grid-item">
-                    <div>
-                      <img
-                        src="/assets/images/toolbox-logos/logo-javascript.png"
-                        alt=""
-                      />
-                    </div>
-                    <p>Javascript</p>
-                  </div>
-                  <div class="grid-item">
-                    <div>
-                      <img
-                        src="/assets/images/toolbox-logos/logo-vscode.png"
-                        alt=""
-                      />
-                    </div>
-                    <p>VSCode</p>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="grid-item">
-                    <div id="github">
-                      <img
-                        src="/assets/images/toolbox-logos/logo-github.png"
-                        alt=""
-                      />
-                    </div>
-                    <p>Github</p>
-                  </div>
-                  <div class="grid-item">
-                    <div>
-                      <img
-                        src="/assets/images/toolbox-logos/logo-git.png"
-                        alt=""
-                      />
-                    </div>
-                    <p>Git</p>
-                  </div>
-                  <div class="grid-item">
-                    <div>
-                      <img
-                        src="/assets/images/toolbox-logos/logo-nodejs.png"
-                        alt=""
-                      />
-                    </div>
-                    <p>node.js</p>
-                  </div>
-                  <div class="grid-item">
-                    <div>
-                      <img
-                        src="/assets/images/toolbox-logos/logo-react.png"
-                        alt=""
-                      />
-                    </div>
-                    <p>React</p>
-                  </div>
-                </div>
-              </div>
 
-              <div class="swiper-pagination"></div>
-            </div>
-            <p>Frontend Development</p>
-          </div>
-          
           <!-- Frontend development (desktop-view) -->
-          <div class="container">
-            <div class="tools-grid-container">
+          <div>
+            <div class="desktop-only tools-grid-container"> 
               <div class="grid-item">
                 <div id="whiteBG">
                   <img
@@ -606,6 +426,190 @@
                 <p>React</p>
               </div>
             </div>
+          </div>
+          <div class="desktop-only">
+            <p>Frontend Development</p>
+          </div>
+          <!-- Design (mobile-view) -->
+          <div class="tools-swipe">
+            <div class="swiper mySwiper">
+              <div class="swiper-wrapper">
+                <div id="designtools" class="swiper-slide">
+                  <div class="grid-item">
+                    <div id="figma">
+                      <img
+                        src="/assets/images/toolbox-logos/logo-figma.png"
+                        alt=""
+                      />
+                    </div>
+                    <p>Figma</p>
+                  </div>
+                  <div class="grid-item">
+                    <div id="miro">
+                      <img
+                        src="/assets/images/toolbox-logos/logo-miro.png"
+                        alt=""
+                      />
+                    </div>
+                    <p>Miro</p>
+                  </div>
+                  <div class="grid-item">
+                    <div id="webflow">
+                      <img
+                        src="/assets/images/toolbox-logos/logo-webflow.png"
+                        alt=""
+                      />
+                    </div>
+                    <p>Webflow</p>
+                  </div>
+                  <div class="grid-item">
+                    <div id="whiteBG">
+                      <img
+                        src="/assets/images/toolbox-logos/logo-sketch.png"
+                        alt=""
+                      />
+                    </div>
+                    <p>Sketch</p>
+                  </div>
+                  <div class="grid-item">
+                    <div id="adobeXD">
+                      <img
+                        src="/assets/images/toolbox-logos/logo-adobe-xd.png"
+                        alt=""
+                      />
+                    </div> 
+                    <p style="text-wrap: nowrap">Adobe XD</p>
+                  </div>
+                </div>
+                <div class="swiper-slide" style="padding-right: 1rem">
+                  <div class="grid-item">
+                    <div id="adobe">
+                      <img
+                        src="/assets/images/toolbox-logos/logo-photoshop.png"
+                        alt=""
+                      />
+                    </div>
+                    <p>Photoshop</p>
+                  </div>
+                  <div class="grid-item">
+                    <div id="adobe">
+                      <img
+                        src="/assets/images/toolbox-logos/logo-lightroom.svg "
+                        alt=""
+                      />
+                    </div>
+                    <p>Lightroom</p>
+                  </div>
+                  <div class="grid-item">
+                    <div id="procreate">
+                      <img
+                        src="/assets/images/toolbox-logos/logo-procreate.png"
+                        alt=""
+                      />
+                    </div>
+                    <p>Procreate</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="swiper-pagination"></div>
+            </div>
+            <p>Frontend Development</p>
+          </div>
+          <!-- Frontend development (mobile-view) -->
+          <div class="tools-swipe">
+            <div class="swiper mySwiper">
+              <div class="swiper-wrapper">
+                <div id="devTools" class="swiper-slide">
+                  <div class="grid-item">
+                    <div>
+                      <img
+                        src="/assets/images/toolbox-logos/logo-html5.png"
+                        alt=""
+                      />
+                    </div>
+                    <p>HTML5</p>
+                  </div>
+                  <div class="grid-item">
+                    <div>
+                      <img
+                        src="/assets/images/toolbox-logos/logo-CSS.png"
+                        alt=""
+                      />
+                    </div>
+                    <p>CSS</p>
+                  </div>
+                  <div class="grid-item">
+                    <div>
+                      <img
+                        src="/assets/images/toolbox-logos/logo-sass.svg"
+                        alt=""
+                      />
+                    </div>
+                    <p>SCSS</p>
+                  </div>
+                  <div class="grid-item">
+                    <div>
+                      <img
+                        src="/assets/images/toolbox-logos/logo-javascript.png"
+                        alt=""
+                      />
+                    </div>
+                    <p>Javascript</p>
+                  </div>
+                  <div class="grid-item">
+                    <div>
+                      <img
+                        src="/assets/images/toolbox-logos/logo-vscode.png"
+                        alt=""
+                      />
+                    </div>
+                    <p>VSCode</p>
+                  </div>
+                </div>
+                <div class="swiper-slide" style="padding-right: 1rem">
+                  <div class="grid-item">
+                    <div id="github">
+                      <img
+                        src="/assets/images/toolbox-logos/logo-github.png"
+                        alt=""
+                      />
+                    </div>
+                    <p>Github</p>
+                  </div>
+                  <div class="grid-item">
+                    <div>
+                      <img
+                        src="/assets/images/toolbox-logos/logo-git.png"
+                        alt=""
+                      />
+                    </div>
+                    <p>Git</p>
+                  </div>
+                  <div class="grid-item">
+                    <div>
+                      <img
+                        class="height-auto"
+                        src="/assets/images/toolbox-logos/logo-nodejs.png"
+                        alt=""
+                      />
+                    </div>
+                    <p>node.js</p>
+                  </div>
+                  <div class="grid-item">
+                    <div>
+                      <img
+                        src="/assets/images/toolbox-logos/logo-react.png"
+                        alt=""
+                      />
+                    </div>
+                    <p>React</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="swiper-pagination"></div>
+            </div>
             <p>Frontend Development</p>
           </div>
           <!-- Project management tools -->
@@ -633,12 +637,6 @@
             <p>Project Management</p>
           </div>
         </div>
-        <div id="otherTools">
-          <p>
-            <span>Other design tools: </span>Sketch, Adobe XD, Invision, Canva,
-            Adobe Lightroom, Adobe Photoshop
-          </p>
-        </div>
       </div>
     </section>
     <section id="faqs">
@@ -647,7 +645,7 @@
         <div>
           <div class="accordion" onclick="toggleAccordion(this)">
             <button class="accordionHeader">
-              Why did you pursue product design and frontend development?
+              <p>Why did you pursue product design and frontend development?</p>
               <span class="ic-arrowDown--lined arrow"> </span>
             </button>
             <div class="accordionContent">
@@ -663,7 +661,7 @@
           </div>
           <div class="accordion" onclick="toggleAccordion(this)">
             <button class="accordionHeader">
-              What has your design journey has been like?
+              <p>What has your design journey has been like?</p>
               <span class="ic-arrowDown--lined arrow"> </span>
             </button>
             <div class="accordionContent">
@@ -679,7 +677,7 @@
           </div>
           <div class="accordion" onclick="toggleAccordion(this)">
             <button class="accordionHeader">
-              How did you transition into tech?
+              <p>How did you transition into tech?</p>
               <span class="ic-arrowDown--lined arrow"> </span>
             </button>
             <div class="accordionContent">
@@ -695,7 +693,7 @@
           </div>
           <div class="accordion" onclick="toggleAccordion(this)">
             <button class="accordionHeader">
-              What are your design values?
+              <p>What are your design values?</p>
               <span class="ic-arrowDown--lined arrow"> </span>
             </button>
             <div class="accordionContent">
@@ -711,7 +709,7 @@
           </div>
           <div class="accordion" onclick="toggleAccordion(this)">
             <button class="accordionHeader">
-              Where did you learn all this??
+              <p>Where did you learn all this??</p>
               <span class="ic-arrowDown--lined arrow"> </span>
             </button>
             <div class="accordionContent">
@@ -798,6 +796,6 @@
     <script src="/assets/js/navBar.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="/assets/js/home-page/accordion.js"></script>
-    <script src="/assets/js/toolboxSwipe.js"></script> 
+    <script src="/assets/js/toolboxSwipe.js"></script>
   </body>
 </html>
