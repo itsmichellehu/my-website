@@ -1063,9 +1063,10 @@ button {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 1rem 0;
+      padding: 1.25rem 0; 
+      border-radius: 0; 
       width: 100%;
-      border-left: 0.5rem solid #dc1d25; // Solid red border only on the left
+      height: fit-content;
       border: 0;
       cursor: pointer;
       overflow: hidden;
@@ -1078,10 +1079,11 @@ button {
         font-weight: 600;
         line-height: 130%;
         text-align: left;
+        margin: 0;
       }
 
       &:focus p {
-        color: $emphasis-blue;
+        color: $emphasis-blue; 
       }
     }
 
@@ -1189,7 +1191,8 @@ button {
   }
 }
 
-#hmu-swiper,
+// Old design black boring cards -yawns-
+#hmu-swiper-old,
 .swiper {
   width: 85vw;
   height: 220px;
@@ -1248,7 +1251,8 @@ button {
   }
 }
 
-#hmu-swiper-new {
+// New design!
+#hmu-swiper { 
   background-color: #000;
   h2 {
     color: white;
