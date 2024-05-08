@@ -478,7 +478,7 @@ button {
       z-index: 1;
       width: 100vw; // Takes the full width of the container
       height: calc(50vh + 2rem); // Fixed height
-      background-image: url("/assets/images/home/portrait-taiwan-bw.png");
+      background-image: url("/public/images/home/portrait-taiwan-bw.png");
       background-position: center; // Centers the background image
       background-repeat: no-repeat; // No repeat of the background
       background-size: cover; // Cover ensures the image covers the full area of the div
@@ -599,11 +599,11 @@ button {
   /* About Hero Buttons */
 
   .ic-menu {
-    content: url(/assets/svg/ic-menu.svg);
+    content: url(/public/svg/ic-menu.svg);
   }
 
   .img-logo {
-    content: url(/assets/images/michellehu-logo.png);
+    content: url(/public/images/michellehu-logo.png);
   }
 }
 
@@ -1292,7 +1292,7 @@ button {
 }
 
 .ic-arrowDown--lined {
-  content: url(/assets/svg/ic-arrowDown_lined--black.svg);
+  content: url(/public/svg/ic-arrowDown_lined--black.svg);
 }
 
 #hmu {

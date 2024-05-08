@@ -17,7 +17,7 @@ function createCard(
 
   const img = document.createElement('img');
   img.className = `icon--${iconSize}`;
-  img.src = `/assets/svg/${iconName}`;
+  img.src = `/public/svg/${iconName}`;
   cardElement.appendChild(img);
 
   const p = document.createElement('p');

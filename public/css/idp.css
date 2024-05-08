@@ -1254,7 +1254,7 @@ hr {
 }
 
 .ic-arrowDown--lined {
-  content: url(/assets/svg/ic-arrowDown_lined--black.svg);
+  content: url(/public/svg/ic-arrowDown_lined--black.svg);
 }
 
 .gallery::after {
@@ -1323,7 +1323,7 @@ hr {
   width: 40px;
   height: 40px;
   border-radius: 25px;
-  background-image: url(/assets/images/idp-casestudy/pat-crosscombe-headshot.png);
+  background-image: url(/public/images/idp-casestudy/pat-crosscombe-headshot.png);
   background-size: cover;
   background-position: 50% 50%;
 }

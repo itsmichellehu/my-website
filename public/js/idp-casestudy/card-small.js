@@ -44,8 +44,8 @@ function cardSmall(iconSrc, iconSize, headline, containerSelector = '.values-gri
 }
 
 // "BoardSpace user needs and values" cards content
-cardSmall('/assets/svg/ic_searchDocument.svg', 'xs', 'Findability');
-cardSmall('/assets/svg/ic_efficiency.svg', 'xs', 'Efficiency');
-cardSmall('/assets/svg/ic_compliance.svg', 'xs', 'Compliance');
-cardSmall('/assets/svg/ic_security.svg', 'xs', 'Security');
-cardSmall('/assets/svg/ic_transparency.svg', 'xs', 'Transparency');
+cardSmall('/public/svg/ic_searchDocument.svg', 'xs', 'Findability');
+cardSmall('/public/svg/ic_efficiency.svg', 'xs', 'Efficiency');
+cardSmall('/public/svg/ic_compliance.svg', 'xs', 'Compliance');
+cardSmall('/public/svg/ic_security.svg', 'xs', 'Security');
+cardSmall('/public/svg/ic_transparency.svg', 'xs', 'Transparency');

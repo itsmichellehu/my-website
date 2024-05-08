@@ -1,95 +1,28 @@
-@charset "utf-8";
-
-$outline-stroke: 1.25px;
-$container-width: 90%;
-$container-maxWidth: 936px;
-$teal: #45b5aa;
-$yellow: #f0c05a;
-$red-orange: #e2583e;
-$tan: #decdbd;
-$dark-grey: #565656;
-$off-black: #4a4a4a;
-$emphasis-blue: #4479df;
-$medium-grey: #757575;
-$lightest-grey: #f9f9f9;
-$invalid-red: #dc1d25;
-$white: #ffffff;
-$medium-light-grey: #dbdbdb;
-$light-grey: #f0f0f0;
-$light-blue: #e7ecff;
-$black: #1e1e1e;
-$sub-grey: #cfcfcf;
-$emphasis: #e2583e;
-
-//Media breakpoints
-$breakpoints: (
-  mobile-sm: 320px,
-  mobile-med: 375px,
-  mobile-lg: 425px,
-  sm: 576px,
-  med: 768px,
-  lg: 992px,
-  xl: 1200px,
-);
-
-@mixin breakpoint($name) {
-  @if map-has-key($breakpoints, $name) {
-    @media (min-width: map-get($breakpoints, $name)) {
-      @content;
-    }
-  } @else {
-    @error "Unknown breakpoint: #{$name}. Please use one of: #{map-keys($breakpoints)}.";
-  }
+.iconSize-xs {
+  width: 24px;
+  height: 24px;
 }
-
-@mixin iconSize($size) {
-  @if $size == "xs" {
-    width: 24px;
-    height: 24px;
-  } @else if $size == "sm" {
-    width: 32px;
-    height: 32px;
-  } @else if $size == "med" {
-    width: 40px;
-    height: 40px;
-  } @else if $size == "lg" {
-    width: 56px;
-    height: 56px;
-  } @else if $size == "xl" {
-    width: 64px;
-    height: 64px;
-  }
+.iconSize-sm {
+  width: 32px;
+  height: 32px;
 }
-
-.iconSize {
-  &-xs {
-    width: 24px;
-    height: 24px;
-  }
-
-  &-sm {
-    width: 32px;
-    height: 32px;
-  }
-
-  &-med {
-    width: 40px;
-    height: 40px;
-  }
-
-  &-lg {
-    width: 64px;
-    height: 64px;
-  }
-
-  &-xl {
-    width: 80px;
-    height: 80px;
-  }
+.iconSize-med {
+  width: 40px;
+  height: 40px;
+}
+.iconSize-lg {
+  width: 64px;
+  height: 64px;
+}
+.iconSize-xl {
+  width: 80px;
+  height: 80px;
 }
 
 html {
-  text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+     -moz-text-size-adjust: none;
+          text-size-adjust: none;
   padding: 0;
   margin: 0;
   width: 100vw;
@@ -101,16 +34,15 @@ html {
 }
 
 .noto-serif {
-  color: $black;
+  color: #1e1e1e;
   font-family: "Noto Serif", serif;
   font-size: 1.125rem;
   font-weight: 350;
-  line-height: 160%; // 28.8px
+  line-height: 160%;
 }
 
-// Typography
 p {
-  color: $black;
+  color: #1e1e1e;
   font-family: "Inter", sans-serif;
   font-size: 1rem;
   font-style: normal;
@@ -119,11 +51,12 @@ p {
   text-align: left;
   margin-top: 0;
   margin-bottom: 1.125rem;
-  color: $off-black;
+  color: #4a4a4a;
   align-self: stretch;
   text-align: left;
-
-  @include breakpoint("mobile-lg") {
+}
+@media (min-width: 425px) {
+  p {
     font-size: 1.125rem;
     margin-bottom: 1.125rem;
   }
@@ -154,7 +87,6 @@ h6 {
   margin: 0;
 }
 
-// Font weight
 .fw-normal {
   font-weight: 400;
 }
@@ -171,7 +103,6 @@ h6 {
   display: none;
 }
 
-// Padding and margins
 .margin-0 {
   margin: 0;
 }
@@ -208,27 +139,20 @@ h6 {
   padding-left: 1.5rem;
 }
 
-//--vertical padding
-.pd-v {
-  &-xs {
-    padding: 0.5rem 0;
-  }
-
-  &-sm {
-    padding: 1rem 0;
-  }
-
-  &-med {
-    padding: 1.5rem 0;
-  }
-
-  &-lg {
-    padding: 2rem 0;
-  }
-
-  &-xl {
-    padding: 2.5;
-  }
+.pd-v-xs {
+  padding: 0.5rem 0;
+}
+.pd-v-sm {
+  padding: 1rem 0;
+}
+.pd-v-med {
+  padding: 1.5rem 0;
+}
+.pd-v-lg {
+  padding: 2rem 0;
+}
+.pd-v-xl {
+  padding: 2.5;
 }
 
 .pd-v- {
@@ -252,18 +176,19 @@ h6 {
   justify-content: center;
   align-items: center;
 }
+
 .flex-row {
   display: flex;
   flex-direction: row;
   align-self: stretch;
   flex-wrap: nowrap;
 }
+
 .flex-col {
   display: flex;
   flex-direction: column;
 }
 
-// Spacing
 .gap-8px {
   gap: 8px;
 }
@@ -284,7 +209,6 @@ h6 {
   gap: 0;
 }
 
-// Alignment
 .items-center {
   align-items: center;
 }
@@ -310,7 +234,6 @@ h6 {
   align-self: stretch;
 }
 
-// Flexbox styles
 .flex {
   display: flex;
 }
@@ -372,122 +295,111 @@ h6 {
     display: none;
   }
 }
-
 #hero {
   display: flex;
   background: linear-gradient(0deg, #8658b6, #5d62e8);
   padding: 1rem 0;
-
-  .wrapper {
-    display: flex;
-    flex-direction: column;
-    margin: auto;
-    width: 90%;
-    align-items: center;
-
-    img {
-      display: flex;
-      width: 100vw;
-      max-height: 65vh;
-      margin-top: -24px;
-      justify-content: center;
-      align-items: flex-start;
-      overflow: hidden;
-    }
-
-    .textWrapper {
-      display: flex;
-      align-items: flex-start;
-      flex-direction: column;
-      gap: 1rem;
-      padding: 1.5rem 0;
-      width: 100%;
-      
-
-      #title {
-        .subheader {
-          font-size: 1.125rem;
-          font-style: normal;
-          font-weight: 500;
-          line-height: 100%;
-          letter-spacing: 0.36px;
-          color: white; // Added color as per the class 'white' in your HTML
-          margin-bottom: 0.5rem;
-        }
-
-        #fullName_wrapper {
-          display: flex;
-          flex-direction: row;
-          gap: 1rem;
-          align-items: center;
-
-          #michelleHu {
-            font-size: 3rem;
-            font-style: normal;
-            font-weight: 600;
-            line-height: 100%;
-            letter-spacing: -2px;
-            color: white; // Assuming you want to apply the 'white' class style
-          }
-
-          #pronouns {
-            color: #1e1e1e;
-            font-size: 4vw;
-            font-style: normal;
-            font-weight: 600;
-            line-height: 100%;
-          }
-        }
-      }
-
-      #heroBio {
-        display: flex;
-        flex-direction: column;
-        gap: 0.625rem;
-        margin-bottom: 0.5rem;
-
-        p {
-          font-family: Inter;
-          font-size: 1.125rem;
-          font-style: normal;
-          font-weight: 600;
-          line-height: 135%;
-          color: white;
-          margin: 0;
-        }
-
-        #productDesigner {
-          background-color: #5cffe2;
-          border-radius: 0.1rem;
-          padding: 0.4rem 0.5rem;
-          flex-wrap: nowrap;
-          color: $off-black;
-          font-style: normal;
-          font-weight: 600;
-          line-height: 125%;
-          white-space: nowrap;
-          width: fit-content;
-          height:fit-content;
-          font-size: 1.125rem;
-        }
-
-        #frontendDev {
-          background-color: #fcff56;
-          border-radius: 0.1rem;
-          padding: 0.4rem 0.5rem;
-          flex-wrap: nowrap;
-          color: $off-black;
-          font-style: normal;
-          font-weight: 600;
-          line-height: 125%;
-          white-space: nowrap;
-          width: fit-content;
-          height:fit-content;
-          font-size: 1.125rem;
-        }
-      }
-    }
-  }
+}
+#hero .wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  width: 90%;
+  align-items: center;
+}
+#hero .wrapper img {
+  display: flex;
+  width: 100vw;
+  max-height: 65vh;
+  margin-top: -24px;
+  justify-content: center;
+  align-items: flex-start;
+  overflow: hidden;
+}
+#hero .wrapper .textWrapper {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1.5rem 0;
+  width: 100%;
+}
+#hero .wrapper .textWrapper #title .subheader {
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 100%;
+  letter-spacing: 0.36px;
+  color: white;
+  margin-bottom: 0.5rem;
+}
+#hero .wrapper .textWrapper #title #fullName_wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: center;
+}
+#hero .wrapper .textWrapper #title #fullName_wrapper #michelleHu {
+  font-size: 3rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 100%;
+  letter-spacing: -2px;
+  color: white;
+}
+#hero .wrapper .textWrapper #title #fullName_wrapper #pronouns {
+  color: #1e1e1e;
+  font-size: 4vw;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 100%;
+}
+#hero .wrapper .textWrapper #heroBio {
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+  margin-bottom: 0.5rem;
+}
+#hero .wrapper .textWrapper #heroBio p {
+  font-family: Inter;
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 135%;
+  color: white;
+  margin: 0;
+}
+#hero .wrapper .textWrapper #heroBio #productDesigner {
+  background-color: #5cffe2;
+  border-radius: 0.1rem;
+  padding: 0.4rem 0.5rem;
+  flex-wrap: nowrap;
+  color: #4a4a4a;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 125%;
+  white-space: nowrap;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  font-size: 1.125rem;
+}
+#hero .wrapper .textWrapper #heroBio #frontendDev {
+  background-color: #fcff56;
+  border-radius: 0.1rem;
+  padding: 0.4rem 0.5rem;
+  flex-wrap: nowrap;
+  color: #4a4a4a;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 125%;
+  white-space: nowrap;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  font-size: 1.125rem;
 }
 
 #heroButtons {
@@ -501,7 +413,6 @@ h6 {
 }
 
 /* About Hero Buttons */
-
 button {
   display: flex;
   height: 2.5rem;
@@ -518,16 +429,13 @@ button {
   background-color: transparent;
 }
 
-.btn {
-  &-primary {
-    background-color: white;
-    color: $off-black;
-  }
-
-  &-secondary {
-    border: 1.5px solid var(--Colors-White, #fff);
-    color: white;
-  }
+.btn-primary {
+  background-color: white;
+  color: #4a4a4a;
+}
+.btn-secondary {
+  border: 1.5px solid var(--Colors-White, #fff);
+  color: white;
 }
 
 .btn-text {
@@ -536,12 +444,14 @@ button {
   font-weight: 500;
   line-height: normal;
 }
+
 .button-icon_wrapper {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   gap: 16px; /* Adjust as needed */
 }
+
 #hero_button-icon {
   border-radius: 7px;
   width: 40px;
@@ -551,15 +461,14 @@ button {
 }
 
 .ic-menu {
-  content: url(/assets/svg/ic-menu.svg);
+  content: url(/public/svg/ic-menu.svg);
 }
 
 .img-logo {
-  content: url(/assets/images/michellehu-logo.png);
+  content: url(/public/images/michellehu-logo.png);
 }
 
 /*-----Here's a little about me-----*/
-
 .aboutMe_container {
   display: flex;
   flex-direction: column;
@@ -581,6 +490,7 @@ button {
 
 #aboutMe_heading-small {
   text-wrap: nowrap;
+  width: -moz-fit-content;
   width: fit-content;
   padding: 8px;
   background: var(--Colors-White, #fff);
@@ -598,6 +508,7 @@ button {
   display: flex;
   text-wrap: nowrap;
   transform: rotate(-3deg);
+  width: -moz-fit-content;
   width: fit-content;
   padding: 10px;
   justify-content: center;
@@ -628,7 +539,6 @@ button {
     align-items: flex-start;
     width: 100vw;
   }
-
   .hero_section {
     display: flex;
     background: linear-gradient(0deg, #8658b6, #5d62e8);
@@ -638,7 +548,6 @@ button {
     justify-content: center;
     align-items: center;
   }
-
   .hero_container {
     display: flex;
     width: 90%;
@@ -646,7 +555,6 @@ button {
     align-items: center;
     gap: 64px;
   }
-
   .hero_image {
     display: flex;
     width: 35%;
@@ -655,11 +563,9 @@ button {
     border-radius: 1000px;
     overflow: hidden;
   }
-
   #img_portrait {
     width: 100%;
   }
-
   .hero_content {
     display: flex;
     height: 519px;
@@ -669,9 +575,7 @@ button {
     gap: 24px;
     flex: 1 0 0;
   }
-
   /*About Hero Title */
-
   #hero_title-container {
     display: flex;
     align-items: flex-start;
@@ -679,7 +583,6 @@ button {
     gap: 16px;
     align-self: stretch;
   }
-
   #hero_title-content {
     display: flex;
     flex-direction: row;
@@ -687,7 +590,6 @@ button {
     align-self: stretch;
     align-items: center;
   }
-
   #titleFullName {
     font-size: 5.16rem;
     font-style: normal;
@@ -696,7 +598,6 @@ button {
     /* 82.56px */
     letter-spacing: -2.477px;
   }
-
   #pronouns {
     color: #b9b9b9;
     font-size: 20px;
@@ -705,7 +606,6 @@ button {
     line-height: 125%;
     letter-spacing: -0.691px;
   }
-
   /* About Hero Content */
   .hero_body {
     display: flex;
@@ -714,7 +614,6 @@ button {
     align-content: center;
     align-self: stretch;
   }
-
   .hero_body-text {
     font-family: Inter;
     font-size: 33.18px;
@@ -724,7 +623,6 @@ button {
     /* 41.475px */
     letter-spacing: -0.995px;
   }
-
   #hero_productDesigner {
     background-color: #5cffe2;
     transform: rotate(2deg);
@@ -738,7 +636,6 @@ button {
     line-height: 125%;
     letter-spacing: -0.995px;
   }
-
   #hero_frontendDev {
     background-color: #fcff56;
     transform: rotate(-2deg);
@@ -752,7 +649,6 @@ button {
     line-height: 125%;
     letter-spacing: -0.995px;
   }
-
   /* About Hero Buttons */
   .hero_buttons {
     display: flex;
@@ -761,7 +657,6 @@ button {
     align-self: stretch;
     flex-direction: row;
   }
-
   .button-primary {
     display: flex;
     height: 48px;
@@ -771,7 +666,6 @@ button {
     border-radius: 25px;
     background: #f6f6f6;
   }
-
   .button-secondary {
     display: flex;
     height: 48px;
@@ -781,21 +675,18 @@ button {
     border-radius: 25px;
     border: 1.5px solid var(--Colors-White, #fff);
   }
-
   .button-text {
     font-size: 16px;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
   }
-
   #hero_button-icon {
     border-radius: 7px;
     width: 40px;
     height: 40px;
     overflow: hidden;
   }
-
   /*-----Here's a little about me-----*/
   .aboutMe_section {
     display: flex;
@@ -804,7 +695,6 @@ button {
     justify-items: center;
     background: var(--Colors-Off-Black, #1e1e1e);
   }
-
   .aboutMe_container {
     display: flex;
     flex-direction: row;
@@ -814,7 +704,6 @@ button {
     margin: auto;
     padding: 72px 0 72px 0;
   }
-
   .aboutMe_heading {
     display: flex;
     flex-direction: column;
@@ -823,9 +712,9 @@ button {
     gap: -7.5px;
     width: 30%;
   }
-
   #aboutMe_heading-small {
     text-wrap: nowrap;
+    width: -moz-fit-content;
     width: fit-content;
     padding: 12px;
     background: var(--Colors-White, #fff);
@@ -839,11 +728,11 @@ button {
     display: inline-block;
     /* or display: inline; depending on your design */
   }
-
   #aboutMe_heading-large {
     display: flex;
     text-wrap: nowrap;
     transform: rotate(-3deg);
+    width: -moz-fit-content;
     width: fit-content;
     padding: 16px;
     justify-content: center;
@@ -858,7 +747,6 @@ button {
     line-height: 100%;
     letter-spacing: -3.92px;
   }
-
   .bio {
     color: var(--Colors-White, #fff);
     font-family: Inter;
@@ -868,7 +756,6 @@ button {
     line-height: 135%;
   }
 }
-
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media (min-width: 1200px) {
   .about-layout {
@@ -877,7 +764,6 @@ button {
     align-items: flex-start;
     width: 100vw;
   }
-
   .hero_section {
     display: flex;
     background: linear-gradient(0deg, #8658b6, #5d62e8);
@@ -887,7 +773,6 @@ button {
     justify-content: center;
     align-items: center;
   }
-
   .hero_container {
     display: flex;
     width: 90%;
@@ -895,7 +780,6 @@ button {
     align-items: center;
     gap: 64px;
   }
-
   .hero_image {
     display: flex;
     width: 40%;
@@ -905,11 +789,9 @@ button {
     border-radius: 1000px;
     overflow: hidden;
   }
-
   #img_portrait {
     width: 100%;
   }
-
   .hero_content {
     display: flex;
     height: 519px;
@@ -919,9 +801,7 @@ button {
     gap: 24px;
     flex: 1 0 0;
   }
-
   /*About Hero Title */
-
   #hero_title-container {
     display: flex;
     align-items: flex-start;
@@ -929,7 +809,6 @@ button {
     gap: 16px;
     align-self: stretch;
   }
-
   #hero_title-content {
     display: flex;
     flex-direction: row;
@@ -937,7 +816,6 @@ button {
     align-self: stretch;
     align-items: center;
   }
-
   #hero_title {
     font-size: 5.16rem;
     font-style: normal;
@@ -946,7 +824,6 @@ button {
     /* 82.56px */
     letter-spacing: -2.477px;
   }
-
   #pronouns {
     color: #b9b9b9;
     font-size: 23.04px;
@@ -955,7 +832,6 @@ button {
     line-height: 125%;
     letter-spacing: -0.691px;
   }
-
   /* About Hero Content */
   .hero_body {
     display: flex;
@@ -964,7 +840,6 @@ button {
     align-content: center;
     align-self: stretch;
   }
-
   .hero_body-text {
     font-family: Inter;
     font-size: 33.18px;
@@ -974,7 +849,6 @@ button {
     /* 41.475px */
     letter-spacing: -0.995px;
   }
-
   #hero_productDesigner {
     background-color: #5cffe2;
     transform: rotate(2deg);
@@ -988,7 +862,6 @@ button {
     line-height: 125%;
     letter-spacing: -0.995px;
   }
-
   #hero_frontendDev {
     background-color: #fcff56;
     transform: rotate(-2deg);
@@ -1002,7 +875,6 @@ button {
     line-height: 125%;
     letter-spacing: -0.995px;
   }
-
   /* About Hero Buttons */
   .hero_buttons {
     display: flex;
@@ -1011,7 +883,6 @@ button {
     align-self: stretch;
     flex-direction: row;
   }
-
   .button-primary {
     display: flex;
     height: 48px;
@@ -1021,7 +892,6 @@ button {
     border-radius: 25px;
     background: #f6f6f6;
   }
-
   .button-secondary {
     display: flex;
     height: 48px;
@@ -1031,21 +901,18 @@ button {
     border-radius: 25px;
     border: 1.5px solid var(--Colors-White, #fff);
   }
-
   .button-text {
     font-size: 16px;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
   }
-
   #hero_button-icon {
     border-radius: 7px;
     width: 40px;
     height: 40px;
     overflow: hidden;
   }
-
   /*-----Here's a little about me-----*/
   .aboutMe_section {
     display: flex;
@@ -1054,7 +921,6 @@ button {
     justify-items: center;
     background: var(--Colors-Off-Black, #1e1e1e);
   }
-
   .aboutMe_container {
     display: flex;
     flex-direction: row;
@@ -1064,7 +930,6 @@ button {
     margin: auto;
     padding: 72px 0 72px 0;
   }
-
   .aboutMe_heading {
     display: flex;
     flex-direction: column;
@@ -1073,9 +938,9 @@ button {
     gap: -7.5px;
     width: 30%;
   }
-
   #aboutMe_heading-small {
     text-wrap: nowrap;
+    width: -moz-fit-content;
     width: fit-content;
     padding: 12px;
     background: var(--Colors-White, #fff);
@@ -1089,11 +954,11 @@ button {
     display: inline-block;
     /* or display: inline; depending on your design */
   }
-
   #aboutMe_heading-large {
     display: flex;
     text-wrap: nowrap;
     transform: rotate(-3deg);
+    width: -moz-fit-content;
     width: fit-content;
     padding: 16px;
     justify-content: center;
@@ -1108,7 +973,6 @@ button {
     line-height: 100%;
     letter-spacing: -3.92px;
   }
-
   .bio {
     color: var(--Colors-White, #fff);
     font-family: Inter;
