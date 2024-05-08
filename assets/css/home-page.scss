@@ -448,7 +448,7 @@ button {
 
   &-primary {
     font-weight: 600;
-    background-color: #cc4d4d; // Assuming $black is defined elsewhere in your styles
+    background-color: #000; // Assuming $black is defined elsewhere in your styles
     color: $white;
   }
 
@@ -498,9 +498,8 @@ button {
           flex-direction: column;
 
           .highlighted-text {
-            font-size: 2rem; // Adjusted for typical h1 size
-            line-height: 1.2; // Tighter line height for header
-            margin: -0.1rem -0.6rem;
+            font-size: 1.625rem; // Adjusted for typical h1 size
+            line-height: 1.2; // Tighter line height for header 
             margin-bottom: 0.5rem;
 
             span {
@@ -523,12 +522,14 @@ button {
             margin-bottom: 1rem;
           }
           #tagline {
-            color: $dark-grey;
+            color: #565656;
+            font-family: Inter;
             font-size: 1.25rem;
             font-style: normal;
             font-weight: 500;
-            line-height: 135%; /* 1.6875rem */
-            margin-bottom: 1rem;
+            line-height: 120%; /* 1.5rem */
+            margin-bottom: 0.5rem;
+
           }
 
           #michelleHu {

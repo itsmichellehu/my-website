@@ -354,7 +354,7 @@ button {
 }
 .btn-primary {
   font-weight: 600;
-  background-color: #cc4d4d;
+  background-color: #000;
   color: #ffffff;
 }
 .btn-secondary {
@@ -401,9 +401,8 @@ button {
   flex-direction: column;
 }
 #hero .wrapper .heroContent .wrapper .textWrapper .highlighted-text {
-  font-size: 2rem;
+  font-size: 1.625rem;
   line-height: 1.2;
-  margin: -0.1rem -0.6rem;
   margin-bottom: 0.5rem;
 }
 #hero .wrapper .heroContent .wrapper .textWrapper .highlighted-text span {
@@ -423,11 +422,12 @@ button {
 }
 #hero .wrapper .heroContent .wrapper .textWrapper #tagline {
   color: #565656;
+  font-family: Inter;
   font-size: 1.25rem;
   font-style: normal;
   font-weight: 500;
-  line-height: 135%; /* 1.6875rem */
-  margin-bottom: 1rem;
+  line-height: 120%; /* 1.5rem */
+  margin-bottom: 0.5rem;
 }
 #hero .wrapper .heroContent .wrapper .textWrapper #michelleHu {
   color: #1e1e1e;
