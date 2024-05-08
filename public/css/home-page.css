@@ -90,7 +90,7 @@ section .wrapper {
   font-weight: 600;
   line-height: 110%; /* 4.18rem */
   letter-spacing: -0.1rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
 }
 
 h1,
@@ -563,10 +563,11 @@ button {
 #projects .wrapper .projectCard .number-label {
   color: #A0A0A0;
   font-family: Inter;
-  font-size: 5.25rem;
+  font-size: 2.44rem;
   font-style: normal;
   font-weight: 500;
   line-height: 80%; /* 4.2rem */
+  margin-bottom: 1.5rem;
 }
 #projects .wrapper .projectCard .project-gif-wrapper {
   text-align: center; /* Center the content horizontally */
@@ -579,6 +580,7 @@ button {
   align-items: flex-start;
   overflow: hidden;
   margin: auto;
+  border-radius: 3px;
 }
 #projects .wrapper .projectCard .project-gif-wrapper#postupBG {
   background-color: #8bb4ac;
@@ -672,6 +674,11 @@ button {
 #projects .wrapper .projectCard .details-wrapper .tags-wrapper#tastebudsTags {
   background: #daede9;
   color: #388e7d;
+}
+@media (min-width: 992px) {
+  #projects .number-label {
+    font-size: 5.25rem;
+  }
 }
 
 /*-----Here's a little about me-----*/

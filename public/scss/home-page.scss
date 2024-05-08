@@ -160,7 +160,7 @@ section {
   font-weight: 600;
   line-height: 110%; /* 4.18rem */
   letter-spacing: -0.1rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
 }
 
 h1,
@@ -685,10 +685,11 @@ button {
       .number-label {
         color: #A0A0A0;
         font-family: Inter;
-        font-size: 5.25rem;
+        font-size: 2.44rem;
         font-style: normal;
         font-weight: 500;
         line-height: 80%; /* 4.2rem */
+        margin-bottom: 1.5rem;
       }
 
       .project-gif-wrapper {
@@ -702,6 +703,7 @@ button {
         align-items: flex-start;
         overflow: hidden;
         margin: auto;
+        border-radius: 3px;
 
         &#postupBG {
           background-color: #8bb4ac;
@@ -811,6 +813,11 @@ button {
           }
         }
       }
+    }
+  }
+  @include breakpoint(lg) {
+    .number-label {
+      font-size: 5.25rem;
     }
   }
 }
