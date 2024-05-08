@@ -136,8 +136,7 @@ p {
 body {
   font-family: "Inter", sans-serif;
   text-align: left;
-  padding-top: 2rem;
-  margin: 0;
+  margin: 4rem 0 0 0;
   width: 100vw;
   overflow-x: hidden;
   scrollbar-width: none;
@@ -146,6 +145,7 @@ body {
 
 section {
   padding: 2.5rem 0;
+  background-color: white;
 
   .wrapper {
     margin: auto;
@@ -172,7 +172,22 @@ h6,
 p {
   font-family: "Inter", sans-serif;
   color: $black;
-  margin: 0;
+  margin-bottom: 0.5rem;
+  margin-top: 0;
+} 
+
+p {
+  line-height: 145%;
+}
+
+h1 {
+  color: var(--Colors-Off-Black, #1e1e1e);
+  font-family: Inter;
+  font-size: 1.625rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 125%; /* 2.03125rem */
+  letter-spacing: -0.01625rem;
 }
 
 h2 {
@@ -459,12 +474,48 @@ button {
   }
 }
 
+.hero-mobile-only {
+  z-index: -1; 
+  position: fixed; 
+  top: 4rem;
+  bottom: 0; 
+  width: 100vw;
+  height: 45vh; // Fixed height
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  
+  .image-wrapper {
+    position: relative;
+    width: 90vw; // Takes the full width of the container
+    margin: 0 auto;
+    height: 45vh; // Fixed height
+    border-radius: 3px; 
+    overflow: hidden; 
+    background-image: url(/public/images/home/portrait-taiwan-bw.png);
+    background-position: bottom;
+    background-size: cover;
+
+    .hero-bg-mobile {
+      bottom: 0;
+    }
+  }
+}
+
+.wrapper {
+  margin-top: 45vh;
+  overflow: hidden;
+}
+
+
+
 // Hero section
-#hero {
+.hero {
   display: flex;
   background: white;
   border-bottom: 1px solid #dbdbdb;
   padding: 0;
+  padding-bottom: 2rem;
 
   .wrapper {
     display: flex;
@@ -473,21 +524,10 @@ button {
     margin: auto;
     align-items: center;
 
-    #heroBG {
-      position: absolute;
-      z-index: 1;
-      width: 100vw; // Takes the full width of the container
-      height: calc(50vh + 2rem); // Fixed height
-      background-image: url("/public/images/home/portrait-taiwan-bw.png");
-      background-position: center; // Centers the background image
-      background-repeat: no-repeat; // No repeat of the background
-      background-size: cover; // Cover ensures the image covers the full area of the div
-    }
 
     .heroContent {
-      z-index: 2;
-      margin-top: calc(50vh + 2rem);
-      padding: 1.5rem 0;
+      background-color: white;
+      padding-top: 1rem; 
 
       .wrapper {
         width: 90vw;
@@ -497,10 +537,14 @@ button {
           align-items: flex-start;
           flex-direction: column;
 
+          .hero-position {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+          }
+
           .highlighted-text {
             font-size: 1.625rem; // Adjusted for typical h1 size
-            line-height: 1.2; // Tighter line height for header 
-            margin-bottom: 0.5rem;
+            line-height: 1.2; // Tighter line height for header
 
             span {
               padding: 0.1rem 0.6rem; // Adjust padding to better fit larger text
@@ -522,14 +566,15 @@ button {
             margin-bottom: 1rem;
           }
           #tagline {
-            color: #565656;
+            color: #888888;
             font-family: Inter;
             font-size: 1.25rem;
             font-style: normal;
             font-weight: 500;
-            line-height: 120%; /* 1.5rem */
-            margin-bottom: 0.5rem;
-
+            -webkit-text-stroke-width: 0.25px;
+            -webkit-text-stroke-color: #888888;
+            line-height: 130%; /* 1.5rem */
+            margin-bottom: 1rem;
           }
 
           #michelleHu {
@@ -595,6 +640,21 @@ button {
       }
     }
   }
+  @include breakpoint(med) {
+    .wrapper {
+      height: 50vh;
+      flex-direction: row-reverse;
+
+      #heroBG {
+        z-index: auto;
+      }
+
+      .heroContent {
+        z-index: auto;
+        margin-top: 0;
+      }
+    }
+  }
 
   /* About Hero Buttons */
 
@@ -652,24 +712,24 @@ button {
         .project-gif-container {
           display: block; /* Allow the container to take only the width of its content */
           position: relative;
-          width: 65%;   
+          width: 65%;
           height: auto;
           overflow: hidden;
           margin: auto;
 
           .project-gif {
-            width: 80%;  
+            width: 80%;
             height: auto;
             display: none; /* Initially hide the GIF */
-            margin: auto; 
-          } 
+            margin: auto;
+          }
 
           .project-static-img {
             width: 80%;
             margin: auto;
 
             &#boardspace-img {
-              width: 10rem; 
+              width: 10rem;
             }
           }
         }
@@ -685,11 +745,11 @@ button {
           margin-bottom: 1rem;
 
           .subheader-project {
-            color: $medium-grey;  
+            color: $medium-grey;
             font-family: "IBM Plex Mono";
             font-size: 1rem;
             font-style: normal;
-            font-weight: 500; 
+            font-weight: 500;
             line-height: normal;
             letter-spacing: 0.05rem;
             text-transform: uppercase;
@@ -703,7 +763,7 @@ button {
             font-style: normal;
             font-weight: 600;
             line-height: 121%; /* 1.815rem */
-            letter-spacing: -0.010rem; 
+            letter-spacing: -0.01rem;
             margin-bottom: 0.5rem;
           }
 
@@ -742,14 +802,14 @@ button {
 
           &#boardspaceTags {
             .project-tag {
-              background: #DAEDE9;
-              color: #388E7D; 
-            } 
+              background: #daede9;
+              color: #388e7d;
+            }
           }
 
           &#tastebudsTags {
-            background: #DAEDE9;
-            color: #388E7D; 
+            background: #daede9;
+            color: #388e7d;
           }
         }
       }
@@ -793,7 +853,7 @@ button {
     font-size: 1rem;
     font-style: normal;
     font-weight: 500;
-    line-height: 135%; /* 1.18125rem */
+    line-height: 145%; /* 1.18125rem */
   }
 
   #aboutMe-details {

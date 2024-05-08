@@ -1,4 +1,4 @@
-.navbar {
+nav {
   display: flex;
   position: fixed;
   background: #ffffff;
@@ -7,23 +7,25 @@
   width: 100%;
   justify-content: space-between;
   align-items: center;
-  padding: 0.75rem 1rem;
-  height: 2.75rem;
+  height: 4rem;
   top: 0;
   z-index: 1000;
   background: #fff;
-  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.15);
 }
-
-.logo img {
-  height: 32px; /* Adjust height as needed */
+nav .wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: auto;
+  width: 90vw;
 }
-
-.menu-toggle {
+nav .wrapper .logo img {
+  height: 2rem; /* Adjust height as needed */
+}
+nav .wrapper .menu-toggle {
   cursor: pointer;
 }
-
-.menu {
+nav .wrapper .menu {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -36,39 +38,35 @@
   height: 100vh;
   flex-direction: column;
 }
-v .logo-mhu {
+nav .wrapper .logo-mhu {
   width: 2rem;
   height: 2rem;
 }
-
-.ic-menu {
+nav .wrapper .ic-menu {
   height: 2rem;
   width: 2rem;
 }
-
-.menu.show-menu {
+nav .wrapper .menu.show-menu {
   display: flex;
 }
-
-.menu li {
+nav .wrapper .menu li {
   margin-bottom: 1rem;
 }
-
-.menu a {
+nav .wrapper .menu a {
   color: #1e1e1e;
   text-decoration: none;
 }
-
 @media (min-width: 769px) {
-  .menu {
+  nav .wrapper .menu {
     display: flex;
     position: relative;
     width: auto;
     height: auto;
     flex-direction: row;
   }
-
-  .menu-toggle {
+  nav .wrapper .menu-toggle {
     display: none;
   }
 }
+
+/*# sourceMappingURL=main.css.map */
