@@ -561,14 +561,12 @@ button {
   margin-bottom: 2rem;
 }
 #projects .wrapper .projectCard .number-label {
-  color: var(--emphasis-blue, #4479df);
-  font-family: "IBM Plex Mono";
-  font-size: 1.25rem;
+  color: #A0A0A0;
+  font-family: Inter;
+  font-size: 5.25rem;
   font-style: normal;
-  font-weight: 400;
-  line-height: 135%; /* 1.6875rem */
-  letter-spacing: 0.0625rem;
-  margin-bottom: 0.5rem;
+  font-weight: 500;
+  line-height: 80%; /* 4.2rem */
 }
 #projects .wrapper .projectCard .project-gif-wrapper {
   text-align: center; /* Center the content horizontally */
