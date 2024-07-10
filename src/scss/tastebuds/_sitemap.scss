@@ -1,0 +1,76 @@
+.sitemap_wrapper {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: auto auto;
+	gap: 0.5rem;
+	@extend %mb-16;
+	max-width: 95%;
+	align-items: stretch;
+	justify-content: stretch;
+
+	@include breakpoint(xxl) {
+		grid-template-columns: repeat(5, 1fr);
+		grid-template-rows: auto;
+	}
+
+	ul {
+		margin: 0;
+		width: 100%;
+	}
+
+	li {
+		color: $dark-grey;
+		font-size: 1rem;
+	}
+
+	color: $black;
+
+	// 	#grid-item-4 {
+	// 		grid-column: 1 / 2;
+	// 		grid-row: 2 / 3;
+	// 	}
+	//
+	//     #grid-item-5 {
+	//         grid-column: 2 / 3;
+	//
+	//     }
+}
+
+.sitemap_card {
+	@include flex(column, 0.5rem);
+	width: 100%;
+	margin: auto; // Center the container
+	padding: 2rem;
+	background-color: #f6f6f6;
+	border-radius: 1rem;
+	height: 100%;
+	background-color: white;
+	width: 15rem;
+	height: 17rem;
+}
+
+.sitemap_headline {
+	width: 100%;
+	text-align: left;
+	margin-bottom: 0;
+	color: $black;
+	font-size: 1.35rem;
+	font-weight: 500;
+
+	&::first-letter {
+		text-transform: capitalize;
+	}
+}
+
+.sitemap_icon {
+	width: 2.5rem;
+	height: 2.5rem;
+	margin-bottom: 0.5rem;
+}
+
+.img-sitemap {
+	background-color: #fff;
+	padding: 2rem;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+}

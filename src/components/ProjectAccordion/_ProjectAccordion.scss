@@ -1,0 +1,105 @@
+.accordion {
+	background-color: #1f1f1f;
+	border-radius: 10px;
+	padding: 1rem 1.25rem;
+	border: 0;
+	margin-top: 0.5rem;
+
+	.accordion__header {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		gap: 1rem;
+		padding-bottom: 0;
+		border-radius: 10px;
+		cursor: pointer;
+		background-color: #1f1f1f;
+
+		p {
+			display: flex;
+			font-size: 1.25rem;
+			font-weight: 500;
+			line-height: 130%;
+			text-align: left;
+			margin: 0;
+			flex: 1;
+			color: white;
+		}
+
+		.accordion__icon {
+			transition: transform 0.4s;
+			width: 1.5rem;
+			height: 1.5rem;
+			margin: auto;
+		}
+	}
+
+	.accordion__content {
+		max-height: 0;
+		overflow: hidden;
+		transition: max-height 0.2s ease-out;
+
+		p {
+			margin-top: 0.5rem;
+			margin-bottom: 0.5rem;
+			color: white; // Make sure this is not being overridden elsewhere
+			text-align: left;
+		}
+
+		span {
+			color: white;
+		}
+	}
+
+	&--transparent--outlined {
+		background-color: transparent;
+		border-radius: 0;
+		border-top: 2px solid $black;
+		border-bottom: 2px solid $black;
+		padding: 1rem 0;
+
+		.accordion__header {
+			background-color: transparent;
+
+			p {
+				color: black;
+				font-size: 1.35rem;
+				font-weight: normal;
+			}
+			.accordion__icon {
+				width: 2rem;
+				height: 2rem;
+			}
+		}
+
+		.accordion__content {
+			color: $dark-grey;
+		}
+	}
+
+	&--grey--outlined {
+		background-color: $light-grey;
+
+		.accordion__header {
+			background-color: transparent;
+
+			p {
+				color: black;
+				font-size: 1.35rem;
+				font-weight: normal;
+			}
+			.accordion__icon {
+				width: 2rem;
+				height: 2rem;
+			}
+		}
+
+		.accordion__content {
+			color: $dark-grey;
+		}
+	}
+}
+
+.rotate {
+	transform: rotate(-180deg);
+}

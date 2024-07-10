@@ -1,0 +1,92 @@
+nav {
+	display: flex;
+	position: fixed;
+	background: #ffffff;
+	color: #1e1e1e;
+	position: fixed;
+	width: 100%;
+	justify-content: space-between;
+	align-items: center;
+	height: 4rem;
+
+	top: 0;
+	z-index: 1000;
+	background: #fff;
+}
+
+.navbar-wrapper {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	margin: auto;
+	width: 90vw;
+	align-items: center;
+
+	.navbar-logo img {
+		height: 2rem; /* Adjust height as needed */
+	}
+
+	.navbar-menu-toggle {
+		cursor: pointer;
+	}
+
+	.navbar-menu {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		display: none;
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 70%; /* Adjust width as needed */
+		height: 100vh;
+		flex-direction: column;
+	}
+
+	.logo-mhu {
+		width: 2rem;
+		height: 2rem;
+	}
+
+	.ic-menu {
+		height: 2rem;
+		width: 2rem;
+	}
+
+	.navbar-menu.show-menu {
+		display: flex;
+	}
+
+	// .navbar-menu li {
+	// 	margin-bottom: 1rem;
+	// }
+
+	.navbar-menu a {
+		color: #1e1e1e;
+		text-decoration: none;
+	}
+}
+
+@include breakpoint(med) {
+	nav {
+		height: 4rem;
+	}
+
+	.navbar-wrapper {
+		height: 3rem;
+	}
+
+	.navbar-menu {
+		display: flex;
+		flex-direction: row;
+		position: relative;
+		width: auto;
+		height: auto;
+		align-items: center;
+		display: none;
+	}
+
+	.navbar-menu-toggle {
+		display: none;
+	}
+}

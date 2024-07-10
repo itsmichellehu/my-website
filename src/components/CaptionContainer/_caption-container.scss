@@ -1,0 +1,12 @@
+.caption-container {
+  height: fit-content;
+  align-items: center;
+  width: 100%;
+  border: 1px solid $medium-light-grey;
+  border-radius: 10px;
+  display: flex;
+  padding: 1rem 0;
+  margin-bottom: $content-mb;
+  margin: auto;
+  justify-content: center;
+}

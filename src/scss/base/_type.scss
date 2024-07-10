@@ -1,0 +1,247 @@
+/* Heading and paragraph base styles */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0;
+	padding: 0;
+	font-family: "Inter", sans-serif;
+	font-weight: 500;
+	font-size: inherit;
+	margin-top: 0;
+}
+
+.paragraph {
+	font-size: 1.125rem;
+	font-weight: 400;
+	color: $dark-grey;
+	line-height: 145%;
+	margin-bottom: 1.125rem;
+	font-family: "Inter", sans-serif;
+}
+
+p {
+	font-size: 1.125rem;
+	font-weight: 400;
+	color: $dark-grey;
+	line-height: 145%;
+	margin-bottom: 1.25rem;
+	margin-top: 0;
+}
+
+/* Specific heading styles with colors and sizes */
+h1 {
+	font-size: 2.986rem; /* Example size, adjust as necessary */
+	color: $black; /* Assuming a color variable, adjust as needed */
+	margin-bottom: 0.5rem;
+}
+
+h2 {
+	color: $black;
+	flex: 1;
+	font-size: 2.488rem;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 125%;
+	margin-bottom: 1.5rem;
+	margin-top: 0;
+}
+
+h3 {
+	color: $primary-color;
+	letter-spacing: 0;
+	text-transform: none;
+	font-size: 1.728rem;
+	font-weight: 500;
+	line-height: 130%; /* Slightly adjusted for better readability */
+	margin-bottom: 1.5rem;
+	margin-top: 1rem;
+}
+
+h4 {
+	font-weight: 600;
+	letter-spacing: 0;
+	line-height: 120%;
+	color: var(--black); /* CSS variable, ensure it's defined in your styles */
+	font-size: 1.44rem;
+	margin-top: 2rem;
+	margin-bottom: 1rem;
+}
+
+h5 {
+	font-weight: 500;
+	letter-spacing: 0;
+	line-height: 120%;
+	color: $black; /* CSS variable, ensure it's defined in your styles */
+	font-size: 1.44rem;
+	margin-top: 2rem;
+	margin-bottom: 0.5rem;
+}
+
+h6 {
+	font-size: 1.2rem; /* Smallest heading, specify if needed */
+	line-height: 120%;
+	color: $primary-color; /* Example, adjust as necessary */
+	margin-top: 2rem;
+	margin-bottom: 0.5rem;
+}
+
+.noto-serif {
+	color: $black;
+	font-family: "Noto Serif", serif;
+	font-size: 1.125rem;
+	font-weight: 500;
+	line-height: 160%; // 28.8px
+}
+
+.quote-text {
+	font-family: "Noto Serif", serif;
+	font-size: 1.25rem;
+	font-style: normal;
+	font-weight: 400;
+	letter-spacing: 0.2px;
+	line-height: 160%;
+	margin: 0;
+	overflow-wrap: normal;
+	color: $black;
+}
+
+.bold {
+	font-weight: 600;
+}
+
+// Tab content
+.subheading {
+	font-weight: 500;
+	letter-spacing: 0;
+	line-height: 130%;
+	margin-bottom: 0.5rem;
+	color: $black;
+	font-size: 1.3rem;
+	text-transform: none;
+
+	&::first-letter {
+		text-transform: capitalize;
+	}
+}
+
+%subheading {
+	font-weight: 500;
+	letter-spacing: 0;
+	line-height: 130%;
+	color: $black;
+	font-size: 1.3rem;
+	text-transform: none;
+	margin-bottom: 0.5rem;
+
+	&::first-letter {
+		text-transform: capitalize;
+	}
+}
+
+.section-subheading {
+	@extend %subheading;
+	font-size: 1.5rem;
+	color: $primary-color;
+	margin-top: 2rem;
+	margin-bottom: 1rem;
+	width: 100%;
+	text-align: left;
+
+	&.small {
+		font-size: 1.25rem;
+		color: $black;
+		font-weight: 500;
+		margin-bottom: 1rem;
+	}
+}
+
+.secondary-text {
+	color: $black;
+	font-size: 1.665rem;
+	font-weight: 500;
+	line-height: 135%;
+	margin-bottom: 1rem;
+	margin-top: 1rem;
+}
+
+.fw-medium {
+	color: $black;
+	font-weight: 500;
+}
+
+// Sets text in <span> fw-medium
+.span-fw-medium {
+	span {
+		color: $black;
+		font-weight: 500;
+	}
+}
+
+.notes {
+	color: #00bdd6;
+	font-size: 1.125rem;
+	font-family: "Noto Serif", sans-serif;
+}
+
+.text-small {
+	font-size: 1rem;
+}
+
+.secondary-text.small {
+	color: $black;
+	font-size: 1.424rem;
+	font-weight: 500;
+	line-height: 115%;
+	margin-bottom: 1rem;
+	letter-spacing: 0rem;
+}
+
+.the-problem-text {
+	font-size: 1.25rem;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.subheader {
+	font-family: "Source Code Pro", monospace;
+	color: $medium-grey;
+	font-size: 1rem;
+	font-weight: 400;
+	letter-spacing: 1px;
+	line-height: 125%;
+	text-transform: uppercase;
+	margin: 0;
+	padding: 0;
+	height: fit-content;
+}
+
+.fw-normal {
+	font-weight: 400;
+}
+
+.fz-20 {
+	font-size: 1.25rem;
+}
+
+// Fonts
+.source-code-pro {
+	font-family: "Source Code Pro", monospace !important;
+	font-optical-sizing: auto;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 1.125rem;
+	letter-spacing: 1px;
+
+	&-300 {
+		font-weight: 300;
+	}
+
+	&-500 {
+		font-weight: 500;
+	}
+}

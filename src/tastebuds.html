@@ -1,0 +1,2895 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <title>Tastebuds — Michelle Hu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap"
+    rel="stylesheet">
+  <link href="css/tastebuds.css" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0"
+    rel="stylesheet">
+  <link href="path/to/favicon.ico" rel="icon">
+  <script>
+    function toggleAccordion(button) {
+      const content = button.querySelector('.accordion__content');
+      const icon = button.querySelector('.accordion__icon');
+
+      content.classList.toggle('active');
+      icon.classList.toggle('rotate');
+
+      if (content.classList.contains('active')) {
+        content.style.maxHeight = content.scrollHeight + 'px';
+      } else {
+        content.style.maxHeight = 0;
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      // Attach click event listeners to all accordion headers
+      document.querySelectorAll('.accordion').forEach(accordion => {
+        accordion.addEventListener('click', function () {
+          toggleAccordion(this);
+        });
+      });
+    });
+  </script>
+</head>
+
+<body>
+  <section id="hero" class="hero hero--bg-tastebuds">
+    <div class="hero__content">
+      <img alt="" class="hero__image" loading="eager"
+        src="assets/images/tastebuds/hero-image.png" />
+      <!-- <div class="hero__image-wrapper">
+      </div> -->
+    </div>
+  </section>
+  <section class="overview">
+    <div class="overview__content-wrapper">
+      <header class="overview__header">
+        <h1 class="overview__title">TasteBuds</h1>
+        <p class="overview__tagline">
+          Empowering diners to discover dining options with tastebuds they trust.
+        </p>
+        <div class="overview__tags-wrapper overview__tags-wrapper--scrollable">
+          <div class="overview__tag overview__tag--tastebuds">product design</div>
+          <div class="overview__tag overview__tag--tastebuds">interaction design</div>
+          <div class="overview__tag overview__tag--tastebuds">business strategy</div>
+          <div class="overview__tag overview__tag--tastebuds">competitive research</div>
+          <div class="overview__tag overview__tag--tastebuds">prototyping</div>
+        </div>
+      </header>
+      <div class="overview__details-container">
+        <div class="overview__grid-item">
+          <div class="overview__details-list">
+            <p class="overview__details-headline">Timeline</p>
+            <ul>
+              <li>December 2022 - June 2023</li>
+            </ul>
+          </div>
+        </div>
+        <div class="overview__details-list">
+          <p class="overview__details-headline">Tools</p>
+          <div class="overview__tools-grid-container">
+            <div class="overview__tools-logo-wrapper overview__tools-logo-wrapper--figma">
+              <img loading="lazy" src="assets/images/toolbox-logos/logo-figma.png" alt="" />
+            </div>
+            <div class="overview__tools-logo-wrapper overview__tools-logo-wrapper--general">
+              <img alt="" loading="lazy" src="assets/images/tastebuds/logo-notion.png" />
+            </div>
+            <div class="overview__tools-logo-wrapper overview__tools-logo-wrapper--miro">
+              <img alt="" loading="lazy" src="assets/images/tastebuds/logo-miro.png" />
+            </div>
+            <div class="overview__tools-logo-wrapper overview__tools-logo-wrapper--canva">
+              <img alt="" loading="lazy" src="assets/images/tastebuds/logo-canva.png" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="flex-row center">
+      <button class="scroll-button hero" data-scroll-target="the-problem" aria-label="Scroll down">
+        <img src="assets/svg/ic-chevron-arrow__down--black.svg"
+          alt="Chevron arrow pointing down, indicating to scroll down" />
+      </button>
+    </div>
+  </section>
+  <section id="the-problem" class="section-container equal-padding">
+    <header class="header-container">
+      <h2>The challenge</h2>
+    </header>
+    <div class="content">
+      <p class="the-problem-text mb-32">
+        Diners face challenges in confidently discovering dining options and making decisions due to
+        skepticism surrounding crowdsourced reviews. Moreover, the rising commercialization and
+        reduced personalization in popular platforms such as Yelp and Google Maps
+        contribute to information overload and decision paralysis among users.
+      </p>
+      <p class="secondary-text">
+        How might I empower diners to confidently discover new dining options?
+      </p>
+    </div>
+  </section>
+  <section id="the-process" class="section-container equal-padding">
+    <header class="header-container">
+      <h2>Process</h2>
+    </header>
+    <div class="content">
+      <!-- <p>This was my capstone project for my Springboard UX Design course, marking my inaugural
+          venture into product design with formal UX training!</p> -->
+      <p>
+        "Why is it so hard to find a place to eat and trying new items? Despite convenient
+        crowdsourced review apps such as Yelp and Google, why do diners struggle to make dining
+        decisions efficiently?"
+      </p>
+      <p>
+        These were the questions that guided me to explore the consumer dining experience. After
+        witnessing shared challenges among my friends and family when it came to deciding where to
+        eat and exploring new restaurants and menu items. As someone who values
+        diverse culinary experiences and sees food as a gateway to understanding different cultures,
+        I was deeply motivated to create a solution for the consumer dining space.
+      </p>
+      <p>
+        To address this problem, my research process followed the 5-stage Design Thinking model
+        proposed by the Hasso Plattner Institute of Design at Stanford (the "d. school").
+      </p>
+      <button class="scroll-button bg-transparent link-blue"
+        data-scroll-target="final-tastebuds-solution">
+        Jump to final prototype
+        <span
+          class="material-symbols-outlined ic-arrow_jump-to-section material-symbols_lower">arrow_downward</span>
+      </button>
+    </div>
+    <div class="content medium">
+      <img alt="" loading="lazy" src="assets/images/tastebuds/research-process.png">
+    </div>
+  </section>
+  <section id="secondary-research" class="section-container">
+    <header class="header-container">
+      <h2>
+        <span>secondary and market research</span>
+        <br />
+        Understanding the landscape
+      </h2>
+    </header>
+    <div class="content">
+      <p>I began to explore the problem space through secondary and market research, delving into
+        the diverse experiences, emerging dining habits, and the evolving preferences of diners.</p>
+      <header>
+        <p class="section-subheading">research questions</p>
+      </header>
+      <ul class="mb-32" role="list">
+        <li>What are the latest dining out trends?</li>
+        <li>What motivate people to dine out?</li>
+        <li>What do diners enjoy about dining out?</li>
+        <li>What do diners struggle with dining out?</li>
+      </ul>
+      <div>
+        <p class="section-subheading">diner trends 2022</p>
+        <!-- <p>
+          First, I explored <span class="fw-medium">Google keywords</span> to identify any trends in
+          dining keywords, which revealed a trend in dining out after a few
+          months into the COVID-19 pandemic! This told me that
+        </p> -->
+        <p>
+          To best address my research questions, <span class="fw-medium">I reviewed existing
+            data from market reports</span>. Among the reports I read, TouchBistro's
+          <a href="https://shorturl.at/2DzDk">2022 Diner Trends Report on "What Diners Want"
+          </a> and
+          <a href="https://shorturl.at/W4tIw">2020 Restaurant Insights Report on "How Diners Choose
+            Restaurants"</a> provided the most comprehensive data. The first report surveyed more
+          than 2,600 diners from across the U.S. and Canada, and the second report surveyed a total
+          of 521 diners.
+          <br />
+          <br /> These reports were very helpful! Below are the highlights of what I learned (only
+          data on U.S. participants are referenced):
+        </p>
+      </div>
+      <div class="diner-trends-grid">
+        <div class="item-1">
+          <p>
+            If the restaurant's food is good, then the service doesn't matter to diners.
+          </p>
+        </div>
+        <div class="item-2">
+          <p>
+            Recommendations from friends and family outweigh online reviews.
+          </p>
+        </div>
+        <div class="item-3">
+          <p>
+            Most diners would visit a restaurant for their promotions.
+          </p>
+        </div>
+        <div class="item-4">
+          <p>
+            Most diners visit a restaurant's online menu and websites first.
+          </p>
+        </div>
+        <div class="item-5 text-center">
+          <p class="text-center">
+            Top 3 factors that influence dining decisions
+          </p>
+          <div class="dining-factors-grid">
+            <div>
+              <p class="dining-factors-number">#1</p>
+              <div>
+                <img alt="" class="dining-factors-icon" loading="lazy"
+                  src="assets/svg/tastebuds/dinner-tray.svg">
+                <p>Type of food</p>
+              </div>
+            </div>
+            <div>
+              <p class="dining-factors-number">#2</p>
+              <div>
+                <img alt="" class="ic-dining-factors-location" loading="lazy"
+                  src="assets/svg/tastebuds/ic-location.svg">
+                <p>Location</p>
+              </div>
+            </div>
+            <div>
+              <p class="dining-factors-number">#3</p>
+              <div>
+                <img alt="" class="dining-factors-icon" loading="lazy"
+                  src="assets/svg/tastebuds/word-of-mouth.svg">
+                <p>Word-of-mouth</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="content">
+        <p>
+          Among my findings, this was the statistic I found most intriguing:
+          <br />
+        </p>
+        <blockquote class="blockquote-statistic-highlight">
+          <div class="blockquote-content">
+            <p class="blockquote-text margin-0">
+              "While 73% of diners use online review sources, only 24% say online reviews influence
+              where they decide to eat...""
+            </p>
+          </div>
+        </blockquote>
+        <div class="content">
+          <p class="fw-medium">This raised the following question for me: </p>
+          <p>
+            What motivates diners to use this method to guide their dining choices, despite often
+            taking it that seriously?
+          </p>
+          <p class="fw-medium">
+            Based on my research findings, I hypothesized that diners may lack trust in online
+            reviews because:
+          </p>
+          <ol>
+            <li>They are generated by strangers.</li>
+            <li>These reviews often focus on the service rather than food.</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="primary-research" class="section-container">
+    <header class="header-container">
+      <h2>
+        <span> primary research </span>
+        <br />
+        Surveying diners and recruiting for user interviews
+      </h2>
+    </header>
+    <div class="content">
+      <p>
+        Expanding on my secondary research, I crafted a screener survey for my user interviews to
+        learn more about consumer dining experiences. I sought out diners who are dissatisfied with
+        some part of their dining out experience, and I planned on using these
+        responses to tailor interview questions for each participant.
+      </p>
+      <p class="section-subheading">my target diners:</p>
+      <ul role="list">
+        <li>Diners aged 16-55</li>
+        <li>Use mobile apps regularly (3+ times a week)</li>
+        <li>Dine out or order takeout at least once a week</li>
+        <li>
+          Feel at least somewhat dissatisfied about one or more aspects of their dining experience
+        </li>
+        <li>
+          Use mobile apps to make dining out decisions at least once a week
+        </li>
+      </ul>
+    </div>
+    <!-- <div class="content hide">
+        <div class="mb-32">
+          <p class="section-subheading">A few questions I asked:</p>
+          <ul role="list">
+            <li>
+              In the past four weeks, how many new restaurants have you tried?
+            </li>
+            <li>How much time does it take you to decide on place to eat?</li>
+            <li>How often do you try something new at a restaurant?</li>
+            <li>What methods do you use to decide on a place to eat?</li>
+          </ul>
+        </div>
+        <div>
+          <p class="section-subheading">satisfaction scale</p>
+          <p>For each question, I asked respondents how satisfied they feel:</p>
+          <div class="flex-row gap-16">
+            <div class="likert">
+              <div class="satisfaction-level">
+                <img src="assets/images/tastebuds/likert-mood-1.png">
+                <p>Completely satisfied</p>
+              </div>
+              <div class="satisfaction-level">
+                <img src="assets/images/tastebuds/likert-mood-2.png">
+                <p>Mostly satisfied</p>
+              </div>
+              <div class="satisfaction-level">
+                <img
+                  src="assets/images/tastebuds/likert-mood-3.png"
+                  loading="lazy"
+                  alt=""
+               >
+                <p>Somewhat satisfied</p>
+              </div>
+              <div class="satisfaction-level">
+                <img
+                  src="assets/images/tastebuds/likert-mood-4.png"
+                  loading="lazy"
+                  alt=""
+               >
+                <p>Neither</p>
+              </div>
+            </div>
+            <div class="likert">
+              <div class="satisfaction-level">
+                <img
+                  src="assets/images/tastebuds/likert-mood-5.png"
+                  loading="lazy"
+                  alt=""
+               >
+                <p>Somewhat dissatisfied</p>
+              </div>
+              <div class="satisfaction-level">
+                <img
+                  src="assets/images/tastebuds/likert-mood-6.png"
+                  loading="lazy"
+                  alt=""
+               >
+                <p>Mostly dissatisfied</p>
+              </div>
+              <div class="satisfaction-level">
+                <img
+                  src="assets/images/tastebuds/likert-mood-7.png"
+                  loading="lazy"
+                  alt=""
+               >
+                <p>Completely dissatisfied</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> -->
+    <div class="card medium bg-lightest-grey mb-64">
+      <div class="screener-survey-wrapper">
+        <img alt="" class="img-screener-survey" loading="lazy"
+          src="assets/images/tastebuds/screener-survey.png">
+        <div class="content-container">
+          <p>
+            My initial hypothesis was that diners are dissatisfied with their discovery, method(s),
+            and decision-making process.
+          </p>
+          <div class="mb-16">
+            <p class="subheading mv-0">
+              A few questions I asked:
+            </p>
+            <ul role="list">
+              <li>
+                In the past 4 weeks, how many new restaurants have you tried?
+              </li>
+              <li>
+                How much time does it take you to decide on place to eat?
+              </li>
+              <li>
+                How often do you try something new at a restaurant?
+              </li>
+              <li>
+                What methods do you use to decide on a place to eat?
+              </li>
+            </ul>
+          </div>
+          <div>
+            <p class="subheading mt-0">satisfaction scale</p>
+            <p>
+              For each question, I asked respondents how satisfied they feel:
+            </p>
+            <div class="likert_flex-container">
+              <div class="likert">
+                <div class="satisfaction-level">
+                  <img src="assets/images/tastebuds/likert-mood-1.png">
+                  <p>Completely satisfied</p>
+                </div>
+                <div class="satisfaction-level">
+                  <img src="assets/images/tastebuds/likert-mood-2.png">
+                  <p>Mostly satisfied</p>
+                </div>
+                <div class="satisfaction-level">
+                  <img alt="" loading="lazy" src="assets/images/tastebuds/likert-mood-3.png">
+                  <p>Somewhat satisfied</p>
+                </div>
+                <div class="satisfaction-level">
+                  <img alt="" loading="lazy" src="assets/images/tastebuds/likert-mood-4.png">
+                  <p>Neither</p>
+                </div>
+              </div>
+              <div class="likert">
+                <div class="satisfaction-level">
+                  <img alt="" loading="lazy" src="assets/images/tastebuds/likert-mood-5.png">
+                  <p>Somewhat dissatisfied</p>
+                </div>
+                <div class="satisfaction-level">
+                  <img alt="" loading="lazy" src="assets/images/tastebuds/likert-mood-6.png">
+                  <p>Mostly dissatisfied</p>
+                </div>
+                <div class="satisfaction-level">
+                  <img alt="" loading="lazy" src="assets/images/tastebuds/likert-mood-7.png">
+                  <p>Completely dissatisfied</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card medium bg-lightest-grey">
+      <div class="survey-results-wrapper">
+        <div class="survey-results-tabs tabs-container" data-current="Tab 1" data-duration-in="300"
+          data-duration-out="100" data-easing="ease">
+          <div class="tabs-menu">
+            <button class="tab-button active" data-tab="tab1">
+              <p>Findings</p>
+            </button>
+            <button class="tab-button" data-tab="tab2">
+              <p>Survey Data and Methods</p>
+            </button>
+          </div>
+          <div class="tab-content active" id="tab1">
+            <div>
+              <p class="secondary-text mb-16">
+                How satisfied do diners feel?
+              </p>
+              <p>
+                After collecting 20 survey responses, I organized the data in a spreadsheet to
+                identify the most dissatisfied diners (displayed in 'Survey data and methods'
+                tab).
+                I conducted cross-data analysis, comparing the responses to uncover
+                similarities,
+                differences,
+                and patterns. This process helped me identify potential correlations between
+                various
+                aspects of the dining experience and the levels of dissatisfaction.
+              </p>
+              <p class="subheading">Data visualization</p>
+              <div class="img-survey-results_wrapper mv-16">
+                <img alt="" class="img-responsive" loading="lazy"
+                  src="assets/images/tastebuds/survey-results-bars.png">
+              </div>
+              <div class="survey-results_flex-container">
+                <div class="survey-results-card">
+                  <img alt="" class="likert-mood large" loading="lazy"
+                    src="assets/images/tastebuds/likert-mood-5.png">
+                  <p class="content">
+                    Overall, respondents feel least satisfied about how long they take to make
+                    dining decisions—an average of 50% rating.
+                  </p>
+                </div>
+                <div class="survey-results-card">
+                  <img alt="" class="likert-mood large" loading="lazy"
+                    src="assets/images/tastebuds/likert-mood-6.png">
+                  <p class="content">
+                    Among the least satisfied respondents, this rating drops to an average of
+                    26%.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tab-content" id="tab2">
+            <p class="secondary-text">Complete Survey Data</p>
+            <p>
+              The table below was used to calculate the satisfaction levels and findings in the
+              first tab.
+            </p>
+            <img alt="" loading="lazy" src="assets/images/tastebuds/survey-results-1.png">
+            <div class="total-satisfaction-method">
+              <p>Methodology</p>
+              <p>
+                I measured individual user satisfaction levels based on several criteria:
+                average
+                time spent finding a place to eat, frequency of trying new restaurants,
+                frequency of
+                trying new dishes, and current methods used to make dining decisions. I then
+                implemented
+                a scoring system, assigning points to each satisfaction level: "Completely
+                satisfied" received 5 points, while both "Completely dissatisfied" and "Mostly
+                dissatisfied" received 0 points. Since there was only one data point
+                for "Completely dissatisfied," I combined its score with "Mostly dissatisfied"
+                to
+                simplify calculations and maintain whole numbers in the ratings for clearer
+                analysis.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="hide">
+          <div class="total-satisfaction-method">
+            <p>5 methodology</p>
+            <p>
+              First, I measured individual user satisfaction levels on the following: average
+              time
+              spent on finding a place to eat, frequency of trying new restaurants, frequency of
+              trying new dishes, and current methods to make dining decisions. Then I assigned a
+              scoring system, where I assigned points to each satisfaction level, with
+              "Completely
+              satisfied" being 5 points and both "Completely dissatisfied" &amp; "Mostly
+              dissatisfied" being 0 points. Due to having only one data point
+              for "Completely dissatisfied," I combined its score with "Mostly dissatisfied" to
+              simplify calculations and keep the ratings as whole numbers without decimals for a
+              clearer analysis.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="section-user-interviews" class="section-container">
+    <header class="header-container">
+      <span> empathize</span>
+      <h2>Interviewing dissatisfied diners</h2>
+    </header>
+    <div class="content">
+      <p> I reached out to my screener survey respondents who expressed the lowest satisfaction
+        scores for remote interviews. I recruited <span class="fw-medium">7 participants for
+          remote interviews! </span>
+      </p>
+      <p class="section-subheading">My research questions</p>
+      <ul class="mb-32" role="list">
+        <li>How consistent are my secondary research findings with my user research?</li>
+        <li>How do diners perceive their dining out experiences? What do they value and why?</li>
+        <li>What are the most frequent challenges? How have diners tried to resolve them?</li>
+        <li>How do diners feel about online reviews? What motivates them to consult reviews?</li>
+        <li>How can the current methods improve to better meet their needs?</li>
+      </ul>
+      <p class="section-subheading">My process</p>
+      <div class="content-grid">
+        <div>
+          <img alt="" loading="lazy" src="assets/images/tastebuds/untitled-design.gif">
+        </div>
+        <aside>
+          <p>
+            To process the data, I made an affinity map on FigJam. Check out the process!
+          </p>
+        </aside>
+      </div>
+      <p class="section-subheading">My findings:</p>
+    </div>
+    <div class="interview-quotes-wrapper tastebuds">
+      <img alt="" class="img-quotation-mark hide" src="assets/svg/quotation-mark-blue.svg">
+      <div class="grid-container mt-0">
+        <div class="quote-grid-item item-1">
+          <div>
+            <p>Diners experience choice paralysis.</p>
+          </div>
+          <img class="hide img-interviewee"
+            src="assets/images/tastebuds/screenshot%202024-01-14%20at%208.39.13%e2%80%afpm.png">
+          <blockquote>
+            <div class="blockquote-content">
+              <p class="mb-8">
+                I feel worried that I'm missing out on better options if I don't keep scrolling.
+              </p>
+              <div class="interviewee">
+                <img alt="Responsive Image" class="hide img-interviewee"
+                  src="assets/images/tastebuds/screenshot%202024-01-14%20at%209.06.43%e2%80%afpm.png">
+                <p>Participant #4</p>
+              </div>
+            </div>
+          </blockquote>
+        </div>
+        <div class="quote-grid-item item-2">
+          <div>
+            <p>Existing tools lack personalization.</p>
+          </div>
+          <img alt="Responsive Image" class="hide img-interviewee"
+            src="assets/images/postup/interview-adam.png">
+          <blockquote>
+            <div class="blockquote-content">
+              <p class="mb-8">
+                If I had a magic wand, I’d want to receive suggested items that would suit my
+                tastes.
+              </p>
+              <div class="interviewee">
+                <img alt="Responsive Image" class="hide img-interviewee"
+                  src="assets/images/postup/interview-james.png">
+                <p>Participant #2</p>
+              </div>
+            </div>
+          </blockquote>
+        </div>
+        <div class="quote-grid-item item-3">
+          <div>
+            <p>Diners don't know their cravings.</p>
+          </div>
+          <img alt="Responsive Image" class="hide img-interviewee"
+            src="assets/images/postup/interview-james.png">
+          <blockquote>
+            <div class="blockquote-content">
+              <p class="mb-8">
+                If only there was a way you can put a criteria of what you’re craving to be given
+                suggestions.
+              </p>
+              <div class="interviewee">
+                <img alt="Responsive Image" class="hide img-interviewee"
+                  src="assets/images/postup/interview-james.png">
+                <p>Participant #1</p>
+              </div>
+            </div>
+          </blockquote>
+        </div>
+        <div class="quote-grid-item quote-flex-col item-5">
+          <div>
+            <p>
+              Yelp and Google users face unreliable content that are often irrelevant and biased.
+            </p>
+          </div>
+          <img alt="Responsive Image" class="hide img-interviewee"
+            src="assets/images/postup/interview-adam.png">
+          <blockquote>
+            <div class="blockquote-content">
+              <p class="mb-8">
+                To find something that's good, we have to trust reviews online right? Sometimes
+                they're inflated, and sometimes they're not entirely truthful. There's just not
+                enough data points out there. It's just difficult to gather and gauge what's truly
+                good...
+              </p>
+              <div class="interviewee">
+                <img alt="Responsive Image" class="hide img-interviewee"
+                  src="assets/images/postup/interview-adam.png">
+                <p>Participant #5</p>
+              </div>
+            </div>
+          </blockquote>
+        </div>
+        <div class="quote-grid-item quote-flex-col item-6">
+          <div>
+            <p>
+              Diners value recommendations from friends and family the most.
+            </p>
+          </div>
+          <img alt="Responsive Image" class="hide img-interviewee"
+            src="assets/images/postup/interview-adam.png">
+          <blockquote>
+            <div class="blockquote-content">
+              <p class="mb-8">
+                I feel like especially for friends, if I kind of know what their normal taste is
+                like... so I can kind of gauge what they expect already. If someone gives me a
+                recommendation that means they went and they liked it, so the odds of me going and
+                not liking
+                it are not really big at all.
+              </p>
+              <div class="interviewee">
+                <img alt="Responsive Image" class="hide img-interviewee"
+                  src="assets/images/postup/interview-adam.png">
+                <p>Participant #3</p>
+              </div>
+            </div>
+          </blockquote>
+        </div>
+      </div>
+      <blockquote>
+        <p class="secondary-text mb-32 medium-grey">
+          “There's a certain emotional trust about talking to someone about it...”
+        </p>
+      </blockquote>
+    </div>
+    <div class="content">
+      <p class="section-subheading mb-24">Diner pains and delights</p>
+      <div class="img-user-interview-findings">
+        <img alt="" loading="lazy"
+          src="assets/images/tastebuds/green-fiction-vs-non-fiction-school--academic-infographic-poster-(6).png">
+      </div>
+      <p class="section-subheading mb-24">Diner journey</p>
+      <div class="img-diner-journey_wrapper">
+        <img alt="" loading="lazy" src="assets/images/tastebuds/tastebuds-diner-journey-map.png">
+      </div>
+    </div>
+  </section>
+  <section id="competitor-analysis" class="section-container">
+    <header class="header-container">
+      <h2>
+        <span> Competitor Analysis </span>
+        <br />
+        Learning from my competitors
+      </h2>
+    </header>
+    <div class="content">
+      <p>
+        Based on my primary and secondary research, I found that diners mostly use Yelp, Google,
+        Google Maps, and word-of-mouth recommendations to explore options. Therefore, I analyzed
+        Google Maps and Yelp's designs and looked into their relationship with diners'
+        pain points.
+      </p>
+      <p class="section-subheading">research goals</p>
+      <ul>
+        <li>Understanding user expectations</li>
+        <li>Gauging their weaknesses</li>
+        <li>Understanding their strengths</li>
+        <li>Finding the common ground</li>
+        <li>Evaluating gaps and unmet needs</li>
+      </ul>
+    </div>
+    <div class="competitor-analysis_wrapper">
+      <div class="competitor-analysis_grid-container">
+        <div class="competitor-analysis-app">
+          <img alt="" class="img-competitor-logo" loading="lazy"
+            src="assets/images/tastebuds/logo-yelp.png">
+          <p>Yelp: Food, Delivery &amp; Reviews</p>
+        </div>
+        <img alt="" class="img-competitor-screen" loading="lazy"
+          src="assets/images/tastebuds/competitor-analysis-results-yelp.png">
+        <img alt="" class="img-competitor-screen" loading="lazy"
+          src="assets/images/tastebuds/competitor-analysis-listing-yelp.png">
+        <img alt="" class="img-competitor-screen" loading="lazy"
+          src="assets/images/tastebuds/competitor-analysis-review-yelp.png">
+        <div class="competitor-analysis-finding">
+          <p>
+            Yelp excels in user-generated reviews, aiding informed dining decisions. However, its
+            cluttered interface with excessive sponsored content overshadows this strength. Complex
+            navigation, subpar above-the-fold design, and unclear CTAs hinder user experience,
+            requiring extensive scrolling for essential information. Moreover, Yelp's open-ended
+            review process may pose challenges in maintaining review quality.
+          </p>
+        </div>
+      </div>
+      <div class="competitor-analysis_grid-container">
+        <div class="competitor-analysis-app">
+          <div class="img-google-maps_wrapper">
+            <img alt="" class="img-google-maps" loading="lazy"
+              src="assets/images/tastebuds/logo-google-maps.png">
+          </div>
+          <p>Google Maps</p>
+        </div>
+        <img alt="" class="img-competitor-screen" loading="lazy"
+          src="assets/images/tastebuds/competitor-analysis-results-google.png">
+        <img alt="" class="img-competitor-screen" loading="lazy"
+          src="assets/images/tastebuds/competitor-analysis-listing-google.png">
+        <img alt="" class="img-competitor-screen" loading="lazy"
+          src="assets/images/tastebuds/competitor-analysis-review-google.png">
+        <div class="competitor-analysis-finding">
+          <p>
+            Google Maps presents a clean and intuitive interface, simplifying restaurant searches
+            and navigation. Its well-executed above-the-fold design and clear CTAs contribute to its
+            appeal. The structured review process aids in comprehensive feedback. However,
+            the lack of filtering or sorting options might overwhelm users, potentially causing
+            decision paralysis, especially for location-focused diners.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="content">
+      <p class="section-subheading">Conclusion</p>
+      <p>I found a significant shift in my competitors' products—from being user-centric to becoming
+        more system-centric.
+        <span class="fw-medium">
+          Their
+          lack of personalization and an excess of
+          commercialization, has resulted in diners experiencing mistrust,
+          information overload, and decision paralysis.
+        </span>
+      </p>
+    </div>
+  </section>
+  <section id="narrowing-the-scope" class="section-container equal-padding">
+    <header class="header-container">
+      <h2>
+        <span>define</span>
+        <br />
+        Connecting the dots with a mind map
+      </h2>
+    </header>
+    <div class="content">
+      <p class="mb-32 mt-0">
+        At this point, I realized that while my research had uncovered a lot about diners' problems,
+        I still didn't fully grasp the big picture. To better understand my findings and how they
+        relate to each other, I decided to make a mind map!
+      </p>
+      <div class="content-grid">
+        <div>
+          <img alt="" loading="lazy"
+            src="assets/images/tastebuds/purple-colorful-organic-mind-map-brainstorm-(2).png">
+        </div>
+        <aside>
+          <p>As a visual learner, this helped a lot!</p>
+        </aside>
+      </div>
+    </div>
+    <div class="content">
+      <h3>Conclusion</h3>
+      <p class="secondary-text">Diners lack confidence in decision-making, and existing methods are
+        to blame.</p>
+      <p>
+        Increasingly <span class="fw-medium">commercialized content, lack of
+          personalization</span>, inifinite search results, irrelevant and unreliable content cause
+        decision paralysis and information overload. Consequently, diners struggle to confidently
+        explore dining options and make informed decisions.
+      </p>
+      <p>Additionally, I was able to answer my question from my secondary research:</p>
+      <p class="secondary-text">Diners resort to online reviews because they're more accessible than
+        word-of-mouth recommendations.
+      </p>
+      <div class="flex vertical _24-px"></div>
+    </div>
+  </section>
+  <section id="user-personas" class="section-container">
+    <header class="header-container">
+      <h2>
+        <span>user personas</span>
+        <br />
+        Meet the diners: <br> Alex, Brandon, and Cleo
+      </h2>
+    </header>
+    <div class="content">
+      <p>
+        Given the diversity of diners' needs and behaviors, I created 3 user personas to better
+        understand my target audience and guide my ideation phase: Alex, Brandon, and Cleo.
+      </p>
+    </div>
+    <div class="user-persona_tabs tabs-container content mb-32" data-current="Tab 1"
+      data-duration-in="300" data-duration-out="100" data-easing="ease">
+      <div class="tabs-menu">
+        <button class="tab-button active" data-tab="tab1">
+          <p>Alex</p>
+        </button>
+        <button class="tab-button" data-tab="tab2">
+          <p>Brandon</p>
+        </button>
+        <button class="tab-button" data-tab="tab3">
+          <p>Cleo</p>
+        </button>
+      </div>
+      <div class="tab-content active" id="tab1">
+        <img alt="" class="img-user-persona" src="assets/images/tastebuds/user-persona-alex.png">
+      </div>
+      <div class="tab-content" id="tab2">
+        <img alt="" class="img-user-persona" src="assets/images/tastebuds/user-persona-brandon.png">
+      </div>
+      <div class="tab-content" id="tab3">
+        <img alt="" class="img-user-persona" src="assets/images/tastebuds/user-persona-cleo.png">
+      </div>
+    </div>
+    <div class="content mb-32">
+      <div class="user-persona_container">
+        <div class="user-persona_heading-container">
+          <img alt="" class="user-persona_icon" loading="lazy"
+            src="assets/images/tastebuds/user-persona-icon-alex.png">
+        </div>
+        <div>
+          <p class="user-persona_title">Alex</p>
+          <div class="user-persona_content">
+            <p>
+              I enjoy dining out because I can spend quality time with my friends and family, eat
+              delicious food, and discover new restaurants.
+              <span>I use Yelp and Google Maps but trust word-of-mouth
+                recommendations over online reviews to know what's
+                <em>actually good</em></span>. Therefore, I want to see customer photos of food not
+              professional photos because they're more accurate.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="user-persona_container">
+        <div class="user-persona_heading-container">
+          <img alt="" class="user-persona_icon" loading="lazy"
+            src="assets/images/tastebuds/user-persona-icon-brandon.png">
+        </div>
+        <div>
+          <p class="user-persona_title">Brandon</p>
+          <div class="user-persona_content">
+            <p>
+              I couldn't care less about discovery. Given my hectic work schedule, I dine out and
+              order takeout for the
+              <span>convenience</span>, especially when I'm working late. I just want to
+              <span>quickly find dining options with good value that make
+                my life easier</span>, such as when I don’t have time to cook or simply don't want
+              to cook.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="user-persona_container">
+        <div class="user-persona_heading-container">
+          <img alt="" class="user-persona_icon" loading="lazy"
+            src="assets/images/tastebuds/user-persona-icon-cleo.png">
+        </div>
+        <div>
+          <p class="user-persona_title">Cleo</p>
+          <div class="user-persona_content">
+            <p>
+              Like Alex, I enjoy discovery and spending quality time with friends and family, but I
+              am more inclined to visit new, trendy places. However, unlike Brandon, convenience is
+              not my priority if the place is worth visiting, so I'm more willing to travel for
+              the experience! Also, dining out isn't limited to dining: As a remote worker, I like
+              to work at aesthetic coffee shops with WiFi and outlets, so it’s important that
+              restaurant provide high quality pictures and accurate, relevant
+              information online.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="content">
+      <div class="content">
+        <p class="mb-32">
+          Despite their differences, Alex, Brandon, and Cleo have something in common: They feel
+          overwhelmed by endless search results that are irrelevant to their needs and desire more
+          personalization in their search methods.
+        </p>
+        <p class="secondary-text mt-16">
+        </p>
+      </div>
+      <p class="secondary-text mb-0">
+        How might I empower diners to confidently discover dining options and make decisions?
+      </p>
+    </div>
+  </section>
+  <section id="user-stories" class="section-container">
+    <header class="header-container">
+      <h2>
+        <span class="source-code-pro">USER STORIES</span>
+        <br />
+        What functionalities do diners desire?
+      </h2>
+    </header>
+    <div class="content">
+      <p class="mb-32">
+        I began brainstorming solutions by creating user stories to explore specific functionalities
+        that could enhance the dining out experience. Below are a few key diner stories:
+      </p>
+      <div class="grid-2x2">
+        <div class="card-vertical">
+          <div class="icon_wrapper">
+            <img alt="" class="icon" loading="lazy" src="assets/svg/quotation-mark-blue.svg">
+          </div>
+          <p class="headline">
+            I want to easily get recommendations from friends, so I can confidently try new places.
+          </p>
+        </div>
+        <div class="card-vertical">
+          <div class="icon_wrapper">
+            <img alt="" class="icon" loading="lazy" src="assets/svg/quotation-mark-blue.svg">
+          </div>
+          <p class="headline">
+            I want personalized dining recommendations, so I can discover and explore options that
+            suit me.
+          </p>
+        </div>
+        <div class="card-vertical">
+          <div class="icon_wrapper">
+            <img alt="" class="icon" loading="lazy" src="assets/svg/quotation-mark-blue.svg">
+          </div>
+          <p class="headline">
+            I want to search for options with more customization like filters, so I can avoid
+            decision paralysis.
+          </p>
+        </div>
+        <div class="card-vertical">
+          <div class="icon_wrapper">
+            <img alt="" class="icon" loading="lazy" src="assets/svg/quotation-mark-blue.svg">
+          </div>
+          <p class="headline">
+            I want to write reviews that are visible to my friends only, so I can share my opinions
+            comfortably.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="user-flows" class="section-container pb-0">
+    <header class="header-container">
+      <h2>
+        <span>user flow</span>
+        <br />
+        How do I make diner stories a reality?
+      </h2>
+    </header>
+    <div class="content mb-16">
+      <p>
+        Given diners' habits with using mobile apps for decision-making, I decided that my product
+        would also be a mobile application. To bring the diner stories I created to life, I
+        brainstormed potential features, which I conceptualized into three potential
+        routes using user flows. This process helped me begin visualizing how diners would interact
+        with my product to enhance their dining experience!
+      </p>
+    </div>
+    <div class="container-full-width userflow-walkthrough bg-black">
+      <div class="userflow-walkthrough_grid-container">
+        <div class="userflow-walkthrough_card">
+          <p class="userflow-walkthrough_card_subheader">Route 01</p>
+          <p class="userflow-walkthrough_card_headline">
+            Diner signs up and sets up their account
+          </p>
+          <ul class="userflowFeatures_list">
+            <li>Create an account with email or social media</li>
+            <li>Input food preferences</li>
+            <li>Add friends</li>
+          </ul>
+        </div>
+        <div class="userflow-walkthrough_content-container">
+          <img class="userflow-walkthrough_image" loading="eager"
+            src="assets/images/tastebuds/route-1-user-flow.png">
+          <div class="userflow-walkthrough_content">
+            <p>After a standard sign-up process, diners can input their food preferences then add
+              their friends by linking their social media accounts and contacts. This would
+              <span class="white">enable personalized recommendations</span> for diners and allow
+              diners to <span class="white"> see dining recommendations from friends </span> they
+              add.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="userflow-walkthrough_grid-container">
+        <div class="userflow-walkthrough_card">
+          <p class="userflow-walkthrough_card_subheader">Route 02</p>
+          <p class="userflow-walkthrough_card_headline">
+            Diner searches for dining options
+          </p>
+          <ul class="userflowFeatures_list">
+            <li>Saved search presets</li>
+            <li>Filter by 'Cuisines'</li>
+            <li>Filter by 'Visit history'</li>
+            <li>Personalized recommendations</li>
+            <li>Compatibility score (% Match)</li>
+            <li>Limited search results</li>
+          </ul>
+        </div>
+        <div class="userflow-walkthrough_content-container">
+          <img class="userflow-walkthrough_image" loading="eager"
+            src="assets/images/tastebuds/route-2-user-flow.png">
+          <div class="userflow-walkthrough_content">
+            <p class="subheading">New search</p>
+            <p>
+              With a new search, diners can enter keywords and <span>detailed
+                preferences</span>.
+            </p>
+            <p class="subheading">"Filter by visit history"</p>
+            <p>Diners like Alex and Cleo who value discovery can filter for <span>
+                restaurants they haven't tried yet</span> (according to their visit history and
+              reviews). Diners like Brandon who value convenience can also filter for restaurants
+              they have visited.</p>
+            <p class="subheading">Compatability score (% Match)</p>
+            <p>To enhance personalization, search results are sorted by “% Match” by default. Using
+              AI and machine learning, this represents the diner's compatability with the restaurant
+              based on their food preferences and dining history.</p>
+            <p class="subheading">Saved search</p>
+            <p>
+              For convenience, similar to the concept of "Saved/Favorite orders" diners can add
+              "Saved searches" to efficiently find dining options they seek often. For instance,
+              since <span>Brandon</span> often works late, he might create
+              a saved search called
+              <span>"Late-night dinner"</span> with the following preferences: <span>previously
+                visited, 0.5 mile radius”, “open until 12:00 AM”, and “offers takeout</span>. This
+              would offer him a quick dining solution when pressed for time.
+            </p>
+            <p class="subheading">Search results</p>
+            <p>
+              For both search options, diners would receive a <span>finite number of
+                results</span>. <span>If dissatisfied</span> with the results, they can
+              <span>refresh</span> the results, which they can only undo one previous set. This
+              intends to <span>mitigate decision paralysis while encouraging diners to
+                carefully consider their options without restricting >discovery</span>.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="userflow-walkthrough_grid-container">
+        <div class="userflow-walkthrough_card">
+          <p class="userflow-walkthrough_card_subheader">Route 03</p>
+          <p class="userflow-walkthrough_card_headline">
+            Diner reviews their dining experience
+          </p>
+          <ul class="userflowFeatures_list">
+            <li>Rate ordered items (required)</li>
+            <li>Zero and half star rating system</li>
+            <li>Strengths and weaknesses of dining experience</li>
+            <li>Recommendation rating</li>
+            <li>Written review (optional)</li>
+          </ul>
+        </div>
+        <div class="userflow-walkthrough_content-container">
+          <img class="userflow-walkthrough_image" loading="lazy"
+            src="assets/images/tastebuds/route-3-user-flow.png">
+          <div class="userflow-walkthrough_content">
+            <p>
+              Users can record and share detailed dining experiences with friends via a
+              <span>structured review process</span> that prioritize critical decision-making
+              factors. To address diners' reluctance to write reviews in existing apps, this
+              structured flow leverages the psychological phenomenon of 'completion
+              bias'. <span>
+                My aim was to encourage
+                genuine, food-focused
+                reviews, deter fake feedback, gatheruser data for personalized
+                recommendations, and
+                generate easily scannable content. </span> Only two areas are required, all else is
+              optional (including written portion). Lastly, since my solution focuses on both
+              personalized suggestions and word-of-mouth recommendations, diners can
+              adjust privacy settings to <span>post private reviews to enhance their recommendations
+                if they feel
+                uncomfortable sharing some opinions publicly
+              </span>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="information-architecture" class="section-container border-0 bg-lightest-grey">
+    <header class="header-container">
+      <span> information architecture </span>
+      <h2>Organizing information that makes sense to diners</h2>
+    </header>
+    <div class="content mb-32">
+      <p>
+        Using the user flows, I began developing my app's information architecture. I planned on
+        implementing a bottom navigation bar, so I first brainstormed the app's top-level
+        destinations with a few secondary-level content:
+      </p>
+    </div>
+    <div class="sitemap_wrapper">
+      <div class="sitemap_card">
+        <img class="sitemap_icon" src="assets/svg/ic-home.svg" alt="">
+        <p class="sitemap_headline">Home</p>
+        <ul class="list-none">
+          <li>Cuisine quick links</li>
+          <li>Personalized recommendations</li>
+          <li>Offers & promotions</li>
+        </ul>
+      </div>
+      <div class="sitemap_card">
+        <img class="sitemap_icon" src="assets/svg/ic-chat.svg" alt="">
+        <p class="sitemap_headline">Social feed</p>
+        <ul class="list-none">
+          <li>Friends' reviews</li>
+          <li>Inbox</li>
+          <li>Write a review</li>
+        </ul>
+      </div>
+      <div class="sitemap_card">
+        <img class="sitemap_icon" src="assets/svg/ic-search.svg" alt="">
+        <p class="sitemap_headline">Search</p>
+        <ul class="list-none">
+          <li>New search</li>
+          <li>Saved search</li>
+          <li>Search results</li>
+        </ul>
+      </div>
+      <div id="grid-item-4" class="sitemap_card">
+        <img class="sitemap_icon" src="assets/svg/ic-favorite.svg" alt="">
+        <p class="sitemap_headline">saved</p>
+        <ul class="list-none">
+          <li>Saved restaurants</li>
+          <li>Create collections</li>
+          <li>Saved reviews from friends</li>
+        </ul>
+      </div>
+      <div id="grid-item-5" class="sitemap_card">
+        <img class="sitemap_icon" src="assets/svg/ic-account-circle.svg" alt="">
+        <p class="sitemap_headline">profile</p>
+        <ul class="list-none">
+          <li>User's reviews</li>
+          <li>Food preferences</li>
+          <li>Account settings</li>
+        </ul>
+      </div>
+    </div>
+    <div class="content">
+      <p class="subheading">Full site map</p>
+      <div class="content-grid mt-24">
+        <div><img class="img-sitemap" src="assets/images/tastebuds/sitemap.png" alt=""
+            loading="lazy">
+        </div>
+        <aside>
+          <p>Before finalizing TasteBuds as the name for my solution, I initially considered naming
+            it "Crave"! Which one do you prefer? 👀</p>
+        </aside>
+      </div>
+      <p class="mb-32">With the top-level destinations and established, I created a site map
+        integrating features from my user flows. While sitemaps are typically associated with
+        websites, this process helped me refine my user flows by conceptualizing content and
+        information hierarchy. </p>
+      <p class="subheading">A dedicated search page</p>
+      <p class="mb-32">
+        Most of the decision-making process for diners is comparative analysis. This intends to
+        facilitate seamless navigation between restaurant listings and other pages for diners,
+        optimizing their process by eliminating the need to switch between pages and
+        losing the search progress!
+      </p>
+      <p class="subheading">New features ✨</p>
+      <p>Since I was able to identify and address gaps in my user flows, I used my user personas to
+        further empathize with my target diners and brainstorm more features that would enhance
+        their experience. I added direct messaging, exclusive in-app
+        offers, and saved reviews and restaurants.</p>
+      <p class="subheading">Challenge 😵‍💫</p>
+      <p>The most challenging aspect was deciding the placement of the social feed. Both
+        personalized and word-of-mouth recommendations are valued by diners, making this
+        prioritization difficult. Ultimately, I chose to display personalized recommendations
+        first for their immediate value, while still ensuring easy access to word-of-mouth
+        recommendations by placing them second on the navigation bar!</p>
+    </div>
+  </section>
+  <section id="sketches" class="section-container border-0 pb-0">
+    <header class="header-container">
+      <span>design</span>
+      <h2>Sketches</h2>
+    </header>
+    <div class="content mb-0">
+      <p>During sketching, I made a few changes to the previous user flows and added a few new
+        features!
+      </p>
+    </div>
+    <div class="content">
+      <section>
+        <div class="sketches-walkthrough__wrapper">
+          <p class="section-subheading sketches">
+            Route 1: Diner signs up and sets up account
+          </p>
+          <img class="mb-24" src="assets/images/tastebuds/route-1-sketches-all-condensed.png"
+            alt="">
+          <p class="mb-0">
+            In my user flows, diners are prompted to add their friends during onboarding. However,
+            while sketching, I realized this might make the process too lengthy, so I removed it
+            from the flow.
+          </p>
+        </div>
+        <div class="sketches-walkthrough__wrapper border-0 mb-0">
+          <div class="sketches-walkthrough_grid-container mb-0">
+            <video class="featured-media border" controls autoplay controls loop muted>
+              <source src="assets/videos/tastebuds/route-1-sketches-preferences.mp4">
+              type="video/mp4">
+            </video>
+            <div>
+              <header class="sketches-walkthrough_grid-container--header">
+                <p class="subheading">Food preferences</p>
+              </header>
+              <p>Sketching these screens helped me brainstorn the user data sets that are necessary
+                for personalized dining recommendations. I included cuisines, diet, dishes,
+                preferred ingredients, and allergies.</p>
+              <div class="sketches-walkthrough__card mb-32 hide">
+                <ul class="card--list mt-0">
+                  <p class="card--headline">Categories</p>
+                  <li>Cuisines</li>
+                  <li>Diet</li>
+                  <li>Dishes</li>
+                  <li>Ingredients</li>
+                  <li>Allergies</li>
+                </ul>
+              </div>
+              <p class="medium-grey mb-0">
+                *Note: Only dietary preferences would be strictly adhered to: Food preferences are
+                prioritized—not restrictive—to avoid limiting discovery!
+              </p>
+            </div>
+          </div>
+          <div>
+            <button class="accordion mt-32" onclick="toggleAccordion(this)">
+              <div class=" accordion__header">
+                <p>Where would the mobile app obtain information on 'ingredients'?</p>
+                <img class="accordion__icon" src="assets/svg/ic-chevron-arrow__down--white.svg" />
+              </div>
+              <div class="accordion__content">
+                <p>
+                  With ingredients being the building blocks of food, I speculated that these
+                  preferences and restrictions would be key to generating relevant recommendations
+                  by targeting specific ingredients in menu item description.
+                  <br>
+                  <br> After some research, I learned that this can be engineered using Yelp and
+                  Google APIs. However, this idea was a key moment in my brainstorming phase because
+                  this gave me the idea of integrating restaurants into the
+                  mobile solution as users to update their information and menus. This also gave me
+                  the idea for a business strategy to generate revenue from restaurant partnerships,
+                  keeping the app free for diners and providing user
+                  insights to restaurants to enhance their offerings, thus enhancing the overall
+                  diner journey cycle.
+                </p>
+              </div>
+            </button>
+          </div>
+        </div>
+      </section>
+      <section>
+        <p class="section-subheading sketches">
+          Route 2: Diner searches for dining options
+        </p>
+        <!-- Search results with gif -->
+        <div class="sketches-walkthrough__wrapper">
+          <div class="sketches-walkthrough_grid-container mb-0">
+            <video class="featured-media border" controls autoplay controls loop muted>
+              <source src="assets/videos/tastebuds/route-2-sketches-search.mp4">
+              type="video/mp4">
+            </video>
+            <div>
+              <header class="sketches-walkthrough_grid-container--header">
+                <p class="subheading">Search</p>
+              </header>
+              <p>
+                To promote search relevance, I placed food preferences (filters) on the first search
+                screen prompts users to enter preferences before initiating search.
+              </p>
+              <div>
+                <button class="accordion" onclick="toggleAccordion(this)">
+                  <div class="accordion__header">
+                    <p>More details</p>
+                    <img class="accordion__icon"
+                      src="assets/svg/ic-chevron-arrow__down--white.svg" />
+                  </div>
+                  <div class="accordion__content">
+                    <ul class="span-fw-medium list--dark gap--medium">
+                      <li>
+                        <span>Top 3 qualities voted by friends</span>
+                        <br> When reviewing a dining experience, diners select up to 3 qualities
+                        that stood out. Qualities with the most votes are displayed so they can
+                        better gauge the restaurant's strengths at a glance.
+                      </li>
+                      <li>
+                        <span>Refresh for a new set of results</span>
+                        <br> Earlier, my user flows disallow undoing refresh, but I realized like
+                        that would limit exploration. I decided to allow users to undo their last
+                        set of results to maintain my initial goal of encouraging diners
+                        to be more deliverate and thoughtful.
+                      </li>
+                      <li> <span>Commute time</span>
+                        <br> Since location is an important factor for diners, I speculated
+                        displaying the commute time in the search results would make their process
+                        more efficient.
+                      </li>
+                    </ul>
+                  </div>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="sketches-walkthrough__wrapper">
+          <div class="sketches-walkthrough_grid-container">
+            <video class="featured-media border" controls autoplay loop muted
+              controlsList="nodownload">
+              <source src="assets/videos/tastebuds/route-2-sketches-search-results.mp4">
+              type="video/mp4">
+            </video>
+            <div>
+              <header class="sketches-walkthrough_grid-container--header">
+                <p class="subheading">Search results</p>
+              </header>
+              <p>
+                I wanted to help diners easily assess and compare restaurants, so my sketches
+                present 3 scannable views: List view (default), map view, and bottom sheet
+                (carousel).
+              </p>
+              <div class="sketches-walkthrough__card">
+                <ul class="card--list mt-0">
+                  <p class="card--headline">Features</p>
+                  <li>Tailored order recommendations</li>
+                  <li>Top 3 qualities by friends</li>
+                  <li>Commute time</li>
+                  <li>Photos posted by friends</li>
+                  <li>Compatability score</li>
+                  <li>Refresh results (can undo once)</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <br>
+          <div>
+            <h3 class="section-subheading">Where would the mobile app retrieve restaurant info?</h3>
+            <p>
+              To ensure that my ideas are feasible, I did some research:
+            </p>
+            <ol>
+              <li class="fw-medium black">
+                <p class="fw-medium mb-8">Using Yelp and Google APIs</p>
+                <p>Leveraging these APIs, engineers can import existing data on restaurants from
+                  their Yelp and Google profiles.</p>
+              </li>
+              <li class="fw-medium black ">
+                <p class="fw-medium mb-8">Restaurant partnerships</p>
+                <p class="span-fw-medium mb-0">Alternatively or supplementally, the mobile solution
+                  could
+                  <span>
+                    integrate
+                    restaurants as users to update their info and
+                    menus
+                  </span>. This gave me the idea for a <span>
+                    business strategy with business
+                    partnerships to keep the app free
+                  </span> for diners and provide user insights for restaurants to enhance the
+                  overall diner journey!
+                </p>
+              </li>
+            </ol>
+          </div>
+        </div>
+        <div class="sketches-walkthrough__wrapper mb-0 border-0">
+          <div class="sketches-walkthrough_grid-container mb-32">
+            <img class="featured-media" alt="" loading="lazy"
+              src="assets/images/tastebuds/route-2-sketch-restaurant-listing.png">
+            <div>
+              <header class="sketches-walkthrough_grid-container--header">
+                <p class="subheading">Restaurant listing</p>
+              </header>
+              <p>
+                I focused on presenting essential information above the fold and on the first
+                screen. The home page features menu items recommended for the diner, as well as
+                bestsellers among their friends. I also added 'Deals' because diners like Alex and
+                Brandon highly
+                prioritize value!
+              </p>
+              <div class="sketches-walkthrough__card">
+                <ul class="card--list mt-0">
+                  <p class="card--headline">Features</p>
+                  <li>Restaurant strengths</li>
+                  <li>Commute and walk time</li>
+                  <li>Personalized item recommendations</li>
+                  <li>Bestsellers among friends</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <p class="subheading mv-24 dark-grey">Sketches flow</p>
+          <img src="assets/images/tastebuds/route-2-sketches-flow-search-results.png"
+            alt="Four sketches of a mobile app interface for finding Taiwanese restaurants.">
+        </div>
+      </section>
+    </div>
+    <div class="content mb-0">
+      <p class="section-subheading sketches text-center">
+        Route 3: Diner reviews a dining experience
+      </p>
+    </div>
+    <div class="content medium-small mt-0 mb-40">
+      <img src="assets/images/tastebuds/route-3-sketches-02.png" alt="">
+      <br>
+      <br>
+      <img src="assets/images/tastebuds/route-3-sketches-01.png" alt="">
+    </div>
+    <div class="content mt-0">
+      <div class="sketches-walkthrough__wrapper">
+        <p class="mb-0">
+          I wanted to encourage detailed reviews without overwhelming users, so I sketched an
+          overview page for more freedom and control. To prevent errors, diners can modify their
+          restaurant selection. Additionally, I added a slider to clarify the unconventional
+          rating system with zero and half stars.
+        </p>
+      </div>
+      <div class="sketches-walkthrough__wrapper">
+        <div class="sketches-walkthrough_grid-container mb-32">
+          <img class="featured-media" alt="" loading="lazy"
+            src="assets/images/tastebuds/route-3-sketch-review-item.png">
+          <div>
+            <header class="sketches-walkthrough_grid-container--header">
+              <p class="subheading">Review ordered item(s)</p>
+            </header>
+            <p>
+              My goal in requiring diners to review menu items is to strengthen the app's
+              food-focused intention and discourage fake reviews. By leveraging user data, I added
+              input fields for voting on authenticity and flavors, allowing the app to tailor
+              recommendations
+              and generate scannable content more effectively.
+            </p>
+            <div class="sketches-walkthrough__card">
+              <ul class="card--list mt-0">
+                <p class="card--headline">New features</p>
+                <li>Edit menu item details</li>
+                <li>Food critique (optional)</li>
+                <li>Tips on ordering</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div>
+          <button class="accordion mb-16" onclick="toggleAccordion(this)">
+            <div class="accordion__header">
+              <p>More details</p>
+              <img class="accordion__icon" src="assets/svg/ic-chevron-arrow__down--white.svg" />
+            </div>
+            <div class="accordion__content">
+              <ul class="span-fw-medium list--dark gap--medium">
+                <li>
+                  <span>Rating menu items</span>
+                  <br> I wanted to address skepticism among diners like Alex towards low ratings
+                  despite good food, catering to situations where diners may have had service issues
+                  but still enjoyed the food.
+                </li>
+                <li>
+                  <span>Food critique (optional)</span>
+                  <br> I wanted to enhancing reviews and increase credibility by offering a template
+                  that breaks down diners' priorities: taste, portion size, authenticity, price, and
+                  ordering tips.
+                </li>
+                <li>
+                  <span>Tips on ordering (optional)</span>
+                  <br> Separate from the written review, I planned on designing a section for these
+                  tips in my reviews screen in low-fidelity. I wanted to help diners distinguish
+                  tips from main review content.
+                </li>
+              </ul>
+            </div>
+          </button>
+        </div>
+      </div>
+      <div class="sketches-walkthrough__wrapper mb-0 border-0 pb-0">
+        <div class="sketches-walkthrough_grid-container mb-0">
+          <img class="featured-media" alt="" loading="lazy"
+            src="assets/images/tastebuds/route-3-sketch-pros-and-cons.png">
+          <div>
+            <header class="sketches-walkthrough_grid-container--header">
+              <p class="subheading">Strengths and weaknesses</p>
+            </header>
+            <p>This is another effort to leverage user data to create scannable content that
+              efficiently illustrates the restaurant's profile. At this stage, I envisioned
+              restaurants using the app to enhance its value proposition, potentially
+              generating revenue to offer it free to users, and improve the entire diner journey.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-full-width bg-dark-grey">
+      <div class="content xxl">
+        <p class="section-subheading white mb-32">All route 1 sketches</p>
+        <img alt="" class="route-1-sketches-all_wrapper" loading="lazy"
+          src="assets/images/tastebuds/route-1-sketches-all.png">
+      </div>
+    </div>
+  </section>
+  <section id="guerilla-test" class="section-container bg-lightest-grey border-0">
+    <header class="header-container">
+      <h2>
+        <span>test</span>
+        <br>
+        Guerilla testing
+      </h2>
+    </header>
+    <div class="content">
+      <p>Since my sketches for routes 2 and 3 were close to low-fidelity, I prototoyped them and
+        conducted guerilla usability tests with 5 participants. Here's what I found:</p>
+    </div>
+    <div class="testing-outcomes_grid">
+      <div class="testing-outcomes-card">
+        <img alt="" class="testing-outcomes-icon-category" loading="lazy"
+          src="assets/images/tastebuds/icon-checkmark-circle-filled-green.png">
+        <div class="card__content validation">
+          <img alt="" class="testing-outcomes-icon" loading="lazy"
+            src="assets/svg/tastebuds/ic-discount-tag.svg">
+          <p>All diners pointed out and affirmed the restaurant "deal".</p>
+        </div>
+      </div>
+      <div class="testing-outcomes-card">
+        <img alt="" class="testing-outcomes-icon-category" loading="lazy"
+          src="assets/images/tastebuds/icon-checkmark-circle-filled-green.png">
+        <div class="card__content validation">
+          <img alt="" class="testing-outcomes-icon" loading="lazy"
+            src="assets/svg/tastebuds/ic-discount-tag.svg">
+          <p>All diners affirmed the personalized recommendations.</p>
+        </div>
+      </div>
+      <div class="testing-outcomes-card">
+        <img alt="" class="testing-outcomes-icon-category" loading="lazy"
+          src="assets/images/tastebuds/icon-checkmark-circle-filled-green.png">
+        <div class="card__content validation">
+          <img alt="" class="testing-outcomes-icon" loading="lazy"
+            src="assets/svg/tastebuds/ic-discount-tag.svg">
+          <p>All diners found the prototype intuitive and affirmed its potential.</p>
+        </div>
+      </div>
+      <div class="testing-outcomes-card">
+        <img alt="" class="testing-outcomes-icon-category" loading="lazy"
+          src="assets/images/tastebuds/icon-checkmark-circle-filled-green.png">
+        <div class="card__content validation">
+          <img alt="" class="testing-outcomes-icon" loading="lazy"
+            src="assets/svg/tastebuds/ic-map-with-location-icon.svg">
+          <p>The map view is essential for a location based search.</p>
+        </div>
+      </div>
+      <div class="testing-outcomes-card">
+        <img alt="" class="testing-outcomes-icon-category" loading="lazy"
+          src="assets/images/tastebuds/icon-cancel-circle-filled-red.png">
+        <div class="card__content invalidation">
+          <img alt="" class="testing-outcomes-icon" loading="lazy"
+            src="assets/svg/tastebuds/ic-not-visible.svg">
+          <p>3 diners didn't notice the map (behind the list of results).</p>
+        </div>
+      </div>
+      <div class="testing-outcomes-card">
+        <img alt="" class="testing-outcomes-icon-category" loading="lazy"
+          src="assets/images/tastebuds/icon-cancel-circle-filled-red.png">
+        <div class="card__content invalidation">
+          <img alt="" class="testing-outcomes-icon" loading="lazy"
+            src="assets/svg/tastebuds/ic-star-rating-slider.svg">
+          <p>4 diners struggled with the slider design to rate stars.</p>
+        </div>
+      </div>
+    </div>
+    <div class="content-wrapper mt-24">
+      <a
+        href="https://docs.google.com/document/d/1nq9g-vct7cKA-PFsIPlcCAuN3rX1QibhBRnavFDOs_0/edit?usp=sharing">
+        <p class="link-blue text-center">
+          View complete test report
+        </p>
+      </a>
+    </div>
+  </section>
+  <section id="low-fidelity" class="section-container">
+    <header class="header-container">
+      <h2>
+        <span>design iterations</span>
+        <br>
+        Low-fidelity wireframes
+      </h2>
+    </header>
+    <!-- Route 1 low fidelity wireframes -->
+    <section class="content">
+      <p>
+        Using my testing insights, I iterated my sketches into low-fidelity wireframes.
+      </p>
+      <p class="section-subheading">
+        Route 1: Diner signs up and sets up account
+      </p>
+      <p>While I didn’t test this route, I made some improvements to improve clarity and flow!
+      </p>
+      <div class="design-walkthrough-grid_wrapper mt-32">
+        <p class="subheading">Streamline onboarding with a linear flow and progress bar</p>
+        <img class="mb-24"
+          src="assets/images/tastebuds/route-1-low-fidelity-food-preferences-01.png" alt="">
+        <p class="span-fw-medium mb-0">I decided to abandon the onboarding flow I sketched for a
+          linear process to streamline the experience. I also added a progress bar and a modal
+          checkpoint to boost completion rates!</p>
+      </div>
+      <div class="design-walkthrough-grid_wrapper mt-32 mb-0 pb-0 border-0">
+        <p class="subheading">Enhancing recommendations with additional diner preferences</p>
+        <img class="mb-24"
+          src="assets/images/tastebuds/route-1-low-fidelity-food-preferences-02.png" alt="">
+        <p class="span-fw-medium mb-0">My participants mentioned avoiding ingredients that aren't
+          technically allergies, so I added a step to input ingredients they simply
+          dislike—"Disliked Ingredients".</p>
+        <div>
+          <p class="subheading mt-32 mb-24 dark-grey">Complete wire flow</p>
+          <img alt="" loading="lazy" sizes="90vw"
+            src="assets/images/tastebuds/route-1-low-fidelity-wire-flow.png">
+        </div>
+      </div>
+    </section>
+    <!-- Route 2 low fidelity wireframes -->
+    <section class="content-wrapper">
+      <p class="section-subheading mb-32">
+        Route 2: Diner searches for dining options
+      </p>
+      <div class="design-walkthrough-grid_wrapper mb-0 border-0">
+        <div class="design-walkthrough-grid_container">
+          <video class="featured-media border" controls loop muted>
+            <source src="assets/videos/tastebuds/route-2-low-fidelity-search-results.mp4">
+            type="video/mp4">
+          </video>
+          <div class="design-walkthrough-grid_content">
+            <header class="design-walkthrough_header">
+              <p class="subheading">Search results</p>
+            </header>
+            <p>I changed the first screen of results to a split view and added "Offers". I wanted to
+              explore additional ideas to help diners efficiently compare restaurants, so I designed
+              a way for diners to preview listings in a swipeable carousel.</p>
+            <div class="design-walkthrough-grid_card">
+              <ul class="card_list mt-0">
+                <li class="card_headline">New features</li>
+                <li>Map button at the bottom of list</li>
+                <li>Offers displayed in results</li>
+                <li>Split view displaying map and list</li>
+                <li>Preview listings in a carousel</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <p class="subheading">Restaurant listing</p>
+        <div class="route-2-low-fidelity-all_grid-container">
+          <img src="assets/images/tastebuds/route-2-low-fidelity-listing-home.png" alt="">
+          <img src="assets/images/tastebuds/route-2-low-fidelity-listing-info.png" alt="">
+          <img src="assets/images/tastebuds/route-2-low-fidelity-listing-menu.png" alt="">
+          <img src="assets/images/tastebuds/route-2-low-fidelity-listing-photos.png" alt="">
+          <img src="assets/images/tastebuds/route-2-low-fidelity-listing-reviews.png" alt="">
+        </div>
+        <p class="span-fw-medium mb-32">Throughout designing the remaining listing pages, I
+          struggled the most with the reviews page due to the amount of information I wanted to
+          display. The wireframe I chose organizes essential information that prioritizes
+          scannability and
+          facilitates quick navigation to restaurant lists, menu items, as well as community
+          engagement.
+          <br>
+          <br> This was the point I began to brainstorm the social aspect of the app, exploring how
+          user engagement with friends' reviews could enhance tailored recommendations. I planned to
+          develop these ideas further in my high-fidelity wireframes
+          and implement them in my social feed page!
+          <br>
+          <br> The only other changes I made were restructuring the home page to display more
+          essential information above the fold by displaying order recommendations in a carousel to
+          enhance scannability.
+        </p>
+        <p class="subheading">Iteration process</p>
+        <p>Here's a quick overview of my iteration process!</p>
+        <div class="r2-lowfi-design-evolution_grid-container">
+          <p class="medium-grey lowfi-design-evolution_heading-01">Previous</p>
+          <p class="black lowfi-design-evolution_heading-02">Iteration</p>
+          <img alt="" class="img-1" loading="lazy"
+            src="assets/images/tastebuds/route-2-sketch-restaurant-listing.png">
+          <img alt="" class="img-2" loading="lazy"
+            src="assets/images/tastebuds/route-2-sketch-restaurant-listing-menu.png">
+          <img alt="" class="img-design-evolution-arrow" loading="lazy"
+            src="assets/images/tastebuds/artwork-arrow-right-blue.png">
+          <img alt="" class="img-3" loading="lazy"
+            src="assets/images/tastebuds/route-2-low-fidelity-listing-home.png">
+          <img alt="" class="img-4" loading="lazy"
+            src="assets/images/tastebuds/route-2-low-fidelity-listing-menu.png">
+        </div>
+      </div>
+      <div class="content">
+        <p class="section-subheading">Route 3: Diner reviews a dining experience</p>
+        <div class="design-walkthrough-grid_wrapper mb-0 border-0">
+          <p class="subheading">Streamlined restaurant review</p>
+          <img alt="" class="hide" loading="lazy" sizes="100vw"
+            src="assets/images/tastebuds/illustration-sketches-route-1-review-iteration.png">
+          <div class="design-walkthrough-grid_container mb-0">
+            <video class="featured-media border" controls loop muted>
+              <source src="assets/videos/tastebuds/route-3-low-fidelity-restaurant-rating.mp4">
+              type="video/mp4">
+            </video>
+            <div class="design-walkthrough-grid_content">
+              <p class="span-fw-medium mb-32">I streamlined the flow further and enhanced visual
+                feedback, information architecture, and system status. To increase trust among
+                diners with reviews and address potential issues with subjectivity, I implemented a
+                standardized
+                rating system!</p>
+              <div class="design-walkthrough-grid_card">
+                <ul class="card_list mt-0">
+                  <p class="card_headline">New features</p>
+                  <li>Clear copy with more natural language</li>
+                  <li>Progress bar</li>
+                  <li>Standardized tiered rating system</li>
+                  <li>Mutually exclusive strengths and weaknesses selection</li>
+                  <li>Drag interaction to rate stars</li>
+                  <li>Reset & finish later option</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="section-subheading">Review flow iteration</p>
+        <p>The low-fidelity flow streamlined from 7 screens to 4 screens!</p>
+        <p class="medium-grey lowfi-design-evolution_heading-01 mb-8">Previous</p>
+        <img alt="" loading="lazy"
+          src="assets/images/tastebuds/route-3-sketches-wireflow-labeled.png">
+        <br>
+        <br>
+        <p class="black lowfi-design-evolution_heading-02 mb-8">Iteration</p>
+        <img alt="" loading="lazy"
+          src="assets/images/tastebuds/route-3-low-fidelity-wireflow-labeled.png">
+      </div>
+    </section>
+  </section>
+  <section id="branding" class="section-container">
+    <header class="header-container">
+      <h2>
+        <span>branding</span>
+        <br>
+        Style guide
+      </h2>
+    </header>
+    <div class="content">
+      <p>
+        My next round of designs were low-fidelity wireframes, where I implemented the
+        recommendations I made as a result of my first usability test.
+      </p>
+      <p class="subheading mb-16">Color Palette</p>
+      <p class="span-fw-medium">
+        In crafting my color palette, <span>
+          my goal was to address diners' mistrust and lack of
+          confidence, so I wanted to foster warmth, friendliness, trust, excitement, and a sense of
+          community.
+        </span>
+        <br>
+        <br>At first, I heavily considered the color red, which is used by major competitors in the
+        consumer dining industry, such as McDonald's, Doordash, Yelp, and Open Table, to stimulate
+        appetite and spending. However, I realized that my mobile
+        solution aims to leverage personal recommendations to build trust and confidence, not drive
+        consumer spending. Therefore, <span>
+          I chose a sunflower yellow to encourage social interaction and exploration, complemented
+          by a sky blue to provide a sense of familiarity, as it is commonly used in interactive
+          icons across social media apps.
+        </span>
+      </p>
+      <div class="mb-32">
+        <img class="img-branding-colors" src="assets/images/tastebuds/branding-colors.png" alt="">
+      </div>
+      <div class="flex-row gap-40 align-center mb-32">
+        <div>
+          <p class="subheading mb-24">Typography
+          </p>
+          <img class="img-branding-typography" src="assets/images/tastebuds/branding-typography.png"
+            alt="">
+        </div>
+        <p class="notes text-small">Spoiler Alert: Yes, I shortly realized this type was too small.
+          And yes, it was a pain to readjust all of my designs because I didn't know to use Figma's
+          public library tool. This was one hard lesson to learn 😭
+        </p>
+      </div>
+      <div class=" flex-row gap-40 mb-32">
+        <div>
+          <p class="subheading mb-16">Buttons</p>
+          <img class="img-branding-buttons" src="assets/images/tastebuds/branding-buttons.png"
+            alt="">
+        </div>
+        <div>
+          <div class="mb-24">
+            <p class="subheading mb-24">Search bar</p>
+            <img class="img-branding-search-bar"
+              src="assets/images/tastebuds/branding-search-bar.png" alt="">
+          </div>
+          <div>
+            <p class="subheading mb-24">Badges</p>
+            <img class="img-branding-badges" src="assets/images/tastebuds/branding-badges.png"
+              alt="">
+          </div>
+        </div>
+      </div>
+      <div class="mb-32">
+        <p class="subheading mb-24">8-point-grid</p>
+        <img class="img-branding-8-point-grid"
+          src="assets/images/tastebuds/branding-8-point-grid.png" alt="">
+      </div>
+    </div>
+  </section>
+  <section id="high-fidelity" class="section-container">
+    <header class="header-container">
+      <span>design</span>
+      <h2>High-fidelity prototype</h2>
+    </header>
+    <div class="content-grid mt-24 mb-0">
+      <div>
+        <p>With my new style guide, I designed high-fidelity wireframes and prototyped them for my
+          next round of usability tests. A key objective in my high-fidelity explorations was
+          enhancing accessibility, so I reviewed <a class="link-blue"
+            href="https://developer.apple.com/design/human-interface-guidelines/accessibility">
+            Apple's Human Interface Guidelines for
+            Accessibility</a> and <a class="link-blue" href="https://www.w3.org/TR/WCAG22/">
+            Web Content Accessibility Guidelines (WCAG)</a>.</p>
+        <p class="span-fw-medium">My learnings guided me to <span>
+            significantly
+            increase spacing and physical interactions
+            when possible</span>, supporting both users with limited mobility and power users.</p>
+      </div>
+      <aside>
+        <p>This reinforced my dedication to accessibility, one of my core design values!
+        </p>
+      </aside>
+    </div>
+    <div class="mv-48 content-wrapper">
+      <h3 class="section-subheading">Route 1: Sign up + onboarding</h3>
+      <p>
+        Given how essential food preferences are to curate accurate dining recommendations, my goal
+        was to make onboarding more engaging to encourage users to input preferences now than later.
+        Therefore, <span class="fw-medium">
+          I implemented more conversational UI and visual aids and
+          further
+          streamlined the user flow.
+        </span>
+      </p>
+    </div>
+    <div class="content-wrapper mb-16">
+      <div class="design-walkthrough-grid_wrapper border-0 mb-0">
+        <div class="flex-row gap-24 pb-0">
+          <div class="design-walkthrough_grid-1-col">
+            <video class="autoplay-video" controls loop muted>
+              <source src="assets/videos/tastebuds/prototype-high-fidelity-route-1-v1-intro.mp4"
+                type="video/mp4">
+            </video>
+            <div>
+              <p class="subheading">Introduction screens</p>
+              <p>
+                I added intro screens to educate users about the app and the importance of inputing
+                their food preferences now.
+              </p>
+            </div>
+          </div>
+          <div class="design-walkthrough_grid-1-col">
+            <video class="autoplay-video" controls loop muted>
+              <source
+                src="assets/videos/tastebuds/prototype-high-fidelity-v1-route-1-food-preferences.mp4"
+                type="video/mp4">
+            </video>
+            <div>
+              <p class="subheading">Food preferences</p>
+              <p>
+                I added the option to suggest missing items, implemented conversational UI, help
+                icons, and more visual aids.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mb-40">
+        <h3 class="section-subheading content mb-16">Route 2: Diner searches for a restaurant
+        </h3>
+        <div class="content-grid">
+          <div>
+            <p>To improve accessibility, I enlarged and simplified my designs and omitted
+              unnecessary info. I also continued developing my business goals by conceptualizing
+              restaurant partnerships and their role in the diner journey! This revamp
+              took some time since I struggled to balance accommodating mental models and innovative
+              features, so I planned on refining this balance after testing.</p>
+          </div>
+          <aside>
+            <p>Revisiting my diner personas helped me streamline my information architecture!</p>
+          </aside>
+        </div>
+      </div>
+      <div class="design-walkthrough-grid_wrapper">
+        <header class="design-walkthrough_header">
+          <p class="subheading">Home page</p>
+        </header>
+        <div class="design-walkthrough-evolution_3-column-grid">
+          <p class="medium-grey hf-heading-01 hide">Previous</p>
+          <p class="black hf-heading-02 hide">Iteration</p>
+          <img alt="" class="img-1 img-wireframe-border" loading="lazy"
+            src="assets/images/tastebuds/route-2-low-fidelity-home.png">
+          <img alt="" class="img-2 img-wireframe-border" loading="lazy"
+            src="assets/images/tastebuds/route-2-low-fidelity-listing-reviews.png">
+          <img alt="" class="img-design-evolution-arrow" loading="lazy"
+            src="assets/images/tastebuds/artwork-arrow-right-blue.png">
+          <video class="img-3" controls loop muted>
+            <source src="assets/videos/tastebuds/prototype-route-2-high-fidelity-v1-home.mp4"
+              type="video/mp4">
+          </video>
+          <div class="grid-content flex-row gap-40">
+            <div>
+              <p class="fw-medium mb-8">For You</p>
+              <p class="mb-0">I wanted to enhance engagement and personalization, so I reorganized
+                the layout to improve the info and content hierarchy, redesigned the navigation tabs
+                to be more distinct, and revised label copy using conversational UI.</p>
+            </div>
+            <div>
+              <p class="fw-medium mb-8">Following</p>
+              <p class="mb-0">Understanding how diners engage with reviews, I designed the
+                "Following" page and refined its role in the ecosystem. In addition to standard
+                social interactive features, diners can easily navigate to the restaurant and menu
+                items.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="design-walkthrough-grid_wrapper">
+        <header class="design-walkthrough_header">
+          <p class="subheading">Search process</p>
+        </header>
+        <div class="design-walkthrough-evolution_3-column-grid mb-40">
+          <p class="medium-grey hf-heading-01 hide">Previous</p>
+          <p class="black hf-heading-02 hide">Iteration</p>
+          <img alt="" class="img-1" loading="lazy"
+            src="assets/images/tastebuds/route-2-low-fidelity-search-preferences.png">
+          <img alt="" class="img-2" loading="lazy"
+            src="assets/images/tastebuds/route-2-low-fidelity-search-new.png">
+          <img alt="" class="img-design-evolution-arrow" loading="lazy"
+            src="assets/images/tastebuds/artwork-arrow-right-blue.png">
+          <video class="img-3" controls loop muted>
+            <source src="assets/videos/tastebuds/prototype-route-2-high-fidelity-v1-search.mp4"
+              type="video/mp4">
+          </video>
+        </div>
+        <p class="span-fw-medium mb-0">
+          I added the option to <span>select up to 3 key qualities</span> in the filters. After
+          realizing that the <span>2-column layout was too crowded</span> in other categories, I
+          reduced it to 1-column and increased spacing between elements
+          </span>.
+        </p>
+      </div>
+      <div class="design-walkthrough-grid_wrapper">
+        <header class="design-walkthrough_header">
+          <p class="subheading">Search results</p>
+        </header>
+        <div class="design-walkthrough-evolution_3-column-grid mb-40">
+          <p class="medium-grey hf-heading-01 hide">Previous</p>
+          <p class="black hf-heading-02 hide">Iteration</p>
+          <img alt="" class="img-1" loading="lazy"
+            src="assets/images/tastebuds/route-2-sketch-search-results-list.png">
+          <img alt="" class="img-2" loading="lazy"
+            src="assets/images/tastebuds/route-2-sketch-search-results-card-carousel.png">
+          <img alt="" class="img-design-evolution-arrow" loading="lazy"
+            src="assets/images/tastebuds/artwork-arrow-right-blue.png">
+          <video class="img-3" controls loop muted>
+            <source
+              src="assets/videos/tastebuds/prototype-route-2-high-fidelity-v1-search-results.mp4"
+              type="video/mp4">
+          </video>
+        </div>
+        <p class="mb-0">I forfeited "Listing previews" since my test participants did not engaged
+          with it. I also redesigned the bottom sheet to be more consistent with the list view.</p>
+      </div>
+      <div class="design-walkthrough-grid_wrapper pb-0 mb-0 border-0">
+        <div class="design-walkthrough-grid_container pb-0 mb-0">
+          <video class="featured-media" controls loop muted>
+            <source src="assets/videos/tastebuds/prototype-route-2-high-fidelity-v1-listing.mp4"
+              type="video/mp4">
+          </video>
+          <div class="design-walkthrough-grid_content">
+            <header class="design-walkthrough_header">
+              <p class="subheading">Restaurant listing</p>
+            </header>
+            <p>
+              I wanted to further amplify social engagement and conceptualize restaurant
+              partnerships, so I enhanced social proof elements, added more engagement features, and
+              developed the 'Redeem offer' screen.
+            </p>
+            <div class="design-walkthrough-grid_card">
+              <ul class="card_list mt-0">
+                <p class="card_headline">New features</p>
+                <li>Share restaurant (button)</li>
+                <li>Save restaurant (button)</li>
+                <li>Message restaurant (button)</li>
+                <li>Write review (button)</li>
+                <li>Offer redemption page</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="content-wrapper">
+      <div class="mb-40">
+        <h3 class="section-subheading black">Route 3: Diner reviews a restaurant</h3>
+        <p>I adapted this route to the changes I made in routes 1 and 2, streamlined the process,
+          and enhanced its usability.</p>
+      </div>
+      <div class="design-walkthrough-grid_wrapper">
+        <header class="design-walkthrough_header">
+          <p class="subheading">Reviewing menu items</p>
+        </header>
+        <div class="design-walkthrough-evolution_3-column-grid mb-40">
+          <p class="medium-grey hf-heading-01 hide">Previous</p>
+          <p class="black hf-heading-02 hide">Iteration</p>
+          <img alt="" class="img-1" loading="lazy"
+            src="assets/images/tastebuds/route-3-low-fidelity-06-menu-items-blank.png">
+          <img alt="" class="img-2" loading="lazy"
+            src="assets/images/tastebuds/route-3-low-fidelity-07-menu-item-blank.png">
+          <img alt="" class="img-design-evolution-arrow" loading="lazy"
+            src="assets/images/tastebuds/artwork-arrow-right-blue.png">
+          <video class="img-3" controls loop muted>
+            <source src="assets/videos/tastebuds/prototype-high-fidelity-v1-route-3-menu-item.mp4"
+              type="video/mp4">
+          </video>
+        </div>
+        <p class="mb-0">I removed the "What was it like?" section, added a search bar and filters to
+          find menu items, simplified the list layout, and added a number badge that indicates how
+          many items have been reviewed.</p>
+      </div>
+      <div class="design-walkthrough-grid_wrapper mb-0 border-0  pb-0">
+        <header class="design-walkthrough_header">
+        </header>
+        <div class="design-walkthrough-grid_container mb-0">
+          <video class="featured-media" controls loop muted>
+            <source src="assets/videos/tastebuds/prototype-high-fidelity-v1-route-3-tag-photo.mp4"
+              type="video/mp4">
+          </video>
+          <div class="design-walkthrough-grid_content">
+            <header class="design-walkthrough_header">
+              <p class="subheading">Adding media content and tagging menu items</p>
+            </header>
+            <p>
+              This is the flow for diners to add photos and videos to their review! Since diners
+              have the habit of searching up specific menu items, I designed a feature for diners to
+              tag their photos with the respective menu item(s) and/or friends.
+            </p>
+            <div class="design-walkthrough-grid_card">
+              <ul class="card_list mt-0">
+                <p class="card_headline">New features</p>
+                <li>Tag menu item</li>
+                <li>Tag people</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="usability-testing-2" class="section-container">
+    <header class="header-container">
+      <span>test</span>
+      <h2>Feedback</h2>
+    </header>
+    <div class="content-wrapper mb-16">
+      <p class="section-subheading">Methodology</p>
+      <p>
+        I recruited 5 diners to test out my high-fidelity prototype remotely and gather feedback. I
+        sought out participants between the ages 21 and 30 who dine out at least once a week and use
+        at least one online method to find dining options.
+        Each test was moderated and included the following
+        tasks:
+      </p>
+      <ol class="mb-32">
+        <li>
+          <span class="fw-medium">Route 1</span>: Create an account using your Facebook login.
+        </li>
+        <li>
+          <span class="fw-medium">Route 2</span>: Find a restaurant to dine at within 3 miles of
+          your current location.
+        </li>
+        <li>
+          <span class="fw-medium">Route 3</span>: Write a 4.5-star review with a photo for Olives
+          Branch Bistro, where you had a Mixed Kebab Plate.
+        </li>
+      </ol>
+      <h3 class="section-subheading">Findings</h3>
+      <p>Overall, participants found the prototype very informative and intuitive! The most critical
+        error occured during the onboarding flow, as most participants mistakened TasteBuds as a
+        food ordering app. Nonetheless, they all highly prefer it over their current tools. I was
+        pleased to confirm that my primary and secondary insights continue to be consistent. The
+        visual aids were frequently affirmed in its impact on scanability, which they expressed
+        significantly helped them complete the onboarding process. </p>
+      <p>Here's a summary of their feedback:</p>
+      <div class="test-2-findings-grid mt-32">
+        <div class="test-2-findings_card border-top-green">
+          <div class="test-2-findings-header-wrapper">
+            <p class="subheading">Design validation</p>
+            <img alt="" class="img-design-validation" loading="lazy"
+              src="assets/images/tastebuds/icon-checkmark-circle-filled-green.png">
+          </div>
+          <ul>
+            <li>Users praised the visual and interaction design.</li>
+            <li>They prefer TasteBuds over existing tools like Yelp.</li>
+            <li>The personalization and customization features very helpful.</li>
+            <li>3 diners used the alternative routes to explore dining options.</li>
+            <li>They found TasteBuds informative, diverse, and inclusive.</li>
+            <li>Users praised the visual aids and expressed they enhanced scanability</li>
+          </ul>
+        </div>
+        <div class="test-2-findings_card border-top-red">
+          <div class="test-2-findings-header-wrapper">
+            <p class="subheading">Major errors</p>
+            <img alt="" class="img-design-invalidation" loading="lazy"
+              src="assets/images/tastebuds/icon-cancel-circle-filled-red.png">
+          </div>
+          <ul>
+            <li>4 diners were confused by the onboarding copy.</li>
+            <li>Onboarding failed to communicate the core features.</li>
+            <li>3 diners struggled with the star rating system.</li>
+            <li>Navigation to the review page was unclear.</li>
+            <li>3 diners found the review flow lengthy.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="content-wrapper">
+      <h3 class="section-subheading">Iterations</h3>
+      <p>Based on the feedback from testing, I iterated my prototype to address the major errors.
+      </p>
+    </div>
+    <section id="design-iterations">
+      <div class="media-carousel-wrapper mb-80">
+        <div id="carousel-01" class="media-carousel-container">
+          <p class="title">Creating and setting up an account</p>
+          <div class="media-carousel-items">
+            <div class="media-carousel-item">
+              <div class="carousel-item-container">
+                <div class="carousel-content-wrapper">
+                  <div class="carousel-content">
+                    <div>
+                      <p class="headline">Animated splash screen</p>
+                      <div class="card-item-01">
+                        <header class="design-walkthrough_header mt-8 mb-12">
+                          <p class="subheading emphasis-blue hide">Test findings</p>
+                        </header>
+                        <p>By the end of onboarding, users struggled to recall the core premise and
+                          features of TasteBuds. The most critical error was that users did not
+                          perceive TasteBuds as a social app.</p>
+                      </div>
+                    </div>
+                    <div class="design-walkthrough-grid_card card-item-02">
+                      <header class="design-walkthrough_header">
+                        <p class="card_headline mb-0">Iterations</p>
+                      </header>
+                      <ul class="card_list mt-0">
+                        <li>Design an animated splash screen as a teaser</li>
+                        <li>Add new and enhanced visual aids and microanimations for introduction
+                          carousel</li>
+                        <li>Condense copy to under 20 words per slide</li>
+                        <li>Enhance typography hierarchy in intro slides</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="flex-row gap-16">
+                    <video autoplay loop controls muted>
+                      <source
+                        src="assets/videos/tastebuds/prototype-high-fidelity-v2-route-1-01-splash.mp4"
+                        type="video/mp4">
+                    </video>
+                    <video autoplay loop controls muted>
+                      <source
+                        src="assets/videos/tastebuds/prototype-high-fidelity-v2-route-1-02-intro.mp4"
+                        type="video/mp4">
+                    </video>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="media-carousel-item">
+              <div class="carousel-item-container">
+                <div class="carousel-content-wrapper">
+                  <div class="carousel-content">
+                    <p class="headline">Adding friends, verified influencers, and restaurant
+                      partners
+                    </p>
+                    <div class="card-item-01">
+                      <header class="design-walkthrough_header mt-8 mb-12">
+                        <p class="subheading emphasis-blue hide">Test findings</p>
+                      </header>
+                      <p>The testing insights that informed my iterations are the same as the first
+                        slide.
+                      </p>
+                    </div>
+                    <div class="design-walkthrough-grid_card card-item-02">
+                      <header class="design-walkthrough_header">
+                        <p class="card_headline mb-0">Iterations</p>
+                      </header>
+                      <ul class="card_list mt-0">
+                        <li>Restored the step to connect socials and add friends</li>
+                        <li>Implemented a TasteBuds Influencer program</li>
+                        <li>Added features to follow restaurants and influencers</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <video autoplay loop controls muted>
+                    <source
+                      src="assets/videos/tastebuds/prototype-high-fidelity-v2-route-1-03-friends.mp4"
+                      type="video/mp4">
+                  </video>
+                </div>
+              </div>
+            </div>
+            <div class="media-carousel-item">
+              <div class="carousel-item-container">
+                <div class="carousel-content-wrapper">
+                  <div class="carousel-content">
+                    <div>
+                      <p class="headline">Food preferences</p>
+                      <div class="card-item-01">
+                        <header class="design-walkthrough_header mt-8 mb-12">
+                          <p class="subheading emphasis-blue hide">Test findings</p>
+                        </header>
+                        <p>Diners often ignore instructional copy and fail to notice the page change
+                          between ingredient preferences and allergies. Some diners were confused
+                          about the relevance of inputting preferences they enjoy and worried that
+                          their selections might limit their discovery.</p>
+                      </div>
+                      <div class="design-walkthrough-grid_card card-item-02">
+                        <header class="design-walkthrough_header">
+                          <p class="card_headline mb-0">Iterations</p>
+                        </header>
+                        <ul class="card_list mt-0">
+                          <li>Implement microanimations and visual cues</li>
+                          <li>Segment progress bar with spacing</li>
+                          <li>Enhance typography and visual hierarchy</li>
+                          <li>Refine copy to improve content comprehension</li>
+                          <li>Remove step to input dishes to streamline flow</li>
+                          <li>Reorder steps to eliminate allergies first</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="media-content-wrapper grid-2-column grid-2-rows">
+                    <video autoplay loop controls muted>
+                      <source
+                        src="assets/videos/tastebuds/prototype-high-fidelity-v1-route-1-food-preferences.mp4"
+                        type="video/mp4">
+                    </video>
+                    <video autoplay loop controls muted>
+                      <source
+                        src="assets/videos/tastebuds/prototype-high-fidelity-v2-route-1-04-preferences-02-ingredients.mp4"
+                        type="video/mp4">
+                    </video>
+                    <p class="medium-grey">Previous</p>
+                    <p>Iteration</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="media-carousel-pagination">
+            <div class="dot active-dot"></div> <!-- Active dot for the first item -->
+            <div class="dot"></div>
+            <div class="dot"></div>
+          </div>
+        </div>
+      </div>
+      <div class="media-carousel-wrapper mb-80">
+        <div id="carousel-02" class="media-carousel-container">
+          <p class="title">Searching for dining options</p>
+          <div class="media-carousel-items mb-8">
+            <div class="media-carousel-item">
+              <div class="carousel-item-container">
+                <div class="carousel-content-wrapper">
+                  <div class="carousel-content">
+                    <div>
+                      <p class="headline">Expanding discover page to boost engagement and
+                        clarity</p>
+                      <div class="card-item-01">
+                        <header class="design-walkthrough_header mt-8 mb-12">
+                          <p class="subheading emphasis-blue hide">Test findings</p>
+                        </header>
+                        <p>When searching for dining options, diners typically start by scrolling
+                          through the Discover page. However, many skip the onboarding content,
+                          leading
+                          to confusion about TasteBuds' features. Additionally, since content is
+                          influenced by users' social following, relying on users to add friends can
+                          result in limited user-generated content for those with fewer connections.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="design-walkthrough-grid_card card-item-02">
+                      <header class="design-walkthrough_header mt-8">
+                        <p class="card_headline mb-0">Iterations</p>
+                      </header>
+                      <ul class="card_list mt-0">
+                        <li>Placed new CTAs to introduce features
+                        </li>
+                        <li>Integrate restaurant partnerships into recommendation lists to boost
+                          value
+                          proposition</li>
+                        <li>Highlight "Foodie Influencers" on Discover page</li>
+                        <li>Update bottom navigation with a search page</li>
+                        <li>Remove search bar to prioritize content visibility</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="media-content-wrapper grid-2-column grid-2-rows">
+                    <img class="img-wireframe"
+                      src="assets/images/tastebuds/high-fidelity-v1-route-2-home-discover.png"
+                      alt="">
+                    <video autoplay loop controls muted>
+                      <source
+                        src="assets/videos/tastebuds/prototype-high-fidelity-v2-route-2-01-home.mp4"
+                        type="video/mp4">
+                    </video>
+                    <p class="medium-grey">Previous</p>
+                    <p>Iteration</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="media-carousel-item">
+              <div class="carousel-item-container">
+                <div class="carousel-content-wrapper">
+                  <div class="carousel-content">
+                    <div>
+                      <p class="headline">Diners want to easily access restaurant details and
+                        updates
+                      </p>
+                      <div class="card-item-01">
+                        <header class="design-walkthrough_header mt-8 mb-12">
+                          <p class="subheading emphasis-blue hide">Test findings</p>
+                        </header>
+                        <p>Diners typically scroll through the restaurant home page before exploring
+                          other sections, so they seek more detailed information upfront. While
+                          restaurant promotions strongly incentivize diners, they often miss these
+                          deals
+                          if they don't actively follow the restaurants on social media.</p>
+                      </div>
+                    </div>
+                    <div class="design-walkthrough-grid_card card-item-02">
+                      <header class="design-walkthrough_header mt-8">
+                        <p class="card_headline mb-0">Iterations</p>
+                      </header>
+                      <ul class="card_list mt-0">
+                        <li>Expand details on the restaurant home page</li>
+                        <li>Strengthen social presence with new
+                          dedicated 'Posts' and 'Events' pages</li>
+                        <li>Redesign to resemble social profiles with CTAs</li>
+                        <li>Remove bottom navigation to prioritize content</li>
+                        <li>Make interactive buttons more compact</li>
+                        <li>Enhance visual design for better readability</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="media-content-wrapper grid-2-column grid-2-rows">
+                    <img class="img-wireframe"
+                      src="assets/images/tastebuds/route-2-high-fidelity-v1-restaurant-home.png"
+                      alt="">
+                    <video class="video" autoplay loop controls muted>
+                      <source
+                        src="assets/videos/tastebuds/prototype-high-fidelity-v2-route-2-04-restaurant.mp4"
+                        type="video/mp4">
+                    </video>
+                    <p class="medium-grey">Previous</p>
+                    <p>Iteration</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="media-carousel-pagination">
+            <div class="dot active-dot"></div> <!-- Active dot for the first item -->
+            <div class="dot"></div>
+          </div>
+        </div>
+      </div>
+      <div class="media-carousel-wrapper">
+        <div id="carousel-03" class="media-carousel-container">
+          <p class="title">Diner reviews a dining experience</p>
+          <div class="media-carousel-items mb-8">
+            <div class="media-carousel-item">
+              <div class="carousel-item-container">
+                <div class="carousel-content-wrapper">
+                  <div class="carousel-content">
+                    <div>
+                      <p class="headline">Enhancing and optimizing the diner journey</p>
+                      <div class="card-item-01">
+                        <header class="design-walkthrough_header mt-8 mb-12">
+                          <p class="subheading emphasis-blue hide">Test findings</p>
+                        </header>
+                        <p>When searching for dining options, diners typically start by scrolling
+                          through the Discover page. However, many skip the onboarding content,
+                          leading
+                          to confusion about TasteBuds' features. Additionally, since content is
+                          influenced by users' social following, relying on users to add friends can
+                          result in limited user-generated content for those with fewer connections.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="design-walkthrough-grid_card card-item-02">
+                      <header class="design-walkthrough_header mt-8">
+                        <p class="card_headline mb-0">Iterations</p>
+                      </header>
+                      <ul class="card_list mt-0">
+                        <li>Ensured design consistency</li>
+                        <li>Removed instructional copy</li>
+                        <li>Redesigned rating interactions</li>
+                        <li>Added wait times and numeric price ranges</li>
+                        <li>Enabled restaurant partners to collect diner insights</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="media-content-wrapper grid-2-column grid-2-rows">
+                    <video autoplay loop controls muted>
+                      <source
+                        src="assets/videos/tastebuds/prototype-high-fidelity-v2-route-3-01-experience.mp4"
+                        type="video/mp4">
+                    </video>
+                    <video autoplay loop controls muted>
+                      <source
+                        src="assets/videos/tastebuds/prototype-high-fidelity-v2-route-3-03-photo.mp4"
+                        type="video/mp4">
+                    </video>
+                    <p>Feedback</p>
+                    <p>Tagging photos</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="media-carousel-pagination hide">
+            <div class="dot active-dot"></div> <!-- Active dot for the first item -->
+            <div class="dot"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </section>
+  <section id="usability-testing-3" class="section-container">
+    <header class="header-container">
+      <span>test and iteration</span>
+      <h2>Final round of testing</h2>
+    </header>
+    <div class="content-wrapper mb-0">
+      <p class="section-subheading">Methodology</p>
+      <p>For my final round of testing, I recruited 5 new participants that shared the same
+        characteristics as the previous round and instructed the same set of tasks. My primary
+        objective was to see if my iterations resolved the issues that occured during the previous
+        test. I was also interested in seeing if there are any unintended use cases.</p>
+      <p class="section-subheading">Affinity Mapping</p>
+      <p>For this round of testing, I wanted to challenge myself and generate some quantitative data
+        for my data synthesis. While 5 participants doesn't yield substantial data, I wanted to
+        experiment with another tool and see if Notion could help me better identify patterns and
+        themes via keywords. By the end of my data synthesis, I generated affinity maps for each
+        route and organized the data using Notion's variety of view options.</p>
+      <p>Here is an overview of my process:</p>
+    </div>
+    <div class="notion-affinity-maps_container mt-32">
+      <div class="notion-affinity-maps_grid">
+        <div class="overlay" id="overlay"></div>
+        <div class="notion-affinity-map_grid-item">
+          <img class="img-zoomable bg-affinity-map"
+            src="assets/images/tastebuds/notion-affinity-map-01-route-3.png" alt="">
+        </div>
+        <div class="height-100">
+          <img class="img-zoomable bg-affinity-map bg-white-zoomed"
+            src="assets/images/tastebuds/notion-affinity-map-02.png" alt="">
+        </div>
+        <div class="notion-affinity-map_grid-item bg-light-green"><img
+            class="img-zoomable bg-light-green"
+            src="assets/images/tastebuds/notion-affinity-map-03.png" alt=""></div>
+        <div class="notion-affinity-map_grid-item ">
+          <img class="img-zoomable bg-affinity-map"
+            src="assets/images/tastebuds/notion-affinity-map-04.png" alt="">
+        </div>
+      </div>
+    </div>
+    <div class="content-wrapper">
+      <p>With Notion's features, I was able to
+        filter and arrange data to efficiently identify patterns. For example, using the count
+        property, I could
+        tally participants and sort data to visualize the most recurrent issues. The single-select
+        and multi-select tags helped me pinpoint themes and locate specific data quickly, making the
+        process much easier.</p>
+      <p>
+        Feel free to take a look at my database
+        <a href="https://maple-talon-dc2.notion.site/Usability-Testing-II-f1e49c6ab1164a6fb4370a5b739723d8"
+          target="_blank">here</a>!
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <p class="section-subheading">Findings</p>
+      <p class="mb-24">
+        Overall, diners were impressed by TasteBuds! They praised the personalization features and
+        how TasteBuds leverages word-of-mouth recommendations. My iterations resolved all previous
+        errors. The only issue was that some users found nonessential parts of the review UI
+        confusing. One diner said:
+      </p>
+      <div class="quote-grid-item quote-flex-col mb-32">
+        <blockquote>
+          <div class="blockquote-content bg-white">
+            <p class="mb-8">
+              I usually use Google Maps, so I'd type in “Mexican restaurant”. I don't think there’s
+              really any filtering. Sometimes you can be overloaded with all the results. No other
+              apps have filters as extensive… If I had this app, I'd totally use it all the time. I
+              really like the different filters.
+            </p>
+          </div>
+        </blockquote>
+      </div>
+      <div class="test-2-findings_card border-top-green hide">
+        <div class="test-2-findings-header-wrapper">
+          <p class="subheading">Design validation</p>
+          <img alt="" class="img-design-validation" loading="lazy"
+            src="assets/images/tastebuds/icon-checkmark-circle-filled-green.png">
+        </div>
+        <ul>
+          <li>Diners praised the the inclusive and diverse selections.</li>
+          <li>Diners found the designs intuitive and straightforward.</li>
+          <li>Everyone successfully comprehended the intended purpose and functions.</li>
+          <li>Diners independently employed different routes to explore dining options outside of
+            the intended flow by using unique features.</li>
+          <li>Diners felt excited about the unique design solutions.</li>
+          <li>Only 1 diner struggled with the star rating component.</li>
+          <li>Diners felt very pleased with the visual design.</li>
+          <li>Diners prefer TasteBuds over their existing tools.</li>
+        </ul>
+      </div>
+      <p>Here is a summary of feedback and insights:</p>
+      <div class="interview-quotes-wrapper tastebuds">
+        <img alt="" class="img-quotation-mark mb-16" src="assets/svg/quotation-mark-blue.svg">
+        <div class="grid-container mt-0">
+          <div class="quote-grid-item quote-flex-col pt-0">
+            <div>
+              <p>
+                Visual aids enhance engagement.
+              </p>
+            </div>
+            <img alt="Responsive Image" class="hide img-interviewee"
+              src="assets/images/postup/interview-adam.png">
+            <blockquote>
+              <div class="blockquote-content">
+                <p class="mb-8">
+                  The flags with the country made it more fun to scroll, made me feel smart…It’s
+                  nice to have a visual. If I see a long list with just text, I probably wouldn’t
+                  select anything…The pictures made it more fun.
+                </p>
+                <div class="interviewee">
+                  <img alt="Responsive Image" class="hide img-interviewee"
+                    src="assets/images/postup/interview-adam.png">
+                  <p>Participant 04</p>
+                </div>
+              </div>
+            </blockquote>
+          </div>
+          <div class="quote-grid-item quote-flex-col item-6">
+            <div>
+              <p>
+                Visually appealing content is crucial to diners.
+              </p>
+            </div>
+            <img alt="Responsive Image" class="hide img-interviewee"
+              src="assets/images/postup/interview-adam.png">
+            <blockquote>
+              <div class="blockquote-content">
+                <p class="mb-8">Similar to food, you first taste with your eyes. If something
+                  looks good visually right off the bat, I’m more inclined to spend time on it,
+                  and closely examine what it is that’s catching my attention. Visuals are really
+                  important in an app.</p>
+                <div class="interviewee">
+                  <img alt="Responsive Image" class="hide img-interviewee"
+                    src="assets/images/postup/interview-adam.png">
+                  <p>Participant 05</p>
+                </div>
+              </div>
+            </blockquote>
+          </div>
+          <div class="quote-grid-item quote-flex-col item-6">
+            <div>
+              <p>
+                Diners value diversity and customization.
+              </p>
+            </div>
+            <img alt="Responsive Image" class="hide img-interviewee"
+              src="assets/images/postup/interview-adam.png">
+            <blockquote>
+              <div class="blockquote-content">
+                <p class="mb-8">I usually use Google Maps, so I'd type in “Mexican restaurant”. I
+                  don't think there’s really any filtering. Sometimes you can be overloaded with
+                  all the results. No other apps have filters as extensive… If I had this app, I'd
+                  totally use it all the time. I really like the different filters.</p>
+                <div class="interviewee">
+                  <img alt="Responsive Image" class="hide img-interviewee"
+                    src="assets/images/postup/interview-adam.png">
+                  <p>Participant 02</p>
+                </div>
+              </div>
+            </blockquote>
+          </div>
+          <div class="quote-grid-item quote-flex-col item-6">
+            <div>
+              <p>
+                Diners desire comprehensive reviews.
+              </p>
+            </div>
+            <img alt="Responsive Image" class="hide img-interviewee"
+              src="assets/images/postup/interview-adam.png">
+            <blockquote>
+              <div class="blockquote-content">
+                <p class="mb-8">I like how there's a lot of options in general. It’s very
+                  detailed. The whole point of the review is to provide details to people. The way
+                  it’s set up can help people understand someone’s experience at the place. It was
+                  very comprehensive, but also gave you the optionals. You can decide how much of
+                  a review you wanted to write.</p>
+                <div class="interviewee">
+                  <img alt="Responsive Image" class="hide img-interviewee"
+                    src="assets/images/postup/interview-adam.png">
+                  <p>Participant 01</p>
+                </div>
+              </div>
+            </blockquote>
+          </div>
+          <div class="quote-grid-item quote-flex-col item-6 pb-0">
+            <div>
+              <p>
+                Some diners worry about hurting restaurants with negative reviews.
+              </p>
+            </div>
+            <img alt="Responsive Image" class="hide img-interviewee"
+              src="assets/images/postup/interview-adam.png">
+            <blockquote>
+              <div class="blockquote-content">
+                <p class="mb-8">What if what I ordered is bad, but I don’t wanna comment on it?
+                  What if what I ordered is good but this isn’t the only thing you should order?
+                  What if I ordered something I didn’t like, but all my friends liked what they
+                  ordered, and the service and everything was great? It’s not fair to the
+                  restaurant to have to get a bad rating if it’s personal to me.</p>
+                <div class="interviewee">
+                  <img alt="Responsive Image" class="hide img-interviewee"
+                    src="assets/images/postup/interview-adam.png">
+                  <p>Participant 01</p>
+                </div>
+              </div>
+            </blockquote>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="limitations" class="section-container hide">
+    <header class="header-container">
+      <h2>Limitations</h2>
+    </header>
+    <div class="content-wrapper">
+      <p>
+        I know most if not all case studies don’t discuss their limitations, but as a designer with
+        a degree in sociology, it feels wrong not to include them:
+      </p>
+      <ul role="list">
+        <li>
+          <span class="fw-medium">Observer Bias</span>: The presence of an observer during usability
+          testing can influence participants' behavior or responses.
+        </li>
+        <li>
+          <span class="fw-medium">Limited Scope of Testing:</span> While I was only testing my red
+          routes, . This became apparent when some participants deviated from the route. Therefore,
+          I likely missed out on specific usability issues that
+          could occur in other situations.<span class="fw-medium"><br /></span>
+        </li>
+        <li>
+          <span class="fw-medium">Difficulty Capturing Emotions and Attitudes: </span>My usability
+          testing primarily focuses on observable behaviors and task completion, making it
+          challenging to capture users' emotions or attitudes. Although
+          I tried my best to extract insights through ample follow-up questions, as well as
+          reminding users to think out loud, I was limited by time constraints.
+        </li>
+        <li>
+          <span class="fw-medium">Designer Bias and Subjectivity: </span>As expressed earlier, my
+          own biases as a user and an enthusiastic designer limited my perspective, which likely
+          compromised the effectiveness of my tasks and limited my
+          observations. Additionally, I inevitably interpreted test results subjectively, which led
+          to overlooking behaviors due to preconceived biases, desire for validation, and
+          anticipations.
+        </li>
+        <li>
+          <span class="fw-medium">Impact of Wording in Instructions: </span>Subtle changes in task
+          wording led users to interpret them differently, requiring adjustments that might have
+          compromised data consistency.
+        </li>
+      </ul>
+      <p class="paragraph grey">
+        What are limitations? Limitations in research are the boundaries or weaknesses that restrict
+        its scope, reliability, or generalizability. They’re constraints that can hinder the study's
+        ability to fully address certain aspects or make broad conclusions.
+        Recognizing these limitations is important to understand the study's context and interpret
+        its findings accurately. In other words, these are the reasons you should take my
+        conclusions with at least an iota of salt!
+      </p>
+    </div>
+  </section>
+  <section id="final-prototype" class="section-container" id="final-tastebuds-solution">
+    <header class="header-container mb-32">
+      <h2 class="text-center">Final prototype</h2>
+    </header>
+    <div class="final-prototype-wrapper">
+      <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="100%" height="100%"
+        src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FZomGQj2hnILjPZKiTWqiuW%2FTasteBuds%253A-Final-Prototype%3Fpage-id%3D1%253A114574%26node-id%3D1-133577%26viewport%3D754%252C369%252C0.04%26t%3DLqVExUAEsXwnnxVi-1%26scaling%3Dmin-zoom%26content-scaling%3Dfixed%26starting-point-node-id%3D1%253A133575%26show-proto-sidebar%3D1"
+        allowfullscreen></iframe>
+    </div>
+  </section>
+  <section id="next-steps" class="section-container">
+    <header class="header-container">
+      <h2>What's next?</h2>
+    </header>
+    <div class="content-wrapper">
+      <p>If I had more time, I would optimize the prototype by eliminating non-essential features,
+        ensuring design consistency across all user flows, and enhancing the UI for the review
+        process. I would implement and test a thumbs up/down rating system and a summary of
+        aggregate votes per
+        restaurant quality in profiles. Additionally, I would identify and design for edge cases,
+        such as empty states, non-restaurant partner profiles, and users who are the first to review
+        a non-restaurant partner in their social circle. I’m also interested in retesting
+        the review route to evaluate how diners review a recent dining experience in a real-world
+        setting.</p>
+      <p>If I could ship this with a team, I would prioritize refining the business strategy
+        and develop a prototype for restaurant partners. This prototype would integrate restaurant
+        partners into the user journey and optimize existing touchpoints based on insights
+        from further research. We would conduct user interviews and surveys with restaurant owners,
+        then refine and develop features that ensure seamless and
+        intuitive interaction across the platform. The final round of testing indicates that
+        features like gamification may not be
+        essential for user engagement, but we would validate this hypothesis through further
+        testing or post-beta launch analysis, considering its potential scalability
+        benefits.
+      </p>
+    </div>
+  </section>
+  <section id="learnings" class="section-container">
+    <header class="header-container">
+      <h2>Learnings</h2>
+    </header>
+    <div class="content-wrapper">
+      <p>
+        This usability test taught me a lot about my design solutions and design thinking. I
+        uncovered some of my most significant mistakes and weaknesses as a designer and as an
+        individual that contributed to the issues:
+      </p>
+      <p class="section-subheading mb-8">Avoid overdesigning</p>
+      <p>I was trying to please everyone—rookie mistake. This led to scope creep and caused
+        information
+        overload for users. </p>
+      <p class="section-subheading mb-8">Mental models can change</p>
+      <p>I was unnecessarily concerned about existing behaviors and mental
+        models. I learned that people are willing to challenge and shift their mental models for
+        compelling alternatives, especially for painkiller products (such as TasteBuds). After all,
+        industry standards are always evolving. As a designer who values innovation, this was a
+        critical and motivating lesson.</p>
+      <p class="section-subheading mb-8">Iterate user flows</p>
+      <p>I learned the importance of iterative user flows. While many designers create only one
+        draft at the beginning, it's important to continue iterating, which also helps track
+        iterations.</p>
+    </div>
+  </section>
+  <section id="reflection" class="section-container border-0">
+    <header class="header-container">
+      <h2>Reflection</h2>
+    </header>
+    <div class="content-wrapper">
+      <p>As my first exposure to product and UX design, my inexperience led to several challenges
+        throughout the project. The steep learning curve with Figma resulted in poor version
+        control, and working independently without accountability and diverse perspectives led to
+        significant scope creep. In hindsight, my major roadblocks stemmed from overdoing
+        anticipatory design and UI design, further contributing to scope creep.
+        <br><br>
+        On the bright side, this case study highlighted the value of my background in sociological
+        research and business development. My approach to user research and testing helped me
+        navigate iterations and manage scope creep. While my business acumen aided in designing
+        features that support my monetization strategy, it also contributed to scope creep.
+        Fortunately, many of these additional features have the potential to be scalable in the
+        future.
+        <br><br>
+        Moving forward, I plan to strengthen my skills in designing MVPs, improving version
+        control, and balancing business objectives without causing scope creep. I also aim to rely
+        more on user testing than anticipatory design to maximize time and resources. Overall,
+        this was an incredibly rewarding experience. I learned to embrace criticism and unintended
+        use cases as opportunities for innovation. Overall, this design journey established my core
+        values as a designer: humility, innovation, and a constant drive for growth. I look forward
+        to applying my new skills and
+        knowledge to future projects!
+      </p>
+    </div>
+  </section>
+  <script src="js/tastebuds.js"></script>
+  <script type="text/javascript">
+    !(function (o, c) {
+      var n = c.documentElement,
+        t = ' w-mod-';
+      n.className += t + 'js';
+      if (o.DocumentTouch && c instanceof DocumentTouch) {
+        n.className += t + 'touch';
+      }
+    })(window, document);
+  </script>
+  <script>
+    document.querySelectorAll('.img-zoomable').forEach(img => {
+      img.addEventListener('click', function () {
+        const rect = img.getBoundingClientRect();
+        const xOrigin = ((rect.left + rect.width / 2) / window.innerWidth) * 100;
+        const yOrigin = ((rect.top + rect.height / 2) / window.innerHeight) * 100;
+
+        img.style.transformOrigin = `${xOrigin}% ${yOrigin}%`;
+
+        img.classList.toggle('img-zoomed');
+        document.getElementById('overlay').classList.toggle('active');
+      });
+    });
+
+    document.getElementById('overlay').addEventListener('click', function () {
+      document.querySelector('.img-zoomed').classList.remove('img-zoomed');
+      this.classList.remove('active');
+    });
+  </script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Attach click event listeners to all accordion headers
+      document.querySelectorAll('.accordion').forEach(accordion => {
+        accordion.addEventListener('click', function () {
+          toggleAccordion(this);
+        });
+      });
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,17 @@
+#research-process {
+  header h2 {
+    margin-bottom: 0;
+  }
+}
+
+.design-sprint-graphic {
+  margin: 1rem auto;
+
+  img {
+    width: 100%;
+  }
+
+  @include breakpoint(med) {
+    max-width: 38rem;
+  }
+}

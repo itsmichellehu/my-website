@@ -1,0 +1,16 @@
+// Wednesday
+.postup-full-storyboard {
+  margin-bottom: 2rem;
+}
+
+.storyboarding-content {
+  display: block;
+  max-width: $content-max-width;
+  width: 90vw;
+  margin: auto;
+  align-items: left;
+
+  :last-child {
+    margin-bottom: 0;
+  }
+}

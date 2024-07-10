@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="/public/css/idp.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+  <title>BoardSpace Poll Feature text-Redesign
+    Case
+    Study by Michelle Hu</title>
+</head>
+
+<body>
+  <!--[Section] Understanding the problem-->
+  <section>
+    <header class="wrapper">
+      <h1 class="margin-0">Understanding the
+        problem</h1>
+    </header>
+    <!--[Subsection] Initial project brief-->
+    <div class="subsection">
+      <header class="textWrapper">
+        <div id="projectBrief" class="grid-01">
+          <div class="grid-item">
+            <header>
+              <h2 class="mb-8px">Initial project
+                brief</h2>
+              <p style="align-self: center;">
+                Before we met with Boardspace, we
+                received the following brief to
+                conduct user testing on their poll
+                feature with current and potential
+                customers:
+              </p>
+            </header>
+          </div>
+          <div class="grid-02 grid-item">
+            <div class="grid-item">
+              <div class="card-icon"><img src="/public/svg/ic_goal.svg" alt=""></div>
+              <div class="contentt">
+                <p class="headline">Objective</p>
+                <p>
+                  Gain redesign insights to
+                  enhance
+                  the user experience.
+                </p>
+              </div>
+            </div>
+            <div class="grid-item">
+              <div class="card-icon"><img src="/public/svg/ic_task.svg" alt=""></div>
+              <div class="contentt">
+                <p class="headline">Goal</p>
+                <p>
+                  Improve user engagement and
+                  retention with intuitive design.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+    </div>
+    <div class="subsection">
+      <header>
+        <h2>Limited time and resources called for
+          creativity</h2>
+        <p class="mb-0">
+          Given the brief, we began our project by
+          exploring the problem space. This was
+          challenging due to constraints in time
+          and resources. <span class="blue">Without existing user
+            research or direct access to users, we
+            relied on a combination of secondary
+            research, competitive analysis, and an
+            in-depth conversation with the CEO,
+            Pat Crosscombe.</span> Pat shared
+          valuable insights, including snippets of
+          user feedback and personal anecdotes
+          from her experience as a former
+          non-profit board director.
+        </p>
+      </header>
+    </div>
+    <!--[Subsection] Initial call with client-->
+    <div class="subsection hide">
+      <!--version 1 with accordion-->
+      <header class="hide">
+        <h2>Initial call with client—Pat
+          Crosscombe, CEO</h2>
+        <p class="text-emphasized">
+          <span>During our initial call,</span>
+          <span class="text-blue">Pat introduced
+            us to the board management space and
+            BoardSpace’s value
+            proposition</span>.
+        </p>
+        <div class="accordion">
+          <div class="flex-grow">
+            <p>More details</p>
+          </div>
+        </div>
+      </header>
+      <div class="container">
+        <header class="mb-8px">
+          <h2>Initial call with client—Pat
+            Crosscombe, CEO</h2>
+          <p class="text-emphasized">
+            <span>During our initial call,</span>
+            <span class="text-blue">Pat introduced
+              us to the board management space and
+              BoardSpace’s value
+              proposition</span>:
+          </p>
+        </header>
+        <div class="container">
+          <ul>
+            <li>
+              <span class="text-mediumBlack">Horizontal
+                tagging system for document
+                organization</span> to quickly
+              locate documents
+            </li>
+            <li>
+              <span class="text-mediumBlack">All-in-one
+                platform for administrative
+                tasks</span> (e.g. agendas and
+              meeting minutes)
+            </li>
+            <li>
+              <span class="text-mediumBlack">AWS
+                for secure
+                storage of sensitive
+                information</span> (e.g. financial
+              records)
+            </li>
+            <li class="mb-0">
+              <span class="text-mediumBlack">Legal
+                requirements for
+                record-keeping:</span> (e.g.
+              indefinitely for meeting minutes, 7
+              years for financial documents)
+            </li>
+          </ul>
+        </div>
+        <div class="quote">
+          <p class="quote_text">
+            One foundational principle for most
+            Boards is that everyone should see
+            what everyone else is doing on that
+            Board—so, even if you’re not doing a
+            task, you should be aware that it’s
+            happening.
+          </p>
+          <div class="quote_author">
+            <img class="image"></img>
+            <div class="quote_author-text">Pat
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--[Subsection] Existing methods-->
+      <div id="projectBrief" class="grid-01">
+        <div class="grid-item">
+          <p class="text-emphasized">
+            We also learned about the <span class="text-blue">existing
+              methods</span> of achieving voting
+            consensus and their <span class="text-red">challenges</span>:
+          </p>
+        </div>
+        <div class="grid-02 grid-item  pd-v-sm">
+          <div class="grid-item">
+            <div class="card-icon">
+              <img src="/public/svg/ic_hand--filled.svg" alt="Grey hand icon">
+            </div>
+            <div class="contentt">
+              <p class="headline">Method 1:
+                Hand-raising</p>
+              <p style="padding-bottom: 0.5rem;">
+                Traditionally, voting consensus
+                is reached
+                by show of hands.</p>
+
+              <p><span class="text-red"><span class="fw-medium">Issue:</span>
+                  Restricted by COVID-19.</p>
+            </div>
+          </div>
+          <div class="grid-item">
+            <div class="card-icon"><img src="/public/svg/ic_email.svg" alt="Grey email icon"></div>
+            <div class="contentt">
+              <p class="headline">Method 2:
+                Email threads</p>
+              <p style="padding-bottom: 0.5rem;">
+                Meetings are often
+                organized through lengthy email
+                threads.</p>
+              <p class="text-red">
+                <span class="fw-medium">Issue:</span>
+                Time-consuming.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--Pat's Quote-->
+      <div class="quote mb-0">
+        <p class="quote_text">
+          I remember hearing people talk about
+          the issues with voting in meetings,
+          and since COVID, it’s more difficult
+          to have candid (hand-raising)
+          voting... I hate emails.
+        </p>
+        <div class="quote_author">
+          <img></img>
+          <div class="quote_author-text">Pat
+          </div>
+        </div>
+      </div>
+      <div>
+        <p class="text-emphasized">
+          In sum, this is what we learned about
+          <span class="fw-medium text-blue">user
+            needs and
+            values</span>:
+        </p>
+        <div class="values-grid"></div>
+      </div>
+      <div>
+        <p>These insights helped us better
+          understand nonprofit board directors
+          and administrators. </p>
+        <p>Since we didn't have the resources to
+          conduct
+          extensive user research, the insights we
+          drew from this conversation were able to
+          provide some guidance throughout the
+          project!</p>
+      </div>
+    </div>
+    <div class="subsection">
+      <header>
+        <h2>Refining the brief given new insights
+        </h2>
+        <p>
+          Given our exploration, we
+          suggested revamping the feature
+          and testing our prototype to maximize
+          improvements, which Pat approved!
+        </p>
+        <div class="margin-0 grid-cards grid-item  pd-v-sm">
+          <div class="grid-item">
+            <div class="card-icon"><img src="/public/svg/ic_task.svg" alt="Grey email icon"></div>
+            <div class="contentt">
+              <p class="headline ">New
+                deliverables ✨</p>
+              <ul id="newDeliverables" class="margin-0"></ul>
+            </div>
+          </div>
+        </div>
+      </header>
+    </div>
+  </section>
+  <!--[Subsection] Defining the scope-->
+  <section>
+    <header class="wrapper margin-0">
+      <h1>Defining the scope</h1>
+      <p>To help us create our project scope and
+        timeline, we conducted a design audit of
+        the current poll feature and competitive
+        analysis. This process revealed the
+        strengths and weaknesses of BoardSpace's
+        current design and helped us understand
+        its value and potential!</p>
+    </header>
+    <div class="subsection">
+      <header>
+        <h2 class="mb-0">First, we evaluated the
+          existing poll feature
+          with a design audit</h2>
+      </header>
+
+      <img src="/public/images/idp-casestudy/designCritique.png" style="width: 100%; align-self: center;">
+      <ul class="margin-0">
+        <li>Navigated the critical user flows</li>
+        <li>Documented our errors and challenges
+          encountered</li>
+        <li class="mb-0">Mapped out the user flows
+        </li>
+      </ul>
+    </div>
+    </div>
+    <div id="designAuditFindings" class="subsection">
+      <h3>This is what we learned:</h3>
+      <div class="content">
+        <img src="/public/images/idp-casestudy/old_pollsHome.png">
+        <div id="designAudit" class="accordion" onclick="toggleAccordion(this)">
+          <button class="accordionHeader">
+            We struggled to scan and interpret
+              the home page
+            <span class="ic-arrowDown--lined arrow">
+            </span>
+          </button>
+          <div class="accordionContent"> <!-- Add the 'hide' class here -->
+            <p> The polls home page presents a
+              comprehensive list of polls: open,
+              draft, and closed. It was difficult
+              to
+              scan or find polls without clear
+              indicators, organization, and
+              options
+              to sort, filter, or search. We also
+              couldn’t tell what we were supposed
+              to
+              do besides creating a new poll, as
+              it’s the only clear CTA.</p>
+          </div>
+        </div>
+
+        <img src="/public/images/idp-casestudy/old_newPoll.gif">
+        <div id="desingAuditFindings" class="flex-wrap">
+          <div id="designAudit" class="accordion" onclick="toggleAccordion(this)">
+            <button class="accordionHeader">
+              There was only
+                  one way to view poll results
+              <span class="ic-arrowDown--lined arrow"></span>
+            </button>
+            <div class="accordionContent">
+              <p>Violates heuristic guideline of
+                accommodation to user
+                preferences</p>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+    <div id="exploringSolutions" class="subsection">
+      <div class="header">
+        <h2>Exploring solutions with competitive
+          research</h2>
+        <p class="text-emphasized">We found that
+          the best practices include great
+          flexibility, customization, a simple
+          user flow, and a clean layout:</p>
+      </div>
+      <div id="competitorsAnalysisContent">
+        <ul id="exploringSolutionsList" class="margin-0"></ul>
+        <div id="competitorLogosRow" class="flex-row gap-24px" style="min-width: 335px">
+          <div class="competitorCard">
+            <div id="surveyMonkey" class="competitorLogo">
+              <img src="/public/images/idp-casestudy/logo-surveyMonkey.png" alt="survey monkey logo">
+            </div>
+            <p>Survey Monkey</p>
+          </div>
+          <div class="competitorCard">
+            <div id="googleSurveys" class="competitorLogo">
+              <img style="width: 64px; height: 64px" src="/public/images/idp-casestudy/logo-googleSurveys.png" alt="google surveys logo">
+            </div>
+            <p>Google Forms</p>
+          </div>
+          <div class="competitorCard">
+            <div id="notion" class="competitorLogo">
+              <img style="width: 64px; height: 64px" src="/public/images/idp-casestudy/logo-notion.png" alt="notion logo">
+            </div>
+            <p>Notion</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="subsection header gap-0">
+      <h3>Conclusion</h3>
+      <p>
+        Throughout our design audit, we
+        experienced significant cognitive
+        overload and encountetext-red numerous
+        errors, which we struggled to resolve.
+        This was shaped by substantial gaps in
+        information architecture and visual
+        design. In summary, here are the
+        <span class="fw-medium">usability
+          heuristics</span> that the current
+        design did
+        not meet:
+      </p>
+      <ul id="designAuditConclusion" class="margin-0"></ul>
+    </div>
+    </div>
+  </section>
+  <section>
+    <header class="wrapper">
+      <h1>Narrowing the scope</h1>
+      <p class="hidden">
+        To define our project scope and
+        timeline, we began to the problem space.
+        First, we did To define our project
+        scope and timeline, we began to the
+        problem space. First, we did
+      </p>
+    </header>
+
+    </div>
+    <div class="subsection">
+      <header>
+        <h2>Brainstorming new user flows</h2>
+        <p>
+          Drawing from our insights from our
+          design audit and competitor analysis,
+          we began brainstorming design
+          solutions starting with new
+          flows.
+        </p>
+        </header>
+
+        <div class="flex-column gap-16px">
+          <p class="fw-medium mb-0">Objectives</p>
+          <ul id="userflowObjectives" class="margin-0"></ul>
+        </div>
+        <div class="container">
+          <h3 class="mb-8px">Improvements we made</h3>
+          <div id="userflowsTable"></div>
+        </div>
+    </div>
+    <div>
+      <div class="subsectionFeatured">
+        <div class="wrapper" style="align-items: flex-start;">
+          <div id="userflowLegend">
+            <p class="caption-small">Legend</p>
+            <img src="/public/images/idp-casestudy/userflow_legend.png" style="width: 100%; align-self: center;">
+          </div>
+          <div class="userflows-grid">
+            <div class="grid-item-01">
+              <p class="caption-small">Route 1: Creating a
+                poll</p>
+              <img src="/public/images/idp-casestudy/userflow_new-poll-2.png" style="width: 100%; align-self: center;">
+            </div>
+            <div class="grid-item-02">
+              <p class="caption-small">Route 2: Vote on a poll</p>
+              <img src="/public/images/idp-casestudy/userflow_vote.png">
+            </div>
+            <div class="grid-item-03">
+              <p class="caption-small">Route 3: View poll results</p>
+              <img src="/public/images/idp-casestudy/userflow_results.png">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="subsection">
+      <header>
+        <h2>Sketching</h2>
+        <p>Using our new user flows, we proceeded
+          to sketch new designs for each route. We
+          each spent a day sketching our delegated
+          screens, and I was tasked to sketch the
+          home page.</p>
+    </div>
+    <header>
+      <h3>Polls home page</h3>
+      <div id="sketchesIntro">
+        <div class="item">
+          <p>My sketches prioritized the
+            usability issues we identified in
+            our design audit, which found the
+            page disengaging and hard to scan. I
+            sketched two different ways to view
+            the board and two different
+            information architecture, each with
+            Call To Action (CTA) buttons and
+            sort and filter options. To save
+            time, I sketched a different
+            information architecture strategy
+            for each view.</p>
+        </div>
+        <div class="item">
+          <p class="fw-medium">Objectives</p>
+          <ol id="sketchingObjectives"></ol>
+        </div>
+      </div>
+      </div>
+      <div class="flex-row gap-24px">
+        <div id="sketch"><img src="/public/images/idp-casestudy/sketch_pollsHome--board.png" alt=""></div>
+        <div id="sketch-description" class="flex-column">
+          <p class="fw-medium">Board view</p>
+          <p>This IA organizes polls by their
+            status (open/closed) and CTA. I added
+            "tags" to integrate the feature into
+            the horizontal tagging system. The top
+            of each card is shaded differently
+            across the subsections as a visual
+            aid.</p>
+          <button class="btn-secondary" style="margin-top: 16px;">
+            <p>View full image</p>
+          </button>
+        </div>
+      </div>
+      <div class="flex-row gap-24px">
+        <div id="sketch"><img src="/public/images/idp-casestudy/sketch_pollsHome--list.png" alt=""></div>
+        <div id="sketch-description" class="flex-column">
+          <p class="fw-medium">Table view</p>
+          <p>This prioritizes user roles and their
+            access permissions because only the
+            owner can edit a poll and view results
+            of an open poll. The hierarchy is
+            based on my speculation incoming polls
+            need more attention.
+
+            Other changes are a colotext-red chip
+            based
+            on urgency, one flex-column for votes,
+            a
+            status chip, label copy changes, and
+            relocating buttons in an ellipses icon
+            button.</p>
+          <button class="btn-secondary" style="margin-top: 16px;">
+            <p>View full image</p>
+          </button>
+        </div>
+      </div>
+      </div>
+      <div class="subsectionFeatutext-red">
+        <div id="sketches-all_wrapper">
+          <h3>All Sketches</h3>
+          <div class="flex-column">
+            <h4>Creating a poll</h4>
+            <p>We added suggestions for questions.
+              Instead of buttons to reorder
+              questions, we implemented a drag
+              interaction.</p>
+          </div>
+          <div class="flex-column">
+            <h4>Viewing poll results</h4>
+            <p>We added a way to view results as
+              graphs.</p>
+          </div>
+          <div class="flex">
+            <img src="/public/images/idp-casestudy/sketches_all-01.png">
+          </div>
+          <img src="/public/images/idp-casestudy/sketches_all-01.png">
+          <img src="/public/images/idp-casestudy/sketches_all-02.png">
+        </div>
+      </div>
+  </section>
+  <section>
+    <header>
+      <h1>Design</h1>
+    </header>
+    <div class="subsection">
+      <header>
+        <h2>Low-fidelity wireframes</h2>
+        <p>This process was somewhat
+          challenging
+          because we faced several new,
+          unexpected constraints. Scheduling a
+          meeting with the developer proved
+          difficult, which took place after we
+          developed our wireframes. We learned
+          there were limited handoff
+          expectations and that the style
+          guide
+          was outdated, impacting the
+          consistency of our designs. Learning
+          about platform limitations and
+          additional info about the poll
+          feature
+          at this meeting also set back our
+          timeline.</p>
+      </header>
+      <div class="subsection">
+        <div class="flex-column">
+          <h3 class="fw-medium" style="font-size: 1.5rem">Polls
+            homepage</h3>
+          <p>The only change I made was
+            removing
+            poll description from the board
+            view.
+          </p>
+        </div>
+        <div class="lf-wireframes-pollsHome">
+          <div class="image-wrapper">
+            <img class="image" src="/public/images/idp-casestudy/lf_home-board.png" alt="Caption 1">
+            <div class="caption">Polls home
+              page - Board view</div>
+          </div>
+          <div class="image-wrapper">
+            <img class="image" src="/public/images/idp-casestudy/lf_home-table.png" alt="Caption 2">
+            <div class="caption">Polls home
+              page - Table view</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="subsectionFeatutext-red">
+      <h3>All low-fidelity wireframes</h3>
+      <div class="lf-wireframes_container gap-40px">
+        <div class="lf-wireframes-all item">
+          <div class="image-wrapper flex-1">
+            <img class="image" src="/public/images/idp-casestudy/lf_home-board.png" alt="Caption 1">
+            <div class="caption">Polls home
+              page - Board view</div>
+          </div>
+          <div class="image-wrapper flex-1">
+            <img class="image" src="/public/images/idp-casestudy/lf_home-table.png" alt="Caption 2">
+            <div class="caption">Polls home
+              page - Table view</div>
+          </div>
+          <div class="image-wrapper flex-1">
+            <img class="image" src="/public/images/idp-casestudy/lf_newPoll.png" alt="Caption 3">
+            <div class="caption">Creating a
+              new poll</div>
+          </div>
+          <div class="image-wrapper flex-1">
+            <img class="image" src="/public/images/idp-casestudy/lf_results.png" alt="Caption 3">
+            <div class="caption">Poll results
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="flex-column">
+            <h3 class="fw-medium" style="font-size: 1.5rem">Voting
+              on a
+              poll</h3>
+            <p>We added the option to add poll
+              results to an upcoming meeting's
+              minutes, aiming to
+              integrate the feature to the
+              ecosystem and differentiate
+              it from competitors, boosting
+              competitive value.
+            </p>
+          </div>
+        </div>
+      </div>
+      <button class="self-stretch btn-secondary" style="margin-top: 16px;">
+        <p>View full image files</p>
+      </button>
+    </div>
+  </section>
+  <div id="lightbox-lf-all"></div>
+  <section>
+    <header class="section_wrapper">
+      <header>
+        <h1>Prototype</h1>
+      </header>
+      <header class="heading-container">
+        <h2>High-fidelity prototype</h2>
+      </header>
+      <div id="clientResistance" class="subsection">
+        <h3>Adapting to client resistance</h3>
+        <div>
+          <h4>Polls home page</h4>
+          <p>Before we created the high-fidelity
+            prototype, we presented our
+            low-fidelity
+            wireframes to update our client on our
+            design progress and gain feedback.
+            For the most part, our client was
+            happy
+            with our designs. However, we faced
+            some
+            pushback for the polls home page.</p>
+        </div>
+        <div>
+          <h4>Polls home page</h4>
+          <p>Before we created the high-fidelity
+            prototype, we presented our
+            low-fidelity
+            wireframes to update our client on our
+            design progress and gain feedback.
+            For the most part, our client was
+            happy
+            with our designs. However, we faced
+            some
+            pushback for the polls home page.</p>
+        </div>
+        <div>
+          <h4>Gallery view</h4>
+          <p>
+            Our client pushed back on the gallery
+            view, arguing that it’s too different
+            from the rest of their pages. While I
+            maintained that offering the
+            flexibility can accommodate different
+            visualization preferences among board
+            directors, I omitted it from my
+            designs. The ideas they pushed back on
+            was displaying a gallery view and
+            implementing the flex-column with the
+            names
+            of creators. They argued that it
+            doesn’t matter who created the poll,
+            that the most important information is
+            their status.
+          </p>
+          <p>
+            However, while I was designing our
+            high-fidelity wireframes, I proceeded
+            to keep the flex-column because I felt
+            that
+            it was necessary to meet the
+            heuristics of system status clarity,
+            navigation, and user control and
+            flexibility. My assumption was that
+            due to how only the creator of a poll
+            may edit their poll and email
+            reminders to respondents, it’s
+            necessary to display the information
+            to ensure that it’s easy to scan the
+            page and locate their poll.
+          </p>
+        </div>
+        <div>
+          <h4>Displaying the creator of the
+            poll</h4>
+          <p>
+            Upon reviewing our low-fidelity
+            designs, our client they pushed back
+            on was displaying the creator of the
+            poll. They argued that it doesn’t
+            matter who created the poll, that
+            the most important information is
+            their status.
+          </p>
+          <p>
+            However, I kept the flex-column
+            because I
+            felt that it was necessary to meet
+            the heuristics of system status
+            clarity, navigation, and user
+            control and flexibility. My
+            assumption was that due to how only
+            the creator of a poll may edit their
+            poll and email reminders to
+            respondents, it’s necessary to
+            display the information to ensure
+            that it’s easy to scan the page and
+            locate their poll, especially since
+            those buttons are now hidden within
+            an ellipses icon button.
+          </p>
+          <p> However, I did rearchitect the
+            home page to simplify the
+            organization and prioritize the
+            critical information.</p>
+        </div>
+        <p>This process was somewhat challenging
+          because we faced several new, unexpected
+          constraints. Scheduling a meeting with
+          the developer proved difficult, which
+          took place after we developed our
+          wireframes. We learned there were
+          limited handoff expectations and that
+          the style guide was outdated, impacting
+          the consistency of our designs. Learning
+          about platform limitations and
+          additional info about the poll feature
+          at this meeting also set back our
+          timeline.</p>
+      </div>
+      </div>
+      <div class="subsectionFeatutext-red">
+        <div class="lf-wireframes-all gap-40px">
+          <div id="lightbox-lfWireframes" class="flex-row gap-16px">
+            <div class="image-wrapper flex-1">
+              <img class="image" src="/public/images/idp-casestudy/lf_home-board.png" alt="Caption 1">
+              <div class="caption">Polls home
+                page - Board view</div>
+            </div>
+            <div class="image-wrapper flex-1">
+              <img class="image" src="/public/images/idp-casestudy/lf_home-table.png" alt="Caption 2">
+              <div class="caption">Polls home
+                page - Table view</div>
+            </div>
+            <div class="image-wrapper flex-1">
+              <img class="image" src="/public/images/idp-casestudy/lf_newPoll.png" alt="Caption 3">
+              <div class="caption">Creating a
+                new poll</div>
+            </div>
+            <div class="image-wrapper flex-1">
+              <img class="image" src="/public/images/idp-casestudy/lf_results.png" alt="Caption 3">
+              <div class="caption">Poll results
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
+  <script type="module" src="globals.js"></script>
+  <script src="/public/js/idp-casestudy/card-small.js"></script>
+  <script src="/public/js/idp-casestudy/lists.js"></script>
+  <script src="/public/js/idp-casestudy/wrappedList.js"></script>
+  <script src="/public/js/idp-casestudy/card.js"></script>
+  <script src="/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="/public/js/idp-casestudy/headingContainer.js"></script>
+  <script src="/public/js/idp-casestudy/table.js"></script>
+  <script src="/public/js/idp-casestudy/showFullImage.js"></script>
+  <script src="/public/js/idp-casestudy/accordion.js"></script>
+
+
+</body>
+
+</html>

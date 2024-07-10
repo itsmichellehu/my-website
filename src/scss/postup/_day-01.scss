@@ -1,0 +1,97 @@
+.list-research-materials {
+	margin-bottom: 1.5rem;
+}
+
+.research-slidedeck {
+	max-width: $content-max-width;
+	max-width: 26.6rem;
+	width: 100%;
+
+	iframe {
+		max-width: $content-max-width;
+		max-width: 26.6rem;
+	}
+}
+
+.interview-quotes-wrapper {
+	max-width: 62rem;
+	width: fit-content;
+	margin: auto;
+
+	> .img-quotation-mark {
+		margin: 0;
+		margin-bottom: 1rem;
+		max-width: 5rem;
+	}
+
+	.grid-container {
+		display: grid;
+		grid-template-rows: auto;
+		margin: auto;
+		width: fit-content;
+	}
+}
+
+.quote-grid-item {
+	display: grid;
+	grid-template-columns: 1.5fr auto 3fr;
+	grid-template-rows: auto;
+	column-gap: 1.25rem;
+	align-items: center;
+	padding: 2rem 0;
+
+	&:nth-child(n + 2) {
+		border-top: 1px solid $medium-light-grey;
+	}
+
+	> div:first-child {
+		p {
+			color: $black;
+			font-size: 1.5rem;
+			font-weight: 500;
+			line-height: 150%;
+			margin-bottom: 0;
+			margin-top: 0;
+			text-align: left;
+		}
+	}
+
+	.img-interviewee {
+		width: 2.5rem;
+		height: 2.5rem;
+		border-radius: 25px;
+		margin: auto 0 0 0;
+	}
+
+	&.andy {
+		order: 1;
+		padding-top: 0;
+	}
+
+	&.claire {
+		order: 2;
+	}
+
+	&.james {
+		order: 3;
+	}
+
+	&.beth {
+		order: 4;
+	}
+
+	&.adam {
+		order: 5;
+		padding-bottom: 0;
+	}
+}
+
+.img-user-journey {
+	width: 90%;
+	max-width: 1000px;
+	margin: 0 auto;
+}
+
+.monday-last-container {
+	margin-top: 4rem;
+}

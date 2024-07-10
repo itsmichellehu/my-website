@@ -1,0 +1,111 @@
+// Thursday design checklist {
+.design-checklist {
+	@include flex(row, 2rem, flex-start, flex-start);
+	align-items: flex-start;
+	gap: 2rem;
+	> div:first-child {
+		flex: calc(40% - 1rem);
+	}
+	> div:last-child {
+		flex: calc(60% - 1rem);
+
+		img {
+			width: 100%;
+		}
+	}
+}
+
+.wireframes-heading {
+	color: $black;
+	flex: 1;
+	font-size: 2.986rem;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 125%;
+	margin-bottom: 3rem;
+	margin-top: 0;
+	letter-spacing: -0.1px;
+	text-align: center;
+}
+
+.container-full-width.prototypes {
+	background-color: $light-grey;
+	padding: 6rem auto;
+
+	header {
+		max-width: 1200px;
+		width: 90%;
+		margin-bottom: 1rem;
+	}
+}
+
+.prototype-heading {
+	// color: $black;
+	// font-size: 2rem;
+	// font-weight: 500;
+	// line-height: 135%;
+	// margin-bottom: 1.5rem;
+	color: $black;
+	flex: 1;
+	font-size: 2.8rem;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 125%;
+	margin: 0 auto;
+	margin-bottom: 1rem;
+	max-width: 1200px;
+	letter-spacing: -0.1px;
+	width: 90%;
+}
+
+.prototype-walkthrough {
+	// display: grid;
+	// grid-template-columns: 1.25fr 3fr;
+	gap: 2.5rem;
+	max-width: 1200px;
+	width: 90%;
+	margin: 0 auto;
+	background-color: $lightest-grey;
+	margin-bottom: 4rem;
+	border-radius: 1rem;
+	height: fit-content;
+	overflow: hidden;
+
+	.grid-container {
+		display: grid;
+		grid-template-columns: 1fr 1.5fr;
+		margin: 0 auto;
+		gap: 4rem;
+		align-items: center;
+		padding: 4rem;
+		width: calc(1100px - 8rem);
+
+		img {
+			width: 100%;
+			margin: 0;
+			border-radius: 3.5rem;
+			overflow: hidden;
+		}
+
+		div {
+			display: block;
+
+			p:first-child {
+				font-size: 1.5rem;
+				font-weight: 500;
+				margin-bottom: 0.5rem;
+				color: $black;
+			}
+
+			p {
+				font-size: 1.45rem;
+				font-weight: 500;
+				color: $medium-grey;
+			}
+		}
+
+		div:first-child {
+			margin-bottom: 2rem;
+		}
+	}
+}
