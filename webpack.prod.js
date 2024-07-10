@@ -113,8 +113,7 @@ module.exports = {
             patterns: [
                 { from: path.resolve(__dirname, 'src/assets/images'), to: 'assets/images' },
                 { from: path.resolve(__dirname, 'src/assets/svg'), to: 'assets/svg' },
-                { from: path.resolve(__dirname, 'src/assets/videos'), to: 'assets/videos' },
-                { from: path.resolve(__dirname, 'CNAME'), to: '' }
+                { from: path.resolve(__dirname, 'src/assets/videos'), to: 'assets/videos' }
             ]
         })
     ],
