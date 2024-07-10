@@ -48,13 +48,13 @@
 		white-space: nowrap;
 		cursor: pointer;
 
+		/* Hide scrollbar for Firefox */
+		scrollbar-width: none; /* Firefox */
+
 		/* Hide scrollbar for WebKit-based browsers (Chrome, Safari) */
 		&::-webkit-scrollbar {
 			display: none;
 		}
-
-		/* Hide scrollbar for Firefox */
-		scrollbar-width: none; /* Firefox */
 	}
 
 	&__tag {

@@ -158,13 +158,13 @@
 }
 
 .survey-results_flex-container {
+		align-items: stretch;
+		gap: 1rem;
+		
 	@include breakpoint(med) {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 	}
-
-	align-items: stretch;
-	gap: 1rem;
 }
 
 .survey-results-card {
