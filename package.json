@@ -39,6 +39,7 @@
 	},
 	"dependencies": {
 		"babel": "^6.23.0",
+		"python": "^0.0.4",
 		"swiper": "^11.1.4"
 	}
 }

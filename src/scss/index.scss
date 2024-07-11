@@ -12,6 +12,10 @@ $primary-color: #1e1e1e;
 
 @import "index/all-index";
 
+main > .wrapper > section {
+	width: 100vw;
+}
+
 // Typography
 h1,
 h2,

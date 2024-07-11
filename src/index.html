@@ -39,6 +39,23 @@
                 });
             });
         });</script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            let isScrolling;
+
+            window.addEventListener('scroll', function () {
+                document.body.classList.add('scrolling');
+
+                // Clear our timeout throughout the scroll
+                window.clearTimeout(isScrolling);
+
+                // Set a timeout to run after scrolling ends
+                isScrolling = setTimeout(function () {
+                    document.body.classList.remove('scrolling');
+                }, 1000); // Adjust the timeout duration as needed
+            });
+        });
+    </script>
     <!-- <script>document.addEventListener('DOMContentLoaded', function () {
             const gifs = document.querySelectorAll('.project-gif'); // Select all GIFs
             const staticImgs = document.querySelectorAll('.project-static-img'); // Select all static images
@@ -105,15 +122,15 @@
     <nav>
         <div class="navbar-wrapper">
             <div class="navbar-logo">
-                <img src="assets/svg/home/logo-mhu-black.svg" class="logo-mhu mobile-only"
-                    alt="Logo" />
+                <img src="assets/svg/home/logo-mhu-black.svg" class="logo-mhu" alt="Logo" />
             </div>
-            <div class="navbar-menu-toggle" onclick="toggleMenu()">
+            <!-- <div class="navbar-menu-toggle" onclick="toggleMenu()">
                 <img src="assets/svg/home/ic-menu.svg" class="ic-menu" alt="" />
-            </div>
+            </div> -->
             <ul class="navbar-menu" id="menu">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Contact</a></li>
+                <li class="nav-item active"><a href="index.html">Home</a></li>
+                <li class="nav-item"><a href="#">Resume</a></li>
+                <li class="nav-item"><a href="mailto:mhu.contact@gmail.com">Contact</a></li>
             </ul>
         </div>
     </nav>
@@ -124,10 +141,10 @@
             </div>
         </section>
         <div class="wrapper">
-            <section class="hero">
-                <div class="navbar-logo">
+            <section id="hero" class="hero">
+                <!-- <div class="navbar-logo">
                     <img src="assets/svg/home/logo-mhu-black.svg" class="logo-mhu" alt="Logo" />
-                </div>
+                </div> -->
                 <div class="hero-wrapper">
                     <div class="hero-image-wrapper"><img class="img-hero"
                             src="assets/images/michelle-portrait-bw.png"></div>
@@ -142,25 +159,27 @@
                                     through
                                     data-driven, accessible, engaging solutions.
                                 </p>
-                                <div id="work-location-wrapper">
+                                <div class="work-location-wrapper">
                                     <div class="work-availability-wrapper">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="10"
                                             height="10" viewBox="0 0 10 10" fill="none">
                                             <circle cx="4.51715" cy="5.00006" r="4.51715"
                                                 fill="#1FD974" />
                                         </svg>
-                                        <p class="work-availability">Available for work</p>
+                                        <p class="text-work-availability">Available for work</p>
                                     </div>
-                                    <p class="current-location">/ Based in Los Angeles</p>
+                                    <p class="text-slash">/</p>
+                                    <p class="text-current-location"> Based in Los Angeles</p>
                                 </div>
                             </div>
-                            <div id="hero-buttons">
-                                <div>
-                                    <button class="btn-primary">See my work</button>
+                            <div class="hero-buttons">
+                                <div class="hero-large-buttons-wrapper">
+                                    <button id="scrollToProjects-1" class="btn-primary">See my
+                                        work</button>
                                     <button class="btn-secondary">View my resume</button>
                                 </div>
-                                <div>
-                                    <button class="iconButton">
+                                <div class="icon-buttons-wrapper">
+                                    <button class="icon-button hide">
                                         <a href="mailto:mhu.contact@gmail.com">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="32"
                                                 height="32" viewBox="0 0 32 32" fill="none">
@@ -198,7 +217,45 @@
                                             </svg>
                                         </a>
                                     </button>
-                                    <button class="iconButton">
+                                    <button class="icon-button">
+                                        <a href="mailto:mhu.contact@gmail.com">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="32"
+                                                height="32" viewBox="0 0 32 32" fill="none">
+                                                <g filter="url(#filter0_i_1103_6962)">
+                                                    <rect width="32" height="32" rx="5"
+                                                        fill="#1E1E1E" />
+                                                    <path
+                                                        d="M24.75 10.1523C24.75 10.2213 24.7145 10.2853 24.6561 10.3219L17.0602 15.0727C16.4116 15.4784 15.5884 15.4785 14.9396 15.073L7.34466 10.3259C7.28619 10.2893 7.25067 10.2252 7.25067 10.1563V9.79249C7.25067 9.65442 7.36259 9.5425 7.50066 9.54249L24.5 9.542C24.6381 9.542 24.75 9.65393 24.75 9.792V10.1523ZM24.75 21.9581C24.75 22.2342 24.5261 22.4581 24.25 22.4581H7.75C7.47386 22.4581 7.25 22.2342 7.25 21.9581V12.4807C7.25 12.3236 7.42279 12.2279 7.556 12.3111L14.94 16.9261C15.5885 17.3315 16.4115 17.3315 17.06 16.9261L24.444 12.3111C24.5772 12.2279 24.75 12.3236 24.75 12.4807V21.9581Z"
+                                                        fill="white" />
+                                                </g>
+                                                <defs>
+                                                    <filter id="filter0_i_1103_6962" x="0" y="0"
+                                                        width="33.5" height="33.5"
+                                                        filterUnits="userSpaceOnUse"
+                                                        color-interpolation-filters="sRGB">
+                                                        <feFlood flood-opacity="0"
+                                                            result="BackgroundImageFix" />
+                                                        <feBlend mode="normal" in="SourceGraphic"
+                                                            in2="BackgroundImageFix"
+                                                            result="shape" />
+                                                        <feColorMatrix in="SourceAlpha"
+                                                            type="matrix"
+                                                            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                                                            result="hardAlpha" />
+                                                        <feOffset dx="1.5" dy="1.5" />
+                                                        <feGaussianBlur stdDeviation="2" />
+                                                        <feComposite in2="hardAlpha"
+                                                            operator="arithmetic" k2="-1" k3="1" />
+                                                        <feColorMatrix type="matrix"
+                                                            values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.15 0" />
+                                                        <feBlend mode="normal" in2="shape"
+                                                            result="effect1_innerShadow_1103_6962" />
+                                                    </filter>
+                                                </defs>
+                                            </svg>
+                                        </a>
+                                    </button>
+                                    <button class="icon-button">
                                         <a href="https://www.linkedin.com/in/itsmichellehu">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="32"
                                                 height="32" viewBox="0 0 32 32" fill="none">
@@ -242,107 +299,17 @@
                     </div>
                 </div>
             </section>
-            <section class="projects">
+            <section id="projects" class="projects">
                 <div class="projects-wrapper">
                     <h2 class="section-heading hide">Product<br />design projects</h2>
-                    <div class="project-card">
+                    <div class="project-card hide mb-0">
                         <p class="number-label">01</p>
-                        <div class="project-gif-wrapper  pt-0" onmouseenter="playGif(this)"
+                        <div class="project-gif-wrapper" onmouseenter="playGif(this)"
                             onmouseleave="resetGif(this)">
-                            <div class="project-gif-container mb-auto" style="margin-bottom: auto">
+                            <div class="project-gif-container" id="postupBG">
                                 <img src="assets/images/thumbs/thumb-boardspace.png"
                                     alt="Static Image"
                                     class="thumb-boardspace project-static-img" />
-                                <img src="assets/images/thumbs/thumb-boardspace.gif" alt="Your GIF"
-                                    class="thumb-boardspace project-gif" />
-                            </div>
-                        </div>
-                        <div class="project-details">
-                            <div class="text-wrapper">
-                                <p class="subheader-project">BoardSpace</p>
-                                <h3>Empowering board directors to streamline decision-making</h3>
-                                <p class="project-description">
-                                    Redesigning BoardSpace's poll feature and conducting usability
-                                    testing to improve nonprofit board workflow efficiency and
-                                    experience
-                                </p>
-                            </div>
-                            <div class="tags-wrapper scrollable">
-                                <div class="boardspace-tag project-tag">usability testing</div>
-                                <div class="boardspace-tag project-tag">atomic design system</div>
-                                <div class="boardspace-tag project-tag">accessibility design</div>
-                                <div class="boardspace-tag project-tag">prototyping</div>
-                                <div class="boardspace-tag project-tag">interaction design</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-card">
-                        <p class="number-label">02</p>
-                        <div class="project-gif-wrapper" onmouseenter="playGif(this)"
-                            onmouseleave="resetGif(this)">
-                            <div class="project-gif-container">
-                                <img src="assets/images/tastebuds/hero-image.png" alt="Static Image"
-                                    class="thumb-tastebuds project-static-img" />
-                                <img src="assets/images/tastebuds/hero-image.png" alt="Your GIF"
-                                    class="thumb-tastebuds project-gif" />
-                            </div>
-                        </div>
-                        <div class="project-details">
-                            <div class="text-wrapper">
-                                <p class="subheader-project">tastebuds</p>
-                                <h3>
-                                    Helping diners discover dining options with tastebuds they
-                                    trust.
-                                </h3>
-                                <p class="project-description">Creating an end-to-end prototype of a
-                                    social
-                                    dining recommendation mobile-app
-                                    that uses AI and machine-learning to deliver personalized
-                                    recommendations.</p>
-                            </div>
-                            <div class="tags-wrapper scrollable">
-                                <div class="tastebuds-tag project-tag">product design</div>
-                                <div class="tastebuds-tag project-tag">interaction design</div>
-                                <div class="tastebuds-tag project-tag">monetization strategy</div>
-                                <div class="tastebuds-tag project-tag">prototyping</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-card mb-0">
-                        <p class="number-label">03</p>
-                        <div class="project-gif-wrapper" onmouseenter="playGif(this)"
-                            onmouseleave="resetGif(this)">
-                            <div class="project-gif-container" id="postupBG">
-                                <img src="assets/images/thumbs/thumb-postup.png" alt="Static Image"
-                                    class="img-postup project-static-img" />
-                                <img src="assets/images/thumbs/thumb-postup.gif" alt="Your GIF"
-                                    class="postup-gif project-gif" />
-                            </div>
-                        </div>
-                        <div class="project-details">
-                            <div class="text-wrapper">
-                                <p class="subheader-project">Postup</p>
-                                <h3>Connecting remote workers to ideal public workspaces</h3>
-                                <p class="project-description">
-                                    Designing a subscription-based mobile-app that converts existing
-                                    users and drives revenue growth in a 7-day sprint.
-                                </p>
-                            </div>
-                            <div class="tags-wrapper scrollable">
-                                <div class="postup-tag project-tag">product design</div>
-                                <div class="postup-tag project-tag">monetization strategy</div>
-                                <div class="postup-tag project-tag">interaction design</div>
-                                <div class="postup-tag project-tag">prototypiong</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-card hide">
-                        <p class="number-label">04</p>
-                        <div class="project-gif-wrapper" onmouseenter="playGif(this)"
-                            onmouseleave="resetGif(this)">
-                            <div class="project-gif-container" id="postupBG">
-                                <img src="assets/images/thumbs/thumb-boardspace.png"
-                                    alt="Static Image" class="project-static-img" />
                                 <img src="assets/images/thumbs/thumb-boardspace.gif" alt="Your GIF"
                                     class="project-gif" />
                             </div>
@@ -365,6 +332,72 @@
                             </div>
                         </div>
                     </div>
+                    <div class="project-card">
+                        <p class="number-label">01</p>
+                        <a href="tastebuds.html" class="project-link">
+                            <div class="project-gif-wrapper pt-0" onmouseenter="playGif(this)"
+                                onmouseleave="resetGif(this)">
+                                <div class="project-gif-container mb-0">
+                                    <img src="assets/images/tastebuds/hero-image.png"
+                                        alt="Static Image"
+                                        class="thumb-tastebuds project-static-img" />
+                                    <img src="assets/images/tastebuds/hero-image.png" alt="Your GIF"
+                                        class="thumb-tastebuds project-gif" />
+                                </div>
+                            </div>
+                        </a>
+                        <div class="project-details">
+                            <div class="text-wrapper">
+                                <p class="subheader-project">tastebuds</p>
+                                <h3>
+                                    Helping diners discover dining options with tastebuds they
+                                    trust.
+                                </h3>
+                                <p class="project-description">Creating an end-to-end prototype of a
+                                    social
+                                    dining recommendation mobile-app
+                                    that uses AI and machine-learning to deliver personalized
+                                    recommendations.</p>
+                            </div>
+                            <div class="tags-wrapper scrollable">
+                                <div class="tastebuds-tag project-tag">product design</div>
+                                <div class="tastebuds-tag project-tag">interaction design</div>
+                                <div class="tastebuds-tag project-tag">monetization strategy</div>
+                                <div class="tastebuds-tag project-tag">prototyping</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <p class="number-label">02</p>
+                        <a href="postup.html" class="project-link">
+                            <div class="project-gif-wrapper" onmouseenter="playGif(this)"
+                                onmouseleave="resetGif(this)">
+                                <div class="project-gif-container" id="postupBG">
+                                    <img src="assets/images/thumbs/thumb-postup.png"
+                                        alt="Static Image"
+                                        class="thumb-postup project-static-img" />
+                                    <img src="assets/images/thumbs/thumb-postup.gif" alt="Your GIF"
+                                        class="thumb-postup project-gif" />
+                                </div>
+                            </div>
+                        </a>
+                        <div class="project-details">
+                            <div class="text-wrapper">
+                                <p class="subheader-project">Postup</p>
+                                <h3>Connecting remote workers to ideal public workspaces</h3>
+                                <p class="project-description">
+                                    Designing a subscription-based mobile-app that converts existing
+                                    users and drives revenue growth in a 7-day sprint.
+                                </p>
+                            </div>
+                            <div class="tags-wrapper scrollable">
+                                <div class="postup-tag project-tag">product design</div>
+                                <div class="postup-tag project-tag">monetization strategy</div>
+                                <div class="postup-tag project-tag">interaction design</div>
+                                <div class="postup-tag project-tag">prototypiong</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
             <section id="about">
@@ -373,7 +406,7 @@
                         <img src="assets/images/michelle-portrait.png" alt="" />
                     </div>
                     <div class="about_content-wrapper">
-                        <h2 class="mb-8 section-heading">A little about me...</h2>
+                        <h2 class="section-heading">Hello! I'm Michelle.</h2>
                         <p>
                             I’m driven by my passion for creativity, problem-solving, and social
                             impact. My love for design is founded on my life-long interests in the
@@ -847,13 +880,14 @@
                     </div>
                 </div>
             </section>
-            <section id="hmu">
-                <div class="hmu-wrapper">
-                    <h2>Hit me up about</h2>
+            <section id="interests">
+                <div class="interests-wrapper">
+                    <h2 class="section-heading mb-40">Hit me up about</h2>
                     <div class="interest-grid-container">
                         <div class="interest-card">
                             <div class="content-wrapper">
-                                <img src="assets/svg/home/comedy.svg" alt="" />
+                                <img class="interest-card-graphic" class="interest-card-graphic"
+                                    src="assets/svg/home/comedy.svg" alt="" />
                                 <p class="headline">Standup comedy</p>
                                 <p class="body">
                                     Most of my Netflix recs is standup, and I enjoy live comedy
@@ -865,7 +899,8 @@
                         </div>
                         <div class="interest-card">
                             <div class="content-wrapper">
-                                <img src="assets/svg/home/taiwan.svg" alt="" />
+                                <img class="interest-card-graphic" src="assets/svg/home/taiwan.svg"
+                                    alt="" />
                                 <p class="headline">Taiwanese food</p>
                                 <p class="body">
                                     Fun fact: I was born and raised in Taipei, Taiwan until I was 9
@@ -877,7 +912,8 @@
                         </div>
                         <div class="interest-card">
                             <div class="content-wrapper">
-                                <img src="assets/svg/home/piggybank.svg" alt="" />
+                                <img class="interest-card-graphic"
+                                    src="assets/svg/home/piggybank.svg" alt="" />
                                 <p class="headline">Financial wellness</p>
                                 <p class="body">
                                     During college, I spent two years building two programs that
@@ -889,7 +925,8 @@
                         </div>
                         <div class="interest-card">
                             <div class="content-wrapper">
-                                <img src="assets/svg/home/music.svg" alt="" />
+                                <img class="interest-card-graphic" src="assets/svg/home/music.svg"
+                                    alt="" />
                                 <p class="headline">Music instruments</p>
                                 <p class="body">
                                     I’ve been playing the piano since I was 3 and the viola since I
@@ -901,25 +938,28 @@
                         </div>
                         <div class="interest-card">
                             <div class="content-wrapper">
-                                <img src="assets/svg/home/camera.svg" alt="" />
+                                <img class="interest-card-graphic" src="assets/svg/home/camera.svg"
+                                    alt="" />
                                 <p class="headline">Photography</p>
                                 <p class="body">
                                     After inheriting my dad’s Canon 400D and camcorder at 13, I
                                     began pursuing photography and filmmaking. I currently own a
                                     Sony A7III!
                                 </p>
-                                <a href="www.google.com">Check out some of my work!</a>
+                                <a class="hide" href="www.google.com">Check out some of my
+                                    work!</a>
                             </div>
                         </div>
                         <div class="interest-card">
                             <div class="content-wrapper">
-                                <img src="assets/svg/home/social-justice.svg" alt="" />
+                                <img class="interest-card-graphic"
+                                    src="assets/svg/home/social-justice.svg" alt="" />
                                 <p class="headline">Social justice</p>
                                 <p class="body">
                                     During college, I specialized in exploring race and gender
                                     inequality, so I’m passionate about addressing issues among
                                     marginalized and disadvantaged demographics.
-                                    <a href="www.google.com">Read my senior thesis!</a>
+                                    <a class="hide" href="www.google.com">Read my senior thesis!</a>
                                 </p>
                             </div>
                         </div>
@@ -933,7 +973,8 @@
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
                                 <div class="content-wrapper">
-                                    <img src="assets/svg/home/comedy.svg" alt="" />
+                                    <img class="interest-card-graphic"
+                                        src="assets/svg/home/comedy.svg" alt="" />
                                     <p class="headline">Standup comedy</p>
                                     <p class="body">
                                         I love standup! Most of my Netflix recommendations are
@@ -947,7 +988,8 @@
                             </div>
                             <div class="swiper-slide">
                                 <div class="content-wrapper">
-                                    <img src="assets/svg/home/comedy.svg" alt="" />
+                                    <img class="interest-card-graphic"
+                                        src="assets/svg/home/comedy.svg" alt="" />
                                     <p class="headline">Taiwanese food and culture</p>
                                     <p class="body">
                                         Fun fact: I was born and raised in Taipei, Taiwan until I
@@ -962,7 +1004,8 @@
                             </div>
                             <div class="swiper-slide">
                                 <div class="content-wrapper">
-                                    <img src="assets/svg/home/comedy.svg" alt="" />
+                                    <img class="interest-card-graphic"
+                                        src="assets/svg/home/comedy.svg" alt="" />
                                     <p class="headline">Financial wellness</p>
                                     <p class="body">
                                         During college, I spent two years building two programs that
@@ -974,7 +1017,8 @@
                             </div>
                             <div class="swiper-slide">
                                 <div class="content-wrapper">
-                                    <img src="assets/svg/home/comedy.svg" alt="" />
+                                    <img class="interest-card-graphic"
+                                        src="assets/svg/home/comedy.svg" alt="" />
                                     <p class="headline">Playing viola and more...</p>
                                     <p class="body">
                                         I’ve been playing the piano since I was 3 years old and the
@@ -986,7 +1030,8 @@
                             </div>
                             <div class="swiper-slide">
                                 <div class="content-wrapper">
-                                    <img src="assets/svg/home/comedy.svg" alt="" />
+                                    <img class="interest-card-graphic"
+                                        src="assets/svg/home/comedy.svg" alt="" />
                                     <p class="headline">Photography and film</p>
                                     <p class="body">
                                         I love standup! Most of my Netflix recommendations are
@@ -1000,7 +1045,8 @@
                             </div>
                             <div class="swiper-slide">
                                 <div class="content-wrapper">
-                                    <img src="assets/svg/home/comedy.svg" alt="" />
+                                    <img class="interest-card-graphic"
+                                        src="assets/svg/home/comedy.svg" alt="" />
                                     <p class="headline">Social justice</p>
                                     <p class="body">
                                         During college, I specialized in exploring race and gender
@@ -1020,7 +1066,7 @@
         </div>
     </main>
     <footer>
-        <div class="content">
+        <div class="content hide">
             <h2>Woah, you reached the bottom! 🎉</h2>
             <p id="footer-text">
                 Thank you for getting to know me! I hope you give me the opportunity
@@ -1028,14 +1074,30 @@
                 with me on LinkedIn, and/or shoot me an email!
             </p>
         </div>
-        <button class="btn-primary">See my work --></button>
-        <div>
-            <p id="yoursTruly">👩🏻‍💻 Designed and coded with love by yours truly.</p>
-            <p id="copyright-text">© 2024 Michelle Hu. All rights reserved.</p>
+        <div class="footer-wrapper">
+            <div>
+                <p id="yoursTruly">👩🏻‍💻 Designed and coded with love by yours truly.</p>
+                <p id="copyright-text">© 2024 Michelle Hu. All rights reserved.</p>
+            </div>
+            <div class="footer-cta-buttons">
+                <button id="scrollToProjects-2" class="btn-primary scroll-button">See my
+                    work</button>
+                <button class="btn-secondary">View my resume</button>
+            </div>
         </div>
     </footer>
     <script src="js/index.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        document.getElementById('scrollToProjects-1').addEventListener('click', function () {
+            document.getElementById('projects').scrollIntoView({ behavior: 'smooth' });
+        });
+    </script>
+    <script>
+        document.getElementById('scrollToProjects-2').addEventListener('click', function () {
+            document.getElementById('projects').scrollIntoView({ behavior: 'smooth' });
+        });
+    </script>
     <!-- <script src="/public/js/navBar.js"></script>
     <script src="/public/js/home-page/accordion.js"></script>
     <script src="/public/js/toolboxSwipe.js"></script>

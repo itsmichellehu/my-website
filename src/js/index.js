@@ -5,3 +5,4 @@ import '../components/HomeAccordion/HomeAccordion';
 import '../components/ToolboxSwiper/ToolboxSwiper';
 import '../components/Scrollable/scrollable';
 import '../components/HoverPlayGif/HoverPlayGif';
+import '../components/ScrollButton/scroll-button';

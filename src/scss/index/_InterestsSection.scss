@@ -1,161 +1,116 @@
-#hmu {
+#interests {
 	display: none;
-	background: #000;
+	background: #111111;
 	padding-left: 0;
 	padding-right: 0;
 
 	@include breakpoint(med) {
 		display: block;
+		padding: 5rem;
 	}
 
 	h2 {
 		color: white;
 		margin-bottom: 1.5rem;
 	}
+}
 
-	.hmu-wrapper {
-		margin: auto;
+.interests-wrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: auto;
+	width: fit-content;
+	max-width: 90vw;
+	margin: 2rem auto;
+	margin: auto;
+	padding: 0;
+
+	h2 {
+		display: block;
+		color: white;
+		margin-bottom: 1.5rem;
 		width: fit-content;
-		max-width: 90vw;
-		margin: 2rem auto;
-		margin: auto;
-		padding: 0;
-
-		h2 {
-			display: block;
-			color: white;
-			margin-bottom: 1.5rem;
-			width: fit-content;
-		}
-
-		.interest-grid-container {
-			display: grid;
-			align-self: center;
-			margin: auto;
-			width: fit-content;
-			grid-template-columns: auto;
-			grid-template-rows: repeat(6, 1fr);
-			row-gap: 1rem;
-			column-gap: 1rem;
-
-			@include breakpoint(sm) {
-				grid-template-columns: repeat(2, 1fr);
-				grid-template-rows: repeat(3, 1fr);
-			}
-
-			.interest-card {
-				display: flex;
-				max-width: 22rem;
-				padding: 0.75rem;
-				flex-direction: column;
-				align-items: flex-start;
-				gap: 0.5rem;
-				border-radius: 0.1875rem;
-				background: #f1efe6;
-
-				.content-wrapper {
-					display: flex;
-					justify-self: stretch;
-					padding: 1.25rem 1rem;
-					flex-direction: column;
-					align-items: flex-start;
-					gap: 0.5rem;
-					align-self: stretch;
-					border-radius: 0.1875rem;
-					border: 2px solid #cc4d4d;
-					height: 100%;
-
-					.emoji {
-						font-size: 2rem;
-						margin-top: -0.5rem;
-						margin-bottom: 0.5rem;
-					}
-
-					.headline {
-						color: #c64848;
-						font-family: "Inria Sans";
-						font-size: 2rem;
-						font-style: normal;
-						font-weight: 700;
-						line-height: 110%; /* 2.2rem */
-					}
-					.body {
-						color: #b01c00;
-						font-family: "Inria Sans";
-						font-size: 1rem;
-						font-style: normal;
-						font-weight: 400;
-						line-height: 125%; /* 1.25rem */
-						letter-spacing: 0.02rem;
-					}
-					a {
-						display: block;
-						color: #479cff;
-						font-family: Inter;
-						font-size: 0.875rem;
-						font-style: normal;
-						font-weight: 600;
-						line-height: 130%;
-						text-decoration: none;
-					}
-				}
-			}
-		}
+		text-align: center;
 	}
 }
 
-// Old design black boring cards -yawns-
-#hmu-swiper-old,
-.swiper {
-	width: 85vw;
-	height: 220px;
+.interest-grid-container {
+	display: grid;
+	align-self: center;
+	margin: auto;
+	width: fit-content;
+	grid-template-columns: auto;
+	grid-template-rows: repeat(6, 1fr);
+	row-gap: 1rem;
+	column-gap: 1rem;
+}
 
-	.swiper-slide {
+.interest-card {
+	display: flex;
+	max-width: 22rem;
+	padding: 0.75rem;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 0.5rem;
+	border-radius: 0.1875rem;
+	background: #f1efe6;
+
+	.content-wrapper {
 		display: flex;
+		justify-self: stretch;
+		padding: 1.25rem 1rem;
 		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-		padding: 0rem 1.5rem;
-		font-size: 22px;
-		font-weight: bold;
-		color: #fff;
-		border-radius: 2px;
-		background: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), #000;
-
-		transition: transform 1s ease;
-
-		.emoji {
-			font-size: 2rem;
-			margin-top: -0.5rem;
-			margin-bottom: 0.5rem;
-		}
+		align-items: flex-start;
+		gap: 0.5rem;
+		align-self: stretch;
+		border-radius: 0.1875rem;
+		border: 2px solid #cc4d4d;
+		height: 100%;
 
 		.headline {
-			font-size: 1.25rem;
-			font-weight: 600;
-			line-height: 110%; /* 1.375rem */
-			letter-spacing: -0.0375rem;
-			color: white;
-			margin-bottom: 0.5rem;
-		}
-		.body {
-			color: #fff;
-			font-family: Inter;
-			font-size: 0.875rem;
+			color: #c64848;
+			font-family: "Inria Sans";
+			font-size: 2rem;
 			font-style: normal;
-			font-weight: 500;
-			line-height: 130%; /* 1.1375rem */
+			font-weight: 700;
+			line-height: 110%; /* 2.2rem */
 			margin-bottom: 0;
 		}
+
+		.body {
+			color: #b01c00;
+			font-family: "Inria Sans";
+			font-size: 1rem;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 125%; /* 1.25rem */
+			letter-spacing: 0.02rem;
+			margin-bottom: 0;
+		}
+
 		a {
 			display: block;
 			color: #479cff;
 			font-family: Inter;
 			font-size: 0.875rem;
 			font-style: normal;
-			font-weight: 500;
+			font-weight: 600;
 			line-height: 130%;
+			text-decoration: none;
 		}
+	}
+}
+
+@include breakpoint(med) {
+	.interest-grid-container {
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: auto auto;
+	}
+
+	.interest-card-graphic {
+		width: 7rem;
+		margin-bottom: 1rem;
 	}
 }
 
@@ -246,4 +201,59 @@
 
 #resetSwiper {
 	color: white;
+}
+
+// Old design black boring cards -yawns-
+#hmu-swiper-old,
+.swiper {
+	width: 85vw;
+	height: 220px;
+
+	.swiper-slide {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		padding: 0rem 1.5rem;
+		font-size: 22px;
+		font-weight: bold;
+		color: #fff;
+		border-radius: 2px;
+		background: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), #000;
+
+		transition: transform 1s ease;
+
+		.emoji {
+			font-size: 2rem;
+			margin-top: -0.5rem;
+			margin-bottom: 0.5rem;
+		}
+
+		.headline {
+			font-size: 1.25rem;
+			font-weight: 600;
+			line-height: 110%; /* 1.375rem */
+			letter-spacing: -0.0375rem;
+			color: white;
+			margin-bottom: 0.5rem;
+		}
+		.body {
+			color: #fff;
+			font-family: Inter;
+			font-size: 0.875rem;
+			font-style: normal;
+			font-weight: 500;
+			line-height: 130%; /* 1.1375rem */
+			margin-bottom: 0;
+		}
+		a {
+			display: block;
+			color: #479cff;
+			font-family: Inter;
+			font-size: 0.875rem;
+			font-style: normal;
+			font-weight: 500;
+			line-height: 130%;
+		}
+	}
 }

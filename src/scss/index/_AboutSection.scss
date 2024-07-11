@@ -2,6 +2,11 @@
 
 #about {
 	background-color: #f8f8f8; // Example background color
+
+	.section-heading {
+		margin: auto;
+		margin-bottom: 2rem;
+	}
 }
 
 .about_wrapper {
@@ -16,7 +21,6 @@
 	display: flex;
 	width: 100%; // Ensures the container takes up the full width of its parent
 	overflow: hidden; // Prevents any overflow (optional based on your design needs)
-	margin-bottom: 2rem;
 	border-radius: 1px;
 	justify-content: center;
 
@@ -100,18 +104,23 @@
 		padding: 5rem 0;
 	}
 	.about_wrapper {
-		flex-direction: row;
+		display: grid;
+		grid-template-columns: 1fr 1.25fr;
 		max-width: 80rem;
-		gap: 3rem;
+		gap: 4rem;
+		align-items: center;
 	}
 
 	.about_portrait-wrapper {
-		width: 80%;
-
+		border-radius: 3px;
 		img {
-			width: 120%;
+			width: 110%;
 			height: fit-content;
 		}
+	}
+
+	.about_content-wrapper {
+		max-width: $content-max-width;
 	}
 
 	.about-details_wrapper {

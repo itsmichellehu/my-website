@@ -4,9 +4,13 @@
 	width: 90vw;
 	margin: auto;
 
-	:last-child {
-		margin-bottom: 0;
-	}
+	// :last-child {
+	// 	margin-bottom: 0;
+	// }
+}
+
+.project-link {
+	margin: 0;
 }
 
 .project-card {
@@ -35,7 +39,7 @@
 	max-height: 31.25rem;
 	padding-top: 2.5rem;
 	justify-content: center;
-	align-items: flex-start;
+	align-items: center;
 	overflow: hidden;
 	margin: auto;
 	border-radius: 3px;
@@ -45,7 +49,7 @@
 
 	&:hover {
 		opacity: 0.75;
-		transform: scale(1.02);
+		transform: scale(1.01);
 	}
 
 	&:hover:active {
@@ -65,7 +69,7 @@
 	height: auto;
 	overflow: hidden;
 	margin: auto;
-	margin-bottom: 0;
+	// margin-bottom: 0;
 }
 
 .project-gif {
@@ -171,12 +175,13 @@
 
 	.project-card {
 		display: grid;
-		grid-template-columns: 1fr 2fr;
+		grid-template-columns: 1.5fr 2fr;
 		grid-template-rows: auto auto;
 		grid-template-areas: "a b" ". c";
 		column-gap: 3rem;
-		row-gap: 2.5rem;
+		row-gap: 1.5rem;
 		margin-bottom: 5rem;
+		align-items: start;
 	}
 
 	.number-label {
@@ -187,6 +192,7 @@
 
 	.project-gif-wrapper {
 		grid-area: b;
+		padding: 0;
 	}
 
 	.project-static-img.thumb-boardspace,
@@ -196,15 +202,14 @@
 	}
 
 	.thumb-postup {
-		display: flex;
-		margin: auto auto 0 auto;
+		margin: auto;
 		width: 70%;
-		max-width: 15rem;
+		max-width: 13rem;
 	}
 
 	.thumb-tastebuds {
 		width: 100%;
-		max-width: 35rem;
+		max-width: 33rem;
 	}
 
 	.project-details {
@@ -267,10 +272,10 @@
 			}
 		}
 	}
-
-	.img-postup,
-	.postup-gif {
-		width: 40%;
-		margin-top: 1.5rem;
-	}
+// 
+// 	.img-postup,
+// 	.postup-gif {
+// 		width: 40%;
+// 		margin-top: 1.5rem;
+// 	}
 }
