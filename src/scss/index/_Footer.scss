@@ -1,0 +1,39 @@
+footer {
+	display: flex;
+	flex-direction: column;
+	gap: 1.25rem;
+	padding: 1.5rem;
+	.content {
+		width: 90vw;
+		h2 {
+			margin-bottom: 0.5rem;
+		}
+		#footer-text {
+			color: #444;
+			font-family: Inter;
+			font-size: 0.875rem;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 150%;
+		}
+	}
+	#yoursTruly {
+		color: var(--emphasis-blue, #4479df);
+		font-family: "IBM Plex Mono";
+		font-size: 0.875rem;
+		font-style: normal;
+		font-weight: 500;
+		line-height: 150%; /* 1.3125rem */
+		letter-spacing: 0.04375rem;
+		margin-bottom: 0.5rem;
+	}
+	#copyright-text {
+		color: var(--dark-grey, #565656);
+		font-family: Inter;
+		font-size: 0.875rem;
+		font-style: normal;
+		font-weight: 500;
+		line-height: 135%; /* 1.18125rem */
+		letter-spacing: -0.02625rem;
+	}
+}

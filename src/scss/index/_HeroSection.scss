@@ -1,0 +1,321 @@
+.hero-mobile-only {
+	z-index: -1;
+	position: fixed;
+	top: 4rem;
+	bottom: 0;
+	width: 100vw;
+	height: 45vh; // Fixed height
+	padding: 0;
+	margin: 0;
+	overflow: hidden;
+
+	.image-wrapper {
+		position: relative;
+		width: 90vw; // Takes the full width of the container
+		margin: 0 auto;
+		height: 45vh; // Fixed height
+		border-radius: 3px;
+		overflow: hidden;
+		background-image: url(../assets/images/michelle-portrait-bw.png);
+		background-position: bottom;
+		background-size: cover;
+
+		.hero-bg-mobile {
+			bottom: 0;
+		}
+	}
+
+	@include breakpoint(med) {
+		display: none;
+
+		.image-wrapper {
+			display: none;
+		}
+
+		.hero-bg-mobile {
+			display: none;
+		}
+	}
+}
+
+.wrapper {
+	margin-top: 45vh;
+	overflow: hidden;
+
+	@include breakpoint(med) {
+		margin-top: 0rem;
+	}
+}
+
+// Hero section
+.hero {
+	display: flex;
+	background: white;
+	border-bottom: 1px solid #dbdbdb;
+	padding: 0;
+	padding-bottom: 2rem;
+	margin-top: 4rem;
+
+	.hero-wrapper {
+		display: flex;
+		flex-direction: column;
+		width: 100vw;
+		margin: auto;
+		align-items: center;
+	}
+
+	.hero-content {
+		background-color: white;
+		padding-top: 1rem;
+	}
+
+	.hero-content-wrapper {
+		width: 90vw;
+	}
+
+	.hero-content-text-wrapper {
+		display: flex;
+		align-items: flex-start;
+		flex-direction: column;
+
+		.hero-position {
+			font-size: 1.25rem;
+			margin-bottom: 0.5rem;
+		}
+
+		.highlighted-text {
+			font-size: 1.625rem; // Adjusted for typical h1 size
+			line-height: 1.2; // Tighter line height for header
+
+			span {
+				padding: 0.1rem 0.6rem; // Adjust padding to better fit larger text
+				background-repeat: no-repeat;
+				background-size: 100% 100%; // Ensures the SVG background scales correctly
+				color: black; // Ensures text color contrasts with background
+
+				&.product-designer {
+					background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 287 29' fill='none'%3E%3Cpath d='M10.347 1.493C10.66 0.754 11.385 0.274 12.188 0.274H284.54c1.433 0 2.401 1.461 1.842 2.78l-10.169 24H2.02C0.587 28.274-0.381 26.812 0.178 25.493L10.347 1.493Z' fill='%237DFFE7'/%3E%3C/svg%3E");
+				}
+
+				&.frontend-developer {
+					background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 287 29' fill='none'%3E%3Cpath d='M10.347 1.493C10.66 0.754 11.385 0.274 12.188 0.274H284.54c1.433 0 2.401 1.461 1.842 2.78l-10.169 24H2.02C0.587 28.274-0.381 26.812 0.178 25.493L10.347 1.493Z' fill='%23FCFF67'/%3E%3C/svg%3E");
+				}
+			}
+		}
+
+		#workAndLocation {
+			margin-bottom: 1rem;
+		}
+		#tagline {
+			color: #888888;
+			font-family: Inter;
+			font-size: 1.25rem;
+			font-style: normal;
+			font-weight: 500;
+			-webkit-text-stroke-width: 0.25px;
+			-webkit-text-stroke-color: #888888;
+			line-height: 130%; /* 1.5rem */
+			margin-bottom: 1rem;
+		}
+
+		#michelleHu {
+			color: #1e1e1e;
+			font-weight: 700;
+		}
+
+		#betterTheWorld {
+			color: var(--emphasis-blue, #4479df);
+			font-weight: 700;
+		}
+
+		.work-availability {
+			padding-left: 4px;
+			color: #1e1e1e;
+			font-size: 0.875rem;
+			font-style: normal;
+			font-weight: 500;
+			line-height: 135%; /* 1.1375rem */
+		}
+
+		.current-location {
+			color: #888;
+			font-family: Inter;
+			font-size: 0.875rem;
+			font-style: normal;
+			font-weight: 500;
+			line-height: 135%; /* 1.1375rem */
+		}
+	}
+
+	#hero-buttons,
+	.wrapper {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: flex-start;
+		gap: 1.25rem;
+		align-self: stretch;
+
+		> div:first-child {
+			display: flex;
+			flex-direction: row;
+			gap: 0.5rem;
+			align-items: center;
+			align-self: stretch;
+		}
+
+		> div:last-child {
+			display: flex;
+			flex-direction: row;
+			gap: 1rem;
+			button {
+				padding: 0;
+			}
+		}
+	}
+	.iconButton button {
+		display: flex;
+		border-radius: 5px;
+		width: 2rem;
+		height: 2rem;
+		fill: #1e1e1e;
+		box-shadow: 1.5px 1.5px 4px 0px rgba(255, 255, 255, 0.15) inset;
+		overflow: hidden;
+	}
+
+	@include breakpoint(med) {
+		padding-bottom: 5rem;
+
+		.navbar-logo {
+			position: fix;
+			width: 3rem;
+			transform: translateX(6.5vw);
+		}
+
+		.hero-wrapper {
+			height: 70vh;
+			flex-direction: row-reverse;
+			overflow: hidden;
+			width: 90vw;
+			gap: 3rem;
+		}
+
+		.hero-image-wrapper {
+			display: flex;
+			align-items: flex-end;
+			overflow: hidden;
+			width: 40%;
+		}
+
+		.hero-content {
+			width: 60%;
+			margin-top: 0;
+		}
+
+		.hero-content-wrapper {
+			flex-direction: row-reverse;
+			width: 100%;
+		}
+
+		.hero-headline {
+			color: var(--Colors-Off-Black, #1e1e1e);
+			font-family: Inter;
+			font-size: 3.25rem;
+			font-style: normal;
+			font-weight: 600;
+			line-height: 130%; /* 4.225rem */
+			letter-spacing: -0.13rem;
+			margin-bottom: 1rem;
+		}
+
+		.hero-tagline {
+			color: $dark-grey;
+			font-size: 1.79938rem;
+			font-style: normal;
+			font-weight: 500;
+			line-height: 135%; /* 2.42919rem */
+			letter-spacing: -0.054rem;
+			margin-bottom: 2rem;
+		}
+
+		#work-location-wrapper {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			gap: 1rem;
+		}
+
+		.work-availability-wrapper {
+			display: flex;
+			flex-direction: row;
+			gap: 0.25rem;
+			align-items: center;
+			margin-bottom: 2rem;
+		}
+
+		.work-availability,
+		.current-location {
+			font-size: 1.25rem;
+			margin-bottom: 0;
+		}
+
+		.img-hero {
+			display: flex;
+			width: 100%;
+		}
+	}
+}
+
+/* About Hero Buttons */
+
+.ic-menu {
+	background-image: url(../assets/svg/home/ic-menu.svg);
+}
+
+button {
+	display: flex;
+	height: 2.5rem;
+	padding: 0.625rem 1.25rem;
+	justify-content: center;
+	align-items: center;
+	gap: 1rem;
+	justify-content: center;
+	border: 0;
+	border-radius: 25px;
+	font-family: Inter;
+	font-size: 1rem;
+	font-style: normal;
+	font-weight: 600;
+	line-height: normal;
+	text-align: center;
+	cursor: pointer;
+	transition: background-color 0.3s, color 0.3s;
+	background-color: transparent;
+}
+
+.btn {
+	button {
+		display: flex;
+		height: 2.5rem;
+		padding: 0.625rem 1.25rem;
+		gap: 1rem;
+		border: 0;
+		border-radius: 1.5625rem; // Note: You might want to ensure this matches the .btn styles if intended
+		text-align: center;
+		cursor: pointer;
+		transition: background-color 0.3s, color 0.3s;
+		background-color: transparent;
+	}
+
+	&-primary {
+		font-weight: 600;
+		background-color: #000; // Assuming $black is defined elsewhere in your styles
+		color: $white;
+	}
+
+	&-secondary {
+		border: 1.5px solid $black;
+		color: $black;
+		font-weight: 500;
+	}
+}

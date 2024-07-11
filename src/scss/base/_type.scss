@@ -167,17 +167,31 @@ h6 {
 	margin-top: 1rem;
 }
 
-.fw-medium {
-	color: $black;
-	font-weight: 500;
-}
-
 // Sets text in <span> fw-medium
 .span-fw-medium {
 	span {
 		color: $black;
 		font-weight: 500;
 	}
+}
+
+.fw-normal {
+	font-weight: 400;
+}
+
+
+.fw-medium {
+	color: $black;
+	font-weight: 500;
+}
+
+.fw-bold {
+	font-weight: 600;
+}
+
+// Font-size
+.fz-20 {
+	font-size: 1.25rem;
 }
 
 .notes {
@@ -199,10 +213,6 @@ h6 {
 	letter-spacing: 0rem;
 }
 
-.the-problem-text {
-	font-size: 1.25rem;
-}
-
 .text-center {
 	text-align: center;
 }
@@ -218,14 +228,6 @@ h6 {
 	margin: 0;
 	padding: 0;
 	height: fit-content;
-}
-
-.fw-normal {
-	font-weight: 400;
-}
-
-.fz-20 {
-	font-size: 1.25rem;
 }
 
 // Fonts
