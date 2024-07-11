@@ -1,8 +1,6 @@
 // About me
 
 #about {
-	background-color: #f8f8f8; // Example background color
-
 	.section-heading {
 		margin: auto;
 		margin-bottom: 2rem;
@@ -104,23 +102,23 @@
 		padding: 5rem 0;
 	}
 	.about_wrapper {
-		display: grid;
-		grid-template-columns: 1fr 1.25fr;
-		max-width: 80rem;
+		display: flex;
+		flex-direction: row-reverse;
+		overflow: hidden;
 		gap: 4rem;
-		align-items: center;
+		align-items: start;
+		width: fit-content;
+		max-width: 68rem;
 	}
 
 	.about_portrait-wrapper {
 		border-radius: 3px;
+		max-width: 30rem;
+		overflow: hidden;
 		img {
-			width: 110%;
-			height: fit-content;
+			width: 125%;
+			height: auto;
 		}
-	}
-
-	.about_content-wrapper {
-		max-width: $content-max-width;
 	}
 
 	.about-details_wrapper {

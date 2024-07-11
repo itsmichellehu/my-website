@@ -16,47 +16,9 @@
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-    <title>About</title>
+    <title>Michelle Hu</title>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script>document.addEventListener('DOMContentLoaded', () => {
-            document.querySelectorAll('.accordionHeader').forEach(button => {
-                button.addEventListener('click', () => {
-                    const accordionContent = button.nextElementSibling;
-                    const arrow = button.querySelector('.accordion-arrow');
-
-                    // Check if accordion is currently open
-                    if (button.classList.contains('active')) {
-                        // It's open, so close it
-                        accordionContent.style.maxHeight = '0'; // Ensure collapsing animation
-                        arrow.style.transform = 'rotate(0deg)';
-                        button.classList.remove('active'); // Remove the active class if content is being hidden
-                    } else {
-                        // It's closed, so open it
-                        accordionContent.style.maxHeight = accordionContent.scrollHeight + "px"; // Set maxHeight to the scrollHeight for expanding animation
-                        arrow.style.transform = 'rotate(-180deg)';
-                        button.classList.add('active'); // Add the active class if content is being shown
-                    }
-                });
-            });
-        });</script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            let isScrolling;
-
-            window.addEventListener('scroll', function () {
-                document.body.classList.add('scrolling');
-
-                // Clear our timeout throughout the scroll
-                window.clearTimeout(isScrolling);
-
-                // Set a timeout to run after scrolling ends
-                isScrolling = setTimeout(function () {
-                    document.body.classList.remove('scrolling');
-                }, 1000); // Adjust the timeout duration as needed
-            });
-        });
-    </script>
-    <!-- <script>document.addEventListener('DOMContentLoaded', function () {
+    <script>document.addEventListener('DOMContentLoaded', function () {
             const gifs = document.querySelectorAll('.project-gif'); // Select all GIFs
             const staticImgs = document.querySelectorAll('.project-static-img'); // Select all static images
 
@@ -115,7 +77,7 @@
                 });
             });
         });
-    </script> -->
+    </script>
 </head>
 
 <body>
@@ -128,7 +90,8 @@
                 <img src="assets/svg/home/ic-menu.svg" class="ic-menu" alt="" />
             </div> -->
             <ul class="navbar-menu" id="menu">
-                <li class="nav-item active"><a href="index.html">Home</a></li>
+                <li class="nav-item active"><a href="index">Home</a></li>
+                <li class="nav-item"><a href="about">About</a></li>
                 <li class="nav-item"><a href="#">Resume</a></li>
                 <li class="nav-item"><a href="mailto:mhu.contact@gmail.com">Contact</a></li>
             </ul>
@@ -140,7 +103,7 @@
                 <div class="hero-bg-mobile"></div>
             </div>
         </section>
-        <div class="wrapper">
+        <div id="main-wrapper">
             <section id="hero" class="hero">
                 <!-- <div class="navbar-logo">
                     <img src="assets/svg/home/logo-mhu-black.svg" class="logo-mhu" alt="Logo" />
@@ -334,7 +297,7 @@
                     </div>
                     <div class="project-card">
                         <p class="number-label">01</p>
-                        <a href="tastebuds.html" class="project-link">
+                        <a href="tastebuds" class="project-link">
                             <div class="project-gif-wrapper pt-0" onmouseenter="playGif(this)"
                                 onmouseleave="resetGif(this)">
                                 <div class="project-gif-container mb-0">
@@ -367,9 +330,9 @@
                             </div>
                         </div>
                     </div>
-                    <div class="project-card">
+                    <div class="project-card mb-0">
                         <p class="number-label">02</p>
-                        <a href="postup.html" class="project-link">
+                        <a href="postup" class="project-link">
                             <div class="project-gif-wrapper" onmouseenter="playGif(this)"
                                 onmouseleave="resetGif(this)">
                                 <div class="project-gif-container" id="postupBG">
@@ -400,669 +363,6 @@
                     </div>
                 </div>
             </section>
-            <section id="about">
-                <div class="about_wrapper">
-                    <div class="about_portrait-wrapper">
-                        <img src="assets/images/michelle-portrait.png" alt="" />
-                    </div>
-                    <div class="about_content-wrapper">
-                        <h2 class="section-heading">Hello! I'm Michelle.</h2>
-                        <p>
-                            I’m driven by my passion for creativity, problem-solving, and social
-                            impact. My love for design is founded on my life-long interests in the
-                            arts and social impact. <br /><br />
-                            I'm committed to robust research for impactful, sustainable products,
-                            which shapes my design approach—creating meaningful change and
-                            innovation for people that maximize business and organizational goals.
-                            <br /><br />In my free time, apart from spending quality time with
-                            friends, family, and my adorable black cat Luna, I enjoy watching
-                            stand-up comedy, traveling, tending to my houseplants, cooking, and
-                            playing the viola and piano.
-                        </p>
-                        <div class="about-details_wrapper">
-                            <div class="about-details_grid-container">
-                                <div class="grid-item-01">
-                                    <img src="assets/svg/home/ic-location.svg" alt="" />
-                                </div>
-                                <div class="grid-item-02">
-                                    <p>current location</p>
-                                </div>
-                                <div class="grid-item-03">
-                                    <p>Los Angeles, CA</p>
-                                </div>
-                            </div>
-                            <div class="about-details_grid-container">
-                                <div class="grid-item-01">
-                                    <img src="assets/svg/home/ic-certificate.svg" alt="" />
-                                </div>
-                                <div class="grid-item-02">
-                                    <p>UX design certificate</p>
-                                </div>
-                                <div class="grid-item-03">
-                                    <p>Springboard UX Design Career</p>
-                                </div>
-                            </div>
-                            <div class="about-details_grid-container">
-                                <div class="grid-item-01">
-                                    <img src="assets/svg/home/ic-gradcap.svg" alt="" />
-                                </div>
-                                <div class="grid-item-02">
-                                    <p>education</p>
-                                </div>
-                                <div class="grid-item-03">
-                                    <p>University of California, Irvine</p>
-                                </div>
-                            </div>
-                            <div class="about-details_grid-container">
-                                <div class="grid-item-01">
-                                    <img src="assets/svg/home/ic-book.svg" alt="" />
-                                </div>
-                                <div class="grid-item-02">
-                                    <p>degree</p>
-                                </div>
-                                <div class="grid-item-03">
-                                    <p>B.A. in Sociology</p>
-                                </div>
-                            </div>
-                            <div class="about-details_grid-container">
-                                <div class="grid-item-01">
-                                    <img src="assets/svg/home/ic-aries.svg" alt="" />
-                                </div>
-                                <div class="grid-item-02">
-                                    <p>zodiac sign</p>
-                                </div>
-                                <div class="grid-item-03">
-                                    <p>Aries</p>
-                                </div>
-                            </div>
-                            <div class="about-details_grid-container">
-                                <div class="grid-item-01">
-                                    <img src="assets/svg/home/ic-personality.svg" alt="" />
-                                </div>
-                                <div class="grid-item-02">
-                                    <p>Personality type</p>
-                                </div>
-                                <div class="grid-item-03">
-                                    <p>ENFJ</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-            </section>
-            <section id="toolbox">
-                <div class="toolbox_section-wrapper">
-                    <h2 class="section-heading">What's in my toolbox</h2>
-                    <div class="toolbox_content-wrapper">
-                        <!-- Design tools (desktop-view)-->
-                        <div class="tools-design desktop-only tools-wrapper">
-                            <div class="tools-grid-container">
-                                <div class="grid-item">
-                                    <div class="logo-figma">
-                                        <img src="assets/images/toolbox-logos/logo-figma.png"
-                                            alt="" />
-                                    </div>
-                                    <p>Figma</p>
-                                </div>
-                                <div class="grid-item">
-                                    <div class="logo-miro">
-                                        <img src="assets/images/toolbox-logos/logo-miro.png"
-                                            alt="" />
-                                    </div>
-                                    <p>Miro</p>
-                                </div>
-                                <div class="grid-item">
-                                    <div class="logo-webflow">
-                                        <img src="assets/images/toolbox-logos/logo-webflow.png"
-                                            alt="" />
-                                    </div>
-                                    <p>Webflow</p>
-                                </div>
-                                <div class="grid-item">
-                                    <div class="logo-procreate">
-                                        <img src="assets/images/toolbox-logos/logo-procreate.png"
-                                            alt="" />
-                                    </div>
-                                    <p>Procreate</p>
-                                </div>
-                                <div class="grid-item">
-                                    <div class="logo-bg-white">
-                                        <img src="assets/images/toolbox-logos/logo-sketch.png"
-                                            alt="" />
-                                    </div>
-                                    <p>Sketch</p>
-                                </div>
-                                <div class="grid-item">
-                                    <div class="logo-adobeXD">
-                                        <img src="assets/images/toolbox-logos/logo-adobe-xd.png"
-                                            alt="" />
-                                    </div>
-                                    <p>Adobe XD</p>
-                                </div>
-                                <div class="grid-item">
-                                    <div class="logo-adobe">
-                                        <img src="assets/images/toolbox-logos/logo-photoshop.png"
-                                            alt="" />
-                                    </div>
-                                    <p>Photoshop</p>
-                                </div>
-                                <div class="grid-item">
-                                    <div class="logo-adobe">
-                                        <img src="assets/images/toolbox-logos/logo-lightroom.svg"
-                                            alt="" />
-                                    </div>
-                                    <p>Lightroom</p>
-                                </div>
-                            </div>
-                            <p>Design</p>
-                        </div>
-                        <!-- Frontend development (desktop-view) -->
-                        <div class="tools-dev desktop-only tools-wrapper">
-                            <div class="tools-grid-container">
-                                <div class="grid-item">
-                                    <div class="logo-bg-white">
-                                        <img src="assets/images/toolbox-logos/logo-html5.png"
-                                            alt="" />
-                                    </div>
-                                    <p>HTML5</p>
-                                </div>
-                                <div class="grid-item">
-                                    <div class="logo-bg-white">
-                                        <img src="assets/images/toolbox-logos/logo-CSS.png"
-                                            alt="" />
-                                    </div>
-                                    <p>CSS</p>
-                                </div>
-                                <div class="grid-item">
-                                    <div class="logo-bg-white">
-                                        <img src="assets/images/toolbox-logos/logo-javascript.png"
-                                            alt="" />
-                                    </div>
-                                    <p>Javascript</p>
-                                </div>
-                                <div class="grid-item">
-                                    <div class="logo-bg-white">
-                                        <img src="assets/images/toolbox-logos/logo-vscode.png"
-                                            alt="" />
-                                    </div>
-                                    <p>VSCode</p>
-                                </div>
-                                <div class="grid-item">
-                                    <div class="logo-github">
-                                        <img src="assets/images/toolbox-logos/logo-github.png"
-                                            alt="" />
-                                    </div>
-                                    <p>Github</p>
-                                </div>
-                                <div class="grid-item">
-                                    <div class="logo-bg-white">
-                                        <img src="assets/images/toolbox-logos/logo-git.png"
-                                            alt="" />
-                                    </div>
-                                    <p>Git</p>
-                                </div>
-                                <div class="grid-item">
-                                    <div class="logo-bg-white">
-                                        <img src="assets/images/toolbox-logos/logo-nodejs.png"
-                                            alt="" />
-                                    </div>
-                                    <p>node.js</p>
-                                </div>
-                                <div class="grid-item">
-                                    <div class="logo-bg-white">
-                                        <img src="assets/images/toolbox-logos/logo-react.png"
-                                            alt="" />
-                                    </div>
-                                    <p>React</p>
-                                </div>
-                            </div>
-                            <p>Frontend Development</p>
-                        </div>
-                        <!-- Design (mobile-view) -->
-                        <div class="tools-swipe">
-                            <div class="swiper mySwiper">
-                                <div class="swiper-wrapper">
-                                    <div class="tools-design" class="swiper-slide">
-                                        <div class="grid-item">
-                                            <div class="logo-figma">
-                                                <img src="assets/images/toolbox-logos/logo-figma.png"
-                                                    alt="" />
-                                            </div>
-                                            <p>Figma</p>
-                                        </div>
-                                        <div class="grid-item">
-                                            <div class="logo-miro">
-                                                <img src="assets/images/toolbox-logos/logo-miro.png"
-                                                    alt="" />
-                                            </div>
-                                            <p>Miro</p>
-                                        </div>
-                                        <div class="grid-item">
-                                            <div class="logo-webflow">
-                                                <img src="assets/images/toolbox-logos/logo-webflow.png"
-                                                    alt="" />
-                                            </div>
-                                            <p>Webflow</p>
-                                        </div>
-                                        <div class="grid-item">
-                                            <div class="logo-bg-white">
-                                                <img src="assets/images/toolbox-logos/logo-sketch.png"
-                                                    alt="" />
-                                            </div>
-                                            <p>Sketch</p>
-                                        </div>
-                                        <div class="grid-item">
-                                            <div class="logo-adobeXD">
-                                                <img src="assets/images/toolbox-logos/logo-adobe-xd.png"
-                                                    alt="" />
-                                            </div>
-                                            <p style="text-wrap: nowrap">Adobe XD</p>
-                                        </div>
-                                    </div>
-                                    <div class="tools-design" class="swiper-slide"
-                                        style="padding-right: 1rem">
-                                        <div class="grid-item">
-                                            <div class="logo-adobe">
-                                                <img src="assets/images/toolbox-logos/logo-photoshop.png"
-                                                    alt="" />
-                                            </div>
-                                            <p>Photoshop</p>
-                                        </div>
-                                        <div class="grid-item">
-                                            <div class="logo-adobe">
-                                                <img src="assets/images/toolbox-logos/logo-lightroom.svg "
-                                                    alt="" />
-                                            </div>
-                                            <p>Lightroom</p>
-                                        </div>
-                                        <div class="grid-item">
-                                            <div class="logo-procreate">
-                                                <img src="assets/images/toolbox-logos/logo-procreate.png"
-                                                    alt="" />
-                                            </div>
-                                            <p>Procreate</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-pagination"></div>
-                            </div>
-                            <p>Frontend Development</p>
-                        </div>
-                        <!-- Frontend development (mobile-view) -->
-                        <div class="tools-swipe">
-                            <div class="swiper mySwiper">
-                                <div class="swiper-wrapper">
-                                    <div class="tools-dev" class="swiper-slide">
-                                        <div class="grid-item">
-                                            <div>
-                                                <img src="assets/images/toolbox-logos/logo-html5.png"
-                                                    alt="" />
-                                            </div>
-                                            <p>HTML5</p>
-                                        </div>
-                                        <div class="grid-item">
-                                            <div>
-                                                <img src="assets/images/toolbox-logos/logo-CSS.png"
-                                                    alt="" />
-                                            </div>
-                                            <p>CSS</p>
-                                        </div>
-                                        <div class="grid-item">
-                                            <div>
-                                                <img src="assets/images/toolbox-logos/logo-sass.svg"
-                                                    alt="" />
-                                            </div>
-                                            <p>SCSS</p>
-                                        </div>
-                                        <div class="grid-item">
-                                            <div>
-                                                <img src="assets/images/toolbox-logos/logo-javascript.png"
-                                                    alt="" />
-                                            </div>
-                                            <p>Javascript</p>
-                                        </div>
-                                        <div class="grid-item">
-                                            <div>
-                                                <img src="assets/images/toolbox-logos/logo-vscode.png"
-                                                    alt="" />
-                                            </div>
-                                            <p>VSCode</p>
-                                        </div>
-                                    </div>
-                                    <div class="tools-dev" class="swiper-slide"
-                                        style="padding-right: 1rem">
-                                        <div class="grid-item">
-                                            <div class="logo-github">
-                                                <img src="assets/images/toolbox-logos/logo-github.png"
-                                                    alt="" />
-                                            </div>
-                                            <p>Github</p>
-                                        </div>
-                                        <div class="grid-item">
-                                            <div>
-                                                <img src="assets/images/toolbox-logos/logo-git.png"
-                                                    alt="" />
-                                            </div>
-                                            <p>Git</p>
-                                        </div>
-                                        <div class="grid-item">
-                                            <div>
-                                                <img class="height-auto"
-                                                    src="assets/images/toolbox-logos/logo-nodejs.png"
-                                                    alt="" />
-                                            </div>
-                                            <p>node.js</p>
-                                        </div>
-                                        <div class="grid-item">
-                                            <div>
-                                                <img src="assets/images/toolbox-logos/logo-react.png"
-                                                    alt="" />
-                                            </div>
-                                            <p>React</p>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-pagination"></div>
-                                </div>
-                            </div>
-                            <p>Frontend Development</p>
-                        </div>
-                        <!-- Project management tools -->
-                        <div class="tools-pm tools-wrapper desktop-only">
-                            <div class="tools-grid-container">
-                                <div class="grid-item">
-                                    <div class="logo-bg-white">
-                                        <img src="assets/images/toolbox-logos/logo-notion.png"
-                                            alt="" />
-                                    </div>
-                                    <p>Notion</p>
-                                </div>
-                                <div class="grid-item">
-                                    <div class="logo-bg-white">
-                                        <img src="assets/images/toolbox-logos/logo-airtable.png"
-                                            alt="" />
-                                    </div>
-                                    <p>Airtable</p>
-                                </div>
-                            </div>
-                            <p>Project Management</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section id="faqs">
-                <div class="faqs-wrapper">
-                    <h2>Some of your questions</h2>
-                    <div>
-                        <div class="accordion">
-                            <button class="accordionHeader">
-                                <p>Why did you pursue product design and frontend development?</p>
-                                <img class="accordion-arrow"
-                                    src="assets/svg/ic-chevron-arrow__down--black.svg" />
-                            </button>
-                            <div class="accordionContent">
-                                <!-- Add the 'hide' class here -->
-                                <p>
-                                    The polls home page presents a comprehensive list of polls:
-                                    open, draft, and closed. It was difficult to scan or find polls
-                                    without clear indicators, organization, and options to sort,
-                                    filter, or search. We also couldn’t tell what we were supposed
-                                    to do besides creating a new poll, as it’s the only clear CTA.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="accordion">
-                            <button class="accordionHeader">
-                                <p>What has your design journey has been like?</p>
-                                <img class="accordion-arrow"
-                                    src="assets/svg/ic-chevron-arrow__down--black.svg" />
-                            </button>
-                            <div class="accordionContent">
-                                <!-- Add the 'hide' class here -->
-                                <p>
-                                    The polls home page presents a comprehensive list of polls:
-                                    open, draft, and closed. It was difficult to scan or find polls
-                                    without clear indicators, organization, and options to sort,
-                                    filter, or search. We also couldn’t tell what we were supposed
-                                    to do besides creating a new poll, as it’s the only clear CTA.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="accordion">
-                            <button class="accordionHeader">
-                                <p>How did you transition into tech?</p>
-                                <img class="accordion-arrow"
-                                    src="assets/svg/ic-chevron-arrow__down--black.svg" />
-                            </button>
-                            <div class="accordionContent">
-                                <!-- Add the 'hide' class here -->
-                                <p>
-                                    The polls home page presents a comprehensive list of polls:
-                                    open, draft, and closed. It was difficult to scan or find polls
-                                    without clear indicators, organization, and options to sort,
-                                    filter, or search. We also couldn’t tell what we were supposed
-                                    to do besides creating a new poll, as it’s the only clear CTA.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="accordion">
-                            <button class="accordionHeader">
-                                <p>What are your design values?</p>
-                                <img class="accordion-arrow"
-                                    src="assets/svg/ic-chevron-arrow__down--black.svg" />
-                            </button>
-                            <div class="accordionContent">
-                                <!-- Add the 'hide' class here -->
-                                <p>
-                                    The polls home page presents a comprehensive list of polls:
-                                    open, draft, and closed. It was difficult to scan or find polls
-                                    without clear indicators, organization, and options to sort,
-                                    filter, or search. We also couldn’t tell what we were supposed
-                                    to do besides creating a new poll, as it’s the only clear CTA.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="accordion">
-                            <button class="accordionHeader">
-                                <p>Where did you learn all this??</p>
-                                <img class="accordion-arrow"
-                                    src="assets/svg/ic-chevron-arrow__down--black.svg" />
-                            </button>
-                            <div class="accordionContent">
-                                <!-- Add the 'hide' class here -->
-                                <p>
-                                    The polls home page presents a comprehensive list of polls:
-                                    open, draft, and closed. It was difficult to scan or find polls
-                                    without clear indicators, organization, and options to sort,
-                                    filter, or search. We also couldn’t tell what we were supposed
-                                    to do besides creating a new poll, as it’s the only clear CTA.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section id="interests">
-                <div class="interests-wrapper">
-                    <h2 class="section-heading mb-40">Hit me up about</h2>
-                    <div class="interest-grid-container">
-                        <div class="interest-card">
-                            <div class="content-wrapper">
-                                <img class="interest-card-graphic" class="interest-card-graphic"
-                                    src="assets/svg/home/comedy.svg" alt="" />
-                                <p class="headline">Standup comedy</p>
-                                <p class="body">
-                                    Most of my Netflix recs is standup, and I enjoy live comedy
-                                    shows. My favorite comics include Mae Martin, Hannah Gadsby,
-                                    Neal Brennan, Atsuko Okatsuka, Ronny Cheing, Hasan Minhaj, and
-                                    Trevor Noah.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="interest-card">
-                            <div class="content-wrapper">
-                                <img class="interest-card-graphic" src="assets/svg/home/taiwan.svg"
-                                    alt="" />
-                                <p class="headline">Taiwanese food</p>
-                                <p class="body">
-                                    Fun fact: I was born and raised in Taipei, Taiwan until I was 9
-                                    years old! I love eating and cooking Taiwanese food. Hit me up
-                                    and let me convince you to put Taiwan on your travel bucket
-                                    list!
-                                </p>
-                            </div>
-                        </div>
-                        <div class="interest-card">
-                            <div class="content-wrapper">
-                                <img class="interest-card-graphic"
-                                    src="assets/svg/home/piggybank.svg" alt="" />
-                                <p class="headline">Financial wellness</p>
-                                <p class="body">
-                                    During college, I spent two years building two programs that
-                                    promote financial wellness for students. I created and led many
-                                    workshops, such as credit, investing, budgeting—let’s talk about
-                                    it!
-                                </p>
-                            </div>
-                        </div>
-                        <div class="interest-card">
-                            <div class="content-wrapper">
-                                <img class="interest-card-graphic" src="assets/svg/home/music.svg"
-                                    alt="" />
-                                <p class="headline">Music instruments</p>
-                                <p class="body">
-                                    I’ve been playing the piano since I was 3 and the viola since I
-                                    was 12. I dabble in guitar and ukulele (kinda). Believe it or
-                                    not, my Asian parents did not make me learn—I begged for private
-                                    lessons.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="interest-card">
-                            <div class="content-wrapper">
-                                <img class="interest-card-graphic" src="assets/svg/home/camera.svg"
-                                    alt="" />
-                                <p class="headline">Photography</p>
-                                <p class="body">
-                                    After inheriting my dad’s Canon 400D and camcorder at 13, I
-                                    began pursuing photography and filmmaking. I currently own a
-                                    Sony A7III!
-                                </p>
-                                <a class="hide" href="www.google.com">Check out some of my
-                                    work!</a>
-                            </div>
-                        </div>
-                        <div class="interest-card">
-                            <div class="content-wrapper">
-                                <img class="interest-card-graphic"
-                                    src="assets/svg/home/social-justice.svg" alt="" />
-                                <p class="headline">Social justice</p>
-                                <p class="body">
-                                    During college, I specialized in exploring race and gender
-                                    inequality, so I’m passionate about addressing issues among
-                                    marginalized and disadvantaged demographics.
-                                    <a class="hide" href="www.google.com">Read my senior thesis!</a>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section id="hmu-swiper">
-                <div class="wrapper">
-                    <h2>Hit me up about</h2>
-                    <div id="hmu-swiper" class="swiper hmuSwiper">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <div class="content-wrapper">
-                                    <img class="interest-card-graphic"
-                                        src="assets/svg/home/comedy.svg" alt="" />
-                                    <p class="headline">Standup comedy</p>
-                                    <p class="body">
-                                        I love standup! Most of my Netflix recommendations are
-                                        standup
-                                        specials, and I also enjoy watching comedy shows in person.
-                                        My
-                                        favorite comedians include Mae Martin, Hannah Gadsby, Neal
-                                        Brennan, Atsuko Okatsuka,
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="content-wrapper">
-                                    <img class="interest-card-graphic"
-                                        src="assets/svg/home/comedy.svg" alt="" />
-                                    <p class="headline">Taiwanese food and culture</p>
-                                    <p class="body">
-                                        Fun fact: I was born and raised in Taipei, Taiwan until I
-                                        was
-                                        9 years old! I love eating and cooking Taiwanese food. Hit
-                                        me
-                                        up and let me convince you to put Taiwan on your travel
-                                        bucket
-                                        list!
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="content-wrapper">
-                                    <img class="interest-card-graphic"
-                                        src="assets/svg/home/comedy.svg" alt="" />
-                                    <p class="headline">Financial wellness</p>
-                                    <p class="body">
-                                        During college, I spent two years building two programs that
-                                        promote financial wellness for students. I created and led
-                                        many workshops, such as credit, investing, budgeting—let’s
-                                        talk about it!
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="content-wrapper">
-                                    <img class="interest-card-graphic"
-                                        src="assets/svg/home/comedy.svg" alt="" />
-                                    <p class="headline">Playing viola and more...</p>
-                                    <p class="body">
-                                        I’ve been playing the piano since I was 3 years old and the
-                                        viola since I was 12! I also dabble in guitar and ukulele
-                                        (kinda). Believe it or not, my Asian parents did not make me
-                                        learn—I had to beg for private lessons.
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="content-wrapper">
-                                    <img class="interest-card-graphic"
-                                        src="assets/svg/home/comedy.svg" alt="" />
-                                    <p class="headline">Photography and film</p>
-                                    <p class="body">
-                                        I love standup! Most of my Netflix recommendations are
-                                        standup
-                                        specials, and I also enjoy watching comedy shows in person.
-                                        My
-                                        favorite comedians include Mae Martin, Hannah Gadsby, Neal
-                                        Brennan, Atsuko Okatsuka,
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="content-wrapper">
-                                    <img class="interest-card-graphic"
-                                        src="assets/svg/home/comedy.svg" alt="" />
-                                    <p class="headline">Social justice</p>
-                                    <p class="body">
-                                        During college, I specialized in exploring race and gender
-                                        inequality, so I’m passionate about addressing issues among
-                                        marginalized and disadvantaged demographics.
-                                        <a href="www.google.com">Read my senior thesis!</a>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <button id="resetSwiper">
-                        <span class="material-symbols-outlined"> restart_alt </span>Reset
-                    </button>
-                </div>
-            </section>
         </div>
     </main>
     <footer>
@@ -1077,9 +377,9 @@
         <div class="footer-wrapper">
             <div>
                 <p id="yoursTruly">👩🏻‍💻 Designed and coded with love by yours truly.</p>
-                <p id="copyright-text">© 2024 Michelle Hu. All rights reserved.</p>
+                <p id="copyright-text">© 2024</p>
             </div>
-            <div class="footer-cta-buttons">
+            <div class="footer-cta-buttons hide">
                 <button id="scrollToProjects-2" class="btn-primary scroll-button">See my
                     work</button>
                 <button class="btn-secondary">View my resume</button>
@@ -1096,6 +396,11 @@
     <script>
         document.getElementById('scrollToProjects-2').addEventListener('click', function () {
             document.getElementById('projects').scrollIntoView({ behavior: 'smooth' });
+        });
+    </script>
+    <script>
+        document.getElementById('scrollToAbout').addEventListener('click', function () {
+            document.getElementById('about').scrollIntoView({ behavior: 'smooth' });
         });
     </script>
     <!-- <script src="/public/js/navBar.js"></script>

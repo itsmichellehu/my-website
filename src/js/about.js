@@ -1,6 +1,7 @@
-import '../scss/index.scss';
+import '../scss/about.scss';
 
 // import '../components/NavBar/NavBar';
+import '../components/FaqAccordion/FaqAccordion';
+import '../components/ToolboxSwiper/ToolboxSwiper';
 import '../components/Scrollable/scrollable';
-import '../components/HoverPlayGif/HoverPlayGif';
 import '../components/ScrollButton/scroll-button';

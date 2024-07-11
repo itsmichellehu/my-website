@@ -25,7 +25,7 @@
 	&-postup-video {
 		display: flex;
 		margin: auto auto 0 auto;
-		width: 60%;
+		width: 50%;
 		max-width: 15rem;
 	}
 
@@ -62,13 +62,13 @@
 	}
 
 	@include breakpoint(lg) {
-		height: 55vh;
+		height: calc(55vh - 2.5rem);
 		padding-top: 4rem;
 		max-height: none;
 
 		&-postup-video {
 			height: auto;
-			max-width: 18rem;
+			max-width: 16rem;
 			transform: translateY(5rem);
 		}
 

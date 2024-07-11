@@ -8,27 +8,27 @@ $primary-color: #1e1e1e;
 
 @import "../components/global-components";
 
-@import "../components/home-components";
+@import "../components/about-components";
 
-@import "index/all-index";
+@import "about/all-about";
 
-.navbar-wrapper,
-.footer-wrapper,
-.hero-wrapper,
-.projects-wrapper,
+.footer-wrapper {
+	max-width: 88rem;
+}
+
 .about_wrapper,
 .toolbox_section-wrapper,
 .faqs-wrapper,
 .interests-wrapper {
-	max-width: 88rem;
+	max-width: 68rem;
 }
 
-main {
+#main-wrapper {
 	margin-top: 45vh;
 	overflow: hidden;
 
 	@include breakpoint(med) {
-		margin-top: 6rem;
+		margin-top: 5rem;
 	}
 }
 

@@ -173,7 +173,7 @@
 
 	@include breakpoint(med) {
 		padding-top: 3rem;
-		height: 45vh;
+		height: calc(45vh - 2.5rem);
 		max-height: 26rem;
 
 		&__content-wrapper {
@@ -252,8 +252,8 @@
 
 @include breakpoint(lg) {
 	.overview {
-		height: 45vh;
-		padding-top: 5rem;
+		height: calc(45vh - 2.5rem);
+		padding-top: 3rem;
 		max-height: none;
 
 		&__content-wrapper {
