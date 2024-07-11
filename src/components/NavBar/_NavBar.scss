@@ -44,6 +44,7 @@ nav {
 }
 
 .nav-item {
+	li,
 	a {
 		color: $dark-grey;
 		text-transform: uppercase;
@@ -81,7 +82,12 @@ nav {
 // }
 @include breakpoint(med) {
 	nav {
-		height: 4rem;
+		height: 5rem;
+	}
+
+	.navbar-logo img {
+		width: 2.25rem;
+		height: 2.25rem;
 	}
 
 	.navbar-wrapper {

@@ -12,6 +12,26 @@ $primary-color: #1e1e1e;
 
 @import "index/all-index";
 
+.navbar-wrapper,
+.footer-wrapper,
+.hero-wrapper,
+.projects-wrapper,
+.about_wrapper,
+.toolbox_section-wrapper,
+.faqs-wrapper,
+.interests-wrapper {
+	max-width: 88rem;
+}
+
+#main-wrapper {
+	margin-top: 45vh;
+	overflow: hidden;
+
+	@include breakpoint(med) {
+		margin-top: 6rem;
+	}
+}
+
 main > .wrapper > section {
 	width: 100vw;
 }
