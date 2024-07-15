@@ -52,16 +52,16 @@ $button-focused-color: #3c6cc4;
 			border: 1.5px solid $primary-color;
 			color: $primary-color;
 		}
-// 
-// 		&:hover:active {
-// 			transition: border 0.3s, color 0.3s;
-// 		}
-//
-// 		&:active:focus {
-// 			border-color: $button-focused-color;
-// 			color: $button-focused-color;
-// 			transition: border 0.3s, color 0.3s;
-// 		}
+
+		&:hover:active {
+			transition: border 0.3s, color 0.3s;
+		}
+
+		&:active:focus {
+			border-color: $button-focused-color;
+			color: $button-focused-color;
+			transition: border 0.3s, color 0.3s;
+		}
 	}
 }
 
