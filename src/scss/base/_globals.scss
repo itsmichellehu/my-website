@@ -32,10 +32,14 @@ body {
 *::-webkit-scrollbar {
 	display: none; /* Safari and Chrome */
 }
+
 main {
-	display: block;
-	background: white;
-	margin-top: 5rem;
+	margin-top: 3rem;
+	overflow: hidden;
+
+	@include breakpoint(med) {
+		margin-top: 5rem;
+	}
 }
 
 article,

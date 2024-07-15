@@ -19,15 +19,6 @@ $primary-color: #1e1e1e;
 	max-width: 88rem;
 }
 
-main {
-	margin-top: 45vh;
-	overflow: hidden;
-
-	@include breakpoint(med) {
-		margin-top: 6rem;
-	}
-}
-
 main > .wrapper > section {
 	width: 100vw;
 }
