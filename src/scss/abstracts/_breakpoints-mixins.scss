@@ -5,9 +5,11 @@ $breakpoints: (
 	mobile-lg: 425px,
 	sm: 576px,
 	med: 768px,
+	med-lg: 834px,
 	lg: 992px,
 	xl: 1200px,
-	xxl: 1400px,
+	xxl: 1440px,
+	xxl-hero: 1480px,
 );
 
 @mixin breakpoint($name) {

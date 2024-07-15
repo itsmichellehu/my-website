@@ -1,15 +1,18 @@
+$button-focused-color: #3c6cc4;
+
 .btn-primary,
 .btn-secondary {
 	display: flex;
-	height: 3rem;
-	padding: 0.625rem 1.25rem;
-	gap: 1rem;
+	height: 2.5rem;
+	padding: 0.5rem 1rem;
 	border-radius: 1.5625rem; // Note: You might want to ensure this matches the .btn styles if intended
 	text-align: center;
 	cursor: pointer;
 	background-color: transparent;
 	align-items: center;
 	justify-content: center;
+	border: none;
+	overflow: hidden;
 
 	p {
 		margin-bottom: 0;
@@ -17,38 +20,65 @@
 }
 
 .btn {
+	font-weight: 500;
+
 	&-primary {
-		font-weight: 600;
-		border: 1.5px solid $black;
-		background-color: #000; // Assuming $black is defined elsewhere in your styles
+		box-sizing: border-box;
+		background-color: $black; // Assuming $black is defined elsewhere in your styles
 		color: $white;
 		transition: background-color 0.3s, color 0.3s;
-		/* Add transition properties */
 
 		&:hover {
 			box-sizing: border-box;
-			border: 1.5px solid $black;
-			color: $black;
-			background-color: #fff;
+			background-color: $primary-color;
 		}
 
 		&:hover:active {
 			transition: background-color 0.3s, color 0.3s;
 		}
+
+		&:active:focus {
+			background-color: $button-focused-color;
+			transition: background-color 0.3s, color 0.3s;
+		}
 	}
 
 	&-secondary {
-		font-weight: 600;
 		border: 1.5px solid $black;
-		transition: background-color 0.3s, color 0.3s;
+		transition: border 0.3s, color 0.3s;
 
 		&:hover {
-			border: 1.5px solid $dark-grey;
-			color: $dark-grey;
+			border: 1.5px solid $primary-color;
+			color: $primary-color;
 		}
 
 		&:hover:active {
-			transition: color 0.3s;
+			transition: border 0.3s, color 0.3s;
 		}
+
+		&:active:focus {
+			border-color: $button-focused-color;
+			color: $button-focused-color;
+			transition: border 0.3s, color 0.3s;
+		}
+	}
+}
+
+@include breakpoint(lg) {
+	.btn-primary,
+	.btn-secondary {
+		height: 3rem;
+		padding: 0.625rem 1.25rem;
+		font-size: 1.25rem;
+	}
+}
+
+@include breakpoint(xl) {
+	.btn-primary,
+	.btn-secondary {
+		height: 3.5rem;
+		border-radius: 5rem;
+		padding: 0.625rem 1.25rem;
+		font-size: 1.25rem;
 	}
 }

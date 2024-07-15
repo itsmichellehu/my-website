@@ -38,6 +38,10 @@ main {
 	overflow: hidden;
 
 	@include breakpoint(med) {
+		margin-top: 4rem;
+	}
+
+	@include breakpoint(xl) {
 		margin-top: 5rem;
 	}
 }
