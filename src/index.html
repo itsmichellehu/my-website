@@ -20,12 +20,12 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>document.addEventListener('DOMContentLoaded', function () {
             const gifs = document.querySelectorAll('.project-gif'); // Select all GIFs
-            const staticImgs = document.querySelectorAll('.project-static-img'); // Select all static images
+            const staticImgs = document.querySelectorAll('.'); // Select all static images
 
             // Function to play the GIF
             window.playGif = function (element) {
                 const gif = element.querySelector('.project-gif');
-                const staticImg = element.querySelector('.project-static-img');
+                const staticImg = element.querySelector('.');
                 const originalGifSrc = gif.src; // Store the original GIF source if not already stored
 
                 gif.style.display = 'block'; // Show the GIF
@@ -37,7 +37,7 @@
             // Function to reset the GIF
             window.resetGif = function (element) {
                 const gif = element.querySelector('.project-gif');
-                const staticImg = element.querySelector('.project-static-img');
+                const staticImg = element.querySelector('.');
                 const originalGifSrc = gif.src;
 
                 gif.style.display = 'none'; // Hide the GIF
@@ -62,13 +62,13 @@
             });
 
             // Observe all GIF wrappers
-            document.querySelectorAll('.project-gif-wrapper').forEach(wrapper => {
+            document.querySelectorAll('.project-thumb-container').forEach(wrapper => {
                 observer.observe(wrapper);
             });
 
             // Handle window resize events
             window.addEventListener('resize', function () {
-                document.querySelectorAll('.project-gif-wrapper').forEach(wrapper => {
+                document.querySelectorAll('.project-thumb-container').forEach(wrapper => {
                     if (window.innerWidth < 768) {
                         observer.observe(wrapper);
                     } else {
@@ -140,7 +140,8 @@
                                     <button class="btn-secondary">View my resume</button>
                                 </div>
                                 <div class="icon-buttons-wrapper">
-                                    <a href="mailto:mhu.contact@gmail.com" class="icon-button" target="_blank">
+                                    <a href="mailto:mhu.contact@gmail.com" class="icon-button"
+                                        target="_blank">
                                         <img src="assets/images/ic-email.png"
                                             alt="White email icon">
                                     </a>
@@ -160,26 +161,25 @@
                     <h2 class="section-heading hide">Product<br />design projects</h2>
                     <div class="project-card hide mb-0">
                         <p class="number-label">01</p>
-                        <div class="project-gif-wrapper" onmouseenter="playGif(this)"
+                        <div class="project-thumb-container" onmouseenter="playGif(this)"
                             onmouseleave="resetGif(this)">
-                            <div class="project-gif-container" id="postupBG">
+                            <div class="project-thumb-wrapper" id="postupBG">
                                 <img src="assets/images/thumbs/thumb-boardspace.png"
-                                    alt="Static Image"
-                                    class="thumb-boardspace project-static-img" />
+                                    alt="Static Image" class="thumb-boardspace " />
                                 <img src="assets/images/thumbs/thumb-boardspace.gif" alt="Your GIF"
                                     class="project-gif" />
                             </div>
                         </div>
-                        <div class="project-details">
-                            <div class="text-wrapper">
-                                <p class="subheader-project">boardspace atomic design system</p>
+                        <div class="project-details-container">
+                            <div class="project-details-wrapper">
+                                <p class="project-subheader">boardspace atomic design system</p>
                                 <h3>Bridging the gap between designers and developers</h3>
                                 <p class="project-description">
                                     Optimizing design to development workflows with an atomic design
                                     system.
                                 </p>
                             </div>
-                            <div id="boardspaceTags" class="tags-wrapper scrollable">
+                            <div id="boardspaceTags" class="project-tags-wrapper scrollable">
                                 <div class="project-tag">tag</div>
                                 <div class="project-tag">tag</div>
                                 <div class="project-tag">tag</div>
@@ -191,20 +191,19 @@
                     <div class="project-card">
                         <p class="number-label">01</p>
                         <a href="tastebuds" class="project-link">
-                            <div class="project-gif-wrapper pt-0" onmouseenter="playGif(this)"
+                            <div class="project-thumb-container pb-0" onmouseenter="playGif(this)"
                                 onmouseleave="resetGif(this)">
-                                <div class="project-gif-container mb-0">
+                                <div class="project-thumb-wrapper mb-0">
                                     <img src="assets/images/tastebuds/hero-image.png"
-                                        alt="Static Image"
-                                        class="thumb-tastebuds project-static-img" />
+                                        alt="Static Image" class="thumb-tastebuds " />
                                     <img src="assets/images/tastebuds/hero-image.png" alt="Your GIF"
-                                        class="thumb-tastebuds project-gif" />
+                                        class="thumb-tastebuds project-gif hide" />
                                 </div>
                             </div>
                         </a>
-                        <div class="project-details">
-                            <div class="text-wrapper">
-                                <p class="subheader-project">tastebuds</p>
+                        <div class="project-details-container">
+                            <div class="project-details-wrapper">
+                                <p class="project-subheader">tastebuds</p>
                                 <h3>
                                     Helping diners discover dining options with tastebuds they
                                     trust.
@@ -215,7 +214,7 @@
                                     that uses AI and machine-learning to deliver personalized
                                     recommendations.</p>
                             </div>
-                            <div class="tags-wrapper scrollable">
+                            <div class="project-tags-wrapper scrollable">
                                 <div class="tastebuds-tag project-tag">product design</div>
                                 <div class="tastebuds-tag project-tag">interaction design</div>
                                 <div class="tastebuds-tag project-tag">monetization strategy</div>
@@ -226,9 +225,9 @@
                     <div class="project-card mb-0">
                         <p class="number-label">02</p>
                         <a href="postup" class="project-link">
-                            <div class="project-gif-wrapper" onmouseenter="playGif(this)"
-                                onmouseleave="resetGif(this)">
-                                <div class="project-gif-container" id="postupBG">
+                            <div class="project-thumb-container"
+                                onmouseenter="playGif(this)" onmouseleave="resetGif(this)">
+                                <div class="project-thumb-wrapper" id="postupBG">
                                     <img src="assets/images/thumbs/thumb-postup.png"
                                         alt="Static Image"
                                         class="thumb-postup project-static-img" />
@@ -237,16 +236,16 @@
                                 </div>
                             </div>
                         </a>
-                        <div class="project-details">
-                            <div class="text-wrapper">
-                                <p class="subheader-project">Postup</p>
+                        <div class="project-details-container">
+                            <div class="project-details-wrapper">
+                                <p class="project-subheader">Postup</p>
                                 <h3>Connecting remote workers to ideal public workspaces</h3>
                                 <p class="project-description">
                                     Designing a subscription-based mobile-app that converts existing
                                     users and drives revenue growth in a 7-day sprint.
                                 </p>
                             </div>
-                            <div class="tags-wrapper scrollable">
+                            <div class="project-tags-wrapper scrollable">
                                 <div class="postup-tag project-tag">product design</div>
                                 <div class="postup-tag project-tag">monetization strategy</div>
                                 <div class="postup-tag project-tag">interaction design</div>

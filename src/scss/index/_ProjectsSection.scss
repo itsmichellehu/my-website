@@ -2,15 +2,16 @@
 .projects-wrapper {
 	display: block;
 	width: 90vw;
-	margin: auto;
-
-	// :last-child {
-	// 	margin-bottom: 0;
-	// }
+	margin: 1.75rem auto;
 }
 
-.project-link {
-	margin: 0;
+.number-label {
+	color: #a0a0a0;
+	font-family: Inter;
+	font-size: 2.44rem;
+	font-weight: 500;
+	line-height: 80%;
+	margin-bottom: 1.5rem;
 }
 
 .project-card {
@@ -21,31 +22,24 @@
 	margin-bottom: 2rem;
 }
 
-.number-label {
-	color: #a0a0a0;
-	font-family: Inter;
-	font-size: 2.44rem;
-	font-style: normal;
-	font-weight: 500;
-	line-height: 80%; /* 4.2rem */
-	margin-bottom: 1.5rem;
+.project-link {
+	margin: 0;
 }
 
-.project-gif-wrapper {
-	text-align: center; /* Center the content horizontally */
+.project-thumb-container {
 	display: flex;
-	width: 100%;
-	aspect-ratio: 5 / 4;
-	max-height: 31.25rem;
-	padding-top: 2.5rem;
 	justify-content: center;
 	align-items: center;
-	overflow: hidden;
 	margin: auto;
+	padding-top: 2.5rem;
+	max-height: 31.25rem;
+	aspect-ratio: 5 / 4;
 	border-radius: 3px;
+	text-align: center;
 	background-color: #f6f6f6;
 	cursor: pointer;
-	transition: opacity 0.25s, transform 0.25s; /* Add transition properties */
+	transition: opacity 0.25s, transform 0.25s;
+	width: 100vw;
 
 	&:hover {
 		opacity: 0.75;
@@ -62,110 +56,116 @@
 	}
 }
 
-.project-gif-container {
-	display: block; /* Allow the container to take only the width of its content */
+.project-thumb-wrapper {
+	display: flex;
+	flex-direction: column;
 	position: relative;
-	width: 65%;
-	height: auto;
 	overflow: hidden;
 	margin: auto;
-	// margin-bottom: 0;
+	height: 100%;
+	align-items: center;
+	justify-content: flex-start;
 }
 
 .project-gif {
-	width: 80%;
-	height: auto;
-	display: none; /* Initially hide the GIF */
+	width: 50%;
+	display: flex;
 	margin: auto;
 }
 
 .project-static-img {
-	width: 80%;
+	width: 50%;
 	margin: auto;
-
-	&#boardspace-img {
-		width: 10rem;
-	}
 }
 
-.project-details {
+.thumb-tastebuds {
+	margin-top: auto;
+	width: 80%;
+}
+
+.thumb-postup {
+	width: 40%;
+}
+
+.thumb-boardspace {
+	max-width: 10rem;
+}
+
+.project-details-container {
 	display: block;
-	padding: 1.5rem 0rem;
+	padding: 1.5rem 0;
 	width: 100%;
-
-	.text-wrapper {
-		display: block;
-		margin-bottom: 1rem;
-	}
-
-	.subheader-project {
-		color: $medium-grey;
-		font-family: "IBM Plex Mono";
-		font-size: 1rem;
-		font-style: normal;
-		font-weight: 500;
-		line-height: normal;
-		letter-spacing: 0.05rem;
-		text-transform: uppercase;
-		margin-bottom: 0.5rem;
-	}
 
 	h3 {
 		color: #000;
 		font-family: Inter;
 		font-size: 1.5rem;
-		font-style: normal;
 		font-weight: 600;
-		line-height: 121%; /* 1.815rem */
+		line-height: 121%;
 		letter-spacing: -0.01rem;
 		margin-bottom: 0.5rem;
 	}
+}
 
-	.project-description {
-		color: $dark-grey;
-		font-family: Inter;
-		font-size: 1rem;
-		font-style: normal;
-		font-weight: 500;
-		line-height: 135%; /* 1.35rem */
-	}
+.project-details-wrapper {
+	display: block;
+	margin-bottom: 1rem;
+}
 
-	.tags-wrapper {
-		display: flex;
-		flex-direction: row;
-		gap: 0.5rem;
-		overflow-x: auto; // Enables horizontal scrolling
-		white-space: nowrap;
-		cursor: pointer;
+.project-subheader {
+	color: $medium-grey;
+	font-family: "IBM Plex Mono";
+	font-size: 1rem;
+	font-weight: 500;
+	letter-spacing: 0.05rem;
+	text-transform: uppercase;
+	margin-bottom: 0.5rem;
+}
 
-		.project-tag {
-			display: flex;
-			height: 2rem;
-			padding: 0rem 0.5rem;
-			flex-direction: column;
-			justify-content: center;
-			align-items: flex-start;
-			gap: 0.5rem;
-			font-size: 0.875rem;
-			font-style: normal;
-			font-weight: 500;
-			line-height: 150%; /* 1.3125rem */
-			border-radius: 0.3125rem;
-			background: rgba(219, 219, 219, 0.5);
-		}
+.project-description {
+	color: $dark-grey;
+	font-family: Inter;
+	font-size: 1rem;
+	font-weight: 500;
+	line-height: 135%;
+}
 
-		&#boardspaceTags {
-			.project-tag {
-				background: #daede9;
-				color: #388e7d;
-			}
-		}
+.project-tags-wrapper {
+	display: flex;
+	flex-direction: row;
+	gap: 0.5rem;
+	overflow-x: auto;
+	white-space: nowrap;
+	cursor: pointer;
+}
 
-		&#tastebudsTags {
-			background: #daede9;
-			color: #388e7d;
-		}
-	}
+.project-tag {
+	display: flex;
+	height: 2rem;
+	padding: 0 0.5rem;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+	gap: 0.5rem;
+	font-size: 0.875rem;
+	font-weight: 500;
+	line-height: 150%;
+	border-radius: 0.3125rem;
+}
+
+.boardspace-tag {
+	background: #d6e8ff;
+	color: #5488ca;
+}
+
+.tastebuds-tag {
+	background: #fbe6bb;
+	color: #e69800;
+}
+
+.postup-tag {
+	background: #daede9;
+	color: #4c9a8a;
 }
 
 @include breakpoint(med) {
@@ -190,7 +190,7 @@
 		color: #a0a0a0;
 	}
 
-	.project-gif-wrapper {
+	.project-thumb-container {
 		grid-area: b;
 		padding: 0;
 	}
@@ -199,6 +199,10 @@
 	.project-gif.thumb-boardspace {
 		width: 100%;
 		max-width: 100rem;
+	}
+
+	.project-gif {
+		display: none;
 	}
 
 	.thumb-postup {
@@ -212,70 +216,27 @@
 		max-width: 33rem;
 	}
 
-	.project-details {
+	.project-details-container {
 		grid-area: c;
 		padding: 0;
-
-		.text-wrapper {
-			display: block;
-			margin-bottom: 1.25rem;
-		}
-
-		.subheader-project {
-			font-size: 1.25rem;
-			margin-bottom: 1rem;
-		}
 
 		h3 {
 			font-size: 2.125rem;
 			letter-spacing: -0.0425rem;
 			margin-bottom: 1rem;
 		}
-
-		.project-description {
-			font-size: 1.25rem;
-		}
-
-		.tags-wrapper {
-			display: flex;
-			flex-direction: row;
-			gap: 0.5rem;
-			overflow-x: auto; // Enables horizontal scrolling
-			white-space: nowrap;
-			cursor: pointer;
-
-			.project-tag {
-				display: flex;
-				height: 2rem;
-				padding: 0rem 0.5rem;
-				flex-direction: column;
-				justify-content: center;
-				align-items: flex-start;
-				gap: 0.5rem;
-				font-size: 0.875rem;
-				background: rgba(219, 219, 219, 0.5);
-			}
-
-			.boardspace-tag {
-				background: #d6e8ff;
-				color: #5488ca;
-			}
-
-			.tastebuds-tag {
-				background: #fbe6bb;
-				color: #e69800;
-			}
-
-			.postup-tag {
-				background: #daede9;
-				color: #4c9a8a;
-			}
-		}
 	}
-// 
-// 	.img-postup,
-// 	.postup-gif {
-// 		width: 40%;
-// 		margin-top: 1.5rem;
-// 	}
+
+	.project-details-wrapper {
+		margin-bottom: 1.25rem;
+	}
+
+	.project-subheader {
+		font-size: 1.25rem;
+		margin-bottom: 1rem;
+	}
+
+	.project-description {
+		font-size: 1.25rem;
+	}
 }
