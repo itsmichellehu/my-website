@@ -46,6 +46,7 @@ $button-focused-color: #3c6cc4;
 	&-secondary {
 		border: 1.5px solid $black;
 		transition: border 0.3s, color 0.3s;
+		color: $black;
 
 		&:hover {
 			border: 1.5px solid $primary-color;
