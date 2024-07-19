@@ -5,15 +5,6 @@
 	margin: 1.75rem auto;
 }
 
-.number-label {
-	color: #a0a0a0;
-	font-family: Inter;
-	font-size: 2.44rem;
-	font-weight: 500;
-	line-height: 80%;
-	margin-bottom: 1.5rem;
-}
-
 .project-card {
 	display: flex;
 	flex-direction: column;
@@ -24,6 +15,15 @@
 
 .project-link {
 	margin: 0;
+}
+
+.number-label {
+	color: #a0a0a0;
+	font-family: Inter;
+	font-size: 2.44rem;
+	font-weight: 500;
+	line-height: 80%;
+	margin-bottom: 1.5rem;
 }
 
 .project-thumb-container {
@@ -64,6 +64,7 @@
 	height: 100%;
 	align-items: center;
 	justify-content: flex-start;
+	width: 100vw;
 }
 
 .project-static-img {
@@ -91,7 +92,8 @@
 }
 
 .project-details-container {
-	display: block;
+	display: flex;
+	flex-direction: column;
 	padding: 1.5rem 0;
 	width: 100%;
 
@@ -167,8 +169,8 @@
 }
 
 @include breakpoint(med) {
-	.projects {
-		padding: 5rem 0;
+	.projects-wrapper {
+		margin: 5rem auto;
 	}
 
 	.project-card {
@@ -180,6 +182,7 @@
 		row-gap: 1.5rem;
 		margin-bottom: 5rem;
 		align-items: start;
+		overflow: hidden;
 	}
 
 	.number-label {
@@ -240,7 +243,7 @@
 	}
 }
 
-@include breakpoint(lg) {
+@include breakpoint(xl) {
 	.thumb-tastebuds {
 		max-height: 30rem;
 	}
