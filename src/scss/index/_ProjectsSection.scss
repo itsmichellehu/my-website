@@ -31,7 +31,6 @@
 	justify-content: center;
 	align-items: center;
 	margin: auto;
-	padding-top: 2.5rem;
 	max-height: 31.25rem;
 	aspect-ratio: 5 / 4;
 	border-radius: 3px;
@@ -67,28 +66,28 @@
 	justify-content: flex-start;
 }
 
+.project-static-img {
+	display: none;
+	margin: auto;
+}
+
 .project-gif {
-	width: 50%;
 	display: flex;
 	margin: auto;
 }
 
-.project-static-img {
-	width: 50%;
-	margin: auto;
-}
-
-.thumb-tastebuds {
-	margin-top: auto;
-	width: 80%;
-}
-
+.thumb-tastebuds,
 .thumb-postup {
-	width: 40%;
+	height: 85%;
+	width: fit-content;
 }
 
 .thumb-boardspace {
 	max-width: 10rem;
+}
+
+.thumb-tastebuds {
+	margin-top: auto;
 }
 
 .project-details-container {
@@ -102,7 +101,6 @@
 		font-size: 1.5rem;
 		font-weight: 600;
 		line-height: 121%;
-		letter-spacing: -0.01rem;
 		margin-bottom: 0.5rem;
 	}
 }
@@ -202,19 +200,19 @@
 		max-width: 100rem;
 	}
 
+	.project-static-img {
+		display: flex;
+	}
+
 	.project-gif {
 		display: none;
 	}
 
+	.thumb-tastebuds,
 	.thumb-postup {
-		margin: auto;
-		width: 70%;
-		max-width: 13rem;
-	}
-
-	.thumb-tastebuds {
-		width: 100%;
-		max-width: 33rem;
+		height: 85%;
+		max-height: 23rem;
+		width: fit-content;
 	}
 
 	.project-details-container {
@@ -239,5 +237,15 @@
 
 	.project-description {
 		font-size: 1.25rem;
+	}
+}
+
+@include breakpoint(lg) {
+	.thumb-tastebuds {
+		max-height: 30rem;
+	}
+
+	.thumb-postup {
+		max-height: 30rem;
 	}
 }
