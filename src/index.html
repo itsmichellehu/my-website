@@ -20,30 +20,40 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>document.addEventListener('DOMContentLoaded', function () {
             const gifs = document.querySelectorAll('.project-gif'); // Select all GIFs
-            const staticImgs = document.querySelectorAll('.'); // Select all static images
+            const staticImgs = document.querySelectorAll('.project-static-img'); // Select all static images
 
             // Function to play the GIF
             window.playGif = function (element) {
                 const gif = element.querySelector('.project-gif');
-                const staticImg = element.querySelector('.');
-                const originalGifSrc = gif.src; // Store the original GIF source if not already stored
+                const staticImg = element.querySelector('.project-static-img');
 
-                gif.style.display = 'block'; // Show the GIF
-                staticImg.style.display = 'none'; // Hide the static image
-                gif.src = ''; // Force restart of GIF
-                gif.src = originalGifSrc; // Restart the GIF by resetting the source
+                if (gif && staticImg) {
+                    const originalGifSrc = gif.src; // Store the original GIF source if not already stored
+
+                    gif.style.display = 'block'; // Show the GIF
+                    staticImg.style.display = 'none'; // Hide the static image
+                    gif.src = ''; // Force restart of GIF
+                    gif.src = originalGifSrc; // Restart the GIF by resetting the source
+                } else {
+                    console.error('GIF or static image not found within:', element);
+                }
             };
 
             // Function to reset the GIF
             window.resetGif = function (element) {
                 const gif = element.querySelector('.project-gif');
-                const staticImg = element.querySelector('.');
-                const originalGifSrc = gif.src;
+                const staticImg = element.querySelector('.project-static-img');
 
-                gif.style.display = 'none'; // Hide the GIF
-                staticImg.style.display = 'block'; // Show the static image
-                gif.src = ''; // Resetting the src attribute helps stop the GIF
-                gif.src = originalGifSrc; // Reassign the original GIF source
+                if (gif && staticImg) {
+                    const originalGifSrc = gif.src;
+
+                    gif.style.display = 'none'; // Hide the GIF
+                    staticImg.style.display = 'block'; // Show the static image
+                    gif.src = ''; // Resetting the src attribute helps stop the GIF
+                    gif.src = originalGifSrc; // Reassign the original GIF source
+                } else {
+                    console.error('GIF or static image not found within:', element);
+                }
             };
 
             // IntersectionObserver to auto-play GIF on smaller screens
@@ -62,13 +72,79 @@
             });
 
             // Observe all GIF wrappers
-            document.querySelectorAll('.project-thumb-container').forEach(wrapper => {
+            document.querySelectorAll('.project-thumb-wrapper').forEach(wrapper => {
                 observer.observe(wrapper);
             });
 
             // Handle window resize events
             window.addEventListener('resize', function () {
-                document.querySelectorAll('.project-thumb-container').forEach(wrapper => {
+                document.querySelectorAll('.project-thumb-wrapper').forEach(wrapper => {
+                    if (window.innerWidth < 768) {
+                        observer.observe(wrapper);
+                    } else {
+                        observer.unobserve(wrapper);
+                    }
+                });
+            });
+        });
+    </script>
+    <script>document.addEventListener('DOMContentLoaded', function () {
+            const videos = document.querySelectorAll('.project-media'); // Select all elements with class .project-media, assuming they are MP4 videos
+            const staticImgs = document.querySelectorAll('.project-static-img'); // Select all static images
+
+            // Function to play the MP4 video
+            window.playMedia = function (element) {
+                const video = element.querySelector('.project-media');
+                const staticImg = element.querySelector('.project-static-img');
+
+                if (video && staticImg) {
+                    video.loop = true; // Ensure the video loops
+                    video.style.display = 'block'; // Show the video
+                    staticImg.style.display = 'none'; // Hide the static image
+                    video.play(); // Play the video
+                } else {
+                    console.error('Video or static image not found within:', element);
+                }
+            };
+
+            // Function to reset the MP4 video
+            window.resetMedia = function (element) {
+                const video = element.querySelector('.project-media');
+                const staticImg = element.querySelector('.project-static-img');
+
+                if (video && staticImg) {
+                    video.style.display = 'none'; // Hide the video
+                    staticImg.style.display = 'block'; // Show the static image
+                    video.pause(); // Pause the video
+                    video.currentTime = 0; // Reset the video to the beginning
+                } else {
+                    console.error('Video or static image not found within:', element);
+                }
+            };
+
+            // IntersectionObserver to auto-play video on smaller screens
+            function handleIntersection(entries, observer) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting && window.innerWidth < 768) {
+                        playMedia(entry.target);
+                    } else {
+                        resetMedia(entry.target);
+                    }
+                });
+            }
+
+            const observer = new IntersectionObserver(handleIntersection, {
+                threshold: 0.5 // Trigger when 50% of the element is in view
+            });
+
+            // Observe all video wrappers
+            document.querySelectorAll('.project-thumb-wrapper').forEach(wrapper => {
+                observer.observe(wrapper);
+            });
+
+            // Handle window resize events
+            window.addEventListener('resize', function () {
+                document.querySelectorAll('.project-thumb-wrapper').forEach(wrapper => {
                     if (window.innerWidth < 768) {
                         observer.observe(wrapper);
                     } else {
@@ -189,16 +265,16 @@
                             </div>
                         </div>
                     </div>
-                    <div class="project-card">
+                    <div class="project-card project-tastebuds">
                         <p class="number-label">01</p>
                         <a href="tastebuds" class="project-link">
-                            <div class="project-thumb-container pb-0" onmouseenter="playGif(this)"
-                                onmouseleave="resetGif(this)">
-                                <div class="project-thumb-wrapper mb-0">
-                                    <img src="assets/images/tastebuds/hero-image.png"
-                                        alt="Static Image" class="thumb-tastebuds " />
-                                    <img src="assets/images/tastebuds/hero-image.png" alt="Your GIF"
-                                        class="thumb-tastebuds project-gif hide" />
+                            <div class="project-thumb-container tastebuds-thumb-container"
+                                onmouseenter="playMedia(this)" onmouseleave="resetMedia(this)">
+                                <div class="project-thumb-wrapper">
+                                    <img src="assets/images/thumbs/thumb-tastebuds-combo.png" alt=""
+                                        class="project-static-img thumb-tastebuds">
+                                    <video src="assets/images/thumbs/thumb-tastebuds.mp4"
+                                        class="project-media thumb-tastebuds"></video>
                                 </div>
                             </div>
                         </a>
@@ -226,8 +302,8 @@
                     <div class="project-card mb-0">
                         <p class="number-label">02</p>
                         <a href="postup" class="project-link">
-                            <div class="project-thumb-container" onmouseenter="playGif(this)"
-                                onmouseleave="resetGif(this)">
+                            <div class="project-thumb-container postup-thumb-container"
+                                onmouseenter="playGif(this)" onmouseleave="resetGif(this)">
                                 <div class="project-thumb-wrapper" id="postupBG">
                                     <img src="assets/images/thumbs/thumb-postup.png"
                                         alt="Static Image"
