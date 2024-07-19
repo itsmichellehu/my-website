@@ -3,7 +3,7 @@
 #about {
 	.section-heading {
 		margin: auto;
-		margin-bottom: 2rem;
+		margin-bottom: 1rem;
 	}
 }
 
@@ -21,6 +21,7 @@
 	overflow: hidden; // Prevents any overflow (optional based on your design needs)
 	border-radius: 1px;
 	justify-content: center;
+	margin-bottom: 1.75rem;
 
 	img {
 		display: block; // Removes any space below the image
@@ -109,6 +110,7 @@
 		align-items: start;
 		width: fit-content;
 		max-width: 68rem;
+		margin-bottom: 2rem;
 	}
 
 	.about_portrait-wrapper {

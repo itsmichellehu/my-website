@@ -24,7 +24,6 @@ $primary-color: #1e1e1e;
 }
 
 #main-wrapper {
-	margin-top: 45vh;
 	overflow: hidden;
 
 	@include breakpoint(med) {
