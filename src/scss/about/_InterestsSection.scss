@@ -1,6 +1,6 @@
 #interests {
 	display: none;
-	background: #111111;
+	background: #fff;
 	padding-left: 0;
 	padding-right: 0;
 
@@ -49,7 +49,7 @@
 .interest-card {
 	display: flex;
 	max-width: 22rem;
-	padding: 0.75rem;
+	padding: 1.75rem;
 	flex-direction: column;
 	align-items: flex-start;
 	gap: 0.5rem;
@@ -102,6 +102,11 @@
 	}
 }
 
+.interest-card-graphic {
+	width: 5rem;
+	margin-bottom: 1rem;
+}
+
 @include breakpoint(med) {
 	.interest-grid-container {
 		grid-template-columns: repeat(3, 1fr);
@@ -116,7 +121,7 @@
 
 // New design!
 #hmu-swiper {
-	background-color: #000;
+	background-color: #1e1e1e;
 
 	@include breakpoint(med) {
 		display: none;
@@ -125,7 +130,7 @@
 	.wrapper {
 		margin: auto;
 		width: 90vw;
-		padding: 0;
+		padding: 3.625rem 0;
 		max-width: 34rem;
 
 		h2 {
