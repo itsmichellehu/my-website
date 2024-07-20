@@ -74,7 +74,12 @@
 	margin: auto;
 }
 
-.project-gif, .project-media {
+.project-media {
+	display: none;
+	margin: auto;
+}
+
+.project-media-mobile {
 	display: flex;
 	margin: auto;
 }
@@ -192,6 +197,18 @@
 		color: #a0a0a0;
 	}
 
+	.project-media {
+		display: flex;
+	}
+
+	.project-media-mobile {
+		display: none;
+	}
+
+	// .project-static-img {
+	// 	display: flex;
+	// }
+
 	.project-thumb-container {
 		grid-area: b;
 		width: 100%;
@@ -206,14 +223,6 @@
 	.project-media.thumb-boardspace {
 		width: 100%;
 		max-width: 100rem;
-	}
-
-	.project-static-img {
-		display: flex;
-	}
-
-	.project-gif, .project-media {
-		display: none;
 	}
 
 	.thumb-tastebuds,
@@ -245,6 +254,10 @@
 
 	.project-description {
 		font-size: 1.25rem;
+	}
+
+	.project-tags-wrapper {
+		cursor: default;
 	}
 }
 

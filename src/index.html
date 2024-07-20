@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <title>Michelle Hu</title>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script>document.addEventListener('DOMContentLoaded', function () {
+    <!-- <script>document.addEventListener('DOMContentLoaded', function () {
             const gifs = document.querySelectorAll('.project-gif'); // Select all GIFs
             const staticImgs = document.querySelectorAll('.project-static-img'); // Select all static images
 
@@ -87,21 +87,33 @@
                 });
             });
         });
-    </script>
-    <script>document.addEventListener('DOMContentLoaded', function () {
-            const videos = document.querySelectorAll('.project-media'); // Select all elements with class .project-media, assuming they are MP4 videos
-            const staticImgs = document.querySelectorAll('.project-static-img'); // Select all static images
-
+    </script> -->
+    <!-- <script>
+        document.addEventListener('DOMContentLoaded', function () {
             // Function to play the MP4 video
             window.playMedia = function (element) {
                 const video = element.querySelector('.project-media');
                 const staticImg = element.querySelector('.project-static-img');
 
                 if (video && staticImg) {
-                    video.loop = true; // Ensure the video loops
-                    video.style.display = 'block'; // Show the video
-                    staticImg.style.display = 'none'; // Hide the static image
-                    video.play(); // Play the video
+                    video.loop = true;
+                    video.style.display = 'block';
+                    staticImg.style.display = 'none';
+
+                    // Play the video on hover
+                    element.addEventListener('mouseenter', () => {
+                        video.play().catch(error => {
+                            console.error('Video playback failed:', error);
+                        });
+                    });
+
+                    // Pause and reset the video when hover ends
+                    element.addEventListener('mouseleave', () => {
+                        video.pause();
+                        video.currentTime = 0;
+                        video.style.display = 'none';
+                        staticImg.style.display = 'block';
+                    });
                 } else {
                     console.error('Video or static image not found within:', element);
                 }
@@ -149,7 +161,27 @@
                         observer.observe(wrapper);
                     } else {
                         observer.unobserve(wrapper);
+                        resetMedia(wrapper); // Reset media when unobserved on larger screens
                     }
+                });
+            });
+        });
+    </script> -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const containers = document.querySelectorAll('.project-thumb-container');
+
+            containers.forEach(container => {
+                const projectMedia = container.querySelector('.project-media');
+
+                container.addEventListener('mouseenter', () => {
+                    projectMedia.currentTime = 0; // Reset the video to the beginning
+                    projectMedia.play(); // Play the video
+                });
+
+                container.addEventListener('mouseleave', () => {
+                    projectMedia.pause(); // Pause the video
+                    projectMedia.currentTime = 0; // Reset the video to the beginning
                 });
             });
         });
@@ -236,7 +268,7 @@
             <section id="projects">
                 <div class="projects-wrapper">
                     <h2 class="section-heading hide">Product<br />design projects</h2>
-                    <div class="project-card hide mb-0">
+                    <!-- <div class="project-card hide mb-0">
                         <p class="number-label">01</p>
                         <div class="project-thumb-container" onmouseenter="playGif(this)"
                             onmouseleave="resetGif(this)">
@@ -264,17 +296,23 @@
                                 <div class="project-tag">tag</div>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                     <div class="project-card project-tastebuds">
                         <p class="number-label">01</p>
                         <a href="tastebuds" class="project-link">
-                            <div class="project-thumb-container tastebuds-thumb-container"
-                                onmouseenter="playMedia(this)" onmouseleave="resetMedia(this)">
-                                <div class="project-thumb-wrapper">
-                                    <img src="assets/images/thumbs/thumb-tastebuds-combo.png" alt=""
-                                        class="project-static-img thumb-tastebuds">
-                                    <video src="assets/images/thumbs/thumb-tastebuds.mp4"
-                                        class="project-media thumb-tastebuds"></video>
+                            <div class="project-thumb-container tastebuds-thumb-container">
+                                <div class="project-thumb-wrapper ">
+                                    <video class="project-media-mobile thumb-tastebuds" autoplay
+                                        loop muted>
+                                        <source src="assets/images/thumbs/thumb-tastebuds.mp4"
+                                            type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                    <video class="project-media thumb-tastebuds" loop muted>
+                                        <source src="assets/images/thumbs/thumb-tastebuds.mp4"
+                                            type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video>
                                 </div>
                             </div>
                         </a>
@@ -302,16 +340,22 @@
                     <div class="project-card mb-0">
                         <p class="number-label">02</p>
                         <a href="postup" class="project-link">
-                            <div class="project-thumb-container postup-thumb-container"
-                                onmouseenter="playGif(this)" onmouseleave="resetGif(this)">
-                                <div class="project-thumb-wrapper" id="postupBG">
-                                    <img src="assets/images/thumbs/thumb-postup.png"
-                                        alt="Static Image"
-                                        class="thumb-postup project-static-img" />
-                                    <img src="assets/images/thumbs/thumb-postup.gif" alt="Your GIF"
-                                        class="thumb-postup project-gif" />
+                            <div class="project-thumb-container postup-thumb-container">
+                                <div class="project-thumb-wrapper">
+                                    <video class="project-media-mobile thumb-postup" autoplay loop
+                                        muted>
+                                        <source src="assets/images/thumbs/thumb-postup.mp4"
+                                            type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                    <video class="project-media thumb-tastebuds" loop muted>
+                                        <source src="assets/images/thumbs/thumb-postup.mp4"
+                                            type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video>
                                 </div>
                             </div>
+                        </a>
                         </a>
                         <div class="project-details-container">
                             <div class="project-details-wrapper">
