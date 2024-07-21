@@ -18,172 +18,25 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <title>Michelle Hu</title>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <!-- <script>document.addEventListener('DOMContentLoaded', function () {
-            const gifs = document.querySelectorAll('.project-gif'); // Select all GIFs
-            const staticImgs = document.querySelectorAll('.project-static-img'); // Select all static images
-
-            // Function to play the GIF
-            window.playGif = function (element) {
-                const gif = element.querySelector('.project-gif');
-                const staticImg = element.querySelector('.project-static-img');
-
-                if (gif && staticImg) {
-                    const originalGifSrc = gif.src; // Store the original GIF source if not already stored
-
-                    gif.style.display = 'block'; // Show the GIF
-                    staticImg.style.display = 'none'; // Hide the static image
-                    gif.src = ''; // Force restart of GIF
-                    gif.src = originalGifSrc; // Restart the GIF by resetting the source
-                } else {
-                    console.error('GIF or static image not found within:', element);
-                }
-            };
-
-            // Function to reset the GIF
-            window.resetGif = function (element) {
-                const gif = element.querySelector('.project-gif');
-                const staticImg = element.querySelector('.project-static-img');
-
-                if (gif && staticImg) {
-                    const originalGifSrc = gif.src;
-
-                    gif.style.display = 'none'; // Hide the GIF
-                    staticImg.style.display = 'block'; // Show the static image
-                    gif.src = ''; // Resetting the src attribute helps stop the GIF
-                    gif.src = originalGifSrc; // Reassign the original GIF source
-                } else {
-                    console.error('GIF or static image not found within:', element);
-                }
-            };
-
-            // IntersectionObserver to auto-play GIF on smaller screens
-            function handleIntersection(entries, observer) {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting && window.innerWidth < 768) {
-                        playGif(entry.target);
-                    } else {
-                        resetGif(entry.target);
-                    }
-                });
-            }
-
-            const observer = new IntersectionObserver(handleIntersection, {
-                threshold: 0.5 // Trigger when 50% of the element is in view
-            });
-
-            // Observe all GIF wrappers
-            document.querySelectorAll('.project-thumb-wrapper').forEach(wrapper => {
-                observer.observe(wrapper);
-            });
-
-            // Handle window resize events
-            window.addEventListener('resize', function () {
-                document.querySelectorAll('.project-thumb-wrapper').forEach(wrapper => {
-                    if (window.innerWidth < 768) {
-                        observer.observe(wrapper);
-                    } else {
-                        observer.unobserve(wrapper);
-                    }
-                });
-            });
-        });
-    </script> -->
-    <!-- <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            // Function to play the MP4 video
-            window.playMedia = function (element) {
-                const video = element.querySelector('.project-media');
-                const staticImg = element.querySelector('.project-static-img');
-
-                if (video && staticImg) {
-                    video.loop = true;
-                    video.style.display = 'block';
-                    staticImg.style.display = 'none';
-
-                    // Play the video on hover
-                    element.addEventListener('mouseenter', () => {
-                        video.play().catch(error => {
-                            console.error('Video playback failed:', error);
-                        });
-                    });
-
-                    // Pause and reset the video when hover ends
-                    element.addEventListener('mouseleave', () => {
-                        video.pause();
-                        video.currentTime = 0;
-                        video.style.display = 'none';
-                        staticImg.style.display = 'block';
-                    });
-                } else {
-                    console.error('Video or static image not found within:', element);
-                }
-            };
-
-            // Function to reset the MP4 video
-            window.resetMedia = function (element) {
-                const video = element.querySelector('.project-media');
-                const staticImg = element.querySelector('.project-static-img');
-
-                if (video && staticImg) {
-                    video.style.display = 'none'; // Hide the video
-                    staticImg.style.display = 'block'; // Show the static image
-                    video.pause(); // Pause the video
-                    video.currentTime = 0; // Reset the video to the beginning
-                } else {
-                    console.error('Video or static image not found within:', element);
-                }
-            };
-
-            // IntersectionObserver to auto-play video on smaller screens
-            function handleIntersection(entries, observer) {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting && window.innerWidth < 768) {
-                        playMedia(entry.target);
-                    } else {
-                        resetMedia(entry.target);
-                    }
-                });
-            }
-
-            const observer = new IntersectionObserver(handleIntersection, {
-                threshold: 0.5 // Trigger when 50% of the element is in view
-            });
-
-            // Observe all video wrappers
-            document.querySelectorAll('.project-thumb-wrapper').forEach(wrapper => {
-                observer.observe(wrapper);
-            });
-
-            // Handle window resize events
-            window.addEventListener('resize', function () {
-                document.querySelectorAll('.project-thumb-wrapper').forEach(wrapper => {
-                    if (window.innerWidth < 768) {
-                        observer.observe(wrapper);
-                    } else {
-                        observer.unobserve(wrapper);
-                        resetMedia(wrapper); // Reset media when unobserved on larger screens
-                    }
-                });
-            });
-        });
-    </script> -->
+    <!-- Move the script tag to the bottom of the HTML file -->
+    <script src="/public/js/scrollable.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             const containers = document.querySelectorAll('.project-thumb-container');
 
-            container.addEventListener('mouseenter', () => {
-                projectMedia.currentTime = 0; // Reset the video to the beginning
-                projectMedia.play(); // Play the video
-            });
+            containers.forEach(container => {
+                const projectMedia = container.querySelector('.project-thumb-desktop');
 
-            container.addEventListener('mouseleave', () => {
-                projectMedia.pause(); // Pause the video
-                projectMedia.currentTime = 0; // Reset the video to the beginning
+                container.addEventListener('mouseenter', () => {
+                    projectMedia.currentTime = 0; // Reset the video to the beginning
+                    projectMedia.play(); // Play the video
+                });
+
+                container.addEventListener('mouseleave', () => {
+                    projectMedia.pause(); // Pause the video
+                    projectMedia.currentTime = 0; // Reset the video to the beginning
+                });
             });
-            //             containers.forEach(container => {
-            //                 const projectMedia = container.querySelector('.project-media');
-            //
-            //             });
         });
     </script>
 </head>
@@ -244,9 +97,10 @@
                             </div>
                             <div class="hero-buttons">
                                 <div class="hero-large-buttons-wrapper">
-                                    <button id="scrollToProjects-1" class="btn-primary">See my
+                                    <button id="scrollToProjects" class="btn-primary">See my
                                         work</button>
-                                    <button class="btn-secondary">View my resume</button>
+                                    <button class="btn-secondary">View my
+                                        resume</button>
                                 </div>
                                 <div class="icon-buttons-wrapper">
                                     <a href="mailto:mhu.contact@gmail.com" class="icon-button"
@@ -265,7 +119,7 @@
                     </div>
                 </div>
             </section>
-            <section id="projects">
+            <section id="projects" class="projects-section">
                 <div class="projects-wrapper">
                     <h2 class="section-heading hide">Product<br />design projects</h2>
                     <!-- <div class="project-card hide mb-0">
@@ -297,20 +151,18 @@
                             </div>
                         </div>
                     </div> -->
-                    <div class="project-card project-tastebuds">
+                    <div id="project-tastebuds" class="project-card project-tastebuds">
                         <p class="number-label">01</p>
                         <a href="tastebuds" class="project-link">
                             <div class="project-thumb-container tastebuds-thumb-container">
-                                <div class="project-thumb-wrapper hide-med">
-                                    <video class="margin-auto thumb-tastebuds" autoplay
-                                        loop muted>
+                                <div class="project-thumb-wrapper">
+                                    <video class="project-thumb-mobile thumb-tastebuds" playsinline
+                                        autoplay loop muted>
                                         <source src="assets/images/thumbs/thumb-tastebuds.mp4"
                                             type="video/mp4">
                                         Your browser does not support the video tag.
                                     </video>
-                                </div>
-                                <div class="project-thumb-wrapper show-med">
-                                    <video class="project-media thumb-tastebuds" loop muted>
+                                    <video class="project-thumb-desktop thumb-tastebuds" loop muted>
                                         <source src="assets/images/thumbs/thumb-tastebuds.mp4"
                                             type="video/mp4">
                                         Your browser does not support the video tag.
@@ -339,18 +191,18 @@
                             </div>
                         </div>
                     </div>
-                    <div class="project-card mb-0">
+                    <div id="project-postup" class="project-card mb-0">
                         <p class="number-label">02</p>
                         <a href="postup" class="project-link">
                             <div class="project-thumb-container postup-thumb-container">
                                 <div class="project-thumb-wrapper">
-                                    <video class="project-media-mobile thumb-postup" autoplay loop
+                                    <video class="project-thumb-mobile thumb-postup" autoplay loop
                                         muted>
                                         <source src="assets/images/thumbs/thumb-postup.mp4"
                                             type="video/mp4">
                                         Your browser does not support the video tag.
                                     </video>
-                                    <video class="project-media thumb-tastebuds" loop muted>
+                                    <video class="project-thumb-desktop thumb-tastebuds" loop muted>
                                         <source src="assets/images/thumbs/thumb-postup.mp4"
                                             type="video/mp4">
                                         Your browser does not support the video tag.
@@ -404,18 +256,21 @@
     <script src="js/index.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
-        document.getElementById('scrollToProjects-1').addEventListener('click', function () {
-            document.getElementById('projects').scrollIntoView({ behavior: 'smooth' });
-        });
-    </script>
-    <script>
-        document.getElementById('scrollToProjects-2').addEventListener('click', function () {
-            document.getElementById('projects').scrollIntoView({ behavior: 'smooth' });
-        });
-    </script>
-    <script>
-        document.getElementById('scrollToAbout').addEventListener('click', function () {
-            document.getElementById('about').scrollIntoView({ behavior: 'smooth' });
+        document.getElementById('scrollToProjects').addEventListener('click', function () {
+            const target = document.getElementById('projects');
+            const defaultOffset = 3.5 * 16; // Convert 3.5rem to pixels (assuming the root font-size is 16px)
+            const mediumBreakpointOffset = 4 * 16; // Convert 4rem to pixels
+
+            // Determine the current offset based on the screen width
+            const offset = window.innerWidth >= 768 ? mediumBreakpointOffset : defaultOffset;
+            const bodyRect = document.body.getBoundingClientRect().top;
+            const targetRect = target.getBoundingClientRect().top;
+            const targetPosition = targetRect - bodyRect - offset;
+
+            window.scrollTo({
+                top: targetPosition,
+                behavior: 'smooth',
+            });
         });
     </script>
     <!-- <script src="/public/js/navBar.js"></script>
