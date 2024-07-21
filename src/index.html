@@ -171,19 +171,19 @@
         document.addEventListener('DOMContentLoaded', function () {
             const containers = document.querySelectorAll('.project-thumb-container');
 
-            containers.forEach(container => {
-                const projectMedia = container.querySelector('.project-media');
-
-                container.addEventListener('mouseenter', () => {
-                    projectMedia.currentTime = 0; // Reset the video to the beginning
-                    projectMedia.play(); // Play the video
-                });
-
-                container.addEventListener('mouseleave', () => {
-                    projectMedia.pause(); // Pause the video
-                    projectMedia.currentTime = 0; // Reset the video to the beginning
-                });
+            container.addEventListener('mouseenter', () => {
+                projectMedia.currentTime = 0; // Reset the video to the beginning
+                projectMedia.play(); // Play the video
             });
+
+            container.addEventListener('mouseleave', () => {
+                projectMedia.pause(); // Pause the video
+                projectMedia.currentTime = 0; // Reset the video to the beginning
+            });
+            //             containers.forEach(container => {
+            //                 const projectMedia = container.querySelector('.project-media');
+            //
+            //             });
         });
     </script>
 </head>
@@ -301,13 +301,15 @@
                         <p class="number-label">01</p>
                         <a href="tastebuds" class="project-link">
                             <div class="project-thumb-container tastebuds-thumb-container">
-                                <div class="project-thumb-wrapper ">
-                                    <video class="project-media-mobile thumb-tastebuds" autoplay
+                                <div class="project-thumb-wrapper hide-med">
+                                    <video class="margin-auto thumb-tastebuds" autoplay
                                         loop muted>
                                         <source src="assets/images/thumbs/thumb-tastebuds.mp4"
                                             type="video/mp4">
                                         Your browser does not support the video tag.
                                     </video>
+                                </div>
+                                <div class="project-thumb-wrapper show-med">
                                     <video class="project-media thumb-tastebuds" loop muted>
                                         <source src="assets/images/thumbs/thumb-tastebuds.mp4"
                                             type="video/mp4">
