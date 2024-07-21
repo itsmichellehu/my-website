@@ -141,7 +141,7 @@ $hero-icon-button-size: 2rem;
 	}
 
 	&:active:focus {
-		background-color: $button-focused-color;
+		background-color: $button-active-color;
 		transition: border 0.3s;
 	}
 }
