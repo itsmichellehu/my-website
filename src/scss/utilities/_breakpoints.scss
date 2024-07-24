@@ -1,4 +1,3 @@
-
 .mobile-only {
 	display: inherit;
 	width: 1.5rem;
@@ -87,6 +86,32 @@
 	.show-xxl {
 		display: inherit;
 	}
+}
+
+// Classes for showing content at different breakpoints
+.hide-mobile-sm {
+	display: inherit !important;
+}
+.hide-mobile-med {
+	display: inherit !important;
+}
+.hide-mobile-lg {
+	display: inherit !important;
+}
+.hide-sm {
+	display: inherit !important;
+}
+.hide-med {
+	display: inherit !important;
+}
+.hide-lg {
+	display: inherit !important;
+}
+.hide-xl {
+	display: inherit !important;
+}
+.hide-xxl {
+	display: inherit !important;
 }
 
 // Classes for hiding content at different breakpoints
