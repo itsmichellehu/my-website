@@ -25,12 +25,13 @@
 	margin-bottom: 1.75rem;
 
 	img {
-		display: block; // Removes any space below the image
+		display: flex; // Removes any space below the image
 		width: 100%; // Makes the image take up 100% of the container's width
 		height: auto; // Maintains the image's aspect ratio initially
 		aspect-ratio: 1 / 1; // Ensures the image remains square
 	}
 }
+
 
 .about-details_wrapper {
 	display: grid;
@@ -40,6 +41,7 @@
 	margin-top: 2.5rem;
 	align-items: start;
 	justify-content: start;
+	width: fit-content;
 }
 
 .about-details_grid-container {
@@ -103,6 +105,7 @@
 	#about {
 		padding: 5rem 0;
 	}
+
 	.about_wrapper {
 		display: flex;
 		flex-direction: row-reverse;
@@ -110,13 +113,14 @@
 		gap: 4rem;
 		align-items: start;
 		width: fit-content;
-		max-width: 68rem;
+		max-width: 64rem;
 		margin-bottom: 2rem;
 	}
 
 	.about_portrait-wrapper {
 		border-radius: 3px;
-		max-width: 30rem;
+		min-width: 24rem;
+		max-width: 40rem;
 		overflow: hidden;
 		img {
 			width: 125%;
