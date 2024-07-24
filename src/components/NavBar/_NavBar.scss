@@ -104,7 +104,7 @@ $navbar-logo-size-mobile: 1.5rem;
 
 	.navbar-wrapper {
 		height: 3rem;
-		max-width: 88rem;
+		max-width: $nav-footer-max-width;
 	}
 
 	.navbar-menu {

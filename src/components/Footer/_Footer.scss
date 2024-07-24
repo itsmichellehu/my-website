@@ -47,7 +47,7 @@ footer {
 	justify-content: space-between;
 	width: 90vw;
 	margin: auto;
-	max-width: 88rem;
+	max-width: $nav-footer-max-width;
 
 	> :first-child {
 		display: flex;
