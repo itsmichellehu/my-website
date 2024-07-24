@@ -11,7 +11,6 @@
 	width: 100vw;
 	margin: auto;
 	align-items: center;
-	overflow: hidden;
 }
 
 .hero-image-wrapper {
@@ -73,6 +72,32 @@
 	align-items: center;
 }
 
+.green-dot {
+	width: 8px;
+	height: 8px;
+	background-color: #20d973;
+	border-radius: 50%;
+	display: inline-block;
+	animation: pulse 2.5s infinite;
+	box-shadow: 0px 0px 8px rgba(32, 217, 115, 0.75);
+	margin-left: 0.15rem;
+}
+
+@keyframes pulse {
+	0% {
+		transform: scale(1);
+		opacity: 1;
+	}
+	50% {
+		transform: scale(1.25);
+		opacity: 0.7;
+	}
+	100% {
+		transform: scale(1);
+		opacity: 1;
+	}
+}
+
 .text-work-availability,
 .text-current-location,
 .text-slash {
@@ -113,6 +138,9 @@
 
 $hero-icon-button-size: 2rem;
 .icon-button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	border-radius: 4px;
 	width: $hero-icon-button-size;
 	height: $hero-icon-button-size;
@@ -134,6 +162,11 @@ $hero-icon-button-size: 2rem;
 	&:hover {
 		opacity: 0.85;
 		background-color: $primary-color;
+
+		img {
+			width: 103%;
+			height: 103%;
+		}
 	}
 
 	&:hover:active {
@@ -218,6 +251,9 @@ $hero-icon-button-size-bp-med: 2.25rem;
 	}
 
 	.icon-button {
+		display: flex;
+		align-items: center;
+		justify-content: center;
 		width: $hero-icon-button-size-bp-med;
 		height: $hero-icon-button-size-bp-med;
 		border-radius: 4.5px;
@@ -313,6 +349,9 @@ $hero-icon-button-size-bp-lg: 2.25rem;
 	}
 
 	.icon-button {
+		display: flex;
+		align-items: center;
+		justify-content: center;
 		width: $hero-icon-button-size-bp-lg;
 		height: $hero-icon-button-size-bp-lg;
 	}
