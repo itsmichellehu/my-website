@@ -255,8 +255,8 @@
     <script>
         document.getElementById('scrollToProjects').addEventListener('click', function () {
             const target = document.getElementById('projects');
-            const defaultOffset = 3.5 * 16; // Convert 3.5rem to pixels (assuming the root font-size is 16px)
-            const mediumBreakpointOffset = 4 * 16; // Convert 4rem to pixels
+            const defaultOffset = 3 * 16; // Convert 3.5rem to pixels (assuming the root font-size is 16px)
+            const mediumBreakpointOffset = 2 * 16; // Convert 4rem to pixels
 
             // Determine the current offset based on the screen width
             const offset = window.innerWidth >= 768 ? mediumBreakpointOffset : defaultOffset;
