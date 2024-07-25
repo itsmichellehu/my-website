@@ -1,9 +1,14 @@
+.section-wrapper {
+	width: 90vw;
+}
+
 .section-toolbox {
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 	align-items: center;
 	padding: $section-padding-mobile 0;
+	background-color: black;
 
 	p {
 		color: #fff;
@@ -19,7 +24,7 @@
 	// Wraps the tool containers only
 	.tools-dev,
 	.swiper-slide {
-		.grid-item {
+		.tools-grid-item {
 			> div:first-child {
 				background-color: white;
 				box-shadow: -1px -1px 3px 0px rgba(0, 0, 0, 0.25) inset, 1px 1px 2px 0px rgba(255, 255, 255, 0.05) inset,
@@ -42,23 +47,22 @@
 }
 
 .toolbox_section-wrapper {
-	align-items: flex-start;
-	width: 90vw;
+	// display: grid;
+	// grid-template-columns: 1fr;
+	// grid-template-rows: auto auto;
+	display: block;
 	margin: auto;
-	max-width: 68rem;
+	width: fit-content;
 
-	h2 {
-		width: 100%;
+	h3 {
+		width: fit-content;
+		text-wrap: nowrap;
 	}
 }
 //
-// .tools-design {
+// .design-tools {
 // 	margin-bottom: 1.5rem;
 // }
-
-.toolbox_content-wrapper {
-	width: 100%;
-}
 
 .tools-wrapper {
 	display: flex;
@@ -67,165 +71,69 @@
 	justify-content: start;
 }
 
-// Mobile-view
-.tools-swipe {
-	.swiper,
-	.my {
-		margin-bottom: 1rem;
-		border-radius: 0.3125rem;
-		background: rgba(255, 255, 255, 0.15);
-		height: fit-content;
-		width: 95vw;
-		max-width: 24rem;
-
-		&github {
-			background: #242424;
-			box-shadow: -1px -1px 3px 0px rgba(0, 0, 0, 0.25) inset, 1px 1px 3px 0px rgba(255, 255, 255, 0.1) inset,
-				-1px -1px 6px 0px rgba(49, 49, 49, 0.15), 1px 1px 6px 0px rgba(0, 0, 0, 0.15);
-		}
-
-		.swiper-wrapper {
-			.swiper-slide {
-				display: grid;
-				grid-template-columns: repeat(5, 1fr);
-				column-gap: 0.75rem;
-				padding: 1rem;
-				width: auto;
-				background: transparent;
-				text-align: center;
-				justify-content: center;
-				align-items: center;
-				margin-bottom: 1.25rem;
-				font-size: 1rem;
-
-				@include breakpoint(med) {
-					grid-template-columns: repeat(2, 1fr);
-					grid-template-rows: repeat(2, 1fr);
-				}
-
-				.grid-item {
-					display: flex;
-					flex-direction: column;
-					align-items: center;
-					color: #fff;
-					text-align: center;
-
-					p {
-						font-family: "Inter" sans-serif;
-						font-size: 0.75rem;
-						font-style: normal;
-						font-weight: 500;
-						line-height: 135%; /* 1.0125rem */
-						margin: auto;
-						text-wrap: nowrap;
-					}
-
-					> div:first-child {
-						display: flex;
-						margin-bottom: 0.75rem;
-						padding: 0.5rem;
-						justify-content: center;
-						align-items: center;
-						width: 3.5rem;
-						height: 3.5rem;
-						border-radius: 0.625rem;
-					}
-
-					@include breakpoint(med) {
-						width: 3.5rem;
-					}
-				}
-
-				.swiper-slide img {
-					display: block;
-					width: 100%;
-					height: 100%;
-					object-fit: cover;
-				}
-			}
-		}
-
-		.swiper-pagination {
-			margin-bottom: 0.25rem;
-		}
-
-		.swiper-pagination-bullet {
-			display: inline-block;
-			width: 8px;
-			height: 8px;
-			background-color: #ccc;
-			border-radius: 50%;
-			margin: 0 4px;
-			transition: background-color 0.3s, transform 0.3s;
-		}
-
-		.swiper-pagination-bullet-active {
-			fill: #000;
-			width: 8px;
-			height: 8px;
-		}
-	}
-}
-
-.tools-grid-container {
+.design-tools_grid-container,
+.dev-tools_grid-container {
 	display: grid;
-	grid-template-columns: repeat(4, 1fr);
-	grid-template-rows: auto auto;
 	margin: auto;
 	width: fit-content;
-	border-radius: 0.3125rem;
 	gap: 1.5rem;
 	// background-color: #262626;
+}
 
-	.grid-item {
-		color: #fff;
+.design-tools_grid-container {
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: auto auto;
+}
+
+.dev-tools_grid-container {
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: 1fr;
+}
+
+.tools-grid-item {
+	color: #fff;
+	text-align: center;
+	font-family: "Inter" sans-serif;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 135%; /* 1.0125rem */
+	width: 3.75rem;
+
+	p {
+		margin: 0;
 		text-align: center;
-		font-family: "Inter" sans-serif;
-		font-style: normal;
-		font-weight: 500;
-		line-height: 135%; /* 1.0125rem */
-		width: 3.75rem;
+		margin: auto;
+		font-size: 12px;
+		letter-spacing: 0;
+		width: 100%;
+	}
 
-		p {
-			margin: 0;
-			text-align: center;
-			margin: auto;
-			font-size: 12px;
-			letter-spacing: 0;
-			width: 100%;
+	> div:first-child {
+		display: flex;
+		margin-bottom: 0.75rem;
+		padding: 0.5rem;
+		justify-content: center;
+		align-items: center;
+		width: 3.5rem;
+		height: 3.5rem;
+		border-radius: 0.625rem;
+
+		&height {
+			width: auto;
+			height: 2.5rem;
 		}
 
-		> div:first-child {
-			display: flex;
-			margin-bottom: 0.75rem;
-			padding: 0.5rem;
-			justify-content: center;
-			align-items: center;
-			width: 3.5rem;
-			height: 3.5rem;
-			border-radius: 0.625rem;
+		@include breakpoint(med) {
+			width: 4rem;
+			height: 4rem;
+			padding: 0.75rem;
 
 			&height {
 				width: auto;
-				height: 2.5rem;
-			}
-
-			@include breakpoint(med) {
-				width: 4rem;
-				height: 4rem;
-				padding: 0.75rem;
-
-				&height {
-					width: auto;
-					height: 2.75rem;
-				}
+				height: 2.75rem;
 			}
 		}
 	}
-}
-
-.dev-tools-grid-container {
-	grid-template-rows: auto;
 }
 
 .tools-pm > .tools-grid-container {
@@ -313,11 +221,7 @@ $logo-img-width-mobile: 2.5rem;
 		display: flex;
 		justify-content: space-between;
 		gap: 2rem;
-		//
-		// 		.section-heading {
-		// 			margin-bottom: 2.5rem;
-		// 			text-align: center;
-		// 		}
+		width: 90vw;
 	}
 
 	.toolbox_content-wrapper {
@@ -329,7 +233,7 @@ $logo-img-width-mobile: 2.5rem;
 		display: grid;
 	}
 
-	.tools-design {
+	.design-tools {
 		display: grid;
 	}
 
@@ -342,6 +246,8 @@ $logo-img-width-mobile: 2.5rem;
 	margin-bottom: 2rem;
 }
 
+$tool-grid-item-size: 4.5rem;
+
 @include breakpoint(med) {
 	// .toolbox_content-wrapper {
 	// 	grid-template-areas: "a b" "c c";
@@ -350,18 +256,8 @@ $logo-img-width-mobile: 2.5rem;
 	// 	gap: 1rem;
 	// }
 
-	.tools-grid-container {
-		gap: 2.5rem;
-		font-size: 0.875rem;
-
-		.grid-item > div:first-child {
-			width: 6rem;
-			height: 6rem;
-
-			img {
-				width: 90%;
-			}
-		}
+	.tools-wrapper {
+		gap: 2rem;
 	}
 
 	.heading-dev-tools {
@@ -371,6 +267,26 @@ $logo-img-width-mobile: 2.5rem;
 
 	.tools-pm {
 		grid-area: c;
+	}
+}
+
+@include breakpoint(med-lg) {
+	.tools-grid-container {
+		gap: 2rem;
+		font-size: 0.875rem;
+	}
+
+	.tools-grid-item {
+		width: $tool-grid-item-size;
+
+		div:first-child {
+			width: $tool-grid-item-size;
+			height: $tool-grid-item-size;
+
+			img {
+				width: 90%;
+			}
+		}
 	}
 }
 
@@ -385,7 +301,107 @@ $logo-img-width-mobile: 2.5rem;
 		display: block;
 	}
 
-	.grid-item {
+	.tools-grid-item {
 		margin-bottom: 0;
+	}
+}
+
+// Mobile-view
+.tools-swipe {
+	.swiper,
+	.my {
+		margin-bottom: 1rem;
+		border-radius: 0.3125rem;
+		background: rgba(255, 255, 255, 0.15);
+		height: fit-content;
+		width: 95vw;
+		max-width: 24rem;
+
+		&github {
+			background: #242424;
+			box-shadow: -1px -1px 3px 0px rgba(0, 0, 0, 0.25) inset, 1px 1px 3px 0px rgba(255, 255, 255, 0.1) inset,
+				-1px -1px 6px 0px rgba(49, 49, 49, 0.15), 1px 1px 6px 0px rgba(0, 0, 0, 0.15);
+		}
+
+		.swiper-wrapper {
+			.swiper-slide {
+				display: grid;
+				grid-template-columns: repeat(5, 1fr);
+				column-gap: 0.75rem;
+				padding: 1rem;
+				width: auto;
+				background: transparent;
+				text-align: center;
+				justify-content: center;
+				align-items: center;
+				margin-bottom: 1.25rem;
+				font-size: 1rem;
+
+				@include breakpoint(med) {
+					grid-template-columns: repeat(2, 1fr);
+					grid-template-rows: repeat(2, 1fr);
+				}
+
+				.tools-grid-item {
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					color: #fff;
+					text-align: center;
+
+					p {
+						font-family: "Inter" sans-serif;
+						font-size: 0.75rem;
+						font-style: normal;
+						font-weight: 500;
+						line-height: 135%; /* 1.0125rem */
+						margin: auto;
+						text-wrap: nowrap;
+					}
+
+					> div:first-child {
+						display: flex;
+						margin-bottom: 0.75rem;
+						padding: 0.5rem;
+						justify-content: center;
+						align-items: center;
+						width: 3.5rem;
+						height: 3.5rem;
+						border-radius: 0.625rem;
+					}
+
+					@include breakpoint(med) {
+						width: 3.5rem;
+					}
+				}
+
+				.swiper-slide img {
+					display: block;
+					width: 100%;
+					height: 100%;
+					object-fit: cover;
+				}
+			}
+		}
+
+		.swiper-pagination {
+			margin-bottom: 0.25rem;
+		}
+
+		.swiper-pagination-bullet {
+			display: inline-block;
+			width: 8px;
+			height: 8px;
+			background-color: #ccc;
+			border-radius: 50%;
+			margin: 0 4px;
+			transition: background-color 0.3s, transform 0.3s;
+		}
+
+		.swiper-pagination-bullet-active {
+			fill: #000;
+			width: 8px;
+			height: 8px;
+		}
 	}
 }

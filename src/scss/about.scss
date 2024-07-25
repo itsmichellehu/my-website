@@ -15,9 +15,10 @@ $section-padding-med: 3.625rem;
 @import "about/all-about";
 
 .about_wrapper,
+.toolbox_section-wrapper,
 .faqs-wrapper,
 .interests-wrapper {
-	max-width: 56rem;
+	max-width: 58rem;
 }
 
 main > .wrapper > section {
@@ -84,7 +85,7 @@ h3 {
 	font-style: normal;
 	font-weight: 600;
 	line-height: 110%; /* 4.18rem */
-	margin: 0 12.75px;
+	// margin: 0 12.75px;
 	margin-bottom: 2rem;
 	letter-spacing: 0;
 	width: fit-content;
