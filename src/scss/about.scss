@@ -89,6 +89,7 @@ h3 {
 	margin-bottom: 2rem;
 	letter-spacing: 0;
 	width: fit-content;
+	text-align: left;
 
 	@include breakpoint(med) {
 		font-size: 2.8rem;

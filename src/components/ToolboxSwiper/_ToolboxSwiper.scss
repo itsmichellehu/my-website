@@ -83,6 +83,10 @@
 .design-tools_grid-container {
 	grid-template-columns: repeat(4, 1fr);
 	grid-template-rows: auto auto;
+
+	p {
+		color: $off-black;
+	}
 }
 
 .dev-tools_grid-container {

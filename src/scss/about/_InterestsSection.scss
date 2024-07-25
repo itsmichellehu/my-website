@@ -1,6 +1,5 @@
 #interests {
 	display: none;
-	background: #fff;
 
 	@include breakpoint(med) {
 		display: block;
@@ -30,6 +29,10 @@
 		width: fit-content;
 		text-align: center;
 	}
+
+	h3 {
+		width: 100%;
+	}
 }
 
 .interest-grid-container {
@@ -44,159 +47,96 @@
 }
 
 .interest-card {
-	display: flex;
-	max-width: 22rem;
 	padding: 1.5rem;
-	flex-direction: column;
 	align-items: flex-start;
 	gap: 0.5rem;
 	border-radius: 0.1875rem;
-	background: #f1efe6;
+	background: #f9f9f9;
+}
 
-	.content-wrapper {
-		display: flex;
-		justify-self: stretch;
-		padding: 1.25rem 1rem;
-		flex-direction: column;
-		align-items: flex-start;
-		gap: 0.5rem;
-		align-self: stretch;
-		border-radius: 0.1875rem;
-		// border: 2px solid #cc4d4d;
-		height: 100%;
+.card_content-wrapper {
+	display: flex;
+	flex-direction: column;
+	justify-self: stretch;
+	gap: 0.5rem;
+	column-gap: 1.5rem;
+	align-self: stretch;
+	border-radius: 0.1875rem;
+	// border: 2px solid #cc4d4d;
+	height: 100%;
+}
 
-		.headline {
-			color: #c64848;
-			font-family: "Inria Sans";
-			font-size: 2rem;
-			font-style: normal;
-			font-weight: 700;
-			line-height: 110%; /* 2.2rem */
-			margin-bottom: 0;
-		}
+.card_headline {
+	color: #1e1e1e;
+	font-size: 1.5rem;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 110%; /* 2.2rem */
+	margin-bottom: 0;
+	grid-area: b;
+	height: fit-content;
+}
 
-		.body {
-			color: $primary-color;
-			font-family: "Inria Sans";
-			font-size: 1rem;
-			font-style: normal;
-			font-weight: 400;
-			line-height: 125%; /* 1.25rem */
-			letter-spacing: 0.02rem;
-			margin-bottom: 0;
-		}
-
-		a {
-			display: block;
-			color: #479cff;
-			font-family: Inter;
-			font-size: 0.875rem;
-			font-style: normal;
-			font-weight: 600;
-			line-height: 130%;
-			text-decoration: none;
-		}
-	}
+.card_body {
+	color: $dark-grey;
+	font-size: 1rem;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 145%; /* 1.25rem */
+	margin-bottom: 0;
+	grid-area: c;
 }
 
 .interest-card-graphic {
 	width: 4rem;
+	opacity: 0.5;
+	grid-area: a;
 	margin-bottom: 0.5rem;
-	opacity: 0.8;
 }
 
 @include breakpoint(med) {
 	.interest-grid-container {
-		grid-template-columns: repeat(3, 1fr);
-		grid-template-rows: auto auto;
-	}
-
-	.interest-card-graphic {
-		width: 5rem;
-		margin-bottom: 1rem;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: auto auto auto;
+		width: 100%;
 	}
 }
 
 // New design!
-#hmu-swiper {
+.section-interests-mobile-swiper {
 	background-color: black;
-	@include breakpoint(med) {
-		display: none;
+
+	h2 {
+		display: block;
+		color: white;
+		margin-bottom: 1.5rem;
+		width: fit-content;
 	}
 
-	.wrapper {
+	.swiper {
 		margin: auto;
-		width: 90vw;
-		padding: $section-padding-mobile 0;
-		max-width: 34rem;
+		height: fit-content;
+	}
 
-		h2 {
-			display: block;
-			color: white;
-			margin-bottom: 1.5rem;
-			width: fit-content;
-		}
+	.swiper-slide {
+		display: flex;
+		max-width: 20rem;
+		padding: 0.75rem;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 0.5rem;
+		border-radius: 0.1rem;
+		background: #ffff;
 
-		.swiper {
-			margin: auto;
-			height: fit-content;
+		transition: transform 1s ease;
+	}
 
-			.swiper-slide {
-				display: flex;
-				max-width: 20rem;
-				padding: 0.75rem;
-				flex-direction: column;
-				align-items: flex-start;
-				gap: 0.5rem;
-				border-radius: 0.1rem;
-				background: #ffff;
+	.card_headline {
+		font-size: 1.5rem;
+	}
 
-				transition: transform 1s ease;
-
-				.content-wrapper {
-					display: flex;
-					padding: 1.25rem 1rem;
-					flex-direction: column;
-					align-items: flex-start;
-					gap: 0.5rem;
-					align-self: stretch;
-					border-radius: 0.1875rem;
-					// border: 2px solid #cc4d4d;
-
-					.emoji {
-						font-size: 2rem;
-						margin-top: -0.5rem;
-						margin-bottom: 0.5rem;
-					}
-
-					.headline {
-						color: #1e1e1e;
-						// font-family: "Inria Sans";
-						font-size: 1.5rem;
-						font-style: normal;
-						font-weight: 700;
-						line-height: 110%; /* 2.2rem */
-						margin-bottom: 0;
-					}
-					.body {
-						color: $dark-grey;
-						font-size: 1rem;
-						font-style: normal;
-						font-weight: 400;
-						line-height: 145%; /* 1.25rem */
-					}
-					a {
-						display: block;
-						color: #479cff;
-						font-family: Inter;
-						font-size: 0.875rem;
-						font-style: normal;
-						font-weight: 500;
-						line-height: 130%;
-					}
-				}
-			}
-		}
+	@include breakpoint(med) {
+		display: none;
 	}
 }
 
