@@ -50,17 +50,16 @@
 <body>
   <nav>
     <div class="navbar-wrapper">
-      <div class="navbar-logo">
-        <a href="index"><img src="assets/svg/home/logo-mhu-black.svg" class="logo-mhu"
-            alt="Logo" /></a>
+      <div class="navbar-logo-wrapper">
+        <img src="assets/svg/home/logo-mhu-black.svg" class="navbar-logo-image" alt="Logo" />
       </div>
       <!-- <div class="navbar-menu-toggle" onclick="toggleMenu()">
             <img src="assets/svg/home/ic-menu.svg" class="ic-menu" alt="" />
         </div> -->
       <ul class="navbar-menu" id="menu">
-        <li class="nav-item"><a href="/">Home</a></li>
+        <li class="nav-item"><a href="/">Work</a></li>
         <li class="nav-item"><a href="about">About</a></li>
-        <li class="nav-item"><a href="#">Resume</a></li>
+        <li class="nav-item show-med"><a href="#">Resume</a></li>
         <li class="nav-item"><a href="mailto:mhu.contact@gmail.com">Contact</a></li>
       </ul>
     </div>
@@ -68,8 +67,9 @@
   <main>
     <section id="hero" class="hero hero--bg-postup">
       <div class="hero__content">
-        <video class="hero-postup-video" autoplay loop
-          src="assets/videos/postup/postup-final-prototype.mp4"></video>
+        <video autoplay loop hide-controls muted class="hero-postup-video">
+          <source src="assets/videos/postup/postup-final-prototype.mp4" type="video/mp4">
+        </video>
       </div>
     </section>
     <section class="overview">
@@ -154,17 +154,13 @@
           <h2>The challenge</h2>
         </header>
         <p>
-          Admidst the surge in remote work, PostUp—a new startup dedicated to
-          fostering a online community among freelancers and remote
-          workers—noticed increased discussions on their platform regarding
-          finding suitable public workspaces, ranging from libraries to coffee
-          shops.
-        </p>
-        <p>
-          Remote workers grapple with the challenge of finding reliable
-          information about the work environment online, resulting in valuable
-          time wasted on fruitless visits to unsuitable places. I also found
-          the scarcity of suitable locations presents an additional challenge.
+          With the rise of remote work, PostUp—a startup focused on building an online community for
+          freelancers—observed a growing need for reliable information about public workspaces on
+          their platform.
+          Remote workers often struggle to find suitable locations, such as libraries or coffee
+          shops,
+          wasting time on unsuitable visits due to inadequate online resources. In addition, there
+          is a scarcity of suitable locations.
         </p>
         <p class="secondary-text mt-32">
           How can I connect remote workers with suitable public workspaces and
@@ -178,16 +174,9 @@
           <h2>The constraints</h2>
         </header>
         <p class="span-fw-medium">
-          In this project, I faced several constraints. PostUp tasked me with
-          running a design sprint to create a better solution. Their only
-          requirements? It must be a subscription-based mobile app, priced at
-          $5.99 per month. They provided me user research data, which was
-          helpful, but it was limited to findings from
-          <span>9 interviews</span>, comprising only <span>8 quotes</span>, a
-          <span>single user persona</span>, and an
-          <span>audio and screen recording from one interview</span>
-          illustrating a participant guiding the Lead Researcher through her
-          current solutions.
+          I was tasked with designing a subscription-based mobile app for PostUp,
+          priced at $5.99 per month. The available user research was limited, consisting of data
+          from 9 interviews, 8 quotes, a single user persona, and one interview recording.
         </p>
       </div>
       <div class="card">
@@ -236,32 +225,29 @@
     </section>
     <section id="the-solution" class="section-container equal-padding border">
       <div class="content-wrapper">
-        <header class="header-container">
-          <h2>The solution</h2>
-        </header>
-        <p class="mb-32">
-          I created a MVP prototype in 5 days, accompanied by a monetization
-          strategy that unlocks an additional new revenue stream. It
-          reimagines remote work in public spaces by seamlessly connecting
-          workers with suitable locations wherever they travel, with
-          comprehensive assessments of public spaces on amenities like WiFi
-          speed, outlet availability, noise levels, and more.
-        </p>
-        <p>
-          Finding a suitable location is crucial, but quality spaces are
-          scarce. So, I introduced a monetization strategy incorporating a
-          business partnership program—"PostUp Partners", enhancing remote
-          work qualities at partner locations, increasing user engagement, and
-          opening a second revenue stream for PostUp. Subscribers at partner
-          locations benefit from exclusive perks like real-time seating
-          updates and promotions, enriching the remote work journey for both
-          users and businesses.
-        </p>
-        <button class="scroll-button bg-transparent link-blue" data-scroll-target="final-prototype">
-          Jump to final prototype
-          <span
-            class="material-symbols-outlined ic-arrow_jump-to-section material-symbols_lower">arrow_downward</span>
-        </button>
+        <div class="the-solution-media-wrapper">
+          <video autoplay loop hide-controls muted>
+            <source src="assets/videos/postup/postup-final-prototype-results.mp4" type="video/mp4">
+          </video>
+          <div>
+            <header>
+              <h2>The solution</h2>
+            </header>
+            <p class="mb-16">
+              In 5 days, I developed an MVP prototype and monetization strategy. It helps
+              remote workers find suitable public spaces by providing detailed
+              information on amenities like WiFi speed and noise levels. My monetization strategy
+              includes a "PostUp Partners" program, offering perks such as real-time seating updates
+              and promotions, enhancing the remote work experience and creating a new revenue stream
+              for PostUp.</p>
+            <button class="scroll-button bg-transparent link-blue"
+              data-scroll-target="final-prototype">
+              Jump to final prototype
+              <span
+                class="material-symbols-outlined ic-arrow_jump-to-section material-symbols_lower">arrow_downward</span>
+            </button>
+          </div>
+        </div>
       </div>
     </section>
     <section id="research-process" class="section-container border">
@@ -274,29 +260,16 @@
       </header>
       <div class="content-wrapper">
         <div class="design-sprint-graphic">
-          <img alt="" loading="lazy"
-            src="https://assets-global.website-files.com/651649456fb9882d90cce3aa/65879a9e6a8de1e8236937ef_design-sprint-graphic.webp" />
+          <img alt="" loading="lazy" src="assets/images/postup/design-sprint-schedule-large.png" />
         </div>
-        <p>
-          My design sprint adopts a modified version of Google Venture's (GV)
-          design sprint.
-        </p>
-        <p>
-          This is a structured five-day process that rapidly solves critical
-          business problems through design, prototyping, and testing ideas
-          with users. Typically, a full-scale process involves a diverse team
-          collaborating intensively in a series of exercises, such as mapping,
-          sketching, and prototyping, to validate solutions quickly.
-        </p>
-        <p>
-          This project employs an adaptation that enables a solo designer to
-          effectively carry out the streamlined process. Working
-          independently, this process helped me quickly deliver a design and
-          business solution to PostUp.
-        </p>
+        <p class="mb-0">I utilized a modified version of Google Venture's (GV) design sprint, a
+          structured
+          five-day process for rapidly solving critical business problems through design,
+          prototyping, and testing. Adapting this process for solo work, I was able to efficiently
+          deliver a design and business solution for PostUp.</p>
       </div>
     </section>
-    <section id="monday" class="section-container border">
+    <section id="monday" class="section-container border-0 pb-0">
       <header class="header-container">
         <h2>
           <span>Monday</span>
@@ -316,13 +289,11 @@
         </header>
         <div class="content-wrapper">
           <p>
-            On day 1, I kicked off the sprint by going through PostUp's user
+            On day 1, I kicked off the sprint by reviewing PostUp's user
             research.
-            <span class="font-medium black">
-              PostUp's research team talked to 8 remote workers about their
-              experiences
-            </span>
-            with finding public places to do remote work from.
+            PostUp's research team talked to 8 remote workers about their
+            experiences
+            with finding public places to conduct remote work.
           </p>
           <p class="mb-0">Research materials received:</p>
           <ul class="list-research-materials">
@@ -348,32 +319,13 @@
           </h3>
         </header>
         <div class="content-wrapper">
-          <p>
-            This process was a bit challenging due to research data constraints. I wish I had
-            access to all interview recordings, notes, and
-            transcripts. While standout quotes were helpful, the lack of
-            research data prevented me from identifying and verifying
-            trends.
-            I usually merge qualitative and quantitative data, such as
-            identifying trends by tracking frequent keywords, ranked by
-            frequency. Despite this constraint, I utilized the available materials to
-            the best of my ability!
-          </p>
-          <p>Here's what I found:</p>
-          <p class="secondary-text">
-            Remote workers struggle to find suitable public workspaces when
-            there is limited accurate and relevant information about work
-            environment details online.
-          </p>
-          <p>
-            Misinformation about essential remote work amenities like
-            availability of outlets, stable wifi, and noise levels, people
-            sacrifice valuable time on searching and traveling to unsuitable
-            places.
-          </p>
+          <p>Typically, my synthesis process combines qualitative and quantitative data to
+            identify trends, like tracking keyword frequency from full interviews. This process was
+            challenging due to limited data.</p>
+          <p class="mb-0">Nonetheless, this is what I found:</p>
         </div>
       </section>
-      <div class="container-full-width mt-24">
+      <div class="container-full-width mt-0">
         <div class="interview-quotes-wrapper">
           <img src="assets/svg/quotation-mark.svg" class="img-quotation-mark" alt="" />
           <div class="grid-container">
@@ -502,55 +454,51 @@
           </div>
         </div>
       </div>
-      <div class="content-wrapper">
+      <div class="content-wrapper mt-0">
+        <p class="secondary-text">
+          In sum, remote workers struggle to find suitable workspaces due to limited accurate and
+          relevant information about work
+          environment details online.
+        </p>
+        <p>
+          Misinformation about amenities like
+          availability of outlets, Wi-Fi stability, and noise levels cause people to
+          sacrifice valuable time on searching and traveling to unsuitable
+          places.
+        </p>
         <header class="header-container">
           <h4 class="subheading">Refining PostUp's user persona: Meet Nina</h4>
         </header>
-        <p>
-          Based on my research insights, most remote workers shared the same
-          needs, motivations, pain points, and characteristics. This led me to
-          create a single persona to guide the rest of the sprint.
-        </p>
         <figure>
           <img style="background-color: #f6f6f6" alt="" loading="lazy"
-            src="assets/images/postup/postup-user-persona-new.png" />
+            src="assets/images/postup/user-persona-nina.png" />
         </figure>
-        <p>
-          Meet Nina! She is a freelance copywriter who travels around Seattle,
-          WA for client meetings and remote work for at least 3 days a week.
+        <p class="mb-0">
+          Drawing from my insights, I refined the user persona PostUp provided to better guide the
+          rest of my sprint. Meet Nina! She is a
+          freelance copywriter who travels around Seattle, WA, for client meetings and remote work
+          at least three days a week.
         </p>
       </div>
       <section class="subsection">
         <header class="header-container">
           <h3>
-            <span>user journey</span>
+            <span>remote worker journey</span>
             <br />
-            Mapping a possible end-to-end experience for Nina
+            Brainstorming an end-to-end experience for Nina
           </h3>
         </header>
         <div class="content-wrapper">
-          <p class="secondary-text">
-            Nina struggles to find suitable workspaces for remote work. With
-            inaccurate and irrelevant details online, she sacrifices valuable
-            time searching and traveling to unsuitable places.
-          </p>
-          <p>
-            This leads to wasted time spent searching and traveling to
-            unsuitable places.
-          </p>
-          <p>
-            Considering these pain points, I crafted an end-to-end experience
-            for Nina that streamlines the discovery of nearby workspaces in a
-            new area. The map zeros in on critical elements—her routine tasks
-            and environment preferences:
-          </p>
+          <p>To streamline Nina's search for nearby workspaces, I mapped a possible journey that
+            focus on her routine tasks and
+            environment preferences.</p>
         </div>
-        <div class="container-full-width">
+        <div class="container-full-width mb-0">
           <img class="img-user-journey center" alt="" loading="lazy"
             src="assets/images/postup/flow-chart-procreate.jpeg" />
-          <div class="content normal">
+          <div class="content-wrapper">
             <div class="caption-container">
-              <ol>
+              <ol class="mt-0">
                 <li>
                   <span>Select remote work goal: </span>quiet work, meeting,
                   call
@@ -564,27 +512,14 @@
                 </li>
               </ol>
             </div>
+            <p class="medium-grey">
+              Note: I considered taking Nina straight to results but decided to allow her to adjust
+              filters
+              first in case her preferences differ from the presets. However, this ended up
+              changing,
+              so keep reading to find out why!
+            </p>
           </div>
-        </div>
-        <div class="content-grid monday-last-container">
-          <p>
-            I contemplated taking Nina straight to results based on the chosen
-            task, but I considered potential variations in preferences. At
-            this point, I decided allowing Nina to adjust filters before
-            viewing results would offer a more streamlined experience,
-            potentially saving her an extra step in their journey if her
-            preferences align with the presets. Sometimes, removing just one
-            button can significantly enhance the user experience.
-          </p>
-          <aside>
-            <p>This ended up changing, but keep reading to find out why!</p>
-          </aside>
-        </div>
-        <div class="content-wrapper">
-          <p class="mb-0">
-            This flowchart served as a starting point of my ideation phase,
-            which I built upon in my subsequent ideation process!
-          </p>
         </div>
       </section>
     </section>
@@ -607,23 +542,21 @@
           </h3>
         </header>
         <div class="content-wrapper mb-40">
-          <p>
-            Given Nina's remote work challenges, I was motivated to brainstorm
-            design solutions for a clean interface with search and product
-            comparison features.
-          </p>
-          <p class="mb-0">
-            To grasp best practices and user expectations, I conducted solo
-            lightning demos on Airbnb, Google Maps, Credit Karma, and
-            Betterment for valuable insights.
-          </p>
-          <div class="mv-32">
-            <img alt="" loading="lazy" src="assets/images/postup/lightning-demos.png" />
+          <p class="mb-0">I wanted to create a clean interface with search and product comparison
+            features. Therefore, I conducted lightning demos of Airbnb, Google Maps, Credit Karma,
+            and
+            Betterment to gather best practices and insights into user expectations.</p>
+          <div class="content-grid mv-32">
+            <div>
+              <img alt="" loading="lazy" src="assets/images/postup/lightning-demos.png" />
+            </div>
+            <aside>
+              <p>
+                The checkmarks indicate the screens I decided to inspire my
+                designs.
+              </p>
+            </aside>
           </div>
-          <p class="notes mb-32">
-            The checkmarks indicate the screens I decided to inspire my
-            designs.
-          </p>
           <button class="accordion mb-16" onclick="toggleAccordion(this)">
             <div class="accordion__header">
               <p>What are lightning demos?</p>
@@ -647,38 +580,40 @@
             Among my demos, Airbnb was the winner. 🥳<br />
           </p>
           <div class="airbnb-strengths-container">
-            <img alt="" class="airbnb" loading="lazy"
-              src="https://assets-global.website-files.com/651649456fb9882d90cce3aa/65a5be0ef15a8a4e11d60a82_airbnb-winner.png" />
-            <div class="content">
+            <div class="img-airbnb-wrapper">
+              <img alt="" class="img-airbnb" loading="lazy"
+                src="https://assets-global.website-files.com/651649456fb9882d90cce3aa/65a5be0ef15a8a4e11d60a82_airbnb-winner.png" />
+            </div>
+            <div class="airbnb-strengths-content-grid">
               <div>
-                <img alt="" class="iconSize-xxs" loading="lazy"
+                <img alt="" class="ic-airbnb-strengths-checkmark" loading="lazy"
                   src="https://assets-global.website-files.com/651649456fb9882d90cce3aa/65667d4b0799b1ecd06b6132_circle-green.png" />
-                <p>Clean visual layout<br /></p>
+                <p>Clean layout<br /></p>
               </div>
               <div>
-                <img alt="" class="iconSize-xxs" loading="lazy"
+                <img alt="" class="ic-airbnb-strengths-checkmark" loading="lazy"
                   src="https://assets-global.website-files.com/651649456fb9882d90cce3aa/65667d4b0799b1ecd06b6132_circle-green.png" />
                 <p>Intuitive design<br /></p>
               </div>
               <div>
-                <img alt="" class="iconSize-xxs" loading="lazy"
+                <img alt="" class="ic-airbnb-strengths-checkmark" loading="lazy"
                   src="https://assets-global.website-files.com/651649456fb9882d90cce3aa/65667d4b0799b1ecd06b6132_circle-green.png" />
-                <p>Efficient info hierarchy<br /></p>
+                <p>Clear structure<br /></p>
               </div>
               <div>
-                <img alt="" class="iconSize-xxs" loading="lazy"
+                <img alt="" class="ic-airbnb-strengths-checkmark" loading="lazy"
                   src="https://assets-global.website-files.com/651649456fb9882d90cce3aa/65667d4b0799b1ecd06b6132_circle-green.png" />
-                <p>Effective typography<br /></p>
+                <p>Clear typography<br /></p>
               </div>
               <div>
-                <img alt="" class="iconSize-xxs" loading="lazy"
+                <img alt="" class="ic-airbnb-strengths-checkmark" loading="lazy"
                   src="https://assets-global.website-files.com/651649456fb9882d90cce3aa/65667d4b0799b1ecd06b6132_circle-green.png" />
-                <p>User-friendly navigation<br /></p>
+                <p>Easy navigation<br /></p>
               </div>
               <div>
-                <img alt="" class="iconSize-xxs" loading="lazy"
+                <img alt="" class="ic-airbnb-strengths-checkmark" loading="lazy"
                   src="https://assets-global.website-files.com/651649456fb9882d90cce3aa/65667d4b0799b1ecd06b6132_circle-green.png" />
-                <p>Streamlined user flow<br /></p>
+                <p>Optimized user flow<br /></p>
               </div>
             </div>
           </div>
@@ -692,14 +627,23 @@
             Outlining the critical steps in a remote worker's journey
           </h3>
         </header>
-        <div class="content-wrapper mb-40">
-          <p class="mb-32">
-            With new inspiration, I moved forward with ideation by taking the
-            "most critical screen" from my Crazy 8s and creating a 3-panel
-            storyboard, mapping screens that achieve the most critical journey
-            for remote workers.
+        <div class="content-wrapper mv-32">
+          <p>Drawing from my lightning demos, I conducted a Crazy 8s exercise, sketching 8 frames in
+            8 minutes to generate solutions. As my first time, this felt intimidating at first, but
+            I
+            was pleasantly surprised by how
+            productive the process was!</p>
+          <div class="crazy-8s-container mt-32">
+            <img src="assets/images/postup/crazy-8s-01.png" alt="">
+            <img src="assets/images/postup/crazy-8s-02.png" alt="">
+          </div>
+          <p>
+            Among my Crazy 8's I identified one screen to be the most critical screen and developed
+            it into a 3-panel storyboard. I chose the
+            "search results" screen (the middle screen below) because it is the
+            central hub for remote workers to compare and decide on a workspace.
           </p>
-          <button class="accordion mb-8" onclick="toggleAccordion(this)">
+          <button class="accordion mv-24" onclick="toggleAccordion(this)">
             <div class="accordion__header">
               <p>What qualifies as "the most critical screen"?</p>
               <img class="accordion__icon" src="assets/svg/ic-chevron-arrow__down--white.svg" />
@@ -720,36 +664,20 @@
           <div>
             <div class="crazy-8s">
               <img alt="" loading="lazy"
-                src="https://assets-global.website-files.com/651649456fb9882d90cce3aa/6591d9c3a055423e4ee28bdf_Untitled_Artwork%2045.png" />
+                src="assets/images/postup/postup-storyboard-3-panel-min.png" />
             </div>
             <p>
-              Among my Crazy 8s, I identified the "search results" sketch
-              (pictured at the center) as the most critical screen. This
-              screen takes the spotlight because it’s the central hub for
-              remote workers to compare and narrow down their options.
+              Since accessing relevant information is a remote worker's primary challenge, my key
+              design consideration was to effectively centralizing essential information to optimize
+              decision-making.
             </p>
           </div>
           <aside>
             <p>
-              At this point, my vision for the user journey ends when they
-              decide on a location.
-            </p>
-            <p>
-              I soon realized that the journey actually ends with settling
-              down at a workspace.
+              I initially thought the journey ended when users chose a workspace. I later realized
+              it ends when they're settled in (oops).
             </p>
           </aside>
-        </div>
-        <div class="content-wrapper">
-          <p class="secondary-text mb-24">
-            Considering the primary hurdle remote workers face is accessing
-            relevant information, an effective design of search results is
-            crucial to optimize the search process.<br />
-          </p>
-          <p>
-            After identifying the most critical screen, I outlined the screens
-            that come before and after to map out the journey.<br />
-          </p>
         </div>
       </section>
     </section>
@@ -772,53 +700,26 @@
           </h3>
         </header>
         <p class="mb-32">
-          This storyboard follows Nina's journey using PostUp in a new city.
-          This was my first time designing a storyboard for UX design, as I've
-          only developed storyboards for filmmaking! Using my past
-          storyboarding experience for short films, I used a comic-style
-          approach, which was incredibly helpful.
+          On day 3, I expanded the 3-panel storyboard into a detailed comic-style narrative of
+          Nina's journey using PostUp in a new city. This helped me
+          immerse myself in Nina's perspective to deepen empathy for her needs.
         </p>
-        <img class="mb-32 img-full-width" alt="" loading="lazy"
-          src="assets/images/postup/postup-storyboard-full.png" />
-        <div class="content-grid">
+        <div class="content-grid mb-32">
           <div>
-            <p>
-              Illustrating Nina's journey with this technique allowed me to
-              better immerse myself in her perspective and gain a better
-              understanding of her needs and emotions. Continuously asking
-              questions like "How might Nina react here?" and "What actions
-              might Nina take next?" helped me to identify important
-              touchpoints. By the end of the process, I was able to develop
-              and refine both user stories and flows in one sitting.
-            </p>
+            <img class="img-full-width" alt="" loading="lazy"
+              src="assets/images/postup/postup-storyboard-full.png" />
           </div>
           <aside>
-            <p>
-              This was a great experience! The visual aspect really deepened
-              my empathy for users, and it made it much more efficient and
-              enjoyable.
-            </p>
+            <p class="mt-0">This was really fun! By leveraging my filmmaking storyboard experience,
+              this felt effective than traditional user flows.</p>
           </aside>
         </div>
-        <p class="secondary-text mt-16 mb-20">
-          I intentionally placed Nina in an unfamiliar city to help me
-          empathize with diverse user behaviors and possibilities.
-        </p>
-        <p class="mt-16">
-          With limited access to resources while traveling or on the go,
-          remote workers in a new city potentially have greater needs compared
-          to someone working in a familiar city. Therefore, I aimed to meet
-          these needs to develop an adaptable and inclusive solution that
-          accommodates diverse scenarios.
-        </p>
-      </div>
-      <div class="storyboarding-content">
-        <p>
-          On day 3, I expanded the 3-panel storyboard into a comprehensive
-          comic-style narrative illustrating the entire remote work journey.
-          During my storyboard session, my user flow evolved. Below are some
-          highlights:
-        </p>
+        <p class="secondary-text mt-0 mb-20">Placing
+          Nina in an unfamiliar city allowed me to anticipate diverse user behaviors and needs.</p>
+        <p class="mt-16">By asking "How might Nina react?" and "What actions might she take next?",
+          I identified key touchpoints to develop user stories and flows. This approach aligns with
+          my principles of creating scalable and adaptable solutions, which further developed my
+          user flow. Here are some highlights:</p>
       </div>
       <div class="container-full-width pv-40 mb-0">
         <div class="tabs-container" data-current="Tab 1" data-duration-in="300"

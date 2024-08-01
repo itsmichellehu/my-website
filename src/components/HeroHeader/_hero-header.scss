@@ -10,7 +10,7 @@
 	}
 
 	&--bg-postup {
-		background-color: #8cb4ac;
+		background-color: #97beb6;
 	}
 
 	&__content {
@@ -56,7 +56,7 @@
 			height: 100%;
 		}
 
-		&__image-wrapper {
+		&-postup-video &__image-wrapper {
 			max-width: 30rem;
 		}
 	}

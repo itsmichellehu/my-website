@@ -1,0 +1,19 @@
+.the-solution-media-wrapper {
+	display: grid;
+	grid-template-columns: repeat(2, auto);
+	column-gap: 3rem;
+	row-gap: 1rem;
+	width: fit-content;
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+	align-items: center;
+	color: $medium-grey;
+
+	p {
+		margin-bottom: 0;
+	}
+
+	video {
+		max-width: 15rem;
+	}
+}

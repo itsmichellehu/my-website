@@ -1,17 +1,18 @@
 #research-process {
-  header h2 {
-    margin-bottom: 0;
-  }
+	header h2 {
+		margin-bottom: 0;
+	}
 }
 
 .design-sprint-graphic {
-  margin: 1rem auto;
+	margin: 3rem 0 1.5rem 0;
+	max-width: 100%;
 
-  img {
-    width: 100%;
-  }
+	img {
+		width: 100%;
+	}
 
-  @include breakpoint(med) {
-    max-width: 38rem;
-  }
+	@include breakpoint(med) {
+		margin: 4rem 0 2rem 0;
+	}
 }
