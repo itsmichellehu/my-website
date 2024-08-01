@@ -45,6 +45,30 @@
       });
     });
   </script>
+  <script>
+    function toggleAccordion(button) {
+      const content = button.querySelector('.prototype-accordion_content');
+      const icon = button.querySelector('.prototype-accordion_icon');
+
+      content.classList.toggle('active');
+      icon.classList.toggle('rotate');
+
+      if (content.classList.contains('active')) {
+        content.style.maxHeight = content.scrollHeight + 'px';
+      } else {
+        content.style.maxHeight = 0;
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      // Attach click event listeners to all accordion headers
+      document.querySelectorAll('.prototype-accordion').forEach(accordion => {
+        accordion.addEventListener('click', function () {
+          toggleAccordion(this);
+        });
+      });
+    });
+  </script>
 </head>
 
 <body>
@@ -72,7 +96,7 @@
         </video>
       </div>
     </section>
-    <section class="overview">
+    <section id="overview" class="overview">
       <div class="overview__content-wrapper">
         <header class="overview__header">
           <h1 class="overview__title">PostUp</h1>
@@ -858,108 +882,159 @@
             Design checklist
           </h3>
         </header>
-        <div class="content-wrapper">
-          <p>
-            By the end of Day 3, my vision for Nina's journey ended with
-            selecting a workspace. On this day, I realized that the journey
-            technically ends with settling down at the workspace.
-          </p>
-          <p class="secondary-text mb-32">
-            Reflecting on my oversight, I realized this mistake happened
-            because I wasn't well prepared.
-          </p>
-          <div class="content-grid">
-            <div class="design-checklist">
-              <div>
-                <p>
-                  Learning from my mistake, I decided to create a new map and
-                  list potential features on paper before designing my
-                  prototype.
-                </p>
-                <p>
-                  Working solo, I wanted to prioritize organization, so I can
-                  work more efficiently without overlooking details.
-                </p>
-                <p class="hide-xl notes">This ended up helping a lot! 🥳</p>
-              </div>
-              <div>
-                <img alt="" loading="lazy"
-                  src="https://assets-global.website-files.com/651649456fb9882d90cce3aa/6588668cf3fc83590158116f_IMG_0632.JPG" />
-              </div>
+        <div class="content-grid">
+          <div class="design-checklist">
+            <div>
+              <p> By the end of Day 3, I initially thought Nina's journey ended with selecting a
+                workspace. While reviewing my work from the past 3 days, I caught this mistake as
+                the journey doesn't end until she's settled into a workspace. </p>
+              <p>After some reflection,
+                I decided to create a new map and list potential features on paper
+                before designing my prototype.</p>
+              <p class="hide-xl notes">This ended up helping a lot! 🥳</p>
             </div>
-            <aside class="show-xl">
-              <p>This ended up helping a lot! 🥳</p>
-            </aside>
+            <div>
+              <img alt="" loading="lazy"
+                src="https://assets-global.website-files.com/651649456fb9882d90cce3aa/6588668cf3fc83590158116f_IMG_0632.JPG" />
+            </div>
           </div>
+          <aside class="show-xl">
+            <p>This ended up helping a lot! 🥳</p>
+          </aside>
         </div>
       </section>
       <section class="subsection">
-        <div class="container-full-width prototypes">
-          <header class="header-container mb-0">
+        <div class="container-full-width prototype-wrapper">
+          <header class="header-container mb-0 hide">
             <h3>
               <span>prototype</span>
               <br />
               Design solutions
             </h3>
           </header>
-          <p class="prototype-heading">
-            Making essential details accessible.
+          <p class="prototype-walkthrough_heading show-med-block">
+            Scannable search results.
           </p>
-          <div class="prototype-walkthrough">
-            <div>
-              <div class="grid-container">
-                <img alt="" loading="lazy"
-                  src="assets/images/postup/postup-prototype-v1-discover.gif" />
+          <div class="prototype-walkthrough_wrapper">
+            <p class="prototype-walkthrough_heading hide-med">
+              Scannable <br> search results.
+            </p>
+            <div class="prototype-walkthrough_grid-container">
+              <video autoplay loop hide-controls muted>
+                <source src="assets/videos/postup/postup-final-prototype-results.mp4"
+                  type="video/mp4">
+              </video>
+              <div class="prototype-walkthrough_content show-med-flex">
                 <div>
-                  <div>
-                    <p>Comprehensive search results</p>
-                    <p>
-                      Search results display an overview of information
-                      prioritized by remote workers, including walk time,
-                      suitable work, amenities, and seating availability at
-                      PostUp partners.
-                    </p>
-                  </div>
-                  <div>
-                    <p>Intuitive commute experience</p>
-                    <p>
-                      On default, mode of commute time is based on the user's
-                      location, but can be modified. In areas with low
-                      walkability scores, car commute time is shown, while
-                      walk time is shown in high walkability areas. Google
-                      Maps integration would facilitate this engineering.
-                    </p>
-                  </div>
+                  <p class="prototype-walkthrough_subheading">Detailed results</p>
+                  <p class="prototype-walkthrough_body">
+                    Scannable overview of essential amenities, including
+                    walk time,
+                    suitable work, amenities, and seating availability at
+                    PostUp Partner locations.
+                  </p>
+                </div>
+                <div>
+                  <p class="prototype-walkthrough_subheading">Intuitive, customizable commute
+                    experience</p>
+                  <p class="prototype-walkthrough_body">
+                    Default estimated commute time adjusts based on the area's walkability score
+                    via
+                    Google
+                    Maps integration. Low walkability areas show driving time; high walkability
+                    areas show walking time.
+                  </p>
                 </div>
               </div>
             </div>
           </div>
-          <div class="prototype-walkthrough">
-            <div class="grid-container">
-              <img alt="" loading="lazy"
-                src="assets/images/postup/postup-prototype-v1-listing.gif" />
-              <div>
+          <div class="prototype-walkthrough_content-wrapper bg-light-grey hide-med mb-8">
+            <button class="prototype-accordion" onclick="toggleAccordion(this)">
+              <div class="prototype-accordion_header">
+                <p>Learn more</p>
+                <img class="prototype-accordion_icon"
+                  src="assets/svg/ic-chevron-arrow__down--white.svg" />
+              </div>
+              <div class="prototype-accordion_content">
                 <div>
-                  <p>Listing page</p>
-                  <p>
-                    Each listing provides more details on the work
-                    environment. This above-the-fold design displays the most
-                    pertinent info at first glance. The listing also focuses
-                    on photos of the interior rather than food.<br />
+                  <p class="prototype-walkthrough_subheading  pt-4">Scannable search results</p>
+                  <p class="prototype-walkthrough_body">
+                    Scannable overview of essential amenities, including
+                    walk time,
+                    suitable work, amenities, and seating availability at
+                    PostUp Partner locations.
                   </p>
                 </div>
                 <div>
-                  <p>Work environment details</p>
-                  <p>
-                    To minimize clutter to prevent information overload,
-                    I opted for minimal copy to convey the work environment
-                    details. To address any confusion, remote workers may tap
-                    on the "info icon" to view more details, inspired by
+                  <p class="prototype-walkthrough_subheading">Intuitive, customizable commute
+                    experience</p>
+                  <p class="prototype-walkthrough_body">
+                    Default estimated commute time adjusts based on the area's walkability score
+                    via
+                    Google
+                    Maps integration. Low walkability areas show driving time; high walkability
+                    areas show walking time.
+                  </p>
+                </div>
+              </div>
+            </button>
+          </div>
+          <p class="prototype-walkthrough_heading show-med-block">
+            Accessible essential details.
+          </p>
+          <div class="prototype-walkthrough_wrapper mb-0">
+            <p class="prototype-walkthrough_heading hide-med">
+              Accessible essential details.
+            </p>
+            <div class="prototype-walkthrough_grid-container">
+              <video autoplay loop hide-controls muted>
+                <source src="assets/videos/postup/postup-final-prototype-listing.mp4"
+                  type="video/mp4">
+              </video>
+              <div class="prototype-walkthrough_content show-med-flex">
+                <div>
+                  <p class="prototype-walkthrough_subheading">Listing page</p>
+                  <p class="prototype-walkthrough_body">In-depth work-environment details
+                    above-the-fold, sorted by level of importance, supplemented by photos of
+                    interior design essential to remote work.</p>
+                </div>
+                <div>
+                  <p class="prototype-walkthrough_subheading">Comprehensive environment details
+                  </p>
+                  <p class="prototype-walkthrough_body">
+                    Minimal copy to reduce information overload, enhancing scannability, supported
+                    by an "Info icon button" to view more details, inspired by
                     clothing size charts.
                   </p>
                 </div>
               </div>
             </div>
+          </div>
+          <div class="prototype-walkthrough_content-wrapper bg-light-grey hide-med mb-8">
+            <button class="prototype-accordion" onclick="toggleAccordion(this)">
+              <div class="prototype-accordion_header">
+                <p>Learn more</p>
+                <img class="prototype-accordion_icon"
+                  src="assets/svg/ic-chevron-arrow__down--white.svg" />
+              </div>
+              <div class="prototype-accordion_content">
+                <div>
+                  <p class="prototype-walkthrough_subheading pt-4">Listing page</p>
+                  <p class="prototype-walkthrough_body">In-depth work-environment details
+                    above-the-fold, sorted by level of importance, supplemented by photos of
+                    interior design essential to remote work.</p>
+                </div>
+                <div>
+                  <p class="prototype-walkthrough_subheading">Comprehensive environment details
+                  </p>
+                  <p class="prototype-walkthrough_body">
+                    Minimal copy to reduce information overload, enhancing scannability, supported
+                    by an "Info icon button" to view more details, inspired by
+                    clothing size charts.
+                  </p>
+                </div>
+              </div>
+            </button>
           </div>
         </div>
       </section>
@@ -1436,6 +1511,16 @@
     document.addEventListener('DOMContentLoaded', () => {
       // Attach click event listeners to all accordion headers
       document.querySelectorAll('.accordion').forEach(accordion => {
+        accordion.addEventListener('click', function () {
+          toggleAccordion(this);
+        });
+      });
+    });
+  </script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Attach click event listeners to all accordion headers
+      document.querySelectorAll('.prototype-accordion').forEach(accordion => {
         accordion.addEventListener('click', function () {
           toggleAccordion(this);
         });

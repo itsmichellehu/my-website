@@ -28,10 +28,7 @@ p {
 	line-height: 145%;
 	margin-bottom: 1.25rem;
 	margin-top: 0;
-
-	@include breakpoint(med) {
-		font-size: 1.125rem;
-	}
+	font-size: 1.125rem;
 }
 
 /* Specific heading styles with colors and sizes */
