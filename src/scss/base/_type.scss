@@ -61,21 +61,25 @@ h3 {
 }
 
 h4 {
-	font-weight: 600;
+	font-weight: 500;
 	letter-spacing: 0;
-	line-height: 120%;
-	color: var(--black); /* CSS variable, ensure it's defined in your styles */
+	line-height: 130%;
+	color: $black; /* CSS variable, ensure it's defined in your styles */
 	font-size: 1.44rem;
 	margin-top: 2rem;
 	margin-bottom: 1rem;
+
+	&::first-letter {
+		text-transform: capitalize;
+	}
 }
 
 h5 {
 	font-weight: 500;
 	letter-spacing: 0;
 	line-height: 120%;
-	color: $black; /* CSS variable, ensure it's defined in your styles */
-	font-size: 1.44rem;
+	color: $off-black; /* CSS variable, ensure it's defined in your styles */
+	font-size: 1.2rem;
 	margin-top: 2rem;
 	margin-bottom: 0.5rem;
 }

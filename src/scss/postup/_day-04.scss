@@ -5,7 +5,7 @@
 	gap: 2rem;
 
 	@include breakpoint(med) {
-		grid-template-columns: 1.5fr 2fr;
+		grid-template-columns: 2fr 1.5fr;
 		grid-template-rows: auto;
 	}
 }
@@ -45,7 +45,7 @@
 .prototype-walkthrough_heading {
 	display: flex;
 	color: $black;
-	font-size: 2rem;
+	font-size: 1.8rem;
 	font-style: normal;
 	font-weight: 600;
 	line-height: 125%;
@@ -56,8 +56,10 @@
 	width: 90%;
 
 	@include breakpoint(med) {
+		display: block;
 		font-size: 2.4rem;
 		margin-bottom: 1rem;
+		text-align: center;
 	}
 
 	@include breakpoint(lg) {
@@ -96,7 +98,7 @@
 	width: 100%;
 
 	video {
-		width: 90%;
+		width: 80%;
 		margin: auto;
 	}
 }
@@ -185,15 +187,19 @@ $prototype-accordion-bg: #1e1e1e;
 	.prototype-walkthrough_wrapper {
 		margin-bottom: 2rem;
 		width: 90vw;
-		padding: 3rem 2rem;
+		padding: 3rem 1rem;
 	}
 
 	.prototype-walkthrough_grid-container {
 		display: grid;
 		grid-template-columns: 1fr 2fr;
-		width: fit-content;
+		width: 100%;
 		gap: 1rem;
 		margin: auto;
+
+		video {
+			width: 90%;
+		}
 	}
 
 	.prototype-walkthrough_content {
@@ -218,20 +224,19 @@ $prototype-accordion-bg: #1e1e1e;
 	}
 }
 
-@include breakpoint(lg) {
+@include breakpoint(xl) {
 	.prototype-wrapper {
 		padding: 4rem 0;
 	}
 
 	.prototype-walkthrough_wrapper {
 		margin-bottom: 4rem;
+		padding: 4rem 8rem;
 	}
 
 	.prototype-walkthrough_grid-container {
 		display: grid;
-		grid-template-columns: 1fr 2fr;
-		padding: 4rem;
-		width: calc(1100px - 8rem);
+		width: fit-content;
 		gap: 4rem;
 
 		video {

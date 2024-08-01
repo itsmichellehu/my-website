@@ -16,3 +16,21 @@ $wireframe-max-height: 40rem;
 @import "postup/all-postup";
 
 @import "utilities/all-utilities";
+
+#hero,
+#overview,
+#the-problem,
+#the-constraints,
+#the-solution,
+#research-process,
+#monday,
+#tuesday,
+#wednesday,
+#friday,
+#final-prototype,
+#next-steps,
+#reflection,
+#conclusion,
+#thank-you {
+	display: none !important;
+}
