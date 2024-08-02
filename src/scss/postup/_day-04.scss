@@ -259,5 +259,121 @@ $prototype-accordion-bg: #1e1e1e;
 
 	.prototype-walkthrough_body {
 		font-size: 1.45rem;
+// Stashed features
+.stashed-features_wrapper {
+	display: flex;
+	justify-content: start;
+	flex-direction: row;
+	margin: 1rem 0;
+	gap: 0.5rem;
+	cursor: grab;
+	overflow-x: scroll;
+	width: 95vw;
+}
+
+ul.stashed-features_grid-container {
+	display: grid;
+	grid-template-rows: 1fr;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 1rem;
+	list-style-type: none;
+	transform: none;
+	overflow-x: scroll; /* Enable horizontal scroll */
+	overflow-y: hidden; /* Prevent vertical scroll in the carousel */
+
+	li:last-child {
+		margin-right: 1.5rem;
+	}
+}
+
+li.stashed-feature_card {
+	display: flex;
+	padding: 2rem;
+	border-radius: 0.5rem;
+	background-color: #f6f6f6;
+	height: fit-content;
+	width: 80vw;
+	max-width: 18.75rem;
+	flex: 1;
+	transform: none !important;
+	box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.1);
+}
+
+.stashed-feature_icon-wrapper {
+	width: 2.75rem;
+	height: 2.75rem;
+	margin-bottom: 1.25rem;
+}
+
+.stashed-feature_icon {
+	width: 100%;
+}
+
+.stashed-feature_copy-wrapper {
+	display: block;
+}
+
+$stashed-feature-font-color: $black;
+
+.stashed-feature_heading {
+	font-size: 1.25rem;
+	font-weight: 500 !important;
+	margin-bottom: 0.5rem;
+	color: $stashed-feature-font-color !important;
+}
+
+.stashed-feature_body {
+	display: flex;
+	font-size: 1.125rem;
+	color: $stashed-feature-font-color !important;
+	margin-bottom: 0;
+}
+
+@include breakpoint(xl) {
+	.stashed-features_wrapper {
+		width: fit-content;
+		align-items: center;
+		justify-content: center;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	ul.stashed-features_grid-container {
+		width: fit-content;
+		margin-left: auto;
+		margin-right: auto;
+		justify-self: center;
+		align-self: center;
+
+		li:last-child {
+			margin: 0;
+		}
+	}
+
+	.stashed-feature_icon-wrapper {
+		width: 3rem;
+		height: 3rem;
+		margin-bottom: 1.5rem;
+	}
+
+	.stashed-feature_icon {
+		width: 100%;
+	}
+
+	.stashed-feature_copy-wrapper {
+		display: block;
+		width: 100%;
+		margin: auto;
+	}
+
+	.stashed-feature_heading {
+		font-size: 1.5rem;
+		font-weight: 500 !important;
+		margin-bottom: 0.5rem;
+	}
+
+	.stashed-feature_body {
+		font-size: 1.125rem;
+		margin-bottom: 0;
 	}
 }
