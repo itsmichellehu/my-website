@@ -5,6 +5,7 @@
 	padding: 2rem 0 calc(4.12rem - 5px) 0;
 	width: 100%;
 	border-bottom: 1px solid $light-grey;
+	overflow-x: visible !important;
 
 	&.lightest-grey {
 		background-color: $lightest-grey;
@@ -81,6 +82,7 @@
 	margin: auto;
 	align-items: left;
 	margin-top: 1.5rem;
+	overflow-x: visible !important;
 
 	> figure > img {
 		margin: 0;

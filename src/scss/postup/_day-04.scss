@@ -1,12 +1,39 @@
 // Thursday design checklist {
 .design-checklist {
-	display: grid;
-	grid-template-rows: repeat(2, auto);
 	gap: 2rem;
+	width: 100%;
 
-	@include breakpoint(med) {
-		grid-template-columns: 2fr 1.5fr;
-		grid-template-rows: auto;
+	.img-prototype-checklist {
+		display: flex;
+		width: 100%;
+		height: fit-content;
+	}
+}
+
+@include breakpoint(med) {
+	.design-checklist {
+		display: flex;
+		flex-direction: row;
+		gap: 2rem;
+
+		.header-container {
+			margin-top: -0.5rem;
+			width: 100%;
+			margin-bottom: 0.5rem;
+
+			h3 {
+				margin-top: 0;
+				margin-bottom: 1rem;
+			}
+		}
+
+		.img-prototype-checklist {
+			width: calc(60% - 1rem);
+		}
+	}
+
+	.design-checklist-text_wrapper {
+		width: calc(40% - 1rem);
 	}
 }
 
@@ -23,6 +50,7 @@
 	text-align: center;
 }
 
+// Prototype walkthrough
 .container-full-width {
 	gap: 1rem;
 
@@ -50,35 +78,29 @@
 	font-weight: 600;
 	line-height: 125%;
 	margin: 0 auto;
-	margin-bottom: 1.5rem;
+	margin-bottom: 1rem;
 	max-width: 1200px;
 	letter-spacing: -0.25px;
 	width: 90%;
 
 	@include breakpoint(med) {
 		display: block;
-		font-size: 2.4rem;
-		margin-bottom: 1rem;
-		text-align: center;
-	}
-
-	@include breakpoint(lg) {
-		font-size: 2.8rem;
-		margin-bottom: 1.5rem;
+		font-size: 2.25rem;
+		text-align: left;
+		align-self: flex-start;
 	}
 }
 
 .prototype-walkthrough_wrapper {
 	display: flex;
 	flex-direction: column;
-	max-width: 1200px;
+	max-width: 1600px;
 	width: 90%;
 	margin: 0 auto;
 	padding: 2rem 1rem;
 	border-radius: 1rem;
 	background-color: $white;
 	height: fit-content;
-	overflow: hidden;
 }
 
 .prototype-walkthrough_content-wrapper {
@@ -96,31 +118,31 @@
 	gap: 1rem;
 	align-items: center;
 	width: 100%;
-
-	video {
-		width: 80%;
-		margin: auto;
-	}
 }
 
-.prototype-walkthrough_content {
-	display: flex;
-	flex-direction: column;
-	margin: auto;
-	width: 90%;
+.prototype-walkthrough_video {
+	width: 80%;
+	margin: 0 auto;
+	max-width: 15rem;
+}
+
+.prototype-walkthrough_content-01,
+.prototype-walkthrough_content-02 {
+	display: none;
 }
 
 .prototype-walkthrough_subheading {
 	font-size: 1.25rem;
 	font-weight: 400 !important;
 	margin-bottom: 0.5rem;
-	color: #bbbbbb !important;
+	color: $off-black !important;
+	line-height: 125%;
 }
 
 .prototype-walkthrough_body {
 	font-size: 1.125rem;
 	font-weight: 400 !important;
-	color: $light-grey !important;
+	color: $medium-grey !important;
 }
 
 $prototype-accordion-bg: #1e1e1e;
@@ -186,89 +208,129 @@ $prototype-accordion-bg: #1e1e1e;
 
 	.prototype-walkthrough_wrapper {
 		margin-bottom: 2rem;
-		width: 90vw;
-		padding: 3rem 1rem;
+		width: fit-content;
+		max-width: 90vw;
+		padding: 3rem 4rem;
 	}
 
 	.prototype-walkthrough_grid-container {
 		display: grid;
-		grid-template-columns: 1fr 2fr;
-		width: 100%;
-		gap: 1rem;
+		grid-template-rows: auto auto auto;
+		grid-template-columns: auto auto;
+		grid-template-areas: "a b" "c b" "d b";
+		gap: 2rem 3rem;
 		margin: auto;
-
-		video {
-			width: 90%;
-		}
+		justify-content: flex-start;
+		width: fit-content;
 	}
 
-	.prototype-walkthrough_content {
-		display: flex;
-		gap: 1rem;
+	.prototype-walkthrough_heading {
+		grid-area: a;
+		width: 100%;
+	}
 
+	.prototype-walkthrough_video {
+		height: 100%;
+		width: fit-content;
+		align-self: start;
+		grid-area: b;
+	}
+
+	.prototype-walkthrough_content-01,
+	.prototype-walkthrough_content-02 {
+		display: block;
+		width: 28rem;
 		p:last-child {
 			margin-bottom: 0;
 		}
 	}
 
+	.prototype-walkthrough_content-01 {
+		grid-area: c;
+	}
+
+	.prototype-walkthrough_content-02 {
+		grid-area: d;
+	}
+
 	.prototype-walkthrough_subheading {
-		font-size: 1.275rem;
+		font-size: 1.2rem;
 		color: $off-black !important;
 		font-weight: 500 !important;
 	}
 
 	.prototype-walkthrough_body {
-		font-size: 1.15rem;
+		font-size: 1.125rem;
 		color: $medium-grey !important;
-		font-weight: 500 !important;
 	}
 }
 
 @include breakpoint(xl) {
-	.prototype-wrapper {
-		padding: 4rem 0;
-	}
+	// 	.prototype-wrapper {
+	// 		padding: 4rem 0;
+	// 	}
+	//
+	// 	.prototype-walkthrough_wrapper {
+	// 		margin-bottom: 4rem;
+	// 		padding: 4rem;
+	// 	}
+	//
+	// 	.prototype-walkthrough_grid-container {
+	// 		display: grid;
+	// 		width: fit-content;
+	// 		gap: 2rem;
+	// 	}
+	//
+	// 	.prototype-walkthrough_video {
+	// 		width: 20rem;
+	// 	}
+	//
+	// 	.prototype-walkthrough_content {
+	// 		display: flex;
+	// 		gap: 2rem;
+	// 		width: 31.25rem;
+	//
+	// 		&--mobile {
+	// 			display: none;
+	// 		}
+	// 	}
 
-	.prototype-walkthrough_wrapper {
-		margin-bottom: 4rem;
-		padding: 4rem 8rem;
-	}
-
-	.prototype-walkthrough_grid-container {
-		display: grid;
-		width: fit-content;
-		gap: 4rem;
-
-		video {
-			width: 100%;
-		}
-	}
-
-	.prototype-walkthrough_content {
-		display: flex;
-		gap: 2rem;
-
-		&--mobile {
-			display: none;
-		}
+	.prototype-walkthrough_heading {
+		margin-right: 2rem;
 	}
 
 	.prototype-walkthrough_subheading {
-		font-size: 1.5rem;
+		font-size: 1.44rem;
 	}
 
 	.prototype-walkthrough_body {
-		font-size: 1.45rem;
+		font-size: 1.15rem;
+	}
+}
+
+// @include breakpoint(xxl) {
+// 	.prototype-walkthrough_grid-container {
+// 		display: grid;
+// 		grid-template-columns: 1.25fr 1fr 2fr;
+// 		grid-template-areas: "a b c";
+// 		width: fit-content;
+// 		gap: 1rem;
+// 		margin: auto;
+// 		justify-content: flex-start;
+// 	}
+// }
+
 // Stashed features
 .stashed-features_wrapper {
 	display: flex;
 	justify-content: start;
 	flex-direction: row;
 	margin: 1rem 0;
+	margin-left: 5vw;
 	gap: 0.5rem;
 	cursor: grab;
 	overflow-x: scroll;
-	width: 95vw;
+	width: 100%;
 }
 
 ul.stashed-features_grid-container {
@@ -289,14 +351,14 @@ ul.stashed-features_grid-container {
 li.stashed-feature_card {
 	display: flex;
 	padding: 2rem;
-	border-radius: 0.5rem;
-	background-color: #f6f6f6;
+	border-radius: 1rem;
+	background-color: #f9f9f9;
 	height: fit-content;
 	width: 80vw;
 	max-width: 18.75rem;
 	flex: 1;
 	transform: none !important;
-	box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.1);
+	box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.05);
 }
 
 .stashed-feature_icon-wrapper {
@@ -351,8 +413,8 @@ $stashed-feature-font-color: $black;
 	}
 
 	.stashed-feature_icon-wrapper {
-		width: 3rem;
-		height: 3rem;
+		width: 4rem;
+		height: 4rem;
 		margin-bottom: 1.5rem;
 	}
 
