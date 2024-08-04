@@ -21,6 +21,11 @@ ol {
 		}
 	}
 
+	&.list-transform-none li {
+		transform: none;
+		padding-left: 0;
+	}
+
 	&.gap--medium {
 		gap: 1rem;
 	}
