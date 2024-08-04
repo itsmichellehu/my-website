@@ -1,19 +1,96 @@
-.the-solution-media-wrapper {
-	display: grid;
-	grid-template-columns: repeat(2, auto);
-	column-gap: 3rem;
-	row-gap: 1rem;
-	width: fit-content;
-	margin-top: 2rem;
-	margin-bottom: 2rem;
-	align-items: center;
-	color: $medium-grey;
+.the-solution-prototype_wrapper {
+	display: flex;
+	flex-direction: column;
+	max-width: 1600px;
+	width: 90%;
+	margin: 0 auto;
+	padding: 2rem 1rem;
+	border-radius: 1rem;
+	background-color: $white;
+	height: fit-content;
+}
 
-	p {
+.the-solution-prototype_grid-container {
+	display: flex;
+	flex-direction: column;
+	margin: 0 auto;
+	gap: 1.5rem;
+	align-items: center;
+	width: 100%;
+
+	h2 {
+		grid-area: a;
+		width: 100%;
+		margin-bottom: 0;
+		text-align: center;
+	}
+}
+
+.the-solution-prototype_video {
+	width: 80%;
+	margin: 0 auto;
+	max-width: 20rem;
+	grid-area: b;
+}
+
+.the-solution-prototype_content {
+	display: block;
+	width: 100%;
+	grid-area: c;
+
+	p:last-child {
 		margin-bottom: 0;
 	}
+}
 
-	video {
-		max-width: 15rem;
+.the-solution-prototype_subheading {
+	font-size: 1.25rem;
+	font-weight: 400 !important;
+	margin-bottom: 0.5rem;
+	color: $off-black !important;
+	line-height: 125%;
+}
+
+.the-solution-prototype_body {
+	font-size: 1.125rem;
+	font-weight: 400 !important;
+	color: $medium-grey !important;
+	margin-bottom: 0.5rem;
+}
+
+@include breakpoint(med) {
+	.the-solution-prototype_wrapper {
+		margin-bottom: 2rem;
+		max-width: 60rem;
+		padding: 3rem 3rem;
+	}
+
+	.the-solution-prototype_grid-container {
+		display: grid;
+		align-items: start;
+		grid-template-rows: auto auto auto;
+		grid-template-columns: auto auto;
+		grid-template-areas: "a b" "c b" "c b";
+		gap: 0.5rem;
+		margin: auto;
+		justify-content: flex-start;
+		width: 100%;
+
+		h2 {
+			margin-top: auto;
+			text-align: left;
+			margin-bottom: 0.5rem;
+		}
+	}
+
+	.the-solution-prototype_subheading {
+		font-size: 1.2rem;
+		color: $off-black !important;
+		font-weight: 500 !important;
+	}
+
+	.the-solution-prototype_body {
+		font-size: 1.125rem;
+		color: $medium-grey !important;
 	}
 }
