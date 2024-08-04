@@ -18,13 +18,13 @@
 	gap: 2.5rem;
 	margin-bottom: 2rem;
 
+	img {
+		width: 100%;
+	}
+
 	@include breakpoint(xl) {
 		// flex-direction: row;
 		// width: fit-content;
 		margin-bottom: 2.5rem;
-
-		img {
-			max-width: 90vw;
-		}
 	}
 }
