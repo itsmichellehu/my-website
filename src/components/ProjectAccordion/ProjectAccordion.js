@@ -1,4 +1,5 @@
-function toggleAscripton(button) {
+// src/js/accordion.js
+export function toggleAccordion(button) {
   const content = button.querySelector('.accordion__content');
   const icon = button.querySelector('.accordion__icon');
 
@@ -12,16 +13,12 @@ function toggleAscripton(button) {
   }
 }
 
-// Attach click event listeners to all accordion headers
-function attachAccordionListeners() {
-  document.querySelectorAll('.accordion').forEach(accordion => {
-    accordion.addEventListener('click', function () {
-      toggleAccordion(this);
+export function initializeAccordion() {
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.accordion__header').forEach(header => {
+      header.addEventListener('click', function () {
+        toggleAccordion(this.parentElement);
+      });
     });
   });
 }
-
-// Wait for the DOM to be fully loaded
-document.addEventListener('DOMContentLoaded', () => {
-  attachAccordionListeners();
-});

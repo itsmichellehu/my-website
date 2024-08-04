@@ -1,14 +1,22 @@
 import '../scss/postup.scss';
-
 import '../components/AutoplayVideo/autoplay-video';
-import '../components/Carousel/carousel';
+// import '../components/Carousel/carousel';
 import '../components/ScrollButton/scroll-button';
 import '../components/Scrollable/scrollable';
-import '../components/Tabs/tabs';
+// src/js/postup.js
+import { initializeAccordion } from '../components/ProjectAccordion/ProjectAccordion';
 
+// Initialize accordion functionality
+initializeAccordion();
+
+// import '../components/SwipeableCarouselPostUp/SwipeableCarouselPostUp';
+import '../components/Tabs/tabs';
 import '../components/NavBar/NavBar';
 
-document.addEventListener('DOMContentLoaded', () => {
-    console.log('Main PostUp page loaded');
-    // Additional initialization code for this page
-});
+// postup.js
+function initializePostUpPage() {
+    // Your code to initialize the post up page goes here
+    console.log("Post Up Page Initialized!");
+}
+
+initializePostUpPage();
