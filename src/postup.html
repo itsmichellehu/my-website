@@ -21,54 +21,6 @@
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
     rel="stylesheet" />
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
-  <script>
-    function toggleAccordion(button) {
-      const content = button.querySelector('.accordion__content');
-      const icon = button.querySelector('.accordion__icon');
-
-      content.classList.toggle('active');
-      icon.classList.toggle('rotate');
-
-      if (content.classList.contains('active')) {
-        content.style.maxHeight = content.scrollHeight + 'px';
-      } else {
-        content.style.maxHeight = 0;
-      }
-    }
-
-    document.addEventListener('DOMContentLoaded', () => {
-      // Attach click event listeners to all accordion headers
-      document.querySelectorAll('.accordion').forEach(accordion => {
-        accordion.addEventListener('click', function () {
-          toggleAccordion(this);
-        });
-      });
-    });
-  </script>
-  <script>
-    function toggleAccordion(button) {
-      const content = button.querySelector('.prototype-accordion_content');
-      const icon = button.querySelector('.prototype-accordion_icon');
-
-      content.classList.toggle('active');
-      icon.classList.toggle('rotate');
-
-      if (content.classList.contains('active')) {
-        content.style.maxHeight = content.scrollHeight + 'px';
-      } else {
-        content.style.maxHeight = 0;
-      }
-    }
-
-    document.addEventListener('DOMContentLoaded', () => {
-      // Attach click event listeners to all accordion headers
-      document.querySelectorAll('.prototype-accordion').forEach(accordion => {
-        accordion.addEventListener('click', function () {
-          toggleAccordion(this);
-        });
-      });
-    });
-  </script>
 </head>
 
 <body>
@@ -1683,24 +1635,56 @@
     </section>
   </main>
   <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      // Attach click event listeners to all accordion headers
-      document.querySelectorAll('.accordion').forEach(accordion => {
-        accordion.addEventListener('click', function () {
-          toggleAccordion(this);
+    function toggleAccordion(button) {
+      const content = button.querySelector('.accordion__content');
+      const icon = button.querySelector('.accordion__icon');
+
+      content.classList.toggle('active');
+      icon.classList.toggle('rotate');
+
+      if (content.classList.contains('active')) {
+        content.style.maxHeight = content.scrollHeight + 'px';
+      } else {
+        content.style.maxHeight = 0;
+      }
+    }
+    function initializeAccordion() {
+      document.addEventListener('DOMContentLoaded', () => {
+        // Attach click event listeners to all accordion headers
+        document.querySelectorAll('.accordion').forEach(accordion => {
+          accordion.addEventListener('click', function () {
+            toggleAccordion(this);
+          });
         });
       });
-    });
+    }
   </script>
   <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      // Attach click event listeners to all accordion headers
-      document.querySelectorAll('.prototype-accordion').forEach(accordion => {
-        accordion.addEventListener('click', function () {
-          toggleAccordion(this);
+    function togglePrototypeAccordion(button) {
+      const content = button.querySelector('.prototype-accordion_content');
+      const icon = button.querySelector('.prototype-accordion_icon');
+
+      if (content && icon) {
+        content.classList.toggle('active');
+        icon.classList.toggle('rotate');
+
+        if (content.classList.contains('active')) {
+          content.style.maxHeight = content.scrollHeight + 'px';
+        } else {
+          content.style.maxHeight = 0;
+        }
+      }
+    }
+    function initializeAccordion() {
+      document.addEventListener('DOMContentLoaded', () => {
+        // Attach click event listeners to all accordion headers
+        document.querySelectorAll('.prototype-accordion').forEach(accordion => {
+          accordion.addEventListener('click', function () {
+            togglePrototypeAccordion(this);
+          });
         });
       });
-    });
+    }
   </script>
   <script src="js/postup.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
