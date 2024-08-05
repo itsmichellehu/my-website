@@ -24,8 +24,8 @@
 </head>
 
 <body>
-  <nav>
-    <div class="navbar-wrapper">
+  <nav id="navbar" class="navbar default-nav-color">
+    <div id="navbar-wrapper" class="navbar-wrapper">
       <div class="navbar-logo-wrapper">
         <img src="assets/svg/home/logo-mhu-black.svg" class="navbar-logo-image" alt="Logo" />
       </div>
@@ -1725,6 +1725,41 @@
     </section>
   </main>
   <script src="js/postup.js"></script>
+  <script> document.addEventListener('DOMContentLoaded', function () {
+      const navbar = document.getElementById('navbar');
+      document.addEventListener('scroll', function () {
+        if (window.scrollY > 0) {
+          navbar.classList.add('scrolled-navbar');
+
+        } else {
+          navbar.classList.remove('scrolled-navbar');
+        }
+      });
+    });</script>
+  <script>
+    document.addEventListener('scroll', function () {
+      const navbar = document.getElementById('navbar');
+      const sections = document.querySelectorAll('section');
+      let currentSection = '';
+      const viewportWidth = window.innerWidth;
+
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        const scrollPosition = window.scrollY;
+
+        if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+          currentSection = section.getAttribute('id');
+        }
+      });
+
+      navbar.style.backgroundColor = 'white';
+
+      if (currentSection === 'hero') {
+        navbar.style.backgroundColor = 'transparent';
+      }
+    });
+  </script>
   <script>
     function toggleAccordion(button) {
       const content = button.querySelector('.accordion__content');

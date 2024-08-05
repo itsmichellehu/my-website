@@ -62,7 +62,6 @@
 	}
 
 	@include breakpoint(lg) {
-		height: calc(55vh - 2.5rem);
 		padding-top: 4rem;
 		max-height: none;
 

@@ -1,4 +1,6 @@
-nav {
+$progress-bar-height: 6px;
+
+.navbar {
 	display: flex;
 	position: fixed;
 	background: #ffffff;
@@ -7,19 +9,28 @@ nav {
 	width: 100%;
 	justify-content: space-between;
 	align-items: center;
-	height: 3.5rem;
+	height: 4rem;
 	top: 0;
 	z-index: 1000;
+	transition: background-color 0.3s ease, height 0.5s ease;
 	background: #fff;
+
 }
+
+.navbar.scrolled-navbar {
+	margin-top: $progress-bar-height;
+	height: 3rem;
+}
+
 
 .navbar-wrapper {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
 	margin: auto;
-	width: 90vw;
+	width: 95vw;
 	align-items: center;
+	height: 100%;
 }
 
 $navbar-logo-size-mobile: 1.5rem;
@@ -93,18 +104,18 @@ $navbar-logo-size-mobile: 1.5rem;
 // 	margin-bottom: 1rem;
 // }
 @include breakpoint(med) {
-	nav {
-		height: 5rem;
-	}
-
 	.navbar-logo-image {
-		width: 2.25rem;
-		height: 2.25rem;
+		width: 1.75rem;
+		height: 1.75rem;
 	}
 
 	.navbar-wrapper {
-		height: 3rem;
 		max-width: $nav-footer-max-width;
+		height: 1.75rem;
+	}
+
+	.scrolled-navbar-wrapper {
+		max-width: none;
 	}
 
 	.navbar-menu {

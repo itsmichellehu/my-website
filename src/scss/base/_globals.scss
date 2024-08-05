@@ -1,10 +1,12 @@
 $nav-footer-max-width: 88rem;
+$progress-bar-height: 6px;
 
 html {
 	text-size-adjust: none;
 	padding: 0;
 	margin: 0;
 	width: 100vw;
+	overflow-x: hidden;
 	-webkit-text-size-adjust: 100%; // Prevents adjustments of font size by mobile browsers
 	-ms-text-size-adjust: 100%; // For IE
 }
@@ -21,31 +23,74 @@ body {
 	font-family: "Inter", sans-serif;
 	padding: 0;
 	margin: 0;
-	width: 100vw;
+	width: calc(100vw + 8px);
 	text-align: left;
 	background-color: white;
-	overflow-x: visible;
+	overflow-x: hidden;
+	overflow-y: auto;
 }
 
+/* Reset margins and padding for the HTML and body */
+html,
+body {
+	margin: 0;
+	padding: 0;
+	overflow-x: hidden;
+	/* Prevent horizontal overflow */
+}
+
+/* For WebKit browsers (Chrome, Safari, Edge) */
+body {
+	margin: 0;
+	padding: 0;
+	overflow-y: scroll;
+	/* Ensure scrollbar is always visible */
+}
+
+::-webkit-scrollbar {
+	width: 8px;
+	border: none;
+	/* Width of the entire scrollbar */
+}
+
+::-webkit-scrollbar-track {
+	background: $lightest-grey;
+	border: 0;
+	/* Make the track transparent */
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: rgba(0, 0, 0, 0.3);
+	/* Light thumb color for better visibility */
+	border-radius: 4px;
+	/* Rounded corners */
+	transition: background-color 0.3s ease;
+	/* Smooth transition */
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background-color: rgba(0, 0, 0, 0.5);
+	/* Darker thumb on hover */
+}
+
+/* For Firefox */
 * {
-	scrollbar-width: none; /* Firefox */
-	-ms-overflow-style: none; /* Internet Explorer 10+ */
+	scrollbar-width: thin;
+	/* Make scrollbar thinner */
+	scrollbar-color: $lightest-grey;
+	/* Thumb color and track color */
 }
 
-*::-webkit-scrollbar {
-	display: none; /* Safari and Chrome */
+*::-webkit-scrollbar-corner {
+	background: transparent;
+	/* Transparent corner for combined scrollbars */
 }
 
 main {
 	padding: 0;
 	margin: 0;
-	margin-top: 3rem;
 	width: 100vw;
 	overflow-x: visible;
-
-	@include breakpoint(med) {
-		margin-top: 4rem;
-	}
 }
 
 article,
@@ -84,7 +129,8 @@ a {
 
 abbr[title] {
 	border-bottom: none; // Removes underline on abbreviations
-	text-decoration: underline; /* 2 */
+	text-decoration: underline;
+	/* 2 */
 	text-decoration: underline dotted; // Adds dotted underline
 }
 
@@ -139,9 +185,12 @@ input,
 optgroup,
 select,
 textarea {
-	font-family: inherit; /* 1 */
-	font-size: 100%; /* 1 */
-	line-height: 1.15; /* 1 */
+	font-family: inherit;
+	/* 1 */
+	font-size: 100%;
+	/* 1 */
+	line-height: 1.15;
+	/* 1 */
 	margin: inherit;
 }
 
@@ -220,12 +269,18 @@ fieldset {
   */
 
 legend {
-	box-sizing: border-box; /* 1 */
-	color: inherit; /* 2 */
-	display: table; /* 1 */
-	max-width: 100%; /* 1 */
-	padding: 0; /* 3 */
-	white-space: normal; /* 1 */
+	box-sizing: border-box;
+	/* 1 */
+	color: inherit;
+	/* 2 */
+	display: table;
+	/* 1 */
+	max-width: 100%;
+	/* 1 */
+	padding: 0;
+	/* 3 */
+	white-space: normal;
+	/* 1 */
 }
 
 /**
@@ -251,8 +306,10 @@ textarea {
 
 [type="checkbox"],
 [type="radio"] {
-	box-sizing: border-box; /* 1 */
-	padding: 0; /* 2 */
+	box-sizing: border-box;
+	/* 1 */
+	padding: 0;
+	/* 2 */
 }
 
 /**
@@ -270,9 +327,11 @@ textarea {
   */
 
 [type="search"] {
-	-webkit-appearance: textfield; /* 1 */
+	-webkit-appearance: textfield;
+	/* 1 */
 	appearance: textfield;
-	outline-offset: -2px; /* 2 */
+	outline-offset: -2px;
+	/* 2 */
 }
 
 /**
@@ -281,9 +340,12 @@ textarea {
 
 [type="search"]::-webkit-search-decoration {
 	appearance: none;
-	-webkit-appearance: none; /* For Safari and Chrome */
-	-moz-appearance: none; /* For Firefox */
-	-ms-appearance: none; /* For Internet Explorer */
+	-webkit-appearance: none;
+	/* For Safari and Chrome */
+	-moz-appearance: none;
+	/* For Firefox */
+	-ms-appearance: none;
+	/* For Internet Explorer */
 }
 
 /**
@@ -292,8 +354,10 @@ textarea {
   */
 
 ::-webkit-file-upload-button {
-	-webkit-appearance: button; /* 1 */
-	font: inherit; /* 2 */
+	-webkit-appearance: button;
+	/* 1 */
+	font: inherit;
+	/* 2 */
 }
 
 /* Interactive
