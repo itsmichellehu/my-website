@@ -237,7 +237,7 @@ main {
 .container-full-width {
 	.content,
 	.content-wrapper {
-		margin-bottom: 3rem;
+		margin-bottom: 2rem;
 
 		&:first-child {
 			margin-top: 0;
@@ -245,6 +245,10 @@ main {
 
 		&:last-child {
 			margin-bottom: 0;
+		}
+
+		@include breakpoint(med) {
+			margin-bottom: 3rem;
 		}
 	}
 }
