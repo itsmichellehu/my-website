@@ -150,55 +150,66 @@
         </header>
         <p class="span-fw-medium">
           I was tasked with designing a subscription-based mobile app for PostUp,
-          priced at $5.99 per month. The available user research was limited, consisting of data
-          from 9 interviews, 8 quotes, a single user persona, and one interview recording.
+          priced at $5.99 per month. I received limited materials and had to work independently with
+          no support on a time crunch.
         </p>
       </div>
-      <div class="card">
+      <div class="card card-constraints">
         <div class="constraints-content-container">
+          <div class="constraint-grid-container">
+            <div class="svg-wrapper">
+              <img src="assets/svg/constraint-business.svg" alt="" />
+            </div>
+            <p class="subheading">Business</p>
+            <ul class="business-list-min-content">
+              <li>Mobile-app</li>
+              <li>$5.99 monthly fee</li>
+              <li>Existing spots only</li>
+            </ul>
+            <ul class="business-list-max-content">
+              <li>Mobile-app solution</li>
+              <li>$5.99 monthly subscription fee</li>
+              <li>Feature existing spots only</li>
+            </ul>
+          </div>
+          <div class="constraint-grid-container">
+            <div class="svg-wrapper">
+              <img src="assets/svg/constraint-time--flat.svg" alt="" />
+            </div>
+            <p class="subheading">Time</p>
+            <ul>
+              <li class="hide-mobile-lg-to-sm">Tight 5-day deadline</li>
+              <li class="show-mobile-lg-only">5-day deadline</li>
+              <li>Limited testing</li>
+              <li>Limited iterations</li>
+            </ul>
+          </div>
           <div class="constraint-grid-container">
             <div class="svg-wrapper">
               <!-- <img src="assets/svg/constraint-research.svg" alt="" /> -->
               <img src="assets/svg/ic-paper-folder.svg" alt="" />
             </div>
-            <div>
-              <p class="subheading">Resource</p>
-              <ul class="resource-constraints-grid">
-                <li>Limited research materials</li>
-                <li>No access to PostUp personnel</li>
-                <li>No access to current customers</li>
-              </ul>
-            </div>
-          </div>
-          <div class="constraint-grid-container">
-            <div class="svg-wrapper">
-              <img src="assets/svg/constraint-business.svg" alt="" />
-            </div>
-            <div>
-              <p class="subheading">Product and business</p>
-              <ul>
-                <li>Mobile-app solution</li>
-                <li>$5.99 monthly subscription fee</li>
-                <li>Feature existing places only</li>
-              </ul>
-            </div>
-          </div>
-          <div class="constraint-grid-container">
-            <div class="svg-time-wrapper">
-              <img class="svg-time" src="assets/svg/constraint-time--flat.svg" alt="" />
-            </div>
-            <div>
-              <p class="subheading">Time</p>
-              <ul>
-                <li>Tight 5 day deadline</li>
-                <li>Limited iterations and testing</li>
-              </ul>
-            </div>
+            <p class="subheading">Resource</p>
+            <ul class="hide-mobile-lg-to-sm">
+              <li>Limited research materials</li>
+              <li>No access to PostUp personnel</li>
+              <li>No access to current users</li>
+            </ul>
+            <ul class="show-mobile-lg-only">
+              <li>Limited research materials</li>
+              <li>No access to PostUp personnel</li>
+              <li>No access to current users</li>
+            </ul>
+            <!-- <ul class="show-sm-only">
+              <li>Limited research</li>
+              <li>No access to personnel</li>
+              <li>No access to users</li>
+            </ul> -->
           </div>
         </div>
       </div>
     </section>
-    <section id="the-solution" class="section-container equal-padding bg-lightest-grey border">
+    <section id="the-solution" class="section-container equal-padding border">
       <div class="the-solution-prototype_section-grid-container">
         <div class="the-solution-prototype_wrapper">
           <div class="the-solution-prototype_grid-container">
@@ -274,7 +285,7 @@
           deliver a design and business solution for PostUp.</p>
       </div>
     </section>
-    <section id="monday" class="section-container border-0 pb-0">
+    <section id="monday" class="section-container">
       <header class="header-container">
         <h2>
           <span>Monday</span>
@@ -457,33 +468,33 @@
           </div>
         </div>
       </div>
-      <div class="content-wrapper mt-0">
+      <div class="content-wrapper mt-0 mb-8">
         <p class="secondary-text">
           In sum, remote workers struggle to find suitable workspaces due to limited accurate and
           relevant information about work
           environment details online.
         </p>
-        <p>
+        <p class="mb-32">
           Misinformation about amenities like
           availability of outlets, Wi-Fi stability, and noise levels cause people to
           sacrifice valuable time on searching and traveling to unsuitable
           places.
-        </p>
+          </pc>
         <header class="header-container">
-          <h4>Refining PostUp's user persona: Meet Nina</h4>
+          <h3>Meet Nina</h3>
         </header>
-        <figure>
-          <img class="img-100" style="background-color: #f6f6f6" alt="" loading="lazy"
-            src="assets/images/postup/user-persona-nina.png" />
-        </figure>
         <p class="mb-0">
-          Drawing from my insights, I refined the user persona PostUp provided to better guide the
-          rest of my sprint. Meet Nina! She is a
+          Using my new insights, I refined the user persona provided by PostUp to better guide the
+          rest of my project. Meet Nina! She is a
           freelance copywriter who travels around Seattle, WA, for client meetings and remote work
           at least three days a week.
         </p>
       </div>
-      <section class="subsection">
+      <figure class="image-width-large">
+        <img class="img-100 bg-lightest-grey mb-16" alt="" loading="lazy"
+          src="assets/images/postup/user-persona-nina.png" />
+      </figure>
+      <div>
         <header class="header-container">
           <h3>
             <span>remote worker journey</span>
@@ -491,40 +502,38 @@
             Brainstorming an end-to-end experience for Nina
           </h3>
         </header>
-        <div class="content-wrapper">
+        <div class="content-wrapper mb-8">
           <p>To streamline Nina's search for nearby workspaces, I mapped a possible journey that
             focus on her routine tasks and
             environment preferences.</p>
         </div>
-        <div class="container-full-width mb-0">
-          <img class="img-user-journey center" alt="" loading="lazy"
-            src="assets/images/postup/flow-chart-procreate.jpeg" />
-          <div class="content-wrapper">
-            <div class="caption-container">
-              <ol class="mt-0">
-                <li>
-                  <span>Select remote work goal: </span>quiet work, meeting,
-                  call
-                </li>
-                <li>
-                  <span>Adjust search filters: </span>amenities, noise level,
-                  distance, table sizes, etc.
-                </li>
-                <li>
-                  <span>Initiate search</span>
-                </li>
-              </ol>
-            </div>
-            <p class="medium-grey">
-              Note: I considered taking Nina straight to results but decided to allow her to adjust
-              filters
-              first in case her preferences differ from the presets. However, this ended up
-              changing,
-              so keep reading to find out why!
-            </p>
-          </div>
+      </div>
+      <img class="image-width-large center" alt="" loading="lazy"
+        src="assets/images/postup/flow-chart-procreate.jpeg" />
+      <div class="content-wrapper mt-16">
+        <div class="caption-container">
+          <ol class="mt-0">
+            <li>
+              <span>Select remote work goal: </span>quiet work, meeting,
+              call
+            </li>
+            <li>
+              <span>Adjust search filters: </span>amenities, noise level,
+              distance, table sizes, etc.
+            </li>
+            <li>
+              <span>Initiate search</span>
+            </li>
+          </ol>
         </div>
-      </section>
+        <p class="medium-grey">
+          Note: I considered taking Nina straight to results but decided to allow her to adjust
+          filters
+          first in case her preferences differ from the presets. However, this ended up
+          changing,
+          so keep reading to find out why!
+        </p>
+      </div>
     </section>
     <section id="tuesday" class="section-container border">
       <header class="header-container">
@@ -549,7 +558,7 @@
             features. Therefore, I conducted lightning demos of Airbnb, Google Maps, Credit Karma,
             and
             Betterment to gather best practices and insights into user expectations.</p>
-          <div class="content-grid mv-32">
+          <div class="content-grid mv-40">
             <div>
               <img class="img-100" alt="" loading=" lazy"
                 src="assets/images/postup/lightning-demos.png" />
@@ -561,7 +570,7 @@
               </p>
             </aside>
           </div>
-          <button class="accordion mb-16" onclick="toggleAccordion()">
+          <button class="accordion mb-16" onclick="toggleAccordion(this)">
             <div class="accordion__header">
               <p>What are lightning demos?</p>
               <img class="accordion__icon" src="assets/svg/ic-chevron-arrow__down--white.svg" />
@@ -647,7 +656,7 @@
             "search results" screen (the middle screen below) because it is the
             central hub for remote workers to compare and decide on a workspace.
           </p>
-          <button class="accordion mv-24" onclick="toggleAccordion()">
+          <button class="accordion mv-24" onclick="toggleAccordion(this)">
             <div class="accordion__header">
               <p>What qualifies as "the most critical screen"?</p>
               <img class="accordion__icon" src="assets/svg/ic-chevron-arrow__down--white.svg" />
@@ -725,7 +734,7 @@
           my principles of creating scalable and adaptable solutions, which further developed my
           user flow. Here are some highlights:</p>
       </div>
-      <div class="container-full-width pv-40 mb-0">
+      <div class="container-full-width pv-40 mb-0 hide">
         <div class="tabs-container" data-current="Tab 1" data-duration-in="300"
           data-duration-out="100" data-easing="ease">
           <div class="tabs-menu">
