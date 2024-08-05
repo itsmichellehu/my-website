@@ -21,16 +21,15 @@
 	background-color: transparent;
 
 	@include breakpoint(med) {
-		background-color: #fff;
-		padding: 2rem;
+		// padding: 2rem;
 		max-width: 90vw;
 		width: fit-content;
-		border-radius: 1.5rem;
+		// border-radius: 1.5rem;
 	}
 
-	@include breakpoint(lg) {
-		padding: 3rem;
-	}
+	// @include breakpoint(lg) {
+	// 	padding: 3rem;
+	// }
 
 	&.medium {
 		max-width: 1080px;
@@ -43,7 +42,7 @@
 	}
 }
 
-.constraints-content-container {
+.constraints-grid-container {
 	display: flex;
 	flex-direction: column;
 	align-items: start;
@@ -55,29 +54,9 @@
 	.subheading {
 		font-size: 1.25rem;
 	}
-
-	@include breakpoint(mobile-lg) {
-		width: 90vw;
-		display: grid;
-		grid-template-columns: repeat(2, 1fr);
-		grid-template-rows: auto auto;
-		grid-template-areas: "a b" "c c";
-
-		:first-child {
-			grid-area: a;
-		}
-
-		:nth-child(2) {
-			grid-area: b;
-		}
-
-		:last-child {
-			grid-area: c;
-		}
-	}
 }
 
-.constraint-grid-container {
+.constraints-grid-item {
 	display: grid;
 	grid-template-columns: 1fr auto;
 	grid-template-rows: auto auto;
@@ -93,10 +72,12 @@
 	height: 100%;
 
 	ul {
+		margin-top: 0;
 		margin-bottom: 0;
 		list-style-type: none;
 		grid-area: c;
 		gap: 0;
+		height: 100%;
 
 		li {
 			font-size: 1rem;
@@ -142,9 +123,41 @@
 		margin-bottom: 0;
 		grid-area: b;
 	}
+}
 
-	@include breakpoint(mobile-lg) {
-		padding: 1.25rem;
+@include breakpoint(sm) {
+	.constraints-grid-container {
+		// width: 90vw;
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-areas: "a b" "c d";
+		grid-template-rows: auto auto;
+
+		.constraints-grid-item.grid-item-01 {
+			grid-area: a;
+			padding-left: 2.25rem;
+		}
+
+		.constraints-grid-item.grid-item-02 {
+			grid-area: b;
+			padding-right: 2.25rem;
+		}
+
+		.constraints-grid-item.grid-item-03 {
+			grid-area: c;
+			padding-left: 2.25rem;
+		}
+
+		.constraints-grid-item.grid-item-04 {
+			grid-area: d;
+			padding-right: 2.25rem;
+		}
+	}
+
+	.constraints-grid-item {
+		padding: 1rem;
+		grid-template-columns: 1fr auto;
+		grid-template-rows: 2.25rem auto;
 		grid-template-areas: "b a" "c c";
 
 		.svg-wrapper {
@@ -155,25 +168,43 @@
 	}
 }
 
+$constraints-grid-item-padding-med: 1.5rem;
+
 @include breakpoint(med) {
-	.constraints-content-container {
-		width: fit-content;
-		gap: 2rem;
-		grid-template-columns: 1fr 1fr auto;
-		grid-template-rows: auto;
-		grid-template-areas: "a b c";
+	.constraints-grid-container {
+		width: 90vw;
+		gap: 1rem;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: auto auto;
+		max-width: $content-max-width;
 		margin: 0 auto;
 
-		.subheading {
-			font-size: 1.5rem;
+		.constraints-grid-item.grid-item-01 {
+			grid-area: a;
+			padding-left: $constraints-grid-item-padding-med;
+		}
+
+		.constraints-grid-item.grid-item-02 {
+			grid-area: b;
+			padding-right: $constraints-grid-item-padding-med;
+		}
+
+		.constraints-grid-item.grid-item-03 {
+			grid-area: c;
+			padding-left: $constraints-grid-item-padding-med;
+		}
+
+		.constraints-grid-item.grid-item-04 {
+			grid-area: d;
+			padding-right: $constraints-grid-item-padding-med;
 		}
 	}
 
-	.constraint-grid-container {
+	.constraints-grid-item {
 		display: flex;
 		flex-direction: column;
 		flex: 0 0 auto;
-		padding: 0;
+		padding: $constraints-grid-item-padding-med;
 		justify-content: start;
 		align-items: start;
 
@@ -189,23 +220,19 @@
 		}
 
 		ul {
-			margin-top: 0.5rem;
-			gap: 0.5rem;
 			width: 100%;
-		}
-
-		ul > li {
-			font-size: 1.125rem;
-			margin-bottom: 0.25rem;
 		}
 	}
 }
 
 @include breakpoint(lg) {
-	.constraints-content-container {
-		grid-template-columns: 1fr 1fr auto;
-		grid-template-areas: "c a b";
-		gap: 3rem;
+	.constraints-grid-container {
+		gap: 0.5rem;
+		grid-template-columns: repeat(4, 1fr);
+		grid-template-rows: auto;
+		grid-template-areas: "a b c d";
+		width: fit-content;
+		max-width: 1200px;
 	}
 }
 
