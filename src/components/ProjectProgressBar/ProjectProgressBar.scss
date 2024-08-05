@@ -1,0 +1,36 @@
+$progress-bar-height: 6px;
+
+#progress-bar-container {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #f9f9f9;
+    height: $progress-bar-height;
+    width: 100vw;
+    z-index: 1000;
+}
+
+#progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: $progress-bar-height;
+    background-color: #076261;
+    transition: width 0.15s ease-out;
+}
+
+#progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: $progress-bar-height;
+    background-color: #076261;
+    // background-color: #1e1e1e;
+    transition: width 0.15s ease-out;
+}
+
+$back-to-top-default-color: #4a4a4a;
+$back-to-top-hover-color: #28282D;
