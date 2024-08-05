@@ -20,3 +20,11 @@ function initializePostUpPage() {
 }
 
 initializePostUpPage();
+
+import BackToTopButton from '../components/BackToTopButton/BackToTopButton';
+import ProgressBar from '../components/ProjectProgressBar/ProjectProgressBar';
+
+document.addEventListener('DOMContentLoaded', () => {
+    BackToTopButton();
+    ProgressBar();
+});
