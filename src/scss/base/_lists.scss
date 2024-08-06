@@ -12,8 +12,6 @@ ol {
 		font-size: 1.125rem;
 		line-height: 150%;
 		text-align: left;
-		padding-left: 0.25rem;
-		transform: translateX(-0.25rem);
 		font-weight: normal;
 
 		span {
@@ -49,7 +47,6 @@ ul.list-none {
 	line-height: 150%;
 	list-style-type: decimal;
 	margin: 0;
-	padding-left: 24px;
 	grid-column-gap: 16px;
 	grid-row-gap: 16px;
 
@@ -67,22 +64,19 @@ ul.list-none {
 	}
 
 	&.numerical {
-		padding-left: 21px;
 		padding-bottom: 0;
 	}
 
-	&._8px {
+	&.gap-8 {
 		align-items: flex-start;
 		align-self: flex-start;
 		grid-column-gap: 8px;
 		grid-row-gap: 8px;
 		list-style-type: disc;
-		padding-left: 18px;
 		text-align: left;
 
 		&.numbered {
 			list-style-type: decimal;
-			padding-left: 24px;
 		}
 	}
 
