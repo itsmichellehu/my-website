@@ -5,9 +5,6 @@ function NavBar() {
                 <div class="navbar-logo-wrapper"><a href="/"><img src="assets/svg/home/logo-mhu-black.svg" class="navbar-logo-image" alt="Logo" /></a>
 
                 </div>
-                <div class="navbar-menu-toggle menu-icon">
-                    <img src="assets/svg/home/ic-menu.svg" class="ic-menu" alt="Menu Icon" />
-                </div>
                 <ul class="navbar-menu" id="menu">
                     <li class="nav-item"><a href="/">Work</a></li>
                     <li class="nav-item"><a href="/about.html">About</a></li>
