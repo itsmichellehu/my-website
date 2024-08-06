@@ -1,4 +1,5 @@
-$progress-bar-height: 6px;
+$progress-bar-height-mobile: 4px;
+$progress-bar-height-med: 6px;
 
 #progress-bar-container {
     display: flex;
@@ -6,7 +7,7 @@ $progress-bar-height: 6px;
     top: 0;
     left: 0;
     background: #f9f9f9;
-    height: $progress-bar-height;
+    height: $progress-bar-height-mobile;
     width: 100vw;
     z-index: 2000;
 }
@@ -16,9 +17,19 @@ $progress-bar-height: 6px;
     top: 0;
     left: 0;
     width: 0%;
-    height: $progress-bar-height;
+    height: $progress-bar-height-mobile;
     background-color: #076261;
     transition: width 0.25s ease;
+}
+
+@media (min-width: 768px) {
+    #progress-bar-container {
+        height: $progress-bar-height-med;
+    }
+
+    #progress-bar {
+        height: $progress-bar-height-med;
+    }
 }
 
 $back-to-top-default-color: #4a4a4a;
