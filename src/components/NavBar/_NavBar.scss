@@ -30,7 +30,7 @@ nav {
 	flex-direction: row;
 	justify-content: space-between;
 	margin: auto;
-	width: 95vw;
+	width: 90vw;
 	align-items: center;
 	height: 100%;
 }
@@ -58,6 +58,8 @@ nav {
 	margin-top: 0;
 	justify-content: center;
 	gap: 1rem;
+
+	transform: none;
 }
 
 .nav-item {

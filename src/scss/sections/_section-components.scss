@@ -21,7 +21,7 @@
 
 	>img,
 	figure {
-		margin: 2rem auto;
+		margin: 1rem auto;
 	}
 
 	&.border-0 {
@@ -71,6 +71,12 @@
 
 		&.equal-padding {
 			padding: 4rem 0;
+		}
+
+
+		>img,
+		figure {
+			margin: 2rem auto;
 		}
 	}
 
