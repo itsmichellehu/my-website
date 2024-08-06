@@ -107,7 +107,8 @@ $section-padding-mobile: 2.5rem;
 .about-details_grid-container {
 	display: grid;
 	grid-template-columns: auto 1fr;
-	grid-template-rows: auto auto; /* Automatic row sizing based on content */
+	grid-template-rows: auto auto;
+	/* Automatic row sizing based on content */
 	column-gap: 1.5rem;
 	row-gap: 0.25rem;
 	grid-template-areas: "a b" "a c";
@@ -123,10 +124,12 @@ $section-padding-mobile: 2.5rem;
 		align-items: center;
 		justify-content: center;
 		grid-area: a;
-		img {
+
+		svg {
 			width: 1.5rem;
 			height: 1.5rem;
-			fill: #1e1e1e;
+			fill: $primary-color;
+			opacity: 0.75;
 		}
 	}
 
@@ -139,7 +142,8 @@ $section-padding-mobile: 2.5rem;
 			font-size: 0.6875rem;
 			font-style: normal;
 			font-weight: 600;
-			line-height: 100%; /* 0.6875rem */
+			line-height: 100%;
+			/* 0.6875rem */
 			letter-spacing: 0.04125rem;
 			text-transform: uppercase;
 			margin-bottom: 0;
@@ -155,7 +159,8 @@ $section-padding-mobile: 2.5rem;
 			font-size: 1rem;
 			font-style: normal;
 			font-weight: 500;
-			line-height: 125%; /* 1.09375rem */
+			line-height: 125%;
+			/* 1.09375rem */
 			margin-bottom: 0;
 		}
 	}
@@ -233,6 +238,7 @@ $section-padding-mobile: 2.5rem;
 
 @include breakpoint(lg) {
 	.section-about {
+		margin-top: 3rem;
 		padding: 3rem 0;
 		padding-bottom: 4rem;
 	}
