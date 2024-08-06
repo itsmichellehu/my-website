@@ -1,7 +1,7 @@
 .accordion {
 	background-color: #1f1f1f;
 	border-radius: 10px;
-	padding: 1rem 1.25rem;
+	padding: 0.75rem 1.25rem;
 	border: 0;
 	margin-top: 0;
 }
@@ -67,6 +67,7 @@
 			font-size: 1.35rem;
 			font-weight: normal;
 		}
+
 		.accordion__icon {
 			width: 2rem;
 			height: 2rem;
@@ -89,6 +90,7 @@
 			font-size: 1.35rem;
 			font-weight: normal;
 		}
+
 		.accordion__icon {
 			width: 2rem;
 			height: 2rem;
@@ -103,6 +105,7 @@
 @include breakpoint(med) {
 	.accordion {
 		margin-top: 0.5rem;
+		padding: 1rem 1.25rem;
 	}
 
 	.accordion__header {
