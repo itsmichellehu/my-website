@@ -32,9 +32,11 @@ import BackToTopButton from '../components/BackToTopButton/BackToTopButton';
 import ProgressBar from '../components/ProjectProgressBar/ProjectProgressBar';
 import NavBar from '../components/NavBar/NavBar';
 import NavBarBackground from '../components/NavBarBackground/NavBarBackground';
+import Footer from '../components/Footer/Footer';
 
 document.addEventListener('DOMContentLoaded', () => {
     BackToTopButton();
+    Footer();
     ProgressBar();
     NavBar();
     NavBarBackground();

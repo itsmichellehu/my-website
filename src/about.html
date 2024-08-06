@@ -11,14 +11,14 @@
         href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
         rel="stylesheet" />
     <link
-        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
-        rel="stylesheet" />
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <title>About</title>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script>document.addEventListener('DOMContentLoaded', () => {
+    <!-- <script>document.addEventListener('DOMContentLoaded', () => {
             document.querySelectorAll('.accordionHeader').forEach(button => {
                 button.addEventListener('click', () => {
                     const accordionContent = button.nextElementSibling;
@@ -38,7 +38,7 @@
                     }
                 });
             });
-        });</script>
+        });</script> -->
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             let isScrolling;
@@ -607,29 +607,7 @@
         </div>
         </section>
     </main>
-    <footer>
-        <div class="content hide">
-            <h2>Woah, you reached the bottom! 🎉</h2>
-            <p id="footer-text">
-                Thank you for getting to know me! I hope you give me the opportunity
-                to get to know you as well. Please take a look at my resume, connect
-                with me on <a href="www.linkedin.com/in/itsmichellehu">LinkedIn</a>, and/or shoot me
-                an <a href="mailto:mhu.contact@gmail.com">email</a>!
-            </p>
-        </div>
-        <div class="footer-wrapper">
-            <div>
-                <p id="yoursTruly">Designed and coded with love by yours truly. 👩🏻‍💻</p>
-                <p id="copyright-text">© 2024 Michelle Hu. All rights reserved.</p>
-            </div>
-            <div class="footer-cta-buttons hide">
-                <button id="scrollToProjects-2" class="btn-primary scroll-button">See my
-                    work</button>
-                <button class="btn-secondary">View my resume</button>
-            </div>
-        </div>
-    </footer>
-    <script src="js/about.js"></script>
+    <script src="/src/js/about.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
         document.getElementById('scrollToAbout').addEventListener('click', function () {
@@ -672,12 +650,6 @@
             });
         });
     </script>
-    <!-- <script src="/public/js/navBar.js"></script>
-    <script src="/public/js/home-page/accordion.js"></script>
-    <script src="/public/js/toolboxSwipe.js"></script>
-    <script src="/public/js/home-page/hmuSwipe.js"></script>
-    <script src="/public/js/home-page/projectGif.js"></script>
-    <script src="/public/js/scrollable.js"></script> -->
 </body>
 
 </html>
