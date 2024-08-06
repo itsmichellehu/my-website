@@ -6,26 +6,51 @@ ol {
 	margin-bottom: 0;
 	gap: 0.5rem;
 	text-align: left;
+	transform: translateX(1rem);
 
 	li {
 		color: var(--off-black);
-		font-size: 1.125rem;
 		line-height: 150%;
 		text-align: left;
 		font-weight: normal;
+		padding-left: 0.25rem;
 
 		span {
 			font-weight: 500;
 		}
 	}
 
-	&.list-transform-none li {
-		transform: none;
-		padding-left: 0;
-	}
 
 	&.gap--medium {
 		gap: 1rem;
+	}
+}
+
+.list-transform-none {
+	transform: none;
+
+	li {
+		padding-left: 0;
+	}
+}
+
+ol {
+	transform: translateX(1.15rem);
+
+	li {
+		padding-left: 0.5rem;
+	}
+}
+
+@include breakpoint(med) {
+
+	ul,
+	ol {
+		transform: none;
+	}
+
+	li {
+		font-size: 1.125rem;
 	}
 }
 
