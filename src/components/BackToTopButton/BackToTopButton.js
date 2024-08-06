@@ -1,5 +1,3 @@
-import './BackToTopButton.scss';
-
 function BackToTopButton() {
     const button = document.createElement('button');
     button.id = 'btn-back-to-top';
