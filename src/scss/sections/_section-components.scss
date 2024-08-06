@@ -19,7 +19,7 @@
 		margin-top: 0;
 	}
 
-	> img,
+	>img,
 	figure {
 		margin: 2rem auto;
 	}
@@ -36,7 +36,7 @@
 		align-items: left;
 		margin-top: 1.5rem;
 
-		> figure > img {
+		>figure>img {
 			margin: 0;
 		}
 
@@ -84,7 +84,7 @@
 	margin-top: 1.5rem;
 	overflow-x: visible !important;
 
-	> figure > img {
+	>figure>img {
 		margin: 0;
 	}
 
@@ -125,7 +125,7 @@
 	margin-bottom: 4rem;
 	width: 100%;
 
-	> .content {
+	>.content {
 		display: block;
 		max-width: $content-max-width;
 		width: 90vw;
@@ -133,7 +133,7 @@
 		align-items: left;
 		margin-top: 1.5rem;
 
-		> figure > img {
+		>figure>img {
 			margin: 0;
 		}
 
@@ -165,7 +165,7 @@
 }
 
 main {
-	div > img:only-child {
+	div>img:only-child {
 		margin: 0;
 	}
 }
@@ -179,7 +179,7 @@ main {
 	width: 100vw;
 	padding: 1rem 0;
 
-	.content > div {
+	.content>div {
 		margin: auto;
 	}
 
@@ -228,13 +228,17 @@ main {
 	max-width: 32rem;
 	width: 100%;
 	margin: 0;
-	margin-bottom: 2rem;
+
+	@include breakpoint(med) {
+		margin-bottom: 2rem;
+	}
 }
 
 // Extra classes
 .subsection,
 .section-container,
 .container-full-width {
+
 	.content,
 	.content-wrapper {
 		margin-bottom: 2rem;

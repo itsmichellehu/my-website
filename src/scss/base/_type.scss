@@ -33,8 +33,10 @@ p {
 
 /* Specific heading styles with colors and sizes */
 h1 {
-	font-size: 2.986rem; /* Example size, adjust as necessary */
-	color: $black; /* Assuming a color variable, adjust as needed */
+	font-size: 2.986rem;
+	/* Example size, adjust as necessary */
+	color: $black;
+	/* Assuming a color variable, adjust as needed */
 	margin-bottom: 0.5rem;
 }
 
@@ -55,7 +57,8 @@ h3 {
 	text-transform: none;
 	font-size: 1.728rem;
 	font-weight: 500;
-	line-height: 130%; /* Slightly adjusted for better readability */
+	line-height: 130%;
+	/* Slightly adjusted for better readability */
 	margin-bottom: 1.5rem;
 	margin-top: 1rem;
 }
@@ -64,7 +67,8 @@ h4 {
 	font-weight: 500;
 	letter-spacing: 0;
 	line-height: 130%;
-	color: $black; /* CSS variable, ensure it's defined in your styles */
+	color: $black;
+	/* CSS variable, ensure it's defined in your styles */
 	font-size: 1.44rem;
 	margin-top: 2rem;
 	margin-bottom: 1rem;
@@ -78,18 +82,47 @@ h5 {
 	font-weight: 500;
 	letter-spacing: 0;
 	line-height: 120%;
-	color: $off-black; /* CSS variable, ensure it's defined in your styles */
+	color: $off-black;
+	/* CSS variable, ensure it's defined in your styles */
 	font-size: 1.2rem;
 	margin-top: 2rem;
 	margin-bottom: 0.5rem;
 }
 
 h6 {
-	font-size: 1.2rem; /* Smallest heading, specify if needed */
+	font-size: 1.2rem;
+	/* Smallest heading, specify if needed */
 	line-height: 120%;
-	color: $primary-color; /* Example, adjust as necessary */
+	color: $primary-color;
+	/* Example, adjust as necessary */
 	margin-top: 2rem;
 	margin-bottom: 0.5rem;
+}
+
+@include breakpoint(med) {
+	h1 {
+		margin-bottom: 0;
+	}
+
+	h2 {
+		font-size: 2.1148rem;
+	}
+
+	h3 {
+		font-size: 1.728rem;
+	}
+
+	h4 {
+		font-size: 1.44rem;
+	}
+
+	h5 {
+		font-size: 1.2rem;
+	}
+
+	h6 {
+		font-size: 1.2rem;
+	}
 }
 
 .noto-serif {
