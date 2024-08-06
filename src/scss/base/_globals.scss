@@ -23,11 +23,10 @@ body {
 	font-family: "Inter", sans-serif;
 	padding: 0;
 	margin: 0;
-	width: calc(100vw + 8px);
 	text-align: left;
 	background-color: white;
 	overflow-x: hidden;
-	overflow-y: auto;
+	overflow-y: scroll;
 }
 
 /* Reset margins and padding for the HTML and body */
@@ -45,12 +44,6 @@ body {
 	padding: 0;
 	overflow-y: scroll;
 	/* Ensure scrollbar is always visible */
-}
-
-::-webkit-scrollbar {
-	width: 8px;
-	border: none;
-	/* Width of the entire scrollbar */
 }
 
 ::-webkit-scrollbar-track {
@@ -84,13 +77,6 @@ body {
 *::-webkit-scrollbar-corner {
 	background: transparent;
 	/* Transparent corner for combined scrollbars */
-}
-
-main {
-	padding: 0;
-	margin: 0;
-	width: 100vw;
-	overflow-x: visible;
 }
 
 article,
