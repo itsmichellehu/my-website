@@ -12,8 +12,8 @@
     justify-content: end;
 
     cursor: pointer;
-    height: 56px;
-    width: 56px;
+    height: 48px;
+    width: 48px;
     opacity: 0;
     visibility: hidden;
     overflow: hidden;
@@ -33,8 +33,8 @@
         display: inline-block;
         stroke: black;
         transition: stroke 0.3s ease;
-        width: 56px;
-        height: 56px;
+        width: 48px;
+        height: 48px;
         position: fixed;
     }
 
@@ -43,20 +43,30 @@
         visibility: visible;
     }
 
-    &:hover {
-        background-color: #28282D;
-        width: 11rem;
+    @include breakpoint(med) {
+        height: 56px;
+        width: 56px;
 
-        .btn-back-to-top-label {
-            padding-right: 56px;
-            display: inline-flex;
-            opacity: 1;
-            color: #fff;
-            font-weight: 500;
+        .btn-back-to-top-svg {
+            width: 56px;
+            height: 56px;
         }
 
-        svg {
-            stroke: white;
+        &:hover {
+            background-color: #28282D;
+            width: 11rem;
+
+            .btn-back-to-top-label {
+                padding-right: 56px;
+                display: inline-flex;
+                opacity: 1;
+                color: #fff;
+                font-weight: 500;
+            }
+
+            svg {
+                stroke: white;
+            }
         }
     }
 }
