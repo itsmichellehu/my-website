@@ -28,12 +28,12 @@ p {
 	line-height: 145%;
 	margin-bottom: 1.25rem;
 	margin-top: 0;
-	font-size: 1.125rem;
+	font-size: 1.05rem;
 }
 
 /* Specific heading styles with colors and sizes */
 h1 {
-	font-size: 2.986rem;
+	font-size: 2.53rem;
 	/* Example size, adjust as necessary */
 	color: $black;
 	/* Assuming a color variable, adjust as needed */
@@ -43,7 +43,7 @@ h1 {
 h2 {
 	color: $black;
 	flex: 1;
-	font-size: 2.1148rem;
+	font-size: 1.8rem;
 	font-style: normal;
 	font-weight: 500;
 	line-height: 125%;
@@ -55,11 +55,11 @@ h3 {
 	color: $primary-color;
 	letter-spacing: 0;
 	text-transform: none;
-	font-size: 1.728rem;
+	font-size: 1.45rem;
 	font-weight: 500;
 	line-height: 130%;
 	/* Slightly adjusted for better readability */
-	margin-bottom: 1.5rem;
+	margin-bottom: 0.75rem;
 	margin-top: 1rem;
 }
 
@@ -69,7 +69,7 @@ h4 {
 	line-height: 130%;
 	color: $black;
 	/* CSS variable, ensure it's defined in your styles */
-	font-size: 1.44rem;
+	font-size: 1.25rem;
 	margin-top: 2rem;
 	margin-bottom: 1rem;
 
@@ -100,7 +100,12 @@ h6 {
 }
 
 @include breakpoint(med) {
+	p {
+		font-size: 1.125rem;
+	}
+
 	h1 {
+		font-size: 2.986rem;
 		margin-bottom: 0;
 	}
 
@@ -110,6 +115,8 @@ h6 {
 
 	h3 {
 		font-size: 1.728rem;
+		margin-bottom: 1.5rem;
+		margin-top: 1rem;
 	}
 
 	h4 {

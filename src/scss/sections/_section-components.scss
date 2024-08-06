@@ -12,7 +12,7 @@
 	}
 
 	&.equal-padding {
-		padding: 3rem 0;
+		padding: 2rem 0;
 	}
 
 	> :first-child {
@@ -70,6 +70,14 @@
 		padding: 4rem 0 calc(6.12rem - 5px) 0;
 
 		&.equal-padding {
+			padding: 4rem 0;
+		}
+	}
+
+	@include breakpoint(lg) {
+		padding: 4rem 0 calc(6.12rem - 5px) 0;
+
+		&.equal-padding {
 			padding: 6rem 0;
 		}
 	}
@@ -122,7 +130,7 @@
 	display: block;
 	margin: auto;
 	padding: 0;
-	margin-bottom: 4rem;
+	margin-bottom: 2rem;
 	width: 100%;
 
 	>.content {
@@ -161,6 +169,12 @@
 		> :first-child {
 			margin-top: 0;
 		}
+	}
+}
+
+@include breakpoint(med) {
+	.subsection {
+		margin-bottom: 4rem;
 	}
 }
 
