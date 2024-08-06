@@ -23,8 +23,6 @@ import Footer from '../components/Footer/Footer';
 
 import { initializeAccordion } from '../components/ProjectAccordion/ProjectAccordion';
 
-import StashedFeaturesSection from "../components/PostUpSections/StashedFeaturesSection";
-
 document.addEventListener('DOMContentLoaded', () => {
     NavBar();
     NavBarBackground();
@@ -32,6 +30,4 @@ document.addEventListener('DOMContentLoaded', () => {
     BackToTopButton();
     Footer();
     initializeAccordion();
-
-    StashedFeaturesSection();
 });
