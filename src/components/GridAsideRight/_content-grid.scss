@@ -4,18 +4,19 @@
 	gap: 1rem;
 	width: 90vw;
 	max-width: $content-max-width;
-	margin: auto; /* Center the container */
+	margin: auto;
+	/* Center the container */
 	margin-bottom: 1.25rem;
 
 	p:last-child {
 		margin-bottom: 0;
 	}
 
-	> p {
+	>p {
 		margin-top: 0;
 	}
 
-	> div > :first-child {
+	>div> :first-child {
 		margin-top: 0;
 	}
 
@@ -25,37 +26,40 @@
 
 	aside {
 		p {
-			font-size: 1.125rem;
 			color: #00bdd6;
 			font-family: "Noto Serif", sans-serif;
 			margin: 0;
-			margin-top: 1rem;
 		}
 	}
 
 	@include breakpoint(xl) {
 		display: grid;
-		grid-template-columns: 1fr auto; /* Content and side notes */
+		grid-template-columns: 1fr auto;
+		/* Content and side notes */
 		width: 90vw;
 		max-width: $content-max-width;
 
-		> div:first-child {
-			grid-column: 1 / 2; /* Content occupies the first column */
+		>div:first-child {
+			grid-column: 1 / 2;
+			/* Content occupies the first column */
 			width: 90vw;
 			max-width: $content-max-width;
 			text-align: left;
 		}
 
-		> p:first-child {
-			grid-column: 1 / 2; /* Content occupies the first column */
+		>p:first-child {
+			grid-column: 1 / 2;
+			/* Content occupies the first column */
 			width: 90vw;
 			max-width: $content-max-width;
 		}
 
 		aside {
-			grid-column: 2 / 3; /* Side notes in the second column */
+			grid-column: 2 / 3;
+			/* Side notes in the second column */
 			min-width: 15vw;
 			max-width: 100%;
+			margin-top: 1rem;
 			margin-left: 1.5rem;
 		}
 	}
@@ -65,7 +69,8 @@
 		grid-template-rows: auto;
 		width: 90vw;
 		max-width: 1000px;
-		margin: auto; /* Center the container */
+		margin: auto;
+		/* Center the container */
 
 		aside {
 			p {
@@ -77,21 +82,24 @@
 		}
 
 		@include breakpoint(med) {
-			> div:first-child {
-				grid-column: 1 / 2; /* Content occupies the first column */
+			>div:first-child {
+				grid-column: 1 / 2;
+				/* Content occupies the first column */
 				width: 90vw;
 				max-width: 800px;
 				text-align: left;
 			}
 
-			> p:first-child {
-				grid-column: 1 / 2; /* Content occupies the first column */
+			>p:first-child {
+				grid-column: 1 / 2;
+				/* Content occupies the first column */
 				width: 90vw;
 				max-width: 800px;
 			}
 
 			aside {
-				grid-column: 2 / 3; /* Side notes in the second column */
+				grid-column: 2 / 3;
+				/* Side notes in the second column */
 				min-width: 20vw;
 				max-width: 320px;
 				padding-left: 1.5rem;
