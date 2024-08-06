@@ -80,10 +80,6 @@
 	transform: none !important;
 	box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.05);
 
-	&.first-child {
-		margin-left: 5vw;
-	}
-
 	&.last-child {
 		margin-right: 5vw;
 	}
@@ -155,6 +151,10 @@ $stashed-feature-font-color: $black;
 		flex: 1;
 		transform: none !important;
 		box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.05);
+
+		&.first-child {
+			margin-left: 5vw;
+		}
 
 		&.first-child,
 		&.last-child {
