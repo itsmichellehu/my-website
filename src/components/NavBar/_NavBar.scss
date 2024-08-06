@@ -1,9 +1,11 @@
 $progress-bar-height: 6px;
+$navbar-logo-size-mobile: 1.5rem;
+$nav-footer-max-width: 88rem;
 
-.navbar {
+nav {
 	display: flex;
 	position: fixed;
-	background: #ffffff;
+	// background: #ffffff;
 	color: #1e1e1e;
 	position: fixed;
 	width: 100%;
@@ -11,7 +13,7 @@ $progress-bar-height: 6px;
 	align-items: center;
 	height: 4rem;
 	top: 0;
-	z-index: 1000;
+	z-index: 2000;
 	transition: background-color 0.3s ease, height 0.5s ease;
 	background: #fff;
 
@@ -32,8 +34,6 @@ $progress-bar-height: 6px;
 	align-items: center;
 	height: 100%;
 }
-
-$navbar-logo-size-mobile: 1.5rem;
 
 .navbar-logo-wrapper {
 	display: flex;
@@ -68,7 +68,7 @@ $navbar-logo-size-mobile: 1.5rem;
 
 	li,
 	a {
-		color: $dark-grey;
+		color: #565656;
 		text-transform: uppercase;
 		font-size: 0.75rem;
 		transition: color 0.3s;
@@ -104,6 +104,10 @@ $navbar-logo-size-mobile: 1.5rem;
 // 	margin-bottom: 1rem;
 // }
 @include breakpoint(med) {
+	nav {
+		height: 4rem;
+	}
+
 	.navbar-logo-image {
 		width: 1.75rem;
 		height: 1.75rem;
