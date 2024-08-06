@@ -11,8 +11,8 @@ module.exports = {
         tastebuds: './src/js/tastebuds.js',
     },
     output: {
-        filename: 'js/[name].js',
-        path: path.resolve(__dirname, 'dist')
+        filename: 'js/[name].bundle.js',
+        path: path.resolve(__dirname, 'dist'),
     },
     module: {
         rules: [
