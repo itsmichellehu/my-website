@@ -8,26 +8,30 @@ import '../components/Tabs/tabs';
 
 // postup.js
 function initializePostUpPage() {
-    // Your code to initialize the post up page goes here
     console.log("Post Up Page Initialized!");
 }
 
 initializePostUpPage();
 
-import BackToTopButton from '../components/BackToTopButton/BackToTopButton';
-import ProgressBar from '../components/ProjectProgressBar/ProjectProgressBar';
+// Import and initialize other components
+
 import NavBar from '../components/NavBar/NavBar';
 import NavBarBackground from '../components/NavBarBackground/NavBarBackground';
+import ProgressBar from '../components/ProjectProgressBar/ProjectProgressBar';
+import BackToTopButton from '../components/BackToTopButton/BackToTopButton';
 import Footer from '../components/Footer/Footer';
 
 import { initializeAccordion } from '../components/ProjectAccordion/ProjectAccordion';
 
+import StashedFeaturesSection from "../components/PostUpSections/StashedFeaturesSection";
+
 document.addEventListener('DOMContentLoaded', () => {
-    BackToTopButton();
-    ProgressBar();
     NavBar();
     NavBarBackground();
+    ProgressBar();
+    BackToTopButton();
     Footer();
     initializeAccordion();
 
+    StashedFeaturesSection();
 });
