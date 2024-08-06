@@ -42,12 +42,15 @@ ol {
 	}
 }
 
-@include breakpoint(med) {
+@include breakpoint(mobile-lg) {
 
 	ul,
 	ol {
 		transform: none;
 	}
+}
+
+@include breakpoint(med) {
 
 	li {
 		font-size: 1.125rem;
