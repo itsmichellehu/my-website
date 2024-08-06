@@ -10,8 +10,6 @@ import '../components/ScrollButton/scroll-button';
 import '../components/SequentialVideoPlayer/sequential-video-player';
 import '../components/Tabs/tabs';
 
-import '../components/NavBar/NavBar';
-
 import MediaCarousel from '../components/MediaCarousel/MediaCarousel';
 document.addEventListener('DOMContentLoaded', () => {
     // Assuming you have two carousels with IDs `carousel-01` and `carousel-02`
@@ -28,4 +26,16 @@ import '../components/Scrollable/scrollable';
 document.addEventListener('DOMContentLoaded', () => {
     console.log('Main TasteBuds page loaded');
     // Additional initialization code for this page
+});
+
+import BackToTopButton from '../components/BackToTopButton/BackToTopButton';
+import ProgressBar from '../components/ProjectProgressBar/ProjectProgressBar';
+import NavBar from '../components/NavBar/NavBar';
+import NavBarBackground from '../components/NavBarBackground/NavBarBackground';
+
+document.addEventListener('DOMContentLoaded', () => {
+    BackToTopButton();
+    ProgressBar();
+    NavBar();
+    NavBarBackground();
 });

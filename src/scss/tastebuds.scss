@@ -23,6 +23,49 @@ $wireframe-max-height: 40rem;
 
 @import "tastebuds/sketches";
 
+// Components
+@import "../components/NavBar/NavBar";
+
 .header-container.tastebuds {
 	margin-bottom: 1rem;
+}
+
+body {
+	background-color: #f8eacd;
+}
+
+main {
+	background-color: white;
+}
+
+#hero {
+	padding-top: 5rem;
+	background-color: #f8eacd;
+}
+
+#overview {
+	background-color: transparent;
+}
+
+#the-constraints {
+	background-color: $lightest-grey;
+}
+
+.navbar-top {
+	position: fixed;
+	width: 100%;
+	transition: background-color 0.1s ease-in;
+}
+
+.default-nav-color {
+	background-color: transparent;
+}
+
+.postup-hero-nav-color {
+	background-color: transparent;
+}
+
+.navbar-color-overview,
+.navbar-color-the-solution {
+	background-color: transparent;
 }
