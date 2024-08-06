@@ -1,7 +1,8 @@
-// src/js/accordion.js
-export function toggleAccordion(button) {
-  const content = button.querySelector('.accordion__content');
-  const icon = button.querySelector('.accordion__icon');
+// ProjectAccordion.js
+function toggleAccordion(header) {
+  const accordion = header.parentElement;
+  const content = accordion.querySelector('.accordion__content');
+  const icon = header.querySelector('.accordion__icon');
 
   content.classList.toggle('active');
   icon.classList.toggle('rotate');
@@ -13,12 +14,13 @@ export function toggleAccordion(button) {
   }
 }
 
-export function initializeAccordion() {
-  document.addEventListener('DOMContentLoaded', () => {
-    document.querySelectorAll('.accordion__header').forEach(header => {
-      header.addEventListener('click', function () {
-        toggleAccordion(this.parentElement);
-      });
+function initializeAccordion() {
+  document.querySelectorAll('.accordion').forEach(accordion => {
+    const header = accordion.querySelector('.accordion__header');
+    header.addEventListener('click', function () {
+      toggleAccordion(this);
     });
   });
 }
+
+export { toggleAccordion, initializeAccordion };

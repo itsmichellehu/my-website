@@ -3,12 +3,6 @@ import '../components/AutoplayVideo/autoplay-video';
 // import '../components/Carousel/carousel';
 import '../components/ScrollButton/scroll-button';
 import '../components/Scrollable/scrollable';
-// src/js/postup.js
-import { initializeAccordion } from '../components/ProjectAccordion/ProjectAccordion';
-
-// Initialize accordion functionality
-initializeAccordion();
-
 // import '../components/SwipeableCarouselPostUp/SwipeableCarouselPostUp';
 import '../components/Tabs/tabs';
 
@@ -26,10 +20,14 @@ import NavBar from '../components/NavBar/NavBar';
 import NavBarBackground from '../components/NavBarBackground/NavBarBackground';
 import Footer from '../components/Footer/Footer';
 
+import { initializeAccordion } from '../components/ProjectAccordion/ProjectAccordion';
+
 document.addEventListener('DOMContentLoaded', () => {
     BackToTopButton();
     ProgressBar();
     NavBar();
     NavBarBackground();
     Footer();
+    initializeAccordion();
+
 });

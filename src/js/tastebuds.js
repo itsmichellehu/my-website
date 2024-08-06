@@ -28,16 +28,20 @@ document.addEventListener('DOMContentLoaded', () => {
     // Additional initialization code for this page
 });
 
-import BackToTopButton from '../components/BackToTopButton/BackToTopButton';
-import ProgressBar from '../components/ProjectProgressBar/ProjectProgressBar';
 import NavBar from '../components/NavBar/NavBar';
 import NavBarBackground from '../components/NavBarBackground/NavBarBackground';
+import ProgressBar from '../components/ProjectProgressBar/ProjectProgressBar';
+import BackToTopButton from '../components/BackToTopButton/BackToTopButton';
 import Footer from '../components/Footer/Footer';
 
+import { initializeAccordion } from '../components/ProjectAccordion/ProjectAccordion';
+
 document.addEventListener('DOMContentLoaded', () => {
-    BackToTopButton();
-    Footer();
-    ProgressBar();
     NavBar();
     NavBarBackground();
+    ProgressBar();
+    BackToTopButton();
+    Footer();
+
+    initializeAccordion();
 });

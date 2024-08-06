@@ -6,10 +6,14 @@ import ProgressBar from '../components/ProjectProgressBar/ProjectProgressBar';
 import NavBar from '../components/NavBar/NavBar';
 import NavBarBackground from '../components/NavBarBackground/NavBarBackground';
 
+import { initializeAccordion } from '../components/ProjectAccordion/ProjectAccordion';
+
 document.addEventListener('DOMContentLoaded', () => {
     BackToTopButton();
     Footer();
     ProgressBar();
     NavBar();
     NavBarBackground();
+
+    initializeAccordion();
 });
