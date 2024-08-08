@@ -1249,21 +1249,32 @@
           </button>
         </div>
       </section>
+    </section>
+    <section id="iterations" class="section-container border">
+      <header class="header-container">
+        <h2>
+          <span>final wrap-up</span>
+          <br />Iterations and monetization strategy
+        </h2>
+      </header>
       <section class="subsection">
         <header class="header-container">
-          <h3>Potential solutions and enhancements</h3>
+          <h3>Iterations</h3>
         </header>
         <div class="content-wrapper">
           <p>
-            I believe that the prototype can be improved by further optimizing
-            the user experience by reducing touchpoints.<br />
+            Given my test findings, I believe that the prototype can be improved by incorporating a
+            few more features and further
+            optimizing
+            the user experience through reducing touchpoints.<br />
           </p>
           <ul class="off-black mb-32">
             <li>Remove the search page and add a reservations page</li>
             <li>Remove searching by type of work</li>
             <li>Implement filters directly on Discover page</li>
             <li>Add respective star rating to map icons for more context</li>
-            <li>Information on lighting</li>
+            <li>Add workspace detail on lighting</li>
+            <li>Add workspace detail on restroom capacity</li>
             <li>
               Replace standardized details on work environment with explicit
               details
@@ -1273,17 +1284,10 @@
             <h3>Business monetization strategy</h3>
           </header>
           <p>
-            Based on the usability testing results, I brainstormed potential
-            strategies aligned with the startup's requirement for a $5.99
-            monthly user subscription fee to increase business revenue
-            streams. My focus involves brainstorming new features that drive
-            spaner engagement with businesses featured on PostUp, thus
-            amplifying revenue generation. Considering the growing trend
+            I also brainstormed a monetization strategy that can increase business revenue
+            streams for PostUp. Considering the growing trend
             toward remote work, I see a promising opportunity for a mutually
-            beneficial collaboration between PostUp and local businesses. This
-            collaboration could incentivize businesses to enhance their
-            amenities, catering to remote workers and in turn enriching the
-            overall user experience for Postup subscribers. Therefore, I
+            beneficial collaboration between PostUp and local businesses. Therefore, I
             propose an
             <span class="semibold">additional subscription and referral model that invites
               businesses to become a “PostUp Partner”</span>
@@ -1292,103 +1296,130 @@
             below:
           </p>
         </div>
-        <div class="monetization-map-container">
-          <img class="img-100" alt="" loading="lazy"
-            src="assets/images/postup/postup-monetization-strategy-map.jpg" />
-        </div>
-        <div class="content-wrapper mt-32">
-          <button class="accordion mb-16" onclick="toggleAccordion(this)">
-            <div class="accordion__header">
-              <p>See details</p>
-              <img class="accordion__icon" src="assets/svg/ic-chevron-arrow__down--white.svg" />
-            </div>
-            <div class="accordion__content">
-              <ul class="monetization-map-accordion-list" type="1">
-                <li><span>User finds a workspace on PostUp</span> <br>
-                  The journey begins with a
-                  user searching for a suitable remote workspace using the PostUp app.</li>
-                <li><span>Reserve table (premium feature for PostUp business partners):</span><br>
-                  Users can reserve a table on PostUp at PostUp Partner locations, providing a
-                  convenience that can attract more customers to partner locations.</li>
-                <li><span>Visit shop</span> <br>After reserving a table, users visit the physical
-                  location. This step transitions online engagement to offline activity, driving
-                  foot traffic to partner businesses.</li>
-                <li><span>Make purchase</span> <br>Users make a purchase at a partner location.
-                  This transaction is a critical touchpoint where value is exchanged, and user
-                  engagement is solidified.</li>
-                <li><span>Scan Profile/QR Code</span> <br>Users scan a QR code linked to their
-                  PostUp profile to earn rewards. This step ensures the app tracks user activity and
-                  incentivizes continued use through the rewards system.</li>
-                <li><span>Earn Stamps/Points</span> <br>Users earn one stamp for visiting a new
-                  shop and points for in-person purchases. This dual rewards system encourages
-                  exploration of new locations and repeat visits, fostering user loyalty.</li>
-                <li><span>Redeem Rewards</span> <br>Accumulated points and stamps can be redeemed
-                  for rewards, such as a free coffee. This incentive boosts user spending and
-                  enhances the overall experience, making users more likely to return.</li>
-              </ul>
-            </div>
-          </button>
-        </div>
-        <div class="business-monetization-details content">
-          <header class="header-container">
-            <h4>Exclusive promotions</h4>
-          </header>
-          <p>
-            PostUp partners can offer exclusive in-app promotions, encouraging engagement and
-            customer acquisition. Subscribers may filter for locations with ongoing promotions.
-          </p>
-          <div class="reservation-system">
-            <div>
-              <h4>Reservation system</h4>
-              <p>
-                Only PostUp Partners can access the in-app table reservation
-                feature, enhancing user convenience and potentially attracting
-                more customers. Users may filter their search results for
-                locations that offer reservations.<br />
-              </p>
-            </div>
-            <div>
-              <img alt="" loading="lazy" src="assets/images/postup/postup-reservation-system.png" />
+        <div class="container-full-width pd-32">
+          <div class="monetization-map-container">
+            <img class="img-100" alt="" loading="lazy"
+              src="assets/images/postup/postup-monetization-strategy-map.jpg" />
+          </div>
+          <div class="business-monetization-details mt-32 content">
+            <button class="accordion mb-40" onclick="toggleAccordion(this)">
+              <div class="accordion__header">
+                <p>See customer journey details</p>
+                <img class="accordion__icon" src="assets/svg/ic-chevron-arrow__down--white.svg" />
+              </div>
+              <div class="accordion__content">
+                <ul class="monetization-map-accordion-list" type="1">
+                  <li><span>User finds a workspace on PostUp</span> <br>
+                    The journey begins with a
+                    user searching for a suitable remote workspace using the PostUp app.</li>
+                  <li><span>Reserve table (premium feature for PostUp business partners):</span><br>
+                    Users can reserve a table on PostUp at PostUp Partner locations, providing a
+                    convenience that can attract more customers to partner locations.</li>
+                  <li><span>Visit shop</span> <br>After reserving a table, users visit the physical
+                    location. This step transitions online engagement to offline activity, driving
+                    foot traffic to partner businesses.</li>
+                  <li><span>Make purchase</span> <br>Users make a purchase at a partner location.
+                    This transaction is a critical touchpoint where value is exchanged, and user
+                    engagement is solidified.</li>
+                  <li><span>Scan Profile/QR Code</span> <br>Users scan a QR code linked to their
+                    PostUp profile to earn rewards. This step ensures the app tracks user activity
+                    and
+                    incentivizes continued use through the rewards system.</li>
+                  <li><span>Earn Stamps/Points</span> <br>Users earn one stamp for visiting a new
+                    shop and points for in-person purchases. This dual rewards system encourages
+                    exploration of new locations and repeat visits, fostering user loyalty.</li>
+                  <li><span>Redeem Rewards</span> <br>Accumulated points and stamps can be redeemed
+                    for rewards, such as a free coffee. This incentive boosts user spending and
+                    enhances the overall experience, making users more likely to return.</li>
+                </ul>
+              </div>
+            </button>
+            <div class="tabs-container" data-current="Tab 1" data-duration-in="300"
+              data-duration-out="100" data-easing="ease">
+              <div class="tabs-menu three-menu-items">
+                <button class="tab-button" data-tab="tab1">
+                  <p>Reservations</p>
+                </button>
+                <button class="tab-button" data-tab="tab2">
+                  <p>User analytics</p>
+                </button>
+                <button class="tab-button" data-tab="tab3">
+                  <p>Rewards</p>
+                </button>
+              </div>
+              <div id="tab1" class="tab-content active">
+                <div class="reservation-system">
+                  <div>
+                    <h4>Reservation system</h4>
+                    <p>
+                      Only PostUp Partners can access the in-app table reservation
+                      feature, enhancing user convenience and potentially attracting
+                      more customers. Users may filter their search results for
+                      locations that offer reservations.<br />
+                    </p>
+                  </div>
+                  <div>
+                    <img alt="" loading="lazy"
+                      src="assets/images/postup/postup-reservation-system.png" />
+                  </div>
+                </div>
+              </div>
+              <div id="tab2" class="tab-content">
+                <div>
+                  <h4 class="mt-0">Data analytics</h4>
+                  <p>
+                    PostUp can offer valuable insights derived from user behavior,
+                    like traffic trends and user preferences, enabling partners to
+                    better understand their customer base, thereby allowing them to tailor their
+                    services
+                    and improve customer satisfaction.
+                  </p>
+                </div>
+              </div>
+              <div id="tab3" class="tab-content">
+                <header class="header-container">
+                  <h4 class="mt-0">Exclusive promotions</h4>
+                </header>
+                <p>
+                  PostUp partners can offer exclusive in-app promotions, encouraging engagement and
+                  customer acquisition. Subscribers may filter for locations with ongoing
+                  promotions.
+                </p>
+                <h4>Rewards system</h4>
+                <p>Partners may offer exclusive rewards for users. Using a unique QR code, users may
+                  earn
+                  points and stamps for their activities, which can be redeemed for tangible
+                  rewards, encouraging frequent use and loyalty.</p>
+              </div>
             </div>
           </div>
-          <header class="header-container">
-            <h4>Rewards system</h4>
-          </header>
-          <p>Partners may offer exclusive rewards for users. Using a unique QR code, users may earn
-            points and stamps for their activities, which can be redeemed for tangible
-            rewards, encouraging frequent use and loyalty.</p>
-          <header class="header-container">
-            <h4>Data analytics</h4>
-          </header>
-          <p>
-            PostUp can offer valuable insights derived from user behavior,
-            like traffic trends and user preferences, enabling partners to
-            better understand their customer base, thereby allowing them to tailor their services
-            and improve customer satisfaction.
-          </p>
+        </div>
+        <div class="content-wrapper">
           <header class="header-container">
             <h4>Conclusion</h4>
           </header>
           <p>
-            Overall, my strategies aim to increase client acquisition, boost
-            conversion, drive app engagement, attract business partnerships,
-            and establish a sustainable revenue model while enhancing the
-            overall remote working experience throughout their user journey.
+            Overall, my strategies aim to establish a sustainable revenue model that enhances the
+            overall remote working experience throughout their user journey. This
+            collaboration could incentivize businesses to enhance their
+            amenities, catering to remote workers and in turn enriching the
+            overall user experience for Postup subscribers.
             In sum, these strategies offer additional revenue streams for
-            PostUp while boosting the app's value proposition. <br />
+            PostUp while boosting the app's value proposition for both users and business partners.
+            <br />
           </p>
         </div>
       </section>
     </section>
     <section id="final-prototype" class="section-container border">
-      <header class="header-container mb-32">
-        <h2>
-          <span>solution</span>
-          <br />Final prototype
-        </h2>
-      </header>
       <section class="subsection">
         <div class="container-full-width prototype-wrapper">
+          <header class="header-container mb-32">
+            <h2>
+              <span>solution</span>
+              <br />Final prototype
+            </h2>
+          </header>
           <header class="header-container mb-0 hide">
             <h3>
               <span>prototype</span>
