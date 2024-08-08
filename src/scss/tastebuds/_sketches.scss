@@ -25,54 +25,61 @@
 			font-weight: 500;
 		}
 	}
-	// Grid container with Gif and 'Features' Card
-	.sketches-walkthrough_grid-container {
-		display: grid;
-		grid-template-columns: 2fr 1fr;
-		grid-template-rows: auto;
-		column-gap: 2rem;
-		row-gap: 1rem;
-		// align-items: center;
-		grid-template-areas: "a b";
-		margin-bottom: 2rem;
 
-		> .featured-media {
-			grid-area: b;
+	img {
+		width: 100%;
+	}
+
+}
+
+// Grid container with Gif and 'Features' Card
+.sketches-walkthrough_grid-container {
+	display: grid;
+	grid-template-columns: 2fr 1fr;
+	grid-template-rows: auto;
+	column-gap: 2rem;
+	row-gap: 1rem;
+	// align-items: center;
+	grid-template-areas: "a b";
+	margin-bottom: 2rem;
+
+	>.featured-media {
+		grid-area: b;
+	}
+
+	>div {
+		grid-area: a;
+		// padding: 1.5rem 2rem 1.5rem 3rem;
+		// border-radius: 0.25rem;
+		// height: fit-content;
+		// background-color: $light-grey;
+
+		.sketches-walkthrough__card {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			gap: 0.5rem;
+			padding: 1.5rem 3rem;
+			border-radius: 0.25rem;
+			height: fit-content;
+			background-color: $lightest-grey;
+			border-left: 0.5rem solid $emphasis-blue;
+			margin-top: 1.5rem;
+			max-width: 25rem;
 		}
 
-		> div {
-			grid-area: a;
-			// padding: 1.5rem 2rem 1.5rem 3rem;
-			// border-radius: 0.25rem;
-			// height: fit-content;
-			// background-color: $light-grey;
+		.card--list {
+			align-self: start;
 
-			.sketches-walkthrough__card {
-				display: flex;
-				flex-direction: column;
-				align-items: flex-start;
-				gap: 0.5rem;
-				padding: 1.5rem 3rem;
-				border-radius: 0.25rem;
-				height: fit-content;
-				background-color: $lightest-grey;
-				border-left: 0.5rem solid $emphasis-blue;
-				margin-top: 1.5rem;
-				max-width: 25rem;
+			.card--headline {
+				color: $emphasis-blue;
+				font-weight: 500;
+				margin-bottom: 0;
+				font-size: 1.25rem;
 			}
-			.card--list {
-				align-self: start;
 
-				.card--headline {
-					color: $emphasis-blue;
-					font-weight: 500;
-					margin-bottom: 0;
-					font-size: 1.25rem;
-				}
-
-				li {
-					font-size: 1.125rem;
-				}
+			li {
+				font-size: 1.125rem;
 			}
 		}
 	}
@@ -103,4 +110,9 @@
 
 .sketches-walkthrough_img--flow {
 	width: 50rem;
+}
+
+.img-route-1-sketches-all {
+	width: 90vw;
+	max-width: 80rem;
 }

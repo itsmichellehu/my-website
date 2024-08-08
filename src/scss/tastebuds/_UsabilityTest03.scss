@@ -5,8 +5,8 @@
 
 .notion-affinity-maps_grid {
 	display: grid;
-	grid-template-columns: repeat(2, 1fr);
-	grid-template-rows: 1fr 1fr;
+	grid-template-columns: 1fr;
+	grid-template-rows: repeat(4, auto);
 	grid-gap: 1rem;
 	width: 80%;
 	margin: auto;
@@ -23,12 +23,21 @@
 			padding: 1rem;
 			border: 1.5px solid $light-grey;
 		}
+
+		img {
+			width: 100%;
+		}
 	}
 
 	.bg-white-zoomed {
 		background-color: #fff;
 		padding: 1rem;
 		border: 1.5px solid $light-grey;
+	}
+
+	@include breakpoint(lg) {
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: 1fr 1fr;
 	}
 }
 

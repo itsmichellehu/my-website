@@ -10,7 +10,8 @@ $userflow-walkthrough-border-radius: 1rem;
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	gap: 0.5rem;
-	align-items: stretch; /* This will stretch the children to fill the container */
+	align-items: stretch;
+	/* This will stretch the children to fill the container */
 }
 
 .userflow-walkthrough_header {
@@ -107,6 +108,7 @@ $userflow-walkthrough-border-radius: 1rem;
 	margin-bottom: 1.5rem;
 	border-radius: $userflow-walkthrough-border-radius;
 	background-color: #fff;
+	width: 100%;
 }
 
 .userflow-walkthrough_content-container {
