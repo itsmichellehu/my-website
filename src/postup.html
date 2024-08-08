@@ -837,7 +837,7 @@
           src="assets/images/postup/postup-sprint-schedule-thurs.png" />
       </header>
       <section class="content-wrapper">
-        <div class="design-checklist">
+        <div class="design-checklist mb-40">
           <div class="design-checklist-text_wrapper">
             <header class="header-container">
               <h3 class="design-checklist-heading">
@@ -857,6 +857,23 @@
           <img alt="" loading="lazy" src="assets/images/postup/prototype-checklist.jpeg"
             class="img-prototype-checklist" />
         </div>
+        <h3>Learning from past mistakes to navigate project constraints</h3>
+        <p>I had only one opportunity to test my MVP prototype. Prototyping was the most challenging
+          part of this project because I was working independently with limited user research,
+          making it difficult to anticipate user behaviors and prioritize features. This made me
+          nervous about the likelihood of user
+          dead ends during testing.
+          <br><br>
+          With nobody to turn to, I decided to review my previous
+          project, <a href="tastebuds">TasteBuds</a>, to gain some inspiration. I recalled learning
+          how
+          users tend to quickly identify missing essential features and overlook non-essential
+          ones during testing. This reflection stopped me from making the same mistake of
+          over-anticipating user behavior and
+          excessive prototyping. Instead, I decided to focus on a single user flow with the most
+          critical features and leverage a different usability test strategy that does not require
+          prototyping, which I will discuss in the next section!
+        </p>
       </section>
       <section class="subsection">
         <div class="container-full-width prototype-wrapper">
@@ -900,105 +917,91 @@
               </div>
             </div>
             <div class="prototype-walkthrough_mobile-accordion-wrapper">
-              <button class="prototype-accordion" onclick="togglePrototypeAccordion(this)">
-                <div class="prototype-accordion_header">
+              <button class="accordion mb-16" onclick="toggleAccordion(this)">
+                <div class="accordion__header">
                   <p>See details</p>
-                  <img class="prototype-accordion_icon"
-                    src="assets/svg/ic-chevron-arrow__down--white.svg" />
+                  <img class="accordion__icon" src="assets/svg/ic-chevron-arrow__down--white.svg" />
                 </div>
-                <div class="prototype-accordion_content">
-                  <div>
-                    <p class="prototype-walkthrough_subheading  pt-4">Scannable search results</p>
-                    <p class="prototype-walkthrough_body">
-                      Search results provide a quick overview of essential information for each
-                      workspace, such as walk time, suitable work, amenities, and seating
-                      availability
-                      at PostUp Partner locations. This design reduces the need to visit each
-                      workspace profile, optimizing the search process.
-                    </p>
-                  </div>
-                  <div>
-                    <p class="prototype-walkthrough_subheading">Intuitive, customizable commute
-                      experience</p>
-                    <p class="prototype-walkthrough_body">
-                      The default estimated commute time displayed is automatically adjusted to the
-                      area's walkability score
-                      via
-                      Google
-                      Maps integration. Low walkability areas show driving time, whereas high
-                      walkability
-                      areas show walking time.
-                    </p>
-                  </div>
+                <div class="accordion__content">
+                  <p class="prototype-walkthrough_subheading pt-4 white">Scannable search results
+                  </p>
+                  <p class="white">
+                    Search results provide a quick overview of essential information for each
+                    workspace, such as walk time, suitable work, amenities, and seating availability
+                    at PostUp Partner locations. This design reduces the need to visit each
+                    workspace profile, optimizing the search process.
+                  </p>
+                  <p class="prototype-walkthrough_subheading pt-4 white">Intuitive commute
+                    experience
+                  </p>
+                  <p class="white">
+                    Since remote workers travel frequently, the commute time is dynamically adjusted
+                    based on their search area's walkability score through Google Maps integration:
+                    Low walkability display driving duration, while high walkability show walking
+                    times.</p>
                 </div>
-              </button>
             </div>
-            <div class="prototype-walkthrough_wrapper">
-              <div class="prototype-walkthrough_grid-container">
-                <p class="prototype-walkthrough_heading">
-                  Focusing on priorities <br> to combat choice paralysis.
-                </p>
-                <video autoplay loop controls muted class="prototype-walkthrough_video">
-                  <source src="assets/videos/postup/postup-prototype-v1-workspace-profile.mp4"
-                    type="video/mp4">
-                </video>
-                <div class="prototype-walkthrough_content-01">
-                  <p class="prototype-walkthrough_subheading  pt-4">Single-page for efficient
-                    navigation</p>
-                  <p class="prototype-walkthrough_body">I consolidated my sketches into a
-                    single-page
-                    layout to prioritize above-the-fold details, ensuring efficient navigation. To
-                    avoid information overload, I used a minimalistic design for readability and
-                    stored additional details in "Info" icon buttons. Leveraging social proof, I
-                    displayed each reviewer's occupation to enhance trust and engagement, aligning
-                    with PostUp's mission to support remote workers.</p>
-                </div>
-                <div class="prototype-walkthrough_content-02">
-                  <p class="prototype-walkthrough_subheading">Comprehensive environment details</p>
-                  <p class="prototype-walkthrough_body">To reduce information overload, I crafted
-                    minimal, scannable copy, and included several "Info" icon button for additional
-                    details.
-                    I was inspired by clothing size charts to ensure users have access
-                    to essential information without feeling overwhelmed.</p>
-                </div>
+            </button>
+          </div>
+          <div class="prototype-walkthrough_wrapper">
+            <div class="prototype-walkthrough_grid-container">
+              <p class="prototype-walkthrough_heading">
+                Focusing on priorities <br> to combat choice paralysis.
+              </p>
+              <video autoplay loop controls muted class="prototype-walkthrough_video">
+                <source src="assets/videos/postup/postup-prototype-v1-workspace-profile.mp4"
+                  type="video/mp4">
+              </video>
+              <div class="prototype-walkthrough_content-01">
+                <p class="prototype-walkthrough_subheading  pt-4">Single-page for efficient
+                  navigation</p>
+                <p class="prototype-walkthrough_body">I consolidated my sketches into a
+                  single-page
+                  layout to prioritize above-the-fold details, ensuring efficient navigation. To
+                  avoid cognitive overload, I used a minimalistic design for readability and
+                  stored additional details in "Info" icon buttons. Leveraging social proof, I
+                  displayed each reviewer's occupation to enhance trust and engagement.</p>
+              </div>
+              <div class="prototype-walkthrough_content-02">
+                <p class="prototype-walkthrough_subheading">Comprehensive environment details</p>
+                <p class="prototype-walkthrough_body">I crafted
+                  minimal, scannable copy, and included several "Info" icon button for additional
+                  details to streamline the interface.
+                  I was inspired by clothing size charts to ensure users have access
+                  to essential information without feeling overwhelmed.</p>
               </div>
             </div>
-            <div class="prototype-walkthrough_mobile-accordion-wrapper">
-              <button class="prototype-accordion" onclick="togglePrototypeAccordion(this)">
-                <div class="prototype-accordion_header">
-                  <p>See details</p>
-                  <img class="prototype-accordion_icon"
-                    src="assets/svg/ic-chevron-arrow__down--white.svg" />
-                </div>
-                <div class="prototype-accordion_content">
-                  <div>
-                    <p class="prototype-walkthrough_subheading">Workspace profile</p>
-                    <p class="prototype-walkthrough_body">I consolidated my previous sketches of the
-                      workspace profile into a
-                      single-page layout to prioritize comprehensive
-                      work-environment details
-                      above-the-fold, arranged by order of importance. The profiles focus on
-                      workspace
-                      interior instead of food. I leveraged social proof by designing each review to
-                      display the author's occupation to enhance credibility and engagement.
-                    </p>
-                  </div>
-                  <div>
-                    <p class="prototype-walkthrough_subheading">Comprehensive environment details
-                    </p>
-                    <p class="prototype-walkthrough_body">
-                      I focused on content strategy in this section by crafting minimal,
-                      easy-to-comprehend copy that is scannable to reduce information overload.
-                      Since
-                      remote workers value details, I included an "Info" icon button to store
-                      additional details; this design is inspired by
-                      clothing size charts.
-                    </p>
-                  </div>
-                </div>
-              </button>
-            </div>
           </div>
+          <div class="prototype-walkthrough_mobile-accordion-wrapper">
+            <button class="accordion mb-16" onclick="toggleAccordion(this)">
+              <div class="accordion__header">
+                <p>See details</p>
+                <img class="accordion__icon" src="assets/svg/ic-chevron-arrow__down--white.svg" />
+              </div>
+              <div class="accordion__content">
+                <p class="prototype-walkthrough_subheading">Workspace profile</p>
+                <p class="prototype-walkthrough_body">I consolidated my previous sketches of the
+                  workspace profile into a
+                  single-page layout to prioritize comprehensive
+                  work-environment details
+                  above-the-fold, arranged by order of importance. The profiles focus on
+                  workspace
+                  interior instead of food. I leveraged social proof by designing each review to
+                  display the author's occupation to enhance credibility and engagement.
+                </p>
+                <p class="prototype-walkthrough_subheading">Comprehensive environment details
+                </p>
+                <p class="prototype-walkthrough_body">
+                  I focused on content strategy in this section by crafting minimal,
+                  easy-to-comprehend copy that is scannable to reduce information overload.
+                  Since
+                  remote workers value details, I included an "Info" icon button to store
+                  additional details; this design is inspired by
+                  clothing size charts.
+                </p>
+              </div>
+          </div>
+        </div>
         </div>
       </section>
       <section class="subsection">
@@ -1006,16 +1009,8 @@
           <h3>Stashed Features</h3>
         </header>
         <div class="content-wrapper">
-          <p>
-            Given limited time and resources, I could only prototype one route. To make the most of
-            my single round of testing, I reviewed my previous case study on my most recent project,
-            <a href="tastebuds">TasteBuds</a>. This reminded me that users quickly identify missing
-            essential features but overlook non-essential ones.
-          </p>
-          <p>
-            Therefore, I focused on developing features with the spanest research evidence and
-            stashed the rest for validation during testing:
-          </p>
+          <p> I stashed the following features due to their lower support from research evidence,
+            but I planned on validating them during testing:</p>
         </div>
         <div class="stashed-features_wrapper">
           <ul class="stashed-features_grid-container">
