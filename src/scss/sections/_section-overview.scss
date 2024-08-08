@@ -15,7 +15,6 @@
 		flex-direction: column;
 		justify-content: flex-start;
 		margin: auto;
-		margin-bottom: 2rem;
 		width: fit-content;
 		gap: 1.5rem;
 		width: 90%;
@@ -49,7 +48,8 @@
 		cursor: pointer;
 
 		/* Hide scrollbar for Firefox */
-		scrollbar-width: none; /* Firefox */
+		scrollbar-width: none;
+		/* Firefox */
 
 		/* Hide scrollbar for WebKit-based browsers (Chrome, Safari) */
 		&::-webkit-scrollbar {
@@ -173,7 +173,6 @@
 
 	@include breakpoint(med) {
 		padding-top: 3rem;
-		height: calc(45vh - 2.5rem);
 		max-height: 26rem;
 
 		&__content-wrapper {
@@ -242,6 +241,7 @@
 				height: auto;
 				margin: 0;
 			}
+
 			&--canva img {
 				width: 3.5rem;
 				height: 3.5rem;
@@ -251,8 +251,9 @@
 }
 
 @include breakpoint(lg) {
+
 	.overview {
-		height: calc(45vh - 2.5rem);
+		gap: 2rem;
 		padding-top: 3rem;
 		max-height: none;
 
@@ -264,10 +265,6 @@
 		&__tools-grid-container {
 			grid-template-columns: 1fr 1fr;
 			grid-template-rows: repeat(2, 1fr);
-		}
-
-		.headline-tools {
-			text-align: center;
 		}
 	}
 }

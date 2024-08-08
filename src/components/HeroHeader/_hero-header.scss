@@ -1,7 +1,7 @@
 .hero {
 	display: flex;
 	align-items: flex-start;
-	height: 40vh;
+	height: 50vh;
 	overflow: hidden;
 	padding-top: 2rem;
 
@@ -33,14 +33,20 @@
 		max-width: 20rem;
 	}
 
+	@include breakpoint(sm) {
+		//
+		// 		&-postup-video {
+		// 			display: flex;
+		// 			margin: auto auto 0 auto;
+		// 			width: 50%;
+		// 			max-width: 15rem;
+		// 		}
+	}
+
 	@include breakpoint(med) {
-		height: 55vh;
+		height: 60vh;
 		padding-top: 3rem;
 		max-height: 36rem;
-
-		&__content {
-			justify-content: flex-end;
-		}
 
 		&__gif-wrapper {
 			width: 35%;
@@ -59,8 +65,7 @@
 
 		&-postup-video {
 			height: auto;
-			max-width: 16rem;
-			transform: translateY(5rem);
+			max-width: 20rem;
 		}
 
 		&__image {
@@ -70,6 +75,8 @@
 	}
 
 	@include breakpoint(xl) {
+
+
 		&__image-wrapper {
 			max-width: 40rem;
 		}
