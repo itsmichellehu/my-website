@@ -1743,33 +1743,6 @@
       });
     }
   </script>
-  <script>
-    function togglePrototypeAccordion() {
-      const content = button.querySelector('.prototype-accordion_content');
-      const icon = button.querySeletor('.prototype-accordion_icon');
-
-      if (content && icon) {
-        content.classList.toggle('active');
-        icon.classList.toggle('rotate');
-
-        if (content.classList.contains('active')) {
-          content.style.maxHeight = content.scrollHeight + 'px';
-        } else {
-          content.style.maxHeight = 0;
-        }
-      }
-    }
-    function initializeAccordion() {
-      document.addEventListener('DOMContentLoaded', () => {
-        // Attach click event listeners to all accordion headers
-        document.querySelectorAll('.prototype-accordion').forEach(accordion => {
-          accordion.addEventListener('click', function () {
-            togglePrototypeAccordion(this);
-          });
-        });
-      });
-    }
-  </script>
   <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
   <script>
     WebFont.load({
