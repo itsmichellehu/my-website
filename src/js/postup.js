@@ -4,7 +4,6 @@ import '../components/AutoplayVideo/autoplay-video';
 import '../components/ScrollButton/scroll-button';
 import '../components/Scrollable/scrollable';
 // import '../components/SwipeableCarouselPostUp/SwipeableCarouselPostUp';
-import '../components/Tabs/tabs';
 
 // postup.js
 function initializePostUpPage() {
@@ -23,6 +22,7 @@ import Footer from '../components/Footer/Footer';
 import scrollToChallenge from "../components/ScrollToChallenge/ScrollToChallenge";
 
 import { initializeAccordion } from '../components/ProjectAccordion/ProjectAccordion';
+import initializeTabs from '../components/Tabs/Tabs';
 
 document.addEventListener('DOMContentLoaded', () => {
     NavBar();
@@ -32,4 +32,5 @@ document.addEventListener('DOMContentLoaded', () => {
     Footer();
     initializeAccordion();
     scrollToChallenge();
+    initializeTabs();
 });
