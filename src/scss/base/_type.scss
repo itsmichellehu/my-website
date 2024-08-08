@@ -142,14 +142,18 @@ h6 {
 
 .quote-text {
 	font-family: "Noto Serif", serif;
-	font-size: 1.25rem;
 	font-style: normal;
 	font-weight: 400;
-	letter-spacing: 0.2px;
+	letter-spacing: 3%;
 	line-height: 160%;
 	margin: 0;
 	overflow-wrap: normal;
 	color: $black;
+	font-size: 1rem;
+}
+
+.fw-300 {
+	font-weight: 300;
 }
 
 .bold {

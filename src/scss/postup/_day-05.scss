@@ -1,4 +1,32 @@
 // Friday
+.usability-test-details_grid-container {
+	display: grid;
+	grid-template-columns: auto;
+	grid-template-rows: auto auto auto;
+	gap: 1rem;
+}
+
+.usability-test-details_grid-item {
+	padding: 1.25rem;
+	background-color: $lightest-grey;
+
+	>.subheading {
+		margin-bottom: 0.75rem;
+		color: $primary-color;
+	}
+}
+
+@include breakpoint(med) {
+	.usability-test-details_grid-container {
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: auto auto;
+		grid-template-areas: 'a b' 'c c';
+
+		.grid-item-questions {
+			grid-area: c;
+		}
+	}
+}
 
 .test-findings-grid {
 	display: grid;
