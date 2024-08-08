@@ -17,6 +17,8 @@ $wireframe-max-height: 40rem;
 
 @import "utilities/all-utilities";
 
+@import "../components/MediaCarousel/MediaCarousel";
+
 $super-light-grey: #fafafa;
 
 body {
