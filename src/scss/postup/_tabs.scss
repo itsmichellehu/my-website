@@ -1,7 +1,8 @@
 $tab-border-radius: 2rem;
 
 .tabs-container {
-  width: $content-max-width;
+  width: 95vw;
+  max-width: $content-max-width;
   margin-top: 2rem;
   margin: auto;
 }
@@ -36,7 +37,7 @@ $tab-border-radius: 2rem;
   padding: 2rem 1rem;
   padding-bottom: 0;
 
-  > div, 
+  >div,
   blockquote {
     margin-bottom: 2rem;
   }
@@ -68,7 +69,6 @@ $tab-border-radius: 2rem;
     text-align: center;
     font-weight: 400;
     color: #e9e9e9;
-    font-size: 1.2rem;
     z-index: 2;
   }
 
@@ -93,8 +93,7 @@ $tab-border-radius: 2rem;
 .tab-content-grid {
   display: grid;
   width: 100%;
-  grid-template-columns: 1fr 3fr;
-  grid-template-rows: auto;
+  row-gap: 2rem;
   column-gap: 2rem;
   align-items: center;
   margin-bottom: 2rem;
@@ -113,6 +112,23 @@ $tab-border-radius: 2rem;
   }
 }
 
+@include breakpoint(med) {
+  .tab-content-grid {
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: auto;
+  }
+
+  .tab-content {
+    padding: 2rem 1rem;
+  }
+
+  .tab-button {
+    p {
+      font-size: 1.2rem;
+    }
+  }
+}
+
 .img-sketch-filters {
   align-self: auto;
   border-bottom: 2px solid #000;
@@ -128,6 +144,7 @@ $tab-border-radius: 2rem;
     padding-bottom: 1rem;
   }
 }
+
 // Tab content
 .tab-subheading {
   font-weight: 500;
