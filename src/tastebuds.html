@@ -57,13 +57,10 @@
     <div id="progress-bar"></div>
   </div>
   <main>
-    <section id="hero" class="hero hero--bg-tastebuds">
-      <div class="hero__content">
-        <img alt="" class="hero__image" loading="eager"
-          src="assets/images/tastebuds/hero-image.png" />
-        <!-- <div class="hero__image-wrapper">
-        </div> -->
-      </div>
+    <section id="hero" class="hero hero-tastebuds hero--bg-tastebuds">
+      <video autoplay loop hide-controls muted class="hero-tastebuds-video">
+        <source src="assets/images/thumbs/thumb-tastebuds-yellow-bg.mp4" type="video/mp4">
+      </video>
     </section>
     <section id="overview" class="overview">
       <div class="overview__content-wrapper">
@@ -76,16 +73,15 @@
             <div class="overview__tag overview__tag--tastebuds">product design</div>
             <div class="overview__tag overview__tag--tastebuds">interaction design</div>
             <div class="overview__tag overview__tag--tastebuds">business strategy</div>
-            <div class="overview__tag overview__tag--tastebuds">competitive research</div>
-            <div class="overview__tag overview__tag--tastebuds">prototyping</div>
           </div>
         </header>
-        <div class="overview__details-container">
+        <div class="overview__details-container tastebuds__details">
           <div class="overview__grid-item">
             <div class="overview__details-list">
               <p class="overview__details-headline">Timeline</p>
-              <ul>
-                <li>December 2022 - June 2023</li>
+              <ul class="list-transform-none">
+                <li class="hide-mobile-lg">Dec 2022 - June 2023</li>
+                <li class="show-mobile-lg-flex">December 2022 - June 2023</li>
               </ul>
             </div>
           </div>

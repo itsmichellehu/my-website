@@ -5,6 +5,10 @@
 	overflow: hidden;
 	padding-top: 2rem;
 
+	&.hero-tastebuds {
+		height: 45vh;
+	}
+
 	&__content {
 		display: flex;
 		flex-direction: column;
@@ -12,6 +16,13 @@
 		align-items: center;
 		justify-content: flex-start;
 		height: 100%;
+	}
+
+	.hero-tastebuds-video {
+		display: flex;
+		margin: auto auto 0 auto;
+		width: 80%;
+		max-width: 20rem;
 	}
 
 	&-postup-video {
@@ -46,7 +57,12 @@
 	@include breakpoint(med) {
 		height: 60vh;
 		padding-top: 3rem;
-		max-height: 36rem;
+		max-height: 30rem;
+
+		&.hero-tastebuds {
+			height: 50vh;
+			max-height: 36rem;
+		}
 
 		&__gif-wrapper {
 			width: 35%;
@@ -60,8 +76,13 @@
 	}
 
 	@include breakpoint(lg) {
-		padding-top: 4rem;
-		max-height: none;
+		padding-top: 2rem;
+		max-height: 36rem;
+
+		.hero-tastebuds {
+			padding-top: 2rem;
+			max-height: 36rem;
+		}
 
 		&-postup-video {
 			height: auto;
@@ -71,6 +92,11 @@
 		&__image {
 			max-width: 34rem;
 			transform: translateY(2rem);
+		}
+
+
+		.hero-tastebuds-video {
+			max-width: 25rem;
 		}
 	}
 

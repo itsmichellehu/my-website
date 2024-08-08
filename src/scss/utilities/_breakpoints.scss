@@ -19,30 +19,43 @@
 .show-mobile-sm {
 	display: none !important;
 }
+
 .show-mobile-med {
 	display: none !important;
 }
+
 .show-mobile-lg {
 	display: none !important;
 }
+
+.show-mobile-lg-flex {
+	display: none !important;
+}
+
 .show-sm {
 	display: none !important;
 }
+
 .show-med {
 	display: none !important;
 }
+
 .show-med-flex {
 	display: none !important;
 }
+
 .show-med-block {
 	display: none !important;
 }
+
 .show-lg {
 	display: none !important;
 }
+
 .show-xl {
 	display: none !important;
 }
+
 .show-xxl {
 	display: none !important;
 }
@@ -63,6 +76,10 @@
 	.show-mobile-lg {
 		display: inherit;
 	}
+
+	.show-mobile-lg-flex {
+		display: flex !important;
+	}
 }
 
 @include breakpoint(sm) {
@@ -75,9 +92,11 @@
 	.show-med {
 		display: inherit;
 	}
+
 	.show-med-flex {
 		display: flex !important;
 	}
+
 	.show-med-block {
 		display: block !important;
 	}
@@ -94,6 +113,7 @@
 		display: inherit;
 	}
 }
+
 @include breakpoint(xxl) {
 	.show-xxl {
 		display: inherit;
@@ -104,24 +124,31 @@
 .hide-mobile-sm {
 	display: inherit !important;
 }
+
 .hide-mobile-med {
 	display: inherit !important;
 }
+
 .hide-mobile-lg {
 	display: inherit !important;
 }
+
 .hide-sm {
 	display: inherit !important;
 }
+
 .hide-med {
 	display: inherit !important;
 }
+
 .hide-lg {
 	display: inherit !important;
 }
+
 .hide-xl {
 	display: inherit !important;
 }
+
 .hide-xxl {
 	display: inherit !important;
 }
