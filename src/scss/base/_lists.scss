@@ -126,3 +126,11 @@ ul {
 		}
 	}
 }
+
+
+ul.list-item-black {
+	li {
+		color: $off-black;
+		padding-left: 0;
+	}
+}
