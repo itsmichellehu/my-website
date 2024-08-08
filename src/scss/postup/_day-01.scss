@@ -57,6 +57,7 @@
 	align-items: center;
 	padding: 2rem 0;
 	row-gap: 1rem;
+	width: 90vw;
 
 	&:nth-child(n + 2) {
 		border-top: 1px solid $medium-light-grey;
@@ -107,6 +108,7 @@
 @include breakpoint(med) {
 	.interview-quotes-wrapper {
 		width: fit-content;
+		max-width: 58rem;
 
 		>.img-quotation-mark {
 			margin: 0;
@@ -119,9 +121,12 @@
 		grid-template-columns: 1.5fr auto 3fr;
 		grid-template-rows: auto;
 		column-gap: 1.25rem;
+		max-width: 58rem;
 
 
 		>div:first-child {
+			width: 15rem;
+
 			p {
 				font-size: 1.5rem;
 			}
@@ -139,4 +144,9 @@
 	margin-top: 4rem;
 }
 
-@include breakpoint(xl) {}
+@include breakpoint(lg) {
+
+	.quote-grid-item>div:first-child {
+		width: 18rem;
+	}
+}

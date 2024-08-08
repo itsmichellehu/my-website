@@ -4,6 +4,7 @@ import '../components/AutoplayVideo/autoplay-video';
 import '../components/ScrollButton/scroll-button';
 import '../components/Scrollable/scrollable';
 // import '../components/SwipeableCarouselPostUp/SwipeableCarouselPostUp';
+import '../components/ImageZoom/ImageZoom';
 
 // postup.js
 function initializePostUpPage() {
@@ -19,6 +20,7 @@ import NavBarBackground from '../components/NavBarBackground/NavBarBackground';
 import ProgressBar from '../components/ProjectProgressBar/ProjectProgressBar';
 import BackToTopButton from '../components/BackToTopButton/BackToTopButton';
 import Footer from '../components/Footer/Footer';
+import enableImageZoom from "../components/ImageZoom/ImageZoom";
 import scrollToChallenge from "../components/ScrollToChallenge/ScrollToChallenge";
 
 import { initializeAccordion } from '../components/ProjectAccordion/ProjectAccordion';
@@ -31,6 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
     BackToTopButton();
     Footer();
     initializeAccordion();
+    enableImageZoom();
     scrollToChallenge();
     initializeTabs();
 });

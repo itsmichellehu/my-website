@@ -195,7 +195,6 @@ main {
 	flex-direction: column;
 	gap: 1.5rem;
 	background-color: $lightest-grey;
-	margin: 2.5rem 0 4rem 0;
 	width: 100vw;
 	padding: 1rem 0;
 
@@ -213,6 +212,7 @@ main {
 
 	@include breakpoint(med) {
 		padding: 2rem 0;
+		margin: 2.5rem 0 4rem 0;
 	}
 
 	@include breakpoint(lg) {

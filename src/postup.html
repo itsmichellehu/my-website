@@ -106,7 +106,7 @@
         </div>
       </div>
       <div class="flex-row center">
-        <button id="scrollToChallenge" class="scroll-button hero" data-scroll-target="the-problem"
+        <button id="scrollToChallenge" class="scroll-button hero" data-scroll-target="the-challenge"
           aria-label="Scroll down">
           <img src="assets/svg/ic-chevron-arrow__down--black.svg"
             alt="Chevron arrow pointing down, indicating to scroll down" />
@@ -1296,13 +1296,13 @@
             below:
           </p>
         </div>
-        <div class="container-full-width pd-32">
-          <div class="monetization-map-container">
-            <img class="img-100" alt="" loading="lazy"
-              src="assets/images/postup/postup-monetization-strategy-map.jpg" />
-          </div>
-          <div class="business-monetization-details mt-32 content">
-            <button class="accordion mb-40" onclick="toggleAccordion(this)">
+        <div class="container-full-width pv-32">
+          <div class="content-wrapper">
+            <div class="monetization-map-container mb-32">
+              <img class="img-100" alt="" loading="lazy"
+                src="assets/images/postup/postup-monetization-strategy-map.jpg" />
+            </div>
+            <button class="accordion" onclick="toggleAccordion(this)">
               <div class="accordion__header">
                 <p>See customer journey details</p>
                 <img class="accordion__icon" src="assets/svg/ic-chevron-arrow__down--white.svg" />
@@ -1312,10 +1312,12 @@
                   <li><span>User finds a workspace on PostUp</span> <br>
                     The journey begins with a
                     user searching for a suitable remote workspace using the PostUp app.</li>
-                  <li><span>Reserve table (premium feature for PostUp business partners):</span><br>
+                  <li><span>Reserve table (premium feature for PostUp business
+                      partners):</span><br>
                     Users can reserve a table on PostUp at PostUp Partner locations, providing a
                     convenience that can attract more customers to partner locations.</li>
-                  <li><span>Visit shop</span> <br>After reserving a table, users visit the physical
+                  <li><span>Visit shop</span> <br>After reserving a table, users visit the
+                    physical
                     location. This step transitions online engagement to offline activity, driving
                     foot traffic to partner businesses.</li>
                   <li><span>Make purchase</span> <br>Users make a purchase at a partner location.
@@ -1328,69 +1330,70 @@
                   <li><span>Earn Stamps/Points</span> <br>Users earn one stamp for visiting a new
                     shop and points for in-person purchases. This dual rewards system encourages
                     exploration of new locations and repeat visits, fostering user loyalty.</li>
-                  <li><span>Redeem Rewards</span> <br>Accumulated points and stamps can be redeemed
+                  <li><span>Redeem Rewards</span> <br>Accumulated points and stamps can be
+                    redeemed
                     for rewards, such as a free coffee. This incentive boosts user spending and
                     enhances the overall experience, making users more likely to return.</li>
                 </ul>
               </div>
             </button>
-            <div class="tabs-container" data-current="Tab 1" data-duration-in="300"
-              data-duration-out="100" data-easing="ease">
-              <div class="tabs-menu three-menu-items">
-                <button class="tab-button" data-tab="tab1">
-                  <p>Reservations</p>
-                </button>
-                <button class="tab-button" data-tab="tab2">
-                  <p>User analytics</p>
-                </button>
-                <button class="tab-button" data-tab="tab3">
-                  <p>Rewards</p>
-                </button>
-              </div>
-              <div id="tab1" class="tab-content active">
-                <div class="reservation-system">
-                  <div>
-                    <h4>Reservation system</h4>
-                    <p>
-                      Only PostUp Partners can access the in-app table reservation
-                      feature, enhancing user convenience and potentially attracting
-                      more customers. Users may filter their search results for
-                      locations that offer reservations.<br />
-                    </p>
-                  </div>
-                  <div>
-                    <img alt="" loading="lazy"
-                      src="assets/images/postup/postup-reservation-system.png" />
-                  </div>
-                </div>
-              </div>
-              <div id="tab2" class="tab-content">
+          </div>
+          <div class="tabs-container margin-auto" data-current="Tab 1" data-duration-in="300"
+            data-duration-out="100" data-easing="ease">
+            <div class="tabs-menu three-menu-items">
+              <button class="tab-button" data-tab="tab1">
+                <p>Reservations</p>
+              </button>
+              <button class="tab-button" data-tab="tab2">
+                <p>User analytics</p>
+              </button>
+              <button class="tab-button" data-tab="tab3">
+                <p>Rewards</p>
+              </button>
+            </div>
+            <div id="tab1" class="tab-content active">
+              <div class="reservation-system">
                 <div>
-                  <h4 class="mt-0">Data analytics</h4>
+                  <h4>Reservation system</h4>
                   <p>
-                    PostUp can offer valuable insights derived from user behavior,
-                    like traffic trends and user preferences, enabling partners to
-                    better understand their customer base, thereby allowing them to tailor their
-                    services
-                    and improve customer satisfaction.
+                    Only PostUp Partners can access the in-app table reservation
+                    feature, enhancing user convenience and potentially attracting
+                    more customers. Users may filter their search results for
+                    locations that offer reservations.<br />
                   </p>
                 </div>
+                <div>
+                  <img alt="" loading="lazy"
+                    src="assets/images/postup/postup-reservation-system.png" />
+                </div>
               </div>
-              <div id="tab3" class="tab-content">
-                <header class="header-container">
-                  <h4 class="mt-0">Exclusive promotions</h4>
-                </header>
+            </div>
+            <div id="tab2" class="tab-content">
+              <div>
+                <h4 class="mt-0">Data analytics</h4>
                 <p>
-                  PostUp partners can offer exclusive in-app promotions, encouraging engagement and
-                  customer acquisition. Subscribers may filter for locations with ongoing
-                  promotions.
+                  PostUp can offer valuable insights derived from user behavior,
+                  like traffic trends and user preferences, enabling partners to
+                  better understand their customer base, thereby allowing them to tailor their
+                  services
+                  and improve customer satisfaction.
                 </p>
-                <h4>Rewards system</h4>
-                <p>Partners may offer exclusive rewards for users. Using a unique QR code, users may
-                  earn
-                  points and stamps for their activities, which can be redeemed for tangible
-                  rewards, encouraging frequent use and loyalty.</p>
               </div>
+            </div>
+            <div id="tab3" class="tab-content">
+              <header class="header-container">
+                <h4 class="mt-0">Exclusive promotions</h4>
+              </header>
+              <p>
+                PostUp partners can offer exclusive in-app promotions, encouraging engagement and
+                customer acquisition. Subscribers may filter for locations with ongoing
+                promotions.
+              </p>
+              <h4>Rewards system</h4>
+              <p>Partners may offer exclusive rewards for users. Using a unique QR code, users may
+                earn
+                points and stamps for their activities, which can be redeemed for tangible
+                rewards, encouraging frequent use and loyalty.</p>
             </div>
           </div>
         </div>
@@ -1411,23 +1414,37 @@
         </div>
       </section>
     </section>
-    <section id="final-prototype" class="section-container equal-padding bg-lightest-grey border-0">
+    <section id="final-prototype" class="section-container equal-padding border-0">
+      <h2 class="show-med-flex">Final prototype</h2>
+      <header class="header-container hide-med">
+        <h2>
+          <span>iterations</span>
+          <br>
+          Final prototype
+        </h2>
+      </header>
       <div class="container-full-width pv-0 mv-0 bg-transparent">
-        <div class="media-carousel-item margin-auto  bg-transparent">
+        <div class="postup-final-prototype media-carousel-item margin-auto">
           <div class="carousel-item-container">
-            <header class="header-container mb-0">
-            </header>
-            <div class="carousel-content-wrapper bg-white">
+            <div class="carousel-content-wrapper final-prototype-carousel-content-wrapper bg-white">
               <div class="carousel-content">
-                <h3>
-                  <span class="subheader">final prototype</span>
-                  <br />
-                  Iterations
-                </h3>
                 <div>
                   <p class="headline">Streamlined search process</p>
                 </div>
-                <div class="design-walkthrough-grid_card bg-lightest-grey card-item-02">
+                <div class="hide-med mb-32">
+                  <header class="design-walkthrough_header mt-8">
+                    <p class="design-walkthrough_card-headline mb-16">Iterations</p>
+                  </header>
+                  <ul class="list-item-black mt-0">
+                    <li>Replaced search page in bottom navigation with reservations</li>
+                    <li>Added search bar on search page</li>
+                    <li>Added quick filter buttons below search bar</li>
+                    <li>Added rating to location icons </li>
+                    <li>Replaced suitable work icons with clear labels</li>
+                  </ul>
+                </div>
+                <div
+                  class="design-walkthrough-grid_card bg-lightest-grey card-item-02 show-med-flex">
                   <header class="design-walkthrough_header mt-8">
                     <p class="card_headline mb-0">Iterations</p>
                   </header>
@@ -1440,7 +1457,7 @@
                   </ul>
                 </div>
               </div>
-              <div class="media-content-wrapper grid-2-column grid-2-rows">
+              <div class="media-content-wrapper">
                 <video autoplay loop controls muted>
                   <source src="assets/videos/postup/postup-prototype-v1-search-results.mp4"
                     type="video/mp4">
@@ -1449,20 +1466,34 @@
                   <source src="assets/videos/postup/postup-final-prototype-results.mp4"
                     type="video/mp4">
                 </video>
-                <p class="medium-grey">Previous</p>
+                <p class="medium-grey grid-item-03">Previous</p>
                 <p>Iteration</p>
               </div>
             </div>
           </div>
         </div>
-        <div class="media-carousel-item margin-auto">
+        <div class="media-carousel-item margin-auto bg-transparent">
           <div class="carousel-item-container">
             <div class="carousel-content-wrapper bg-white">
               <div class="carousel-content">
                 <div>
                   <p class="headline">Enhanced workspace profile</p>
                 </div>
-                <div class="design-walkthrough-grid_card bg-lightest-grey card-item-02">
+                <div class="hide-med  mb-32">
+                  <header class="design-walkthrough_header mt-8">
+                    <p class="design-walkthrough_card-headline mb-16">Iterations</p>
+                  </header>
+                  <ul class="list-item-black mt-0">
+                    <li>Relocated interactive buttons to maximize content above-the-fold</li>
+                    <li>Enhanced typography for readibility</li>
+                    <li>Refined work environment labels for clarity</li>
+                    <li>Reorganized content hierarchy and added new details</li>
+                    <li>Added a reservation system feature</li>
+                    <li>Added menu items section</li>
+                  </ul>
+                </div>
+                <div
+                  class="design-walkthrough-grid_card show-med-flex bg-lightest-grey card-item-02 show-med">
                   <header class="design-walkthrough_header mt-8">
                     <p class="card_headline mb-0">Iterations</p>
                   </header>
@@ -1476,7 +1507,7 @@
                   </ul>
                 </div>
               </div>
-              <div class="media-content-wrapper grid-2-column grid-2-rows">
+              <div class="media-content-wrapper">
                 <video autoplay loop controls muted>
                   <source src="assets/videos/postup/postup-prototype-v1-workspace-profile.mp4"
                     type="video/mp4">
@@ -1557,7 +1588,7 @@
         </p>
       </div>
     </section>
-    <section id="reflection" class="section-container border-0 pb-64">
+    <section id="reflection" class="section-container border pb-64">
       <header class="header-container">
         <h2>Reflection</h2>
       </header>
@@ -1605,23 +1636,9 @@
             </p>
           </div>
           <p>Overall, this was a very rewarding experience, and I can't wait to apply my learnings
-            in my future projects! Thanks for reading!</p>
+            in my future projects!</p>
         </div>
       </section>
-    </section>
-    <section id="conclusion" class="section-container">
-      <header class="header-container">
-        <h2 class="mb-0">Conclusion</h2>
-      </header>
-      <div class="content-wrapper mt-16">
-        <p>
-          All in all, this journey refined my identity as a product designer:
-          I'm committed to leveraging MVP design principles and integrating
-          research and forward-thinking, efficiently crafting experiences that
-          meet user expectations while driving business growth through
-          innovative and engaging solutions.<br />
-        </p>
-      </div>
     </section>
     <section id="thank-you" class="section-container border-0">
       <header class="header-container">
@@ -1634,7 +1651,7 @@
           reserve a table, and scan your profile QR code to earn points on an
           in-person purchase. Open the prototype in a new page
           <a class="link-blue"
-            href="https://www.figma.com/embed?embed_host=share&amp;url=https://www.figma.com/file/SRNmggXDwqHlVJB2ZgAWX7/PostUp?type=design&amp;node-id=239:46459&amp;mode=design&amp;t=p67fIzAwwMAvWfjh-1">here</a>.<br />Feel
+            href="https://www.figma.com/embed?embed_host=share&amp;url=https://www.figma.com/file/SRNmggXDwqHlVJB2ZgAWX7/PostUp?type=design&amp;node-id=239:46459&amp;mode=design&amp;t=p67fIzAwwMAvWfjh-1">here</a>.<br /><br>Feel
           free to reach out to me on
           <a class="link-blue" href="http://www.linkedin.com/in/itsmichellehu"
             target="_blank">LinkedIn</a>

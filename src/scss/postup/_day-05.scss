@@ -134,6 +134,10 @@
 }
 
 .business-monetization-details {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 	gap: 0.5rem;
 
 	header {
@@ -162,7 +166,7 @@
 	display: grid;
 	grid-template-columns: auto;
 	grid-template-rows: auto auto;
-	gap: 2rem;
+	gap: 0;
 	align-items: center;
 
 	h4 {
@@ -178,10 +182,30 @@
 		display: grid;
 		grid-template-columns: 2fr 1fr;
 		grid-template-rows: auto;
+		gap: 2rem;
 	}
 }
 
 .interview-recording-video {
 	width: 100%;
 	aspect-ratio: 3 / 2;
+}
+
+.final-prototype-carousel-item {
+	background-color: transparent;
+}
+
+.final-prototype-carousel-content-wrapper {
+	background-color: transparent;
+}
+
+#final-prototype {
+	border-top: 1px solid $light-grey;
+	border-bottom: 1px solid $light-grey;
+
+	background-color: white;
+
+	@include breakpoint(med) {
+		background-color: $lightest-grey;
+	}
 }

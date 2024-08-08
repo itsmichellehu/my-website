@@ -16,7 +16,7 @@
     align-items: flex-start;
     gap: 0.5rem;
     padding: 1.5rem;
-    padding-left: 2.5rem;
+    padding-left: 1.5rem;
     border-radius: 0.25rem;
     height: fit-content;
     background-color: $lightest-grey;
@@ -44,6 +44,10 @@
 
     &.border-top-red {
         border-top: 0.5rem solid #dc1d26;
+    }
+
+    @include breakpoint(med) {
+        padding-left: 2.5rem;
     }
 }
 
