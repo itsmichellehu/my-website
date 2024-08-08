@@ -14,14 +14,14 @@
 }
 
 .interview-quotes-wrapper {
-	width: fit-content;
+	width: 90vw;
 	max-width: 58rem;
 	margin: auto;
 
 	>.img-quotation-mark {
 		margin: 0;
 		margin-bottom: 1rem;
-		max-width: 5rem;
+		max-width: 3rem;
 	}
 
 	.grid-container {
@@ -32,13 +32,31 @@
 	}
 }
 
+.interviewee-wrapper {
+	display: flex;
+	gap: 1rem;
+	align-items: center;
+
+	p {
+		margin-bottom: 0;
+	}
+}
+
+.img-interviewee.hide-med {
+	width: 1.75rem;
+	height: 1.75rem;
+	border-radius: 25px;
+	margin: auto 0 0 0;
+}
+
 .quote-grid-item {
 	display: grid;
-	grid-template-columns: 1.5fr auto 3fr;
-	grid-template-rows: auto;
+	grid-template-columns: auto;
+	grid-template-rows: auto auto;
 	column-gap: 1.25rem;
 	align-items: center;
 	padding: 2rem 0;
+	row-gap: 1rem;
 
 	&:nth-child(n + 2) {
 		border-top: 1px solid $medium-light-grey;
@@ -47,7 +65,7 @@
 	>div:first-child {
 		p {
 			color: $black;
-			font-size: 1.5rem;
+			font-size: 1.25rem;
 			font-weight: 500;
 			line-height: 150%;
 			margin-bottom: 0;
@@ -56,7 +74,7 @@
 		}
 	}
 
-	.img-interviewee {
+	.img-interviewee.show-med {
 		width: 2.5rem;
 		height: 2.5rem;
 		border-radius: 25px;
@@ -83,6 +101,31 @@
 	&.adam {
 		order: 5;
 		padding-bottom: 0;
+	}
+}
+
+@include breakpoint(med) {
+	.interview-quotes-wrapper {
+		width: fit-content;
+
+		>.img-quotation-mark {
+			margin: 0;
+			margin-bottom: 1rem;
+			max-width: 5rem;
+		}
+	}
+
+	.quote-grid-item {
+		grid-template-columns: 1.5fr auto 3fr;
+		grid-template-rows: auto;
+		column-gap: 1.25rem;
+
+
+		>div:first-child {
+			p {
+				font-size: 1.5rem;
+			}
+		}
 	}
 }
 
