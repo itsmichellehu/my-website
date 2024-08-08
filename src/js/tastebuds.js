@@ -35,6 +35,7 @@ import BackToTopButton from '../components/BackToTopButton/BackToTopButton';
 import Footer from '../components/Footer/Footer';
 
 import { initializeAccordion } from '../components/ProjectAccordion/ProjectAccordion';
+import scrollToChallenge from "../components/ScrollToChallenge/ScrollToChallenge";
 
 document.addEventListener('DOMContentLoaded', () => {
     NavBar();
@@ -44,4 +45,5 @@ document.addEventListener('DOMContentLoaded', () => {
     Footer();
 
     initializeAccordion();
+    scrollToChallenge();
 });

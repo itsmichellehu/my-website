@@ -20,6 +20,7 @@ import NavBarBackground from '../components/NavBarBackground/NavBarBackground';
 import ProgressBar from '../components/ProjectProgressBar/ProjectProgressBar';
 import BackToTopButton from '../components/BackToTopButton/BackToTopButton';
 import Footer from '../components/Footer/Footer';
+import scrollToChallenge from "../components/ScrollToChallenge/ScrollToChallenge";
 
 import { initializeAccordion } from '../components/ProjectAccordion/ProjectAccordion';
 
@@ -30,4 +31,5 @@ document.addEventListener('DOMContentLoaded', () => {
     BackToTopButton();
     Footer();
     initializeAccordion();
+    scrollToChallenge();
 });
