@@ -30,3 +30,34 @@
 .overlay.active {
 	display: block;
 }
+
+.click-zoom input[type=checkbox] {
+	display: none
+}
+
+.click-zoom img {
+	transition: transform 0.25s ease;
+	cursor: zoom-in
+}
+
+.click-zoom input[type=checkbox]:checked~img {
+	transform: scale(1.5);
+	max-height: 75vh;
+	width: auto;
+	z-index: 500;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform-origin: center;
+	transition: width 0.25s ease, height 0.25s ease;
+	transform: translate(-50%, -50%);
+	cursor: zoom-out
+}
+
+// usage
+// <div class="click-zoom">
+// <label>
+//   <input type="checkbox">
+//   <img src="https://via.placeholder.com/200">
+// </label>
+// </div>
