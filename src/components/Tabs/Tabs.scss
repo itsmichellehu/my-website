@@ -22,6 +22,7 @@ $black: #1e1e1e;
     height: 3.5rem;
     border-radius: $tab-border-radius;
     // box-shadow: 0 0 1px 0 rgba($off-black, 0.10), 0 6px 8px px rgba($off-black, 0.20);
+}
 
 .tabs-menu-slider {
     position: absolute;
@@ -96,8 +97,18 @@ $black: #1e1e1e;
     }
 }
 
+.tabs-menu.two-menu-items {
+    .tabs-menu-slider {
+        width: 50%;
+    }
+
+    .tab-button {
+        width: 50%;
+    }
+}
+
 .tabs-menu.three-menu-items {
-    .slider {
+    .tabs-menu-slider {
         width: 33.3333%;
     }
 
