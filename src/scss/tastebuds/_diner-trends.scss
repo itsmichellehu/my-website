@@ -1,26 +1,24 @@
 $diner-trends-border: 1px solid $black;
 
 .diner-trends-grid {
-	@include grid-container(
-		2,
+	@include grid-container(2,
 		auto,
 		0.5rem,
-		0.5rem
-	); // 3 columns, auto rows, 20px gaps
+		0.5rem); // 3 columns, auto rows, 20px gaps
 	// Using the grid-item mixin for the items
 	max-width: $content-max-width;
 	margin: auto;
 	margin-top: 2rem;
 	margin-bottom: 2rem;
 
-	> div {
+	>div {
 		// border: $diner-trends-border;
 		background-color: white;
 		padding: 2rem;
 		border-radius: 5px;
 		background-color: $lightest-grey;
 
-		> p {
+		>p {
 			color: $black;
 			text-align: left;
 			flex: 0 auto;
@@ -35,9 +33,11 @@ $diner-trends-border: 1px solid $black;
 			}
 		}
 	}
+
 	.item-5 {
 		@include grid-item(2, 1);
-		> p {
+
+		>p {
 			margin-bottom: 1.5rem;
 			text-align: center;
 			font-weight: 550;
@@ -49,15 +49,15 @@ $diner-trends-border: 1px solid $black;
 	@include flex(row, 1rem, stretch);
 	text-align: center;
 
-	> div {
+	>div {
 		@include flex(row, 1rem);
 		width: 100%;
 
-		> div {
+		>div {
 			text-align: center;
 
 			p {
-				color: $emphasis-blue;
+				color: $black;
 				text-align: center;
 				flex: 0 auto;
 				margin-bottom: 0;
@@ -66,9 +66,11 @@ $diner-trends-border: 1px solid $black;
 			}
 		}
 
-		.dining-factors-icon {
+		svg.dining-factors-icon {
 			width: 5rem;
+			height: 5rem;
 			margin-bottom: 0.5rem;
+			fill: #C0DDFF;
 		}
 
 		.ic-dining-factors-location {
@@ -79,9 +81,9 @@ $diner-trends-border: 1px solid $black;
 }
 
 .dining-factors-number {
-	font-size: 1.3rem;
-	color: $off-black;
-	font-weight: 400;
+	font-size: 1.4rem;
+	color: $medium-grey;
+	font-weight: 500;
 }
 
 .blockquote-statistic-highlight {
@@ -89,12 +91,14 @@ $diner-trends-border: 1px solid $black;
 
 	.blockquote-content {
 		margin: 0;
-		@extend %pv-16;
+		padding: 0.25rem 0;
+		padding-left: 1rem;
 		border-color: $medium-light-grey;
 		background-color: transparent;
 		color: $black;
 	}
 }
+
 .blockquote-text {
 	margin: 0;
 	color: $black;
