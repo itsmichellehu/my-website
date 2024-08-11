@@ -26,34 +26,47 @@
 
 // Margin vertical (Top  & Bottom)
 .mv {
+	&-0 {
+		@include mv(0);
+	}
+
 	&-8 {
 		@include mv(0.5rem);
 	}
+
 	&-16 {
 		@include mv(1rem);
 	}
+
 	&-24 {
 		@include mv(1.5rem);
 	}
+
 	&-32 {
 		@include mv(2rem);
 	}
+
 	&-40 {
 		@include mv(2.5rem);
 	}
+
 	&-48 {
 		@include mv(3rem);
 	}
+
 	&-56 {
 		@include mv(3.5rem);
 	}
+
 	&-64 {
 		@include mv(4rem);
 	}
+
 	&-80 {
 		@include mv(5rem);
 	}
 }
+
 // Margin top
 .mt {
 	&-0 {
@@ -110,33 +123,43 @@
 	&-0 {
 		margin-bottom: 0rem !important;
 	}
+
 	&-8 {
 		margin-bottom: 0.5rem !important;
 	}
+
 	&-16 {
 		margin-bottom: 1rem !important;
 	}
+
 	&-20 {
 		margin-bottom: 1.25rem !important;
 	}
+
 	&-24 {
 		margin-bottom: 1.5rem !important;
 	}
+
 	&-32 {
 		margin-bottom: 2rem !important;
 	}
+
 	&-40 {
 		margin-bottom: 2.5rem !important;
 	}
+
 	&-48 {
 		margin-bottom: 3rem !important;
 	}
+
 	&-56 {
 		margin-bottom: 3.5rem !important;
 	}
+
 	&-64 {
 		margin-bottom: 4rem !important;
 	}
+
 	&-80 {
 		margin-bottom: 5rem !important;
 	}
@@ -249,6 +272,7 @@
 	&-0 {
 		padding-top: 0 !important;
 	}
+
 	&-8 {
 		padding-top: 0.5rem !important;
 	}
@@ -318,7 +342,7 @@
 		padding-top: 0 !important;
 		padding-bottom: 0 !important;
 	}
-	
+
 	&-16 {
 		padding-top: 1rem !important;
 		padding-bottom: 1rem !important;
@@ -365,27 +389,35 @@
 	&-8 {
 		gap: 0.5rem !important;
 	}
+
 	&-16 {
 		gap: 1rem !important;
 	}
+
 	&-24 {
 		gap: 1.5rem !important;
 	}
+
 	&-32 {
 		gap: 2rem !important;
 	}
+
 	&-40 {
 		gap: 2.5rem !important;
 	}
+
 	&-48 {
 		gap: 3rem !important;
 	}
+
 	&-56 {
 		gap: 3.5rem !important;
 	}
+
 	&-64 {
 		gap: 4rem !important;
 	}
+
 	&-80 {
 		gap: 5rem !important;
 	}
@@ -395,27 +427,35 @@
 	&-8 {
 		column-gap: 0.5rem !important;
 	}
+
 	&-16 {
 		column-gap: 1rem !important;
 	}
+
 	&-24 {
 		column-gap: 1.5rem !important;
 	}
+
 	&-32 {
 		column-gap: 2rem !important;
 	}
+
 	&-40 {
 		column-gap: 2.5rem !important;
 	}
+
 	&-48 {
 		column-gap: 3rem !important;
 	}
+
 	&-56 {
 		column-gap: 3.5rem !important;
 	}
+
 	&-64 {
 		column-gap: 4rem !important;
 	}
+
 	&-80 {
 		column-gap: 5rem !important;
 	}
@@ -425,27 +465,35 @@
 	&-8 {
 		row-gap: 0.5rem !important;
 	}
+
 	&-16 {
 		row-gap: 1rem !important;
 	}
+
 	&-24 {
 		row-gap: 1.5rem !important;
 	}
+
 	&-32 {
 		row-gap: 2rem !important;
 	}
+
 	&-40 {
 		row-gap: 2.5rem !important;
 	}
+
 	&-48 {
 		row-gap: 3rem !important;
 	}
+
 	&-56 {
 		row-gap: 3.5rem !important;
 	}
+
 	&-64 {
 		row-gap: 4rem !important;
 	}
+
 	&-80 {
 		row-gap: 5rem !important;
 	}

@@ -1,22 +1,27 @@
 .competitor-analysis_wrapper {
   display: flex;
+  flex-direction: column;
   gap: 1rem;
   width: 90%;
   max-width: 1200px;
   margin-bottom: 2rem;
+
+  @include breakpoint(med) {
+    flex-direction: row;
+  }
 }
 
 .competitor-analysis_grid-container {
   display: grid;
   grid-template-columns: 2.25fr 2.25fr 2.25fr;
-  grid-template-rows: auto auto auto;
+  grid-template-rows: 2.5rem 313px auto;
   /* Define two rows */
   width: 100%;
   column-gap: 1rem;
   row-gap: 1.5rem;
-  align-items: center;
-  justify-content: center;
-  padding: 2rem;
+  align-items: start;
+  justify-content: start;
+  margin-top: 1.5rem;
   background-color: $lightest-grey;
   border-radius: 1rem;
 
@@ -31,6 +36,7 @@
   display: flex;
   gap: 1rem;
   align-items: center;
+  margin-bottom: 1.5rem;
   // padding-bottom: 1rem;
   // border-bottom: 1px solid $medium-light-grey;
 
@@ -43,10 +49,17 @@
 }
 
 .competitor-analysis-finding {
-  grid-column: 1 / 4;
-  /* Span all columns */
-  grid-row: 3 / 4;
-  /* Place in the second row */
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 0.5rem;
+
+  @include breakpoint(med) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    gap: 2rem;
+  }
 }
 
 .img-competitor-logo {
@@ -73,5 +86,5 @@
 .img-competitor-screen {
   border-radius: 0.5rem;
   border: 1.25px solid $light-grey;
-  width: 100%;
+  width: calc(33% - 3.3px)
 }

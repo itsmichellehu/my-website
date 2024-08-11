@@ -752,72 +752,98 @@
         </h2>
       </header>
       <div class="content-wrapper">
-        <p>
-          Based on my primary and secondary research, I found that diners mostly use Yelp, Google,
+        <p class="mb-40">
+          My research found that diners mostly use Yelp, Google,
           Google Maps, and word-of-mouth recommendations to explore options. Therefore, I analyzed
           Google Maps and Yelp's designs and looked into their relationship with diners'
           pain points.
         </p>
-        <p class="section-subheading">research goals</p>
-        <ul>
-          <li>Understanding user expectations</li>
-          <li>Gauging their weaknesses</li>
-          <li>Understanding their strengths</li>
-          <li>Finding the common ground</li>
-          <li>Evaluating gaps and unmet needs</li>
-        </ul>
-      </div>
-      <div class="competitor-analysis_wrapper">
-        <div class="competitor-analysis_grid-container">
-          <div class="competitor-analysis-app">
-            <img alt="" class="img-competitor-logo" loading="lazy"
-              src="assets/images/tastebuds/logo-yelp.png">
-            <p>Yelp: Food, Delivery &amp; Reviews</p>
+        <div class="tabs-container" data-current="Tab 1" data-duration-in="300"
+          data-duration-out="100" data-easing="ease">
+          <div class="tabs-menu two-menu-items">
+            <button class="tab-button active" data-tab="tab1">
+              <p>Yelp</p>
+            </button>
+            <button class="tab-button" data-tab="tab2">
+              <p>Google</p>
+            </button>
           </div>
-          <img alt="" class="img-competitor-screen" loading="lazy"
-            src="assets/images/tastebuds/competitor-analysis-results-yelp.png">
-          <img alt="" class="img-competitor-screen" loading="lazy"
-            src="assets/images/tastebuds/competitor-analysis-listing-yelp.png">
-          <img alt="" class="img-competitor-screen" loading="lazy"
-            src="assets/images/tastebuds/competitor-analysis-review-yelp.png">
-          <div class="competitor-analysis-finding">
-            <p>
-              Yelp excels in user-generated reviews, aiding informed dining decisions. However, its
-              cluttered interface with excessive sponsored content overshadows this strength.
-              Complex
-              navigation, subpar above-the-fold design, and unclear CTAs hinder user experience,
-              requiring extensive scrolling for essential information. Moreover, Yelp's open-ended
-              review process may pose challenges in maintaining review quality.
-            </p>
-          </div>
-        </div>
-        <div class="competitor-analysis_grid-container">
-          <div class="competitor-analysis-app">
-            <div class="img-google-maps_wrapper">
-              <img alt="" class="img-google-maps" loading="lazy"
-                src="assets/images/tastebuds/logo-google-maps.png">
+          <div class="tab-content ph-0 pb-0 active" id="tab1">
+            <div>
+              <div class="competitor-analysis-app">
+                <img alt="" class="img-competitor-logo" loading="lazy"
+                  src="assets/images/tastebuds/logo-yelp.png">
+                <p>Yelp: Food, Delivery &amp; Reviews</p>
+              </div>
+              <div class="flex-row gap-8 mb-24">
+                <img alt="" class="img-competitor-screen" loading="lazy"
+                  src="assets/images/tastebuds/competitor-analysis-results-yelp.png">
+                <img alt="" class="img-competitor-screen" loading="lazy"
+                  src="assets/images/tastebuds/competitor-analysis-listing-yelp.png">
+                <img alt="" class="img-competitor-screen" loading="lazy"
+                  src="assets/images/tastebuds/competitor-analysis-review-yelp.png">
+              </div>
+              <div class="competitor-analysis-finding">
+                <div>
+                  <p class="fw-medium mb-8">Strengths</p>
+                  <ul class="list-transform-none">
+                    <li>User-generated reviews inform
+                      decisions</li>
+                  </ul>
+                </div>
+                <div>
+                  <p class="fw-medium mb-8">Weaknesses</p>
+                  <ul class="list list-transform-none gap-8">
+                    <li>Cluttered UI, heavy
+                      sponsored content</li>
+                    <li>Complex navigation and subpar above-the-fold
+                    </li>
+                    <li>Unclear CTAs </li>
+                    <li>Extensive scrolling
+                      required for key information</li>
+                    <li>Open-ended reviews may compromise quality
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </div>
-            <p>Google Maps</p>
           </div>
-          <img alt="" class="img-competitor-screen" loading="lazy"
-            src="assets/images/tastebuds/competitor-analysis-results-google.png">
-          <img alt="" class="img-competitor-screen" loading="lazy"
-            src="assets/images/tastebuds/competitor-analysis-listing-google.png">
-          <img alt="" class="img-competitor-screen" loading="lazy"
-            src="assets/images/tastebuds/competitor-analysis-review-google.png">
-          <div class="competitor-analysis-finding">
-            <p>
-              Google Maps presents a clean and intuitive interface, simplifying restaurant searches
-              and navigation. Its well-executed above-the-fold design and clear CTAs contribute to
-              its
-              appeal. The structured review process aids in comprehensive feedback. However,
-              the lack of filtering or sorting options might overwhelm users, potentially causing
-              decision paralysis, especially for location-focused diners.
-            </p>
+          <div class="tab-content ph-0 pb-0" id="tab2">
+            <div class="competitor-analysis-app">
+              <div class="img-google-maps_wrapper">
+                <img alt="" class="img-google-maps" loading="lazy"
+                  src="assets/images/tastebuds/logo-google-maps.png">
+              </div>
+              <p>Google Maps</p>
+            </div>
+            <div class="flex-row gap-8">
+              <img alt="" class="img-competitor-screen" loading="lazy"
+                src="assets/images/tastebuds/competitor-analysis-results-google.png">
+              <img alt="" class="img-competitor-screen" loading="lazy"
+                src="assets/images/tastebuds/competitor-analysis-listing-google.png">
+              <img alt="" class="img-competitor-screen" loading="lazy"
+                src="assets/images/tastebuds/competitor-analysis-review-google.png">
+            </div>
+            <div class="competitor-analysis-finding">
+              <div>
+                <p class="fw-medium mb-8">Strengths</p>
+                <ul class="list list-transform-none gap-8">
+                  <li>Clean and intuitive interface</li>
+                  <li>Simple search flow and navigation</li>
+                  <li>Clear CTAs & well executed above-the-fold design</li>
+                  <li>Structured review process</li>
+                </ul>
+              </div>
+              <div>
+                <p class="fw-medium mb-8">Weaknesses</p>
+                <ul class="list list-transform-none gap-8">
+                  <li>Lack of filtering or sorting options</li>
+                  <li>Potential for decision paralysis, especially for location-focused diners</li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="content-wrapper">
         <p class="section-subheading">Conclusion</p>
         <p>I found a significant shift in my competitors' products—from being user-centric to
           becoming
