@@ -1274,12 +1274,18 @@
           implementing a bottom navigation bar, so I first brainstormed the app's top-level
           destinations with a few secondary-level content:
         </p>
+        <a
+          href="https://drive.google.com/file/d/1KWg4p1t0v0fmG_eABQFEI98ogRNRYUxe/view?usp=sharing">
+          <p class="link-blue mb-0">
+            View full site map ->
+          </p>
+        </a>
       </div>
       <div class="sitemap_wrapper">
         <div class="sitemap_card">
           <img class="sitemap_icon" src="assets/svg/ic-home.svg" alt="">
           <p class="sitemap_headline">Home</p>
-          <ul class="list-none">
+          <ul class="list-none list-transform-none gap-8">
             <li>Cuisine quick links</li>
             <li>Personalized recommendations</li>
             <li>Offers & promotions</li>
@@ -1288,7 +1294,7 @@
         <div class="sitemap_card">
           <img class="sitemap_icon" src="assets/svg/ic-chat.svg" alt="">
           <p class="sitemap_headline">Social feed</p>
-          <ul class="list-none">
+          <ul class="list-none list-transform-none gap-8">
             <li>Friends' reviews</li>
             <li>Inbox</li>
             <li>Write a review</li>
@@ -1297,7 +1303,7 @@
         <div class="sitemap_card">
           <img class="sitemap_icon" src="assets/svg/ic-search.svg" alt="">
           <p class="sitemap_headline">Search</p>
-          <ul class="list-none">
+          <ul class="list-none list-transform-none gap-8">
             <li>New search</li>
             <li>Saved search</li>
             <li>Search results</li>
@@ -1306,7 +1312,7 @@
         <div id="grid-item-4" class="sitemap_card">
           <img class="sitemap_icon" src="assets/svg/ic-favorite.svg" alt="">
           <p class="sitemap_headline">saved</p>
-          <ul class="list-none">
+          <ul class="list-none list-transform-none gap-8">
             <li>Saved restaurants</li>
             <li>Create collections</li>
             <li>Saved reviews from friends</li>
@@ -1315,7 +1321,7 @@
         <div id="grid-item-5" class="sitemap_card">
           <img class="sitemap_icon" src="assets/svg/ic-account-circle.svg" alt="">
           <p class="sitemap_headline">profile</p>
-          <ul class="list-none">
+          <ul class="list-none list-transform-none gap-8">
             <li>User's reviews</li>
             <li>Food preferences</li>
             <li>Account settings</li>
@@ -1323,40 +1329,29 @@
         </div>
       </div>
       <div class="content-wrapper">
-        <p class="subheading">Full site map</p>
-        <div class="content-grid mt-24">
-          <div><img class="img-sitemap" src="assets/images/tastebuds/sitemap.png" alt=""
-              loading="lazy">
+        <button class="accordion" onclick="toggleAccordion(this)">
+          <div class=" accordion__header">
+            <p>See site map details</p>
+            <img class="accordion__icon" src="assets/svg/ic-chevron-arrow__down--white.svg" />
           </div>
-          <aside>
-            <p>Before finalizing TasteBuds as the name for my solution, I initially considered
-              naming
-              it "Crave"! Which one do you prefer? 👀</p>
-          </aside>
-        </div>
-        <p class="mb-32">With the top-level destinations and established, I created a site map
-          integrating features from my user flows. While sitemaps are typically associated with
-          websites, this process helped me refine my user flows by conceptualizing content and
-          information hierarchy. </p>
-        <p class="subheading">A dedicated search page</p>
-        <p class="mb-32">
-          Most of the decision-making process for diners is comparative analysis. This intends to
-          facilitate seamless navigation between restaurant listings and other pages for diners,
-          optimizing their process by eliminating the need to switch between pages and
-          losing the search progress!
-        </p>
-        <p class="subheading">New features ✨</p>
-        <p>Since I was able to identify and address gaps in my user flows, I used my user personas
-          to
-          further empathize with my target diners and brainstorm more features that would enhance
-          their experience. I added direct messaging, exclusive in-app
-          offers, and saved reviews and restaurants.</p>
-        <p class="subheading">Challenge 😵‍💫</p>
-        <p>The most challenging aspect was deciding the placement of the social feed. Both
-          personalized and word-of-mouth recommendations are valued by diners, making this
-          prioritization difficult. Ultimately, I chose to display personalized recommendations
-          first for their immediate value, while still ensuring easy access to word-of-mouth
-          recommendations by placing them second on the navigation bar!</p>
+          <div class="accordion__content">
+            <p class="mb-24">I developed a site map integrating features from user flows, refining
+              content and information hierarchy.</p>
+            <p class="fw-medium">Dedicated Search Page</p>
+            <p class="mb-24">Streamlined the decision-making process by facilitating easy navigation
+              between restaurant listings, eliminating the need to switch pages.</p>
+            <p class="fw-medium">New Features</p>
+            <p class="mb-24">Added direct messaging, in-app offers, and saved reviews/restaurants to
+              enhance user experience based on user personas.</p>
+            <p class="fw-medium">Challenge</p>
+            <p class="mb-0">
+              The toughest decision was placing the social feed. Prioritized personalized
+              recommendations for their immediate value, with word-of-mouth recommendations second
+              on
+              the navigation bar.
+            </p>
+          </div>
+        </button>
       </div>
     </section>
     <section id="sketches" class="section-container border-0 pb-0">
