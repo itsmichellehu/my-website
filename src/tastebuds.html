@@ -884,7 +884,7 @@
           understand my target audience and guide my ideation phase: Alex, Brandon, and Cleo.
         </p>
       </div>
-      <div class="user-persona_tabs tabs-container content mb-32" data-current="Tab 1"
+      <div class="user-persona_tabs tabs-container content" data-current="Tab 1"
         data-duration-in="300" data-duration-out="100" data-easing="ease">
         <div class="tabs-menu">
           <button class="tab-button active" data-tab="tab1">
@@ -897,28 +897,15 @@
             <p>Cleo</p>
           </button>
         </div>
-        <div class="tab-content active" id="tab1">
-          <img alt="" class="img-user-persona" src="assets/images/tastebuds/user-persona-alex.png">
-        </div>
-        <div class="tab-content" id="tab2">
-          <img alt="" class="img-user-persona"
-            src="assets/images/tastebuds/user-persona-brandon.png">
-        </div>
-        <div class="tab-content" id="tab3">
-          <img alt="" class="img-user-persona" src="assets/images/tastebuds/user-persona-cleo.png">
-        </div>
-      </div>
-      <div class="content mb-32">
-        <div class="user-persona_container">
-          <div class="user-persona_heading-container">
+        <div class="tab-content ph-0 active" id="tab1">
+          <div class="user-persona_container">
             <img alt="" class="user-persona_icon" loading="lazy"
               src="assets/images/tastebuds/user-persona-icon-alex.png">
-          </div>
-          <div>
             <p class="user-persona_title">Alex</p>
             <div class="user-persona_content">
               <p>
-                I enjoy dining out because I can spend quality time with my friends and family, eat
+                I enjoy dining out because I can spend quality time with my friends and family,
+                eat
                 delicious food, and discover new restaurants.
                 <span>I use Yelp and Google Maps but trust word-of-mouth
                   recommendations over online reviews to know what's
@@ -928,47 +915,51 @@
               </p>
             </div>
           </div>
+          <img alt="" class="img-user-persona" src="assets/images/tastebuds/user-persona-alex.png">
         </div>
-        <div class="user-persona_container">
-          <div class="user-persona_heading-container">
+        <div class="tab-content ph-0" id="tab2">
+          <div class="user-persona_container">
             <img alt="" class="user-persona_icon" loading="lazy"
               src="assets/images/tastebuds/user-persona-icon-brandon.png">
-          </div>
-          <div>
             <p class="user-persona_title">Brandon</p>
             <div class="user-persona_content">
               <p>
-                I couldn't care less about discovery. Given my hectic work schedule, I dine out and
+                I couldn't care less about discovery. Given my hectic work schedule, I dine out
+                and
                 order takeout for the
                 <span>convenience</span>, especially when I'm working late. I just want to
                 <span>quickly find dining options with good value that make
-                  my life easier</span>, such as when I don’t have time to cook or simply don't want
+                  my life easier</span>, such as when I don’t have time to cook or simply don't
+                want
                 to cook.
               </p>
             </div>
           </div>
+          <img alt="" class="img-user-persona"
+            src="assets/images/tastebuds/user-persona-brandon.png">
         </div>
-        <div class="user-persona_container">
-          <div class="user-persona_heading-container">
+        <div class="tab-content ph-0" id="tab3">
+          <div class="user-persona_container">
             <img alt="" class="user-persona_icon" loading="lazy"
               src="assets/images/tastebuds/user-persona-icon-cleo.png">
-          </div>
-          <div>
             <p class="user-persona_title">Cleo</p>
             <div class="user-persona_content">
               <p>
-                Like Alex, I enjoy discovery and spending quality time with friends and family, but
+                Like Alex, I enjoy discovery and spending quality time with friends and family,
+                but
                 I
                 am more inclined to visit new, trendy places. However, unlike Brandon, convenience
                 is
                 not my priority if the place is worth visiting, so I'm more willing to travel for
-                the experience! Also, dining out isn't limited to dining: As a remote worker, I like
+                the experience! Also, dining out isn't limited to dining: As a remote worker, I
+                like
                 to work at aesthetic coffee shops with WiFi and outlets, so it’s important that
                 restaurant provide high quality pictures and accurate, relevant
                 information online.
               </p>
             </div>
           </div>
+          <img alt="" class="img-user-persona" src="assets/images/tastebuds/user-persona-cleo.png">
         </div>
       </div>
       <div class="content-wrapper">
@@ -1057,31 +1048,27 @@
       </div>
       <div class="user-flow-tabs-container tabs-container" data-current="Tab 1"
         data-duration-in="300" data-duration-out="100" data-easing="ease">
-        <div class="tabs-menu">
+        <div class="tabs-menu three-menu-items">
           <button class="tab-button active" data-tab="tab1">
-            <p>Home</p>
+            <p>Route 1</p>
           </button>
           <button class="tab-button" data-tab="tab2">
-            <p>Search</p>
+            <p>Route 2</p>
           </button>
           <button class="tab-button" data-tab="tab3">
-            <p>Filters</p>
-          </button>
-          <button class="tab-button" data-tab="tab4">
-            <p>Reviews</p>
+            <p>Route 3</p>
           </button>
         </div>
-        <div id="tab1" class="tab-content active">
+        <div id="tab1" class="tab-content ph-0 active">
           <div class="userflow-walkthrough_grid-container">
             <img class="userflow-walkthrough_image" loading="eager"
               src="assets/images/tastebuds/route-1-user-flow.png">
             <div class="userflow-walkthrough_card">
-              <p class="userflow-walkthrough_card_subheader">Route 01</p>
               <p class="userflow-walkthrough_card_headline">
                 Diner signs up and sets up their account
               </p>
               <ul class="userflowFeatures_list">
-                <li>Create an account with email or social media</li>
+                <li>Create account with email or social</li>
                 <li>Input food preferences</li>
                 <li>Add friends</li>
               </ul>
@@ -1096,91 +1083,71 @@
             </div>
           </div>
         </div>
-        <div id="tab2" class="tab-content">
-          <div>
-            <p class="subheading">Where should Nina "search by task"?</p>
-            <!-- <blockquote>
-                  <div class="blockquote-content pv-16">
-                    <p>
-                      "Sometimes, removing just one button can significantly
-                      enhance the user experience." — Day 1
-                    </p>
-                  </div>
-                </blockquote> -->
-            <p>
-              Upon expanding my storyboard, I realized two design errors
-              from days 1 and 2.
-            </p>
-            <div class="tab-content-grid">
-              <img alt="" class="img-sketch-filters" loading="lazy"
-                src="https://assets-global.website-files.com/651649456fb9882d90cce3aa/6591eb230a4324757287012d_Untitled_Artwork%2048.png" />
-              <div>
-                <p>
-                  <span class="fw-medium">Day 1:</span> Optimizing search
-                  process by taking users directly to search results after
-                  task-selection might backfire if the presets are even
-                  slight inaccurate.
-                </p>
-                <p>
-                  <span class="fw-medium">Day 2:</span> The lack of
-                  transparency behind the presets if located on the
-                  'Discover' page might be confusing.
+        <div id="tab2" class="tab-content ph-0">
+          <div class="userflow-walkthrough_grid-container">
+            <img class="userflow-walkthrough_image" loading="eager"
+              src="assets/images/tastebuds/route-2-user-flow.png">
+            <div class="userflow-walkthrough_card">
+              <p class="userflow-walkthrough_card_headline">
+                Diner searches for dining options
+              </p>
+              <ul class="userflowFeatures_list">
+                <li>Saved search presets</li>
+                <li>Filter by 'Cuisines'</li>
+                <li>Filter by 'Visit history'</li>
+                <li>Personalized recommendations</li>
+                <li>Compatibility score (% Match)</li>
+                <li>Limited search results</li>
+              </ul>
+            </div>
+            <div class="userflow-walkthrough_content-container">
+              <div class="userflow-walkthrough_content">
+                <p>Diners can enter keywords and preferences, filter by visit history, and see
+                  results
+                  sorted by a “% Match” score based on AI-driven preferences and dining history.
+                  Alex
+                  and Cleo, who value discovery, can exclude previously visited spots, while Brandon
+                  can choose familiar places. Frequent searches, like Brandon’s "Late-night dinner,"
+                  can be saved for quick access. The search offers a finite number of results, with
+                  a
+                  refresh option to balance choice and discovery.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="tab3" class="tab-content ph-0">
+          <div class="userflow-walkthrough_grid-container">
+            <img class="userflow-walkthrough_image" loading="lazy"
+              src="assets/images/tastebuds/route-3-user-flow.png">
+            <div class="userflow-walkthrough_card">
+              <p class="userflow-walkthrough_card_headline">
+                Diner reviews their dining experience
+              </p>
+              <ul class="userflowFeatures_list">
+                <li>Rate ordered items (required)</li>
+                <li>Zero and half star rating system</li>
+                <li>Strengths and weaknesses of dining experience</li>
+                <li>Recommendation rating</li>
+                <li>Written review (optional)</li>
+              </ul>
+            </div>
+            <div class="userflow-walkthrough_content-container">
+              <div class="userflow-walkthrough_content">
+                <p>Users can record and share detailed dining experiences through a structured
+                  review
+                  process that emphasizes critical decision-making factors. To counter reluctance in
+                  writing reviews, the flow leverages 'completion bias' to encourage genuine,
+                  food-focused feedback. Only two sections are mandatory, with the rest optional,
+                  including the written portion. To balance personalized suggestions with privacy,
+                  diners can set reviews as private to enhance recommendations without publicly
+                  sharing.
                 </p>
               </div>
             </div>
-            <div>
-              <img alt="" class="mt-0 mb-24 img-100" loading="lazy"
-                src="https://assets-global.website-files.com/651649456fb9882d90cce3aa/6591e8f664b57376876574e9_Untitled_Artwork%2047.png" />
-              <p>
-                <span class="fw-medium">Solution:</span>
-                Create a 'Search page' that allows people to conduct a 'New
-                search' or select 'Customizable presets'.
-              </p>
-            </div>
-            <div></div>
-          </div>
-        </div>
-        <div id="tab3" class="tab-content">
-          <div>
-            <p class="subheading">
-              What if Nina realizes she has additional needs?
-            </p>
-            <p>
-              With a new 'Search' page, I was able to display the details on
-              the preset filters to ensure transparency. As for my conflict
-              regarding whether or not Nina should be able to adjust filters
-              immediately after task selection, after reviewing my user
-              research, I realized most people share the same preferences
-              across all tasks! Being taken to a filters page each time Nina
-              selects a preset could be counterproductive. She can also just
-              conduct a new search. Besides, testing may reveal the ideal
-              flow!
-            </p>
-          </div>
-          <img class="img-100" alt="" class="mt-0" loading="lazy"
-            src="assets/images/postup/postup-storyboard-filters.png" />
-        </div>
-        <div id="tab4" class="tab-content">
-          <div class="subsection margin-0">
-            <p class="subheading">
-              In addition to the workspace environment, what else might Nina
-              want to learn?
-            </p>
-            <img alt="" class="img-100 mv-24" loading="lazy"
-              src="https://assets-global.website-files.com/651649456fb9882d90cce3aa/6591e3ed0739d6822e5ea7fd_IMG_0654.PNG" />
-            <p>
-              The final highlight of my storyboard evolution was adding a
-              'Reviews' section for each workspace. After Nina learns about
-              the workspace's details, she might want to see what other
-              people have to say or seek more details, especially since
-              that's what she's used to doing with her existing tools. For a
-              more intuitive experience, users may navigate between the
-              pages by swiping horizontally.
-            </p>
           </div>
         </div>
       </div>
-      <div class="container-full-width userflow-walkthrough bg-black">
+      <div class="container-full-width userfflow-walkthrough bg-black hide">
         <div class="userflow-walkthrough_grid-container">
           <img class="userflow-walkthrough_image" loading="eager"
             src="assets/images/tastebuds/route-1-user-flow-min.png">
@@ -1199,8 +1166,8 @@
             <div class="userflow-walkthrough_content">
               <p>After a standard sign-up process, diners can input their food preferences then add
                 their friends by linking their social media accounts and contacts. This would
-                <span class="white">enable personalized recommendations</span> for diners and allow
-                diners to <span class="white"> see dining recommendations from friends </span> they
+                enable personalized recommendations for diners and allow
+                diners to see dining recommendations from friends they
                 add.
               </p>
             </div>

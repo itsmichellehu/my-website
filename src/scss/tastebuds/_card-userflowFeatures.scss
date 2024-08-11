@@ -40,26 +40,28 @@ $userflow-walkthrough-border-radius: 1rem;
 
 .userflow-walkthrough_grid-container {
 	display: grid;
-	grid-template-columns: 20rem 1fr;
+	grid-template-columns: 18rem 1fr;
 	grid-template-rows: repeat(2, auto);
 	grid-template-areas: 'a a' 'b c';
 	margin: auto;
-	gap: 2rem;
-	width: 95%;
-	max-width: 60rem;
+	column-gap: 1.25rem;
+	row-gap: 2rem;
+	width: 100%;
+	align-items: center;
 }
 
 .userflow-walkthrough_card {
 	@include flex(column, 0.5rem);
 	height: fit-content;
 	margin-top: 0;
-	width: 20rem;
-	background-color: #0f0f0f;
+	width: 100%;
+	// background-color: #0f0f0f;
 	margin: auto; // Center the container
-	padding: 2rem;
-	border-radius: 1rem;
+	padding: 0 1.25rem 0 0;
+	border-right: 2px solid $light-grey;
 	grid-area: b;
-	color: white;
+	color: $black;
+
 
 	//   box-shadow: 0.5px 0.5px 6px 0px rgba(0, 0, 0, 0.1);
 
@@ -76,6 +78,10 @@ $userflow-walkthrough-border-radius: 1rem;
 		width: 2.5rem;
 		height: 2.5rem;
 	}
+
+	p {
+		color: $off-black;
+	}
 }
 
 .userflow-walkthrough_card_subheader {
@@ -89,10 +95,10 @@ $userflow-walkthrough-border-radius: 1rem;
 
 .userflow-walkthrough_card_headline {
 	font-size: 1.5rem;
-	color: white;
 	margin: 0;
-	margin-bottom: 0.5rem;
+	margin-bottom: 0.5;
 	font-weight: 500;
+	// color: white;
 }
 
 .userflowFeatures_list {
@@ -102,17 +108,16 @@ $userflow-walkthrough-border-radius: 1rem;
 	font-weight: 400;
 
 	li {
-		color: #ffffff;
-		font-weight: 300;
+		padding: 0;
 	}
 }
 
 .userflow-walkthrough_image {
-	margin-bottom: 1.5rem;
 	border-radius: $userflow-walkthrough-border-radius;
-	background-color: #fff;
 	width: 100%;
 	grid-area: a;
+	border: 1px solid $medium-grey;
+	margin-bottom: 0;
 }
 
 .userflow-walkthrough_content-container {
@@ -122,18 +127,11 @@ $userflow-walkthrough-border-radius: 1rem;
 
 .userflow-walkthrough_content {
 	// background-color: $lightest-grey;
-	// border-radius: $userflow-walkthrough-border-radius;
-	padding: 0 1rem;
+	// border-radius: $userflow-walkthrough-border-radius
 	width: 100%;
-
-	.subheading {
-		color: white;
-	}
 
 	p {
 		color: $dark-grey;
-		font-weight: 500;
-		font-size: 1.3rem;
 	}
 
 	p:last-child {

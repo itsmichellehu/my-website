@@ -19,6 +19,6 @@
 @import "UsabilityTest03";
 
 .user-flow-tabs-container {
-    max-width: 60rem !important;
+    max-width: $content-max-width;
     margin-top: 2rem !important;
 }
