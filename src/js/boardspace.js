@@ -7,6 +7,7 @@ import NavBar from '../components/NavBar/NavBar';
 import NavBarBackground from '../components/NavBarBackground/NavBarBackground';
 
 import { initializeAccordion } from '../components/ProjectAccordion/ProjectAccordion';
+import { initializeHideVideoControls } from '../components/HideVideoControls/HideVideoControls';
 
 document.addEventListener('DOMContentLoaded', () => {
     BackToTopButton();
@@ -16,4 +17,6 @@ document.addEventListener('DOMContentLoaded', () => {
     NavBarBackground();
 
     initializeAccordion();
+    initializeHideVideoControls();
+
 });

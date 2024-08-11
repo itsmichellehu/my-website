@@ -25,6 +25,7 @@ import scrollToChallenge from "../components/ScrollToChallenge/ScrollToChallenge
 
 import { initializeAccordion } from '../components/ProjectAccordion/ProjectAccordion';
 import initializeTabs from '../components/Tabs/Tabs';
+import { initializeHideVideoControls } from '../components/HideVideoControls/HideVideoControls';
 
 document.addEventListener('DOMContentLoaded', () => {
     NavBar();
@@ -36,4 +37,5 @@ document.addEventListener('DOMContentLoaded', () => {
     enableImageZoom();
     scrollToChallenge();
     initializeTabs();
+    initializeHideVideoControls();
 });

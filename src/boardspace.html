@@ -20,7 +20,6 @@
   <title>BoardSpace Poll Feature text-Redesign
     Case
     Study by Michelle Hu</title>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
 <body>
@@ -810,19 +809,6 @@
   <script src="/public/js/idp-casestudy/table.js"></script>
   <script src="/public/js/idp-casestudy/showFullImage.js"></script>
   <script src="/public/js/idp-casestudy/accordion.js"></script>
-  <!-- Hides video controls on default if 'controls' aren't present and only displays video controls on hover -->
-  <script>
-    $(document).ready(function () {
-      $('video').hover(
-        function () { // mouseenter
-          this.setAttribute("controls", "controls");
-        },
-        function () { // mouseleave
-          this.removeAttribute("controls");
-        }
-      );
-    });
-  </script>
 </body>
 
 </html>
