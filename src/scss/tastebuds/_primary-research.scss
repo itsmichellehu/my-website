@@ -16,7 +16,7 @@
 		gap: 1rem;
 		width: 100%;
 
-		> div {
+		>div {
 			width: 100%;
 		}
 
@@ -76,7 +76,7 @@
 		border-bottom: 1px solid #eae8e2;
 	}
 
-	.content-container > div:nth-child(2) > div {
+	.content-container>div:nth-child(2)>div {
 		.satisfaction-level {
 			img {
 				width: 1.5rem;
@@ -118,6 +118,7 @@
 		width: 2rem;
 		height: 2rem;
 	}
+
 	p {
 		margin-bottom: 0;
 	}
@@ -128,11 +129,11 @@
 	max-width: 52rem;
 	margin: 0 auto;
 
-	> div:first-child {
+	>div:first-child {
 		flex: content;
 	}
 
-	> div:last-child {
+	>div:last-child {
 		margin-top: calc(32px + 56px);
 	}
 
@@ -152,15 +153,16 @@
 
 .survey-results-cards-wrapper {
 	@include flex(row, 0.5rem, stretch, stretch);
+
 	img {
 		border-radius: 5px;
 	}
 }
 
 .survey-results_flex-container {
-		align-items: stretch;
-		gap: 1rem;
-		
+	align-items: stretch;
+	gap: 1rem;
+
 	@include breakpoint(med) {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
@@ -223,4 +225,14 @@
 	width: 100%;
 	margin: 0;
 	max-width: 4rem;
+}
+
+.primary-research-summary_wrapper {
+	width: 90vw;
+
+	@include breakpoint(lg) {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 3rem;
+	}
 }

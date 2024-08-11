@@ -39,12 +39,14 @@ $userflow-walkthrough-border-radius: 1rem;
 }
 
 .userflow-walkthrough_grid-container {
-	display: flex;
-	flex-direction: row;
+	display: grid;
+	grid-template-columns: 20rem 1fr;
+	grid-template-rows: repeat(2, auto);
+	grid-template-areas: 'a a' 'b c';
 	margin: auto;
 	gap: 2rem;
 	width: 95%;
-	max-width: 80rem;
+	max-width: 60rem;
 }
 
 .userflow-walkthrough_card {
@@ -52,11 +54,12 @@ $userflow-walkthrough-border-radius: 1rem;
 	height: fit-content;
 	margin-top: 0;
 	width: 20rem;
-	max-width: $content-max-width;
 	background-color: #0f0f0f;
 	margin: auto; // Center the container
 	padding: 2rem;
 	border-radius: 1rem;
+	grid-area: b;
+	color: white;
 
 	//   box-shadow: 0.5px 0.5px 6px 0px rgba(0, 0, 0, 0.1);
 
@@ -109,10 +112,12 @@ $userflow-walkthrough-border-radius: 1rem;
 	border-radius: $userflow-walkthrough-border-radius;
 	background-color: #fff;
 	width: 100%;
+	grid-area: a;
 }
 
 .userflow-walkthrough_content-container {
-	flex: 1;
+	width: 100%;
+	grid-area: c;
 }
 
 .userflow-walkthrough_content {
@@ -126,7 +131,7 @@ $userflow-walkthrough-border-radius: 1rem;
 	}
 
 	p {
-		color: #aaa;
+		color: $dark-grey;
 		font-weight: 500;
 		font-size: 1.3rem;
 	}
