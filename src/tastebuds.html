@@ -26,6 +26,7 @@
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0"
     rel="stylesheet">
   <link href="path/to/favicon.ico" rel="icon">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script>
     function toggleAccordion(button) {
       const content = button.querySelector('.accordion__content');
@@ -3082,6 +3083,19 @@
           toggleAccordion(this);
         });
       });
+    });
+  </script>
+  <!-- Hides video controls on default if 'controls' aren't present and only displays video controls on hover -->
+  <script>
+    $(document).ready(function () {
+      $('video').hover(
+        function () { // mouseenter
+          this.setAttribute("controls", "controls");
+        },
+        function () { // mouseleave
+          this.removeAttribute("controls");
+        }
+      );
     });
   </script>
 </body>

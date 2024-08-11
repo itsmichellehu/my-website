@@ -21,6 +21,7 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <!-- Move the script tag to the bottom of the HTML file -->
     <script src="components/Scrollable/scrollable.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             const containers = document.querySelectorAll('.project-thumb-container');
@@ -231,6 +232,19 @@
                 top: targetPosition,
                 behavior: 'smooth',
             });
+        });
+    </script>
+    <!-- Hides video controls on default if 'controls' aren't present and only displays video controls on hover -->
+    <script>
+        $(document).ready(function () {
+            $('video').hover(
+                function () { // mouseenter
+                    this.setAttribute("controls", "controls");
+                },
+                function () { // mouseleave
+                    this.removeAttribute("controls");
+                }
+            );
         });
     </script>
 </body>
