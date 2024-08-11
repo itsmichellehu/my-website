@@ -1,39 +1,51 @@
 .teal {
 	color: $teal !important;
 }
+
 .yellow {
 	color: $yellow !important;
 }
+
 .red-orange {
 	color: $red-orange !important;
 }
+
 .tan {
 	color: $tan !important;
 }
+
 .dark-grey {
 	color: $dark-grey !important;
 }
+
 .off-black {
 	color: $off-black !important;
 }
+
 .emphasis-blue {
 	color: $emphasis-blue !important;
 }
+
 .medium-grey {
 	color: $medium-grey !important;
 }
+
 .lightest-grey {
 	color: $lightest-grey !important;
 }
+
 .invalid-red {
 	color: $invalid-red !important;
 }
+
 .medium-light-grey {
 	color: $medium-light-grey !important;
 }
+
 .light-grey {
 	color: $light-grey !important;
 }
+
 .light-blue {
 	color: $light-blue !important;
 }
@@ -45,9 +57,11 @@
 .black {
 	color: $black !important;
 }
+
 .sub-grey {
 	color: $sub-grey !important;
 }
+
 .emphasis {
 	color: $emphasis !important;
 }
@@ -61,6 +75,10 @@
 
 	&light-grey {
 		background-color: $light-grey !important;
+	}
+
+	&light-medium-grey {
+		background-color: $light-medium-grey !important;
 	}
 
 	&lightest-grey {

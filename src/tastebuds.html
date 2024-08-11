@@ -57,7 +57,7 @@
     <div id="progress-bar"></div>
   </div>
   <main>
-    <section id="hero" class="hero hero-tastebuds hero--bg-tastebuds">
+    <section id="hero" class="hero hero-tastebuds">
       <video id="exclude-video-jquery" autoplay loop muted class="hero-tastebuds-video">
         <source src="assets/images/thumbs/thumb-tastebuds-yellow-bg.mp4" type="video/mp4">
       </video>
@@ -105,7 +105,7 @@
         </div>
       </div>
       <div class="flex-row center">
-        <button id="scrollToChallenge" class="scroll-button hero" data-scroll-target="the-problem"
+        <button id="scrollToChallenge" class="scroll-button hero" data-scroll-target="the-challenge"
           aria-label="Scroll down">
           <img src="assets/svg/ic-chevron-arrow__down--black.svg"
             alt="Chevron arrow pointing down, indicating to scroll down" />
@@ -129,6 +129,64 @@
         </p>
       </div>
     </section>
+    <section id="the-solution" class="section-container equal-padding">
+      <div class="the-solution-prototype_section-grid-container">
+        <h2 class="text-center hide-med width-100 mb-24">The Final Solution</h2>
+        <div class="the-solution-prototype_wrapper">
+          <h2 class="show-med-flex">The Final Solution</h2>
+          <div class="the-solution-prototype_grid-container mb-40">
+            <h3>AI generated personalized recommendations <span class="dark-grey">exclusively</span>
+              based on friends and
+              personal preferences</h3>
+            <video autoplay loop muted class="the-solution-prototype_video">
+              <source src="assets/videos/tastebuds/tastebuds-final-prototype-home.mp4"
+                type="video/mp4">
+            </video>
+            <div class="the-solution-prototype_content">
+              <p class="the-solution-prototype_body">
+                The final solution empowers
+                diners to confidently discover dining options with people they trust. Leveraging
+                word-of-mouth recommendations from friends, Tastebuds provides
+                personalized recommendations based on diners' preferences and dining history.
+              </p>
+            </div>
+          </div>
+          <div
+            class="the-solution-prototype_grid-container the-solution-prototype_grid-container--reverse">
+            <h3>B2B business model that provides restaurant subscribers access to user
+              data and feedback</h3>
+            <video autoplay loop muted class="the-solution-prototype_video">
+              <source
+                src="assets/videos/tastebuds/prototype-high-fidelity-v2-route-3-01-experience.mp4"
+                type="video/mp4">
+            </video>
+            <div class="the-solution-prototype_content">
+              <p class="the-solution-prototype_body mb-16">To generate a revenue stream without
+                overcommercialization and improve the
+                overall diner journey, TasteBuds invites restaurants to join as business partners to
+                offer exclusive in-app promotions and stay connected with diners.</p>
+              <button class="scroll-button bg-transparent" data-scroll-target="final-prototype">
+                <p class="link-blue">Jump to final prototype
+                </p>
+                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="16" viewBox="0 0 12 16"
+                  fill="none">
+                  <g clip-path="url(#clip0_2209_112081)">
+                    <path
+                      d="M10.0955 10.538V2.70175H12.0838V13.9298H0.855685V11.9415H8.69194L0.153931 3.40351L1.55744 2L10.0955 10.538Z" />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_2209_112081">
+                      <rect width="11.6667" height="15" fill="white"
+                        transform="translate(0.153931 0.5)" />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <section id="the-process" class="section-container equal-padding">
       <header class="header-container">
         <h2>Process</h2>
@@ -136,22 +194,17 @@
       <div class="content-wrapper">
         <!-- <p>This was my capstone project for my Springboard UX Design course, marking my inaugural
             venture into product design with formal UX training!</p> -->
-        <p>
-          "Why is it so hard to find a place to eat and trying new items? Despite convenient
-          crowdsourced review apps such as Yelp and Google, why do diners struggle to make dining
-          decisions efficiently?"
-        </p>
-        <p>
-          These were the questions that guided me to explore the consumer dining experience. After
-          witnessing shared challenges among my friends and family when it came to deciding where to
-          eat and exploring new restaurants and menu items. As someone who values
-          diverse culinary experiences and sees food as a gateway to understanding different
-          cultures,
-          I was deeply motivated to create a solution for the consumer dining space.
-        </p>
-        <p>
-          To address this problem, my research process followed the 5-stage Design Thinking model
-          proposed by the Hasso Plattner Institute of Design at Stanford (the "d. school").
+        <p class="mb-0">"Why is it so hard to find a place to eat or try new items, even with apps
+          like Yelp and
+          Google?"
+          <br><br>
+          This question drove me to explore the consumer dining experience after observing
+          similar struggles among friends and family. As a food enthusiast who values culinary
+          diversity, I was motivated to create a solution.
+          <br><br>
+          Using the 5-stage Design Thinking model from Stanford's d.school, I created a prototype of
+          TasteBuds. My process followed the 5-stage Design
+          Thinking model from Stanford's d.school to address this issue.
         </p>
         <button class="scroll-button bg-transparent link-blue"
           data-scroll-target="final-tastebuds-solution">
@@ -160,7 +213,7 @@
             class="material-symbols-outlined ic-arrow_jump-to-section material-symbols_lower">arrow_downward</span>
         </button>
       </div>
-      <div class="content medium">
+      <div class="content medium mt-0">
         <img class="img-100" alt="" loading="lazy"
           src="assets/images/tastebuds/research-process.png">
       </div>
@@ -2910,7 +2963,7 @@
         </p>
       </div>
     </section>
-    <section id="final-prototype" class="section-container" id="final-tastebuds-solution">
+    <section id="final-prototype" class="section-container">
       <header class="header-container mb-32">
         <h2 class="text-center">Final prototype</h2>
       </header>

@@ -279,8 +279,19 @@
 
 .scroll-button {
 	cursor: pointer;
+	display: flex;
+	gap: 0.5rem;
+	align-items: center;
 
-	&.link-blue:hover {
+	p {
+		margin-bottom: 0;
+	}
+
+	svg {
+		fill: $link-blue;
+	}
+
+	&:hover {
 		opacity: 0.75;
 	}
 }

@@ -2,6 +2,7 @@ $primary-color: #4379df;
 $light-blue: #dee3f4;
 $bg-grey: #f0f0f0;
 $wireframe-max-height: 40rem;
+$tastebuds-bg-yellow: #F6E7C6;
 
 .bg-grey {
 	background-color: $bg-grey;
@@ -31,7 +32,7 @@ $wireframe-max-height: 40rem;
 }
 
 body {
-	background-color: #f8eacd;
+	background-color: $tastebuds-bg-yellow;
 }
 
 main {
@@ -40,7 +41,7 @@ main {
 
 #hero {
 	padding-top: 5rem;
-	background-color: #f8eacd;
+	background-color: $tastebuds-bg-yellow;
 }
 
 #overview {
