@@ -1,5 +1,5 @@
 @import "../components/global-components";
-// 
+//
 // @import "../components/project-components";
 
 $outline-stroke: 1.25px;
@@ -13,7 +13,7 @@ $dark-grey: #565656;
 $off-black: #4a4a4a;
 $emphasis-blue: #4479df;
 $medium-grey: #757575;
-$lightest-grey: #f9f9f9;
+$lightest-grey: #fefefe;
 $invalid-red: #dc1d25;
 $white: #ffffff;
 $medium-light-grey: #dbdbdb;
@@ -39,25 +39,35 @@ $breakpoints: (
 		@media (min-width: map-get($breakpoints, $name)) {
 			@content;
 		}
-	} @else {
+	}
+
+	@else {
 		@error "Unknown breakpoint: #{$name}. Please use one of: #{map-keys($breakpoints)}.";
 	}
 }
 
 @mixin iconSize($size) {
-	@if $size == "xs" {
+	@if $size =="xs" {
 		width: 24px;
 		height: 24px;
-	} @else if $size == "sm" {
+	}
+
+	@else if $size =="sm" {
 		width: 32px;
 		height: 32px;
-	} @else if $size == "med" {
+	}
+
+	@else if $size =="med" {
 		width: 40px;
 		height: 40px;
-	} @else if $size == "lg" {
+	}
+
+	@else if $size =="lg" {
 		width: 56px;
 		height: 56px;
-	} @else if $size == "xl" {
+	}
+
+	@else if $size =="xl" {
 		width: 64px;
 		height: 64px;
 	}
@@ -127,7 +137,8 @@ p {
 	font-size: 1rem;
 	font-style: normal;
 	font-weight: 400;
-	line-height: 150%; /* 1.6875rem */
+	line-height: 150%;
+	/* 1.6875rem */
 	text-align: left;
 	margin-top: 0;
 	margin-bottom: 1.125rem;
@@ -163,7 +174,8 @@ h5 {
 
 	@include breakpoint("lg") {
 		font-weight: 600;
-		line-height: 135%; /* 4.53519rem */
+		line-height: 135%;
+		/* 4.53519rem */
 	}
 }
 
@@ -175,6 +187,7 @@ h1 {
 	@include breakpoint("med") {
 		font-size: 2.438rem;
 	}
+
 	@include breakpoint("lg") {
 		font-size: 3.063rem;
 	}
@@ -187,6 +200,7 @@ h2 {
 	@include breakpoint("med") {
 		font-size: 1.938rem;
 	}
+
 	@include breakpoint("lg") {
 		font-size: 2.438rem;
 	}
@@ -195,9 +209,11 @@ h2 {
 h3 {
 	font-size: 1.25rem;
 	font-weight: 500;
+
 	@include breakpoint("med") {
 		font-size: 1.563rem;
 	}
+
 	@include breakpoint("lg") {
 		font-size: 1.938rem;
 	}
@@ -206,9 +222,11 @@ h3 {
 h4 {
 	font-size: 1.125rem;
 	font-weight: 500;
+
 	@include breakpoint("med") {
 		font-size: 1.25rem;
 	}
+
 	@include breakpoint("lg") {
 		font-size: 1.563rem;
 	}
@@ -217,6 +235,7 @@ h4 {
 h5 {
 	font-size: 1rem;
 	font-weight: 500;
+
 	@include breakpoint("med") {
 		font-size: 1.25rem;
 	}
@@ -242,7 +261,8 @@ h5 {
 .text-emphasized p {
 	font-size: 1.62rem;
 	font-weight: 500;
-	line-height: 135%; /* 2.187rem */
+	line-height: 135%;
+	/* 2.187rem */
 	letter-spacing: -0.03238rem;
 	text-align: left;
 	align-self: stretch;
@@ -283,6 +303,7 @@ h5 {
 .blue {
 	color: $emphasis-blue;
 }
+
 .invalid-red {
 	color: $invalid-red;
 }
@@ -407,8 +428,7 @@ section {
 	max-width: $container-maxWidth;
 	box-sizing: border-box;
 
-	@include breakpoint(med) {
-	}
+	@include breakpoint(med) {}
 
 	&Featured {
 		display: flex;
@@ -454,7 +474,8 @@ header {
 
 ul,
 ol {
-	list-style-type: disc; /* Set the type of bullet point */
+	list-style-type: disc;
+	/* Set the type of bullet point */
 	padding-left: 0.5rem;
 	margin: 1rem 0;
 }
@@ -465,6 +486,7 @@ ol li {
 	font-size: 1rem;
 	margin-bottom: 0.5rem;
 	color: $off-black;
+
 	@include breakpoint(mobile-lg) {
 		line-height: 180%;
 		font-size: 1.125rem;
@@ -485,10 +507,12 @@ ol li {
 		background-color: #f0f0f0;
 		font-weight: 500;
 	}
+
 	th:first-child {
 		border-top-left-radius: 5px;
 		text-align: center;
 	}
+
 	th:last-child {
 		border-top-right-radius: 5px;
 	}
@@ -518,10 +542,12 @@ ol li {
 	td:nth-child(3) {
 		background-color: #f9f9f9;
 	}
+
 	// First cell of last row border radius
 	tr:last-child td:first-child {
 		border-bottom-left-radius: 5px;
 	}
+
 	// Last cell of last row border radius
 	tr:last-child td:last-child {
 		border-bottom-right-radius: 5px;
@@ -554,6 +580,7 @@ ol li {
 			display: flex;
 			padding: 1rem;
 			background-color: $lightest-grey;
+
 			@include breakpoint(lg) {
 				padding: 2rem 1rem;
 			}
@@ -562,6 +589,7 @@ ol li {
 		img {
 			margin: auto;
 			@include iconSize(med);
+
 			@include breakpoint(lg) {
 				@include iconSize(lg);
 			}
@@ -570,8 +598,11 @@ ol li {
 		@include breakpoint(mobile-lg) {
 			grid-template-columns: 1fr;
 			grid-template-rows: auto auto;
-			justify-content: left; /* Center content horizontally */
-			align-items: left; /* Center content vertically */
+			justify-content: left;
+			/* Center content horizontally */
+			align-items: left;
+
+			/* Center content vertically */
 			img {
 				margin: 0;
 			}
@@ -590,6 +621,7 @@ ol li {
 				padding-bottom: 0.5rem;
 				font-size: 1rem;
 			}
+
 			@include breakpoint(mobile-lg) {
 				p.headline {
 					font-size: 1.125rem;
@@ -600,11 +632,13 @@ ol li {
 					font-size: 1rem;
 				}
 			}
+
 			@include breakpoint(lg) {
 				p.headline {
 					font-size: 18px;
 					margin-bottom: 4px;
 				}
+
 				p {
 					font-size: 18px;
 				}
@@ -648,7 +682,8 @@ ol li {
 		}
 
 		.grid-item-03 {
-			grid-area: 2 / 2 / 3 / 3; /* Change to 2 / 2 / 3 / 3 */
+			grid-area: 2 / 2 / 3 / 3;
+			/* Change to 2 / 2 / 3 / 3 */
 		}
 	}
 }
@@ -658,21 +693,26 @@ ol li {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: flex-start;
-	gap: 24px; /* Adjust gap between list items */
+	gap: 24px;
+	/* Adjust gap between list items */
 
 	ul {
 		display: flex;
 		flex-wrap: wrap;
-		list-style-type: disc; /* Set bullet points */
+		list-style-type: disc;
+		/* Set bullet points */
 		padding: 0;
 		margin: 0;
 	}
+
 	li {
-		flex: 0 0 calc(50% - 12px); /* Each item takes up one-half of the container minus half of the gap */
+		flex: 0 0 calc(50% - 12px);
+		/* Each item takes up one-half of the container minus half of the gap */
 		min-width: 330px;
 		padding: 4px;
 		box-sizing: border-box;
 		font-size: 1rem;
+
 		@include breakpoint(mobile-lg) {
 			font-size: 1.125rem;
 		}
@@ -701,6 +741,7 @@ img {
 	border: none;
 	width: fit-content;
 	background: var(--teal, #45b5aa);
+
 	p {
 		color: white;
 		/* Body Medium */
@@ -708,7 +749,8 @@ img {
 		font-size: 16px;
 		font-style: normal;
 		font-weight: 400;
-		line-height: 145%; /* 26.1px */
+		line-height: 145%;
+		/* 26.1px */
 	}
 }
 
@@ -723,6 +765,7 @@ img {
 	border: 2px solid var(--off-black, #1e1e1e);
 	width: fit-content;
 	background-color: transparent;
+
 	p {
 		color: $off-black;
 		/* Body Medium */
@@ -730,7 +773,8 @@ img {
 		font-size: 16px;
 		font-style: normal;
 		font-weight: 400;
-		line-height: 145%; /* 26.1px */
+		line-height: 145%;
+		/* 26.1px */
 	}
 }
 
@@ -931,6 +975,7 @@ hr {
 			display: flex;
 			padding: 1rem;
 			background-color: $lightest-grey;
+
 			@include breakpoint(lg) {
 				padding: 2rem 1rem;
 			}
@@ -939,6 +984,7 @@ hr {
 		img {
 			margin: auto;
 			@include iconSize(med);
+
 			@include breakpoint(lg) {
 				@include iconSize(lg);
 			}
@@ -947,8 +993,11 @@ hr {
 		@include breakpoint(mobile-lg) {
 			grid-template-columns: 1fr;
 			grid-template-rows: auto auto;
-			justify-content: left; /* Center content horizontally */
-			align-items: left; /* Center content vertically */
+			justify-content: left;
+			/* Center content horizontally */
+			align-items: left;
+
+			/* Center content vertically */
 			img {
 				margin: 0;
 			}
@@ -967,6 +1016,7 @@ hr {
 				padding-bottom: 0.5rem;
 				font-size: 1rem;
 			}
+
 			@include breakpoint(mobile-lg) {
 				p.headline {
 					font-size: 1.125rem;
@@ -977,11 +1027,13 @@ hr {
 					font-size: 1rem;
 				}
 			}
+
 			@include breakpoint(lg) {
 				p.headline {
 					font-size: 18px;
 					margin-bottom: 4px;
 				}
+
 				p {
 					font-size: 18px;
 				}
@@ -999,16 +1051,19 @@ hr {
 		.grid-item {
 			display: flex;
 			min-width: 0;
+
 			p {
 				margin-bottom: 0;
 			}
 		}
 	}
+
 	@include breakpoint(lg) {
 		display: grid;
 		grid-template-columns: 1fr 2fr;
 		gap: 1.5rem;
 	}
+
 	.grid-02 {
 		display: grid;
 		grid-template-columns: repeat(1, 1fr);
@@ -1035,6 +1090,7 @@ hr {
 				display: flex;
 				padding: 1rem;
 				background-color: $lightest-grey;
+
 				@include breakpoint(lg) {
 					padding: 2rem 1rem;
 				}
@@ -1043,6 +1099,7 @@ hr {
 			img {
 				margin: auto;
 				@include iconSize(med);
+
 				@include breakpoint(lg) {
 					@include iconSize(lg);
 				}
@@ -1051,8 +1108,11 @@ hr {
 			@include breakpoint(mobile-lg) {
 				grid-template-columns: 1fr;
 				grid-template-rows: auto auto;
-				justify-content: left; /* Center content horizontally */
-				align-items: left; /* Center content vertically */
+				justify-content: left;
+				/* Center content horizontally */
+				align-items: left;
+
+				/* Center content vertically */
 				img {
 					margin: 0;
 				}
@@ -1071,6 +1131,7 @@ hr {
 					margin: 0;
 					font-size: 0.889rem;
 				}
+
 				@include breakpoint(mobile-lg) {
 					p.headline {
 						font-size: 1.125rem;
@@ -1081,11 +1142,13 @@ hr {
 						font-size: 1rem;
 					}
 				}
+
 				@include breakpoint(lg) {
 					p.headline {
 						font-size: 18px;
 						margin-bottom: 4px;
 					}
+
 					p {
 						font-size: 18px;
 					}
@@ -1107,6 +1170,7 @@ hr {
 		align-self: stretch;
 		text-align: left;
 	}
+
 	div {
 		display: flex;
 		flex-direction: column;
@@ -1115,8 +1179,10 @@ hr {
 
 	@include breakpoint(med) {
 		flex-direction: column;
-		justify-content: center; /* Center content horizontally */
-		align-items: center; /* Center content vertically */
+		justify-content: center;
+		/* Center content horizontally */
+		align-items: center;
+		/* Center content vertically */
 	}
 }
 
@@ -1153,7 +1219,8 @@ hr {
 		font-size: 12px;
 		font-style: normal;
 		font-weight: 500;
-		line-height: 125%; /* 17.5px */
+		line-height: 125%;
+		/* 17.5px */
 		letter-spacing: 0.42px;
 		text-align: center;
 	}
@@ -1197,8 +1264,10 @@ hr {
 
 	@include breakpoint(med) {
 		flex-direction: column;
-		justify-content: center; /* Center content horizontally */
-		align-items: center; /* Center content vertically */
+		justify-content: center;
+		/* Center content horizontally */
+		align-items: center;
+		/* Center content vertically */
 	}
 }
 
@@ -1249,12 +1318,14 @@ hr {
 			@include breakpoint(med) {
 				padding: 24px 40px;
 			}
+
 			.headline {
 				color: var(--off-black, var(--Colors-Off-Black, #1e1e1e));
 				font-size: 1.25rem;
 				font-style: normal;
 				font-weight: 500;
-				line-height: 130%; /* 2.025rem */
+				line-height: 130%;
+				/* 2.025rem */
 				letter-spacing: -0.027rem;
 				padding-left: 4px;
 			}
@@ -1265,6 +1336,7 @@ hr {
 		flex-direction: column;
 
 		align-content: stretch;
+
 		@include breakpoint(med) {
 			flex-direction: row;
 		}
@@ -1412,6 +1484,7 @@ $dark-grey: #565656;
 			font-weight: 400;
 			line-height: 150%; // 27px
 		}
+
 		@include breakpoint(mobile-lg) {
 			&_text {
 				font-size: 1.125rem;
@@ -1476,6 +1549,7 @@ $dark-grey: #565656;
 			min-width: 320px;
 		}
 	}
+
 	@include breakpoint(lg) {
 		flex-direction: row;
 	}
@@ -1522,6 +1596,7 @@ $dark-grey: #565656;
 			flex-direction: row;
 			gap: 16px;
 		}
+
 		&:last-child {
 			flex: 30;
 			flex-direction: column;
@@ -1535,11 +1610,13 @@ $dark-grey: #565656;
 		.item {
 			display: flex;
 			flex: 1;
+
 			&:first-child {
 				flex: 70;
 				flex-direction: row;
 				gap: 16px;
 			}
+
 			&:last-child {
 				flex: 30;
 				flex-direction: column;
@@ -1558,6 +1635,7 @@ $dark-grey: #565656;
 	display: flex;
 	flex-direction: row;
 	gap: 16px;
+
 	.image-wrapper {
 		img {
 			border: 0.5px solid black;
@@ -1599,17 +1677,23 @@ $dark-grey: #565656;
 .lightbox-content {
 	display: flex;
 	flex-direction: column;
-	justify-content: center; /* Center vertically */
-	align-items: center; /* Center horizontally */
+	justify-content: center;
+	/* Center vertically */
+	align-items: center;
+	/* Center horizontally */
 	gap: 1rem;
 	width: 80%;
 	max-width: 600px;
-	margin: auto; /* Center the modal content within the modal */
+	margin: auto;
+	/* Center the modal content within the modal */
 
 	img {
-		width: auto; /* Maintain aspect ratio */
-		max-width: 100%; /* Limit width to prevent overflow */
-		max-height: 90vh; /* Limit height to prevent overflow */
+		width: auto;
+		/* Maintain aspect ratio */
+		max-width: 100%;
+		/* Limit width to prevent overflow */
+		max-height: 90vh;
+		/* Limit height to prevent overflow */
 		margin: auto;
 		align-self: center;
 	}
@@ -1626,10 +1710,14 @@ $dark-grey: #565656;
 	color: #fff;
 	font-size: 1rem;
 	cursor: pointer;
-	background: transparent; /* No background by default */
-	border: none; /* No border by default */
-	padding: 10px; /* Add some padding for better click area */
-	border-radius: 5px; /* Rounded corners */
+	background: transparent;
+	/* No background by default */
+	border: none;
+	/* No border by default */
+	padding: 10px;
+	/* Add some padding for better click area */
+	border-radius: 5px;
+	/* Rounded corners */
 	transition: 0.1s;
 
 	&:hover {
@@ -1651,16 +1739,19 @@ $dark-grey: #565656;
 	transition: 0.1s;
 
 	&:hover {
-		background-color: rgba(255, 255, 255, 0.3); /* Add a background color on hover */
+		background-color: rgba(255, 255, 255, 0.3);
+		/* Add a background color on hover */
 	}
 }
 
 .prev {
-	left: 10px; /* Align to the left side */
+	left: 10px;
+	/* Align to the left side */
 }
 
 .next {
-	right: 10px; /* Align to the right side */
+	right: 10px;
+	/* Align to the right side */
 }
 
 .material-symbols-outlined {
