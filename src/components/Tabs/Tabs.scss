@@ -23,16 +23,14 @@ $black: #1e1e1e;
     border-radius: $tab-border-radius;
     // box-shadow: 0 0 1px 0 rgba($off-black, 0.10), 0 6px 8px px rgba($off-black, 0.20);
 
-    .slider {
-        position: absolute;
-
-        border-radius: $tab-border-radius;
-        height: 2.5rem;
-        background-color: #333;
-        box-shadow: 0 0 1px 0 rgba(#fff, 0.8), 0 6px 8px px rgba(#fff, 0.80);
-        width: 25%;
-        transition: left 0.3s ease;
-    }
+.tabs-menu-slider {
+    position: absolute;
+    border-radius: $tab-border-radius;
+    height: 2.5rem;
+    background-color: #333;
+    box-shadow: 0 0 1px 0 rgba(#fff, 0.8), 0 6px 8px px rgba(#fff, 0.80);
+    width: 25%;
+    transition: left 0.3s ease;
 }
 
 // Tab content

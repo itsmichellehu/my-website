@@ -7,7 +7,7 @@ function initializeTabs() {
     const tabContents = container.querySelectorAll('.tab-content');
     const tabsMenu = container.querySelector('.tabs-menu');
     const slider = document.createElement('div');
-    slider.classList.add('slider');
+    slider.classList.add('tabs-menu-slider');
     tabsMenu.appendChild(slider);
 
     tabButtons.forEach((button, index) => {
