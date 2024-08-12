@@ -5,7 +5,6 @@ import '../components/ScrollButton/scroll-button';
 import '../components/Scrollable/scrollable';
 // import '../components/SwipeableCarouselPostUp/SwipeableCarouselPostUp';
 import '../components/ImageZoom/ImageZoom';
-import '../components/Tabs/Tabs';
 
 // postup.js
 function initializePostUpPage() {
