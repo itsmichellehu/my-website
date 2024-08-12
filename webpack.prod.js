@@ -34,49 +34,6 @@ module.exports = {
                     'css-loader',
                     'sass-loader'
                 ]
-            },
-            {
-                test: /\.css$/, // Match CSS files
-                use: [
-                    'style-loader', // Injects styles into DOM
-                    'css-loader',   // Turns CSS into CommonJS
-                ],
-            },
-            {
-                test: /\.(png|jpg|jpeg|gif)$/i,
-                type: 'asset',
-                parser: {
-                    dataUrlCondition: {
-                        maxSize: 8192,
-                    },
-                },
-                generator: {
-                    filename: 'assets/images/[name].[hash:6][ext]',
-                }
-            },
-            {
-                test: /\.svg$/,
-                type: 'asset/resource',
-                generator: {
-                    filename: 'assets/svg/[name][ext]',
-                }
-            },
-            {
-                test: /\.(mp4)$/,
-                type: 'asset/resource',
-                generator: {
-                    filename: 'assets/videos/[name][ext]',
-                }
-            },
-            {
-                test: /\.jsx?$/, // Match JS and JSX files
-                exclude: /node_modules/,
-                use: {
-                    loader: 'babel-loader',
-                    options: {
-                        presets: ['@babel/preset-react'], // Preset for React
-                    },
-                },
             }
         ]
     },
@@ -86,41 +43,28 @@ module.exports = {
         }),
         new HtmlWebpackPlugin({
             template: './src/index.html',
-            chunks: ['index'],
-            filename: 'index.html'
+            filename: 'index.html',
+            chunks: ['index']
         }),
         new HtmlWebpackPlugin({
             template: './src/about.html',
-            chunks: ['about'],
-            filename: 'about.html'
-        }),
-        // new HtmlWebpackPlugin({
-        //     template: './src/boardspace.html',
-        //     chunks: ['boardspace'],
-        //     filename: 'boardspace.html'
-        // }),
-        new HtmlWebpackPlugin({
-            template: './src/tastebuds.html',
-            chunks: ['tastebuds'],
-            filename: 'tastebuds.html'
-        }),
-        new HtmlWebpackPlugin({
-            template: './src/sandbox.html',
-            chunks: ['sandbox'],
-            filename: 'sandbox.html'
+            filename: 'about.html',
+            chunks: ['about']
         }),
         new HtmlWebpackPlugin({
             template: './src/postup.html',
-            chunks: ['postup'],
-            filename: 'postup.html'
+            filename: 'postup.html',
+            chunks: ['postup']
+        }),
+        new HtmlWebpackPlugin({
+            template: './src/tastebuds.html',
+            filename: 'tastebuds.html',
+            chunks: ['tastebuds']
         }),
         new CopyWebpackPlugin({
             patterns: [
-                { from: path.resolve(__dirname, 'src/assets/images'), to: 'assets/images' },
-                { from: path.resolve(__dirname, 'src/assets/svg'), to: 'assets/svg' },
-                { from: path.resolve(__dirname, 'src/assets/videos'), to: 'assets/videos' }
+                { from: 'src/assets', to: 'assets' }
             ]
         })
-    ],
-    mode: 'production'
+    ]
 };
