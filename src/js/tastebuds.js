@@ -8,7 +8,6 @@ import '../components/AutoplayVideoCarousel/AutoplayVideoCarousel'
 import '../components/ImageZoom/ImageZoom';
 import '../components/ScrollButton/scroll-button';
 import '../components/SequentialVideoPlayer/sequential-video-player';
-import '../components/Tabs/Tabs';
 
 import MediaCarousel from '../components/MediaCarousel/MediaCarousel';
 document.addEventListener('DOMContentLoaded', () => {

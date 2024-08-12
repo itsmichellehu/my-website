@@ -13,7 +13,7 @@ module.exports = {
         tastebuds: './src/js/tastebuds.js',
     },
     output: {
-        filename: '[name].bundle.js',
+        filename: '[name].js',
         path: path.resolve(__dirname, 'dist/js'),
     },
     module: {
