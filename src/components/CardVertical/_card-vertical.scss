@@ -1,5 +1,7 @@
 .card-vertical {
-	@include flex(column, 0.5rem);
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
 	width: 100%;
 	max-width: $content-max-width;
 	margin: auto; // Center the container
@@ -14,8 +16,8 @@
 		text-align: left;
 		margin-bottom: 0;
 		color: $black;
-		font-size: 1.35rem;
 		font-weight: normal;
+		font-size: 1.2rem;
 	}
 
 	.icon {
