@@ -1,5 +1,4 @@
-import './_Tabs.scss';
-function initializeTabs() {
+document.addEventListener('DOMContentLoaded', function () {
     const tabContainers = document.querySelectorAll('.tabs-container');
 
     tabContainers.forEach(container => {
@@ -39,6 +38,4 @@ function initializeTabs() {
             }
         });
     });
-}
-
-export default initializeTabs;
+});

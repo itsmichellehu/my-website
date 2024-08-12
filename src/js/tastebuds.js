@@ -8,6 +8,7 @@ import '../components/AutoplayVideoCarousel/AutoplayVideoCarousel'
 import '../components/ImageZoom/ImageZoom';
 import '../components/ScrollButton/scroll-button';
 import '../components/SequentialVideoPlayer/sequential-video-player';
+import '../components/Tabs/Tabs';
 
 import MediaCarousel from '../components/MediaCarousel/MediaCarousel';
 document.addEventListener('DOMContentLoaded', () => {
@@ -35,7 +36,6 @@ import Footer from '../components/Footer/Footer';
 
 import { initializeAccordion } from '../components/ProjectAccordion/ProjectAccordion';
 import scrollToChallenge from "../components/ScrollToChallenge/ScrollToChallenge";
-import initializeTabs from "../components/Tabs/Tabs";
 import { initializeHideVideoControls } from '../components/HideVideoControls/HideVideoControls';
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -47,6 +47,5 @@ document.addEventListener('DOMContentLoaded', () => {
 
     initializeAccordion();
     scrollToChallenge();
-    initializeTabs();
     initializeHideVideoControls();
 });
