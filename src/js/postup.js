@@ -24,7 +24,7 @@ import enableImageZoom from "../components/ImageZoom/ImageZoom";
 import scrollToChallenge from "../components/ScrollToChallenge/ScrollToChallenge";
 
 import { initializeAccordion } from '../components/ProjectAccordion/ProjectAccordion';
-import initializeTabs from '../components/Tabs/Tabs';
+import initializeTabs from "../components/Tabs/Tabs.js";
 import { initializeHideVideoControls } from '../components/HideVideoControls/HideVideoControls';
 
 document.addEventListener('DOMContentLoaded', () => {
