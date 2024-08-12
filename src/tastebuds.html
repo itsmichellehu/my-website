@@ -2099,57 +2099,57 @@
           </p>
         </aside>
       </div>
-      <div class="mv-48 content-wrapper">
-        <h3 class="section-subheading">Route 1: Sign up + onboarding</h3>
-        <p>
-          Given how essential food preferences are to curate accurate dining recommendations, my
-          goal
-          was to make onboarding more engaging to encourage users to input preferences now than
-          later.
-          Therefore, <span class="fw-medium">
+      <div class="container-full-width pv-32 bg-light-medium-grey">
+        <div class="margin-auto content-max-width">
+          <h3 class="section-subheading">Route 1: Sign up + onboarding</h3>
+          <p class="mb-32">
+            I realized food preferences are crucial to curate accurate recommendations, so I wanted
+            to make onboarding more engaging to encourage users to input preferences now than
+            later.
+            Therefore,
             I implemented more conversational UI and visual aids and
             further
             streamlined the user flow.
-          </span>
-        </p>
-      </div>
-      <div class="content-wrapper mb-16">
-        <div class="design-walkthrough-grid_wrapper border-0 mb-0">
-          <div class="flex-row gap-24 pb-0">
-            <div class="design-walkthrough_grid-1-col">
-              <video class="autoplay-video" loop muted>
-                <source src="assets/videos/tastebuds/prototype-high-fidelity-route-1-v1-intro.mp4"
-                  type="video/mp4">
-              </video>
-              <div>
-                <p class="subheading">Introduction screens</p>
-                <p>
-                  I added intro screens to educate users about the app and the importance of
-                  inputing
-                  their food preferences now.
-                </p>
+          </p>
+          <div class="design-walkthrough-grid_wrapper border-0 mb-0">
+            <div class="flex-row gap-24 pb-0">
+              <div class="design-walkthrough_grid-1-col">
+                <video autoplay loop muted>
+                  <source src="assets/videos/tastebuds/prototype-high-fidelity-v1-route-1-intro.mp4"
+                    type="video/mp4">
+                </video>
+                <div>
+                  <p class="subheading">Introduction screens</p>
+                  <p>
+                    I added intro screens to educate users about the app and the importance of
+                    inputing
+                    their food preferences now.
+                  </p>
+                </div>
               </div>
-            </div>
-            <div class="design-walkthrough_grid-1-col">
-              <video class="autoplay-video" loop muted>
-                <source
-                  src="assets/videos/tastebuds/prototype-high-fidelity-v1-route-1-food-preferences.mp4"
-                  type="video/mp4">
-              </video>
-              <div>
-                <p class="subheading">Food preferences</p>
-                <p>
-                  I added the option to suggest missing items, implemented conversational UI, help
-                  icons, and more visual aids.
-                </p>
+              <div class="design-walkthrough_grid-1-col">
+                <video autoplay loop muted>
+                  <source
+                    src="assets/videos/tastebuds/prototype-high-fidelity-v1-route-1-preferences.mp4"
+                    type="video/mp4">
+                </video>
+                <div>
+                  <p class="subheading">Food preferences</p>
+                  <p>
+                    I added the option to suggest missing items, implemented conversational UI, help
+                    icons, and more visual aids.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="mb-40">
+      </div>
+      <div class="content-wrapper mb-16">
+        <div class="mb-32">
           <h3 class="section-subheading content mb-16">Route 2: Diner searches for a restaurant
           </h3>
-          <div class="content-grid">
+          <div class="content-grid mb-0">
             <div>
               <p>To improve accessibility, I enlarged and simplified my designs and omitted
                 unnecessary info. I also continued developing my business goals by conceptualizing
@@ -2159,119 +2159,108 @@
                 features, so I planned on refining this balance after testing.</p>
             </div>
             <aside>
-              <p>Revisiting my diner personas helped me streamline my information architecture!</p>
+              <p>My diner personas helped me streamline my information architecture!
+              </p>
             </aside>
           </div>
         </div>
-        <div class="design-walkthrough-grid_wrapper">
-          <header class="design-walkthrough_header">
-            <p class="subheading">Home page</p>
-          </header>
-          <div class="design-walkthrough-evolution_3-column-grid">
-            <p class="medium-grey hf-heading-01 hide">Previous</p>
-            <p class="black hf-heading-02 hide">Iteration</p>
-            <img alt="" class="img-1 img-wireframe-border" loading="lazy"
-              src="assets/images/tastebuds/route-2-low-fidelity-home.png">
-            <img alt="" class="img-2 img-wireframe-border" loading="lazy"
-              src="assets/images/tastebuds/route-2-low-fidelity-listing-reviews.png">
-            <img alt="" class="img-design-evolution-arrow" loading="lazy"
-              src="assets/images/tastebuds/artwork-arrow-right-blue.png">
-            <video class="img-3" loop muted>
-              <source src="assets/videos/tastebuds/prototype-route-2-high-fidelity-v1-home.mp4"
-                type="video/mp4">
-            </video>
-            <div class="grid-content flex-row gap-40">
-              <div>
-                <p class="fw-medium mb-8">For You</p>
-                <p class="mb-0">I wanted to enhance engagement and personalization, so I reorganized
-                  the layout to improve the info and content hierarchy, redesigned the navigation
-                  tabs
-                  to be more distinct, and revised label copy using conversational UI.</p>
-              </div>
-              <div>
-                <p class="fw-medium mb-8">Following</p>
-                <p class="mb-0">Understanding how diners engage with reviews, I designed the
-                  "Following" page and refined its role in the ecosystem. In addition to standard
-                  social interactive features, diners can easily navigate to the restaurant and menu
-                  items.
-                </p>
+        <div class="tabs-container content mt-0" data-current="Tab 1" data-duration-in="300"
+          data-duration-out="100" data-easing="ease">
+          <div class="tabs-menu three-menu-items">
+            <button class="tab-button active" data-tab="tab1">
+              <p>Home page</p>
+            </button>
+            <button class="tab-button" data-tab="tab2">
+              <p>Search</p>
+            </button>
+            <button class="tab-button" data-tab="tab3">
+              <p>Results</p>
+            </button>
+          </div>
+          <div class="tab-content ph-0 pb-0 active" id="tab1">
+            <div class="design-walkthrough-grid_container">
+              <video class="featured-media" loop muted>
+                <source src="assets/videos/tastebuds/prototype-route-2-high-fidelity-v1-home.mp4"
+                  type="video/mp4">
+              </video>
+              <div class="design-walkthrough-grid_content">
+                <header class="design-walkthrough_header">
+                  <p class="subheading">Home page</p>
+                </header>
+                <div>
+                  <p>To enhance engagement and personalization on the For You page, I improved the
+                    content
+                    hierarchy, made navigation tabs more distinct, and revised label copy with
+                    conversational UI.
+                  </p>
+                </div>
+                <div>
+                  <p class="mb-0">I added a "Following" page to streamline diner engagement with
+                    reviews, adding standard social features and easy navigation to restaurants and
+                    menu
+                    items.</p>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="design-walkthrough-grid_wrapper">
-          <header class="design-walkthrough_header">
-            <p class="subheading">Search process</p>
-          </header>
-          <div class="design-walkthrough-evolution_3-column-grid mb-40">
-            <p class="medium-grey hf-heading-01 hide">Previous</p>
-            <p class="black hf-heading-02 hide">Iteration</p>
-            <img alt="" class="img-1" loading="lazy"
-              src="assets/images/tastebuds/route-2-low-fidelity-search-preferences.png">
-            <img alt="" class="img-2" loading="lazy"
-              src="assets/images/tastebuds/route-2-low-fidelity-search-new.png">
-            <img alt="" class="img-design-evolution-arrow" loading="lazy"
-              src="assets/images/tastebuds/artwork-arrow-right-blue.png">
-            <video class="img-3" loop muted>
-              <source src="assets/videos/tastebuds/prototype-route-2-high-fidelity-v1-search.mp4"
-                type="video/mp4">
-            </video>
+          <div class="tab-content ph-0 pb-0" id="tab2">
+            <div class="flex-row gap-24 pb-0">
+              <div class="design-walkthrough_grid-1-col">
+                <video autoplay loop muted>
+                  <source
+                    src="assets/videos/tastebuds/prototype-route-2-high-fidelity-v1-search.mp4"
+                    type="video/mp4">
+                  type="video/mp4">
+                </video>
+                <div>
+                  <p class="subheading">Search process</p>
+                  <p>I added the option to select up to 3 key qualities in the filters. I realized
+                    that the 2-column layout was too crowded in other categories, so I consolidated
+                    them and increased spacing.
+                  </p>
+                </div>
+              </div>
+              <div class="design-walkthrough_grid-1-col">
+                <video autoplay loop muted>
+                  <source
+                    src="assets/videos/tastebuds/prototype-route-2-high-fidelity-v1-search-results.mp4"
+                    type="video/mp4">
+                </video>
+                <div>
+                  <p class="subheading">Search results</p>
+                  <p>I forfeited "Listing previews" since my test participants did not engaged with
+                    it. I also redesigned the bottom sheet to be more consistent with the list view.
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
-          <p class="span-fw-medium mb-0">
-            I added the option to <span>select up to 3 key qualities</span> in the filters. After
-            realizing that the <span>2-column layout was too crowded</span> in other categories, I
-            reduced it to 1-column and increased spacing between elements
-            </span>.
-          </p>
-        </div>
-        <div class="design-walkthrough-grid_wrapper">
-          <header class="design-walkthrough_header">
-            <p class="subheading">Search results</p>
-          </header>
-          <div class="design-walkthrough-evolution_3-column-grid mb-40">
-            <p class="medium-grey hf-heading-01 hide">Previous</p>
-            <p class="black hf-heading-02 hide">Iteration</p>
-            <img alt="" class="img-1" loading="lazy"
-              src="assets/images/tastebuds/route-2-sketch-search-results-list.png">
-            <img alt="" class="img-2" loading="lazy"
-              src="assets/images/tastebuds/route-2-sketch-search-results-card-carousel.png">
-            <img alt="" class="img-design-evolution-arrow" loading="lazy"
-              src="assets/images/tastebuds/artwork-arrow-right-blue.png">
-            <video class="img-3" loop muted>
-              <source
-                src="assets/videos/tastebuds/prototype-route-2-high-fidelity-v1-search-results.mp4"
-                type="video/mp4">
-            </video>
-          </div>
-          <p class="mb-0">I forfeited "Listing previews" since my test participants did not engaged
-            with it. I also redesigned the bottom sheet to be more consistent with the list view.
-          </p>
-        </div>
-        <div class="design-walkthrough-grid_wrapper pb-0 mb-0 border-0">
-          <div class="design-walkthrough-grid_container pb-0 mb-0">
-            <video class="featured-media" loop muted>
-              <source src="assets/videos/tastebuds/prototype-route-2-high-fidelity-v1-listing.mp4"
-                type="video/mp4">
-            </video>
-            <div class="design-walkthrough-grid_content">
-              <header class="design-walkthrough_header">
-                <p class="subheading">Restaurant listing</p>
-              </header>
-              <p>
-                I wanted to further amplify social engagement and conceptualize restaurant
-                partnerships, so I enhanced social proof elements, added more engagement features,
-                and
-                developed the 'Redeem offer' screen.
-              </p>
-              <div class="design-walkthrough-grid_card">
-                <ul class="card_list mt-0">
-                  <p class="card_headline">New features</p>
-                  <li>Share restaurant (button)</li>
-                  <li>Save restaurant (button)</li>
-                  <li>Message restaurant (button)</li>
-                  <li>Write review (button)</li>
-                  <li>Offer redemption page</li>
-                </ul>
+          <div class="tab-content ph-0 pb-0" id="tab3">
+            <div class="design-walkthrough-grid_container pb-0 mb-0">
+              <video class="featured-media" loop muted>
+                <source src="assets/videos/tastebuds/prototype-route-2-high-fidelity-v1-listing.mp4"
+                  type="video/mp4">
+              </video>
+              <div class="design-walkthrough-grid_content">
+                <header class="design-walkthrough_header">
+                  <p class="subheading">Restaurant listing</p>
+                </header>
+                <p>
+                  I wanted to further amplify social engagement and conceptualize restaurant
+                  partnerships, so I enhanced social proof elements, added more engagement features,
+                  and
+                  developed the 'Redeem offer' screen.
+                </p>
+                <div class="design-walkthrough-grid_card">
+                  <ul class="card_list mt-0">
+                    <p class="card_headline">New features</p>
+                    <li>Share restaurant (button)</li>
+                    <li>Save restaurant (button)</li>
+                    <li>Message restaurant (button)</li>
+                    <li>Write review (button)</li>
+                    <li>Offer redemption page</li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
@@ -2283,53 +2272,34 @@
           <p>I adapted this route to the changes I made in routes 1 and 2, streamlined the process,
             and enhanced its usability.</p>
         </div>
-        <div class="design-walkthrough-grid_wrapper">
-          <header class="design-walkthrough_header">
-            <p class="subheading">Reviewing menu items</p>
-          </header>
-          <div class="design-walkthrough-evolution_3-column-grid mb-40">
-            <p class="medium-grey hf-heading-01 hide">Previous</p>
-            <p class="black hf-heading-02 hide">Iteration</p>
-            <img alt="" class="img-1" loading="lazy"
-              src="assets/images/tastebuds/route-3-low-fidelity-06-menu-items-blank.png">
-            <img alt="" class="img-2" loading="lazy"
-              src="assets/images/tastebuds/route-3-low-fidelity-07-menu-item-blank.png">
-            <img alt="" class="img-design-evolution-arrow" loading="lazy"
-              src="assets/images/tastebuds/artwork-arrow-right-blue.png">
-            <video class="img-3" loop muted>
-              <source src="assets/videos/tastebuds/prototype-high-fidelity-v1-route-3-menu-item.mp4"
+        <div class="design-walkthrough-grid_wrapper border-0 mb-0">
+          <div class="flex-row gap-24 pb-0">
+            <div class="design-walkthrough_grid-1-col">
+              <video autoplay loop muted>
+                <source
+                  src="assets/videos/tastebuds/prototype-high-fidelity-v1-route-3-menu-item.mp4"
+                  type="video/mp4">
                 type="video/mp4">
-            </video>
-          </div>
-          <p class="mb-0">I removed the "What was it like?" section, added a search bar and filters
-            to
-            find menu items, simplified the list layout, and added a number badge that indicates how
-            many items have been reviewed.</p>
-        </div>
-        <div class="design-walkthrough-grid_wrapper mb-0 border-0  pb-0">
-          <header class="design-walkthrough_header">
-          </header>
-          <div class="design-walkthrough-grid_container mb-0">
-            <video class="featured-media" loop muted>
-              <source src="assets/videos/tastebuds/prototype-high-fidelity-v1-route-3-tag-photo.mp4"
-                type="video/mp4">
-            </video>
-            <div class="design-walkthrough-grid_content">
-              <header class="design-walkthrough_header">
-                <p class="subheading">Adding media content and tagging menu items</p>
-              </header>
-              <p>
-                This is the flow for diners to add photos and videos to their review! Since diners
-                have the habit of searching up specific menu items, I designed a feature for diners
-                to
-                tag their photos with the respective menu item(s) and/or friends.
-              </p>
-              <div class="design-walkthrough-grid_card">
-                <ul class="card_list mt-0">
-                  <p class="card_headline">New features</p>
-                  <li>Tag menu item</li>
-                  <li>Tag people</li>
-                </ul>
+              </video>
+              <div>
+                <p class="subheading">Reviewing menu items</p>
+                <p>
+                  I streamlined the flow, added a menu item search bar with
+                  filters, simplified the list layout, and included a badge showing the number of
+                  reviewed items.</p>
+              </div>
+            </div>
+            <div class="design-walkthrough_grid-1-col">
+              <video autoplay loop muted>
+                <source
+                  src="assets/videos/tastebuds/prototype-high-fidelity-v1-route-3-tag-photo.mp4"
+                  type="video/mp4">
+              </video>
+              <div>
+                <p class="subheading">Media and tagging menu items</p>
+                <p>This allows diners to add photos and videos to their reviews, and tag them with
+                  specific menu items and/or friends,
+                  allowing others to quickly look up dishes.</p>
               </div>
             </div>
           </div>
