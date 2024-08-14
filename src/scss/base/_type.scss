@@ -42,6 +42,7 @@ h1 {
 
 h2 {
 	color: $black;
+	color: #1e1e1e;
 	flex: 1;
 	font-size: 1.8rem;
 	font-style: normal;
@@ -52,7 +53,8 @@ h2 {
 }
 
 h3 {
-	color: $primary-color;
+	color: #28746F;
+	color: #396966;
 	letter-spacing: 0;
 	text-transform: none;
 	font-size: 1.45rem;
@@ -67,7 +69,7 @@ h4 {
 	font-weight: 500;
 	letter-spacing: 0;
 	line-height: 130%;
-	color: $black;
+	color: #41958F;
 	/* CSS variable, ensure it's defined in your styles */
 	font-size: 1.25rem;
 	margin-top: 2rem;
@@ -106,29 +108,30 @@ h6 {
 
 	h1 {
 		font-size: 2.986rem;
+		font-size: 3.815rem;
 		margin-bottom: 0;
 	}
 
 	h2 {
-		font-size: 2.1148rem;
+		font-size: 3.052rem;
 	}
 
 	h3 {
-		font-size: 1.728rem;
+		font-size: 2.441rem;
 		margin-bottom: 1.5rem;
 		margin-top: 1rem;
 	}
 
 	h4 {
-		font-size: 1.44rem;
+		font-size: 1.953rem;
 	}
 
 	h5 {
-		font-size: 1.2rem;
+		font-size: 1.563rem;
 	}
 
 	h6 {
-		font-size: 1.2rem;
+		font-size: 1.25rem;
 	}
 }
 
@@ -193,6 +196,7 @@ h6 {
 	@extend %subheading;
 	font-size: 1.5rem;
 	color: $primary-color;
+	color: #28746F;
 	margin-top: 2rem;
 	margin-bottom: 1rem;
 	width: 100%;
@@ -221,9 +225,6 @@ h6 {
 }
 
 @include breakpoint(med) {
-	h2 {
-		font-size: 2.488rem;
-	}
 
 	.secondary-text {
 		font-size: 1.665rem;
