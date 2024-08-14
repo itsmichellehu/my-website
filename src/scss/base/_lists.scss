@@ -49,6 +49,7 @@ ol.list-item-padding-0 {
 	}
 }
 
+ul,
 ol {
 	transform: translateX(1.15rem);
 
@@ -61,7 +62,11 @@ ol {
 
 	ul,
 	ol {
-		transform: none;
+		transform: translateX(-0.35rem);
+
+		li {
+			padding-left: 0.35rem;
+		}
 	}
 }
 
@@ -143,8 +148,15 @@ ul.list-none {
 
 
 ul.list-item-black {
+
 	li {
-		color: $off-black;
+		color: $black;
+	}
+}
+
+
+ul.li-pl-0 {
+	li {
 		padding-left: 0;
 	}
 }
