@@ -238,6 +238,11 @@ main {
 	.secondary-text {
 		margin: 0;
 	}
+
+	&.tb-quick-overview {
+		margin-top: 2.5rem;
+		margin-bottom: 2rem;
+	}
 }
 
 .img-project-schedule {

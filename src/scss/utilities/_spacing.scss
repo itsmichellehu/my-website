@@ -167,6 +167,10 @@
 
 // Margin left
 .ml {
+	&-auto {
+		margin-left: auto !important;
+	}
+
 	&-0 {
 		margin-left: 0rem !important;
 	}

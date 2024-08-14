@@ -123,6 +123,7 @@
 	p {
 		font-size: 1rem;
 		margin-bottom: 0;
+		text-wrap: nowrap;
 	}
 }
 
@@ -193,6 +194,11 @@
 	border: 1.25px solid $medium-light-grey;
 	overflow: hidden;
 	border-radius: 5px;
+
+	&.tb-quick-overview {
+		max-height: 28rem;
+		width: fit-content;
+	}
 }
 
 .likert-mood.large {
@@ -227,6 +233,10 @@
 	width: 100%;
 	margin: 0;
 	max-width: 4rem;
+
+	&.quotation-mark-end {
+		transform: scale(-1, 1);
+	}
 }
 
 .primary-research-summary_wrapper {
@@ -242,7 +252,7 @@
 @include breakpoint(med) {
 	.likert_flex-container.tb-quick-overview {
 		gap: 3rem;
-		margin-bottom: 1.5rem;
+		margin-bottom: 2rem;
 
 		.satisfaction-level {
 			@include flex(row, 0.75rem, null, center);

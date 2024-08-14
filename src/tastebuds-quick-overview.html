@@ -196,18 +196,18 @@
         <img class="img-project-schedule" alt="" loading="lazy"
           src="assets/images/tastebuds/tastebuds-project-schedule-01.png" />
       </header>
-      <div class="content-wrapper mt-0">
+      <div class="content-wrapper mv-0">
         <p>To explore the problem space and understand the consumer dining experience, I conducted
           secondary and market research, user research, and a competitor analysis. Though this was
           my first UX research project following formal training, my background in sociological
           research and business marketing provided a strong foundation.</p>
       </div>
-      <section id="secondary-research" class="subsection">
+      <section id="secondary-research">
         <header class="header-container">
           <h3>
             <span>secondary and market research</span>
             <br />
-            Visualizing the consumer dining landscape
+            Establishing the consumer dining landscape
           </h3>
         </header>
         <div class="content-wrapper">
@@ -277,80 +277,92 @@
           <p>These findings raised a critical question for me: <span class="fw-medium">
               Why do diners rely on
               reviews they don’t fully trust?
-            </span> I hypothesized that this may be due to the anonymous
-            nature of reviews and their focus on service over food.</p>
+            </span> I hypothesized that this is be due to the anonymous
+            nature of reviews, their focus on service over food, and overcommercialization.</p>
         </div>
       </section>
-      <section id="primary-research" class="subsection">
-        <header class="header-container mb-32">
+      <section id="primary-research">
+        <header class="header-container tb-quick-overview">
           <h3>
             <span> primary research </span>
             <br />
             Interviewing dissatisfied diners
           </h3>
         </header>
-        <div class="content-wrapper">
-          <p class="span-fw-medium">
-          </p>
-          <p class="span-fw-medium">
-            I recruited diners for interviews using a screener survey targeting those who
+        <div id="screener-survey" class="content-wrapper mv-0">
+          <p class="span-fw-medium">I began user research with the hypothesis was that diners are
+            most frustrated with
+            efficiency and discovery and desire a more personalized experience with their tools,
+            including easier
+            access to recommendations from friends.
+            <br><br>
+            I reached out to friends and family members with
+            a survey to gather user data and recruit interview participants. I screened for those
+            who
             frequently use mobile apps, dine out or order takeout weekly, and are dissatisfied
-            with their experiences.
-            The survey also gathered user data with questions like
-            <span>
+            with their experiences by asking questions like <span>
               "How much time
               does it take you to decide on a place to eat?"
             </span> and <span>
               "In the past 4 weeks, how many new restaurants have you tried?"
-            </span> resulting in 20 responses!
+            </span>.
           </p>
-          <figure class="img-survey-results_wrapper mv-16">
-            <img alt="" class="img-responsive" loading="lazy"
-              src="assets/images/tastebuds/survey-data-bar-charts.png">
-            <figcaption>Diners' satisfaction levels: (1) Methods used
-              for dining
-              decisions, (2) time spent making decisions, (3) new dishes tried past 4 weeks, and (4)
-              frequency
-              of trying new restaurants.</figcaption>
-          </figure>
-          <p>
-            For each question, I asked about their
-            satisfaction:
-          </p>
-          <div class="likert_flex-container tb-quick-overview">
-            <div class="likert">
-              <div class="satisfaction-level">
-                <img src="assets/images/tastebuds/likert-mood-1.png">
-                <p>Completely satisfied</p>
-              </div>
-              <div class="satisfaction-level">
-                <img src="assets/images/tastebuds/likert-mood-2.png">
-                <p>Mostly satisfied</p>
-              </div>
-              <div class="satisfaction-level">
-                <img alt="" loading="lazy" src="assets/images/tastebuds/likert-mood-3.png">
-                <p>Somewhat satisfied</p>
-              </div>
-              <div class="satisfaction-level">
-                <img alt="" loading="lazy" src="assets/images/tastebuds/likert-mood-4.png">
-                <p>Neither</p>
-              </div>
-            </div>
-            <div class="likert">
-              <div class="satisfaction-level">
-                <img alt="" loading="lazy" src="assets/images/tastebuds/likert-mood-5.png">
-                <p>Somewhat dissatisfied</p>
-              </div>
-              <div class="satisfaction-level">
-                <img alt="" loading="lazy" src="assets/images/tastebuds/likert-mood-6.png">
-                <p>Mostly dissatisfied</p>
-              </div>
-              <div class="satisfaction-level">
-                <img alt="" loading="lazy" src="assets/images/tastebuds/likert-mood-7.png">
-                <p>Completely dissatisfied</p>
+        </div>
+        <div class="content medium mv-32">
+          <div class="flex-row-med gap-32 a-i-center">
+            <figure class="img-survey-results_wrapper tb-quick-overview mv-0">
+              <img alt="" class="img-responsive" loading="lazy"
+                src="assets/images/tastebuds/survey-data-bar-charts.png">
+              <figcaption>Diners' satisfaction levels: (1) Methods used
+                for dining
+                decisions, (2) time spent making decisions, (3) new dishes tried past 4 weeks, and
+                (4)
+                frequency
+                of trying new restaurants.</figcaption>
+            </figure>
+            <div>
+              <p>
+                For each question, I asked about their
+                satisfaction:
+              </p>
+              <div class="likert_flex-container flex-col gap-16">
+                <div class="likert">
+                  <div class="satisfaction-level">
+                    <img src="assets/images/tastebuds/likert-mood-1.png">
+                    <p>Completely satisfied</p>
+                  </div>
+                  <div class="satisfaction-level">
+                    <img src="assets/images/tastebuds/likert-mood-2.png">
+                    <p>Mostly satisfied</p>
+                  </div>
+                  <div class="satisfaction-level">
+                    <img alt="" loading="lazy" src="assets/images/tastebuds/likert-mood-3.png">
+                    <p>Somewhat satisfied</p>
+                  </div>
+                  <div class="satisfaction-level">
+                    <img alt="" loading="lazy" src="assets/images/tastebuds/likert-mood-4.png">
+                    <p>Neither</p>
+                  </div>
+                </div>
+                <div class="likert">
+                  <div class="satisfaction-level">
+                    <img alt="" loading="lazy" src="assets/images/tastebuds/likert-mood-5.png">
+                    <p>Somewhat dissatisfied</p>
+                  </div>
+                  <div class="satisfaction-level">
+                    <img alt="" loading="lazy" src="assets/images/tastebuds/likert-mood-6.png">
+                    <p>Mostly dissatisfied</p>
+                  </div>
+                  <div class="satisfaction-level">
+                    <img alt="" loading="lazy" src="assets/images/tastebuds/likert-mood-7.png">
+                    <p>Completely dissatisfied</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
+        </div>
+        <div class="content-wrapper">
           <p>I found that diners' <span class="fw-medium">
               primary frustration is their lengthy
               decision-making process, not the discovery of new restaurants or dishes as I
@@ -379,7 +391,7 @@
                 class="img-100">
             </div>
           </button>
-          <button class="accordion border-top-0 mt-0  border-black">
+          <button class="accordion border-top-0 mv-0  border-black">
             <div class="accordion_header">
               <p>Data analysis methodology</p>
               <svg class="accordion_icon" width="40" height="40" viewBox="0 0 40 40" fill="none"
@@ -407,58 +419,65 @@
           </button>
         </div>
       </section>
-      <section id="user-interviews">
-        <header class="header-container">
-          <span> empathize</span>
-          <h3>Interviewing dissatisfied diners</h3>
-        </header>
-        <div class="content-wrapper mb-16">
-          <p> I reached out to my screener survey respondents who expressed the lowest satisfaction
-            scores for remote interviews. I recruited <span class="fw-medium">7 participants for
-              remote interviews! </span>
-          </p>
-          <p class="section-subheading">My research questions</p>
-          <ul class="mb-32" role="list">
-            <li>How consistent are my secondary research findings with my user research?</li>
-            <li>How do diners perceive their dining out experiences? What do they value and why?
-            </li>
-            <li>What are the most frequent challenges? How have diners tried to resolve them?</li>
-            <li>How do diners feel about online reviews? What motivates them to consult reviews?
-            </li>
-            <li>How can the current methods improve to better meet their needs?</li>
-          </ul>
-          <p class="section-subheading">My process</p>
-          <div class="content-grid">
-            <div>
-              <video autoplay loop muted class="hover-controls-video width-100" id="myvideo">
-                <source src="assets/videos/tastebuds/tastebuds-affinity-mapping-process.mp4"
-                  type="video/mp4">
-              </video>
-            </div>
-            <aside>
-              <p>
-                To process the data, I made an affinity map on FigJam. Check out the process!
-              </p>
-            </aside>
+      <section id="user-interviews" class="content-wrapper mb-16">
+        <p>Among the most dissatisfied survey respondents, <span class="fw-medium">I interviewed 7
+            diners remotely</span>
+          to compare my secondary research and learn more about their overall dining out
+          experiences, especially with their decision-making and discovery.
+        </p>
+        <h4 class="section-subheading">Data synthesis and insights</h4>
+        <div class="content-grid">
+          <div>
+            <video autoplay loop muted class="hover-controls-video width-100" id="myvideo">
+              <source src="assets/videos/tastebuds/tastebuds-affinity-mapping-process.mp4"
+                type="video/mp4">
+            </video>
           </div>
+          <aside>
+            <p>
+              To process the data, I made an affinity map on FigJam. Check out the evolution!
+            </p>
+          </aside>
         </div>
-        <div class="tabs-container mb-24 content" data-current="Tab 1" data-duration-in="300"
-          data-duration-out="100" data-easing="ease">
-          <div class="tabs-menu two-menu-items">
-            <button class="tab-button active" data-tab="tab1">
-              <p>Findings</p>
-            </button>
-            <button class="tab-button" data-tab="tab2">
-              <p>Quotes</p>
-            </button>
+        <p>Below is an overview of diners' delights and painpoints.</p>
+        <div class="img-user-interview-findings mv-24">
+          <img class="img-100" alt="" loading="lazy"
+            src="assets/images/tastebuds/green-fiction-vs-non-fiction-school--academic-infographic-poster-(6).png">
+        </div>
+        <p>
+          Learning about what diners enjoy about dining out provided valuable insights. I planned to
+          use these findings to design a solution that not only addresses their pain points but also
+          enhances the positive aspects of dining. Additionally, I aimed to leverage these insights
+          to drive user engagement and strengthen the value proposition.</p>
+        <div class="content-max-width mb-32">
+          <img class="quotation-mark" src="assets/svg/quotation-mark.svg" alt="">
+          <blockquote>
+            <p class="secondary-text mb-0 medium-grey">
+              There's a certain emotional trust about talking to someone about it...
+            </p>
+          </blockquote>
+          <blockquote>
+            <p class="secondary-text mb-0 medium-grey text-align-right hide-med">
+              “If I had a magic wand, I’d want to receive suggested items that would suit
+              my
+              tastes.”
+            </p>
+            <p class="secondary-text mb-0 medium-grey text-align-right width-100 show-med-block">
+              If I had a magic wand, I’d want to receive <br> suggested items that would suit
+              my
+              tastes.
+            </p>
+          </blockquote>
+        </div>
+        <button class="accordion border-black">
+          <div class="accordion_header">
+            <p>See all quotes and details</p>
+            <svg class="accordion_icon" width="40" height="40" viewBox="0 0 40 40" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path d="M8 15L20 27L32 15" stroke-width="3.5" />
+            </svg>
           </div>
-          <div class="tab-content ph-0 pb-0 active" id="tab1">
-            <div class="img-user-interview-findings">
-              <img class="img-100" alt="" loading="lazy"
-                src="assets/images/tastebuds/green-fiction-vs-non-fiction-school--academic-infographic-poster-(6).png">
-            </div>
-          </div>
-          <div class="tab-content ph-0 pb-0" id="tab2">
+          <div class="accordion_content">
             <div class="interview-quotes-wrapper tastebuds">
               <img alt="" class="img-quotation-mark hide" src="assets/svg/quotation-mark-blue.svg">
               <div class="grid-container mt-0">
@@ -585,22 +604,15 @@
               </div>
             </div>
           </div>
-        </div>
-        <div class="content-max-width">
-          <blockquote>
-            <p class="secondary-text mb-0 medium-grey">
-              “There's a certain emotional trust about talking to someone about it...”
-            </p>
-          </blockquote>
-        </div>
+        </button>
       </section>
       <section id="competitor-analysis">
-        <header class="header-container">
-          <h2>
+        <header class="header-container tb-quick-overview">
+          <h3>
             <span> Competitor Analysis </span>
             <br />
             Learning from my competitors
-          </h2>
+          </h3>
         </header>
         <div class="content-wrapper">
           <p class="mb-40">
@@ -848,12 +860,12 @@
       </div>
     </section>
     <section id="user-stories-flows" class="section-container">
-      <header class="header-container">
-        <h2>
+      <header class="header-container tb-quick-overview">
+        <h3>
           <span class="source-code-pro">USER STORIES</span>
           <br />
           What functionalities do Alex, Brandon, and Cleo desire?
-        </h2>
+        </h3>
       </header>
       <div class="content-wrapper mb-0">
         <p class="mb-32">
@@ -1109,9 +1121,9 @@
       </div>
     </section>
     <section id="information-architecture" class="section-container border-0 bg-lightest-grey">
-      <header class="header-container">
+      <header class="header-container tb-quick-overview">
         <span> information architecture </span>
-        <h2>Organizing information that makes sense to diners</h2>
+        <h3>Organizing information that makes sense to diners</h3>
       </header>
       <div class="content mb-32">
         <p>
@@ -1205,7 +1217,7 @@
     <section id="sketches" class="section-container border-0 pb-0">
       <header class="header-container">
         <span>design</span>
-        <h2>Sketches</h2>
+        <h3>Sketches</h3>
       </header>
       <div class="content mb-0">
         <p>Using the user stories and flows, I began sketching to visualize how my app’s features
@@ -1886,7 +1898,7 @@
         <div class="mb-32">
           <img class="img-branding-colors" src="assets/images/tastebuds/branding-colors.png" alt="">
         </div>
-        <div class="flex-row gap-40 align-center mb-32">
+        <div class="flex-row gap-40 a-i-center mb-32">
           <div>
             <p class="subheading mb-24">Typography
             </p>
