@@ -128,8 +128,8 @@
 
 .survey-results-wrapper {
 	@include flex(column, 2rem, null, null);
-	max-width: 55rem;
-	margin: 0 auto;
+	max-width: $content-max-width;
+	margin: 2rem auto;
 
 	>div:first-child {
 		flex: content;
