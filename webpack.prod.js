@@ -61,6 +61,11 @@ module.exports = {
             filename: 'tastebuds.html',
             chunks: ['tastebuds']
         }),
+        new HtmlWebpackPlugin({
+            template: './src/tastebuds-quick-overview.html',
+            filename: 'tastebuds-quick-overview.html',
+            chunks: ['tastebuds']
+        }),
         new CopyWebpackPlugin({
             patterns: [
                 { from: 'src/assets', to: 'assets' }

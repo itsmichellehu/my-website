@@ -95,6 +95,12 @@ module.exports = {
             minify: false
         }),
         new HtmlWebpackPlugin({
+            template: './src/tastebuds-quick-overview.html',
+            filename: 'tastebuds-quick-overview.html',
+            chunks: ['tastebuds'],
+            minify: false
+        }),
+        new HtmlWebpackPlugin({
             template: './src/sandbox.html',
             chunks: ['sandbox'],
             filename: 'sandbox.html',
