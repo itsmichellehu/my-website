@@ -29,6 +29,14 @@ $accordion-border-color: #e9e9e9;
 	text-align: left;
 	border-top: 1.5px solid $accordion-border-color;
 	border-bottom: 1.5px solid $accordion-border-color;
+
+	&.border-top-0 {
+		border-top: 0;
+	}
+
+	&.border-black {
+		border-color: $black;
+	}
 }
 
 .accordion_header {
