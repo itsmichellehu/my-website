@@ -1,20 +1,15 @@
 .accordion {
-	background-color: #1f1f1f;
-	border-radius: 10px;
-	padding: 0.75rem 1.25rem;
-	border: 0;
-	margin-top: 0;
-}
-
-.accordion__header {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
 	gap: 1rem;
-	padding-bottom: 0;
 	border-radius: 10px;
 	cursor: pointer;
 	background-color: #1f1f1f;
+	padding: 0.75rem 1.25rem;
+	margin-top: 0;
+	width: 100%;
+	transition: height 0.2s ease-out, border-radius 0s linear;
 
 	p {
 		display: flex;
@@ -27,21 +22,35 @@
 		color: white;
 	}
 
-	.accordion__icon {
-		transition: transform 0.4s;
-		width: 1.5rem;
-		height: 1.5rem;
-		margin: auto;
+	&:hover {
+
+		p,
+		.accordion__icon {
+			opacity: 0.80;
+			transition: opacity 0.2s ease-out;
+		}
 	}
 }
 
+.accordion__icon {
+	transition: transform 0.4s;
+	width: 1.5rem;
+	height: 1.5rem;
+	margin: auto;
+}
+
 .accordion__content {
-	max-height: 0;
+	display: none;
 	overflow: hidden;
+	max-height: 0;
+	background-color: #1f1f1f;
 	transition: max-height 0.2s ease-out;
+	padding: 0.75rem 1.25rem;
+	padding-top: 0;
+	border-radius: 0 0 10px 10px;
 
 	p {
-		margin-top: 0.5rem;
+		margin-top: 0;
 		margin-bottom: 0.5rem;
 		color: white; // Make sure this is not being overridden elsewhere
 		text-align: left;
@@ -50,6 +59,11 @@
 	span {
 		color: white;
 	}
+}
+
+.accordion.active {
+	border-radius: 10px 10px 0 0;
+	/* Adjust as needed */
 }
 
 .accordion--transparent--outlined {
@@ -106,13 +120,11 @@
 	.accordion {
 		margin-top: 0.5rem;
 		padding: 1rem 1.25rem;
-	}
-
-	.accordion__header {
 		font-size: 1.25rem;
 	}
 }
 
-.rotate {
+.accordion__icon.rotate {
 	transform: rotate(-180deg);
+	transition: transform 0.2s ease-out;
 }
