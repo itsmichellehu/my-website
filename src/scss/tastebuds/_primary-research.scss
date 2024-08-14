@@ -238,3 +238,25 @@
 		gap: 3rem;
 	}
 }
+
+@include breakpoint(med) {
+	.likert_flex-container.tb-quick-overview {
+		gap: 3rem;
+		margin-bottom: 1.5rem;
+
+		.satisfaction-level {
+			@include flex(row, 0.75rem, null, center);
+			align-items: center;
+
+			img {
+				width: 2rem;
+				height: 2rem;
+			}
+
+			p {
+				font-size: 1.125rem;
+				margin-bottom: 0;
+			}
+		}
+	}
+}

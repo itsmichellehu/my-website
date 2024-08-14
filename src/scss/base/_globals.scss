@@ -114,6 +114,12 @@ a {
 	margin-top: 1.25rem;
 }
 
+
+figcaption {
+	margin-top: 1rem !important;
+	color: $medium-grey;
+}
+
 abbr[title] {
 	border-bottom: none; // Removes underline on abbreviations
 	text-decoration: underline;
