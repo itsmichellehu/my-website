@@ -1,70 +1,104 @@
+$accordion-border-color: #e9e9e9;
+//
+// .accordion {
+// 	width: 100%;
+// 	background-color: #f0f0f0;
+// 	padding: 0;
+// 	padding: 0.25rem 1rem;
+// 	cursor: pointer;
+// 	overflow: hidden;
+// 	/* Ensure content is hidden when collapsed */
+// 	border-radius: 0;
+// 	border-radius: 10px;
+// 	/* Remove the default button border */
+// 	text-align: left;
+// 	// border-top: 1.5px solid $accordion-border-color;
+// 	// border-bottom: 1.5px solid $accordion-border-color;
+// 	border: 1.5px solid $accordion-border-color;
+// }
+
 .accordion {
+	width: 100%;
+	background-color: transparent;
+	padding: 0;
+	cursor: pointer;
+	overflow: hidden;
+	/* Ensure content is hidden when collapsed */
+	border-radius: 0;
+	/* Remove the default button border */
+	text-align: left;
+	border-top: 1.5px solid $accordion-border-color;
+	border-bottom: 1.5px solid $accordion-border-color;
+}
+
+.accordion_header {
 	display: flex;
-	flex-direction: row;
 	align-items: center;
 	gap: 1rem;
-	border-radius: 10px;
-	cursor: pointer;
-	background-color: #1f1f1f;
-	padding: 0.75rem 1.25rem;
-	margin-top: 0;
-	width: 100%;
-	transition: height 0.2s ease-out, border-radius 0s linear;
-
-	p {
-		display: flex;
-		font-size: 1.125rem;
-		font-weight: 500;
-		line-height: 130%;
-		text-align: left;
-		margin: 0;
-		flex: 1;
-		color: white;
-	}
+	padding: 0.75rem 0;
+	transition: background-color 0.3s ease-out;
 
 	&:hover {
+		p {
+			color: $primary-color;
+		}
 
-		p,
-		.accordion__icon {
-			opacity: 0.80;
-			transition: opacity 0.2s ease-out;
+		.accordion_icon {
+			stroke: $primary-color;
 		}
 	}
 }
 
-.accordion__icon {
-	transition: transform 0.4s;
+.accordion_header p {
+	font-size: 1.125rem;
+	font-weight: 500;
+	color: #1e1e1e;
+	flex: 1;
+	margin: 0;
+}
+
+.accordion_icon {
+	transition: transform 0.3s ease-out;
 	width: 1.5rem;
 	height: 1.5rem;
-	margin: auto;
+	stroke: #1e1e1e;
 }
 
-.accordion__content {
-	display: none;
-	overflow: hidden;
+.accordion_content {
 	max-height: 0;
-	background-color: #1f1f1f;
-	transition: max-height 0.2s ease-out;
-	padding: 0.75rem 1.25rem;
-	padding-top: 0;
-	border-radius: 0 0 10px 10px;
+	overflow: hidden;
+	transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+	padding: 0 1.25rem;
+	color: $dark-grey;
 
-	p {
-		margin-top: 0;
-		margin-bottom: 0.5rem;
-		color: white; // Make sure this is not being overridden elsewhere
-		text-align: left;
-	}
+	li {
+		color: $dark-grey;
+		font-weight: 400;
 
-	span {
-		color: white;
+		span {
+			font-weight: 500;
+			color: $dark-grey;
+		}
 	}
 }
 
-.accordion.active {
-	border-radius: 10px 10px 0 0;
-	/* Adjust as needed */
+.accordion_content p {
+	margin-top: 0.75rem;
+	color: #1e1e1e;
 }
+
+.accordion-active .accordion_content {
+	max-height: 100vh;
+	/* Adjust to a large value to ensure full content visibility */
+	padding-bottom: 0.75rem;
+	/* Add padding to match the top */
+}
+
+.accordion-active .accordion_icon {
+	transform: rotate(-180deg);
+}
+
+
 
 .accordion--transparent--outlined {
 	background-color: transparent;
@@ -114,17 +148,4 @@
 	.accordion__content {
 		color: $dark-grey;
 	}
-}
-
-@include breakpoint(med) {
-	.accordion {
-		margin-top: 0.5rem;
-		padding: 1rem 1.25rem;
-		font-size: 1.25rem;
-	}
-}
-
-.accordion__icon.rotate {
-	transform: rotate(-180deg);
-	transition: transform 0.2s ease-out;
 }
