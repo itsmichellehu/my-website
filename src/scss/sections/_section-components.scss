@@ -136,7 +136,7 @@
 	display: block;
 	margin: auto;
 	padding: 0;
-	margin-bottom: 2rem;
+	margin-top: 3rem;
 	width: 100%;
 
 	>.content {
@@ -180,7 +180,7 @@
 
 @include breakpoint(med) {
 	.subsection {
-		margin-bottom: 4rem;
+		margin-top: 4rem;
 	}
 }
 
@@ -239,8 +239,7 @@ main {
 		margin: 0;
 	}
 
-	&.tb-quick-overview {
-		margin-top: 2.5rem;
+	&.short-v {
 		margin-bottom: 2rem;
 	}
 }
@@ -275,6 +274,10 @@ main {
 		@include breakpoint(med) {
 			margin-bottom: 3rem;
 		}
+	}
+
+	>:last-child {
+		margin-bottom: 0;
 	}
 }
 
