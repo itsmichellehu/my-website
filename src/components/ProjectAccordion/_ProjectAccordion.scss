@@ -27,17 +27,16 @@ $accordion-border-color: #e9e9e9;
 	border-radius: 0;
 	/* Remove the default button border */
 	text-align: left;
-	border-top: 1.5px solid $accordion-border-color;
-	border-bottom: 1.5px solid $accordion-border-color;
+	border-radius: 6px;
+	border: 1.25px solid $accordion-border-color;
+	// border-top: 1.5px solid $accordion-border-color;
+	// border-bottom: 1.5px solid $accordion-border-color;
 	height: fit-content;
 	transition: height 0.3s ease-out;
+	background-color: $lightest-grey;
 
 	&.border-top-0 {
 		border-top: 0;
-	}
-
-	&.border-black {
-		border-color: $black;
 	}
 }
 
@@ -46,7 +45,7 @@ $accordion-border-color: #e9e9e9;
 	align-items: center;
 	gap: 1rem;
 	transition: background-color 0.3s ease-out;
-	padding: 0.75rem 0.25rem;
+	padding: 0.75rem 1rem;
 
 	&:hover {
 		p {
@@ -59,10 +58,12 @@ $accordion-border-color: #e9e9e9;
 	}
 }
 
+$grey-accordion-header-content-color: $off-black;
+
 .accordion_header p {
-	font-size: 1.125rem;
+	font-size: 1.15rem;
 	font-weight: 500;
-	color: #1e1e1e;
+	color: $grey-accordion-header-content-color;
 	flex: 1;
 	margin: 0;
 }
@@ -71,7 +72,7 @@ $accordion-border-color: #e9e9e9;
 	transition: transform 0.3s ease-out;
 	width: 1.5rem;
 	height: 1.5rem;
-	stroke: #1e1e1e;
+	stroke: $grey-accordion-header-content-color;
 }
 
 .accordion_content {
@@ -79,7 +80,7 @@ $accordion-border-color: #e9e9e9;
 	overflow: hidden;
 	transition: max-height 0.3s ease-out, padding 0.3s ease-out, background-color 0.3s ease-out;
 	color: $dark-grey;
-	padding: 0 0.25rem;
+	padding: 0 1rem;
 
 	li {
 		color: $dark-grey;
@@ -117,6 +118,39 @@ $accordion-border-color: #e9e9e9;
 	transform: rotate(-180deg);
 }
 
+
+// Minimalistic black and white style
+$minimalistic-accordion-header-color: $black;
+
+.accordion.border-black {
+	border-radius: 0;
+	border: 0;
+	border-top: 1.5px solid $minimalistic-accordion-header-color;
+	border-bottom: 1.5px solid $minimalistic-accordion-header-color;
+	border-color: $black;
+	background-color: transparent;
+
+	p {
+		color: $minimalistic-accordion-header-color;
+	}
+
+
+	.accordion_header p {
+		color: $minimalistic-accordion-header-color;
+	}
+
+	.accordion_icon {
+		stroke: $minimalistic-accordion-header-color;
+	}
+
+	.accordion_header {
+		padding: 0.75rem 0.25rem;
+	}
+
+	.accordion_content {
+		padding: 0 0.25rem;
+	}
+}
 
 
 .accordion--transparent--outlined {
