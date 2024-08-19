@@ -43,7 +43,7 @@ $accordion-border-color: #e9e9e9;
 	display: flex;
 	align-items: center;
 	gap: 1rem;
-	padding: 0.75rem 0.25rem;
+	padding: 0.75rem 0.5rem;
 	transition: background-color 0.3s ease-out;
 
 	&:hover {
@@ -56,6 +56,10 @@ $accordion-border-color: #e9e9e9;
 		.accordion_icon {
 			stroke: $primary-color;
 		}
+	}
+
+	&:focus {
+		background-color: $lightest-grey;
 	}
 }
 
@@ -77,8 +81,10 @@ $accordion-border-color: #e9e9e9;
 .accordion_content {
 	max-height: 0;
 	overflow: hidden;
-	transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+	transition: max-height 0.3s ease-out, padding 0.3s ease-out, background-color 0.3s ease-out;
 	color: $dark-grey;
+	background-color: $lightest-grey;
+	padding: 0 0.5rem;
 
 	li {
 		color: $dark-grey;
@@ -105,6 +111,10 @@ $accordion-border-color: #e9e9e9;
 
 .accordion-active .accordion_icon {
 	transform: rotate(-180deg);
+}
+
+.accordion-active .accordion_header {
+	background-color: $lightest-grey;
 }
 
 
