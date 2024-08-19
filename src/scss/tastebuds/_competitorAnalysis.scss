@@ -62,18 +62,20 @@
   }
 }
 
+$img-competitor-logo-size: 1.75rem;
+
 .img-competitor-logo {
-  width: 2.5rem;
+  width: $img-competitor-logo-size;
   border-radius: 5rem;
-  overflow: hidden;
+  z-index: 2000;
 }
 
 .img-google-maps_wrapper {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 2.5rem;
-  height: 2.5rem;
+  width: $img-competitor-logo-size;
+  height: $img-competitor-logo-size;
   border-radius: 5rem;
   background: white;
 }

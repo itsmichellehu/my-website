@@ -195,7 +195,7 @@
 	overflow: hidden;
 	border-radius: 5px;
 
-	&.tb-quick-overview {
+	&short-v {
 		max-height: 28rem;
 		width: fit-content;
 	}
@@ -250,7 +250,7 @@
 }
 
 @include breakpoint(med) {
-	.likert_flex-container.tb-quick-overview {
+	.likert_flex-containershort-v {
 		gap: 3rem;
 		margin-bottom: 2rem;
 
