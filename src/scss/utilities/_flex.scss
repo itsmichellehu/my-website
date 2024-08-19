@@ -37,41 +37,42 @@
 
 @include breakpoint(med) {
 	.flex {
-	&-row-med {
-		display: flex;
-		flex-direction: row !important;
-	}
+		&-row-med {
+			display: flex;
+			flex-direction: row !important;
+		}
 
-	&-row-reverse {
-		display: flex;
-		flex-direction: row-reverse;
-	}
+		&-row-reverse {
+			display: flex;
+			flex-direction: row-reverse;
+		}
 
-	&-col {
-		display: flex;
-		flex-direction: column;
-	}
 
-	&-col-reverse {
-		display: flex;
-		flex-direction: column-reverse;
-	}
+		&-col-med {
+			display: flex;
+			flex-direction: column;
+		}
 
-	&-wrap {
-		display: flex;
-		flex-wrap: wrap;
-	}
+		&-col-reverse-med {
+			display: flex;
+			flex-direction: column-reverse;
+		}
 
-	&-wrap-reverse {
-		display: flex;
-		flex-wrap: wrap-reverse;
-	}
+		&-wrap {
+			display: flex;
+			flex-wrap: wrap;
+		}
 
-	&-nowwrap {
-		display: flex;
-		flex-wrap: nowrap;
+		&-wrap-reverse {
+			display: flex;
+			flex-wrap: wrap-reverse;
+		}
+
+		&-nowwrap {
+			display: flex;
+			flex-wrap: nowrap;
+		}
 	}
-}
 }
 
 .row-evenly {
