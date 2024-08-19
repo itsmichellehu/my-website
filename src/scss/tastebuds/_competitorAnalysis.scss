@@ -78,11 +78,13 @@ $img-competitor-logo-size: 1.75rem;
   height: $img-competitor-logo-size;
   border-radius: 5rem;
   background: white;
+    z-index: 2000;
 }
 
 .img-google-maps {
   width: 80%;
   margin: auto;
+    z-index: 2001;
 }
 
 .img-competitor-screen {
