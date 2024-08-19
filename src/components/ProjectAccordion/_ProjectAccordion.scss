@@ -127,7 +127,7 @@ $minimalistic-accordion-header-color: $black;
 	border: 0;
 	border-top: 1.5px solid $minimalistic-accordion-header-color;
 	border-bottom: 1.5px solid $minimalistic-accordion-header-color;
-	border-color: $black;
+	border-color: $minimalistic-accordion-header-color;
 	background-color: transparent;
 
 	p {
@@ -141,6 +141,38 @@ $minimalistic-accordion-header-color: $black;
 
 	.accordion_icon {
 		stroke: $minimalistic-accordion-header-color;
+	}
+
+	.accordion_header {
+		padding: 0.75rem 0.25rem;
+	}
+
+	.accordion_content {
+		padding: 0 0.25rem;
+	}
+}
+
+$subdued-accordion-header-color: $medium-grey;
+
+.accordion.subdued {
+	border-radius: 0;
+	border: 0;
+	border-top: 1.5px solid $subdued-accordion-header-color !important;
+	border-bottom: 1.5px solid $subdued-accordion-header-color !important;
+	border-color: $subdued-accordion-header-color !important;
+	background-color: transparent;
+
+	p {
+		color: $subdued-accordion-header-color;
+	}
+
+
+	.accordion_header p {
+		color: $subdued-accordion-header-color;
+	}
+
+	.accordion_icon {
+		stroke: $subdued-accordion-header-color;
 	}
 
 	.accordion_header {
