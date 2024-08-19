@@ -44,7 +44,7 @@ h2 {
 	color: $black;
 	color: #1e1e1e;
 	flex: 1;
-	font-size: 1.8rem;
+	font-size: 1.99rem;
 	font-style: normal;
 	font-weight: 500;
 	line-height: 125%;
@@ -57,7 +57,7 @@ h3 {
 	color: #396966;
 	letter-spacing: 0;
 	text-transform: none;
-	font-size: 1.45rem;
+	font-size: 1.659rem;
 	font-weight: 500;
 	line-height: 130%;
 	/* Slightly adjusted for better readability */
@@ -71,7 +71,7 @@ h4 {
 	line-height: 130%;
 	color: #41958F;
 	/* CSS variable, ensure it's defined in your styles */
-	font-size: 1.25rem;
+	font-size: 1.38rem;
 	margin-top: 2rem;
 	margin-bottom: 1rem;
 
@@ -86,13 +86,13 @@ h5 {
 	line-height: 120%;
 	color: $off-black;
 	/* CSS variable, ensure it's defined in your styles */
-	font-size: 1.2rem;
+	font-size: 1.152rem;
 	margin-top: 2rem;
 	margin-bottom: 0.5rem;
 }
 
 h6 {
-	font-size: 1.2rem;
+	font-size: 1.125rem;
 	/* Smallest heading, specify if needed */
 	line-height: 120%;
 	color: $primary-color;
@@ -108,30 +108,29 @@ h6 {
 
 	h1 {
 		font-size: 2.986rem;
-		font-size: 3.815rem;
 		margin-bottom: 0;
 	}
 
 	h2 {
-		font-size: 3.052rem;
+		font-size: 2.488rem;
 	}
 
 	h3 {
-		font-size: 2.441rem;
+		font-size: 2.074rem;
 		margin-bottom: 1.5rem;
 		margin-top: 1rem;
 	}
 
 	h4 {
-		font-size: 1.953rem;
+		font-size: 1.728rem;
 	}
 
 	h5 {
-		font-size: 1.563rem;
+		font-size: 1.44rem;
 	}
 
 	h6 {
-		font-size: 1.25rem;
+		font-size: 1.2rem;
 	}
 }
 
