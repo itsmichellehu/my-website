@@ -72,7 +72,7 @@ $diner-trends-border: 1px solid $black;
 	display: grid;
 	grid-template-columns: 1fr;
 	grid-template-rows: repeat(3, auto);
-	column-gap: 0.25rem;
+	column-gap: 0.5rem;
 	margin: 1.5rem 0;
 
 	>div {
@@ -81,7 +81,8 @@ $diner-trends-border: 1px solid $black;
 		gap: 1rem;
 		align-items: center;
 		justify-content: center;
-		background-color: #f6f6f6;
+		border: 2px solid #C0DDFF;
+		;
 		padding: 1rem;
 		border-radius: 6px;
 
