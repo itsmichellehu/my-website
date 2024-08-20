@@ -98,6 +98,7 @@
 	grid-column-gap: 0.75rem;
 	grid-row-gap: 1rem;
 	width: 100%;
+	margin-bottom: 2rem;
 }
 
 .likert-scale {
@@ -272,5 +273,33 @@
 				margin-bottom: 0;
 			}
 		}
+	}
+}
+
+.user-research-assumptions_grid-container {
+	display: grid;
+	grid-template-rows: repeat(3, auto);
+	grid-template-columns: 1fr;
+	gap: 0.5rem;
+	width: 95vw;
+	margin: 2rem auto;
+
+	@include breakpoint(med) {
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: 1fr;
+		width: 100%;
+	}
+}
+
+.card-vertical.user-research-assumptions_card {
+	border: 2px solid $subdued-green;
+	;
+	padding: 1rem;
+	border-radius: 6px;
+	background-color: $lightest-green;
+
+	p {
+		color: $primary-green;
+		font-weight: 500;
 	}
 }
