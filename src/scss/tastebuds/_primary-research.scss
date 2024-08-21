@@ -291,7 +291,7 @@
 	}
 }
 
-.card-vertical.user-research-assumptions_card {
+.card-vertical.research_card {
 	border: 2px solid $subdued-green;
 	;
 	padding: 1rem;
@@ -301,5 +301,9 @@
 	p {
 		color: $primary-green;
 		font-weight: 500;
+	}
+
+	p:last-child {
+		margin-bottom: 0;
 	}
 }
