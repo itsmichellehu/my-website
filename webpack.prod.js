@@ -17,14 +17,6 @@ module.exports = {
         path: path.resolve(__dirname, 'dist'),
         // publicPath: '/your-repo-name/' // Set this to your actual repo name
     },
-    mode: 'production', // Enable production optimizations
-    // optimization: {
-    //     splitChunks: {
-    //         chunks: 'all', // Automatically split chunks for async and non-async imports
-    //         minSize: 20000, // Minimum size before a chunk is split
-    //         maxSize: 244000, // Ensure chunks are under 244 KiB
-    //     },
-    // },
     module: {
         rules: [
             {

@@ -1,7 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
-const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
+// const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 
 module.exports = {
     entry: {
@@ -105,7 +105,7 @@ module.exports = {
         ]
     },
     plugins: [
-        new BundleAnalyzerPlugin(),
+        // new BundleAnalyzerPlugin(),
         new HtmlWebpackPlugin({
             template: './src/index.html',
             chunks: ['index'],
@@ -161,7 +161,6 @@ module.exports = {
         hot: true,
         watchFiles: ['**/*'], // Watch everything in the project
     },
-    mode: 'development',
     // optimization: {
     //     splitChunks: {
     //         chunks: 'all',
