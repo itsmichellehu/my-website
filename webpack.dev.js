@@ -125,25 +125,22 @@ module.exports = {
             template: './src/tastebuds.html',
             chunks: ['tastebuds'],
             filename: 'tastebuds.html',
-            minify: false
         }),
         new HtmlWebpackPlugin({
             template: './src/tastebuds-quick-overview.html',
             filename: 'tastebuds-quick-overview.html',
             chunks: ['tastebuds'],
-            minify: false
         }),
+
         new HtmlWebpackPlugin({
             template: './src/sandbox.html',
             chunks: ['sandbox'],
             filename: 'sandbox.html',
-            minify: false
         }),
         new HtmlWebpackPlugin({
             template: './src/postup.html',
             chunks: ['postup'],
             filename: 'postup.html',
-            minify: false
         }),
         new CopyWebpackPlugin({
             patterns: [
@@ -163,7 +160,6 @@ module.exports = {
         open: true,
         hot: true,
         watchFiles: ['**/*'], // Watch everything in the project
-        port: 8866,
     },
     mode: 'development',
     optimization: {
