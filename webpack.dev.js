@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 
 module.exports = {
     entry: {
@@ -51,7 +52,38 @@ module.exports = {
                 },
                 generator: {
                     filename: 'assets/images/[name].[hash:6][ext]',
-                }
+                },
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            name: '[path][name].[ext]',
+                            outputPath: 'images',
+                        },
+                    },
+                    {
+                        loader: 'image-webpack-loader',
+                        options: {
+                            mozjpeg: {
+                                progressive: true,
+                                quality: 65
+                            },
+                            optipng: {
+                                enabled: true,
+                            },
+                            pngquant: {
+                                quality: [0.65, 0.90],
+                                speed: 4
+                            },
+                            gifsicle: {
+                                interlaced: false,
+                            },
+                            webp: {
+                                quality: 75
+                            }
+                        }
+                    }
+                ]
             },
             {
                 test: /\.svg$/,
@@ -73,6 +105,7 @@ module.exports = {
         ]
     },
     plugins: [
+        new BundleAnalyzerPlugin(),
         new HtmlWebpackPlugin({
             template: './src/index.html',
             chunks: ['index'],
@@ -120,6 +153,9 @@ module.exports = {
             ]
         })
     ],
+    externals: {
+        jquery: 'jQuery', // This tells Webpack to use the global 'jQuery' variable
+    },
     devServer: {
         static: {
             directory: path.resolve(__dirname, 'dist')
@@ -127,7 +163,13 @@ module.exports = {
         open: true,
         hot: true,
         watchFiles: ['**/*'], // Watch everything in the project
+        port: 8866,
     },
     mode: 'development',
+    optimization: {
+        splitChunks: {
+            chunks: 'all',
+        },
+    },
     devtool: 'source-map',
 };

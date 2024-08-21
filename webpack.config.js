@@ -121,6 +121,9 @@ module.exports = {
     resolve: {
         extensions: ['.js', '.jsx'], // File extensions to resolve
     },
+    externals: {
+        jquery: 'jQuery', // This tells Webpack to use the global 'jQuery' variable
+    },
     devServer: {
         static: {
             directory: path.resolve(__dirname, 'dist')
