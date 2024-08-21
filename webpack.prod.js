@@ -15,7 +15,7 @@ module.exports = {
     output: {
         filename: 'js/[name].js',
         path: path.resolve(__dirname, 'dist'),
-        publicPath: '/your-repo-name/' // Set this to your actual repo name
+        // publicPath: '/your-repo-name/' // Set this to your actual repo name
     },
     mode: 'production', // Enable production optimizations
     // optimization: {
