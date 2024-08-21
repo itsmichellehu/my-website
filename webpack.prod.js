@@ -2,7 +2,7 @@ const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
-const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
+// const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 
 module.exports = {
     entry: {
@@ -18,13 +18,13 @@ module.exports = {
         publicPath: '/your-repo-name/' // Set this to your actual repo name
     },
     mode: 'production', // Enable production optimizations
-    optimization: {
-        splitChunks: {
-            chunks: 'all', // Automatically split chunks for async and non-async imports
-            minSize: 20000, // Minimum size before a chunk is split
-            maxSize: 244000, // Ensure chunks are under 244 KiB
-        },
-    },
+    // optimization: {
+    //     splitChunks: {
+    //         chunks: 'all', // Automatically split chunks for async and non-async imports
+    //         minSize: 20000, // Minimum size before a chunk is split
+    //         maxSize: 244000, // Ensure chunks are under 244 KiB
+    //     },
+    // },
     module: {
         rules: [
             {
@@ -117,7 +117,7 @@ module.exports = {
             patterns: [
                 { from: 'src/assets', to: 'assets' }
             ]
-        }),
-        new BundleAnalyzerPlugin()
+        })
+        // new BundleAnalyzerPlugin()
     ]
 };

@@ -162,10 +162,10 @@ module.exports = {
         watchFiles: ['**/*'], // Watch everything in the project
     },
     mode: 'development',
-    optimization: {
-        splitChunks: {
-            chunks: 'all',
-        },
-    },
+    // optimization: {
+    //     splitChunks: {
+    //         chunks: 'all',
+    //     },
+    // },
     devtool: 'source-map',
 };
