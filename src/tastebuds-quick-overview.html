@@ -1122,29 +1122,100 @@
           </button>
         </div>
       </section>
-    </section>
-    <section id="sketches" class="section-container border-0 pb-0">
-      <header class="header-container">
-        <span>design</span>
-        <h3>Sketches</h3>
-      </header>
-      <div class="content mb-0">
-        <p>Using the user stories and flows, I began sketching to visualize how my app’s features
-          would come together for diners. The challenge was ensuring the user flows complemented
-          each other efficiently. For example, I considered questions like, "What user data is
-          needed for personalized recommendations?" "Where will essential restaurant details be
-          sourced from?" and "How can the review process supplement other app features?" In the end,
-          I made a few changes to the previous user flows and added a few new
-          features.
-        </p>
-      </div>
-      <div class="content-wrapper">
-        <p class="section-subheading sketches">
-          Route 1: Diner signs up and sets up account
-        </p>
-        <p class="mb-32">In my user flows, I initially included adding friends during onboarding,
-          but later removed it to streamline the process.</p>
-        <div class="tabs-container" data-current="Tab 1" data-duration-in="300"
+      <section id="sketches" class="subsection">
+        <header class="header-container short-v">
+          <span>design</span>
+          <h3>Exploring and refining through sketching</h3>
+        </header>
+        <div class="content-wrapper">
+          <p>Drawing from my user flows and information architecture, I sketched how my ideas
+            would come together for diners. The challenge was ensuring the user flows would compose an
+            efficient and resilient ecosystem for the solution. I spent a lot of time determining the
+            user data needed to tailor dining recommendations and exploring how the user flows would
+            individually and collectively support these data sets.
+          </p>
+          <p class="section-subheading">Guiding questions</p>
+          <ul>
+            <li>
+              What critical user data is needed to tailor dining recommendations? </li>
+            <li>
+              How can the search feature optimize and empower dining decisions?</li>
+            <li>How can I minimize cognitive overload while maximizing engagement for the structured
+              review flow?</li>
+          </ul>
+        </div>
+        <div class="tabs-container sketches-tabs-container" data-current="Tab 1"
+          data-duration-in="300" data-duration-out="100" data-easing="ease">
+          <div class="tabs-menu three-menu-items">
+            <button class="tab-button active" data-tab="tab1">
+              <p>Onboarding</p>
+            </button>
+            <button class="tab-button" data-tab="tab2">
+              <p>Search</p>
+            </button>
+            <button class="tab-button" data-tab="tab3">
+              <p>Review</p>
+            </button>
+          </div>
+          <div class="tab-content pb-0 active" id="tab1">
+            <img class="mb-24 img-100"
+              src="assets/images/tastebuds/route-1-sketches-all-condensed.png" alt="">
+            <button class="accordion mt-24">
+              <div class="accordion_header">
+                <p>How can TasteBuds retrieve information on 'ingredients'?</p>
+                <svg class="accordion_icon" width="40" height="40" viewBox="0 0 40 40" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path d="M8 15L20 27L32 15" stroke-width="3.5" />
+                </svg>
+              </div>
+              <div class="accordion_content">
+                <p>
+                  With ingredients being the building blocks of food, I speculated that
+                  these
+                  preferences and restrictions would be key to generating relevant
+                  recommendations
+                  by targeting specific ingredients in menu item description.
+                  <br>
+                  <br> After some research, I learned that this can be engineered using
+                  Yelp
+                  and
+                  Google APIs. However, this idea was a key moment in my brainstorming
+                  phase
+                  because
+                  this gave me the idea of integrating restaurants into the
+                  mobile solution as users to update their information and menus. This
+                  also
+                  gave
+                  me
+                  the idea for a business strategy to generate revenue from restaurant
+                  partnerships,
+                  keeping the app free for diners and providing user
+                  insights to restaurants to enhance their offerings, thus enhancing the
+                  overall
+                  diner journey cycle.
+                </p>
+              </div>
+            </button>
+          </div>
+          <div class="tab-content pb-0" id="tab2">
+            <h4 class="mt-0">
+              How can the search feature optimize and empower dining decisions?</h4>
+            <p></p>
+            <img class="img-100" src="assets/images/tastebuds/route-2-sketches-flow-search.png"
+              alt="Four sketches of a mobile app interface for finding Taiwanese restaurants.">
+            <br><br>
+            <img class="img-100"
+              src="assets/images/tastebuds/route-2-sketches-flow-search-results.png"
+              alt="Four sketches of a mobile app interface for finding Taiwanese restaurants.">
+          </div>
+          <div class="tab-content pb-0" id="tab3">
+            <img class="img-100" src="assets/images/tastebuds/route-3-sketches-02.png" alt="">
+            <br>
+            <br>
+            <img class="img-100" src="assets/images/tastebuds/route-3-sketches-01.png" alt="">
+          </div>
+        </div>
+        <!-- <div class="tabs-container" data-current="Tab 1" data-duration-in="300"
           data-duration-out="100" data-easing="ease">
           <div class="tabs-menu two-menu-items">
             <button class="tab-button active" data-tab="tab1">
@@ -1183,8 +1254,8 @@
                 <button class="accordion mt-24">
                   <div class="accordion_header">
                     <p>How can TasteBuds retrieve information on 'ingredients'?</p>
-                    <svg class="accordion_icon" width="40" height="40" viewBox="0 0 40 40"
-                      fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg class="accordion_icon" width="40" height="40" viewBox="0 0 40 40" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
                       <path d="M8 15L20 27L32 15" stroke-width="3.5" />
                     </svg>
                   </div>
@@ -1224,43 +1295,231 @@
               src="assets/images/tastebuds/route-1-sketches-all-condensed.png" alt="">
           </div>
         </div>
-      </div>
-      <div class="content-wrapper">
-        <p class="section-subheading sketches">
-          Route 2: Diner searches for dining options
-        </p>
-        <div class="tabs-container content" data-current="Tab 1" data-duration-in="300"
-          data-duration-out="100" data-easing="ease">
-          <div class="tabs-menu">
-            <button class="tab-button active" data-tab="tab1">
-              <p>Search</p>
-            </button>
-            <button class="tab-button" data-tab="tab2">
-              <p>Results</p>
-            </button>
-            <button class="tab-button" data-tab="tab3">
-              <p>Restaurant listing</p>
-            </button>
-            <button class="tab-button" data-tab="tab4">
-              <p>Wireflow</p>
-            </button>
-          </div>
-          <div class="tab-content ph-0 pb-0 active" id="tab1">
-            <div class="sketches-walkthrough_grid-container mb-0">
-              <video class="featured-media border" autoplay loop muted>
-                <source src="assets/videos/tastebuds/route-2-sketches-search.mp4">
-                type="video/mp4">
-              </video>
-              <div>
-                <header class="sketches-walkthrough_grid-container--header">
-                  <p class="subheading">Search</p>
-                </header>
-                <p>
-                  To promote search relevance, I placed food preferences (filters) on the first
-                  search
-                  screen prompts users to enter preferences before initiating search.
-                </p>
+        <div class="content-wrapper">
+          <p class="section-subheading sketches">
+            Route 2: Diner searches for dining options
+          </p>
+          <div class="tabs-container content" data-current="Tab 1" data-duration-in="300"
+            data-duration-out="100" data-easing="ease">
+            <div class="tabs-menu">
+              <button class="tab-button active" data-tab="tab1">
+                <p>Search</p>
+              </button>
+              <button class="tab-button" data-tab="tab2">
+                <p>Results</p>
+              </button>
+              <button class="tab-button" data-tab="tab3">
+                <p>Restaurant listing</p>
+              </button>
+              <button class="tab-button" data-tab="tab4">
+                <p>Wireflow</p>
+              </button>
+            </div>
+            <div class="tab-content ph-0 pb-0 active" id="tab1">
+              <div class="sketches-walkthrough_grid-container mb-0">
+                <video class="featured-media border" autoplay loop muted>
+                  <source src="assets/videos/tastebuds/route-2-sketches-search.mp4">
+                  type="video/mp4">
+                </video>
                 <div>
+                  <header class="sketches-walkthrough_grid-container--header">
+                    <p class="subheading">Search</p>
+                  </header>
+                  <p>
+                    To promote search relevance, I placed food preferences (filters) on the first
+                    search
+                    screen prompts users to enter preferences before initiating search.
+                  </p>
+                  <div>
+                    <button class="accordion">
+                      <div class="accordion_header">
+                        <p>See more details</p>
+                        <svg class="accordion_icon" width="40" height="40" viewBox="0 0 40 40"
+                          fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M8 15L20 27L32 15" stroke-width="3.5" />
+                        </svg>
+                      </div>
+                      <div class="accordion_content">
+                        <ul class="span-fw-medium-white">
+                          <li>
+                            <span>Top 3 qualities voted by friends</span>
+                            <br> When reviewing a dining experience, diners select up to 3
+                            qualities
+                            that stood out. Qualities with the most votes are displayed so they
+                            can
+                            better gauge the restaurant's strengths at a glance.
+                          </li>
+                          <li>
+                            <span>Refresh for a new set of results</span>
+                            <br> Earlier, my user flows disallow undoing refresh, but I realized
+                            like
+                            that would limit exploration. I decided to allow users to undo their
+                            last
+                            set of results to maintain my initial goal of encouraging diners
+                            to be more deliverate and thoughtful.
+                          </li>
+                          <li> <span>Commute time</span>
+                            <br> Since location is an important factor for diners, I speculated
+                            displaying the commute time in the search results would make their
+                            process
+                            more efficient.
+                          </li>
+                        </ul>
+                      </div>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tab-content ph-0 pb-0" id="tab2">
+              <div class="sketches-walkthrough_grid-container">
+                <video class="featured-media border" autoplay loop muted List="nodownload">
+                  <source src="assets/videos/tastebuds/route-2-sketches-search-results.mp4">
+                  type="video/mp4">
+                </video>
+                <div>
+                  <header class="sketches-walkthrough_grid-container--header">
+                    <p class="subheading">Search results</p>
+                  </header>
+                  <p>
+                    I wanted to help diners easily assess and compare restaurants, so my sketches
+                    present 3 scannable views: List view (default), map view, and bottom sheet
+                    (carousel).
+                  </p>
+                  <div class="sketches-walkthrough__card">
+                    <p class="card--headline">Features</p>
+                    <ul class="card--list mt-0">
+                      <li>Tailored order recommendations</li>
+                      <li>Top 3 qualities by friends</li>
+                      <li>Commute time</li>
+                      <li>Photos posted by friends</li>
+                      <li>Compatability score</li>
+                      <li>Refresh results (can undo once)</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tab-content ph-0 pb-0" id="tab3">
+              <div class="sketches-walkthrough_grid-container mb-32">
+                <img class="featured-media" alt="" loading="lazy"
+                  src="assets/images/tastebuds/route-2-sketch-restaurant-listing.png">
+                <div>
+                  <header class="sketches-walkthrough_grid-container--header">
+                    <p class="subheading">Restaurant listing</p>
+                  </header>
+                  <p>
+                    I focused on presenting essential information above the fold and on the first
+                    screen. The home page features menu items recommended for the diner, as well
+                    as
+                    bestsellers among their friends. I also added 'Deals' because diners like Alex
+                    and
+                    Brandon highly
+                    prioritize value!
+                  </p>
+                  <div class="sketches-walkthrough__card">
+                    <p class="card--headline">Features</p>
+                    <ul class="card--list mt-0">
+                      <li>Restaurant strengths</li>
+                      <li>Commute and walk time</li>
+                      <li>Personalized item recommendations</li>
+                      <li>Bestsellers among friends</li>
+                    </ul>
+                  </div>
+                  <button class="accordion mt-24">
+                    <div class="accordion_header">
+                      <p>Where would the mobile app retrieve restaurant info?</p>
+                      <svg class="accordion_icon" width="40" height="40" viewBox="0 0 40 40"
+                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8 15L20 27L32 15" stroke-width="3.5" />
+                      </svg>
+                      <div class="accordion_content">
+                        <p>
+                          To ensure that my ideas are feasible, I did some research:
+                        </p>
+                        <ol>
+                          <li class="fw-medium black">
+                            <p class="fw-medium mb-8">Using Yelp and Google APIs</p>
+                            <p>Leveraging these APIs, engineers can import existing data on
+                              restaurants
+                              from
+                              their Yelp and Google profiles.</p>
+                          </li>
+                          <li class="fw-medium black ">
+                            <p class="fw-medium mb-8">Restaurant partnerships</p>
+                            <p class="span-fw-medium mb-0">Alternatively or supplementally, the
+                              mobile
+                              solution
+                              could
+                              <span>
+                                integrate
+                                restaurants as users to update their info and
+                                menus
+                              </span>. This gave me the idea for a <span>
+                                business strategy with business
+                                partnerships to keep the app free
+                              </span> for diners and provide user insights for restaurants to
+                              enhance the
+                              overall diner journey!
+                            </p>
+                          </li>
+                        </ol>
+                      </div>
+                    </div>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="tab-content ph-0 pb-0" id="tab4">
+              <p class="subheading mb-24 dark-grey">Sketches flow</p>
+              <img class="img-100"
+                src="assets/images/tastebuds/route-2-sketches-flow-search-results.png"
+                alt="Four sketches of a mobile app interface for finding Taiwanese restaurants.">
+            </div>
+          </div>
+        </div>
+        <div class="content-wrapper mb-0">
+          <p class="section-subheading sketches">
+            Route 3: Diner reviews a dining experience
+          </p>
+          <p class="mb-32">sTo encourage detailed reviews without overwhelming
+            users, I sketched an
+            overview page for more user control. For error prevention, diners can modify their
+            restaurant choice, and I added a slider to clarify the zero and half-star rating system.
+          </p>
+          <div class="tabs-container content" data-current="Tab 1" data-duration-in="300"
+            data-duration-out="100" data-easing="ease">
+            <div class="tabs-menu three-menu-items">
+              <button class="tab-button active" data-tab="tab1">
+                <p>Order</p>
+              </button>
+              <button class="tab-button" data-tab="tab2">
+                <p>Experience</p>
+              </button>
+              <button class="tab-button" data-tab="tab3">
+                <p>Wireflow</p>
+              </button>
+            </div>
+            <div class="tab-content ph-0 pb-0 active" id="tab1">
+              <div class="sketches-walkthrough_grid-container pb-0 mb-0">
+                <img class="featured-media" alt="" loading="lazy"
+                  src="assets/images/tastebuds/route-3-sketch-review-item.png">
+                <div>
+                  <header class="sketches-walkthrough_grid-container--header">
+                    <p class="subheading">Review ordered item(s)</p>
+                  </header>
+                  <p>The review process requires diners to review menu items to strengthens the app's
+                    food-focused intent and deter fake reviews. It also allows diners to critique the
+                    food with a voting system so that the app can leverage this user data to enhance
+                    tailored recommendations.</p>
+                  <div class="sketches-walkthrough__card mb-24">
+                    <p class="card--headline">New features</p>
+                    <ul class="card--list mt-0">
+                      <li>Edit menu item details</li>
+                      <li>Food critique (optional)</li>
+                      <li>Tips on ordering</li>
+                    </ul>
+                  </div>
                   <button class="accordion">
                     <div class="accordion_header">
                       <p>See more details</p>
@@ -1270,29 +1529,33 @@
                       </svg>
                     </div>
                     <div class="accordion_content">
-                      <ul class="span-fw-medium-white">
+                      <ul class="span-fw-medium list--dark gap--medium">
                         <li>
-                          <span>Top 3 qualities voted by friends</span>
-                          <br> When reviewing a dining experience, diners select up to 3
-                          qualities
-                          that stood out. Qualities with the most votes are displayed so they
-                          can
-                          better gauge the restaurant's strengths at a glance.
+                          <span>Rating menu items</span>
+                          <br> I wanted to address skepticism among diners like Alex towards low
+                          ratings
+                          despite good food, catering to situations where diners may have had
+                          service
+                          issues
+                          but still enjoyed the food.
                         </li>
                         <li>
-                          <span>Refresh for a new set of results</span>
-                          <br> Earlier, my user flows disallow undoing refresh, but I realized
-                          like
-                          that would limit exploration. I decided to allow users to undo their
-                          last
-                          set of results to maintain my initial goal of encouraging diners
-                          to be more deliverate and thoughtful.
+                          <span>Food critique (optional)</span>
+                          <br> I wanted to enhancing reviews and increase credibility by offering a
+                          template
+                          that breaks down diners' priorities: taste, portion size, authenticity,
+                          price,
+                          and
+                          ordering tips.
                         </li>
-                        <li> <span>Commute time</span>
-                          <br> Since location is an important factor for diners, I speculated
-                          displaying the commute time in the search results would make their
-                          process
-                          more efficient.
+                        <li>
+                          <span>Tips on ordering (optional)</span>
+                          <br> Separate from the written review, I planned on designing a section
+                          for
+                          these
+                          tips in my reviews screen in low-fidelity. I wanted to help diners
+                          distinguish
+                          tips from main review content.
                         </li>
                       </ul>
                     </div>
@@ -1300,277 +1563,78 @@
                 </div>
               </div>
             </div>
-          </div>
-          <div class="tab-content ph-0 pb-0" id="tab2">
-            <div class="sketches-walkthrough_grid-container">
-              <video class="featured-media border" autoplay loop muted List="nodownload">
-                <source src="assets/videos/tastebuds/route-2-sketches-search-results.mp4">
-                type="video/mp4">
-              </video>
-              <div>
-                <header class="sketches-walkthrough_grid-container--header">
-                  <p class="subheading">Search results</p>
-                </header>
-                <p>
-                  I wanted to help diners easily assess and compare restaurants, so my sketches
-                  present 3 scannable views: List view (default), map view, and bottom sheet
-                  (carousel).
-                </p>
-                <div class="sketches-walkthrough__card">
-                  <p class="card--headline">Features</p>
-                  <ul class="card--list mt-0">
-                    <li>Tailored order recommendations</li>
-                    <li>Top 3 qualities by friends</li>
-                    <li>Commute time</li>
-                    <li>Photos posted by friends</li>
-                    <li>Compatability score</li>
-                    <li>Refresh results (can undo once)</li>
-                  </ul>
+            <div class="tab-content ph-0 pb-0" id="tab2">
+              <div class="sketches-walkthrough_grid-container pb-0 mb-0">
+                <img class="featured-media" alt="" loading="lazy"
+                  src="assets/images/tastebuds/route-3-sketch-pros-and-cons.png">
+                <div>
+                  <header class="sketches-walkthrough_grid-container--header">
+                    <p class="subheading">Strengths and weaknesses</p>
+                  </header>
+                  <p>This is another effort to leverage user data to create scannable content that
+                    efficiently illustrates the restaurant's profile. At this stage, I envisioned
+                    restaurants using the app to enhance its value proposition, potentially
+                    generating revenue to offer it free to users, and improve the entire diner
+                    journey.
+                  </p>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="tab-content ph-0 pb-0" id="tab3">
-            <div class="sketches-walkthrough_grid-container mb-32">
-              <img class="featured-media" alt="" loading="lazy"
-                src="assets/images/tastebuds/route-2-sketch-restaurant-listing.png">
-              <div>
-                <header class="sketches-walkthrough_grid-container--header">
-                  <p class="subheading">Restaurant listing</p>
-                </header>
-                <p>
-                  I focused on presenting essential information above the fold and on the first
-                  screen. The home page features menu items recommended for the diner, as well
-                  as
-                  bestsellers among their friends. I also added 'Deals' because diners like Alex
-                  and
-                  Brandon highly
-                  prioritize value!
-                </p>
-                <div class="sketches-walkthrough__card">
-                  <p class="card--headline">Features</p>
-                  <ul class="card--list mt-0">
-                    <li>Restaurant strengths</li>
-                    <li>Commute and walk time</li>
-                    <li>Personalized item recommendations</li>
-                    <li>Bestsellers among friends</li>
-                  </ul>
-                </div>
-                <button class="accordion mt-24">
-                  <div class="accordion_header">
-                    <p>Where would the mobile app retrieve restaurant info?</p>
-                    <svg class="accordion_icon" width="40" height="40" viewBox="0 0 40 40"
-                      fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M8 15L20 27L32 15" stroke-width="3.5" />
-                    </svg>
-                    <div class="accordion_content">
-                      <p>
-                        To ensure that my ideas are feasible, I did some research:
-                      </p>
-                      <ol>
-                        <li class="fw-medium black">
-                          <p class="fw-medium mb-8">Using Yelp and Google APIs</p>
-                          <p>Leveraging these APIs, engineers can import existing data on
-                            restaurants
-                            from
-                            their Yelp and Google profiles.</p>
-                        </li>
-                        <li class="fw-medium black ">
-                          <p class="fw-medium mb-8">Restaurant partnerships</p>
-                          <p class="span-fw-medium mb-0">Alternatively or supplementally, the
-                            mobile
-                            solution
-                            could
-                            <span>
-                              integrate
-                              restaurants as users to update their info and
-                              menus
-                            </span>. This gave me the idea for a <span>
-                              business strategy with business
-                              partnerships to keep the app free
-                            </span> for diners and provide user insights for restaurants to
-                            enhance the
-                            overall diner journey!
-                          </p>
-                        </li>
-                      </ol>
-                    </div>
-                  </div>
-                </button>
-              </div>
+            <div class="tab-content ph-0 pb-0" id="tab3">
+              <img class="img-100" src="assets/images/tastebuds/route-3-sketches-02.png" alt="">
+              <br>
+              <br>
+              <img class="img-100" src="assets/images/tastebuds/route-3-sketches-01.png" alt="">
             </div>
           </div>
-          <div class="tab-content ph-0 pb-0" id="tab4">
-            <p class="subheading mb-24 dark-grey">Sketches flow</p>
-            <img class="img-100"
-              src="assets/images/tastebuds/route-2-sketches-flow-search-results.png"
-              alt="Four sketches of a mobile app interface for finding Taiwanese restaurants.">
-          </div>
-        </div>
-      </div>
-      <div class="content-wrapper mb-0">
-        <p class="section-subheading sketches">
-          Route 3: Diner reviews a dining experience
-        </p>
-        <p class="mb-32">sTo encourage detailed reviews without overwhelming
-          users, I sketched an
-          overview page for more user control. For error prevention, diners can modify their
-          restaurant choice, and I added a slider to clarify the zero and half-star rating system.
-        </p>
-        <div class="tabs-container content" data-current="Tab 1" data-duration-in="300"
-          data-duration-out="100" data-easing="ease">
-          <div class="tabs-menu three-menu-items">
-            <button class="tab-button active" data-tab="tab1">
-              <p>Order</p>
-            </button>
-            <button class="tab-button" data-tab="tab2">
-              <p>Experience</p>
-            </button>
-            <button class="tab-button" data-tab="tab3">
-              <p>Wireflow</p>
-            </button>
-          </div>
-          <div class="tab-content ph-0 pb-0 active" id="tab1">
-            <div class="sketches-walkthrough_grid-container pb-0 mb-0">
-              <img class="featured-media" alt="" loading="lazy"
-                src="assets/images/tastebuds/route-3-sketch-review-item.png">
-              <div>
-                <header class="sketches-walkthrough_grid-container--header">
-                  <p class="subheading">Review ordered item(s)</p>
-                </header>
-                <p>The review process requires diners to review menu items to strengthens the app's
-                  food-focused intent and deter fake reviews. It also allows diners to critique the
-                  food with a voting system so that the app can leverage this user data to enhance
-                  tailored recommendations.</p>
-                <div class="sketches-walkthrough__card mb-24">
-                  <p class="card--headline">New features</p>
-                  <ul class="card--list mt-0">
-                    <li>Edit menu item details</li>
-                    <li>Food critique (optional)</li>
-                    <li>Tips on ordering</li>
-                  </ul>
-                </div>
-                <button class="accordion">
-                  <div class="accordion_header">
-                    <p>See more details</p>
-                    <svg class="accordion_icon" width="40" height="40" viewBox="0 0 40 40"
-                      fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M8 15L20 27L32 15" stroke-width="3.5" />
-                    </svg>
-                  </div>
-                  <div class="accordion_content">
-                    <ul class="span-fw-medium list--dark gap--medium">
-                      <li>
-                        <span>Rating menu items</span>
-                        <br> I wanted to address skepticism among diners like Alex towards low
-                        ratings
-                        despite good food, catering to situations where diners may have had
-                        service
-                        issues
-                        but still enjoyed the food.
-                      </li>
-                      <li>
-                        <span>Food critique (optional)</span>
-                        <br> I wanted to enhancing reviews and increase credibility by offering a
-                        template
-                        that breaks down diners' priorities: taste, portion size, authenticity,
-                        price,
-                        and
-                        ordering tips.
-                      </li>
-                      <li>
-                        <span>Tips on ordering (optional)</span>
-                        <br> Separate from the written review, I planned on designing a section
-                        for
-                        these
-                        tips in my reviews screen in low-fidelity. I wanted to help diners
-                        distinguish
-                        tips from main review content.
-                      </li>
-                    </ul>
-                  </div>
-                </button>
-              </div>
-            </div>
-          </div>
-          <div class="tab-content ph-0 pb-0" id="tab2">
-            <div class="sketches-walkthrough_grid-container pb-0 mb-0">
-              <img class="featured-media" alt="" loading="lazy"
-                src="assets/images/tastebuds/route-3-sketch-pros-and-cons.png">
-              <div>
-                <header class="sketches-walkthrough_grid-container--header">
-                  <p class="subheading">Strengths and weaknesses</p>
-                </header>
-                <p>This is another effort to leverage user data to create scannable content that
-                  efficiently illustrates the restaurant's profile. At this stage, I envisioned
-                  restaurants using the app to enhance its value proposition, potentially
-                  generating revenue to offer it free to users, and improve the entire diner
-                  journey.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="tab-content ph-0 pb-0" id="tab3">
-            <img class="img-100" src="assets/images/tastebuds/route-3-sketches-02.png" alt="">
+        </div> -->
+      </section>
+      <section id="guerilla-test" class="subsection">
+        <header class=" header-container">
+          <h3>
+            <span>test</span>
             <br>
-            <br>
-            <img class="img-100" src="assets/images/tastebuds/route-3-sketches-01.png" alt="">
-          </div>
-        </div>
-      </div>
-      <div class="container-full-width bg-black">
-        <div class="margin-auto">
-          <p class="section-subheading white mb-32">All route 1 sketches</p>
-          <img alt="" class="img-route-1-sketches-all" loading="lazy"
-            src="assets/images/tastebuds/route-1-sketches-all.png">
-        </div>
-      </div>
-    </section>
-    <section id="guerilla-test" class="section-container">
-      <header class=" header-container">
-        <h3>
-          <span>test</span>
-          <br>
-          Guerilla testing
-        </h3>
-      </header>
-      <div class="content-wrapper">
-        <p>Since my sketches for routes 2 and 3 were close to low-fidelity, I prototoyped them and
-          conducted guerilla usability tests with 5 participants. Here's what I found:</p>
-        <div class="test-findings-grid mv-32">
-          <div class="test-findings_card border-top-green">
-            <div class="test-findings-header-wrapper">
-              <p class="subheading">Design validation</p>
-              <img alt="" class="img-design-validation" loading="lazy"
-                src="assets/images/tastebuds/icon-checkmark-circle-filled-green.png">
+            Guerilla testing
+          </h3>
+        </header>
+        <div class="content-wrapper">
+          <p>Since my sketches for routes 2 and 3 were close to low-fidelity, I prototoyped them and
+            conducted guerilla usability tests with 5 participants. Here's what I found:</p>
+          <div class="test-findings-grid mv-32">
+            <div class="test-findings_card border-top-green">
+              <div class="test-findings-header-wrapper">
+                <p class="subheading">Design validation</p>
+                <img alt="" class="img-design-validation" loading="lazy"
+                  src="assets/images/tastebuds/icon-checkmark-circle-filled-green.png">
+              </div>
+              <ul class="list-transform-none gap-8">
+                <li>Everyone highlighted and affirmed the restaurant "deal"</li>
+                <li>All diners affirmed the personalized recommendations.</li>
+                <li>Everyone found the prototype intuitive and affirmed its potential.</li>
+                <li>The map view is essential for a location based search.</li>
+                <li>They all wished this tool existed.</li>
+              </ul>
             </div>
-            <ul class="list-transform-none gap-8">
-              <li>Everyone highlighted and affirmed the restaurant "deal"</li>
-              <li>All diners affirmed the personalized recommendations.</li>
-              <li>Everyone found the prototype intuitive and affirmed its potential.</li>
-              <li>The map view is essential for a location based search.</li>
-              <li>They all wished this tool existed.</li>
-            </ul>
-          </div>
-          <div class="test-findings_card border-top-red">
-            <div class="test-findings-header-wrapper">
-              <p class="subheading">Errors</p>
-              <img alt="" class="img-design-invalidation" loading="lazy"
-                src="assets/images/tastebuds/icon-cancel-circle-filled-red.png">
+            <div class="test-findings_card border-top-red">
+              <div class="test-findings-header-wrapper">
+                <p class="subheading">Errors</p>
+                <img alt="" class="img-design-invalidation" loading="lazy"
+                  src="assets/images/tastebuds/icon-cancel-circle-filled-red.png">
+              </div>
+              <ul class="list-transform-none gap-8">
+                <li>3 diners didn't notice the map (behind the list of results).</li>
+                <li>4 diners struggled with the slider design to rate stars.</li>
+              </ul>
             </div>
-            <ul class="list-transform-none gap-8">
-              <li>3 diners didn't notice the map (behind the list of results).</li>
-              <li>4 diners struggled with the slider design to rate stars.</li>
-            </ul>
           </div>
+          <a
+            href="https://docs.google.com/document/d/1nq9g-vct7cKA-PFsIPlcCAuN3rX1QibhBRnavFDOs_0/edit?usp=sharing">
+            <p class="link-blue mb-0">
+              View complete test report ->
+            </p>
+          </a>
         </div>
-        <a
-          href="https://docs.google.com/document/d/1nq9g-vct7cKA-PFsIPlcCAuN3rX1QibhBRnavFDOs_0/edit?usp=sharing">
-          <p class="link-blue mb-0">
-            View complete test report ->
-          </p>
-        </a>
-      </div>
+      </section>
     </section>
     <section id="low-fidelity" class="section-container">
       <header class="header-container">
