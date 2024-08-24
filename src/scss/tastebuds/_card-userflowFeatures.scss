@@ -40,7 +40,7 @@ $userflow-walkthrough-border-radius: 1rem;
 
 .userflow-walkthrough_grid-container {
 	display: grid;
-	grid-template-columns: 18rem 1fr;
+	grid-template-columns: auto 1fr;
 	grid-template-rows: repeat(2, auto);
 	grid-template-areas: 'a a' 'b c';
 	margin: auto;
@@ -61,6 +61,7 @@ $userflow-walkthrough-border-radius: 1rem;
 	border-right: 2px solid $light-grey;
 	grid-area: b;
 	color: $black;
+	align-items: start;
 
 
 	//   box-shadow: 0.5px 0.5px 6px 0px rgba(0, 0, 0, 0.1);
@@ -101,22 +102,22 @@ $userflow-walkthrough-border-radius: 1rem;
 	// color: white;
 }
 
-.userflowFeatures_list {
-	width: 100%;
+.userflow-features-list {
+	width: fit-content;
 	margin: 0;
 	list-style-type: none;
 	font-weight: 400;
+	transform: none;
 
 	li {
 		padding: 0;
+		text-wrap: nowrap;
 	}
 }
 
 .userflow-walkthrough_image {
-	border-radius: $userflow-walkthrough-border-radius;
 	width: 100%;
 	grid-area: a;
-	border: 1px solid $medium-grey;
 	margin-bottom: 0;
 }
 

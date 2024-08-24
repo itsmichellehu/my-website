@@ -66,6 +66,10 @@
     height: 3rem;
     margin-left: 0;
   }
+
+  .user-persona_content {
+    width: calc(100% + 4rem);
+  }
 }
 
 .user-persona_tabs.tabs-container {

@@ -9,6 +9,7 @@
     @include breakpoint(med) {
         grid-template-columns: repeat(4, 1fr);
         margin: auto;
+        margin-bottom: 3rem;
     }
 }
 

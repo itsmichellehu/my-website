@@ -745,7 +745,8 @@
               <p>As a visual learner, this helped a lot!</p>
             </aside>
           </div>
-          <p class="secondary-text mt-0">Diners lack confidence due to unreliable content and
+          <p class="secondary-text mt-0">In sum, diners lack confidence due to unreliable
+            content and
             inaccessible word-of-mouth recommendations.</p>
         </div>
       </section>
@@ -760,7 +761,14 @@
         <div class="content-wrapper">
           <p>
             Given the diversity of diners' needs and behaviors, I created 3 user personas to better
-            understand my target audience and guide my ideation phase: Alex, Brandon, and Cleo.
+            understand my target audience and guide my ideation phase: Alex, Brandon, and Cleo. The
+            mind map I created earlier helped me clarify the distinct pain points and delights of
+            each
+            persona!
+            <br><br>
+            Spoiler alert: In hindsight, this was the beginning of my scope creep. Eventually, I
+            narrowed my focus to Alex and Brandon to ensure a more targeted and effective product
+            experience.
           </p>
           <div class="user-persona_container">
             <img alt="" class="user-persona_icon" loading="lazy"
@@ -839,7 +847,7 @@
         </div>
       </section>
       <section id="user-stories-flows" class="subsection">
-        <header class="header-container short-v">
+        <!-- <header class="header-container short-v">
           <h3>
             <span class="source-code-pro">USER STORIES</span>
             <br>
@@ -900,22 +908,25 @@
           </h3>
         </header>
         <div class="content mb-16">
-          <p>Recognizing diners' reliance on mobile apps, I decided to prototype a mobile app. Using
-            the user stories, I brainstormed features and conceptualized 3 user flows to visualize
+          <p>Since diners typically explore options with Yelp and Google, I decided to prototype a
+            mobile-app for my solution. Using
+            the new diner stories, I brainstormed features and conceptualized 3 user flows to
+            visualize
             how
-            diners would interact with the product to enhance their dining experience.</p>
-        </div>
+            diners like Alex, Brandon, and Cleo would interact with the product to enhance their
+            dining experience.</p>
+        </div> -->
         <div class="user-flow-tabs-container tabs-container" data-current="Tab 1"
           data-duration-in="300" data-duration-out="100" data-easing="ease">
           <div class="tabs-menu three-menu-items">
             <button class="tab-button active" data-tab="tab1">
-              <p>Route 1</p>
+              <p>01. Onboarding</p>
             </button>
             <button class="tab-button" data-tab="tab2">
-              <p>Route 2</p>
+              <p>02. Search</p>
             </button>
             <button class="tab-button" data-tab="tab3">
-              <p>Route 3</p>
+              <p>03. Review</p>
             </button>
           </div>
           <div id="tab1" class="tab-content ph-0 active">
@@ -924,21 +935,22 @@
                 src="assets/images/tastebuds/route-1-user-flow.png">
               <div class="userflow-walkthrough_card">
                 <p class="userflow-walkthrough_card_headline">
-                  Diner signs up and sets up their account
+                  <span class="hide-med">Diner signs up and sets up their account</span>
+                  <span class="show-med-flex">Diner signs up and <br>sets up their account</span>
                 </p>
-                <ul class="userflowFeatures_list">
-                  <li>Create account with email or social</li>
+                <ul class="userflow-features-list">
+                  <li>Create account via email or social</li>
                   <li>Input food preferences</li>
                   <li>Add friends</li>
                 </ul>
               </div>
               <div class="userflow-walkthrough_content-container">
                 <div class="userflow-walkthrough_content">
-                  <p>After a standard sign-up process, diners can input their food preferences then
-                    add their friends by linking their social media accounts and contacts. This
-                    would
-                    enable personalized recommendations for diners and allow diners to see dining
-                    recommendations from friends they add.</p>
+                  <p>After a standard sign-up process, diners are guided to input their food
+                    preferences and
+                    add their friends by linking social media accounts and contacts. This
+                    facilitates personalized dining recommendations and access to recommendations
+                    from friends.</p>
                 </div>
               </div>
             </div>
@@ -949,31 +961,23 @@
                 src="assets/images/tastebuds/route-2-user-flow.png">
               <div class="userflow-walkthrough_card">
                 <p class="userflow-walkthrough_card_headline">
-                  Diner searches for dining options
+                  <span class="hide-med">Diner explores options</span>
+                  <span class="show-med-flex">Diner explores options</span>
                 </p>
-                <ul class="userflowFeatures_list">
+                <ul class="userflow-features-list">
                   <li>Saved search presets</li>
-                  <li>Filter by 'Cuisines'</li>
-                  <li>Filter by 'Visit history'</li>
                   <li>Personalized recommendations</li>
                   <li>Compatibility score (% Match)</li>
-                  <li>Limited search results</li>
+                  <li>Limited refreshable results</li>
                 </ul>
               </div>
               <div class="userflow-walkthrough_content-container">
                 <div class="userflow-walkthrough_content">
-                  <p>Diners can enter keywords and preferences, filter by visit history, and see
-                    results
-                    sorted by a “% Match” score based on AI-driven preferences and dining history.
-                    Alex
-                    and Cleo, who value discovery, can exclude previously visited spots, while
-                    Brandon
-                    can choose familiar places. Frequent searches, like Brandon’s "Late-night
-                    dinner,"
-                    can be saved for quick access. The search offers a finite number of results,
-                    with
-                    a
-                    refresh option to balance choice and discovery.</p>
+                  <p>To explore dining options, diners navigate a search flow facilitated by a
+                    new or saved search with
+                    food-focused and user-based
+                    filters. After inputting preferences, diners will find a finite list of results
+                    sorted by a compatibility score.</p>
                 </div>
               </div>
             </div>
@@ -984,27 +988,23 @@
                 src="assets/images/tastebuds/route-3-user-flow.png">
               <div class="userflow-walkthrough_card">
                 <p class="userflow-walkthrough_card_headline">
-                  Diner reviews their dining experience
+                  <span class="hide-med"> Diner reviews their dining experience</span>
+                  <span class="show-med-flex">Diner reviews their <br>dining experience</span>
                 </p>
-                <ul class="userflowFeatures_list">
-                  <li>Rate ordered items (required)</li>
-                  <li>Zero and half star rating system</li>
-                  <li>Strengths and weaknesses of dining experience</li>
-                  <li>Recommendation rating</li>
+                <ul class="userflow-features-list">
+                  <li>Rate restaurant and dishes</li>
+                  <li>Strengths and weaknesses</li>
+                  <li>Recommendation feedback</li>
                   <li>Written review (optional)</li>
                 </ul>
               </div>
               <div class="userflow-walkthrough_content-container">
                 <div class="userflow-walkthrough_content">
-                  <p>Users can record and share detailed dining experiences through a structured
-                    review
-                    process that emphasizes critical decision-making factors. To counter reluctance
-                    in
-                    writing reviews, the flow leverages 'completion bias' to encourage genuine,
-                    food-focused feedback. Only two sections are mandatory, with the rest optional,
-                    including the written portion. To balance personalized suggestions with privacy,
-                    diners can set reviews as private to enhance recommendations without publicly
-                    sharing.
+                  <p>Diners follow a step-by-step review flow focused on providing feedback on the
+                    restaurant and dishes, featuring a unique 0-5 star rating system in 0.5
+                    increments. Since reviews contribute to AI recommendations, diners can make any
+                    review private, allowing them to improve suggestions without
+                    sharing select opinions with friends.
                   </p>
                 </div>
               </div>
@@ -1020,7 +1020,7 @@
               <p class="userflow-walkthrough_card_headline">
                 Diner signs up and sets up their account
               </p>
-              <ul class="userflowFeatures_list">
+              <ul class="userflow-features-list">
                 <li>Create an account with email or social media</li>
                 <li>Input food preferences</li>
                 <li>Add friends</li>
@@ -1046,7 +1046,7 @@
               <p class="userflow-walkthrough_card_headline">
                 Diner searches for dining options
               </p>
-              <ul class="userflowFeatures_list">
+              <ul class="userflow-features-list">
                 <li>Saved search presets</li>
                 <li>Filter by 'Cuisines'</li>
                 <li>Filter by 'Visit history'</li>
@@ -1084,12 +1084,12 @@
               <p class="userflow-walkthrough_card_headline">
                 Diner reviews their dining experience
               </p>
-              <ul class="userflowFeatures_list">
+              <ul class="userflow-features-list">
                 <li>Rate ordered items (required)</li>
                 <li>Zero and half star rating system</li>
-                <li>Strengths and weaknesses of dining experience</li>
+                <li>Strengths and weaknesses</li>
                 <li>Recommendation rating</li>
-                <li>Written review (optional)</li>
+                <li>Optional written review</li>
               </ul>
             </div>
             <div class="userflow-walkthrough_content-container">
