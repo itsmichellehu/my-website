@@ -15,4 +15,10 @@
 
 .card-vertical.diner-stories-card {
     padding: 1.5rem;
+    background-color: $lightest-green;
+
+    p {
+        margin-bottom: 0;
+        color: $forest-green;
+    }
 }
