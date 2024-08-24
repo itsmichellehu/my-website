@@ -48,6 +48,10 @@
 	display: none !important;
 }
 
+.show-med-list-item {
+	display: none !important;
+}
+
 .show-lg {
 	display: none !important;
 }
@@ -99,6 +103,10 @@
 
 	.show-med-block {
 		display: block !important;
+	}
+
+	.show-med-list-item {
+		display: list-item !important;
 	}
 }
 
