@@ -28,10 +28,11 @@ ol {
 
 .list-transform-none {
 	display: block;
-	transform: translateX(-0.5rem);
+	transform: translateX(0.75rem);
 
 	li {
-		padding-left: 0.5rem;
+		padding-left: 0;
+		transform: translateX(-0.75rem);
 	}
 
 
