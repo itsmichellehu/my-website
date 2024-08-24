@@ -4,14 +4,17 @@
 	grid-template-rows: auto auto;
 	gap: 0.5rem;
 	margin-bottom: 1rem;
-	max-width: 95%;
+	width: 95%;
+	max-width: $content-max-width;
 	align-items: stretch;
 	justify-content: stretch;
 	color: $black;
 
-	@include breakpoint(xxl) {
+	@include breakpoint(lg) {
 		grid-template-columns: repeat(5, 1fr);
-		grid-template-rows: auto;
+		grid-template-rows: 1fr;
+		width: fit-content;
+		max-width: 95%;
 	}
 
 	ul {
@@ -22,6 +25,7 @@
 	li {
 		color: $dark-grey;
 		font-size: 1rem;
+		text-wrap: nowrap;
 	}
 
 
@@ -40,13 +44,11 @@
 	@include flex(column, 0.5rem);
 	width: 100%;
 	margin: auto; // Center the container
-	padding: 2rem;
+	padding: 1.5rem;
 	background-color: #f6f6f6;
 	border-radius: 1rem;
 	height: 100%;
 	background-color: white;
-	width: 15rem;
-	height: 17rem;
 }
 
 .sitemap_headline {
