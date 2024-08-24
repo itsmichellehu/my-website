@@ -8,7 +8,8 @@ function NavBar() {
                 <ul class="navbar-menu" id="menu">
                     <li class="nav-item"><a href="/">Work</a></li>
                     <li class="nav-item"><a href="/about">About</a></li>
-                    <li class="nav-item show-med"><a href="#">Resume</a></li>
+                    <li class="nav-item show-med-list-item"><a href="assets/files/MichelleHuResume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+</li>
                     <li class="nav-item"><a href="mailto:mhu.contact@gmail.com">Contact</a></li>
                 </ul>
             </div>
