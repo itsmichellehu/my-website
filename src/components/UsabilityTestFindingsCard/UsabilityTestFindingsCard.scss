@@ -46,6 +46,10 @@
         border-top: 0.5rem solid #dc1d26;
     }
 
+    &.border-top-blue {
+        border-top: 0.5rem solid #1d69dc;
+    }
+
     @include breakpoint(med) {
         padding-left: 2.5rem;
     }
