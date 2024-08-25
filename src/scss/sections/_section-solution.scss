@@ -19,7 +19,7 @@
 	display: grid;
 	grid-template-columns: 1fr;
 	grid-template-rows: auto auto auto;
-	grid-template-areas: 'b' 'a' 'c';
+	// grid-template-areas: 'b' 'a' 'c';
 	margin: 0 auto;
 	gap: 1rem;
 	align-items: center;
@@ -27,7 +27,6 @@
 
 	h2,
 	h3 {
-		grid-area: a;
 		width: 100%;
 		margin-bottom: 0;
 		text-align: center;
@@ -51,14 +50,13 @@
 .the-solution-prototype_video {
 	width: 80%;
 	margin: 0 auto;
-	max-width: 20rem;
-	grid-area: b;
+	max-width: 18rem;
+	grid-area: unset;
 }
 
 .the-solution-prototype_content {
 	display: block;
 	width: 100%;
-	grid-area: c;
 
 	p:last-child {
 		margin-bottom: 0;
@@ -82,17 +80,17 @@
 
 @include breakpoint(med) {
 	.the-solution-prototype_wrapper {
-		max-width: 60rem;
+		max-width: 68rem;
 		padding: 3rem 3rem;
 	}
 
 	.the-solution-prototype_grid-container {
 		align-items: start;
 		grid-template-columns: auto auto;
-		grid-template-areas: "a b" "c b" "c b";
+		grid-template-rows: auto;
 		gap: 0.5rem;
 		margin: auto;
-		justify-content: flex-start;
+		align-items: center;
 		width: fit-content;
 		column-gap: 2.5rem;
 
@@ -100,31 +98,13 @@
 		h3 {
 			margin-top: auto;
 			text-align: left;
-			margin-bottom: 0.5rem;
+			margin-bottom: 1rem !important;
 		}
 	}
 
 
 	.the-solution-prototype_video {
 		width: 100%;
-	}
-
-	.the-solution-prototype_grid-container.the-solution-prototype_grid-container--reverse {
-		display: grid;
-		align-items: start;
-		grid-template-rows: auto auto auto;
-		grid-template-columns: auto auto;
-		grid-template-areas: "b a" "b c" "b c";
-		margin: auto;
-		justify-content: flex-start;
-		width: 100%;
-
-		h2,
-		h3 {
-			margin-top: auto;
-			text-align: left;
-			margin-bottom: 0.5rem;
-		}
 	}
 
 	.the-solution-prototype_subheading {

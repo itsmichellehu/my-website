@@ -82,6 +82,10 @@
 // Background colors
 
 .bg- {
+	&-lightest-green {
+		background-color: $lightest-green !important;
+	}
+
 	&light-blue {
 		background-color: var(--light-blue) !important;
 	}
