@@ -57,6 +57,7 @@
 .the-solution-prototype_content {
 	display: block;
 	width: 100%;
+	grid-area: unset;
 
 	p:last-child {
 		margin-bottom: 0;
@@ -88,11 +89,10 @@
 		align-items: start;
 		grid-template-columns: auto auto;
 		grid-template-rows: auto;
-		gap: 0.5rem;
 		margin: auto;
 		align-items: center;
 		width: fit-content;
-		column-gap: 2.5rem;
+		column-gap: 4rem;
 
 		h2,
 		h3 {
@@ -100,6 +100,11 @@
 			text-align: left;
 			margin-bottom: 1rem !important;
 		}
+	}
+
+	.the-solution-prototype_content {
+
+		max-width: 34rem;
 	}
 
 
