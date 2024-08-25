@@ -96,8 +96,8 @@ module.exports = {
             chunks: ['postup']
         }),
         new HtmlWebpackPlugin({
-            template: './src/tastebuds-full-case-study.html',
-            filename: 'tastebuds-full-case-study.html',
+            template: './src/tastebuds-full-casestudy.html',
+            filename: 'tastebuds-full-casestudy.html',
             chunks: ['tastebuds']
         }),
         new HtmlWebpackPlugin({
