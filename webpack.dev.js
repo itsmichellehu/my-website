@@ -14,7 +14,10 @@ module.exports = {
     output: {
         filename: 'js/[name].js',
         path: path.resolve(__dirname, 'dist'),
+        clean: true,
     },
+    mode: 'development',
+    cache: false,
     module: {
         rules: [
             {
@@ -122,14 +125,14 @@ module.exports = {
         //     filename: 'boardspace.html'
         // }),
         new HtmlWebpackPlugin({
-            template: './src/tastebuds.html',
-            chunks: ['tastebuds'],
-            filename: 'tastebuds.html',
+            template: './src/tastebuds-full-case-study.html',
+            filename: 'tastebuds-full-case-study.html',
+            chunks: ['tastebuds']
         }),
         new HtmlWebpackPlugin({
-            template: './src/tastebuds-quick-overview.html',
-            filename: 'tastebuds-quick-overview.html',
-            chunks: ['tastebuds'],
+            template: './src/tastebuds.html',
+            filename: 'tastebuds.html',
+            chunks: ['tastebuds']
         }),
 
         new HtmlWebpackPlugin({
@@ -154,9 +157,7 @@ module.exports = {
         jquery: 'jQuery', // This tells Webpack to use the global 'jQuery' variable
     },
     devServer: {
-        static: {
-            directory: path.resolve(__dirname, 'dist')
-        },
+        static: path.resolve(__dirname, 'dist'),
         open: true,
         hot: true,
         watchFiles: ['**/*'], // Watch everything in the project

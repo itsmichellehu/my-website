@@ -96,13 +96,13 @@ module.exports = {
             chunks: ['postup']
         }),
         new HtmlWebpackPlugin({
-            template: './src/tastebuds.html',
-            filename: 'tastebuds.html',
+            template: './src/tastebuds-full-case-study.html',
+            filename: 'tastebuds-full-case-study.html',
             chunks: ['tastebuds']
         }),
         new HtmlWebpackPlugin({
-            template: './src/tastebuds-quick-overview.html',
-            filename: 'tastebuds-quick-overview.html',
+            template: './src/tastebuds.html',
+            filename: 'tastebuds.html',
             chunks: ['tastebuds']
         }),
         new CopyWebpackPlugin({
