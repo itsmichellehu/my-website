@@ -173,3 +173,27 @@
 .img-wireframe-border {
 	border: 1px solid $off-black;
 }
+
+.high-fidelity-tabs-container {
+	video {
+		margin-bottom: 1rem !important;
+	}
+
+	.flex-row {
+		margin: auto;
+		justify-content: center;
+	}
+
+	.subheading {
+		font-size: 1.125rem;
+		color: $medium-grey;
+		text-align: center;
+		font-weight: 400;
+	}
+
+	.content {
+		width: 15rem;
+		align-self: center;
+		text-align: center;
+	}
+}

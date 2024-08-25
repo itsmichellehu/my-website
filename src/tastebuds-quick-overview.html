@@ -143,7 +143,7 @@
             <h3>AI generated personalized recommendations <span class="dark-grey">exclusively</span>
               based on friends and
               personal preferences</h3>
-            <video autoplay loop muted class="the-solution-prototype_video">
+            <video autoplay controls loop muted class="the-solution-prototype_video">
               <source src="assets/videos/tastebuds/tastebuds-final-prototype-home.mp4"
                 type="video/mp4">
             </video>
@@ -1794,7 +1794,7 @@
           <span>design</span>
           <h3>High-fidelity prototype</h3>
         </header>
-        <div class="content-grid mt-24 mb-0">
+        <div class="content-grid mt-24 mb-40">
           <div>
             <p>With my new style guide, I designed high-fidelity wireframes and prototyped them for
               my
@@ -1803,8 +1803,7 @@
                 href="https://developer.apple.com/design/human-interface-guidelines/accessibility">
                 Apple's Human Interface Guidelines for
                 Accessibility</a> and <a class="link-blue" href="https://www.w3.org/TR/WCAG22/">
-                Web Content Accessibility Guidelines (WCAG)</a>.</p>
-            <p class="span-fw-medium">My learnings guided me to <span>
+                Web Content Accessibility Guidelines (WCAG)</a>. My learnings guided me to <span>
                 significantly
                 increase spacing and physical interactions
                 when possible</span>, supporting both users with limited mobility and power users.
@@ -1815,193 +1814,87 @@
             </p>
           </aside>
         </div>
-        <div class="container-full-width pv-32 bg-light-medium-grey">
-          <div class="margin-auto content-max-width">
-            <h3 class="section-subheading">Route 1: Sign up + onboarding</h3>
-            <p class="mb-32">
-              I realized food preferences are crucial to curate accurate recommendations, so I
-              wanted
-              to make onboarding more engaging to encourage users to input preferences now than
-              later.
-              Therefore,
-              I implemented more conversational UI and visual aids and
-              further
-              streamlined the user flow.
-            </p>
-            <div class="design-walkthrough-grid_wrapper border-0 mb-0">
-              <div class="flex-row gap-24 pb-0">
-                <div class="design-walkthrough_grid-1-col">
-                  <video autoplay loop muted>
-                    <source
-                      src="assets/videos/tastebuds/prototype-high-fidelity-v1-route-1-intro.mp4"
-                      type="video/mp4">
-                  </video>
-                  <div>
-                    <p class="subheading">Introduction screens</p>
-                    <p>
-                      I added intro screens to educate users about the app and the importance of
-                      inputing
-                      their food preferences now.
-                    </p>
-                  </div>
-                </div>
-                <div class="design-walkthrough_grid-1-col">
-                  <video autoplay loop muted>
-                    <source
-                      src="assets/videos/tastebuds/prototype-high-fidelity-v1-route-1-preferences.mp4"
-                      type="video/mp4">
-                  </video>
-                  <div>
-                    <p class="subheading">Food preferences</p>
-                    <p>
-                      I added the option to suggest missing items, implemented conversational UI,
-                      help
-                      icons, and more visual aids.
-                    </p>
-                  </div>
-                </div>
+        <div class="tabs-container high-fidelity-tabs-container mw-1024" data-current="Tab 1"
+          data-duration-in="300" data-duration-out="100" data-easing="ease">
+          <div class="tabs-menu three-menu-items">
+            <button class="tab-button active" data-tab="tab1">
+              <p>Onboarding</p>
+            </button>
+            <button class="tab-button" data-tab="tab2">
+              <p>Search</p>
+            </button>
+            <button class="tab-button" data-tab="tab3">
+              <p>Review</p>
+            </button>
+          </div>
+          <div class="tab-content pb-0 active" id="tab1">
+            <div class="flex-row gap-40">
+              <div class="featured-media">
+                <video class="width-100 featured-media-border-radius" autoplay controls loop muted>
+                  <source src="assets/videos/tastebuds/prototype-high-fidelity-v1-route-1-intro.mp4"
+                    type="video/mp4">
+                </video>
+                <p class="subheading">Introduction screens</p>
+              </div>
+              <p class="content">I implemented more conversational UI and visual aids and further
+                streamlined the
+                user flow.</p>
+              <div class="featured-media">
+                <video class='width-100 featured-media-border-radius' autoplay controls loop muted>
+                  <source
+                    src="assets/videos/tastebuds/prototype-high-fidelity-v1-route-1-preferences.mp4"
+                    type="video/mp4">
+                </video>
+                <p class="subheading">Food preferences</p>
               </div>
             </div>
           </div>
-        </div>
-        <div class="content-wrapper mb-16">
-          <div class="mb-32">
-            <h3 class="section-subheading content mb-16">Route 2: Diner searches for a restaurant
-            </h3>
-            <div class="content-grid mb-0">
-              <div>
-                <p>To improve accessibility, I enlarged and simplified my designs and omitted
-                  unnecessary info. I also continued developing my business goals by conceptualizing
-                  restaurant partnerships and their role in the diner journey! This revamp
-                  took some time since I struggled to balance accommodating mental models and
-                  innovative
-                  features, so I planned on refining this balance after testing.</p>
-              </div>
-              <aside>
-                <p>My diner personas helped me streamline my information architecture!
-                </p>
-              </aside>
-            </div>
-          </div>
-          <div class="tabs-container content mt-0" data-current="Tab 1" data-duration-in="300"
-            data-duration-out="100" data-easing="ease">
-            <div class="tabs-menu three-menu-items">
-              <button class="tab-button active" data-tab="tab1">
-                <p>Home page</p>
-              </button>
-              <button class="tab-button" data-tab="tab2">
-                <p>Search</p>
-              </button>
-              <button class="tab-button" data-tab="tab3">
-                <p>Results</p>
-              </button>
-            </div>
-            <div class="tab-content ph-0 pb-0 active" id="tab1">
-              <div class="design-walkthrough-grid_container">
-                <video class="featured-media" loop muted>
+          <div class="tab-content pb-0" id="tab2">
+            <p>I enhanced my business goals by conceptualizing
+              restaurant partnerships and their role in the diner journey! I enhanced social proof
+              elements, added more engagement
+              features,
+              and
+              developed the 'Redeem offer' screen.</p>
+            <div class="flex-row gap-40">
+              <div class="featured-media">
+                <video class="width-100" autoplay controls loop muted>
                   <source src="assets/videos/tastebuds/prototype-route-2-high-fidelity-v1-home.mp4"
                     type="video/mp4">
                 </video>
-                <div class="design-walkthrough-grid_content">
-                  <header class="design-walkthrough_header">
-                    <p class="subheading">Home page</p>
-                  </header>
-                  <div>
-                    <p>To enhance engagement and personalization on the For You page, I improved the
-                      content
-                      hierarchy, made navigation tabs more distinct, and revised label copy with
-                      conversational UI.
-                    </p>
-                  </div>
-                  <div>
-                    <p class="mb-0">I added a "Following" page to streamline diner engagement with
-                      reviews, adding standard social features and easy navigation to restaurants
-                      and
-                      menu
-                      items.</p>
-                  </div>
-                </div>
+                <p class="subheading">Home page</p>
               </div>
-            </div>
-            <div class="tab-content ph-0 pb-0" id="tab2">
-              <div class="flex-row gap-24 pb-0">
-                <div class="design-walkthrough_grid-1-col">
-                  <video autoplay loop muted>
-                    <source
-                      src="assets/videos/tastebuds/prototype-route-2-high-fidelity-v1-search.mp4"
-                      type="video/mp4">
+              <div class="featured-media">
+                <video class="width-100" autoplay loop controls muted>
+                  <source
+                    src="assets/videos/tastebuds/prototype-route-2-high-fidelity-v1-search.mp4"
                     type="video/mp4">
-                  </video>
-                  <div>
-                    <p class="subheading">Search process</p>
-                    <p>I added the option to select up to 3 key qualities in the filters. I realized
-                      that the 2-column layout was too crowded in other categories, so I
-                      consolidated
-                      them and increased spacing.
-                    </p>
-                  </div>
-                </div>
-                <div class="design-walkthrough_grid-1-col">
-                  <video autoplay loop muted>
-                    <source
-                      src="assets/videos/tastebuds/prototype-route-2-high-fidelity-v1-search-results.mp4"
-                      type="video/mp4">
-                  </video>
-                  <div>
-                    <p class="subheading">Search results</p>
-                    <p>I forfeited "Listing previews" since my test participants did not engaged
-                      with
-                      it. I also redesigned the bottom sheet to be more consistent with the list
-                      view.
-                    </p>
-                  </div>
-                </div>
+                  type="video/mp4">
+                </video>
+                <p class="subheading">Search process</p>
               </div>
-            </div>
-            <div class="tab-content ph-0 pb-0" id="tab3">
-              <div class="design-walkthrough-grid_container pb-0 mb-0">
-                <video class="featured-media" loop muted>
+              <div class="featured-media">
+                <video class="width-100" autoplay loop controls muted>
+                  <source
+                    src="assets/videos/tastebuds/prototype-route-2-high-fidelity-v1-search-results.mp4"
+                    type="video/mp4">
+                </video>
+                <p class="subheading">Search results</p>
+              </div>
+              <div class="featured-media">
+                <video class="width-100" autoplay loop controls muted>
                   <source
                     src="assets/videos/tastebuds/prototype-route-2-high-fidelity-v1-listing.mp4"
                     type="video/mp4">
                 </video>
-                <div class="design-walkthrough-grid_content">
-                  <header class="design-walkthrough_header">
-                    <p class="subheading">Restaurant listing</p>
-                  </header>
-                  <p>
-                    I wanted to further amplify social engagement and conceptualize restaurant
-                    partnerships, so I enhanced social proof elements, added more engagement
-                    features,
-                    and
-                    developed the 'Redeem offer' screen.
-                  </p>
-                  <div class="design-walkthrough-grid_card">
-                    <p class="card_headline">New features</p>
-                    <ul class="card_list mt-0">
-                      <li>Share restaurant (button)</li>
-                      <li>Save restaurant (button)</li>
-                      <li>Message restaurant (button)</li>
-                      <li>Write review (button)</li>
-                      <li>Offer redemption page</li>
-                    </ul>
-                  </div>
-                </div>
+                <p class="subheading">Restaurant listing</p>
               </div>
             </div>
           </div>
-        </div>
-        <div class="content-wrapper">
-          <div class="mb-40">
-            <h3 class="section-subheading mb-16">Route 3: Diner reviews a restaurant</h3>
-            <p>I adapted this route to the changes I made in routes 1 and 2, streamlined the
-              process,
-              and enhanced its usability.</p>
-          </div>
-          <div class="design-walkthrough-grid_wrapper border-0 mb-0">
-            <div class="flex-row gap-24 pb-0">
-              <div class="design-walkthrough_grid-1-col">
-                <video autoplay loop muted>
+          <div class="tab-content pb-0" id="tab3">
+            <div class="flex-row gap-40">
+              <div class="featured-media">
+                <video class="img-100" autoplay controls loop muted>
                   <source
                     src="assets/videos/tastebuds/prototype-high-fidelity-v1-route-3-menu-item.mp4"
                     type="video/mp4">
@@ -2009,23 +1902,19 @@
                 </video>
                 <div>
                   <p class="subheading">Reviewing menu items</p>
-                  <p>
-                    I streamlined the flow, added a menu item search bar with
-                    filters, simplified the list layout, and included a badge showing the number of
-                    reviewed items.</p>
                 </div>
               </div>
-              <div class="design-walkthrough_grid-1-col">
-                <video autoplay loop muted>
+              <p class="content">Diners can add media and tag them
+                with
+                menu items and/or friends so users can quickly look up dishes.</p>
+              <div class="featured-media">
+                <video class="img-100 " autoplay controls loop muted>
                   <source
                     src="assets/videos/tastebuds/prototype-high-fidelity-v1-route-3-tag-photo.mp4"
                     type="video/mp4">
                 </video>
                 <div>
-                  <p class="subheading">Media and tagging menu items</p>
-                  <p>This allows diners to add photos and videos to their reviews, and tag them with
-                    specific menu items and/or friends,
-                    allowing others to quickly look up dishes.</p>
+                  <p class="subheading">Tag media with dishes and people</p>
                 </div>
               </div>
             </div>
