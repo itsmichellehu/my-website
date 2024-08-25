@@ -10,6 +10,15 @@
     }
 }
 
+.test-findings_grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    max-width: 80rem;
+    margin: auto;
+    margin-bottom: 3rem;
+}
+
 .test-findings_card {
     display: flex;
     flex-direction: column;
