@@ -20,6 +20,7 @@
 @import "UsabilityTest03";
 
 .user-flow-tabs-container {
-    max-width: $content-max-width;
-    margin-top: 2rem !important;
+    width: 95vw;
+    max-width: 1024px;
+    margin-top: 3rem !important;
 }
