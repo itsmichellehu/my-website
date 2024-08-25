@@ -7,7 +7,7 @@ module.exports = {
     entry: {
         index: './src/js/index.js',
         about: './src/js/about.js',
-        // boardspace: './src/js/boardspace.js',
+        boardspace: './src/js/boardspace.js',
         postup: './src/js/postup.js',
         tastebuds: './src/js/tastebuds.js',
     },
@@ -119,11 +119,11 @@ module.exports = {
             chunks: ['about'],
             filename: 'about.html'
         }),
-        // new HtmlWebpackPlugin({
-        //     template: './src/boardspace.html',
-        //     chunks: ['boardspace'],
-        //     filename: 'boardspace.html'
-        // }),
+        new HtmlWebpackPlugin({
+            template: './src/boardspace.html',
+            chunks: ['boardspace'],
+            filename: 'boardspace.html'
+        }),
         new HtmlWebpackPlugin({
             template: './src/tastebuds-full-casestudy.html',
             filename: 'tastebuds-full-casestudy.html',

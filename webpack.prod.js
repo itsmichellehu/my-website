@@ -8,7 +8,7 @@ module.exports = {
     entry: {
         index: './src/js/index.js',
         about: './src/js/about.js',
-        // boardspace: './src/js/boardspace.js',
+        boardspace: './src/js/boardspace.js',
         postup: './src/js/postup.js',
         tastebuds: './src/js/tastebuds.js',
     },
@@ -16,6 +16,9 @@ module.exports = {
         filename: 'js/[name].js',
         path: path.resolve(__dirname, 'dist'),
         // publicPath: '/your-repo-name/' // Set this to your actual repo name
+    },
+    stats: {
+        errorDetails: true
     },
     module: {
         rules: [
@@ -89,6 +92,11 @@ module.exports = {
             template: './src/about.html',
             filename: 'about.html',
             chunks: ['about']
+        }),
+        new HtmlWebpackPlugin({
+            template: './src/boardspace.html',
+            chunks: ['boardspace'],
+            filename: 'boardspace.html'
         }),
         new HtmlWebpackPlugin({
             template: './src/postup.html',
