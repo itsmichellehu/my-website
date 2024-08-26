@@ -1,22 +1,38 @@
 import '../scss/boardspace.scss';
 
-import BackToTopButton from '../components/BackToTopButton/BackToTopButton';
-import Footer from '../components/Footer/Footer';
-import ProgressBar from '../components/ProjectProgressBar/ProjectProgressBar';
+// import '../components/list';
+// import '../components/wrappedList';
+// import '../components/showFullImage';
+// import '../components/table';
+import '../components/accordion';
+
 import NavBar from '../components/NavBar/NavBar';
 import NavBarBackground from '../components/NavBarBackground/NavBarBackground';
+import ProgressBar from '../components/ProjectProgressBar/ProjectProgressBar';
+import BackToTopButton from '../components/BackToTopButton/BackToTopButton';
+import Footer from '../components/Footer/Footer';
 
 import { initializeAccordion } from '../components/ProjectAccordion/ProjectAccordion';
+import scrollToChallenge from "../components/ScrollToChallenge/ScrollToChallenge";
 import { initializeHideVideoControls } from '../components/HideVideoControls/HideVideoControls';
 
 document.addEventListener('DOMContentLoaded', () => {
-    BackToTopButton();
-    Footer();
-    ProgressBar();
     NavBar();
     NavBarBackground();
+    ProgressBar();
+    BackToTopButton();
+    Footer();
 
     initializeAccordion();
+    scrollToChallenge();
     initializeHideVideoControls();
 
 });
+
+
+function initializeBoardspacePage() {
+    // Your code to initialize the post up page goes here
+    console.log("Boardspace Page Initialized!");
+}
+
+initializeBoardspacePage();

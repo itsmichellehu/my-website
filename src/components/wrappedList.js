@@ -6,6 +6,7 @@ function createTwoColumnList(items, containerId) {
   }
 
   const ul = document.createElement("ul");
+  ul.className = 'two-column-list'; // Add class for styling
 
   items.forEach(item => {
     const li = document.createElement("li");
@@ -18,14 +19,13 @@ function createTwoColumnList(items, containerId) {
 
 // Example usage
 const items = [
-"Indistinct navigation elements",
-"Unclear form validation requirements",
-"Limited customization",
-"Dated design to support power users",
-"Lack of warning/confirmation messages",
-"Lack of redo/undo options",
-"Logic error: closing date with no closing time (users know which day the poll closes but not when)"
+  "Indistinct navigation elements",
+  "Unclear form validation requirements",
+  "Limited customization",
+  "Dated design to support power users",
+  "Lack of warning/confirmation messages",
+  "Lack of redo/undo options",
+  "Logic error: closing date with no closing time (users know which day the poll closes but not when)"
 ];
 
 createTwoColumnList(items, "wrappedList");
-
