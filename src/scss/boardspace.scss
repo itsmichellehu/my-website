@@ -14,6 +14,11 @@ $sub-grey: #cfcfcf;
 $emphasis: #e2583e;
 $wireframe-max-height: 40rem;
 
+#hero,
+#overview {
+	display: none;
+}
+
 @import "abstracts/all-abstracts";
 
 @import "base/all-base";
@@ -26,223 +31,15 @@ $wireframe-max-height: 40rem;
 
 @import "boardspace/all-boardspace";
 
+@import "sections/all-sections";
+
 @import "utilities/all-utilities";
 
 // Components
 @import "../components/NavBar/NavBar";
 
-//Media breakpoints
-
-@mixin iconSize($size) {
-	@if $size =="xs" {
-		width: 24px;
-		height: 24px;
-	}
-
-	@else if $size =="sm" {
-		width: 32px;
-		height: 32px;
-	}
-
-	@else if $size =="med" {
-		width: 40px;
-		height: 40px;
-	}
-
-	@else if $size =="lg" {
-		width: 56px;
-		height: 56px;
-	}
-
-	@else if $size =="xl" {
-		width: 64px;
-		height: 64px;
-	}
-}
-
-.iconSize {
-	&-xs {
-		width: 24px;
-		height: 24px;
-	}
-
-	&-sm {
-		width: 32px;
-		height: 32px;
-	}
-
-	&-med {
-		width: 40px;
-		height: 40px;
-	}
-
-	&-lg {
-		width: 64px;
-		height: 64px;
-	}
-
-	&-xl {
-		width: 80px;
-		height: 80px;
-	}
-}
-
-html {
-	text-size-adjust: none;
-	padding: 0;
-	margin: 0;
-	width: 100vw;
-	overflow-x: hidden;
-}
-
-* {
-	box-sizing: border-box;
-}
-
-body {
-	height: 100%;
-	font-family: "Inter", sans-serif;
-	text-align: left;
-	padding: 0;
-	margin: 0;
-	width: 100vw;
-	overflow-x: hidden;
-}
-
-.noto-serif {
-	color: $black;
-	font-family: "Noto Serif", serif;
-	font-size: 1.125rem;
-	font-weight: 350;
-	line-height: 160%; // 28.8px
-}
-
-// Typography
-p {
-	color: $black;
-	font-family: "Inter", sans-serif;
-	font-size: 1rem;
-	font-style: normal;
-	font-weight: 400;
-	line-height: 150%;
-	/* 1.6875rem */
-	text-align: left;
-	margin-top: 0;
-	margin-bottom: 1.125rem;
-	color: $off-black;
-	align-self: stretch;
-	text-align: left;
-
-	@include breakpoint("mobile-lg") {
-		font-size: 1.125rem;
-		margin-bottom: 1.125rem;
-	}
-}
-
-h1,
-h2,
-h3,
-h4,
-h5 {
-	line-height: 125%;
-	letter-spacing: -0.5px;
-	margin-bottom: 0.5rem;
-	align-self: stretch;
-	text-align: left;
-	margin-top: 0;
-	font-family: "Inter", sans-serif;
-
-	@include breakpoint("med") {
-		line-height: 125%;
-		letter-spacing: -1px;
-		font-weight: 500;
-		margin-bottom: 1.5rem;
-	}
-
-	@include breakpoint("lg") {
-		font-weight: 600;
-		line-height: 135%;
-		/* 4.53519rem */
-	}
-}
-
-h1 {
-	font-size: 1.938rem;
-	font-weight: 500;
-	margin-bottom: 1rem;
-
-	@include breakpoint("med") {
-		font-size: 2.438rem;
-	}
-
-	@include breakpoint("lg") {
-		font-size: 3.063rem;
-	}
-}
-
-h2 {
-	font-size: 1.35rem;
-	font-weight: 500;
-
-	@include breakpoint("med") {
-		font-size: 1.938rem;
-	}
-
-	@include breakpoint("lg") {
-		font-size: 2.438rem;
-	}
-}
-
-h3 {
-	font-size: 1.25rem;
-	font-weight: 500;
-
-	@include breakpoint("med") {
-		font-size: 1.563rem;
-	}
-
-	@include breakpoint("lg") {
-		font-size: 1.938rem;
-	}
-}
-
-h4 {
-	font-size: 1.125rem;
-	font-weight: 500;
-
-	@include breakpoint("med") {
-		font-size: 1.25rem;
-	}
-
-	@include breakpoint("lg") {
-		font-size: 1.563rem;
-	}
-}
-
-h5 {
-	font-size: 1rem;
-	font-weight: 500;
-
-	@include breakpoint("med") {
-		font-size: 1.25rem;
-	}
-}
-
 .emphasizedText p {
 	font-size: 1.44rem;
-}
-
-// Font weight
-.fw-normal {
-	font-weight: 400;
-}
-
-.fw-medium {
-	font-weight: 500;
-}
-
-.fw-bold {
-	font-weight: 600;
 }
 
 .text-emphasized p {
@@ -295,47 +92,6 @@ h5 {
 	color: $invalid-red;
 }
 
-.lightest-grey {
-	background-color: #f9f9f9;
-}
-
-.off-black {
-	color: $off-black;
-}
-
-.black {
-	color: $black;
-}
-
-.hide {
-	display: none;
-}
-
-// Padding and margins
-.margin-0 {
-	margin: 0;
-}
-
-.mb-0 {
-	margin-bottom: 0;
-}
-
-.mb-8px {
-	margin-bottom: 1rem;
-}
-
-.mt-0 {
-	margin-top: 0;
-}
-
-.mt-0 {
-	margin-top: 0;
-}
-
-.padding-0 {
-	padding: 0;
-}
-
 .padding-1rem {
 	padding: 1rem;
 }
@@ -349,63 +105,13 @@ h5 {
 }
 
 //--vertical padding
-.pd-v {
-	&-xs {
-		padding: 0.5rem 0;
-	}
-
-	&-sm {
-		padding: 1rem 0;
-	}
-
-	&-med {
-		padding: 1.5rem 0;
-	}
-
-	&-lg {
-		padding: 2rem 0;
-	}
-
-	&-xl {
-		padding: 2.5;
-	}
-}
-
-.pd-v- {
-	padding: 1.5rem 0;
-}
-
-.border-0 {
-	border-bottom-width: 0;
-}
-
-ul,
-ol {
-	list-style-type: disc;
-	/* Set the type of bullet point */
-	padding-left: 0.5rem;
-	margin: 1rem 0;
-}
-
-ul li,
-ol li {
-	line-height: 150%;
-	font-size: 1rem;
-	margin-bottom: 0.5rem;
-	color: $off-black;
-
-	@include breakpoint(mobile-lg) {
-		line-height: 180%;
-		font-size: 1.125rem;
-	}
-}
 
 .li-emphasized {
 	color: $off-black;
 	font-weight: 500;
 }
 
-// Tablev
+// Table
 #userflowsTable {
 	width: 100%;
 
@@ -461,94 +167,93 @@ ol li {
 	}
 }
 
-.grid-cards {
+.two-cards_grid-container {
 	display: grid;
 	grid-template-columns: repeat(1, 1fr);
 	grid-gap: 1rem;
-	width: 100%;
+	width: fit-content;
 
 	@include breakpoint(mobile-lg) {
 		grid-template-columns: repeat(2, 1fr);
 	}
+}
 
-	.grid-item {
-		display: grid;
-		grid-template-columns: 1fr 3fr;
-		align-items: stretch;
-		align-self: start;
-		background-color: white;
-		border-radius: 10px;
-		overflow: hidden;
-		min-width: 0;
-		border: 0.5px solid $light-grey;
-		box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.15);
+.card_grid-item {
+	display: grid;
+	grid-template-columns: 1fr 3fr;
+	align-items: stretch;
+	align-self: start;
+	background-color: white;
+	border-radius: 10px;
+	overflow: hidden;
+	width: fit-content;
+	border: 0.5px solid $light-grey;
+	box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.15);
 
-		.card-icon {
-			display: flex;
-			padding: 1rem;
-			background-color: $lightest-grey;
+	.card-icon {
+		display: flex;
+		padding: 1rem;
+		background-color: $lightest-grey;
 
-			@include breakpoint(lg) {
-				padding: 2rem 1rem;
-			}
+		@include breakpoint(lg) {
+			padding: 2rem 1rem;
+		}
+	}
+
+	img {
+		margin: auto;
+		@include iconSize(med);
+
+		@include breakpoint(lg) {
+			@include iconSize(lg);
+		}
+	}
+
+	@include breakpoint(mobile-lg) {
+		grid-template-columns: 1fr;
+		grid-template-rows: auto auto;
+		justify-content: left;
+		/* Center content horizontally */
+		align-items: left;
+
+		/* Center content vertically */
+		img {
+			margin: 0;
+		}
+	}
+
+	.card_content {
+		padding: 1rem;
+
+		p {
+			font-size: 1rem;
+			margin-bottom: 0.5rem;
 		}
 
-		img {
-			margin: auto;
-			@include iconSize(med);
+		p:last-child {
+			margin-bottom: 0;
+		}
 
-			@include breakpoint(lg) {
-				@include iconSize(lg);
-			}
+		.card_headline {
+			color: $black;
+			font-weight: 500;
+			margin-bottom: 1rem;
 		}
 
 		@include breakpoint(mobile-lg) {
-			grid-template-columns: 1fr;
-			grid-template-rows: auto auto;
-			justify-content: left;
-			/* Center content horizontally */
-			align-items: left;
-
-			/* Center content vertically */
-			img {
-				margin: 0;
-			}
-		}
-
-		.contentt {
-			padding: 1rem;
-
-			p.headline {
-				color: $black;
-				font-weight: 500;
-				margin-bottom: 4px;
+			.card_headline {
+				font-size: 1.125rem;
 			}
 
 			p {
-				padding-bottom: 0.5rem;
 				font-size: 1rem;
 			}
+		}
 
-			@include breakpoint(mobile-lg) {
-				p.headline {
-					font-size: 1.125rem;
-					margin-bottom: 4px;
-				}
+		@include breakpoint(lg) {
 
-				p {
-					font-size: 1rem;
-				}
-			}
-
-			@include breakpoint(lg) {
-				p.headline {
-					font-size: 18px;
-					margin-bottom: 4px;
-				}
-
-				p {
-					font-size: 18px;
-				}
+			p {
+				font-size: 1.125rem;
 			}
 		}
 	}
@@ -910,7 +615,7 @@ hr {
 			}
 		}
 
-		.contentt {
+		.content {
 			padding: 1rem;
 
 			p.headline {
@@ -955,7 +660,7 @@ hr {
 		grid-template-columns: 1fr 2.5fr;
 		gap: 1.5rem;
 
-		.grid-item {
+		>.grid-item {
 			display: flex;
 			min-width: 0;
 
@@ -971,7 +676,7 @@ hr {
 		gap: 1.5rem;
 	}
 
-	.grid-02 {
+	>.grid-02 {
 		display: grid;
 		grid-template-columns: repeat(1, 1fr);
 		grid-gap: 1rem;
@@ -981,7 +686,7 @@ hr {
 			grid-template-columns: repeat(2, 1fr);
 		}
 
-		.grid-item {
+		>.grid-item {
 			display: grid;
 			grid-template-columns: 1fr 3fr;
 			align-items: stretch;
@@ -1025,7 +730,7 @@ hr {
 				}
 			}
 
-			.contentt {
+			.content {
 				padding: 1rem;
 
 				p.headline {
