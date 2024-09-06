@@ -1,4 +1,4 @@
-$button-active-color: #326e6e;
+$button-active-color: $primary-green;
 
 .btn-primary,
 .btn-secondary {
@@ -27,22 +27,23 @@ $button-active-color: #326e6e;
 
 	&-primary {
 		box-sizing: border-box;
-		background-color: $black; // Assuming $black is defined elsewhere in your styles
+		background-color: $secondary-green; // Assuming $black is defined elsewhere in your styles
 		color: $white;
-		transition: background-color 0.3s, color 0.3s;
+		transition: background-color 0.3s, color 0.3s, opacity 0.3s;
 
 		&:hover {
 			box-sizing: border-box;
 			background-color: $primary-color;
+			opacity: 0.85;
 		}
 
 		&:hover:active {
-			transition: background-color 0.3s, color 0.3s;
+			transition: background-color 0.3s, color 0.3s, opacity 0.3s;
 		}
 
 		&:active {
 			background-color: $button-active-color;
-			transition: background-color 0.3s, color 0.3s;
+			transition: background-color 0.3s, color 0.3s, opacity 0.3s;
 		}
 	}
 

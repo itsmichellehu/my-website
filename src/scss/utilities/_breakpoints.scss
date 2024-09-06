@@ -36,6 +36,14 @@
 	display: none !important;
 }
 
+.show-sm-block {
+	display: none !important;
+}
+
+.show-sm-flex {
+	display: none !important;
+}
+
 .show-med {
 	display: none !important;
 }
@@ -89,6 +97,14 @@
 @include breakpoint(sm) {
 	.show-sm {
 		display: inherit;
+	}
+
+	.show-sm-block {
+		display: block !important;
+	}
+
+	.show-sm-flex {
+		display: flex !important;
 	}
 }
 
