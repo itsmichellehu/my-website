@@ -1,5 +1,5 @@
 // About me
-$section-padding-mobile: 2.5rem;
+$section-padding-mobile: 3rem;
 
 .scroll-button {
 	cursor: pointer;
@@ -98,7 +98,7 @@ $section-padding-mobile: 2.5rem;
 	width: 90vw;
 	max-width: 68rem;
 	margin: auto;
-	margin-top: 1rem;
+	margin-top: 2rem;
 	grid-area: c;
 	// padding: 1.75rem 0;
 	// border: 1px solid #f0f0f0;
@@ -127,9 +127,9 @@ $section-padding-mobile: 2.5rem;
 		grid-area: a;
 
 		svg {
-			width: 1.5rem;
-			height: 1.5rem;
-			fill: $primary-color;
+			width: 2rem;
+			height: 2rem;
+			fill: $secondary-green;
 			opacity: 0.75;
 		}
 	}
@@ -157,7 +157,7 @@ $section-padding-mobile: 2.5rem;
 		p {
 			color: $off-black;
 			font-family: Inter;
-			font-size: 1rem;
+			font-size: 1.125rem;
 			font-style: normal;
 			font-weight: 500;
 			line-height: 125%;
