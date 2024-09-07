@@ -25,7 +25,7 @@
 	.tools-dev,
 	.swiper-slide {
 		.tools-grid-item {
-			> div:first-child {
+			>div:first-child {
 				background-color: white;
 				box-shadow: -1px -1px 3px 0px rgba(0, 0, 0, 0.25) inset, 1px 1px 2px 0px rgba(255, 255, 255, 0.05) inset,
 					-1px -1px 6px 0px rgba(49, 49, 49, 0.25), 1px 1px 6px 0px rgba(0, 0, 0, 0.25);
@@ -59,6 +59,7 @@
 		text-wrap: nowrap;
 	}
 }
+
 //
 // .design-tools {
 // 	margin-bottom: 1.5rem;
@@ -100,7 +101,8 @@
 	font-family: "Inter" sans-serif;
 	font-style: normal;
 	font-weight: 500;
-	line-height: 135%; /* 1.0125rem */
+	line-height: 135%;
+	/* 1.0125rem */
 	width: 3.75rem;
 
 	p {
@@ -112,7 +114,7 @@
 		width: 100%;
 	}
 
-	> div:first-child {
+	>div:first-child {
 		display: flex;
 		margin-bottom: 0.75rem;
 		padding: 0.5rem;
@@ -140,7 +142,7 @@
 	}
 }
 
-.tools-pm > .tools-grid-container {
+.tools-pm>.tools-grid-container {
 	grid-template-columns: 1fr 1fr;
 	grid-template-rows: auto;
 	width: fit-content;
@@ -203,6 +205,10 @@ $logo-img-width-mobile: 2.5rem;
 		box-shadow: -1px -1px 3px 0px rgba(0, 0, 0, 0.25) inset, 1px 1px 2px 0px rgba(255, 255, 255, 0.05) inset, -1px -1px 6px 0px rgba(49, 49, 49, 0.25),
 			1px 1px 6px 0px rgba(0, 0, 0, 0.25);
 	}
+}
+
+.img-tool-logo {
+	width: 100%;
 }
 
 @include breakpoint(med) {
@@ -312,6 +318,7 @@ $tool-grid-item-size: 4.5rem;
 
 // Mobile-view
 .tools-swipe {
+
 	.swiper,
 	.my {
 		margin-bottom: 1rem;
@@ -358,12 +365,13 @@ $tool-grid-item-size: 4.5rem;
 						font-size: 0.75rem;
 						font-style: normal;
 						font-weight: 500;
-						line-height: 135%; /* 1.0125rem */
+						line-height: 135%;
+						/* 1.0125rem */
 						margin: auto;
 						text-wrap: nowrap;
 					}
 
-					> div:first-child {
+					>div:first-child {
 						display: flex;
 						margin-bottom: 0.75rem;
 						padding: 0.5rem;
