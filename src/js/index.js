@@ -9,7 +9,7 @@ import NavBar from '../components/NavBar/NavBar';
 import BackToTopButton from '../components/BackToTopButton/BackToTopButton';
 import Footer from '../components/Footer/Footer';
 
-import { initializeHideVideoControls } from '../components/HideVideoControls/HideVideoControls';
+// import { initializeHideVideoControls } from '../components/HideVideoControls/HideVideoControls';
 
 document.addEventListener('DOMContentLoaded', () => {
     NavBar();

@@ -29,18 +29,22 @@
                 const projectMedia = container.querySelector('.project-thumb-desktop');
 
                 container.addEventListener('mouseenter', () => {
-                    projectMedia.currentTime = 0; // Reset the video to the beginning
-                    projectMedia.play(); // Play the video
+                    if (window.innerWidth >= 576) {
+                        projectMedia.currentTime = 0; // Reset the video to the beginning
+                        projectMedia.play(); // Play the video
+                    }
                 });
 
                 container.addEventListener('mouseleave', () => {
-                    projectMedia.pause(); // Pause the video
-                    projectMedia.currentTime = 0; // Reset the video to the beginning
+                    if (window.innerWidth >= 576) {
+                        projectMedia.pause(); // Pause the video
+                        projectMedia.currentTime = 0; // Reset the video to the beginning
+                    }
                 });
             });
         });
     </script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
 </head>
 
 <body>
@@ -53,6 +57,16 @@
         <div id="main-wrapper">
             <div id="hero" class="hero">
                 <div class="hero-wrapper">
+                    <div class="hero-headline-mobile-wrapper-top">
+                        <h1 class="hero-headline-mobile-huge-black width-100 hide-sm">
+                            Michelle Hu
+                        </h1>
+                        <h1 class="hero-headline-mobile hide black mb-8">
+                            <!-- Michelle Hu. <br> -->
+                            Product
+                            designer. <br>Frontend developer. <br>Rule-bender.
+                        </h1>
+                    </div>
                     <div class="hero-image-wrapper">
                         <!-- <h1 class="hero-headline hide-med">I’m Michelle Hu, a<br> Product Designer
                             &
@@ -61,17 +75,22 @@
                         </h1> -->
                         <img class="img-hero" src="assets/images/michelle-portrait-bw.png">
                     </div>
-                    <div class="hero-headline-mobile-wrapper">
+                    <div class="hero-headline-mobile-wrapper hide-med">
                         <!-- <h1 class="hero-headline hide-med">I’m Michelle Hu, a<br> Product Designer
                             &
                             <br>
                             UX Engineer.
                         </h1> -->
-                        <h1 class="hero-headline hide-med">I'm Michelle Hu.
-                            <br>
+                        <h1 class="hero-headline-mobile hide">
+                            <!-- Michelle Hu. <br> -->
                             Product
-                            designer, <br>UX engineer, <br>& Rule-Bender.
+                            designer. <br>Frontend developer. <br>Rule-bender.
                         </h1>
+                        <h1 class="hero-headline-mobile-huge hide">
+                            Michelle Hu
+                            <br>
+                        </h1>
+                        <p class="hero-pronouns-mobile mb-0 hide">(she/they)</p>
                     </div>
                     <div class="hero-content">
                         <div class="hero-content-wrapper">
@@ -81,13 +100,23 @@
                                     Product
                                     designer, <br>UX engineer, <br>& Rule-Bender.
                                 </h1> -->
-                                <h1 class="hero-headline secondary-green show-sm-block">What's up?
-                                    <span class="secondary-green">I’m Michelle Hu</span>.
-                                </h1>
                                 <p class="hero-headline-details show-sm-block">Product
                                     Designer &
                                     UX Engineer.</p>
-                                <p class="hero-tagline">I blend empathy, creativity, and technology
+                                <h1 class="hero-headline secondary-green show-sm-block">What's up?
+                                    <span class="secondary-green">I’m Michelle Hu</span>.
+                                </h1>
+                                <p class="hero-headline fw-bold secondary-green mb-8 hide">What's
+                                    up!
+                                    I'm Michelle.</p>
+                                <h1 class="hero-headline-mobile black hide-med mb-8">
+                                    <!-- Michelle Hu. <br> -->
+                                    Product
+                                    designer. <br>Frontend developer. <br>Rule-bender.
+                                </h1>
+                                <p class="hero-tagline">
+                                    I blend empathy, creativity, and
+                                    technology
                                     to transform challenges into
                                     opportunities,
                                     empowering people and organizations.
@@ -103,13 +132,13 @@
                             </div>
                             <div class="hero-buttons">
                                 <div class="hero-large-buttons-wrapper">
-                                    <button id="scrollToProjects" class="btn-primary">See my
-                                        work</button>
                                     <a class="margin-0" href="assets/files/MichelleHuResume.pdf"
                                         target="_blank" rel="noopener noreferrer"><button
                                             class="btn-secondary">View
                                             my
                                             resume</button></a>
+                                    <button id="scrollToProjects" class="btn-primary">See my
+                                        work</button>
                                 </div>
                                 <div class="icon-buttons-wrapper">
                                     <a href="mailto:mhu.contact@gmail.com" class="icon-button"
@@ -165,15 +194,13 @@
                         <a href="tastebuds" class="project-link">
                             <div class="project-thumb-container tastebuds-thumb-container">
                                 <div class="project-thumb-wrapper">
-                                    <video id="exclude-video-jquery"
-                                        class="project-thumb-mobile thumb-tastebuds" autoplay loop
-                                        muted hide-controls>
+                                    <video class="project-thumb-mobile thumb-tastebuds" autoplay
+                                        loop muted hide-controls>
                                         <source src="assets/images/thumbs/thumb-tastebuds.mp4"
                                             type="video/mp4">
                                         Your browser does not support the video tag.
                                     </video>
-                                    <video id="exclude-video-jquery"
-                                        class="project-thumb-desktop thumb-tastebuds" loop muted
+                                    <video class="project-thumb-desktop thumb-tastebuds" loop muted
                                         hide-controls>
                                         <source src="assets/images/thumbs/thumb-tastebuds.mp4"
                                             type="video/mp4">
