@@ -55,19 +55,17 @@ nav {
 	position: relative;
 	height: auto;
 	margin-top: 0;
-	justify-content: center;
-	gap: 1rem;
-
+	justify-content: space-between;
+	width: 100%;
 	transform: none;
 }
 
 .nav-item {
 	padding: 0;
-	padding-left: 0.5rem;
 	list-style-type: none;
 	width: fit-content;
 
-	li,
+	flex li,
 	a {
 		color: #565656;
 		text-transform: uppercase;
@@ -125,6 +123,10 @@ nav {
 		position: relative;
 		width: auto;
 		height: auto;
+	}
+
+	.nav-item {
+		padding-left: 0.5rem;
 	}
 
 	.navbar-menu-toggle {
