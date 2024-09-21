@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="is-smooth-scroll-compatible is-loading has-scroll-init has-scroll-smooth" lang="en">
 
 <head>
     <meta charset="utf-8" />
@@ -48,7 +48,7 @@
 </head>
 
 <body>
-    <main>
+    <main class="scrollable-content">
         <section class="hide">
             <div class="image-wrapper">
                 <div class="hero-bg-mobile"></div>
@@ -237,7 +237,10 @@
             </section>
         </div>
     </main>
-    <script src="js/index.bundle.js"></script>
+    <span class="c-scrollbar">
+        <span class="c-scrollbar_thumb"></span>
+    </span>
+    <script src=" js/index.bundle.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
         document.getElementById('scrollToProjects').addEventListener('click', function () {
