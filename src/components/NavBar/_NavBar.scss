@@ -64,13 +64,13 @@ nav {
 
 .nav-item {
 	padding: 0;
-	padding-left: 0.5rem;
 	list-style-type: none;
 	width: fit-content;
 
 	li,
 	a {
 		color: #565656;
+		text-transform: capitalize;
 		text-transform: uppercase;
 		font-size: 0.75rem;
 		transition: color 0.3s;
@@ -126,11 +126,12 @@ nav {
 		position: relative;
 		width: auto;
 		height: auto;
+		gap: 2rem;
 	}
+}
 
-	.navbar-menu-toggle {
-		display: none;
-	}
+.navbar-menu-toggle {
+	display: none;
 }
 
 .navbar-menu-toggle {
