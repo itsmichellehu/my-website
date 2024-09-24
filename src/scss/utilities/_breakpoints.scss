@@ -130,6 +130,14 @@
 	.show-lg {
 		display: inherit;
 	}
+
+	.show-lg-flex {
+		display: flex !important;
+	}
+
+	.show-lg-block {
+		display: block !important;
+	}
 }
 
 @include breakpoint(xl) {
