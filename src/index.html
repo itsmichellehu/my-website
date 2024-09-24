@@ -29,52 +29,62 @@
                 const projectMedia = container.querySelector('.project-thumb-desktop');
 
                 container.addEventListener('mouseenter', () => {
-                    if (window.innerWidth >= 576) {
-                        projectMedia.currentTime = 0; // Reset the video to the beginning
-                        projectMedia.play(); // Play the video
-                    }
+                    projectMedia.currentTime = 0; // Reset the video to the beginning
+                    projectMedia.play(); // Play the video
                 });
 
                 container.addEventListener('mouseleave', () => {
-                    if (window.innerWidth >= 576) {
-                        projectMedia.pause(); // Pause the video
-                        projectMedia.currentTime = 0; // Reset the video to the beginning
-                    }
+                    projectMedia.pause(); // Pause the video
+                    projectMedia.currentTime = 0; // Reset the video to the beginning
                 });
             });
         });
     </script>
-    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
 <body>
     <main>
-        <section class="hide">
-            <div class="image-wrapper">
-                <div class="hero-bg-mobile"></div>
-            </div>
-        </section>
         <div id="main-wrapper">
             <div id="hero" class="hero">
                 <div class="hero-wrapper">
-                    <div class="hero-image-wrapper show-mded-flex">
+                    <div class="hero-image-wrapper">
                         <img class="img-hero" src="assets/images/michelle-portrait-bw.png">
                     </div>
                     <div class="hero-content">
                         <div class="hero-content-wrapper">
                             <div class="hero-header-wrapper">
-                                <h1 class="hero-headline black hide-med">Hello! I'm
-                                    Michelle.</h1>
-                                <h1 class="hero-headline black show-med-flex">Hello! I'm
-                                    Michelle Hu.</h1>
-                                <p class="hero-headline-details"> Product designer
-                                    <span>with</span><br>
-                                    frontend
-                                    development <span>skills</span>.
+                                <p class="hero-headline hide-sm">
+                                    Hello! I'm Michelle Hu 👋
                                 </p>
-                                <p class="hero-tagline">I craft intentional products that simplify,
-                                    empower, and inspire meaningful lives.</p>
+                                <p class="hero-headline show-sm-block">
+                                    Hello 👋 <br> I'm Michelle Hu.
+                                </p>
                             </div>
+                        </div>
+                        <div class="hero-content-row-02">
+                            <p class="hero-tagline hide-med">
+                                I'm a <span class="secondary-green fw-bold">Product
+                                    Designer</span> who
+                                <span class="secondary-green fw-bold">codes</span>. 👩🏻‍💻
+                                I've got a background in marketing, sociology,
+                                and research. My mission is to
+                                build thoughtful
+                                experiences and design systems that empower people to live
+                                fulfilling
+                                lives.
+                            </p>
+                            <p class="hero-tagline show-med-block"> I am a <span
+                                    class="secondary-green fw-bold">Product
+                                    Designer</span> who
+                                <span class="secondary-green fw-bold">codes</span>. 👩🏻‍💻 <br>
+                                I've got a background in marketing, sociology,
+                                and research. My mission is to
+                                build thoughtful
+                                experiences and design systems that empower people to live
+                                fulfilling
+                                lives.
+                            </p>
                             <div class="work-location-wrapper">
                                 <div class="work-availability-wrapper">
                                     <span class="green-dot"></span>
@@ -84,10 +94,7 @@
                                 <p class="text-current-location"> Based in Los Angeles</p>
                             </div>
                         </div>
-                        <div class="hero-image-wrapper mt-24 hide">
-                            <img class="img-hero" src="assets/images/michelle-portrait-bw.png">
-                        </div>
-                        <div class="hero-buttons-wrapper show-sm-flex mb-24">
+                        <div class="hero-buttons-wrapper hide mb-24">
                             <div class="hero-large-buttons-wrapper">
                                 <a class="margin-0" href="assets/files/MichelleHuResume.pdf"
                                     target="_blank" rel="noopener noreferrer"><button
@@ -116,7 +123,7 @@
                 <div class="projects-wrapper">
                     <h2 class="section-heading hide">Product<br />design projects</h2>
                     <div class="project-card hide mb-0">
-                        <p class="number-label">01</p>
+                        <p class="number-label hide">01</p>
                         <div class="project-thumb-container" onmouseenter="playGif(this)"
                             onmouseleave="resetGif(this)">
                             <div class="project-thumb-wrapper" id="postupBG">
@@ -144,18 +151,61 @@
                             </div>
                         </div>
                     </div>
+                    <div id="project-boardspace" class="project-card project-boardspace hide">
+                        <p class="coming-soon-label">coming soon</p>
+                        <a href="boardspace" class="project-link">
+                            <div class="project-thumb-container boardspace-thumb-container">
+                                <div class="project-thumb-wrapper">
+                                    <video id="exclude-video-jquery"
+                                        class="project-thumb-mobile thumb-boardspace" autoplay loop
+                                        muted hide-controls>
+                                        <source src="assets/images/thumbs/thumb-boardspace.mp4"
+                                            type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                    <video id="exclude-video-jquery"
+                                        class="project-thumb-desktop thumb-boardspace" loop muted
+                                        hide-controls>
+                                        <source src="assets/images/thumbs/thumb-boardspace.mp4"
+                                            type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="project-details-container">
+                            <div class="project-details-wrapper">
+                                <p class="project-subheader">lead ux designer</p>
+                                <h3>BoardSpace</h3>
+                                <p class="project-description">
+                                    Redesigning a feature with new functions, workflows, and an
+                                    atomic design system to improve the user experience, ensure
+                                    scalability,
+                                    and increase conversions.
+                                </p>
+                            </div>
+                            <div class="project-tags-wrapper scrollable">
+                                <div class="tastebuds-tag project-tag">product design</div>
+                                <div class="tastebuds-tag project-tag">interaction design</div>
+                                <div class="tastebuds-tag project-tag">monetization strategy</div>
+                                <div class="tastebuds-tag project-tag">prototyping</div>
+                            </div>
+                        </div>
+                    </div>
                     <div id="project-tastebuds" class="project-card project-tastebuds">
                         <p class="number-label">01</p>
                         <a href="tastebuds" class="project-link">
                             <div class="project-thumb-container tastebuds-thumb-container">
                                 <div class="project-thumb-wrapper">
-                                    <video class="project-thumb-mobile thumb-tastebuds" autoplay
-                                        loop muted hide-controls>
+                                    <video id="exclude-video-jquery"
+                                        class="project-thumb-mobile thumb-tastebuds" autoplay loop
+                                        muted hide-controls>
                                         <source src="assets/images/thumbs/thumb-tastebuds.mp4"
                                             type="video/mp4">
                                         Your browser does not support the video tag.
                                     </video>
-                                    <video class="project-thumb-desktop thumb-tastebuds" loop muted
+                                    <video id="exclude-video-jquery"
+                                        class="project-thumb-desktop thumb-tastebuds" loop muted
                                         hide-controls>
                                         <source src="assets/images/thumbs/thumb-tastebuds.mp4"
                                             type="video/mp4">
@@ -167,14 +217,14 @@
                         <div class="project-details-container">
                             <div class="project-details-wrapper">
                                 <p class="project-subheader">tastebuds</p>
-                                <h3>
-                                    Helping diners discover dining options with tastebuds they
-                                    trust.
-                                </h3>
+                                <h3>Empowering diners to make informed decisions with
+                                    trusted friends and AI</h3>
                                 <p class="project-description">Creating an end-to-end prototype of a
-                                    social
-                                    dining recommendation mobile-app
-                                    that uses AI and machine-learning to deliver personalized
+                                    social dining app and a business strategy that
+                                    leverages AI and word-of-mouth
+                                    recommendations to help diners make informed decisions
+                                    connects diners to
+                                    friend reviews and uses AI to delivers AI-powered
                                     recommendations.</p>
                             </div>
                             <div class="project-tags-wrapper scrollable">
@@ -210,12 +260,12 @@
                         </a>
                         <div class="project-details-container">
                             <div class="project-details-wrapper">
-                                <p class="project-subheader">Postup</p>
-                                <h3>Connecting remote workers to ideal public workspaces</h3>
-                                <p class="project-description">
-                                    Designing a subscription-based mobile-app that converts existing
-                                    users and drives revenue growth in a 7-day sprint.
-                                </p>
+                                <p class="project-subheader">postup</p>
+                                <h3>Connecting remote workers to suitable public workspaces to
+                                    enhance productivity</h3>
+                                <p class="project-description">Designing a subscription-based
+                                    mobile-app that converts and a busienss strategy that introduces
+                                    a new revenue stream</p>
                             </div>
                             <div class="project-tags-wrapper scrollable">
                                 <div class="postup-tag project-tag">product design</div>
