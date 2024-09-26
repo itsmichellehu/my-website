@@ -92,6 +92,10 @@
 	.show-mobile-lg-flex {
 		display: flex !important;
 	}
+
+	.show-mobile-lg-block {
+		display: block !important;
+	}
 }
 
 @include breakpoint(sm) {
