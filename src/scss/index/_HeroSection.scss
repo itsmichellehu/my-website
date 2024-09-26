@@ -57,35 +57,6 @@
 	line-height: 125%;
 }
 
-
-.hero-tagline-large {
-	font-weight: 500;
-	line-height: normal;
-	letter-spacing: -0.04rem;
-	color: $black;
-	font-size: clamp(1.3rem, 2.25vw, 1.9375rem) !important;
-	margin-bottom: 0.75rem;
-	line-height: 150%;
-}
-
-.hero-tagline-large-teal {
-	color: $teal-accent;
-	font-weight: 600;
-	line-height: normal;
-}
-
-.hero-tagline-large-pink {
-	color: $hot-pink-accent;
-	font-weight: 600;
-	line-height: normal;
-}
-
-.hero-taglines-wrapper {
-	display: flex;
-	flex-direction: column;
-	width: fit-content;
-}
-
 .hero-tagline-buttons-wrapper {
 	display: flex;
 	flex-direction: column;
@@ -98,7 +69,6 @@
 
 .hero-tagline {
 	color: #888;
-	font-family: "Inter", sans-serif;
 	font-size: 1.125rem;
 	font-style: normal;
 	font-weight: 400;
@@ -164,22 +134,6 @@
 		transform: scale(1);
 		opacity: 1;
 	}
-}
-
-.text-work-availability,
-.text-current-location,
-.text-slash {
-	font-size: 1rem;
-	margin-bottom: 0;
-	line-height: 100%;
-	font-weight: 500;
-	line-height: 135%;
-}
-
-.text-slash,
-.text-current-location {
-	color: $medium-grey;
-	font-family: Inter;
 }
 
 // Hero compact buttons - buttons v2 - minimalistic
@@ -377,10 +331,6 @@ $hero-icon-button-size-bp-med: 2.25rem;
 		width: fit-content;
 	}
 
-	.hero-tagline-large {
-		margin-bottom: 1.5rem;
-	}
-
 	.hero-taglines-wrapper {
 		display: flex;
 		flex-direction: column;
@@ -402,14 +352,6 @@ $hero-icon-button-size-bp-med: 2.25rem;
 		font-weight: 450;
 		font-optical-sizing: auto;
 		line-height: 125%;
-	}
-
-	.hero-tagline-01 {
-		width: 367px !important;
-	}
-
-	.hero-tagline-02 {
-		width: 389px !important;
 	}
 
 	.work-location-wrapper {
@@ -510,11 +452,6 @@ $hero-icon-button-size-bp-med: 2.25rem;
 	.hero-tagline {
 		width: fit-content;
 		max-width: 26.5rem;
-	}
-
-	.hero-tagline-large {
-		font-size: 1.9375rem !important;
-		margin-bottom: 3rem;
 	}
 
 	.hero-taglines-wrapper {
