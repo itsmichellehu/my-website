@@ -1,6 +1,7 @@
 // Projects
 .projects-section {
 	padding: 1.75rem 0;
+	padding-top: 2.5rem;
 }
 
 .projects-wrapper {
@@ -31,14 +32,15 @@
 	margin-bottom: 1.5rem;
 }
 
-.coming-soon-label {
-	color: #a0a0a0;
-	font-family: Inter;
-	font-size: 2rem;
-	font-weight: 600;
-	line-height: 110%;
-	margin-bottom: 1.5rem;
-	text-transform: uppercase;
+.project-card-cta {
+	color: $teal-accent;
+	font-family: "IBM Plex Mono";
+	font-size: 1rem;
+	font-weight: 500;
+	line-height: 100%;
+	letter-spacing: 0.05rem;
+	text-transform: capitalize;
+	margin: 0;
 }
 
 .project-thumb-container {
@@ -108,45 +110,55 @@
 	width: 35%;
 }
 
+.project-card-coming-soon {
+	font-size: 1.25rem;
+	color: #a0a0a0;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 0.05rem;
+	margin-bottom: 0.5rem;
+}
+
 .project-details-container {
 	display: flex;
 	flex-direction: column;
 	padding: 1.5rem 0;
-	width: 100%;
-
-	h3 {
-		color: #000;
-		font-family: Inter;
-		font-size: 1.5rem;
-		font-weight: 600;
-		line-height: 121%;
-		margin-bottom: 0.5rem;
-	}
+	width: 90vw;
+	max-width: 100%;
 }
 
 .project-details-wrapper {
 	display: block;
-	margin-bottom: 1rem;
+	margin-bottom: 1.25rem;
+
+	>h3 {
+		font-size: 2rem;
+		line-height: 100%;
+		margin-bottom: 1rem;
+		font-weight: 600;
+	}
 }
 
 .project-subheader {
-	color: $medium-grey;
+	color: $off-black;
 	font-family: "IBM Plex Mono";
-	font-size: 1rem;
-	font-weight: 500;
+	font-size: 0.875rem;
+	line-height: 100%;
+	font-weight: 400;
 	letter-spacing: 0.05rem;
 	text-transform: uppercase;
-	margin-bottom: 0.5rem;
+	margin-bottom: 0.75rem;
 }
 
 .project-description {
-	color: $dark-grey;
+	color: $medium-grey;
 	font-family: Inter;
 	font-size: 1.125rem;
-	font-weight: 500;
+	font-weight: 400;
 	line-height: 145%;
+	margin-top: 1rem;
 	margin-bottom: 0;
-	display: none;
+	// display: none;
 }
 
 .project-tags-wrapper {
@@ -156,13 +168,14 @@
 	overflow-x: auto;
 	white-space: nowrap;
 	cursor: pointer;
-	scrollbar-width: none;
+	scrollbar-width: 0 !important;
+	scrollbar-color: transparent transparent;
 }
 
 .project-tag {
 	display: flex;
 	height: 2rem;
-	padding: 0 0.5rem;
+	padding: 0 0.75rem;
 	flex-direction: column;
 	justify-content: center;
 	align-items: flex-start;
@@ -174,7 +187,7 @@
 }
 
 .boardspace-tag {
-	background: #d6e8ff;
+	background: #d6e8ff85;
 	color: #5488ca;
 }
 
