@@ -24,6 +24,7 @@
 }
 
 .number-label {
+	display: none;
 	color: #a0a0a0;
 	font-family: Inter;
 	font-size: 2.44rem;
@@ -219,6 +220,7 @@
 	}
 
 	.number-label {
+		display: block;
 		grid-area: a;
 		font-size: 5.25rem;
 		color: #a0a0a0;
