@@ -46,6 +46,14 @@
 	letter-spacing: 0.05rem;
 	text-transform: capitalize;
 	margin: 0;
+	vertical-align: middle;
+
+	>.material-symbols-outlined {
+		font-size: 1.125rem;
+		vertical-align: middle;
+		padding-bottom: 0.125rem;
+		margin-left: -0.25rem;
+	}
 }
 
 .project-thumb-container {
