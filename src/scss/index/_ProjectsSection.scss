@@ -191,8 +191,9 @@
 	white-space: nowrap;
 	cursor: pointer;
 	scroll-behavior: smooth;
-	width: 100vw;
+	width: 95vw;
 	max-width: fit-content;
+	padding-right: 5vw;
 
 	// Firefox scrollbar hide
 	scrollbar-width: none; // Firefox
