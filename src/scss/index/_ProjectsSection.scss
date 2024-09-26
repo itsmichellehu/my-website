@@ -238,6 +238,17 @@
 	color: #4c9a8a;
 }
 
+@include breakpoint (sm) {
+	.project-tags-wrapper {
+		flex-wrap: wrap;
+		overflow-x: visible;
+		white-space: wrap;
+		cursor: default;
+		width: 90vw;
+		padding-right: 0;
+	}
+}
+
 @include breakpoint(med) {
 	.projects-section {
 		padding: 4rem 0;
