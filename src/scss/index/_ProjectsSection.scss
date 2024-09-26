@@ -74,6 +74,20 @@
 	&#postupBG {
 		background-color: #8bb4ac;
 	}
+
+	&.boardspace-thumb-container {
+		transition: none;
+		cursor: default;
+
+		&:hover {
+			transform: none;
+		}
+
+		&:hover:active {
+			opacity: 1;
+			transform: none;
+		}
+	}
 }
 
 .project-thumb-wrapper {
