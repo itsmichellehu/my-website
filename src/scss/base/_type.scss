@@ -266,6 +266,10 @@ h6 {
 	font-weight: 500;
 }
 
+.fw-semibold {
+	font-weight: 600;
+}
+
 .fw-bold {
 	font-weight: 600 !important;
 }
@@ -335,4 +339,8 @@ h6 {
 // Text alignment
 .text-align-center {
 	text-align: center;
+}
+
+.uppercase {
+	text-transform: uppercase !important;
 }
