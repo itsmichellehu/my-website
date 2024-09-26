@@ -19,6 +19,7 @@
 }
 
 .project-link {
+	display: flex;
 	margin: 0;
 
 	&:hover {
@@ -36,7 +37,7 @@
 	margin-bottom: 1.5rem;
 }
 
-.project-card-cta {
+.project-card-cta-btn {
 	color: $teal-accent;
 	font-family: "IBM Plex Mono";
 	font-size: 1rem;
@@ -49,17 +50,15 @@
 
 .project-thumb-container {
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	margin: auto;
 	border-radius: 3px;
-	text-align: center;
 	background-color: #f6f6f6;
 	cursor: pointer;
 	transition: opacity 0.25s, transform 0.25s;
-	width: 100%;
 	overflow: hidden;
-	padding: 2rem 0;
+	padding: 2rem 5vw;
 
 	&:hover {
 		transform: scale(1.01);
@@ -98,6 +97,7 @@
 	height: 100%;
 	width: 100%;
 	align-items: center;
+	gap: 1rem;
 
 	video {
 		display: flex;
