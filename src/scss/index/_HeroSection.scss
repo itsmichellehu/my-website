@@ -67,14 +67,22 @@
 	width: fit-content;
 }
 
-.hero-tagline {
-	color: #888;
+.hero-intro {
+	color: #757575;
 	font-size: 1.125rem;
 	font-style: normal;
 	font-weight: 400;
 	line-height: 140%;
 	margin-bottom: 0;
-	/* 25.2px */
+}
+
+.hero-tagline {
+	color: #444;
+	font-size: 1.125rem;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 140%;
+	margin-bottom: 0;
 }
 
 .work-location-wrapper {
@@ -341,17 +349,6 @@ $hero-icon-button-size-bp-med: 2.25rem;
 		display: flex;
 		flex-direction: column;
 		width: fit-content;
-	}
-
-	.hero-tagline {
-		color: #777;
-		text-align: justify;
-		font-family: Inter;
-		font-size: 1.3125rem;
-		font-style: normal;
-		font-weight: 450;
-		font-optical-sizing: auto;
-		line-height: 125%;
 	}
 
 	.work-location-wrapper {
