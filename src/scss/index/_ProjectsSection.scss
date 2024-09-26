@@ -197,10 +197,12 @@
 	height: 2rem;
 	padding: 0 0.75rem;
 	justify-content: center;
-	font-size: 0.875rem;
-	font-weight: 500;
-	line-height: 150%;
 	border-radius: 0.3125rem;
+
+	font-size: 0.875rem;
+	font-weight: 400;
+	line-height: 150%;
+	text-transform: capitalize;
 }
 
 .boardspace-tag {
