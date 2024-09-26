@@ -75,6 +75,7 @@
 	font-weight: 400;
 	line-height: 140%;
 	margin-bottom: 0;
+	max-width: 19.25rem;
 }
 
 .hero-tagline {
@@ -84,6 +85,7 @@
 	font-weight: 500;
 	line-height: 140%;
 	margin-bottom: 0;
+	max-width: 19.25rem;
 }
 
 .work-location-wrapper {
@@ -254,6 +256,18 @@ $hero-icon-button-size-bp-med: 2.25rem;
 		align-items: center;
 		justify-content: center;
 	}
+
+	.hero-content {
+		width: fit-content;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.hero-content-wrapper {
+		width: fit-content;
+		margin-left: auto;
+		margin-right: auto;
+	}
 }
 
 @include breakpoint(sm) {
@@ -271,12 +285,17 @@ $hero-icon-button-size-bp-med: 2.25rem;
 		align-items: center;
 	}
 
+	.hero-content-wrapper {
+		width: fit-content;
+	}
+
 	.hero-image-wrapper {
 		display: flex;
 		align-items: center;
 		justify-content: start;
 		align-items: start;
 		height: fit-content;
+		min-height: fit-content;
 		max-height: fit-content;
 		width: 40%;
 		max-width: 30rem;
