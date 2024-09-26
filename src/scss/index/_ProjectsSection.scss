@@ -185,12 +185,23 @@
 	display: flex;
 	flex-direction: row;
 	gap: 0.5rem;
-	overflow-x: auto;
+	overflow-x: scroll;
 	white-space: nowrap;
 	cursor: pointer;
-	scrollbar-width: 0 !important;
-	scrollbar-color: transparent transparent;
+	scroll-behavior: smooth;
+
+	// Firefox scrollbar hide
+	scrollbar-width: none; // Firefox
+
+	// Internet Explorer and Legacy Edge scrollbar hide
+	-ms-overflow-style: none; // IE and Edge
+
+	// Webkit browsers (Chrome, Safari, newer Edge) scrollbar hide
+	&::-webkit-scrollbar {
+		display: none; // Chrome, Safari, Edge
+	}
 }
+
 
 .project-tag {
 	display: flex;
