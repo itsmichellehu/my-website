@@ -18,15 +18,6 @@
 	margin-bottom: 4rem;
 }
 
-.project-link {
-	display: flex;
-	margin: 0;
-
-	&:hover {
-		opacity: 0.75;
-	}
-}
-
 .number-label {
 	display: none;
 	color: #a0a0a0;
@@ -39,25 +30,6 @@
 
 .coming-soon-label {
 	display: none;
-}
-
-.project-card-cta-btn>p {
-	color: $teal-accent;
-	font-family: "IBM Plex Mono";
-	font-size: 1rem;
-	font-weight: 500;
-	line-height: 100%;
-	letter-spacing: 0.05rem;
-	text-transform: capitalize;
-	margin: 0;
-	vertical-align: middle;
-
-	>.material-symbols-outlined {
-		font-size: 1.125rem;
-		vertical-align: middle;
-		padding-bottom: 0.125rem;
-		margin-left: -0.25rem;
-	}
 }
 
 .project-thumb-container {
@@ -94,6 +66,106 @@
 		}
 	}
 }
+
+.project-link {
+	display: flex;
+	margin: 0;
+
+	&:hover {
+		opacity: 0.75;
+	}
+
+	// Targeting sibling .project-card-cta-btn on hover of .project-link
+	&:hover~.project-card-cta-btn {
+		transform: translateY(-0.1rem);
+		opacity: 1; // Ensure full opacity on hover
+
+	}
+
+	// Ensure underline on hover of .project-link-text-label inside project-card-cta-btn
+	&:hover~.project-card-cta-btn .project-link-text-label::before {
+		width: 100%; // Expand the underline from left to right
+	}
+
+	&:hover~.project-card-cta-btn .project-link-text-label {
+		font-weight: 450;
+	}
+}
+
+.project-link-text-label {
+	position: relative; // Required to position the ::before pseudo-element
+
+	&::before {
+		content: '';
+		position: absolute;
+		left: 0;
+		bottom: -2px; // Position the underline below the text
+		width: 0; // Initial width set to 0 (invisible)
+		height: 2px; // Thickness of the underline
+		background-color: $teal-accent; // Underline color
+		transition: width 0.3s ease-in-out; // Animate the width
+	}
+
+	// Hover directly over .project-link-text-label expands the underline
+	&:hover::before {
+		width: 100%; // Expand underline to full width
+
+	}
+}
+
+.project-card-cta-btn {
+	position: relative;
+	font-family: "IBM Plex Mono";
+	font-size: 1rem;
+	font-weight: 500;
+	line-height: 100%;
+	letter-spacing: 0.05rem;
+	text-transform: capitalize;
+	margin: 0;
+	vertical-align: middle;
+	transition: font-weight 0.3s ease-in-out, transform 0.3s ease-in-out;
+	color: $teal-accent !important;
+
+	a {
+		color: $teal-accent !important;
+		font-weight: 400;
+		line-height: 100%;
+		margin: 0;
+		position: relative;
+		display: inline-block;
+
+		// Icon styling within the link
+		>.material-symbols-outlined {
+			font-size: 1.125rem;
+			vertical-align: middle;
+			padding-bottom: 0.125rem;
+			margin-left: -0.25rem;
+		}
+	}
+
+	// Hover effects on the entire CTA button
+	&:hover {
+		transform: translateY(-0.1rem);
+		opacity: 1;
+
+		.project-link-text-label {
+			font-weight: 450; // Apply bold text on hover
+		}
+
+		// Expand the underline when hovering over the button
+		.project-link-text-label::before {
+			width: 100%; // Expand underline
+		}
+		
+	}
+
+	&:hover:active {
+		opacity: 0.65; // Reduce opacity on active hover
+	}
+}
+
+
+
 
 .project-thumb-wrapper {
 	display: flex;
