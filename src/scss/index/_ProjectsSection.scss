@@ -267,10 +267,6 @@
 		row-gap: 2rem;
 		margin-bottom: 5rem;
 		align-items: start;
-
-		&.project-boardspace {
-			grid-template-areas: ". b" ". c" ". d";
-		}
 	}
 
 	.number-label {
@@ -282,10 +278,12 @@
 
 	.coming-soon-label {
 		grid-area: a;
-		font-size: 3rem;
+		font-size: 3.5rem;
 		color: #a0a0a0;
+		font-weight: 600;
 		letter-spacing: -0.05rem;
-		text-transform: capitalize;
+		line-height: 110%;
+		text-transform: lowercase;
 	}
 
 	.project-link,
