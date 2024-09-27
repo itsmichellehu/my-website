@@ -248,7 +248,7 @@
 	color: #4c9a8a;
 }
 
-@include breakpoint (sm) {
+@include breakpoint(sm) {
 	.project-tags-wrapper {
 		flex-wrap: wrap;
 		overflow-x: visible;
@@ -300,14 +300,14 @@
 		width: 100%;
 	}
 
+	.boardspace-thumb-container,
 	.postup-thumb-container,
 	.tastebuds-thumb-container {
-		padding: 4rem 0;
+		padding: 3.5rem 0;
 	}
 
 	.thumb-tastebuds,
 	.thumb-postup {
-		height: 85%;
 		max-height: 23rem;
 	}
 
@@ -367,10 +367,7 @@
 		display: flex !important;
 	}
 
-	.thumb-tastebuds {
-		max-height: 30rem;
-	}
-
+	.thumb-tastebuds,
 	.thumb-postup {
 		max-height: 30rem;
 	}
