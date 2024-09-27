@@ -257,13 +257,16 @@
 	.project-card {
 		display: grid;
 		grid-template-columns: 1fr 1.75fr;
-		grid-template-rows: auto auto;
-		grid-template-areas: "a b" ". c";
+		grid-template-rows: auto auto auto;
+		grid-template-areas: "a b" ". c" ". d";
 		column-gap: 3rem;
 		row-gap: 2rem;
 		margin-bottom: 5rem;
 		align-items: start;
-		overflow: hidden;
+
+		&.project-boardspace {
+			grid-template-areas: ". b" ". c" ". d";
+		}
 	}
 
 	.number-label {
@@ -281,8 +284,11 @@
 		text-transform: capitalize;
 	}
 
+	.project-link,
+	.project-link-boardspace,
 	.project-thumb-container {
 		grid-area: b;
+		width: 100%;
 	}
 
 	.postup-thumb-container,
@@ -294,12 +300,14 @@
 	.thumb-postup {
 		height: 85%;
 		max-height: 23rem;
-		width: fit-content;
 	}
 
 	.project-details-container {
 		grid-area: c;
 		padding: 0;
+		margin-top: 1rem;
+		width: fit-content;
+		max-width: 100%;
 
 		h3 {
 			font-size: 2.125rem;
@@ -309,7 +317,11 @@
 	}
 
 	.project-details-wrapper {
-		margin-bottom: 1.25rem;
+		margin-bottom: 0;
+
+		&.project-boardspace {
+			margin-bottom: 0;
+		}
 	}
 
 	.project-subheader {
@@ -322,6 +334,11 @@
 
 	.project-tags-wrapper {
 		cursor: default;
+	}
+
+	.project-card-cta-btn,
+	.coming-soon-text {
+		grid-area: d;
 	}
 }
 
