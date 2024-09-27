@@ -205,7 +205,7 @@
 }
 
 .coming-soon-text {
-	color: #5488ca;
+	color: #a6a6a6 !important;
 	font-weight: 500;
 	font-size: 1.125rem;
 }
@@ -254,7 +254,7 @@
 	font-weight: 400;
 	line-height: 150%;
 	margin-top: 1rem;
-	margin-bottom: 0;
+	margin-bottom: 1.5rem;
 	max-width: 35rem;
 	// display: none;
 }
@@ -331,9 +331,10 @@
 
 	.project-card {
 		display: grid;
-		grid-template-columns: 1fr 1.75fr;
-		grid-template-rows: auto auto auto;
-		grid-template-areas: "a b" ". c" ". d";
+		grid-template-columns: 4fr 3fr;
+		grid-template-rows: auto;
+		grid-template-areas:
+			"a b" "a c";
 		column-gap: 3rem;
 		row-gap: 2rem;
 		margin-bottom: 5rem;
@@ -341,15 +342,15 @@
 	}
 
 	.number-label {
-		display: block;
-		grid-area: a;
+		display: none;
+		// grid-area: a;
 		font-size: 5.25rem;
 		color: #a0a0a0;
 	}
 
 	.coming-soon-label {
-		display: block;
-		grid-area: a;
+		display: none;
+		// grid-area: a;
 		font-size: 2.5rem;
 		color: #a0a0a0;
 		font-weight: 500;
@@ -360,7 +361,7 @@
 	.project-link,
 	.project-link-boardspace,
 	.project-thumb-container {
-		grid-area: b;
+		grid-area: a;
 		width: 100%;
 	}
 
@@ -376,7 +377,7 @@
 	}
 
 	.project-details-container {
-		grid-area: c;
+		grid-area: b;
 		padding: 0;
 		margin-top: 1rem;
 		width: fit-content;
@@ -409,14 +410,7 @@
 	.project-tags-wrapper {
 		margin-bottom: 1.3rem;
 		cursor: default;
-	}
-
-	.project-card-cta-btn {
-		grid-area: d;
-	}
-
-	.coming-soon-text {
-		display: none;
+		width: 100%;
 	}
 }
 
