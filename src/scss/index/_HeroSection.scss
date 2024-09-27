@@ -49,7 +49,7 @@
 .hero-headline {
 	color: $black;
 	font-family: Inter;
-	font-size: clamp(2.125rem, 5vw, 4.25rem) !important;
+	font-size: clamp(2.125rem, 5vw, 3.5rem) !important;
 	font-weight: 700;
 	margin-bottom: 1rem;
 	width: fit-content;
@@ -75,7 +75,7 @@
 	font-weight: 400;
 	line-height: 140%;
 	margin-bottom: 0;
-	max-width: 19.25rem;
+	max-width: 31.75rem;
 }
 
 .hero-tagline {
@@ -93,7 +93,7 @@
 	flex-direction: row;
 	align-items: center;
 	gap: 0.5rem;
-	margin-bottom: 0.75rem;
+	margin-bottom: 1rem;
 
 	p {
 		color: #888;
@@ -262,10 +262,10 @@ $hero-icon-button-size-bp-med: 2.25rem;
 	}
 
 	.hero-content {
-		width: 100%;
 		margin-left: auto;
 		margin-right: auto;
 		padding-top: 2rem;
+		width: 90vw;
 	}
 
 	.hero-content-wrapper {
@@ -313,11 +313,10 @@ $hero-icon-button-size-bp-med: 2.25rem;
 	}
 
 	.hero-content {
-		margin-top: 0;
-		padding: 0;
 		height: 100%;
-		width: 22rem;
-		margin-right: auto;
+		width: 24rem;
+		padding: 0;
+		margin: 0;
 		// justify-content: space-between;
 	}
 
@@ -427,10 +426,6 @@ $hero-icon-button-size-bp-med: 2.25rem;
 		max-width: 72rem !important;
 	}
 
-	.hero-content {
-		padding-bottom: 3rem;
-	}
-
 	.hero-content-wrapper {
 		width: 100%;
 		height: fit-content;
@@ -467,11 +462,15 @@ $hero-icon-button-size-bp-med: 2.25rem;
 	.hero-headline {
 		color: #000;
 		font-family: Inter;
-		font-size: 4.25rem;
 		font-weight: bolder;
 		line-height: 125%;
 		/* 5.3125rem */
 		margin-bottom: 1.5rem;
+	}
+
+	.hero-intro {
+		font-size: 1.25rem;
+		max-width: 35.19rem;
 	}
 
 	.hero-tagline {
@@ -488,11 +487,14 @@ $hero-icon-button-size-bp-med: 2.25rem;
 	.hero-tagline-buttons-wrapper {
 		display: flex;
 		flex-direction: column;
-		margin-left: 5.69rem;
 	}
 
 	.hero-tagline-buttons-wrapper {
 		width: fit-content;
+	}
+
+	.work-location-wrapper {
+		margin-bottom: 1.25rem;
 	}
 }
 
@@ -503,14 +505,6 @@ $hero-icon-button-size-bp-lg: 2.25rem;
 	.hero {
 		padding-top: 8rem;
 		padding-bottom: 5rem;
-	}
-
-	.hero-headline {
-		font-size: clamp(1.85rem, 6vw, 3rem) !important;
-	}
-
-	.work-location-wrapper {
-		gap: 0.5rem;
 	}
 
 	.work-availability-wrapper {
@@ -553,9 +547,6 @@ $hero-buttons-gap-bp-xl: 1rem;
 $hero-icon-button-size-bp-xl: 3rem;
 
 @include breakpoint(xxl) {
-	.work-location-wrapper {
-		gap: 0.5rem;
-	}
 
 	.text-work-availability,
 	.text-current-location,
