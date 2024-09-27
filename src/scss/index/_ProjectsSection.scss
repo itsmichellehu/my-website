@@ -345,9 +345,12 @@
 		cursor: default;
 	}
 
-	.project-card-cta-btn,
-	.coming-soon-text {
+	.project-card-cta-btn {
 		grid-area: d;
+	}
+
+	.coming-soon-text {
+		display: none;
 	}
 }
 
