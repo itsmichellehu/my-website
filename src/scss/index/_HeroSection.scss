@@ -73,7 +73,7 @@
 	font-size: 1.125rem;
 	font-style: normal;
 	font-weight: 400;
-	line-height: 145%;
+	line-height: 155%;
 	margin-bottom: 0;
 	max-width: 31.75rem;
 }
@@ -96,7 +96,7 @@
 	p {
 		color: #888;
 		font-size: 1rem;
-		font-weight: 500;
+		font-weight: 450;
 		line-height: 130%;
 		margin-bottom: 0;
 		text-wrap: nowrap;
@@ -461,12 +461,13 @@ $hero-icon-button-size-bp-med: 2.25rem;
 		font-weight: bolder;
 		line-height: 125%;
 		/* 5.3125rem */
-		margin-bottom: 0.75rem;
+		margin-bottom: 1rem;
 	}
 
 	.hero-intro {
 		font-size: 1.25rem;
 		max-width: 35.19rem;
+		line-height: 155%;
 	}
 
 	.hero-tagline {
