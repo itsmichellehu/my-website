@@ -37,6 +37,10 @@
 	margin-bottom: 1.5rem;
 }
 
+.coming-soon-label {
+	display: none;
+}
+
 .project-card-cta-btn>p {
 	color: $teal-accent;
 	font-family: "IBM Plex Mono";
@@ -137,9 +141,11 @@
 }
 
 .coming-soon-text {
-	color: #a0a0a0;
-	font-weight: 400;
+	color: #5488ca;
+	font-weight: 500;
+	font-size: 1.125rem;
 }
+
 
 .project-details-container {
 	display: flex;
@@ -277,6 +283,7 @@
 	}
 
 	.coming-soon-label {
+		display: block;
 		grid-area: a;
 		font-size: 3.5rem;
 		color: #a0a0a0;
