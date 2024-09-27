@@ -156,22 +156,6 @@
 	}
 }
 
-.hero-button-link {
-	display: flex;
-	border-bottom: 1.5px solid $teal-accent;
-
-	>a {
-		margin: 0;
-	}
-
-	p {
-		font-weight: 500;
-		color: $teal-accent;
-		margin-bottom: 0;
-		line-height: 100%;
-	}
-}
-
 .hero-buttons {
 	display: flex;
 	flex-direction: row;

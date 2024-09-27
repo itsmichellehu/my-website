@@ -7,13 +7,13 @@ function Footer() {
             <div class="text-wrapper">
                     <p class="headline">Let's make a difference together.</p>
                     <div class="hero-buttons-compact-wrapper">
-                                    <div class="hero-button-link">
+                                    <div class="social-link">
                                         <a href="wwww.linkedin.com/in/itsmichellehu" target="_blank"
                                             rel="noopener noreferrer">
                                             <p>Connect on LinkedIn</p>
                                         </a>
                                     </div>
-                                    <div class="hero-button-link">
+                                    <div class="social-link">
                                         <a href="assets/files/MichelleHuResume.pdf" target="_blank"
                                             rel="noopener noreferrer">
                                             <p>View my Resume</p>

@@ -83,18 +83,26 @@ footer {
 	margin: auto;
 }
 
-.hero-buttons-compact-wrapper {
+.social-links-wrapper {
 	display: flex;
 	flex-direction: column !important;
 	margin-bottom: 1.5rem !important;
 	gap: 0.75rem;
+	grid-area: b;
+	width: fit-content;
+
+	>.header {
+		font-size: 1.25rem !important;
+		font-weight: 500 !important;
+		margin-bottom: 0;
+	}
 }
 
-.hero-button-link {
+.social-link {
 	width: fit-content;
 }
 
-.hero-button-link>a>p {
+.social-link {
 	font-weight: 400 !important;
 }
 
