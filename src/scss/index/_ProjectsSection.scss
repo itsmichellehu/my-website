@@ -75,6 +75,11 @@
 		opacity: 0.75;
 	}
 
+	&:hover~.project-details-container .project-title {
+		color: $teal-accent;
+
+	}
+
 	// Targeting sibling .project-card-cta-btn on hover of .project-link
 	&:hover~.project-card-cta-btn {
 		transform: translateY(-0.1rem);
@@ -85,10 +90,6 @@
 	// Ensure underline on hover of .project-link-text-label inside project-card-cta-btn
 	&:hover~.project-card-cta-btn .project-link-text-label::before {
 		width: 100%; // Expand the underline from left to right
-	}
-
-	&:hover~.project-card-cta-btn .project-link-text-label {
-		font-weight: 450;
 	}
 }
 
@@ -148,15 +149,11 @@
 		transform: translateY(-0.1rem);
 		opacity: 1;
 
-		.project-link-text-label {
-			font-weight: 450; // Apply bold text on hover
-		}
-
 		// Expand the underline when hovering over the button
 		.project-link-text-label::before {
 			width: 100%; // Expand underline
 		}
-		
+
 	}
 
 	&:hover:active {
@@ -236,6 +233,7 @@
 	line-height: 100%;
 	margin-bottom: 1rem;
 	font-weight: 600;
+	transition: color 0.3s ease-in-out;
 }
 
 .project-subheader {
