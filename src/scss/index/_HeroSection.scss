@@ -69,23 +69,22 @@
 }
 
 .hero-intro {
-	color: #757575;
+	color: $off-black;
 	font-size: 1.125rem;
 	font-style: normal;
 	font-weight: 400;
-	line-height: 140%;
+	line-height: 145%;
 	margin-bottom: 0;
 	max-width: 31.75rem;
 }
 
 .hero-tagline {
-	color: #444;
-	font-size: 1.125rem;
-	font-style: normal;
+	color: #aaa;
+	font-size: 1.25rem;
 	font-weight: 500;
 	line-height: 140%;
+	letter-spacing: -0.01875rem;
 	margin-bottom: 0;
-	max-width: 19.25rem;
 }
 
 .work-location-wrapper {
@@ -97,10 +96,8 @@
 
 	p {
 		color: #888;
-		font-family: Inter;
 		font-size: 1rem;
-		font-style: normal;
-		font-weight: 400;
+		font-weight: 500;
 		line-height: 130%;
 		margin-bottom: 0;
 		text-wrap: nowrap;
@@ -325,10 +322,6 @@ $hero-icon-button-size-bp-med: 2.25rem;
 		margin: 0;
 	}
 
-	.hero-tagline {
-		max-width: 20.25rem;
-	}
-
 	.hero-buttons-wrapper {
 		margin-top: 1rem;
 		gap: 1rem;
@@ -381,6 +374,10 @@ $hero-icon-button-size-bp-med: 2.25rem;
 		display: flex;
 		flex-direction: column;
 		width: fit-content;
+	}
+
+	.hero-tagline {
+		font-size: 1.35rem;
 	}
 
 	.work-availability-wrapper {
@@ -465,7 +462,7 @@ $hero-icon-button-size-bp-med: 2.25rem;
 		font-weight: bolder;
 		line-height: 125%;
 		/* 5.3125rem */
-		margin-bottom: 1.5rem;
+		margin-bottom: 0.75rem;
 	}
 
 	.hero-intro {
@@ -475,7 +472,9 @@ $hero-icon-button-size-bp-med: 2.25rem;
 
 	.hero-tagline {
 		width: fit-content;
-		max-width: 26.5rem;
+		font-size: 1.5rem;
+		letter-spacing: 0;
+		max-width: 27rem;
 	}
 
 	.hero-taglines-wrapper {
@@ -485,8 +484,7 @@ $hero-icon-button-size-bp-med: 2.25rem;
 	}
 
 	.hero-tagline-buttons-wrapper {
-		display: flex;
-		flex-direction: column;
+		gap: 1.5rem;
 	}
 
 	.hero-tagline-buttons-wrapper {
@@ -494,7 +492,8 @@ $hero-icon-button-size-bp-med: 2.25rem;
 	}
 
 	.work-location-wrapper {
-		margin-bottom: 1.25rem;
+		font-size: 1.125rem;
+		margin-bottom: 1.75rem;
 	}
 }
 
