@@ -348,6 +348,10 @@
 		width: fit-content;
 		max-width: 100%;
 	}
+
+	.project-description {
+		font-size: 1.125rem;
+	}
 }
 
 @include breakpoint(med) {
@@ -432,10 +436,6 @@
 	.project-subheader {
 		font-size: 0.9rem;
 		margin-bottom: 1rem;
-	}
-
-	.project-description {
-		font-size: 1.125rem;
 	}
 
 	.project-tags-wrapper {
