@@ -13,6 +13,7 @@
 .project-card {
 	display: flex;
 	flex-direction: column;
+	gap: 1.75rem;
 	align-items: left;
 	width: 100%;
 	margin-bottom: 4rem;
@@ -97,6 +98,8 @@
 	}
 }
 
+// 'View Project' Link
+
 .project-link-text-label {
 	position: relative; // Required to position the ::before pseudo-element
 
@@ -133,7 +136,7 @@
 
 	a {
 		color: $teal-accent !important;
-		font-weight: 400;
+		font-weight: 500;
 		line-height: 100%;
 		margin: 0;
 		position: relative;
@@ -215,7 +218,6 @@
 .project-details-container {
 	display: flex;
 	flex-direction: column;
-	margin-top: 2rem;
 	width: 90vw;
 	max-width: 100%;
 }
@@ -248,18 +250,7 @@
 	margin-bottom: 0.75rem;
 }
 
-.project-description {
-	color: $medium-grey;
-	font-family: Inter;
-	font-size: 1rem;
-	font-weight: 400;
-	line-height: 150%;
-	margin-top: 1rem;
-	margin-bottom: 1.5rem;
-	max-width: 35rem;
-	// display: none;
-}
-
+// Tags
 .project-tags-wrapper {
 	display: flex;
 	flex-direction: row;
@@ -271,6 +262,7 @@
 	width: 95vw;
 	max-width: fit-content;
 	padding-right: 5vw;
+	margin-bottom: 1rem;
 
 	// Firefox scrollbar hide
 	scrollbar-width: none; // Firefox
@@ -283,7 +275,6 @@
 		display: none; // Chrome, Safari, Edge
 	}
 }
-
 
 .project-tag {
 	display: flex;
@@ -312,6 +303,17 @@
 .postup-tag {
 	background: #E3F1EE;
 	color: #62B5A4;
+}
+
+.project-description {
+	color: $medium-grey;
+	font-family: Inter;
+	font-size: 1rem;
+	font-weight: 400;
+	line-height: 150%;
+	margin-bottom: 1.25rem;
+	max-width: 35rem;
+	// display: none;
 }
 
 @include breakpoint(sm) {
