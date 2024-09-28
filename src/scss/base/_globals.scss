@@ -193,6 +193,11 @@ textarea {
 	margin: inherit;
 }
 
+::selection {
+	background: $teal-highlight;
+	color: #151515;
+}
+
 /**
   * Show the overflow in IE.
   * 1. Show the overflow in Edge.
