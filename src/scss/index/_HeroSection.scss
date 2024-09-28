@@ -103,6 +103,11 @@ $hero-icon-button-size-bp-xl: 3rem;
 	max-width: 31.75rem;
 }
 
+.hero-intro-highlight {
+	color: $teal-accent;
+	font-weight: 500;
+}
+
 .hero-tagline {
 	color: #757575;
 	font-size: 1.25rem;
@@ -399,8 +404,12 @@ $hero-icon-button-size-bp-xl: 3rem;
 
 	.hero-intro {
 		font-size: 1.35rem;
-		max-width: 42.2rem;
+		max-width: 41rem;
 		line-height: 155%;
+	}
+
+	.hero-intro-highlight {
+		font-size: 1.55rem;
 	}
 
 	.hero-tagline {
