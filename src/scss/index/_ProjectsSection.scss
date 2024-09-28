@@ -101,6 +101,7 @@
 // 'View Project' Link
 
 .project-link-text-label {
+	text-transform: uppercase;
 	position: relative; // Required to position the ::before pseudo-element
 
 	&::before {
@@ -127,7 +128,7 @@
 	font-size: 1rem;
 	font-weight: 500;
 	line-height: 100%;
-	letter-spacing: 0.05rem;
+	letter-spacing: 0.075rem;
 	text-transform: capitalize;
 	margin: 0;
 	vertical-align: middle;
@@ -141,6 +142,7 @@
 		margin: 0;
 		position: relative;
 		display: inline-block;
+		padding: 0.5rem 0;
 
 		// Icon styling within the link
 		>.material-symbols-outlined {
@@ -209,6 +211,7 @@
 // }
 
 .coming-soon-text {
+	padding-top: 0.5rem;
 	color: #a6a6a6 !important;
 	font-weight: 500;
 	font-size: 1.125rem;
@@ -311,7 +314,7 @@
 	font-size: 1rem;
 	font-weight: 400;
 	line-height: 150%;
-	margin-bottom: 1.25rem;
+	margin-bottom: 0.75rem;
 	max-width: 35rem;
 	// display: none;
 }
