@@ -200,6 +200,7 @@
 
 .thumb-boardspace {
 	width: 90%;
+	max-width: 100%;
 }
 
 //
@@ -341,7 +342,6 @@
 
 	.thumb-boardspace {
 		width: auto;
-		max-width: fit-content;
 	}
 
 	.project-details-container {
