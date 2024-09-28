@@ -112,7 +112,6 @@
 	p {
 		text-wrap: nowrap;
 		color: $teal-accent;
-		font-weight: 500;
 	}
 }
 
@@ -365,6 +364,7 @@ $hero-icon-button-size-bp-med: 2.25rem;
 
 	.work-availability-wrapper {
 		gap: 0.75rem;
+		font-size: 1.125rem;
 	}
 
 	.text-work-availability,
@@ -449,16 +449,16 @@ $hero-icon-button-size-bp-med: 2.25rem;
 	}
 
 	.hero-intro {
-		font-size: 1.25rem;
-		max-width: 35.19rem;
+		font-size: 1.35rem;
+		max-width: 42.2rem;
 		line-height: 155%;
 	}
 
 	.hero-tagline {
 		width: fit-content;
-		font-size: 1.5rem;
+		font-size: 1.85rem;
 		letter-spacing: 0;
-		max-width: 27rem;
+		max-width: 33rem;
 	}
 
 	.hero-taglines-wrapper {
