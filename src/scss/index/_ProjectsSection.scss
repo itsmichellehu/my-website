@@ -468,6 +468,10 @@ $boardspace-tag-color: #5488ca;
 		cursor: default;
 		width: 100%;
 	}
+
+	.project-card-cta-btn {
+		font-size: 1.125rem;
+	}
 }
 
 @include breakpoint(lg) {
