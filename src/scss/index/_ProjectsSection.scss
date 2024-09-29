@@ -18,7 +18,7 @@ $boardspace-tag-color: #5488ca;
 	gap: 1.75rem;
 	align-items: left;
 	width: 100%;
-	margin-bottom: 4rem;
+	margin-bottom: 2rem;
 	transition: transform 0.3s ease-in-out;
 }
 
@@ -195,7 +195,8 @@ $boardspace-tag-color: #5488ca;
 	font-weight: 500;
 	font-size: 1.125rem;
 	cursor: default !important;
-	transition: transform 0.3s ease-in-out, width 0.3s ease-in-out; // Animate the width
+	transition: transform 0.3s ease-in-out, width 0.3s ease-in-out;
+	margin-bottom: 0;
 
 	&::before {
 		content: '';
