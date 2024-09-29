@@ -8,7 +8,7 @@ function NavBar() {
                 <ul class="navbar-menu" id="menu">
                     <li class="nav-item"><a href="/">Work</a></li>
                     <li class="nav-item"><a href="/about">About</a></li>
-                    <li class="nav-item"><a href="/MichelleHuResume.pdf" target="_blank">Resume</a>
+                    <li class="nav-item"><a href="assets/files/MichelleHuResume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
 </li>
                     <li class="nav-item hide-sm"><a href="www.linkedin.com/in/itsmichellehu" target="_blank" rel="noopener noreferrer">LinkedIn</a>
 </li>

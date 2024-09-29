@@ -14,7 +14,7 @@ function Footer() {
                         </a>
                     </div>
                     <div class="social-link">
-                        <a href="/MichelleHuResume.pdf" target="_blank"
+                        <a href="assets/files/MichelleHuResume.pdf" target="_blank"
                             rel="noopener noreferrer">
                             <p>Resume</p>
                         </a>
