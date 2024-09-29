@@ -19,20 +19,17 @@ $boardspace-tag-color: #5488ca;
 	align-items: left;
 	width: 100%;
 	margin-bottom: 4rem;
+	transition: transform 0.3s ease-in-out;
 }
 
 .project-card.project-boardspace {
-	transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
-
 	&:hover {
 		.boardspace-coming-soon {
 			transform: translateY(-0.1rem);
-			opacity: 1; // Ensure full opacity on hover
 		}
 
-		// Ensure underline on hover of .project-link-text-label inside project-card-cta-btn
 		.boardspace-coming-soon::before {
-			width: 100%; // Expand the underline from left to right
+			width: 100%;
 		}
 	}
 }
@@ -40,10 +37,8 @@ $boardspace-tag-color: #5488ca;
 .project-card.project-postup,
 .project-card.project-tastebuds {
 	cursor: pointer;
-	transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
 
 	&:hover {
-		opacity: 0.75;
 		transform: scale(1.01);
 		transform: translateY(-0.1rem);
 
@@ -52,12 +47,11 @@ $boardspace-tag-color: #5488ca;
 		}
 
 		.project-link-text-label::before {
-			width: 100%; // Expand the underline from left to right
+			width: 100%;
 		}
 	}
 
 	&:hover:active {
-		opacity: 1;
 		transform: scale(1);
 	}
 }
@@ -110,9 +104,6 @@ $boardspace-tag-color: #5488ca;
 	overflow: hidden;
 }
 
-//
-// 'View Project' Link
-
 .project-link-text-label {
 	text-transform: uppercase;
 	position: relative; // Required to position the ::before pseudo-element
@@ -156,7 +147,6 @@ $boardspace-tag-color: #5488ca;
 		display: inline-block;
 		padding: 0.5rem 0;
 
-		// Icon styling within the link
 		>.material-symbols-outlined {
 			font-size: 1.125rem;
 			vertical-align: middle;
@@ -198,15 +188,6 @@ $boardspace-tag-color: #5488ca;
 	max-width: 100%;
 }
 
-//
-// .thumb-tastebuds {
-// 	width: auto;
-// }
-//
-// .thumb-postup {
-// 	width: 35%;
-// }
-
 .boardspace-coming-soon {
 	width: fit-content;
 	padding-top: 0.5rem;
@@ -214,6 +195,7 @@ $boardspace-tag-color: #5488ca;
 	font-weight: 500;
 	font-size: 1.125rem;
 	cursor: default !important;
+	transition: transform 0.3s ease-in-out, width 0.3s ease-in-out; // Animate the width
 
 	&::before {
 		content: '';
@@ -223,7 +205,6 @@ $boardspace-tag-color: #5488ca;
 		width: 0; // Initial width set to 0 (invisible)
 		height: 2px; // Thickness of the underline
 		background-color: $medium-grey; // Underline color
-		transition: width 0.3s ease-in-out; // Animate the width
 	}
 
 	&:hover::before {
@@ -337,7 +318,6 @@ $boardspace-tag-color: #5488ca;
 	line-height: 150%;
 	margin-bottom: 0.75rem;
 	max-width: 35rem;
-	// display: none;
 }
 
 @include breakpoint(sm) {
@@ -392,14 +372,12 @@ $boardspace-tag-color: #5488ca;
 
 	.number-label {
 		display: none;
-		// grid-area: a;
 		font-size: 5.25rem;
 		color: #a0a0a0;
 	}
 
 	.coming-soon-label {
 		display: none;
-		// grid-area: a;
 		font-size: 2.5rem;
 		color: #a0a0a0;
 		font-weight: 500;
