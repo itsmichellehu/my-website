@@ -447,6 +447,14 @@ $boardspace-tag-color: #5488ca;
 }
 
 @include breakpoint(lg) {
+	.project-thumb-mobile {
+		display: none !important;
+	}
+
+	.project-thumb-desktop {
+		display: flex !important;
+	}
+
 	.project-card {
 		gap: 3rem;
 	}
@@ -459,14 +467,6 @@ $boardspace-tag-color: #5488ca;
 @include breakpoint(xl) {
 	.projects-section {
 		padding: 5rem 0;
-	}
-
-	.project-thumb-mobile {
-		display: none !important;
-	}
-
-	.project-thumb-desktop {
-		display: flex !important;
 	}
 
 	.thumb-tastebuds,
