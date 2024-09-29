@@ -1,4 +1,0 @@
-RewriteEngine On
-
-# Redirect the pretty URL to the actual file path
-RewriteRule ^MichelleHuResume\.pdf$ assets/files/MichelleHuResume.pdf [L]
