@@ -24,17 +24,17 @@
     <script src="components/Scrollable/scrollable.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            const containers = document.querySelectorAll('.project-card');
+            const projectCards = document.querySelectorAll('.project-card');
 
-            containers.forEach(container => {
-                const projectMedia = container.querySelector('.project-thumb-desktop');
+            projectCards.forEach(card => {
+                const projectMedia = card.querySelector('.project-thumb-desktop');
 
-                container.addEventListener('mouseenter', () => {
+                card.addEventListener('mouseenter', () => {
                     projectMedia.currentTime = 0; // Reset the video to the beginning
                     projectMedia.play(); // Play the video
                 });
 
-                container.addEventListener('mouseleave', () => {
+                card.addEventListener('mouseleave', () => {
                     projectMedia.pause(); // Pause the video
                     projectMedia.currentTime = 0; // Reset the video to the beginning
                 });
@@ -148,7 +148,6 @@
                 <div class="projects-wrapper">
                     <h2 class="section-heading hide">Product<br />design projects</h2>
                     <div class="project-card hide mb-0">
-                        <p class="number-label hide">01</p>
                         <div class="project-thumb-container" onmouseenter="playGif(this)"
                             onmouseleave="resetGif(this)">
                             <div class="project-thumb-wrapper" id="postupBG">
@@ -178,7 +177,6 @@
                         </div>
                     </div>
                     <div id="project-boardspace" class="project-card project-boardspace">
-                        <p class="coming-soon-label">Coming soon</p>
                         <div class="project-link-boardspace">
                             <div class="project-thumb-container boardspace-thumb-container">
                                 <div class="project-thumb-wrapper">
@@ -223,7 +221,6 @@
                         </div>
                     </div>
                     <div id="project-tastebuds" class="project-card project-tastebuds">
-                        <p class="number-label">01</p>
                         <a href="tastebuds" class="project-link">
                             <div class="project-thumb-container tastebuds-thumb-container">
                                 <div class="project-thumb-wrapper">
