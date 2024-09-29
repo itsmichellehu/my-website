@@ -224,7 +224,7 @@ $boardspace-tag-color: #5488ca;
 .boardspace-coming-soon {
 	width: fit-content;
 	padding-top: 0.5rem;
-	color: $boardspace-tag-color !important;
+	color: $medium-grey !important;
 	font-weight: 500;
 	font-size: 1.125rem;
 	cursor: default !important;
@@ -236,7 +236,7 @@ $boardspace-tag-color: #5488ca;
 		bottom: -2px; // Position the underline below the text
 		width: 0; // Initial width set to 0 (invisible)
 		height: 2px; // Thickness of the underline
-		background-color: $boardspace-tag-color; // Underline color
+		background-color: $medium-grey; // Underline color
 		transition: width 0.3s ease-in-out; // Animate the width
 	}
 
