@@ -2,35 +2,47 @@ function Footer() {
     const existingFooter = document.querySelector('footer');
     if (!existingFooter) {
         const footerHTML = `
-        <footer>
-            <div class="wrapper">
-            <div class="text-wrapper">
-                    <p class="headline">Let's make a difference together.</p>
-                    <div class="hero-buttons-compact-wrapper">
-                                    <div class="social-link">
-                                        <a href="wwww.linkedin.com/in/itsmichellehu" target="_blank"
-                                            rel="noopener noreferrer">
-                                            <p>Connect on LinkedIn</p>
-                                        </a>
-                                    </div>
-                                    <div class="social-link">
-                                        <a href="assets/files/MichelleHuResume.pdf" target="_blank"
-                                            rel="noopener noreferrer">
-                                            <p>View my Resume</p>
-                                        </a>
-                                    </div>
-                                </div>
-                    <p class="tagline">Designed and coded with love by yours truly. 👩🏻‍💻 <br>
-                    </p>
-                    <p class="copyright-text">Michelle Hu © ${new Date().getFullYear()}</p>
+    <footer>
+        <div class="wrapper">
+            <p class="headline">Let's make a difference together.</p>
+            <div>
+                <div class="social-links-wrapper">
+                    <div class="social-link">
+                        <a href="wwww.linkedin.com/in/itsmichellehu" target="_blank"
+                            rel="noopener noreferrer">
+                            <p>LinkedIn</p>
+                        </a>
+                    </div>
+                    <div class="social-link">
+                        <a href="assets/files/MichelleHuResume.pdf" target="_blank"
+                            rel="noopener noreferrer">
+                            <p>Resume</p>
+                        </a>
+                    </div>
+                    <div class="social-link">
+                        <a href="assets/files/MichelleHuResume.pdf" target="_blank"
+                            rel="noopener noreferrer">
+                            <p>My Work</p>
+                        </a>
+                    </div>
+                    <div class="social-link">
+                        <a href="assets/files/MichelleHuResume.pdf" target="_blank"
+                            rel="noopener noreferrer">
+                            <p>About me</p>
+                        </a>
+                    </div>
                 </div>
-                <div class="cta-buttons hide">
-                    <button id="scrollToProjects-2" class="btn-primary scroll-button">See my work</button>
-                    <button class="btn-secondary">View my resume</button>
-                </div>
+                <p class="tagline">Designed and coded with love by yours truly.</p>
+                <p class="copyright-text">Michelle Hu © 2024</p>
             </div>
-        </footer>
-        `;
+            <div class="cta-buttons hide">
+                <button id="scrollToProjects-2" class="btn-primary scroll-button">See my
+                    work</button>
+                <button class="btn-secondary">View my resume</button>
+            </div>
+        </div>
+    </footer>
+`;
 
         document.body.insertAdjacentHTML('beforeend', footerHTML);
 

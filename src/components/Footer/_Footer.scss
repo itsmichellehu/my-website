@@ -10,100 +10,96 @@ footer {
 	justify-content: start;
 }
 
-.content {
-	width: 90vw;
-
-	h2 {
-		margin-bottom: 0.5rem;
-	}
-
-	#footer-text {
-		color: #444;
-		font-family: Inter;
-		font-size: 0.875rem;
-		font-style: normal;
-		font-weight: 400;
-		line-height: 150%;
-		margin-bottom: 0;
-	}
-}
-
 .headline {
+	grid-area: a;
+	max-width: 28rem;
 	color: #1e1e1e;
 	font-family: Inter;
-	font-size: clamp(2.125rem, 5vw, 4.25rem) !important;
+	font-size: clamp(2rem, 5vw, 3rem) !important;
 	font-weight: 700;
-	margin-bottom: 1.25rem;
+	margin-bottom: 0;
 	width: fit-content;
 	letter-spacing: -0.01rem;
 	line-height: 125%;
 }
 
 .tagline {
+	grid-area: c;
 	color: $medium-grey;
 	font-family: "IBM Plex Mono";
-	font-size: 1rem;
 	font-style: normal;
-	font-weight: 500;
 	line-height: 145%;
 	letter-spacing: 0.04375rem;
 	text-align: left;
-	margin-right: 20%;
-	margin-bottom: 1rem;
+	font-size: 1rem;
+	margin-bottom: 0.75rem;
 }
 
 .copyright-text {
-	color: $medium-grey;
+	grid-area: d;
+	color: $dark-grey;
 	font-family: Inter;
 	font-family: "IBM Plex Mono";
-	font-size: 1;
 	font-style: normal;
 	font-weight: 400;
 	line-height: 135%;
 	/* 1.18125rem */
 	letter-spacing: 0.02rem;
 	margin-bottom: 0;
+	font-size: 1rem;
 	// ss
 }
 
 .wrapper {
 	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
 	width: 90vw;
-	margin: auto;
 	max-width: $nav-footer-max-width;
 	align-items: center;
-}
-
-.text-wrapper {
-	display: flex;
-	flex-direction: column;
-	gap: 0.5rem;
+	justify-content: space-between;
 	margin: auto;
+	gap: 2rem;
 }
 
 .social-links-wrapper {
 	display: flex;
-	flex-direction: column !important;
-	margin-bottom: 1.5rem !important;
+	flex-direction: row !important;
 	gap: 0.75rem;
 	grid-area: b;
 	width: fit-content;
+	align-self: center;
+	margin-bottom: 1rem;
 
 	>.header {
 		font-size: 1.25rem !important;
 		font-weight: 500 !important;
 		margin-bottom: 0;
 	}
+
+	.social-link:last-child {
+		padding-right: 0;
+		border: 0;
+	}
+}
+
+.link-heading {
+	font-size: 1.25rem;
+	font-weight: 500;
+	margin-bottom: 0;
+	color: $dark-grey;
 }
 
 .social-link {
+	padding-right: 0.75rem;
+	border-right: 2px solid $teal-accent;
+}
+
+.social-link>a>p {
 	width: fit-content;
-}
-
-.social-link {
 	font-weight: 400 !important;
+	color: $teal-accent !important;
+	margin-bottom: 0;
+	text-wrap: nowrap;
+	line-height: 100%;
 }
 
 @include breakpoint(med) {
@@ -121,10 +117,6 @@ footer {
 
 	.text-wrapper {
 		margin: auto;
-	}
-
-	.tagline {
-		text-align: center;
 	}
 
 	.cta-buttons {
