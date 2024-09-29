@@ -8,25 +8,19 @@ function Footer() {
             <div>
                 <div class="social-links-wrapper">
                     <div class="social-link">
-                        <a href="wwww.linkedin.com/in/itsmichellehu" target="_blank"
+                        <a href="www.linkedin.com/in/itsmichellehu" target="_blank"
                             rel="noopener noreferrer">
                             <p>LinkedIn</p>
                         </a>
                     </div>
                     <div class="social-link">
-                        <a href="assets/files/MichelleHuResume.pdf" target="_blank"
+                        <a href="/MichelleHuResume.pdf" target="_blank"
                             rel="noopener noreferrer">
                             <p>Resume</p>
                         </a>
                     </div>
                     <div class="social-link">
-                        <a href="assets/files/MichelleHuResume.pdf" target="_blank"
-                            rel="noopener noreferrer">
-                            <p>My Work</p>
-                        </a>
-                    </div>
-                    <div class="social-link">
-                        <a href="assets/files/MichelleHuResume.pdf" target="_blank"
+                        <a href="about" target="_blank"
                             rel="noopener noreferrer">
                             <p>About me</p>
                         </a>

@@ -11,8 +11,7 @@ footer {
 }
 
 .headline {
-	grid-area: a;
-	max-width: 29rem;
+	max-width: 21rem;
 	color: #1e1e1e;
 	font-family: Inter;
 	font-size: clamp(2rem, 5vw, 3rem) !important;
@@ -24,7 +23,6 @@ footer {
 }
 
 .tagline {
-	grid-area: c;
 	color: $medium-grey;
 	font-family: "IBM Plex Mono";
 	font-style: normal;
@@ -36,7 +34,6 @@ footer {
 }
 
 .copyright-text {
-	grid-area: d;
 	color: $dark-grey;
 	font-family: Inter;
 	font-family: "IBM Plex Mono";
@@ -52,19 +49,17 @@ footer {
 
 .wrapper {
 	display: flex;
+	flex-direction: column;
 	width: 90vw;
 	max-width: $nav-footer-max-width;
-	align-items: center;
-	justify-content: space-between;
 	margin: auto;
-	gap: 2rem;
+	gap: 1rem;
 }
 
 .social-links-wrapper {
 	display: flex;
 	flex-direction: row !important;
 	gap: 0.75rem;
-	grid-area: b;
 	width: fit-content;
 	align-self: center;
 	margin-bottom: 1rem;
@@ -112,11 +107,14 @@ footer {
 	}
 
 	.wrapper {
+		flex-direction: row;
 		align-items: center;
+		justify-content: space-between;
+		gap: 2rem;
 	}
 
-	.text-wrapper {
-		margin: auto;
+	.headline {
+		max-width: 29rem;
 	}
 
 	.cta-buttons {
