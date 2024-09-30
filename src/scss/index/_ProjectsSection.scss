@@ -177,8 +177,7 @@ $boardspace-tag-color: #5488ca;
 
 .boardspace-coming-soon {
 	width: fit-content;
-	padding-top: 0.5rem;
-	color: $medium-grey !important;
+	color: #cccccc !important;
 	font-weight: 500;
 	font-size: 1.125rem;
 	transition: transform 0.3s ease-in-out, width 0.3s ease-in-out;
@@ -424,7 +423,6 @@ $boardspace-tag-color: #5488ca;
 	}
 
 	.project-description {
-		font-size: 1.25rem;
 		margin-bottom: 1.25rem;
 	}
 }
