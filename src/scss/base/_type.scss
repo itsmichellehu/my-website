@@ -31,7 +31,10 @@ p {
 h1 {
 	font-size: 2.53rem;
 	color: $black;
-	margin-bottom: 0.5rem;
+	margin-bottom: 1.5rem;
+	font-weight: 600;
+	line-height: 120%;
+	/* 2.03125rem */
 	letter-spacing: -0.04rem;
 }
 
@@ -40,11 +43,11 @@ h2 {
 	color: #1e1e1e;
 	color: $forest-green;
 	flex: 1;
-	font-size: 1.99rem;
+	font-size: 2.074rem;
 	font-style: normal;
-	font-weight: 500;
+	font-weight: 600;
 	line-height: 125%;
-	margin-bottom: 1.5rem;
+	margin-bottom: 2rem;
 	margin-top: 0;
 }
 
@@ -55,7 +58,7 @@ h3 {
 	font-size: 1.659rem;
 	font-weight: 500;
 	line-height: 130%;
-	margin-bottom: 0.75rem;
+	margin-bottom: 1.25rem;
 	margin-top: 1rem;
 }
 
@@ -67,7 +70,7 @@ h4 {
 	/* CSS variable, ensure it's defined in your styles */
 	font-size: 1.38rem;
 	margin-top: 2rem;
-	margin-bottom: 1rem;
+	margin-bottom: 1.25rem;
 
 	&::first-letter {
 		text-transform: capitalize;
@@ -99,8 +102,8 @@ h6 {
 
 	h1 {
 		font-size: 2.986rem !important;
-		margin-bottom: 0;
 		letter-spacing: -0.0525rem;
+		margin-bottom: 1.5rem;
 	}
 
 	h2 {
