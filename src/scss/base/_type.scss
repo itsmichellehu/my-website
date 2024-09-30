@@ -7,10 +7,6 @@ h5,
 h6 {
 	margin: 0;
 	padding: 0;
-	font-family: "Inter", sans-serif;
-	font-weight: 500;
-	font-size: inherit;
-	margin-top: 0;
 }
 
 .paragraph {
@@ -34,9 +30,7 @@ p {
 /* Specific heading styles with colors and sizes */
 h1 {
 	font-size: 2.53rem;
-	/* Example size, adjust as necessary */
 	color: $black;
-	/* Assuming a color variable, adjust as needed */
 	margin-bottom: 0.5rem;
 }
 
@@ -60,7 +54,6 @@ h3 {
 	font-size: 1.659rem;
 	font-weight: 500;
 	line-height: 130%;
-	/* Slightly adjusted for better readability */
 	margin-bottom: 0.75rem;
 	margin-top: 1rem;
 }
@@ -85,7 +78,6 @@ h5 {
 	letter-spacing: 0;
 	line-height: 140%;
 	color: $secondary-green;
-	/* CSS variable, ensure it's defined in your styles */
 	font-size: 1.152rem;
 	margin-top: 2rem;
 	margin-bottom: 0.5rem;
@@ -93,10 +85,8 @@ h5 {
 
 h6 {
 	font-size: 1.125rem;
-	/* Smallest heading, specify if needed */
 	line-height: 120%;
 	color: $primary-color;
-	/* Example, adjust as necessary */
 	margin-top: 2rem;
 	margin-bottom: 0.5rem;
 }
