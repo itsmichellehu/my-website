@@ -58,8 +58,9 @@ $section-padding-mobile: 3rem;
 	align-items: center;
 	justify-content: center;
 	margin: auto;
-	margin-bottom: 1.75rem;
+	margin-bottom: 1.5rem;
 	height: 50vh;
+	max-height: 28rem;
 	grid-area: b;
 
 	img {
