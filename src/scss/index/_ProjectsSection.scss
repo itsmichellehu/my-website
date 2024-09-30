@@ -178,20 +178,20 @@ $boardspace-tag-color: #5488ca;
 	font-size: 1.125rem;
 	transition: transform 0.3s ease-in-out, width 0.3s ease-in-out;
 	margin-bottom: 0;
-
-	&::before {
-		content: '';
-		position: absolute;
-		left: 0;
-		bottom: -2px; // Position the underline below the text
-		width: 0; // Initial width set to 0 (invisible)
-		height: 2px; // Thickness of the underline
-		background-color: $medium-grey; // Underline color
-	}
-
-	&:hover::before {
-		width: 100%; // Expand underline to full width
-	}
+	//
+	// 	&::before {
+	// 		content: '';
+	// 		position: absolute;
+	// 		left: 0;
+	// 		bottom: -2px; // Position the underline below the text
+	// 		width: 0; // Initial width set to 0 (invisible)
+	// 		height: 2px; // Thickness of the underline
+	// 		background-color: $medium-grey; // Underline color
+	// 	}
+	//
+	// 	&:hover::before {
+	// 		width: 100%; // Expand underline to full width
+	// 	}
 }
 
 .project-details-container {
