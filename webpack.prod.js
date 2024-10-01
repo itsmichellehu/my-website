@@ -2,9 +2,11 @@ const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const { type } = require("os");
 // const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 
 module.exports = {
+    mode: 'production',
     entry: {
         index: './src/js/index.js',
         about: './src/js/about.js',
@@ -15,6 +17,7 @@ module.exports = {
     output: {
         filename: 'js/[name].js',
         path: path.resolve(__dirname, 'dist'),
+        clean: true,
         // publicPath: '/your-repo-name/' // Set this to your actual repo name
     },
     stats: {
@@ -42,6 +45,7 @@ module.exports = {
             },
             {
                 test: /\.(png|jpe?g|gif|svg)$/i,
+                type: 'asset/resource',
                 use: [
                     {
                         loader: 'file-loader',
@@ -112,6 +116,9 @@ module.exports = {
             template: './src/tastebuds.html',
             filename: 'tastebuds.html',
             chunks: ['tastebuds']
+        }),
+        new HtmlWebpackPlugin({
+            template: './src/index.html', // Your HTML template file
         }),
         new CopyWebpackPlugin({
             patterns: [

@@ -47,7 +47,7 @@ module.exports = {
             },
             {
                 test: /\.(png|jpg|jpeg|gif)$/i,
-                type: 'asset',
+                type: 'asset/resource',
                 parser: {
                     dataUrlCondition: {
                         maxSize: 8192,
@@ -144,6 +144,9 @@ module.exports = {
             template: './src/postup.html',
             chunks: ['postup'],
             filename: 'postup.html',
+        }),
+        new HtmlWebpackPlugin({
+            template: './src/index.html', // Your HTML template file
         }),
         new CopyWebpackPlugin({
             patterns: [
