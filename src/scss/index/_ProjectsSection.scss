@@ -383,7 +383,7 @@ $boardspace-tag-color: #5488ca;
 	}
 
 	.project-title {
-		font-size: 2.55rem !important;
+		font-size: 2.25rem !important;
 		letter-spacing: -0.0125rem;
 		margin-bottom: 1.35rem;
 	}
@@ -414,6 +414,12 @@ $boardspace-tag-color: #5488ca;
 @include breakpoint(lg) {
 	.project-card {
 		gap: 3rem;
+	}
+
+
+	.project-title {
+		font-size: 2.55rem !important;
+		letter-spacing: -0.0125rem;
 	}
 
 	.project-description {
