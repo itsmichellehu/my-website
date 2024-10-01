@@ -110,9 +110,6 @@ module.exports = {
             chunks: ['postup'],
             filename: 'postup.html'
         }),
-        new HtmlWebpackPlugin({
-            template: './src/index.html', // Your HTML template file
-        }),
         new CopyWebpackPlugin({
             patterns: [
                 { from: path.resolve(__dirname, 'src/assets/images'), to: 'assets/images' },
