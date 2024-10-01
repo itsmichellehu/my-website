@@ -79,7 +79,7 @@ $boardspace-tag-color: #5488ca;
 	background-color: #f6f6f6;
 	overflow: hidden;
 	padding: 2rem 5vw;
-	aspect-ratio: 8 / 7;
+	aspect-ratio: 8 / 8;
 	width: 90vw;
 
 	&#postupBG {
@@ -175,6 +175,11 @@ $boardspace-tag-color: #5488ca;
 .thumb-boardspace {
 	width: 90%;
 	max-width: 100%;
+}
+
+.thumb-postup,
+.thumb-tastebuds {
+	max-height: 85%;
 }
 
 .boardspace-coming-soon {
