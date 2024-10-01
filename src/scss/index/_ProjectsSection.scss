@@ -134,8 +134,14 @@ $boardspace-tag-color: #5488ca;
 	color: $teal-accent !important;
 
 	>.material-symbols-outlined {
-		font-size: 1.5rem;
-		padding-bottom: 0.125rem;
+		font-size: 1.25rem;
+	}
+
+	@include breakpoint(med) {
+		>.material-symbols-outlined {
+			font-size: 1.5rem;
+			padding-bottom: 0.125rem;
+		}
 	}
 }
 
