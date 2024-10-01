@@ -137,7 +137,7 @@ $boardspace-tag-color: #5488ca;
 		font-size: 1.25rem;
 	}
 
-	@include breakpoint(med) {
+	@include breakpoint(lg) {
 		>.material-symbols-outlined {
 			font-size: 1.5rem;
 			padding-bottom: 0.125rem;
@@ -333,10 +333,6 @@ $boardspace-tag-color: #5488ca;
 		width: fit-content;
 		max-width: 100%;
 	}
-
-	.project-description {
-		font-size: 1.125rem;
-	}
 }
 
 @include breakpoint(med) {
@@ -405,10 +401,6 @@ $boardspace-tag-color: #5488ca;
 		margin-bottom: 1.05rem;
 		width: 100%;
 	}
-
-	.project-card-button-label {
-		font-size: 1.125rem;
-	}
 }
 
 @include breakpoint(lg) {
@@ -423,7 +415,12 @@ $boardspace-tag-color: #5488ca;
 	}
 
 	.project-description {
+		font-size: 1.125rem;
 		margin-bottom: 1.25rem;
+	}
+
+	.project-card-button-label {
+		font-size: 1.125rem;
 	}
 }
 
