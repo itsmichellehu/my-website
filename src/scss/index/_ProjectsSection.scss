@@ -162,13 +162,8 @@ $boardspace-tag-color: #5488ca;
 	}
 }
 
-.project-thumb-mobile {
-	display: flex !important;
-	margin: auto;
-}
-
-.project-thumb-desktop {
-	display: none !important;
+.project-thumb {
+	display: flex;
 	margin: auto;
 }
 
@@ -417,14 +412,6 @@ $boardspace-tag-color: #5488ca;
 }
 
 @include breakpoint(lg) {
-	.project-thumb-mobile {
-		display: none !important;
-	}
-
-	.project-thumb-desktop {
-		display: flex !important;
-	}
-
 	.project-card {
 		gap: 3rem;
 	}

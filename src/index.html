@@ -10,7 +10,7 @@
     <meta name="description"
         content="Michelle Hu is a product designer and developer based in Los Angeles, California. Certificate in UX Design Career from Springboard. B.A. in Sociology from UC Irvine 2022. Specializes in product design, front-end development, and design systems. Passionate about Tech for Good. Michelle is working on an e-book on bridging the gap between designers and developers." />
     <!-- Open Graph Meta Tags for social media previews -->
-    <meta property="og:title" content="Michelle Hu | Designer & Developer" />
+    <meta property="og:title" content="Michelle Hu - Product Designer & Developer" />
     <meta property="og:description"
         content="Michelle Hu is a product designer and developer based in Los Angeles, California. Certificate in UX Design Career from Springboard. B.A. in Sociology from UC Irvine 2022. Specializes in product design, front-end development, and design systems. Passionate about Tech for Good. Michelle is working on an e-book on bridging the gap between designers and developers." />
     <meta property="og:image"
@@ -63,7 +63,7 @@
             const projectCards = document.querySelectorAll('.project-card');
 
             projectCards.forEach(card => {
-                const projectMedia = card.querySelector('.project-thumb-desktop');
+                const projectMedia = card.querySelector('.project-thumb');
 
                 card.addEventListener('mouseenter', () => {
                     projectMedia.currentTime = 0; // Reset the video to the beginning
@@ -186,18 +186,10 @@
                         <div class="project-link-boardspace">
                             <div class="project-thumb-container boardspace-thumb-container">
                                 <div class="project-thumb-wrapper">
-                                    <video id="exclude-video-jquery"
-                                        class="project-thumb-mobile thumb-boardspace" autoplay loop
-                                        muted hide-controls>
-                                        <source src="assets/images/thumbs/thumb-boardspace.mp4"
-                                            type="video/mp4">
-                                        Your browser does not support the video tag.
-                                    </video>
-                                    <video id="exclude-video-jquery"
-                                        class="project-thumb-desktop thumb-boardspace" loop muted
-                                        hide-controls>
-                                        <source src="assets/images/thumbs/thumb-boardspace.mp4"
-                                            type="video/mp4">
+                                    <video id="exclude-video-jquery" class="project-thumb thumb-boardspace autoplay loop muted
+                                        hide-controls playsinline>
+                                        <source src=" /assets/images/thumbs/thumb-boardspace.mp4"
+                                        type="video/mp4">
                                         Your browser does not support the video tag.
                                     </video>
                                 </div>
@@ -231,15 +223,8 @@
                             <div class="project-thumb-container tastebuds-thumb-container">
                                 <div class="project-thumb-wrapper">
                                     <video id="exclude-video-jquery"
-                                        class="project-thumb-mobile thumb-tastebuds" autoplay loop
-                                        muted hide-controls>
-                                        <source src="assets/images/thumbs/thumb-tastebuds.mp4"
-                                            type="video/mp4">
-                                        Your browser does not support the video tag.
-                                    </video>
-                                    <video id="exclude-video-jquery"
-                                        class="project-thumb-desktop thumb-tastebuds" loop muted
-                                        hide-controls>
+                                        class="project-thumb thumb-tastebuds" autoplay loop muted
+                                        hide-controls playsinline>
                                         <source src="assets/images/thumbs/thumb-tastebuds.mp4"
                                             type="video/mp4">
                                         Your browser does not support the video tag.
@@ -280,16 +265,9 @@
                             <div class="project-thumb-container postup-thumb-container">
                                 <div class="project-thumb-wrapper">
                                     <video id="exclude-video-jquery"
-                                        class="project-thumb-mobile thumb-postup" autoplay loop
-                                        muted hide-controls>
-                                        <source src="assets/images/thumbs/thumb-postup.mp4"
-                                            type="video/mp4">
-                                        Your browser does not support the video tag.
-                                    </video>
-                                    <video id="exclude-video-jquery"
-                                        class="project-thumb-desktop thumb-tastebuds" loop muted
-                                        hide-controls>
-                                        <source src="assets/images/thumbs/thumb-postup.mp4"
+                                        class="project-thumb thumb-postup" autoplay loop muted
+                                        hide-controls playsinline>
+                                        <source src="/assets/images/thumbs/thumb-postup.mp4"
                                             type="video/mp4">
                                         Your browser does not support the video tag.
                                     </video>
