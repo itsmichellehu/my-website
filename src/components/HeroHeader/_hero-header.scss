@@ -35,19 +35,16 @@
 
 	.hero {
 		padding: 2rem;
-		max-height: 36rem;
+		max-height: 33rem;
 		margin-top: 4rem;
 		flex: 1;
-
-
-		&.hero-postup {
-			max-height: 37rem;
-		}
 	}
 
-	.hero-video,
-	.hero-video-postup {
-		height: 100%;
-		max-height: 32rem;
+	.hero-video-postup,
+	.hero-video {
+		display: flex;
+		max-width: 80%;
+		max-height: 100%;
+		margin: auto;
 	}
 }
