@@ -12,6 +12,9 @@ $primary-color: #479a9a;
 
 @import "index/all-index";
 
+main {
+	background-color: $white;
+}
 
 .default-nav-color {
 	background-color: white;
