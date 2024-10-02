@@ -24,6 +24,12 @@ $boardspace-tag-color: #5488ca;
 
 	&.project-boardspace {
 		cursor: default;
+
+		&:hover {
+			.boardspace-coming-soon {
+				color: #a8a8a8 !important;
+			}
+		}
 	}
 }
 
@@ -31,17 +37,6 @@ $boardspace-tag-color: #5488ca;
 	transition: transform 0.3s ease-in-out;
 }
 
-.project-link.project-boardspace {
-	&:hover {
-		.boardspace-coming-soon {
-			color: #a8a8a8;
-		}
-
-		.boardspace-coming-soon::before {
-			width: 100%;
-		}
-	}
-}
 
 .project-link.project-postup,
 .project-link.project-tastebuds {
