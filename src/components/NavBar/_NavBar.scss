@@ -17,7 +17,10 @@ nav {
 	top: 0;
 	z-index: 2000;
 	transition: background-color 0.3s ease, top 0.3s ease;
-	background: #fff;
+}
+
+.navbar {
+	background-color: white;
 }
 
 .navbar-hidden {
