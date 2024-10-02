@@ -34,7 +34,6 @@ $boardspace-tag-color: #5488ca;
 .project-link.project-boardspace {
 	&:hover {
 		.boardspace-coming-soon {
-			transform: translateY(-0.2rem);
 		}
 
 		.boardspace-coming-soon::before {
@@ -48,7 +47,6 @@ $boardspace-tag-color: #5488ca;
 
 	&:hover {
 		transform: scale(1.01);
-		transform: translateY(-0.1rem);
 
 		.project-title {
 			color: $teal-accent;
