@@ -399,6 +399,10 @@ $boardspace-tag-color: #5488ca;
 }
 
 @include breakpoint(lg) {
+
+	.project-thumb-container {
+		max-height: 32rem;
+	}
 	.project-card {
 		gap: 3rem;
 	}
