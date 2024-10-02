@@ -8,7 +8,7 @@ function Footer() {
             <div>
                 <div class="social-links-wrapper">
                     <div class="social-link">
-                        <a href="www.linkedin.com/in/itsmichellehu" target="_blank"
+                        <a href="https://www.linkedin.com/in/itsmichellehu" target="_blank"
                             rel="noopener noreferrer">
                             <p>LinkedIn</p>
                         </a>
