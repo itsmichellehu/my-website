@@ -1,110 +1,53 @@
+.hero-overview-wrapper {
+	display: flex;
+	flex-direction: column;
+}
+
 .hero {
 	display: flex;
 	align-items: flex-start;
-	height: 50vh;
+	height: auto;
 	overflow: hidden;
+	margin-top: 3rem;
+	min-height: 17rem;
+	height: 55vh;
+	max-height: 20.25rem;
 	padding-top: 2rem;
+}
 
-	&.hero-tastebuds {
-		height: 45vh;
+.hero-video {
+	display: flex;
+	max-width: 80%;
+	max-height: 21rem;
+	margin: auto;
+}
+
+.hero-video-postup {
+	width: 50%;
+	margin: auto;
+}
+
+@include breakpoint(med) {
+	.hero-overview-wrapper {
+		height: 100vh;
+		max-height: 60.125rem;
 	}
 
-	&__content {
-		display: flex;
-		flex-direction: column;
-		width: 100%;
-		align-items: center;
-		justify-content: flex-start;
-		height: 100%;
-	}
-
-	.hero-tastebuds-video {
-		display: flex;
-		margin: auto auto 0 auto;
-		width: 80%;
-		max-width: 20rem;
-	}
-
-	&-postup-video {
-		display: flex;
-		margin: auto auto 0 auto;
-		width: 50%;
-		max-width: 15rem;
-	}
-
-	&__image-wrapper {
-		overflow: hidden;
-		margin: auto;
-		margin-bottom: 0;
-	}
-
-	&__image {
-		display: flex;
-		width: 100%;
-		max-width: 20rem;
-	}
-
-	@include breakpoint(sm) {
-		//
-		// 		&-postup-video {
-		// 			display: flex;
-		// 			margin: auto auto 0 auto;
-		// 			width: 50%;
-		// 			max-width: 15rem;
-		// 		}
-	}
-
-	@include breakpoint(med) {
-		height: 60vh;
-		padding-top: 3rem;
-		max-height: 30rem;
-
-		&.hero-tastebuds {
-			height: 55vh;
-			max-height: 36rem;
-		}
-
-		&__gif-wrapper {
-			width: 35%;
-			max-width: 20rem;
-			height: 100%;
-		}
-
-		&-postup-video &__image-wrapper {
-			max-width: 30rem;
-		}
-	}
-
-	@include breakpoint(lg) {
-		padding-top: 2rem;
+	.hero {
+		padding: 2rem;
 		max-height: 36rem;
-
-		.hero-tastebuds {
-			padding-top: 2rem;
-			max-height: 36rem;
-		}
-
-		&-postup-video {
-			height: auto;
-			max-width: 20rem;
-		}
-
-		&__image {
-			max-width: 34rem;
-			transform: translateY(2rem);
-		}
+		margin-top: 4rem;
+		flex: 1;
 
 
-		.hero-tastebuds-video {
-			max-width: 25rem;
+		&.hero-postup {
+			max-height: 37rem;
 		}
 	}
 
-	@include breakpoint(xl) {
-
-
-		&__image-wrapper {
-			max-width: 40rem;
-		}
+	.hero-video,
+	.hero-video-postup {
+		height: 100%;
+		max-height: 32rem;
 	}
 }
