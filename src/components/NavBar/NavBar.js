@@ -19,12 +19,12 @@ function NavBar() {
     `;
 
     // Check if the navbar already exists before inserting it
-    if (!document.getElementById('navbar')) {
-        document.body.insertAdjacentHTML('afterbegin', navbarHTML);
+    if (!document.getElementById("navbar")) {
+        document.body.insertAdjacentHTML("afterbegin", navbarHTML);
     }
 
     // Ensure the classes are applied after the DOM is fully loaded and the HTML is inserted
-    window.addEventListener('DOMContentLoaded', () => {
+    window.addEventListener("DOMContentLoaded", () => {
         //         const menu = document.getElementById('menu');
         //         const menuIcon = document.querySelector('.menu-icon');
         //         const menuToggle = document.querySelector('.navbar-menu-toggle');
@@ -56,22 +56,21 @@ function NavBar() {
         //         });
 
         // Set active class based on current URL
-        const navItems = document.querySelectorAll('.nav-item a');
+        const navItems = document.querySelectorAll(".nav-item a");
         navItems.forEach((navItem) => {
             if (navItem.href === window.location.href) {
-                navItem.parentElement.classList.add('active');
+                navItem.parentElement.classList.add("active");
             }
         });
     });
 
-    document.addEventListener('DOMContentLoaded', function () {
-        const navbar = document.getElementById('navbar');
-        document.addEventListener('scroll', function () {
+    document.addEventListener("DOMContentLoaded", function () {
+        const navbar = document.getElementById("navbar");
+        document.addEventListener("scroll", function () {
             if (window.scrollY > 0) {
-                navbar.classList.add('scrolled-navbar');
-
+                navbar.classList.add("scrolled-navbar");
             } else {
-                navbar.classList.remove('scrolled-navbar');
+                navbar.classList.remove("scrolled-navbar");
             }
         });
     });
