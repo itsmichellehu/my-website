@@ -35,37 +35,25 @@ $boardspace-tag-color: #5488ca;
 
 .project-link {
 	transition: transform 0.3s ease-in-out;
-}
 
+	&.project-postup,
+	&.project-tastebuds {
+		&:hover {
+			transform: scale(1.01);
 
-.project-link.project-postup,
-.project-link.project-tastebuds {
+			.project-title {
+				color: $teal-accent;
+			}
 
-	&:hover {
-		transform: scale(1.01);
-
-		.project-title {
-			color: $teal-accent;
+			.project-card-button-label::before {
+				width: 100%;
+			}
 		}
 
-		.project-card-button-label::before {
-			width: 100%;
+		&:hover:active {
+			transform: scale(1);
 		}
 	}
-
-	&:hover:active {
-		transform: scale(1);
-	}
-}
-
-.number-label {
-	display: none;
-	color: #a0a0a0;
-	font-family: Inter;
-	font-size: 2.44rem;
-	font-weight: 500;
-	line-height: 80%;
-	margin-bottom: 1.5rem;
 }
 
 .project-thumb-container {
@@ -216,14 +204,6 @@ $boardspace-tag-color: #5488ca;
 	margin-bottom: 1rem;
 	font-weight: 600;
 	transition: color 0.3s ease-in-out;
-
-	&:hover~.project-details-container .project-title {
-		color: $teal-accent;
-	}
-
-	&:hover .boardspace-coming-soon::before {
-		width: 100%; // Expand the underline from left to right
-	}
 }
 
 .project-subheader {
