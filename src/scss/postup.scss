@@ -20,7 +20,7 @@ $wireframe-max-height: 40rem;
 $super-light-grey: #fafafa;
 
 body {
-    background-color: #97beb6;
+    background-color: #98bfb6;
 }
 
 main {
@@ -29,7 +29,16 @@ main {
 
 #hero {
     padding-top: 5rem;
-    background-color: #97beb6;
+    background-color: #98bfb6;
+}
+
+/* iOS-specific styles */
+@media only screen and (min-device-width: 375px) and (max-device-width: 1024px) {
+
+    body,
+    #hero {
+        background-color: #8CB6AC;
+    }
 }
 
 #overview {
