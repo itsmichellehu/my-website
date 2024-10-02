@@ -34,6 +34,7 @@ $boardspace-tag-color: #5488ca;
 .project-link.project-boardspace {
 	&:hover {
 		.boardspace-coming-soon {
+			color: #a8a8a8;
 		}
 
 		.boardspace-coming-soon::before {
