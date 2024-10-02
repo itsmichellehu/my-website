@@ -401,8 +401,17 @@ $boardspace-tag-color: #5488ca;
 @include breakpoint(lg) {
 
 	.project-thumb-container {
+		transition: padding 0.3s ease-in-out;
 		max-height: 32rem;
 	}
+
+	.project-link:hover,
+	.project-card.project-boardspace:hover {
+		.project-thumb-container {
+			padding: 1.75rem;
+		}
+	}
+
 	.project-card {
 		gap: 3rem;
 	}
