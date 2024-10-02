@@ -59,13 +59,16 @@
 
 	&__tag {
 		display: flex;
-		height: 2rem;
-		align-items: center;
-		padding: 0 0.55rem;
+		height: 1.5rem;
+		padding: 0 0.5rem;
 		justify-content: center;
-		font-size: 0.889rem;
-		font-weight: 500;
+		align-items: center;
 		border-radius: 0.3125rem;
+
+		font-size: 0.75rem;
+		font-weight: 400;
+		line-height: 150%;
+		text-transform: capitalize;
 
 		&--postup {
 			background: #E3F1EE;
@@ -223,7 +226,8 @@
 		}
 
 		&__tag {
-			font-weight: 500;
+			height: 1.75rem;
+			font-size: 0.875rem;
 		}
 
 		&__details-container {
