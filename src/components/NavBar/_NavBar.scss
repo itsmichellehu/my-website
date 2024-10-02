@@ -8,7 +8,7 @@ nav {
 	display: flex;
 	position: fixed;
 	// background: #ffffff;
-	color: #1e1e1e;
+	color: $black;
 	position: fixed;
 	width: 100%;
 	justify-content: space-between;
@@ -16,8 +16,12 @@ nav {
 	height: $navbar-mobile-height;
 	top: 0;
 	z-index: 2000;
-	transition: background-color 0.3s ease, height 0.5s ease;
+	transition: background-color 0.3s ease, top 0.3s ease;
 	background: #fff;
+}
+
+.navbar-hidden {
+	top: -$navbar-mobile-height;
 }
 
 .navbar.scrolled-navbar {
@@ -105,6 +109,10 @@ nav {
 @include breakpoint(med) {
 	nav {
 		height: $navbar-med-height;
+	}
+
+	.navbar-hidden {
+		top: -$navbar-med-height;
 	}
 
 	.navbar-logo-image {
