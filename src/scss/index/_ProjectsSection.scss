@@ -27,10 +27,14 @@ $boardspace-tag-color: #5488ca;
 	}
 }
 
-.project-card.project-boardspace {
+.project-link {
+	transition: transform 0.3s ease-in-out;
+}
+
+.project-link.project-boardspace {
 	&:hover {
 		.boardspace-coming-soon {
-			transform: translateY(-0.1rem);
+			transform: translateY(-0.2rem);
 		}
 
 		.boardspace-coming-soon::before {
