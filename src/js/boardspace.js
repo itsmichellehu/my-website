@@ -11,8 +11,6 @@ import NavBarBackground from '../components/NavBarBackground/NavBarBackground';
 import ProgressBar from '../components/ProjectProgressBar/ProjectProgressBar';
 import BackToTopButton from '../components/BackToTopButton/BackToTopButton';
 import Footer from '../components/Footer/Footer';
-import ScrollToSection from "../components/ScrollToASection/ScrollToASection";
-
 import { initializeAccordion } from '../components/ProjectAccordion/ProjectAccordion';
 import { initializeHideVideoControls } from '../components/HideVideoControls/HideVideoControls';
 
@@ -24,7 +22,6 @@ document.addEventListener('DOMContentLoaded', () => {
     Footer();
 
     initializeAccordion();
-    ScrollToSection();
     initializeHideVideoControls();
 
 });

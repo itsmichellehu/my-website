@@ -12,7 +12,6 @@ function initializePostUpPage() {
 
 initializePostUpPage();
 
-
 document.addEventListener('DOMContentLoaded', () => {
     console.log('Main PostUp page loaded');
     // Additional initialization code for this page
@@ -24,7 +23,6 @@ import ProgressBar from '../components/ProjectProgressBar/ProjectProgressBar';
 import BackToTopButton from '../components/BackToTopButton/BackToTopButton';
 import Footer from '../components/Footer/Footer';
 import enableImageZoom from "../components/ImageZoom/ImageZoom";
-import ScrollToSection from "../components/ScrollToASection/ScrollToASection";
 
 import { initializeAccordion } from '../components/ProjectAccordion/ProjectAccordion';
 import { initializeHideVideoControls } from '../components/HideVideoControls/HideVideoControls';
@@ -37,6 +35,5 @@ document.addEventListener('DOMContentLoaded', () => {
     Footer();
     initializeAccordion();
     enableImageZoom();
-    ScrollToSection();
     initializeHideVideoControls();
 });
