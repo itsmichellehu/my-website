@@ -347,8 +347,12 @@ $boardspace-tag-color: #5488ca;
 		padding: 2.5rem;
 	}
 
-	project-thumb-container {
-		padding: 2.5rem 0;
+
+	.project-link:hover,
+	.project-card.project-boardspace:hover {
+		.project-thumb-container {
+			padding: 2rem;
+		}
 	}
 
 	.thumb-tastebuds,
@@ -388,13 +392,6 @@ $boardspace-tag-color: #5488ca;
 	.project-thumb-container {
 		transition: padding 0.3s ease-in-out;
 		max-height: 36rem;
-	}
-
-	.project-link:hover,
-	.project-card.project-boardspace:hover {
-		.project-thumb-container {
-			padding: 2rem;
-		}
 	}
 
 	.project-card {
