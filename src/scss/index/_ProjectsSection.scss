@@ -158,6 +158,11 @@ $boardspace-tag-color: #5488ca;
 	max-width: 100%;
 }
 
+.thumb-postup,
+.thumb-tastebuds {
+	max-height: 85%;
+}
+
 .boardspace-coming-soon {
 	width: fit-content;
 	color: #a8a8a8 !important;
