@@ -1,5 +1,5 @@
 function Footer() {
-    const existingFooter = document.querySelector('footer');
+    const existingFooter = document.querySelector("footer");
     if (!existingFooter) {
         const footerHTML = `
     <footer>
@@ -38,14 +38,14 @@ function Footer() {
     </footer>
 `;
 
-        document.body.insertAdjacentHTML('beforeend', footerHTML);
+        document.body.insertAdjacentHTML("beforeend", footerHTML);
 
-        const scrollToProjectsButton = document.getElementById('scrollToProjects-2');
+        const scrollToProjectsButton = document.getElementById("scrollToProjects-2");
 
-        scrollToProjectsButton.addEventListener('click', () => {
-            const projectsSection = document.getElementById('projects');
+        scrollToProjectsButton.addEventListener("click", () => {
+            const projectsSection = document.getElementById("projects");
             if (projectsSection) {
-                projectsSection.scrollIntoView({ behavior: 'smooth' });
+                projectsSection.scrollIntoView({ behavior: "smooth" });
             }
         });
     }
