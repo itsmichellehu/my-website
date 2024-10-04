@@ -20,7 +20,7 @@ function Footer() {
                         </a>
                     </div>
                     <div class="social-link">
-                        <a href="about" target="_blank"
+                        <a href="about" target=""
                             rel="noopener noreferrer">
                             <p>About me</p>
                         </a>
