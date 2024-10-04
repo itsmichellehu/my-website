@@ -63,13 +63,13 @@
         <div id="main-wrapper">
             <div id="hero" class="hero">
                 <div class="hero-wrapper">
-                    <div class="hero-image-wrapper animate__fadeInRight animate__animated">
+                    <div class="hero-image-wrapper fade-in-right">
                         <img class="img-hero hide-med"
                             src="assets/images/michelle-hu-portrait-bw-full.png">
                         <img class="img-hero show-med-flex"
                             src="assets/images/michelle-portrait-bw.png">
                     </div>
-                    <div class="hero-content animate__fadeInLeft animate__animated">
+                    <div class="hero-content fade-in-left">
                         <div class="hero-content-wrapper">
                             <p class="hero-headline">Product Designer & Front-end Developer
                             </p>
@@ -287,6 +287,55 @@
         </div>
     </main>
     <script src="js/index.bundle.js"></script>
+    <script>
+        function AnimateInView({ classAnimationMap, threshold = 0.1, rootMargin = '0px' } = {}) {
+            // Collect all elements matching the classes in the map
+            const elements = [].concat(...Object.keys(classAnimationMap)
+                .map(cls => Array.from(document.querySelectorAll(`.${cls}`)))); // Flatten NodeLists into a single array
+
+            // Create a new IntersectionObserver instance
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        // Find the appropriate animation based on the class of the target element
+                        const targetClass = Object.keys(classAnimationMap).find(cls => entry.target.classList.contains(cls));
+                        const animationClass = classAnimationMap[targetClass];
+
+                        // Add the appropriate Animate.css classes
+                        if (animationClass) {
+                            entry.target.classList.add('animate__animated', animationClass);
+                            entry.target.style.opacity = 1; // Ensure the element becomes visible
+                            observer.unobserve(entry.target); // Stop observing after animation triggers
+                        }
+                    }
+                });
+            }, {
+                threshold, // Visibility threshold to trigger animation
+                rootMargin // Optional margin to trigger the animation earlier or later
+            });
+
+            // Set the opacity of each element to 0 and start observing it
+            elements.forEach(element => {
+                element.style.opacity = 0; // Start hidden by default
+                observer.observe(element);
+            });
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            // Define which animations should be applied for each class
+            AnimateInView({
+                classAnimationMap: {
+                    'fade-in': 'animate__fadeIn',
+                    'fade-in-right': 'animate__fadeInRight',
+                    'fade-in-left': 'animate__fadeInLeft',
+                    'slide-up': 'animate__slideInUp',
+                    'bounce-in': 'animate__bounceIn'
+                },
+                threshold: 0.2,  // Adjust how much of the element needs to be visible to trigger
+                rootMargin: '0px'  // Optional: offset for earlier/later trigger
+            });
+        });
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
         document.getElementById('scrollToProjects').addEventListener('click', function () {
