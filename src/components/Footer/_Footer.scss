@@ -69,11 +69,11 @@ footer {
 		font-weight: 500 !important;
 		margin-bottom: 0;
 	}
+}
 
-	.social-link:last-child {
-		padding-right: 0;
-		border: 0;
-	}
+.social-link.last-child>a>p {
+	padding-right: 0;
+	border: 0;
 }
 
 .link-heading {
@@ -84,14 +84,21 @@ footer {
 }
 
 .social-link {
-	padding-right: 0.75rem;
-	border-right: 2px solid $teal-accent;
+	p {
+		width: fit-content;
+		font-weight: 400 !important;
+		text-wrap: nowrap;
+		line-height: 100%;
+	}
+
+	a>p {
+		padding-right: 0.75rem;
+		border-right: 2px solid $teal-accent;
+		color: $teal-accent !important;
+		margin-bottom: 0;
+	}
 }
 
-.social-link>a>p {
-	width: fit-content;
-	font-weight: 400 !important;
-	color: $teal-accent !important;
 	margin-bottom: 0;
 	text-wrap: nowrap;
 	line-height: 100%;
