@@ -41,6 +41,7 @@
 		"lodash": "^4.17.21"
 	},
 	"dependencies": {
+		"animate.css": "^4.1.1",
 		"babel": "^6.23.0",
 		"cssutils": "^1.0.0",
 		"defaultdict": "^0.0.1",
