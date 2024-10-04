@@ -101,7 +101,7 @@ footer {
 
 .email-link-text {
 	margin-bottom: 0;
-	@include underline-hover-self($medium-grey);
+	@include hover-underline-self($medium-grey);
 }
 
 @include breakpoint(med) {
