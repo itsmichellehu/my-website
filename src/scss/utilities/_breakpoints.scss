@@ -1,10 +1,29 @@
 .mobile-only {
-	display: inherit;
-	width: 1.5rem;
-	height: 1.5rem;
-	padding-right: 1rem;
-	border-radius: 50px;
-	overflow: hidden;
+	@media only screen and (max-width: 767px) {
+		&-inherit {
+			display: inherit;
+		}
+
+		&-flex {
+			display: inherit;
+		}
+
+		&-block {
+			display: block;
+		}
+
+		&-inline {
+			display: inline;
+		}
+
+		&-inline-block {
+			display: inline block;
+		}
+
+		&-grid {
+			display: grid;
+		}
+	}
 
 	@include breakpoint(med) {
 		display: none !important;
