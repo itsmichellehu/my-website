@@ -19,13 +19,22 @@ function Footer() {
                             <p>Resume</p>
                         </a>
                     </div>
-                    <div class="social-link">
+                    <div class="social-link mobile-only">
+                        <a href="mailto:mhu.contact@gmail.com" target="_blank"
+                            rel="noopener noreferrer">
+                            <p>Email me</p>
+                        </a>
+                    </div>
+                    <div class="social-link last-child">
                         <a href="about" target=""
                             rel="noopener noreferrer">
                             <p>About me</p>
                         </a>
                     </div>
-                </div>
+                    </div>
+                    <div>
+                    <p  class="email-link"><span class="email-link-text">mhu.contact@gmail.com</span> <span class="text-decoration-none">✉️</span></p>
+                    </div>
                 <p class="tagline">Designed and coded with love by yours truly.</p>
                 <p class="copyright-text">Michelle Hu © 2024</p>
             </div>
