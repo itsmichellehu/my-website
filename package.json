@@ -45,6 +45,7 @@
 		"babel": "^6.23.0",
 		"cssutils": "^1.0.0",
 		"defaultdict": "^0.0.1",
+		"intersection-observer": "^0.12.2",
 		"node": "^20.16.0",
 		"python": "^0.0.4",
 		"swiper": "^11.1.4"
