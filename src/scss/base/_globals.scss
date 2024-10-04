@@ -25,11 +25,16 @@ body {
 	padding: 0;
 	margin: 0;
 	text-align: left;
-	background-color: white;
+	background-color: $light-grey;
 	overflow-x: hidden;
 	overflow-y: scroll;
 	position: relative;
+
+	@include breakpoint(med) {
+		background-color: white;
+	}
 }
+
 
 main {
 	position: relative;

@@ -3,6 +3,7 @@ $boardspace-tag-color: #5488ca;
 // Projects
 .projects-section {
 	padding: 2.5rem 0 3.5rem 0;
+	transition: padding 0.3s ease;
 }
 
 .projects-wrapper {
@@ -315,12 +316,12 @@ $boardspace-tag-color: #5488ca;
 	}
 
 	.projects-section {
-		padding: 1.5rem 0;
+		padding: 4rem 0;
 	}
 
 	.project-card {
 		display: grid;
-		grid-template-columns: 1fr 1fr;
+		grid-template-columns: 6fr 5fr;
 		grid-template-rows: auto;
 		grid-template-areas:
 			"a b";
@@ -381,7 +382,6 @@ $boardspace-tag-color: #5488ca;
 }
 
 @include breakpoint(lg) {
-
 	.project-thumb-container {
 		transition: padding 0.3s ease-in-out;
 	}
@@ -417,9 +417,6 @@ $boardspace-tag-color: #5488ca;
 }
 
 @include breakpoint(xl) {
-	.projects-section {
-		padding: 5rem 0;
-	}
 
 	.thumb-tastebuds,
 	.thumb-postup {
