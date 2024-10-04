@@ -2,8 +2,21 @@ const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
-const { type } = require("os");
-// const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
+const glob = require('glob');
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
+const { PurgeCSSPlugin } = require('purgecss-webpack-plugin');
+
+const PATHS = {
+    src: path.join(__dirname, 'src')
+};
+
+const htmlPages = [
+    { template: 'index.html', chunks: ['index'] },
+    { template: 'about.html', chunks: ['about'] },
+    { template: 'boardspace.html', chunks: ['boardspace'] },
+    { template: 'postup.html', chunks: ['postup'] },
+    { template: 'tastebuds.html', chunks: ['tastebuds'] }
+];
 
 module.exports = {
     mode: 'production',
@@ -18,7 +31,13 @@ module.exports = {
         filename: 'js/[name].js',
         path: path.resolve(__dirname, 'dist'),
         clean: true,
-        // publicPath: '/your-repo-name/' // Set this to your actual repo name
+    },
+    optimization: {
+        minimize: true,
+        minimizer: [
+            `...`,
+            new CssMinimizerPlugin(),
+        ],
     },
     stats: {
         errorDetails: true
@@ -59,20 +78,20 @@ module.exports = {
                         options: {
                             mozjpeg: {
                                 progressive: true,
-                                quality: 75, // Adjust JPEG quality
+                                quality: 75,
                             },
                             optipng: {
                                 enabled: true,
                             },
                             pngquant: {
-                                quality: [0.65, 0.90], // Adjust PNG quality
+                                quality: [0.65, 0.90],
                                 speed: 4,
                             },
                             gifsicle: {
                                 interlaced: false,
                             },
                             webp: {
-                                quality: 75, // Enable WebP compression for browsers that support it
+                                quality: 75,
                             },
                         },
                     }
@@ -81,47 +100,27 @@ module.exports = {
         ]
     },
     externals: {
-        jquery: 'jQuery', // This tells Webpack to use the global 'jQuery' variable
+        jquery: 'jQuery',
     },
     plugins: [
         new MiniCssExtractPlugin({
             filename: 'css/[name].css'
         }),
-        new HtmlWebpackPlugin({
-            template: './src/index.html',
-            filename: 'index.html',
-            chunks: ['index']
+        new PurgeCSSPlugin({
+            paths: glob.sync(`${PATHS.src}/**/*`, { nodir: true }),
+            safelist: {
+                standard: ['keep-this-class', /^dynamic-/]
+            },
         }),
-        new HtmlWebpackPlugin({
-            template: './src/about.html',
-            filename: 'about.html',
-            chunks: ['about']
-        }),
-        new HtmlWebpackPlugin({
-            template: './src/boardspace.html',
-            chunks: ['boardspace'],
-            filename: 'boardspace.html'
-        }),
-        new HtmlWebpackPlugin({
-            template: './src/postup.html',
-            filename: 'postup.html',
-            chunks: ['postup']
-        }),
-        new HtmlWebpackPlugin({
-            template: './src/tastebuds-full-casestudy.html',
-            filename: 'tastebuds-full-casestudy.html',
-            chunks: ['tastebuds']
-        }),
-        new HtmlWebpackPlugin({
-            template: './src/tastebuds.html',
-            filename: 'tastebuds.html',
-            chunks: ['tastebuds']
-        }),
+        ...htmlPages.map(page => new HtmlWebpackPlugin({
+            template: `./src/${page.template}`,
+            filename: page.template,
+            chunks: page.chunks
+        })),
         new CopyWebpackPlugin({
             patterns: [
                 { from: 'src/assets', to: 'assets' }
             ]
         })
-        // new BundleAnalyzerPlugin()
     ]
 };

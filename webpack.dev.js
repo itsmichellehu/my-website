@@ -1,7 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
-// const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 
 module.exports = {
     entry: {
@@ -23,15 +22,10 @@ module.exports = {
             {
                 test: /\.js$/,
                 exclude: /node_modules/,
-                use: {
-                    loader: 'babel-loader',
-                    options: {
-                        presets: ['@babel/preset-env']
-                    }
-                }
+                use: 'babel-loader',  // Preset options are defined in babel config
             },
             {
-                test: /\.scss$/,
+                test: /\.(scss|css)$/,  // Handles both SCSS and plain CSS files
                 use: [
                     'style-loader',
                     'css-loader',
@@ -39,76 +33,37 @@ module.exports = {
                 ]
             },
             {
-                test: /\.css$/, // Match CSS files
-                use: [
-                    'style-loader', // Injects styles into DOM
-                    'css-loader',   // Turns CSS into CommonJS
-                ],
-            },
-            {
-                test: /\.(png|jpg|jpeg|gif)$/i,
+                test: /\.(png|jpg|jpeg|gif|svg)$/i,  // Combined handling for images and SVGs
                 type: 'asset/resource',
-                parser: {
-                    dataUrlCondition: {
-                        maxSize: 8192,
-                    },
-                },
                 generator: {
-                    filename: 'assets/images/[name].[hash:6][ext]',
+                    filename: 'assets/images/[name].[hash:6][ext]',  // Unified image output
                 },
                 use: [
                     {
-                        loader: 'file-loader',
-                        options: {
-                            name: '[path][name].[ext]',
-                            outputPath: 'images',
-                        },
-                    },
-                    {
-                        loader: 'image-webpack-loader',
+                        loader: 'image-webpack-loader',  // Image optimization
                         options: {
                             mozjpeg: {
                                 progressive: true,
-                                quality: 65
+                                quality: 65,
                             },
-                            optipng: {
-                                enabled: true,
-                            },
-                            pngquant: {
-                                quality: [0.65, 0.90],
-                                speed: 4
-                            },
-                            gifsicle: {
-                                interlaced: false,
-                            },
-                            webp: {
-                                quality: 75
-                            }
+                            optipng: { enabled: true },
+                            pngquant: { quality: [0.65, 0.90], speed: 4 },
+                            gifsicle: { interlaced: false },
+                            webp: { quality: 75 }
                         }
                     }
                 ]
             },
             {
-                test: /\.svg$/,
+                test: /\.(mp4)$/,  // Handling for video files
                 type: 'asset/resource',
                 generator: {
-                    filename: 'assets/svg/[name][ext]',
+                    filename: 'assets/videos/[name][ext]',  // Video output
                 }
-            },
-            {
-                test: /\.(mp4)$/,
-                use: {
-                    loader: 'file-loader',
-                    options: {
-                        name: '[name].[ext]',
-                        outputPath: 'assets/videos/', // Output directory for videos
-                    },
-                },
             },
         ]
     },
     plugins: [
-        // new BundleAnalyzerPlugin(),
         new HtmlWebpackPlugin({
             template: './src/index.html',
             chunks: ['index'],
@@ -125,25 +80,14 @@ module.exports = {
             filename: 'boardspace.html'
         }),
         new HtmlWebpackPlugin({
-            template: './src/tastebuds-full-casestudy.html',
-            filename: 'tastebuds-full-casestudy.html',
-            chunks: ['tastebuds']
-        }),
-        new HtmlWebpackPlugin({
             template: './src/tastebuds.html',
             filename: 'tastebuds.html',
             chunks: ['tastebuds']
         }),
-
-        new HtmlWebpackPlugin({
-            template: './src/sandbox.html',
-            chunks: ['sandbox'],
-            filename: 'sandbox.html',
-        }),
         new HtmlWebpackPlugin({
             template: './src/postup.html',
             chunks: ['postup'],
-            filename: 'postup.html',
+            filename: 'postup.html'
         }),
         new CopyWebpackPlugin({
             patterns: [
@@ -154,18 +98,13 @@ module.exports = {
         })
     ],
     externals: {
-        jquery: 'jQuery', // This tells Webpack to use the global 'jQuery' variable
+        jquery: 'jQuery',  // Keep jQuery as an external dependency
     },
     devServer: {
         static: path.resolve(__dirname, 'dist'),
         open: true,
         hot: true,
-        watchFiles: ['**/*'], // Watch everything in the project
+        watchFiles: ['**/*'],  // Watch all files
     },
-    // optimization: {
-    //     splitChunks: {
-    //         chunks: 'all',
-    //     },
-    // },
     devtool: 'source-map',
 };

@@ -19,64 +19,38 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.js$/,
+                test: /\.jsx?$/,  // Covers both .js and .jsx
                 exclude: /node_modules/,
                 use: {
                     loader: 'babel-loader',
                     options: {
-                        presets: ['@babel/preset-env']
+                        presets: ['@babel/preset-env', '@babel/preset-react'],
                     }
                 }
             },
             {
-                test: /\.scss$/,
+                test: /\.(scss|css)$/, // Handles both SCSS and CSS
                 use: [
                     MiniCssExtractPlugin.loader,
                     'css-loader',
                     'sass-loader',
-                    'style-loader',
                 ]
-            },
-            {
-                test: /\.css$/, // Match CSS files
-                use: [
-                    'style-loader', // Injects styles into DOM
-                    'css-loader',   // Turns CSS into CommonJS
-                ],
             },
             {
                 test: /\.(png|jpg|jpeg|gif|svg)$/i,
                 type: 'asset',
                 parser: {
                     dataUrlCondition: {
-                        maxSize: 8192,
+                        maxSize: 8192, // Inline images smaller than 8kb
                     },
                 },
                 generator: {
                     filename: 'assets/images/[name].[hash:6][ext]',
                 },
             },
-            {
-                test: /\.(mp4)$/,
-                type: 'asset/resource',
-                generator: {
-                    filename: 'assets/videos/[name][ext]',
-                }
-            },
-            {
-                test: /\.jsx?$/, // Match JS and JSX files
-                exclude: /node_modules/,
-                use: {
-                    loader: 'babel-loader',
-                    options: {
-                        presets: ['@babel/preset-react'], // Preset for React
-                    },
-                },
-            },
         ]
     },
     plugins: [
-        new CleanWebpackPlugin(),
         new MiniCssExtractPlugin({
             filename: 'css/[name].css'
         }),
@@ -101,11 +75,6 @@ module.exports = {
             filename: 'tastebuds.html'
         }),
         new HtmlWebpackPlugin({
-            template: './src/sandbox.html',
-            chunks: ['sandbox'],
-            filename: 'sandbox.html'
-        }),
-        new HtmlWebpackPlugin({
             template: './src/postup.html',
             chunks: ['postup'],
             filename: 'postup.html'
@@ -119,10 +88,7 @@ module.exports = {
         })
     ],
     resolve: {
-        extensions: ['.js', '.jsx'], // File extensions to resolve
-    },
-    externals: {
-        jquery: 'jQuery', // This tells Webpack to use the global 'jQuery' variable
+        extensions: ['.jsx'] // Automatically resolves .js as well
     },
     devServer: {
         static: {
@@ -130,7 +96,7 @@ module.exports = {
         },
         open: true,
         hot: true,
-        watchFiles: ['**/*'], // Watch everything in the project
+        watchFiles: ['**/*'],
     },
     mode: 'development',
     devtool: 'source-map'
