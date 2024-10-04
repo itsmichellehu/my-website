@@ -9,8 +9,9 @@ function NavBar() {
                     <li class="nav-item"><a href="/">Work</a></li>
                     <li class="nav-item"><a href="/about">About</a></li>
                     <li class="nav-item"><a href="assets/files/MichelleHuResume.pdf" target="_blank" rel="noopener noreferrer">Resume</a></li>
-                    <li class="nav-item hide-sm"><a href="www.linkedin.com/in/itsmichellehu" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-                    <li class="nav-item"><a href="mailto:mhu.contact@gmail.com">Contact</a></li>
+                    <li class="nav-item"><a href="https://www.linkedin.com/in/itsmichellehu" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                    <li class="nav-item mobile-only"><a href="mailto: mhu.contact@gmail.com">Email</a>
+</li>
                 </ul>
             </div>
         </nav>
