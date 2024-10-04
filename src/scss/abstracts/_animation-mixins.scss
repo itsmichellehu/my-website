@@ -1,0 +1,124 @@
+// Underlines the text on hover from left to right with a color of your choice. The underline will expand to the full width of the text on hover. The text color will change on hover as well. The text will scale up on hover and scale back down on click.
+
+@mixin underline-hover($underline-color, $hover-text-color: $underline-color, $hover-scale: 1.01, $active-scale: 1) {
+    position: relative;
+
+    // Usage:
+    // @include underline-hover($underline-color,$dark-gray, 1.01, 1);
+    // @include underline-hover($underline-color, $hover-text-color: $dark-gray);
+
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -1px;
+        width: 0;
+        height: 2px;
+        background-color: $underline-color;
+        transition: width 0.3s ease-in-out;
+    }
+
+    &:hover::before {
+        width: 100%;
+    }
+
+    &:hover {
+        transform: scale($hover-scale);
+        color: $hover-text-color;
+    }
+
+    &:hover:active {
+        transform: scale($active-scale);
+    }
+}
+
+@mixin underline-hover-before($text-underline-color) {
+    position: relative;
+    color: $text-underline-color;
+    margin-bottom: 0;
+
+    // Usage:
+    // 	@include underline-hover-before($teal-accent);
+
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -1px;
+        width: 0;
+        height: 2px;
+        background-color: $text-underline-color;
+        transition: width 0.3s ease-in-out;
+    }
+
+    &:hover::before {
+        width: 100%;
+    }
+
+    @content;
+}
+
+@mixin underline-hover-self($text-underline-color, $scale-hover: 1.01, $scale-active: 1) {
+    position: relative;
+    color: $text-underline-color;
+    margin-bottom: 0;
+    cursor: pointer;
+    width: fit-content;
+
+    // Usage:
+    // 	@include underline-hover-before($teal-accent);
+
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -1px;
+        width: 0;
+        height: 2px;
+        background-color: $text-underline-color;
+        transition: width 0.3s ease-in-out;
+    }
+
+    &:hover {
+        transform: scale($scale-hover);
+
+        &:before {
+            width: 100%; // Expanding the underline on hover for the target class
+        }
+    }
+
+    &:hover:active {
+        transform: scale($scale-active);
+    }
+
+    @content;
+}
+
+@mixin underline-hover-active($hover-text-underline-color, $hover-scale: 1.01, $active-scale: 1) {
+
+    // Usage
+    // @include underline-hover-active($hover-text-color, $hover-scale: 1.01, $active-scale: 1)
+
+    &:hover {
+        transform: scale($hover-scale);
+        color: $hover-text-underline-color;
+    }
+
+    &:hover:active {
+        transform: scale($active-scale);
+    }
+}
+
+@mixin hover-scale-with-underline($target-class, $scale-hover: 1.01, $scale-active: 1) {
+    &:hover {
+        transform: scale($scale-hover);
+
+        #{$target-class}::before {
+            width: 100%; // Expanding the underline on hover for the target class
+        }
+    }
+
+    &:hover:active {
+        transform: scale($scale-active); // Restore original size on active
+    }
+}
