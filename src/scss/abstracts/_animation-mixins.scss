@@ -1,14 +1,14 @@
-// Underlines the text on hover from left to right with a color of your choice. The underline will expand to the full width of the text on hover. The text color will change on hover as well. The text will scale up on hover and scale back down on click.
+// Underlines the text on hover from left to right with a color of your choice.
+// The underline will expand to the full width of the text on hover. The text color will change on hover as well. The text will scale up on hover and scale back down on click.
 
 @mixin hover-underline-self($text-underline-color, $scale-hover: 1.01, $scale-active: 1) {
-    position: relative;
-    color: $text-underline-color;
-    margin-bottom: 0;
-    cursor: pointer;
-    width: fit-content;
-
-    // Usage:
-    // 	@include underline-hover-before($teal-accent);
+    & {
+        position: relative;
+        color: $text-underline-color;
+        margin-bottom: 0;
+        cursor: pointer;
+        width: fit-content;
+    }
 
     &::before {
         content: '';
@@ -24,8 +24,8 @@
     &:hover {
         transform: scale($scale-hover);
 
-        &:before {
-            width: 100%; // Expanding the underline on hover for the target class
+        &::before {
+            width: 100%; // Expanding the underline on hover
         }
     }
 
@@ -48,7 +48,6 @@
     }
 }
 
-
 @mixin hover-underline-before($underline-color) {
     position: relative;
     color: inherit;
@@ -70,7 +69,9 @@
     }
 }
 
-// Targets a class to underline on hover from left to right with a color of your choice. The underline will expand to the full width of the text on hover. The text color will change on hover as well. The text will scale up on hover and scale back down on click.
+// Targets a class to underline on hover from left to right with a color of your choice.
+// The underline will expand to the full width of the text on hover. The text color will change on hover as well. The text will scale up on hover and scale back down on click.
+
 @mixin hover-underline-target-class($target-class, $scale-hover: 1.02, $scale-active: 1) {
     &:hover {
         transform: scale($scale-hover);
