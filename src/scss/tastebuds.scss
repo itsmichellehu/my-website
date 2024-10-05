@@ -8,6 +8,58 @@ $tastebuds-bg-yellow: #F6E7C6;
 .bg-grey {
 	background-color: $bg-grey;
 }
+// 
+// .navbar-top {
+// 	position: fixed;
+// 	width: 100%;
+// 	transition: background-color 0.1s ease-in;
+// }
+//
+// .default-nav-color {
+// 	background-color: transparent;
+// }
+//
+// .postup-hero-nav-color {
+// 	background-color: transparent;
+// }
+//
+// .navbar-color-overview,
+// .navbar-color-the-solution {
+// 	background-color: transparent;
+// }
+
+#hero,
+#the-context,
+#the-challenge,
+#the-solution,
+#the-process,
+#empathize,
+#secondary-research,
+#primary-research,
+#user-interviews,
+#competitor-analysis,
+#ideate,
+#prototype,
+#mind-map,
+#user-personas,
+#user-stories-flows,
+#information-architecture,
+#sketches,
+#guerilla-test,
+#low-fidelity,
+#branding,
+#high-fidelity,
+#usability-testing-2,
+#design-iterations,
+#usability-testing-3,
+#limitations,
+#the-solution,
+// #final-prototype,
+#next-steps,
+#learnings,
+#reflection {
+	display: none;
+}
 
 @import "abstracts/all-abstracts";
 
