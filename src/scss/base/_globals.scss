@@ -118,12 +118,12 @@ pre {
 }
 
 a {
-	display: flex;
+	display: inline;
 	background-color: transparent; // Removes background color
 	text-decoration: none; // Removes underline
 	color: $teal-accent !important; // Link colors inherit from parent
 	margin-top: 0;
-	margin-bottom: 1.25rem;
+	margin-bottom: 1rem;
 	font-size: 1rem;
 	line-height: 110%;
 	align-items: center;
@@ -135,6 +135,8 @@ a {
 	}
 
 	span.anchor-text {
+		font-weight: 400;
+
 		padding: 0.25rem 0;
 		@include hover-underline-self($teal-accent);
 	}
