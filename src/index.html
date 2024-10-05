@@ -36,25 +36,6 @@
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <title>Michelle Hu</title>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const projectCards = document.querySelectorAll('.project-card');
-
-            projectCards.forEach(card => {
-                const projectMedia = card.querySelector('.project-thumb');
-
-                card.addEventListener('mouseenter', () => {
-                    projectMedia.currentTime = 0; // Reset the video to the beginning
-                    projectMedia.play(); // Play the video
-                });
-
-                card.addEventListener('mouseleave', () => {
-                    projectMedia.pause(); // Pause the video
-                    projectMedia.currentTime = 0; // Reset the video to the beginning
-                });
-            });
-        });
-    </script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
@@ -286,75 +267,8 @@
             </section>
         </div>
     </main>
-    <script>
-        function AnimateInView({ classAnimationMap, threshold = 0.1, rootMargin = '0px' } = {}) {
-            // Collect all elements matching the classes in the map
-            const elements = [].concat(...Object.keys(classAnimationMap)
-                .map(cls => Array.from(document.querySelectorAll(`.${cls}`)))); // Flatten NodeLists into a single array
-
-            // Create a new IntersectionObserver instance
-            const observer = new IntersectionObserver((entries, observer) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        // Find the appropriate animation based on the class of the target element
-                        const targetClass = Object.keys(classAnimationMap).find(cls => entry.target.classList.contains(cls));
-                        const animationClass = classAnimationMap[targetClass];
-
-                        // Add the appropriate Animate.css classes
-                        if (animationClass) {
-                            entry.target.classList.add('animate__animated', animationClass);
-                            entry.target.style.opacity = 1; // Ensure the element becomes visible
-                            observer.unobserve(entry.target); // Stop observing after animation triggers
-                        }
-                    }
-                });
-            }, {
-                threshold, // Visibility threshold to trigger animation
-                rootMargin // Optional margin to trigger the animation earlier or later
-            });
-
-            // Set the opacity of each element to 0 and start observing it
-            elements.forEach(element => {
-                element.style.opacity = 0; // Start hidden by default
-                observer.observe(element);
-            });
-        }
-
-        document.addEventListener("DOMContentLoaded", function () {
-            // Define which animations should be applied for each class
-            AnimateInView({
-                classAnimationMap: {
-                    'fade-in': 'animate__fadeIn',
-                    'fade-in-right': 'animate__fadeInRight',
-                    'fade-in-left': 'animate__fadeInLeft',
-                    'slide-up': 'animate__slideInUp',
-                    'bounce-in': 'animate__bounceIn'
-                },
-                threshold: 0.2,  // Adjust how much of the element needs to be visible to trigger
-                rootMargin: '0px'  // Optional: offset for earlier/later trigger
-            });
-        });
-    </script>
     <script type="module" src="js/index.bundle.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script>
-        document.getElementById('scrollToProjects').addEventListener('click', function () {
-            const target = document.getElementById('projects');
-            const defaultOffset = 3 * 16; // Convert 3.5rem to pixels (assuming the root font-size is 16px)
-            const mediumBreakpointOffset = 2 * 16; // Convert 4rem to pixels
-
-            // Determine the current offset based on the screen width
-            const offset = window.innerWidth >= 768 ? mediumBreakpointOffset : defaultOffset;
-            const bodyRect = document.body.getBoundingClientRect().top;
-            const targetRect = target.getBoundingClientRect().top;
-            const targetPosition = targetRect - bodyRect - offset;
-
-            window.scrollTo({
-                top: targetPosition,
-                behavior: 'smooth',
-            });
-        });
-    </script>
 </body>
 
 </html>

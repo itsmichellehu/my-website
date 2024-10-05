@@ -1684,43 +1684,8 @@
       </div>
     </section>
   </main>
-  <script>
-    function toggleAccordion(header) {
-      const accordion = header.parentElement;
-      const content = accordion.querySelector('.accordion__content');
-      const icon = header.querySelector('.accordion__icon');
-
-      content.classList.toggle('active');
-      icon.classList.toggle('rotate');
-
-      if (content.classList.contains('active')) {
-        content.style.maxHeight = content.scrollHeight + 'px';
-      } else {
-        content.style.maxHeight = 0;
-      }
-    }
-
-    function initializeAccordion() {
-      document.querySelectorAll('.accordion').forEach(accordion => {
-        const header = accordion.querySelector('.accordion__header');
-        header.addEventListener('click', function () {
-          toggleAccordion(this);
-        });
-      });
-    }
-  </script>
   <script type="module" src="js/postup.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
-  <script>
-    WebFont.load({
-      google: {
-        families: [
-          "Inter:300,regular,500,600,700,800",
-          "Noto Serif:300,regular,500,600,700,800,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic",
-        ],
-      },
-    });
-  </script>
   <script>
     !(function (o, c) {
       var n = c.documentElement,

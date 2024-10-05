@@ -1,29 +1,16 @@
 import '../scss/boardspace.scss';
+import '../components/GlobalComponents';
+import '../components/ProjectComponents';
 
 import '../components/lists';
 import '../components/wrappedList';
 import '../components/showFullImage';
 import '../components/table';
-import '../components/accordion';
 
-import NavBar from '../components/NavBar/NavBar';
-// import NavBarBackground from '../components/NavBarBackground/NavBarBackground';
-import ProgressBar from '../components/ProjectProgressBar/ProjectProgressBar';
-import BackToTopButton from '../components/BackToTopButton/BackToTopButton';
-import Footer from '../components/Footer/Footer';
-
-import { initializeAccordion } from '../components/ProjectAccordion/ProjectAccordion';
-import { initializeHideVideoControls } from '../components/HideVideoControls/HideVideoControls';
+import { initializeBoardspaceAccordion } from "../components/BoardspaceAccordion/BoardspaceAccordion";
 
 document.addEventListener('DOMContentLoaded', () => {
-    NavBar();
-    // NavBarBackground();
-    ProgressBar();
-    BackToTopButton();
-    Footer();
-
-    initializeAccordion();
-    initializeHideVideoControls();
+    initializeBoardspaceAccordion();
 });
 
 
