@@ -10,7 +10,13 @@ class Lightbox {
     this.modal = document.createElement('div');
     this.modal.classList.add('lightbox');
     this.modal.style.display = 'none'; // Hide the modal initially
-    this.modal.innerHTML = `
+    this.modal.innerHTML = this.getModalTemplate();
+    modalContainer.appendChild(this.modal);
+    this.cacheModalElements();
+  }
+
+  getModalTemplate() {
+    return `
       <div class="lightbox-content">
         <span class="close"><span class="material-symbols-outlined">close</span>Close</span>
         <img src="" alt="Full Image" id="full-image">
@@ -23,7 +29,9 @@ class Lightbox {
         </a>
       </div>
     `;
-    modalContainer.appendChild(this.modal);
+  }
+
+  cacheModalElements() {
     this.fullImage = this.modal.querySelector('#full-image');
     this.caption = this.modal.querySelector('.caption');
     this.closeBtn = this.modal.querySelector('.close');
@@ -33,28 +41,26 @@ class Lightbox {
 
   setupEventListeners() {
     this.images.forEach((image, index) => {
-      image.addEventListener('click', () => {
-        this.openModal(index);
-      });
+      image.addEventListener('click', () => this.openModal(index));
     });
 
     this.closeBtn.addEventListener('click', () => this.closeModal());
     this.modal.addEventListener('click', (event) => {
-      if (event.target === this.modal) {
-        this.closeModal();
-      }
+      if (event.target === this.modal) this.closeModal();
     });
-    document.addEventListener('keydown', (event) => {
-      if (event.key === 'Escape') {
-        this.closeModal();
-      } else if (event.key === 'ArrowLeft') {
-        this.navigateImage(-1);
-      } else if (event.key === 'ArrowRight') {
-        this.navigateImage(1);
-      }
-    });
+    document.addEventListener('keydown', (event) => this.handleKeydown(event));
     this.prevBtn.addEventListener('click', () => this.navigateImage(-1));
     this.nextBtn.addEventListener('click', () => this.navigateImage(1));
+  }
+
+  handleKeydown(event) {
+    if (event.key === 'Escape') {
+      this.closeModal();
+    } else if (event.key === 'ArrowLeft') {
+      this.navigateImage(-1);
+    } else if (event.key === 'ArrowRight') {
+      this.navigateImage(1);
+    }
   }
 
   openModal(index) {
@@ -78,7 +84,11 @@ class Lightbox {
   }
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-  const modalContainer1 = document.getElementById('lightbox-lf-all');
-  new Lightbox('.lf-wireframes-all .image', modalContainer1);
-});
+export default Lightbox;
+
+export function initializeLightbox() {
+  document.addEventListener('DOMContentLoaded', () => {
+    const modalContainer1 = document.getElementById('lightbox-lf-all');
+    new Lightbox('.lf-wireframes-all .image', modalContainer1);
+  });
+}

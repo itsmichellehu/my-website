@@ -1,7 +1,15 @@
 export function initializeHideVideoControls() {
-    $('video:not(#exclude-video-jquery)').on('mouseenter', function () {
-        this.setAttribute("controls", "controls");
-    }).on('mouseleave', function () {
-        this.removeAttribute("controls");
-    });
+    const container = document.querySelector('main'); // or a more specific parent element
+
+    container.addEventListener('mouseenter', function (event) {
+        if (event.target.tagName === 'VIDEO' && event.target.id !== 'exclude-video-jquery') {
+            event.target.setAttribute("controls", "controls");
+        }
+    }, true);
+
+    container.addEventListener('mouseleave', function (event) {
+        if (event.target.tagName === 'VIDEO' && event.target.id !== 'exclude-video-jquery') {
+            event.target.removeAttribute("controls");
+        }
+    }, true);
 }

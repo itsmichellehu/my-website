@@ -379,3 +379,11 @@ document.addEventListener('DOMContentLoaded', () => {
     new AutoplayVideoCarousel('#carousel1');
     new AutoplayVideoCarousel('#carousel2');
 });
+
+// import { AutoplayVideoCarousel } from '../components/AutoplayVideoCarousel/AutoplayVideoCarousel';
+//
+// // Initialize multiple carousels
+// document.addEventListener('DOMContentLoaded', () => {
+//     new AutoplayVideoCarousel('#carousel1');
+//     new AutoplayVideoCarousel('#carousel2');
+// });

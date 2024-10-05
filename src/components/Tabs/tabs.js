@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function () {
+export default function initializeTabs() {
     const tabContainers = document.querySelectorAll('.tabs-container');
 
     tabContainers.forEach(container => {
@@ -38,4 +38,4 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     });
-});
+}

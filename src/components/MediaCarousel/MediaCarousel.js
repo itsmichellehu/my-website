@@ -158,3 +158,12 @@ export default class MediaCarousel {
         resizeObserver.observe(this.itemsContainer);
     }
 }
+
+// Import
+// import MediaCarousel from '../components/MediaCarousel/MediaCarousel';
+// document.addEventListener('DOMContentLoaded', () => {
+//     // Assuming you have two carousels with IDs `carousel-01` and `carousel-02`
+//     const carousel1 = new MediaCarousel('#carousel-01');
+//     const carousel2 = new MediaCarousel('#carousel-02');
+//     const carousel3 = new MediaCarousel('#carousel-03');
+// });

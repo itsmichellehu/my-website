@@ -1,6 +1,6 @@
 import './_ImageZoom.scss';  // Import the CSS for zoom functionality
 
-function enableImageZoom() {
+export default function enableImageZoom() {
     document.addEventListener('DOMContentLoaded', () => {
         document.querySelectorAll('.img-zoomable').forEach(image => {
             image.addEventListener('click', () => {
@@ -10,5 +10,3 @@ function enableImageZoom() {
         });
     });
 }
-
-export default enableImageZoom;
