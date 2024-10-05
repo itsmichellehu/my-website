@@ -7,6 +7,10 @@ h5,
 h6 {
 	margin: 0;
 	padding: 0;
+
+	&::first-letter {
+		text-transform: capitalize;
+	}
 }
 
 .paragraph {
@@ -19,81 +23,60 @@ h6 {
 }
 
 p {
-	font-weight: 400;
-	color: $dark-grey;
-	line-height: 165%;
-	margin-bottom: 1.5rem;
-	margin-top: 0;
 	font-size: 1rem;
+	color: $dark-grey;
+	line-height: 150%;
+	margin-bottom: 1.5rem;
 }
 
-/* Specific heading styles with colors and sizes */
+// Major Third typescale 1.250
 h1 {
-	font-size: 2.53rem;
-	color: $black;
-	margin-bottom: 1.5rem;
+	font-size: 2.441rem;
 	font-weight: 600;
+	color: $black;
 	line-height: 120%;
-	/* 2.03125rem */
 	letter-spacing: -0.04rem;
+	margin-bottom: 1.5rem;
 }
 
 h2 {
+	font-size: 1.953rem;
+	font-weight: 600;
 	color: $black;
 	color: #1e1e1e;
 	color: $forest-green;
-	flex: 1;
-	font-size: 2.074rem;
-	font-style: normal;
-	font-weight: 600;
 	line-height: 125%;
-	margin-bottom: 2rem;
-	margin-top: 0;
+	margin-bottom: 1.25rem;
 }
 
 h3 {
+	font-size: 1.562rem;
+	font-weight: 500;
 	color: $primary-green;
 	letter-spacing: 0;
-	text-transform: none;
-	font-size: 1.659rem;
-	font-weight: 500;
 	line-height: 130%;
 	margin-bottom: 1.25rem;
-	margin-top: 1rem;
 }
 
 h4 {
+	font-size: 1.25rem;
 	font-weight: 500;
+	color: $forest-green;
 	letter-spacing: 0;
 	line-height: 130%;
-	color: $forest-green;
-	/* CSS variable, ensure it's defined in your styles */
-	font-size: 1.38rem;
-	margin-top: 2rem;
 	margin-bottom: 1.25rem;
-
-	&::first-letter {
-		text-transform: capitalize;
-	}
 }
 
 h5 {
+	font-size: 1.152rem;
 	font-weight: 500;
+	color: $secondary-green;
 	letter-spacing: 0;
 	line-height: 140%;
-	color: $secondary-green;
-	font-size: 1.152rem;
-	margin-top: 2rem;
 	margin-bottom: 0.5rem;
 }
 
-h6 {
-	font-size: 1.125rem;
-	line-height: 120%;
-	color: $primary-color;
-	margin-top: 2rem;
-	margin-bottom: 0.5rem;
-}
+// Typescale 1.250 Major Third
 
 @include breakpoint(med) {
 	p {
@@ -101,34 +84,32 @@ h6 {
 	}
 
 	h1 {
-		font-size: 2.986rem !important;
+		font-size: 3.4rem;
 		letter-spacing: -0.0525rem;
 		margin-bottom: 1.5rem;
 	}
 
 	h2 {
-		font-size: 2.488rem !important;
+		font-size: 2.7rem;
 		letter-spacing: -0.0425rem;
+		margin-bottom: 1.5rem;
 	}
 
 	h3 {
-		font-size: 2.074rem !important;
+		font-size: 1.944rem;
 		margin-bottom: 1.25rem;
-		margin-top: 1rem;
+		font-weight: 550;
 	}
 
-	h4 {
-		font-size: 1.728rem !important;
-		margin-bottom: 1.25rem;
-	}
-
-	h5 {
-		font-size: 1.44rem !important;
-	}
-
-	h6 {
-		font-size: 1.2rem !important;
-	}
+	//
+	// 	h4 {
+	// 		font-size: 1.620rem;
+	// 		margin-bottom: 1.25rem;
+	// 	}
+	//
+	// 	h5 {
+	// 		font-size: 1.350rem;
+	// 	}
 }
 
 .noto-serif {
@@ -347,4 +328,8 @@ h6 {
 
 .text-transform-none {
 	text-transform: none;
+}
+
+.italic {
+	font-style: italic;
 }
