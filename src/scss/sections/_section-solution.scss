@@ -19,45 +19,26 @@
 	display: grid;
 	grid-template-columns: 1fr;
 	grid-template-rows: auto auto auto;
-	// grid-template-areas: 'b' 'a' 'c';
 	margin: 0 auto;
 	gap: 1rem;
 	align-items: center;
 	width: 100%;
-
-	h2,
-	h3 {
-		width: 100%;
-		margin-bottom: 0;
-		text-align: center;
-	}
-
-	h3 {
-		font-size: calc(1.25rem*0.95);
-		font-weight: 500;
-		color: $off-black;
-
-		@include breakpoint("med") {
-			font-size: calc(1.563rem*0.85);
-		}
-
-		@include breakpoint("lg") {
-			font-size: calc(1.938rem*0.85);
-		}
-	}
+	max-width: 90vw;
 }
 
 .the-solution-prototype_video {
 	width: 80%;
 	margin: 0 auto;
 	max-width: 18rem;
-	grid-area: unset;
 }
 
 .the-solution-prototype_content {
 	display: block;
 	width: 100%;
-	grid-area: unset;
+
+	h3 {
+		color: $black;
+	}
 
 	p:last-child {
 		margin-bottom: 0;
@@ -65,18 +46,15 @@
 }
 
 .the-solution-prototype_subheading {
-	font-size: 1.25rem;
-	font-weight: 400 !important;
-	margin-bottom: 0.5rem;
+	font-size: 1.35rem;
+	margin-bottom: 1.25rem;
 	color: $off-black !important;
 	line-height: 125%;
 }
 
 .the-solution-prototype_body {
-	font-size: 1.125rem;
-	font-weight: 400 !important;
 	color: $medium-grey !important;
-	margin-bottom: 0.5rem;
+	margin-bottom: 0;
 }
 
 @include breakpoint(med) {
@@ -87,24 +65,20 @@
 
 	.the-solution-prototype_grid-container {
 		align-items: start;
-		grid-template-columns: auto auto;
+		grid-template-columns: auto 3fr;
 		grid-template-rows: auto;
 		margin: auto;
 		align-items: center;
 		width: fit-content;
 		column-gap: 4rem;
 
-		h2,
-		h3 {
-			margin-top: auto;
-			text-align: left;
-			margin-bottom: 1rem !important;
+		&.grid-container-reverse {
+			grid-template-columns: auto 3fr;
 		}
 	}
 
 	.the-solution-prototype_content {
-
-		max-width: 34rem;
+		max-width: 35rem;
 	}
 
 
@@ -119,7 +93,7 @@
 	}
 
 	.the-solution-prototype_body {
-		font-size: 1.125rem;
 		color: $medium-grey !important;
+		font-size: 1.25rem;
 	}
 }
