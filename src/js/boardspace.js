@@ -5,14 +5,15 @@ import '../components/wrappedList';
 import '../components/showFullImage';
 import '../components/table';
 import '../components/accordion';
-import '../components/Boardspace/HeadingContainer/headingContainer';
 import '../components/BoardspaceCard/BoardspaceCard';
+import '../components/BoardspaceHeadingContainer/BoardspaceHeadingContainer';
 
 import NavBar from '../components/NavBar/NavBar';
 // import NavBarBackground from '../components/NavBarBackground/NavBarBackground';
 import ProgressBar from '../components/ProjectProgressBar/ProjectProgressBar';
 import BackToTopButton from '../components/BackToTopButton/BackToTopButton';
 import Footer from '../components/Footer/Footer';
+
 import { initializeAccordion } from '../components/ProjectAccordion/ProjectAccordion';
 import { initializeHideVideoControls } from '../components/HideVideoControls/HideVideoControls';
 
@@ -25,7 +26,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     initializeAccordion();
     initializeHideVideoControls();
-
 });
 
 
