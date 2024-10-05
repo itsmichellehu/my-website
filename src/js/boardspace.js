@@ -5,8 +5,8 @@ import '../components/wrappedList';
 import '../components/showFullImage';
 import '../components/table';
 import '../components/accordion';
-import '../components/Boardspace/Card/card';
 import '../components/Boardspace/HeadingContainer/headingContainer';
+import '../components/BoardspaceCard/BoardspaceCard';
 
 import NavBar from '../components/NavBar/NavBar';
 // import NavBarBackground from '../components/NavBarBackground/NavBarBackground';
