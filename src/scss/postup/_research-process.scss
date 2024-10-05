@@ -5,14 +5,15 @@
 }
 
 .design-sprint-graphic {
-	margin: 3rem 0 1.5rem 0;
-	max-width: 100%;
+	margin: 1rem auto 1.5rem auto;
+	width: 90vw;
+	max-width: 33rem;
 
 	img {
 		width: 100%;
 	}
 
 	@include breakpoint(med) {
-		margin: 4rem 0 2rem 0;
+		margin: 1rem auto 2rem auto;
 	}
 }
