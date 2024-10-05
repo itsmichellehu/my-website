@@ -1,13 +1,15 @@
 import '../scss/boardspace.scss';
 
-// import '../components/list';
-// import '../components/wrappedList';
-// import '../components/showFullImage';
-// import '../components/table';
+import '../components/lists';
+import '../components/wrappedList';
+import '../components/showFullImage';
+import '../components/table';
 import '../components/accordion';
+import '../components/Boardspace/Card/card';
+import '../components/Boardspace/HeadingContainer/headingContainer';
 
 import NavBar from '../components/NavBar/NavBar';
-import NavBarBackground from '../components/NavBarBackground/NavBarBackground';
+// import NavBarBackground from '../components/NavBarBackground/NavBarBackground';
 import ProgressBar from '../components/ProjectProgressBar/ProjectProgressBar';
 import BackToTopButton from '../components/BackToTopButton/BackToTopButton';
 import Footer from '../components/Footer/Footer';
@@ -16,7 +18,7 @@ import { initializeHideVideoControls } from '../components/HideVideoControls/Hid
 
 document.addEventListener('DOMContentLoaded', () => {
     NavBar();
-    NavBarBackground();
+    // NavBarBackground();
     ProgressBar();
     BackToTopButton();
     Footer();
