@@ -15,15 +15,13 @@ const classAnimationMap = {
     'bounce-in': 'animate__bounceIn'
 };
 
-AnimateInView({ classAnimationMap });
-
 document.addEventListener('DOMContentLoaded', () => {
     NavBar();
     NavBarBackground();
     BackToTopButton();
     Footer();
 
-    AnimateInView();
+    AnimateInView({ classAnimationMap });
     ScrollToSection();
     initializeHideVideoControls();
 });

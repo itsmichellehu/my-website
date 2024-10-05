@@ -1,3 +1,13 @@
+import { AnimateInView } from "../../components/AnimateInView/AnimateInView"; // Corrected import path
+
+const classAnimationMap = {
+    'fade-in': 'animate__fadeIn',
+    'fade-in-right': 'animate__fadeInRight',
+    'fade-in-left': 'animate__fadeInLeft',
+    'slide-up': 'animate__slideInUp',
+    'bounce-in': 'animate__bounceIn'
+};
+
 function Footer() {
     const existingFooter = document.querySelector("footer");
     if (!existingFooter) {
@@ -59,17 +69,9 @@ function Footer() {
             }
         });
 
-        // Now trigger the AnimateInView function for the newly inserted elements
-        AnimateInView({
-            classAnimationMap: {
-                'fade-in': 'animate__fadeIn',
-                'fade-in-right': 'animate__fadeInRight',
-                'fade-in-left': 'animate__fadeInLeft',
-                'slide-up': 'animate__slideInUp',
-                'bounce-in': 'animate__bounceIn'
-            },
-            threshold: 0.2,  // Adjust how much of the element needs to be visible to trigger
-            rootMargin: '0px'  // Optional: offset for earlier/later trigger
+        // Ensure AnimateInView is called after the DOM is fully loaded
+        document.addEventListener('DOMContentLoaded', () => {
+            AnimateInView({ classAnimationMap });
         });
     }
 }
