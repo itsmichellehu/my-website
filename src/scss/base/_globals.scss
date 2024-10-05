@@ -118,11 +118,26 @@ pre {
 }
 
 a {
+	display: flex;
 	background-color: transparent; // Removes background color
 	text-decoration: none; // Removes underline
-	color: #0281e3; // Link colors inherit from parent
-	margin-bottom: 1rem;
-	margin-top: 1.25rem;
+	color: $teal-accent !important; // Link colors inherit from parent
+	margin-top: 0;
+	margin-bottom: 1.25rem;
+	font-size: 1rem;
+	line-height: 110%;
+	align-items: center;
+
+	gap: 0.25rem;
+
+	@include breakpoint(med) {
+		font-size: 1.125rem;
+	}
+
+	span.anchor-text {
+		padding: 0.25rem 0;
+		@include hover-underline-self($teal-accent);
+	}
 }
 
 
