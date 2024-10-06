@@ -180,6 +180,7 @@ $constraints-svg-med: 3rem;
 	}
 
 	.constraints-grid-container {
+		margin-top: 2rem !important;
 		width: 90vw;
 		gap: 0.5rem;
 		grid-template-columns: 1fr 1fr;
