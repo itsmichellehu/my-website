@@ -112,6 +112,12 @@ h5 {
 	// 	}
 }
 
+@include breakpoint(lg) {
+	p {
+		font-size: 1.25rem;
+	}
+}
+
 .noto-serif {
 	color: $black;
 	font-family: "Noto Serif", serif;
