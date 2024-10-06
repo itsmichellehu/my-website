@@ -20,7 +20,8 @@
 	.usability-test-details_grid-container {
 		grid-template-columns: 1fr 1fr;
 		grid-template-rows: auto;
-		grid-template-areas: 'a b' 'c c';
+		grid-template-areas: 'a b';
+		gap: 2rem;
 
 		.grid-item-questions {
 			grid-area: c;
