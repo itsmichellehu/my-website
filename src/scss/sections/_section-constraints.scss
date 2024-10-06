@@ -176,7 +176,7 @@ $constraints-svg-med: 3rem;
 
 @include breakpoint(med) {
 	#the-constraints {
-		padding: 4rem 0;
+		padding: 0;
 	}
 
 	.constraints-grid-container {
