@@ -172,6 +172,7 @@
 }
 
 $constraints-grid-item-padding-med: 1.5rem;
+$constraints-svg-med: 3rem;
 
 @include breakpoint(med) {
 	#the-constraints {
@@ -211,17 +212,21 @@ $constraints-grid-item-padding-med: 1.5rem;
 		// display: flex;
 		// flex-direction: column;
 		// flex: 0 0 auto;
-		grid-template-columns: 1fr 4rem;
+		grid-template-columns: 1fr $constraints-svg-med;
 		padding: $constraints-grid-item-padding-med;
+
+		ul>li {
+			font-size: 1.125rem;
+		}
 
 		.svg-wrapper {
 			display: flex;
-			height: 4rem;
-			width: 4rem;
+			height: $constraints-svg-med;
+			width: $constraints-svg-med;
 			margin-bottom: 1rem;
 
 			img {
-				width: 4rem;
+				width: $constraints-svg-med;
 			}
 		}
 
