@@ -87,9 +87,17 @@
 	color: $emphasis !important;
 }
 
+.transparent {
+	color: transparent !important;
+}
+
 // Background colors
 
 .bg- {
+	&-transparent {
+		background-color: transparent !important;
+	}
+
 	&-lightest-green {
 		background-color: $lightest-green !important;
 	}
