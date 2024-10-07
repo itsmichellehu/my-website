@@ -34,12 +34,12 @@
 		}
 
 		.img-prototype-checklist {
-			width: calc(60% - 1rem);
+			width: calc(50% - 1rem);
 		}
 	}
 
 	.design-checklist-text_wrapper {
-		width: calc(40% - 1rem);
+		flex: 1;
 	}
 }
 
@@ -98,7 +98,7 @@
 		display: block;
 		font-size: 2.25rem;
 		text-align: left;
-		align-self: flex-start;
+		align-self: end;
 	}
 }
 
