@@ -65,6 +65,15 @@
 	}
 }
 
+#final-test-prototype {
+	background-color: $lightest-grey;
+	margin: 4rem 0;
+
+	@include breakpoint(lg) {
+		margin: 6rem 0;
+	}
+}
+
 .prototype-walkthrough-section_grid-container {
 	display: grid;
 	grid-template-columns: 1fr;
