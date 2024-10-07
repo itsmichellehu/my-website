@@ -63,7 +63,11 @@ module.exports = {
                         loader: 'sass-loader',
                         options: {
                             implementation: require('sass'),
-                            api: 'modern',  // Explicitly use the modern API
+                            api: 'modern',
+                            sassOptions: {
+                                outputStyle: 'compressed',  // Minified output in production
+                                sourceMap: false,           // Disable source maps for production
+                            },
                         },
                     },
                 ],
@@ -111,7 +115,7 @@ module.exports = {
     plugins: [
         new MiniCssExtractPlugin({
             filename: '[name].css',
-            chunkFilename: '[id].css',
+            // chunkFilename: '[id].css',
         }),
         new PurgeCSSPlugin({
             paths: glob.sync(`${PATHS.src}/**/*`, { nodir: true }),
@@ -129,5 +133,6 @@ module.exports = {
                 { from: 'src/assets', to: 'assets' }
             ]
         })
-    ]
+    ],
+    devtool: false, // Correctly disable source maps
 };

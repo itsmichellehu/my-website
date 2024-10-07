@@ -34,9 +34,13 @@ module.exports = {
                         loader: 'sass-loader',
                         options: {
                             implementation: require('sass'),
-                            api: 'modern',  // Explicitly use the modern API
+                            api: 'modern',
+                            sassOptions: {
+                                outputStyle: 'expanded',  // Readable output in development
+                                sourceMap: true,          // Enable source maps in development
+                            },
                         },
-                    },
+                    }
                 ],
             },
             {
@@ -45,21 +49,6 @@ module.exports = {
                 generator: {
                     filename: 'assets/images/[name].[hash:6][ext]',  // Unified image output
                 },
-                use: [
-                    {
-                        loader: 'image-webpack-loader',  // Image optimization
-                        options: {
-                            mozjpeg: {
-                                progressive: true,
-                                quality: 65,
-                            },
-                            optipng: { enabled: true },
-                            pngquant: { quality: [0.65, 0.90], speed: 4 },
-                            gifsicle: { interlaced: false },
-                            webp: { quality: 75 }
-                        }
-                    }
-                ]
             },
             {
                 test: /\.(mp4)$/,  // Handling for video files
@@ -117,5 +106,5 @@ module.exports = {
         hot: true,
         watchFiles: ['**/*'],  // Watch all files
     },
-    devtool: 'source-map',
+    devtool: 'eval-source-map',
 };
