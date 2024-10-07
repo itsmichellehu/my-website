@@ -74,6 +74,17 @@
 	}
 }
 
+.final-test-prototype_wrapper {
+	display: flex;
+	flex-direction: column;
+	gap: 2.5rem;
+	width: fit-content;
+	max-width: 90vw;
+	align-items: center;
+	justify-content: center;
+	margin: auto;
+}
+
 .prototype-walkthrough-section_grid-container {
 	display: grid;
 	grid-template-columns: 1fr;
