@@ -4,35 +4,33 @@
 	display: flex;
 	flex-direction: column;
 	gap: 0.5rem;
-	width: 100%;
-	max-width: $content-max-width;
-	margin: auto; // Center the container
-	padding: 2rem;
+	margin: auto;
+	padding: 1rem;
 	background-color: #f6f6f6;
-	border-radius: 1rem;
+	border-radius: 6px;
 	height: 100%;
-	//   box-shadow: 0.5px 0.5px 6px 0px rgba(0, 0, 0, 0.1);
 
-	.headline {
-		width: 100%;
-		text-align: left;
-		margin-bottom: 0;
-		color: $black;
-		font-weight: normal;
-		font-size: 1.2rem;
+	p {
+		font-weight: 400;
 	}
 
-	.icon {
-		width: 2.5rem;
-		height: 2.5rem;
+	p:last-child {
+		margin-bottom: 0;
+	}
+
+	&.subdued-green {
+		border: 2px solid $subdued-green;
+		background-color: $lightest-green;
+
+		p {
+			color: $forest-green;
+		}
 	}
 }
 
-.grid-2x2 {
-	display: grid;
-	grid-template-columns: repeat(2, 1fr);
-	grid-template-rows: repeat(2, 1fr);
-	gap: 1rem;
+.card-vertical_icon {
+	width: 2.5rem;
+	height: 2.5rem;
 }
 
 .card-vertical_subheader {

@@ -292,20 +292,3 @@
 		width: 100%;
 	}
 }
-
-.card-vertical.research_card {
-	border: 2px solid $subdued-green;
-	;
-	padding: 1rem;
-	border-radius: 6px;
-	background-color: $lightest-green;
-
-	p {
-		color: $primary-green;
-		font-weight: 500;
-	}
-
-	p:last-child {
-		margin-bottom: 0;
-	}
-}

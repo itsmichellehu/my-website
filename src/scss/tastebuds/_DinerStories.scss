@@ -2,10 +2,10 @@
 
 .diner-stories-grid-container {
     display: grid;
-    grid-template-rows: repeat(4, auto);
+    grid-template-rows: repeat(2, auto);
     grid-template-columns: 1fr;
     gap: 0.5rem;
-    width: 95vw;
+    width: 90vw;
     max-width: 64rem;
 
     @include breakpoint(med) {
@@ -16,11 +16,9 @@
 }
 
 .card-vertical.diner-stories-card {
-    padding: 1.5rem;
-    background-color: $lightest-green;
+    padding: 1.5rem !important;
+}
 
-    p {
-        margin-bottom: 0;
-        color: $forest-green;
+
     }
 }
