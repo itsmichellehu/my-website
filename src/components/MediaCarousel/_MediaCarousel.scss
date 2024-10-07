@@ -1,6 +1,6 @@
-$design-walkthrough-carousel-width: 90vw;
-$design-walkthrough-carousel-max-width: 74rem;
-$side-content-width: 20rem;
+@use "../../scss/abstracts/all-abstracts" as *;
+@use "./carousel-variables" as *;
+@forward "./carousel-variables";
 
 .media-carousel-wrapper {
 	width: 100vw;

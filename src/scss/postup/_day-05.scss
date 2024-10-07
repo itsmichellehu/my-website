@@ -1,3 +1,5 @@
+@use "../abstracts/all-abstracts" as *;
+
 // Friday
 .usability-test-details_grid-container {
 	display: grid;
@@ -7,13 +9,15 @@
 }
 
 .usability-test-details_grid-item {
-	padding: 1.25rem;
-	background-color: $lightest-grey;
+	padding: 1.5rem;
+	background: $lightest-green;
+	border-radius: 5px;
+}
 
-	>.subheading {
-		margin-bottom: 0.75rem;
-		color: $primary-color;
-	}
+.usability-test-details_grid-item>.subheading {
+	margin-bottom: 0.75rem;
+	color: $primary-color;
+
 }
 
 @include breakpoint(med) {
@@ -21,7 +25,6 @@
 		grid-template-columns: 1fr 1fr;
 		grid-template-rows: auto;
 		grid-template-areas: 'a b';
-		gap: 2rem;
 
 		.grid-item-questions {
 			grid-area: c;
@@ -57,7 +60,7 @@
 		align-items: flex-start;
 		align-self: auto;
 		background-color: #fafafa;
-		border-left: 6px solid var(--light-grey);
+		border-left: 6px solid $light-grey;
 
 		p {
 			font-family: "Noto Serif", sans-serif;
@@ -96,7 +99,7 @@
 			}
 
 			p {
-				color: var(--medium-light-grey);
+				color: $medium-light-grey;
 				font-family: Inter, sans-serif;
 				font-size: 1rem;
 				margin-bottom: 0;

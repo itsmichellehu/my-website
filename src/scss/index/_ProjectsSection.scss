@@ -1,4 +1,4 @@
-$boardspace-tag-color: #5488ca;
+@use "../abstracts/all-abstracts" as *;
 
 // Projects
 .projects-section {
@@ -233,18 +233,18 @@ $boardspace-tag-color: #5488ca;
 }
 
 .boardspace-tag {
-	background: #d6e8ff85;
+	background: $boardspace-tag-background;
 	color: $boardspace-tag-color;
 }
 
 .tastebuds-tag {
-	background: #FDEFD4;
-	color: #f0ac23;
+	background: $tastebuds-tag-background;
+	color: $tastebuds-tag-color;
 }
 
 .postup-tag {
-	background: #E3F1EE;
-	color: #62B5A4;
+	background: $postup-tag-background;
+	color: $postup-tag-color;
 }
 
 .project-description {

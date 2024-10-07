@@ -1,4 +1,5 @@
-$button-active-color: $primary-green;
+@use "../../scss/abstracts/variables" as *;
+@use "../../scss/abstracts/breakpoints-mixins" as *;
 
 .btn-primary,
 .btn-secondary {
@@ -42,7 +43,7 @@ $button-active-color: $primary-green;
 		}
 
 		&:active {
-			background-color: $button-active-color;
+			background-color: $large-button-active-color;
 			transition: background-color 0.3s, color 0.3s, opacity 0.3s;
 		}
 	}
@@ -62,8 +63,8 @@ $button-active-color: $primary-green;
 		}
 
 		&:active:focus {
-			border-color: $button-active-color;
-			color: $button-active-color;
+			border-color: $large-button-active-color;
+			color: $large-button-active-color;
 			transition: border 0.3s, color 0.3s;
 		}
 	}

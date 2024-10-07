@@ -1,3 +1,5 @@
+@use "../abstracts/all-abstracts" as *;
+
 #the-solution {
 	background: $lightest-grey;
 }
@@ -10,7 +12,7 @@
 	margin: 0 auto;
 	padding: 0 1rem;
 	border-radius: 1rem;
-	background-color: $white;
+	background-color: white;
 	height: fit-content;
 	justify-content: center;
 }

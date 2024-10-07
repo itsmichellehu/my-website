@@ -1,3 +1,5 @@
+@use "../abstracts/all-abstracts" as *;
+
 ul,
 ol {
 	display: flex;
@@ -16,6 +18,14 @@ ol {
 
 		span {
 			font-weight: 500;
+		}
+
+		@include breakpoint(med) {
+			font-size: 1.125rem;
+		}
+
+		@include breakpoint(lg) {
+			font-size: 1.25rem;
 		}
 	}
 
@@ -36,11 +46,15 @@ ol {
 	}
 }
 
-@include breakpoint(med) {
-
+ul.list-style-type,
+ol.list-style-type {
 	li {
-		font-size: 1.125rem;
+		list-style-type: none;
 	}
+}
+
+.list-none {
+	list-style-type: none;
 }
 
 ol {

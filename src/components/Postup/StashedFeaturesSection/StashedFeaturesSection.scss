@@ -1,6 +1,7 @@
 // Stashed features
-@import "../../../scss/abstracts/breakpoints-mixins";
-$content-max-width: 45rem;
+@use "../../../scss/abstracts/breakpoints-mixins";
+@use "../../../scss/abstracts/variables";
+
 $black: #1e1e1e;
 
 // Stashed features
@@ -95,7 +96,7 @@ $black: #1e1e1e;
     height: 2.75rem;
     margin-bottom: 1.25rem;
 }
- 
+
 .icon {
     width: 100%;
 }

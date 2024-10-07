@@ -1,5 +1,4 @@
-$nav-footer-max-width: 88rem;
-$progress-bar-height: 6px;
+@use "../abstracts/all-abstracts" as *;
 
 html {
 	text-size-adjust: none;

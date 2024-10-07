@@ -1,34 +1,16 @@
-$primary-color: #1e1e1e;
-$outline-stroke: 1.25px;
-$teal: #45b5aa;
-$yellow: #f0c05a;
-$red-orange: #e2583e;
-$tan: #decdbd;
-$emphasis-blue: #4479df;
-$invalid-red: #dc1d25;
-$white: #ffffff;
-$medium-light-grey: #dbdbdb;
-$light-grey: #f0f0f0;
-$light-blue: #e7ecff;
-$sub-grey: #cfcfcf;
-$emphasis: #e2583e;
-$wireframe-max-height: 40rem;
+@use "abstracts/all-abstracts" as *;
 
-@import "abstracts/all-abstracts";
+@use "base/all-base";
 
-@import "base/all-base";
+@use "sections/all-sections";
 
-@import "sections/all-sections";
+@use "../components/project-components";
 
-@import "../components/project-components";
+@use "../components/global-components";
 
-@import "../components/global-components";
+@use "boardspace/all-boardspace";
 
-@import "boardspace/all-boardspace";
-
-@import "sections/all-sections";
-
-@import "utilities/all-utilities";
+@use "utilities/all-utilities";
 
 
 // #hero,
@@ -292,7 +274,7 @@ $wireframe-max-height: 40rem;
 	justify-content: center;
 	align-items: center;
 	border-radius: 10px;
-	border: 1px solid var(--light-grey, #f0f0f0);
+	border: 1px solid $light-grey;
 	background: #f9f9f9
 }
 

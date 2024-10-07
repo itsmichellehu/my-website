@@ -1,3 +1,5 @@
+@use "../abstracts/all-abstracts" as *;
+
 // Thursday design checklist {
 .design-checklist {
 	gap: 2rem;
@@ -108,7 +110,7 @@
 	margin: 0 auto;
 	padding: 2rem 1rem;
 	border-radius: 1rem;
-	background-color: $white;
+	background-color: white;
 	height: fit-content;
 }
 

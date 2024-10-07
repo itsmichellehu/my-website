@@ -1,17 +1,11 @@
-@import "breakpoints";
-@import "colors";
-@import "dividers";
-@import "flex-items";
-@import "flex";
-@import "grid";
-@import "spacing";
-@import "svg-icons";
-@import "dimensions";
-
-.border-0 {
-    border: 0;
-}
-
-.text-decoration-none {
-    text-decoration: none;
-}
+@forward "borders";
+@forward "breakpoints";
+@forward "colors";
+@forward "dimensions";
+@forward "dividers";
+@forward "flex-items";
+@forward "flex";
+@forward "grid";
+@forward "spacing";
+@forward "svg-icons";
+@forward "text";

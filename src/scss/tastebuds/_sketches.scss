@@ -1,3 +1,5 @@
+@use "../abstracts/all-abstracts" as *;
+
 .route-1-sketches_container {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
@@ -94,7 +96,9 @@
 			color: $black !important;
 
 			p:first-child {
-				@extend .subheading;
+				margin-bottom: 0.5rem;
+				font-size: 1.35rem;
+				font-weight: 500;
 			}
 		}
 	}

@@ -1,3 +1,6 @@
+@use "../../scss/abstracts/breakpoints-mixins" as *;
+@use "../../scss/abstracts/variables" as *;
+
 // Stashed features
 .stashed-features_wrapper {
 	display: flex;

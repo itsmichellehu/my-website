@@ -1,3 +1,5 @@
+@use "../../scss/abstracts/all-abstracts" as *;
+
 .design-walkthrough_grid-1-col {
 	display: grid;
 	grid-template-columns: 1fr;

@@ -1,5 +1,4 @@
-@import '../../scss/abstracts/all-abstracts';
-$nav-footer-max-width: 68rem;
+@use '../../scss/abstracts/all-abstracts' as *;
 
 footer {
 	display: flex;

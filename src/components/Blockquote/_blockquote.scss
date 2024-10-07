@@ -1,3 +1,5 @@
+@use "../../scss/abstracts/all-abstracts" as *;
+
 blockquote {
   display: flex;
   flex-direction: row;
@@ -31,7 +33,7 @@ blockquote {
   align-items: center;
 
   .img-interviewee {
-    @extend .hide-med;
+    @extend %hide-med;
   }
 
   p {

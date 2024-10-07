@@ -1,3 +1,5 @@
+@use "../abstracts/all-abstracts" as *;
+
 .content-max-width {
 	max-width: $content-max-width;
 }
@@ -163,7 +165,7 @@
 	margin: 0 auto;
 
 	span {
-		@extend .subheader;
+		@extend %subheader;
 	}
 
 	.secondary-text {

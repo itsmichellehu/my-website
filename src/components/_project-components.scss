@@ -1,37 +1,33 @@
-@import "ProjectAccordion/ProjectAccordion";
+@forward "ProjectAccordion/ProjectAccordion";
 
-@import "AutoplayVideo/autoplay-video";
+@forward "AutoplayVideo/video-player";
 
-@import "AutoplayVideo/video-player";
+@forward "Blockquote/blockquote";
 
-@import "AutoplayVideoCarousel/AutoplayVideoCarousel";
+@forward "CaptionContainer/caption-container";
 
-@import "Blockquote/blockquote";
+@forward "Card/card";
 
-@import "CaptionContainer/caption-container";
+@forward "CardVertical/card-vertical";
 
-@import "Card/card";
+@forward "Carousel/carousel";
 
-@import "CardVertical/card-vertical";
+@forward "DesignWalkthroughGrid/DesignWalkthroughGrid";
 
-@import "Carousel/carousel";
+@forward "GridAsideRight/content-grid";
 
-@import "DesignWalkthroughGrid/DesignWalkthroughGrid";
+@forward "GridCardLeft/grid-card-left";
 
-@import "GridAsideRight/content-grid";
+@forward "DesignWalkthroughOneColumnGrid/design-walkthrough-1-col-grid";
 
-@import "GridCardLeft/grid-card-left";
+@forward "HeadingHangingIcon/icon-heading";
 
-@import "DesignWalkthroughOneColumnGrid/design-walkthrough-1-col-grid";
+@forward "HeroHeader/hero-header";
 
-@import "HeadingHangingIcon/icon-heading";
+@forward "ImageZoom/ImageZoom";
 
-@import "HeroHeader/hero-header";
+@forward "MediaCarousel/MediaCarousel";
 
-@import "ImageZoom/ImageZoom";
+@forward 'UsabilityTestFindingsCard/UsabilityTestFindingsCard';
 
-@import "MediaCarousel/MediaCarousel";
-
-@import 'UsabilityTestFindingsCard/UsabilityTestFindingsCard';
-
-@import 'TabsContainer/TabsContainer';
+@forward 'TabsContainer/TabsContainer';

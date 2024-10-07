@@ -1,3 +1,5 @@
+@use "../abstracts/variables" as *;
+
 // Brand colors
 .teal-accent {
 	color: $teal-accent !important;
@@ -98,8 +100,9 @@
 		background-color: transparent !important;
 	}
 
-	&-lightest-green {
+	&lightest-green {
 		background-color: $lightest-green !important;
+		background: $lightest-green !important;
 	}
 
 	&light-blue {

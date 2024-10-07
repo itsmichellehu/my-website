@@ -1,8 +1,10 @@
+@use "../abstracts/all-abstracts" as *;
+
 // image.scss
 .img-width-1200 {
     width: 90%;
     max-width: 1200px;
-  }
+}
 
 // Responsive image
 .img-responsive {

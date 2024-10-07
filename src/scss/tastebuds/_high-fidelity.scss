@@ -1,3 +1,5 @@
+@use "../abstracts/all-abstracts" as *;
+
 .r1-hf-iteration-process_grid-container {
 	display: grid;
 	grid-template-columns: 1fr 1fr auto 1fr 1fr;

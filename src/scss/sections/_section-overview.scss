@@ -1,3 +1,5 @@
+@use "../abstracts/all-abstracts" as *;
+
 .overview {
 	width: 100vw;
 	display: flex;
@@ -32,7 +34,7 @@
 
 	&__title {
 		font-family: $main-font;
-		color: var(--black);
+		color: $black;
 		font-size: 2.66rem !important;
 		font-weight: 600;
 		line-height: 100%;
@@ -80,18 +82,18 @@
 		text-transform: capitalize;
 
 		&--postup {
-			background: #E3F1EE;
-			color: #62B5A4;
+			background: $postup-tag-background;
+			color: $postup-tag-color;
 		}
 
 		&--tastebuds {
-			background: #FDEFD4;
-			color: #f0ac23;
+			background: $tastebuds-tag-background;
+			color: $tastebuds-tag-color;
 		}
 
 		&--boardspace {
-			background: #D6E8FF;
-			color: #5488ca;
+			background: $boardspace-tag-background;
+			color: $boardspace-tag-color;
 		}
 	}
 

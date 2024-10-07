@@ -1,4 +1,4 @@
-@import "NavBar/NavBar";
-@import "Footer/Footer";
-@import "Buttons/Buttons";
-@import "BackToTopButton/BackToTopButton";
+@forward "NavBar/NavBar";
+@forward "Footer/Footer";
+@forward "Buttons/Buttons";
+@forward "BackToTopButton/BackToTopButton";

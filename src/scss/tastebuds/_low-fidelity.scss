@@ -1,3 +1,5 @@
+@use "../abstracts/all-abstracts" as *;
+
 .route-2-low-fidelity-all_grid-container {
 	display: grid;
 	grid-template-columns: repeat(5, 1fr);

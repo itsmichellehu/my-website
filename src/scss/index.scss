@@ -1,19 +1,19 @@
-$primary-color: #479a9a;
+// $primary-color: #479a9a;
 
-@import "abstracts/all-abstracts";
+@use "abstracts/all-abstracts" as *;
 
-@import "base/all-base";
+@use "base/all-base";
 
-@import "utilities/all-utilities";
+@use "utilities/all-utilities";
 
-@import "../components/global-components";
+@use "../components/global-components";
 
-@import "../components/home-components";
+@use "../components/home-components";
 
-@import "index/all-index";
+@use "index/all-index";
 
 main {
-	background-color: $white;
+	background-color: white;
 }
 
 .default-nav-color {
@@ -47,7 +47,7 @@ p {
 }
 
 h1 {
-	color: var(--Colors-Off-Black, #1e1e1e);
+	color: $black;
 	font-family: Inter;
 	font-size: 1.625rem;
 	font-style: normal;

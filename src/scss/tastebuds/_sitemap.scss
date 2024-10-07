@@ -1,3 +1,5 @@
+@use "../abstracts/all-abstracts" as *;
+
 .sitemap_wrapper {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);

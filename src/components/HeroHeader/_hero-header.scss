@@ -1,3 +1,6 @@
+@use "../../scss/abstracts/variables" as *;
+@use "../../scss/abstracts/breakpoints-mixins" as *;
+
 .hero-overview-wrapper {
 	display: flex;
 	flex-direction: column;

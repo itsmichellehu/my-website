@@ -1,3 +1,5 @@
+@use "../abstracts/all-abstracts" as *;
+
 .user-interview-findings_wrapper {
 	@include flex(column, 2rem);
 	margin: auto;

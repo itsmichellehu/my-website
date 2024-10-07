@@ -1,3 +1,6 @@
+@use "../abstracts/all-abstracts" as *;
+@use "../../components/NavBar/NavBar" as *;
+
 // Variables
 $hero-icon-button-size: 2rem;
 $hero-buttons-gap-bp-med: 1rem;
@@ -224,7 +227,7 @@ $hero-icon-button-size-bp-xl: 3rem;
 	}
 
 	&:active:focus {
-		background-color: $button-active-color;
+		background-color: $large-button-active-color;
 		transition: border 0.3s;
 	}
 }

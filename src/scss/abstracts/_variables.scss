@@ -9,6 +9,8 @@ $medium-green: #92ACA5;
 $subdued-green: #BECEC4;
 $lightest-green: #E5EBE7;
 
+$primary-color: $primary-green;
+
 $boardspace-tag-color: #D6E8FF;
 
 // Colors - greyscale
@@ -45,3 +47,19 @@ $main-font: "Inter";
 $fixed-shadow: -1px -1px 2px rgba(49, 49, 49, 0.05), 1px 1px 2px rgba(0, 0, 0, 0.5), inset -1px -1px 3px rgba(0, 0, 0, 0.05),
 	inset 1px 1px 2px rgba(255, 255, 255, 0.05);
 $border-style: 1px solid #e4ebf3;
+
+// Spacing
+$nav-footer-max-width: 88rem;
+$progress-bar-height: 6px;
+$wireframe-max-height: 40rem;
+
+// Components
+$large-button-active-color: $primary-green;
+
+// Tags
+$boardspace-tag-color: #5488ca;
+$boardspace-tag-background: #d6e8ff85;
+$tastebuds-tag-background: #FDEFD4;
+$tastebuds-tag-color: #f0ac23;
+$postup-tag-background: #E3F1EE;
+$postup-tag-color: #62B5A4;

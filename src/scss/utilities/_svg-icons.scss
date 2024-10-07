@@ -1,3 +1,5 @@
+@use "../abstracts/all-abstracts" as *;
+
 .svg-icon {
 	color: $black;
 	text-align: left;
@@ -44,7 +46,7 @@
 		transform: none;
 
 		&:hover {
-			color: var(--light-grey);
+			color: $light-grey;
 		}
 
 		&.rotate--90 {

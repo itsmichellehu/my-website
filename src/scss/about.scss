@@ -1,20 +1,14 @@
-$primary-color: #479a9a;
-$section-padding-mobile: 3rem;
-$section-padding-med: 3.625rem;
+@use "abstracts/all-abstracts" as *;
 
-@import "abstracts/all-abstracts";
+@use "base/all-base";
 
-$primary-color: $primary-green;
+@use "utilities/all-utilities";
 
-@import "base/all-base";
+@use "../components/global-components";
 
-@import "utilities/all-utilities";
+@use "../components/about-components";
 
-@import "../components/global-components";
-
-@import "../components/about-components";
-
-@import "about/all-about";
+@use "about/all-about";
 
 .about_wrapper,
 .toolbox_section-wrapper,

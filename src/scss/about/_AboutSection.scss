@@ -1,5 +1,6 @@
 // About me
-$section-padding-mobile: 3rem;
+@use "../abstracts/all-abstracts" as *;
+@use "../../scss/about/about-variables" as about;
 
 .scroll-button {
 	cursor: pointer;
@@ -12,6 +13,7 @@ $section-padding-mobile: 3rem;
 	padding: 0;
 	transition: transform 0.2s ease;
 	width: fit-content;
+	height: fit-content;
 
 	&:hover {
 		transform: scale(1.05);
@@ -38,7 +40,7 @@ $section-padding-mobile: 3rem;
 }
 
 .section-container {
-	padding-bottom: $section-padding-mobile;
+	padding-bottom: about.$section-padding-mobile;
 }
 
 .about_wrapper {

@@ -1,8 +1,7 @@
-@import '../../scss/abstracts/_breakpoints-mixins';
+@use '../../scss/abstracts/breakpoints-mixins' as *;
+@use '../../scss/abstracts/variables' as *;
 
 $tab-border-radius: 2rem;
-$content-max-width: 45rem;
-$black: #1e1e1e;
 
 .tabs-container {
     width: 95vw;
@@ -150,7 +149,7 @@ $black: #1e1e1e;
     .tab-content {
         padding: 2rem 1rem;
         padding-bottom: 0;
-        
+
     }
 
     .tab-button {
