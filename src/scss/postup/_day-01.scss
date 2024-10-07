@@ -142,8 +142,8 @@ $quote-text-size-med: 100%;
 
 		>.img-quotation-mark {
 			margin: 0;
-			margin-bottom: 1rem;
-			max-width: 5rem;
+			max-width: 12rem;
+			transform: translateX(-84px) translateY(8px);
 		}
 
 		.grid-container {
