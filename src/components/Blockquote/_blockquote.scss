@@ -18,7 +18,7 @@ blockquote {
   align-self: auto;
   background-color: #fafafa;
   border-left: 6px solid $medium-light-grey;
-  padding: 0 1.5rem;
+  padding: 0 0 0 1.5rem;
 
   p:first-child {
     @extend %quote-text;
