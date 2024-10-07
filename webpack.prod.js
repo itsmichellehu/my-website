@@ -55,12 +55,18 @@ module.exports = {
                 }
             },
             {
-                test: /\.scss$/,
+                test: /\.(scss|css)$/,
                 use: [
                     MiniCssExtractPlugin.loader,
                     'css-loader',
-                    'sass-loader'
-                ]
+                    {
+                        loader: 'sass-loader',
+                        options: {
+                            implementation: require('sass'),
+                            api: 'modern',  // Explicitly use the modern API
+                        },
+                    },
+                ],
             },
             {
                 test: /\.(png|jpe?g|gif|svg)$/i,
@@ -104,7 +110,8 @@ module.exports = {
     },
     plugins: [
         new MiniCssExtractPlugin({
-            filename: 'css/[name].css'
+            filename: '[name].css',
+            chunkFilename: '[id].css',
         }),
         new PurgeCSSPlugin({
             paths: glob.sync(`${PATHS.src}/**/*`, { nodir: true }),

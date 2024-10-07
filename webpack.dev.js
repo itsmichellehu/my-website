@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
     entry: {
@@ -25,12 +26,18 @@ module.exports = {
                 use: 'babel-loader',  // Preset options are defined in babel config
             },
             {
-                test: /\.(scss|css)$/,  // Handles both SCSS and plain CSS files
+                test: /\.(scss|css)$/,
                 use: [
-                    'style-loader',
+                    MiniCssExtractPlugin.loader,
                     'css-loader',
-                    'sass-loader'
-                ]
+                    {
+                        loader: 'sass-loader',
+                        options: {
+                            implementation: require('sass'),
+                            api: 'modern',  // Explicitly use the modern API
+                        },
+                    },
+                ],
             },
             {
                 test: /\.(png|jpg|jpeg|gif|svg)$/i,  // Combined handling for images and SVGs
@@ -64,6 +71,10 @@ module.exports = {
         ]
     },
     plugins: [
+        new MiniCssExtractPlugin({
+            filename: '[name].css',
+            chunkFilename: '[id].css',
+        }),
         new HtmlWebpackPlugin({
             template: './src/index.html',
             chunks: ['index'],

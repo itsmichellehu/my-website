@@ -29,12 +29,19 @@ module.exports = {
                 }
             },
             {
-                test: /\.(scss|css)$/, // Handles both SCSS and CSS
+                test: /\.(scss|css)$/,
                 use: [
                     MiniCssExtractPlugin.loader,
                     'css-loader',
-                    'sass-loader',
-                ]
+                    {
+                        loader: 'sass-loader',
+                        options: {
+                            implementation: require('sass'),
+                            api: 'modern',  // Explicitly use the modern API
+                        },
+                    },
+
+                ],
             },
             {
                 test: /\.(png|jpg|jpeg|gif|svg)$/i,
@@ -52,7 +59,8 @@ module.exports = {
     },
     plugins: [
         new MiniCssExtractPlugin({
-            filename: 'css/[name].css'
+            filename: 'css/[name].css',
+            chunkFilename: '[id].css',
         }),
         new HtmlWebpackPlugin({
             template: './src/index.html',
