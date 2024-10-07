@@ -917,6 +917,28 @@
             });
         });
     </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var accordions = document.querySelectorAll('.accordion');
+
+            accordions.forEach(function (accordion) {
+                accordion.addEventListener('click', function () {
+                    // Toggle the active class for the clicked accordion
+                    this.classList.toggle('accordion-active');
+
+                    // Find the corresponding content section
+                    var content = this.querySelector('.accordion_content');
+
+                    // Expand if active, collapse if not
+                    if (this.classList.contains('accordion-active')) {
+                        content.style.maxHeight = content.scrollHeight + 'px';
+                    } else {
+                        content.style.maxHeight = 0;
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 
 </html>
