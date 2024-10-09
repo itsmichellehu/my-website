@@ -41,20 +41,18 @@ $content-mb: 2rem;
 $content-max-width: 45rem;
 $outline-stroke: 1.25px;
 
+// Components
 $nav-footer-max-width: 68rem;
-// Type
-$main-font: "Inter";
+$progress-bar-height: 6px;
+$wireframe-max-height: 40rem;
+$large-button-active-color: $primary-green;
 
+// Type
+
+$main-font: "Inter";
 $fixed-shadow: -1px -1px 2px rgba(49, 49, 49, 0.05), 1px 1px 2px rgba(0, 0, 0, 0.5), inset -1px -1px 3px rgba(0, 0, 0, 0.05),
 	inset 1px 1px 2px rgba(255, 255, 255, 0.05);
 $border-style: 1px solid #e4ebf3;
-
-// Spacing
-$progress-bar-height: 6px;
-$wireframe-max-height: 40rem;
-
-// Components
-$large-button-active-color: $primary-green;
 
 // Tags
 $boardspace-tag-color: #5488ca;
