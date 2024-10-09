@@ -12,7 +12,7 @@ function Footer() {
     const existingFooter = document.querySelector("footer");
     if (!existingFooter) {
         const footerHTML = `
-            <footer>
+            <footer id="footer">
                 <div class="wrapper">
                     <p class="headline fade-in-left">Let's make a difference together.</p>
                     <div class="fade-in-right">
@@ -20,25 +20,25 @@ function Footer() {
                             <div class="social-link">
                                 <a href="https://www.linkedin.com/in/itsmichellehu" target="_blank"
                                     rel="noopener noreferrer">
-                                    <p>LinkedIn</p>
+                                    <span class="anchor-text">LinkedIn</span>
                                 </a>
                             </div>
                             <div class="social-link">
                                 <a href="assets/files/MichelleHuResume.pdf" target="_blank"
                                     rel="noopener noreferrer">
-                                    <p>Resume</p>
+                                    <span class="anchor-text">Resume</span>
                                 </a>
                             </div>
                             <div class="social-link mobile-only">
                                 <a href="mailto:mhu.contact@gmail.com" target="_blank"
                                     rel="noopener noreferrer">
-                                    <p>Email me</p>
+                                    <span class="anchor-text">Email me</span>
                                 </a>
                             </div>
                             <div class="social-link last-child">
                                 <a href="about" target=""
                                     rel="noopener noreferrer">
-                                    <p>About me</p>
+                                    <span class="anchor-text">About me</span>
                                 </a>
                             </div>
                         </div>
