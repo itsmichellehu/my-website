@@ -68,11 +68,11 @@ footer {
 		font-weight: 500 !important;
 		margin-bottom: 0;
 	}
-}
 
-.social-link.last-child>a>p {
-	padding-right: 0;
-	border: 0;
+	.social-link:last-child {
+		padding-right: 0;
+		border: 0;
+	}
 }
 
 .link-heading {
@@ -83,6 +83,9 @@ footer {
 }
 
 .social-link {
+	border-right: 2px solid $teal-accent;
+	padding-right: 0.75rem;
+
 	p {
 		width: fit-content;
 		font-weight: 400 !important;
@@ -90,9 +93,7 @@ footer {
 		line-height: 100%;
 	}
 
-	a>p {
-		padding-right: 0.75rem;
-		border-right: 2px solid $teal-accent;
+	a {
 		color: $teal-accent !important;
 		margin-bottom: 0;
 	}
