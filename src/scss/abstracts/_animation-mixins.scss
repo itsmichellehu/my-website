@@ -1,7 +1,9 @@
+@use "variables" as *;
+
 // Underlines the text on hover from left to right with a color of your choice.
 // The underline will expand to the full width of the text on hover. The text color will change on hover as well. The text will scale up on hover and scale back down on click.
 
-@mixin hover-underline-self($text-underline-color, $scale-hover: 1.01, $scale-active: 1) {
+@mixin hover-underline-self($text-underline-color, $underline-height: 2px, $scale-hover: 1.01, $scale-active: 1) {
     & {
         line-height: 100%;
         position: relative;
@@ -17,7 +19,7 @@
         left: 0;
         bottom: 0;
         width: 0;
-        height: 2px;
+        height: $underline-height;
         background-color: $text-underline-color;
         transition: transform 0.3s ease-in-out, width 0.3s ease-in-out; // Add transition delay
     }
@@ -49,7 +51,7 @@
     }
 }
 
-@mixin hover-underline-before($underline-color) {
+@mixin hover-underline-before($underline-color, $underline-height: 2px) {
     position: relative;
     color: inherit;
     margin-bottom: 0;
@@ -60,7 +62,7 @@
         left: 0;
         bottom: -1px;
         width: 0;
-        height: 2px;
+        height: $underline-height;
         background-color: $underline-color;
         transition: width 0.3s ease-in-out; // Add transition delay for underline
     }
