@@ -6,12 +6,10 @@ function NavBar() {
                     <a href="/"><img src="assets/svg/home/logo-mhu-black.svg" class="navbar-logo-image" alt="Logo" /></a>
                 </div>
                 <ul class="navbar-menu" id="menu">
-                    <li class="nav-item"><a href="/">Work</a></li>
-                    <li class="nav-item"><a href="/about">About</a></li>
-                    <li class="nav-item"><a href="assets/files/MichelleHuResume.pdf" target="_blank" rel="noopener noreferrer">Resume</a></li>
-                    <li class="nav-item"><a href="https://www.linkedin.com/in/itsmichellehu" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-                    <li class="nav-item mobile-only"><a href="mailto: mhu.contact@gmail.com">Email</a>
-</li>
+                    <li class="nav-item"><a href="/"><span class="nav-link-text">Work</span></a></li>
+                    <li class="nav-item"><a href="/about"><span class="nav-link-text">About</span></a></li>
+                    <li class="nav-item"><a href="assets/files/MichelleHuResume.pdf" target="_blank" rel="noopener noreferrer"><span class="nav-link-text">Resume</span></a></li>
+                    <li data-scroll-target="footer" class="nav-item"><a role="button"><span class="nav-link-text">Connect with me</span></a></li>
                 </ul>
             </div>
         </nav>
