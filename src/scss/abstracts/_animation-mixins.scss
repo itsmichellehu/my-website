@@ -3,6 +3,7 @@
 
 @mixin hover-underline-self($text-underline-color, $scale-hover: 1.01, $scale-active: 1) {
     & {
+        line-height: 100%;
         position: relative;
         color: $text-underline-color;
         margin-bottom: 0;
