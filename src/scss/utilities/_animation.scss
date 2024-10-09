@@ -1,0 +1,6 @@
+@use "../../scss/abstracts/variables" as *;
+@use "../../scss/abstracts/animation-mixins" as *;
+
+.hover-underline-self {
+    @include hover-underline-self($teal-accent);
+}
