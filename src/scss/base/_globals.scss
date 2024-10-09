@@ -120,7 +120,7 @@ a {
 	display: inline;
 	background-color: transparent; // Removes background color
 	text-decoration: none; // Removes underline
-	color: $teal-accent !important; // Link colors inherit from parent
+	color: $teal-accent; // Link colors inherit from parent
 	margin-top: 0;
 	margin-bottom: 1rem;
 	font-size: 1rem;
