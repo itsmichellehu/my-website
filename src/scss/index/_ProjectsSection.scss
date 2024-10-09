@@ -36,7 +36,7 @@
 	overflow: hidden;
 	cursor: pointer;
 
-	@include hover-underline-target-class('.project-card-button-label'); // 0.2s delay
+	@include hover-underline-target('.project-card-button-label', $teal-accent, $teal-accent); // 0.2s delay
 
 
 	&:hover .project-title {
@@ -74,13 +74,12 @@
 }
 
 .project-card-button-label {
+	color: $teal-accent;
 	text-transform: uppercase;
 	font-size: 1rem;
 	font-weight: 500;
 	letter-spacing: 0.035rem;
 	transition: font-size 0.3s ease-in-out, font-weight 0.3s ease-in-out 0.3s;
-
-	@include hover-underline-before($teal-accent);
 }
 
 
