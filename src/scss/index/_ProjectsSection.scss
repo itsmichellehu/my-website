@@ -36,7 +36,7 @@
 	overflow: hidden;
 	cursor: pointer;
 
-	@include hover-underline-target('.project-card-button-label', $teal-accent, $teal-accent); // 0.2s delay
+	@include hover-underline-target('.project-card-button-label', $teal-accent, $teal-accent);
 
 
 	&:hover .project-title {

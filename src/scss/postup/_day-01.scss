@@ -23,19 +23,19 @@ $quote-text-size-med: 100%;
 	width: 90vw;
 	max-width: $content-max-width;
 	margin: auto;
+}
 
-	>.img-quotation-mark {
-		margin: 0;
-		margin-bottom: 1rem;
-		max-width: 3rem;
-	}
+.interview-quotes_img-quotation-mark {
+	margin: 0;
+	margin-bottom: 1rem;
+	max-width: 3rem;
+}
 
-	.grid-container {
-		display: grid;
-		grid-template-rows: auto;
-		margin: auto;
-		width: 100%;
-	}
+.interview-quotes_grid-container {
+	display: grid;
+	grid-template-rows: auto;
+	margin: auto;
+	width: 100%;
 }
 
 .interviewee-wrapper {
@@ -86,7 +86,7 @@ $quote-text-size-med: 100%;
 	object-fit: cover;
 }
 
-.quote-grid-item {
+.interview-quotes_grid-item {
 	display: grid;
 	grid-template-columns: auto;
 	grid-template-rows: auto auto;
@@ -112,46 +112,23 @@ $quote-text-size-med: 100%;
 		}
 	}
 
-	&.andy {
-		order: 1;
-		padding-top: 0;
-	}
-
-	&.claire {
-		order: 2;
-	}
-
-	&.james {
-		order: 3;
-	}
-
-	&.beth {
-		order: 4;
-	}
-
 	&.adam {
 		order: 5;
-		padding-bottom: 0;
 	}
 }
 
 @include breakpoint(med) {
-	.interview-quotes-wrapper {
-		// width: fit-content;
-		// max-width: 58rem;
-
-		>.img-quotation-mark {
-			margin: 0;
-			max-width: 12rem;
-			transform: translateX(-84px) translateY(8px);
-		}
-
-		.grid-container {
-			margin-bottom: 3rem;
-		}
+	.interview-quotes_img-quotation-mark {
+		margin: 0;
+		max-width: 12rem;
+		transform: translateX(-84px) translateY(8px);
 	}
 
-	.quote-grid-item {
+	.interview-quotes_grid-container {
+		margin-bottom: 3rem;
+	}
+
+	.interview-quotes_grid-item {
 		// grid-template-columns: $quote-text-size-med 1fr;
 		grid-template-rows: auto;
 		// column-gap: 1rem;

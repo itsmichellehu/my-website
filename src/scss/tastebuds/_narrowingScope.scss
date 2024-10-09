@@ -5,7 +5,7 @@
 	margin: auto;
 	max-width: $content-max-width;
 
-	>.img-quotation-mark {
+	>.interview-quotes_img-quotation-mark {
 		margin: 0;
 		margin-bottom: 1rem;
 		max-width: 5rem;
@@ -18,7 +18,7 @@
 		margin: auto;
 	}
 
-	.quote-grid-item {
+	.interview-quotes_grid-item {
 		display: grid;
 		grid-template-columns: 3fr 7fr;
 		column-gap: 1.25rem;
