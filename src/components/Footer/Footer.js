@@ -14,7 +14,7 @@ function Footer() {
         const footerHTML = `
             <footer id="footer">
                 <div class="wrapper">
-                    <p class="headline fade-in-left">Let's make a difference together.</p>
+                    <p class="headline fadeInLeft_inView">Let's make a difference together.</p>
                     <div class="fade-in-right">
                         <div class="social-links-wrapper">
                             <div class="social-link">

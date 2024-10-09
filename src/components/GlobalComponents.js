@@ -8,11 +8,11 @@ import { initializeHideVideoControls } from '../components/HideVideoControls/Hid
 
 import { AnimateInView } from "../components/AnimateInView/AnimateInView";
 const classAnimationMap = {
-    'fade-in': 'animate__fadeIn',
-    'fade-in-right': 'animate__fadeInRight',
-    'fade-in-left': 'animate__fadeInLeft',
-    'slide-up': 'animate__slideInUp',
-    'bounce-in': 'animate__bounceIn'
+    'fadeIn_inView': 'animate__fadeIn',
+    'fadeInRight_inView': 'animate__fadeInRight',
+    'fadeInLeft_inView': 'animate__fadeInLeft',
+    'slideInUp_inView': 'animate__slideInUp',
+    'bounceIn_inView': 'animate__bounceIn'
 };
 
 document.addEventListener('DOMContentLoaded', () => {
