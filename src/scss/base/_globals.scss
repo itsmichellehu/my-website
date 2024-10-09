@@ -127,6 +127,7 @@ a {
 	line-height: 100%;
 	align-items: center;
 	padding: 0.25rem 0;
+	transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out, color 0.3s ease-in-out;
 
 	gap: 0.25rem;
 
