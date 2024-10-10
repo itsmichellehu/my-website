@@ -28,7 +28,15 @@
 }
 
 .a-i-start {
-	align-items: start;
+	align-items: start !important;
+}
+
+.a-i-stretch {
+	align-items: stretch !important;
+}
+
+.a-i-end {
+	align-items: end;
 }
 
 .j-c-start {
