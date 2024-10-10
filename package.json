@@ -2,23 +2,27 @@
 	"scripts": {
 		"start": "webpack serve --config webpack.dev.js --mode development --open",
 		"dev": "webpack serve --config webpack.dev.js --mode development --open",
-		"build": "webpack --config webpack.prod.js --mode production"
+		"build": "webpack --config webpack.prod.js --mode production",
+		"check-deps": "node checkDependencies.js"
 	},
 	"devDependencies": {
+		"@babel/cli": "^7.25.7",
 		"@babel/core": "^7.25.7",
 		"@babel/preset-env": "^7.25.7",
 		"@babel/preset-react": "^7.24.7",
 		"@fullhuman/postcss-purgecss": "^6.0.0",
 		"autoprefixer": "^10.4.19",
 		"babel-loader": "^9.2.1",
+		"check-dependencies": "^2.0.0",
 		"clean-webpack-plugin": "^4.0.0",
 		"concurrently": "^8.2.2",
 		"copy-webpack-plugin": "^12.0.2",
 		"css-loader": "^7.1.2",
 		"css-minimizer-webpack-plugin": "^7.0.0",
 		"cssnano": "^7.0.2",
+		"eslint": "^9.12.0",
 		"file-loader": "^6.2.0",
-		"glob": "^9.3.5",
+		"glob": "^10.0.0",
 		"gulp": "^5.0.0",
 		"gulp-concat": "^2.6.1",
 		"gulp-postcss": "^10.0.0",
@@ -32,8 +36,7 @@
 		"postcss-preset-env": "^10.0.5",
 		"purgecss": "^6.0.0",
 		"purgecss-webpack-plugin": "^6.0.0",
-		"rimraf": "^4.4.1",
-		"sass": "^1.79.4",
+		"rimraf": "^6.0.1",
 		"sass-loader": "^16.0.2",
 		"style-loader": "^4.0.0",
 		"url-loader": "^4.1.1",
@@ -43,17 +46,15 @@
 		"webpack-dev-server": "^5.0.4",
 		"webpack-merge": "^5.8.0"
 	},
-	"resolutions": {
-		"lodash": "^4.17.21"
-	},
 	"dependencies": {
 		"animate.css": "^4.1.1",
-		"babel": "^6.23.0",
-		"cssutils": "^1.0.0",
 		"defaultdict": "^0.0.1",
 		"intersection-observer": "^0.12.2",
+		"lru-cache": "^11.0.1",
 		"node": "^20.16.0",
 		"python": "^0.0.4",
-		"swiper": "^11.1.4"
+		"sass": "^1.79.4",
+		"swiper": "^11.1.4",
+		"uuid": "^10.0.0"
 	}
 }
