@@ -1,0 +1,6 @@
+{
+	"rules": {
+		"no-console": "off", // Example rule to turn off console warnings
+		"no-unused-vars": ["warn", { "vars": "all", "args": "after-used", "ignoreRestSiblings": false }]
+	}
+}
