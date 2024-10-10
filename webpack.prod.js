@@ -53,8 +53,7 @@ module.exports = {
                         presets: ['@babel/preset-env']
                     }
                 }
-            },
-            {
+            },{
                 test: /\.(scss|css)$/,
                 use: [
                     MiniCssExtractPlugin.loader,
@@ -63,10 +62,8 @@ module.exports = {
                         loader: 'sass-loader',
                         options: {
                             implementation: require('sass'),
-                            api: 'modern',
                             sassOptions: {
-                                outputStyle: 'compressed',  // Minified output in production
-                                sourceMap: false,           // Disable source maps for production
+                                outputStyle: 'compressed',
                             },
                         },
                     },
