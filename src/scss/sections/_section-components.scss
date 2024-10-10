@@ -1,6 +1,7 @@
 @use "../abstracts/all-abstracts" as *;
 
 .content-max-width {
+	width: 90%;
 	max-width: $content-max-width;
 }
 
