@@ -1,14 +1,14 @@
 @use "../../scss/abstracts/variables" as *;
 @use "../../scss/abstracts/breakpoints-mixins" as *;
+@use "../../scss/abstracts/placeholders" as *;
 
 .hero-overview-wrapper {
-	display: flex;
-	flex-direction: column;
+	@extend %flex-col;
+	@extend %container-border-bottom;
 }
 
 .hero {
-	display: flex;
-	align-items: flex-start;
+	@extend %flex-start;
 	height: auto;
 	overflow: hidden;
 	margin-top: 3rem;
