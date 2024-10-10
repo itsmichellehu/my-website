@@ -97,10 +97,6 @@
 		&.show-med {
 			display: none;
 		}
-
-		&.block {
-			display: block;
-		}
 	}
 
 	img {
@@ -298,8 +294,4 @@ $constraints-svg-med: 3rem;
 	@include breakpoint(sm) {
 		display: flex;
 	}
-}
-
-.block {
-	display: block;
 }
