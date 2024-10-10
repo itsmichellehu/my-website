@@ -130,7 +130,7 @@
 		display: grid;
 		grid-template-columns: repeat(2, 2.25rem);
 		grid-template-areas: "c b" "a d";
-		grid-template-rows: auto auto;
+		grid-template-rows: repeat(2, 1fr);
 
 	}
 
@@ -182,7 +182,6 @@ $constraints-svg-med: 3rem;
 		width: 90vw;
 		gap: 0.5rem;
 		grid-template-columns: 1fr 1fr;
-		grid-template-rows: auto auto;
 		max-width: $content-max-width;
 		margin: 0 auto;
 
