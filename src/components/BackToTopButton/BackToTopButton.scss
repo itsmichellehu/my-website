@@ -1,78 +1,103 @@
 @use "../../scss/abstracts/all-abstracts" as *;
 
-$back-to-top-width-mobile: 3rem;
-$back-to-top-width-desktop: 3.5rem;
-$transition-duration: 0.5s;
-$transition-ease: ease;
+$back-to-top-size-mobile: 3rem;
+$back-to-top-size-small: 3.25rem;
+$back-to-top-size-medium: 3.5rem;
+$transition-duration: 0.3s;
+$transition-ease: ease-in-out;
+$back-to-top-hover-color: #28282D;
 
 .btn-back-to-top-label {
     display: none;
-    opacity: 0;
-    transition: display $transition-duration $transition-ease, opacity $transition-duration $transition-ease, transform $transition-duration $transition-ease;
     white-space: nowrap;
-    color: white;
     font-size: 1.125rem;
     margin: auto 0;
     transform: translateX(100%);
+    font-weight: 500;
+    opacity: 0;
 }
 
 .btn-back-to-top-svg {
     display: inline-block;
-    stroke: black;
-    transition: stroke 0.3s $transition-ease;
-    width: $back-to-top-width-mobile;
-    height: $back-to-top-width-mobile;
-    position: fixed;
+    stroke: $black;
+    opacity: 1 !important;
 }
 
-#btn-back-to-top {
-    display: flex;
-    position: fixed;
-    flex-direction: row-reverse;
+.btn-back-to-top {
+    @extend %flex-row-reverse;
+    cursor: pointer;
     bottom: 1.5rem;
     right: 1.5rem;
     background-color: rgba(168, 168, 168, 0.15);
-    color: #fff;
     border-radius: 3.125rem;
     align-items: center;
     justify-content: end;
-    cursor: pointer;
-    height: $back-to-top-width-mobile;
-    width: $back-to-top-width-mobile;
+    height: $back-to-top-size-mobile;
+    width: $back-to-top-size-mobile;
     opacity: 0;
     visibility: hidden;
     overflow: hidden;
-    transition: background-color 0.3s $transition-ease, visibility $transition-duration $transition-ease, opacity $transition-duration $transition-ease, width $transition-duration $transition-ease;
 
     &.show {
         opacity: 1;
         visibility: visible;
     }
+}
 
-    @include breakpoint(med) {
-        width: $back-to-top-width-desktop;
-        height: $back-to-top-width-desktop;
+@include breakpoint(sm) {
 
-        .btn-back-to-top-svg {
-            width: $back-to-top-width-desktop;
-            height: $back-to-top-width-desktop;
-        }
+    .btn-back-to-top,
+    .btn-back-to-top-svg {
+        width: $back-to-top-size-small;
+        height: $back-to-top-size-small;
+    }
 
-        &:hover {
-            background-color: #28282D;
-            width: 10.5rem;
+    .btn-back-to-top {
+
+        &:hover,
+        &.hover-effect {
+            background-color: $back-to-top-hover-color;
+            width: 9.625rem;
 
             .btn-back-to-top-label {
                 display: inline-flex;
                 opacity: 1;
-                color: #fff;
-                font-weight: 500;
                 transform: translateX(-3.25rem);
             }
 
-            svg {
+            .btn-back-to-top-svg {
                 stroke: white;
             }
         }
     }
+}
+
+@include breakpoint(med) {
+
+    .btn-back-to-top,
+    .btn-back-to-top-svg {
+        width: $back-to-top-size-medium;
+        height: $back-to-top-size-medium;
+    }
+
+    .btn-back-to-top:hover,
+    .btn-back-to-top.hover-effect {
+        width: 10.5rem;
+    }
+}
+
+.btn-back-to-top,
+.btn-back-to-top-label,
+.btn-back-to-top-svg {
+    position: fixed;
+    color: white;
+    transition:
+        display 0.3s $transition-ease,
+        background-color 0.3s $transition-ease,
+        visibility $transition-duration $transition-ease,
+        opacity $transition-duration $transition-ease,
+        width $transition-duration linear,
+        transform $transition-duration $transition-ease,
+        stroke $transition-duration $transition-ease,
+        color $transition-duration $transition-ease;
 }
