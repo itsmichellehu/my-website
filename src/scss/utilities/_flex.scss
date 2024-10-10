@@ -87,57 +87,24 @@
 .flex-col {
 	@extend %flex-col;
 
+	&.flex-row-sm {
+		@extend %flex-row-sm;
+	}
+
 	&.flex-row-med {
 		@extend %flex-row-med;
 	}
 }
 
 .flex-row {
-	display: flex;
-	flex-direction: row;
+	@extend %flex-row;
 
 	&.flex-col-med {
 		@extend %flex-col-med;
 	}
-}
 
-@include breakpoint(med) {
-	%flex {
-		&-row-med {
-			display: flex;
-			flex-direction: row !important;
-		}
-
-		&-row-reverse {
-			display: flex;
-			flex-direction: row-reverse;
-		}
-
-
-		&-col-med {
-			display: flex;
-			flex-direction: column;
-		}
-
-		&-col-reverse-med {
-			display: flex;
-			flex-direction: column-reverse;
-		}
-
-		&-wrap {
-			display: flex;
-			flex-wrap: wrap;
-		}
-
-		&-wrap-reverse {
-			display: flex;
-			flex-wrap: wrap-reverse;
-		}
-
-		&-nowwrap {
-			display: flex;
-			flex-wrap: nowrap;
-		}
+	&.flex-col-sm {
+		@extend %flex-col-sm;
 	}
 }
 
