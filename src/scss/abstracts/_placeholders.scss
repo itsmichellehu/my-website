@@ -1,6 +1,12 @@
-@use "variables" as *;
-@use "breakpoints-mixins" as *;
+@use 'variables' as *;
+@use 'breakpoints-mixins' as *;
 
+// Components
+%container-border-bottom {
+  border-bottom: 1px solid $light-grey;
+}
+
+// Flex
 %flex-row {
   display: flex !important;
   flex-direction: row !important;
@@ -14,6 +20,11 @@
 %flex-wrap {
   display: flex !important;
   flex-wrap: wrap !important;
+}
+
+%flex-start {
+  display: flex !important;
+  flex-direction: flex-start !important;
 }
 
 %flex-nowrap {
