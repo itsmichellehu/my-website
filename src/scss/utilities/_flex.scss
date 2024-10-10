@@ -1,17 +1,5 @@
 @use "../../scss/abstracts/breakpoints-mixins" as *;
 
-.inline {
-	display: inline;
-}
-
-.inline-block {
-	display: inline-block;
-}
-
-.flex {
-	display: flex;
-}
-
 .flex {
 	&-row {
 		display: flex;
