@@ -11,7 +11,7 @@
 	align-items: left;
 	padding: 2.5rem 0 calc(4.12rem - 5px) 0;
 	width: 100vw;
-	border-bottom: 1px solid $light-grey;
+	@extend %container-border-bottom;
 	overflow-x: visible !important;
 
 	&.equal-padding {
