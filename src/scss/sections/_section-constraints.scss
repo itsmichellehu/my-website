@@ -131,13 +131,16 @@
 	padding-left: 2.5rem;
 	background-color: #fff;
 	position: relative;
+	overflow: hidden;
+	z-index: 0;
 
 	ul {
 		width: 100%;
+		z-index: 2;
 
 		li {
 			font-size: 1.125rem;
-			color: $dark-grey;
+			color: $black;
 		}
 
 		li:last-child {
@@ -151,19 +154,11 @@
 
 	>.subheading {
 		margin-bottom: 0.75rem;
+		color: $black;
+		z-index: 2;
 	}
 
 	&_svg-wrapper {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		width: 2.5rem;
-		height: 2.5rem;
-		opacity: 0.25;
-		position: absolute;
-		bottom: 0;
-		right: 0;
-
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -171,12 +166,20 @@
 		height: 6rem;
 		opacity: 0.3;
 		position: absolute;
-		bottom: 1rem;
-		right: 1rem;
+		z-index: 1;
+		bottom: -2rem;
+		right: -2rem;
 
 		img {
 			height: 100%;
 			margin: auto;
+		}
+	}
+
+	@include breakpoint(med) {
+		&_svg-wrapper {
+			width: 12rem;
+			height: 12rem;
 		}
 	}
 }
@@ -279,6 +282,7 @@ $constraints-svg-med: 3rem;
 			display: flex;
 			height: $constraints-svg-med;
 			width: $constraints-svg-med;
+
 			margin-bottom: 1rem;
 
 			img {
