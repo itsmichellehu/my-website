@@ -1,8 +1,8 @@
 import './ProjectProgressBar.scss';
 
 function ProgressBar() {
-    const progressBarContainer = document.getElementById('progress-bar-container');
-    const progressBar = document.getElementById('progress-bar');
+    const progressBarContainer = document.querySelector('.progress-bar-container');
+    const progressBar = document.querySelector('.progress-bar');
 
     // Initially hide the progress-bar-container
     progressBarContainer.style.display = 'none';
