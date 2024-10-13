@@ -9,7 +9,6 @@ nav {
 	display: flex;
 	position: fixed;
 	color: $black;
-	position: fixed;
 	width: 100%;
 	justify-content: space-between;
 	align-items: center;
@@ -21,10 +20,6 @@ nav {
 
 .navbar {
 	background-color: white;
-}
-
-.navbar-hidden {
-	top: -$navbar-mobile-height;
 }
 
 .navbar.scrolled-navbar {
@@ -116,28 +111,13 @@ nav {
 	}
 }
 
-.logo-mhu {
-	width: 2rem;
-	height: 2rem;
-}
-
-.ic-menu {
-	height: 2rem;
-	width: 2rem;
-}
-
-.navbar-menu.show-menu {
-	display: flex;
-}
-
-
 @include breakpoint(med) {
 	nav {
 		height: $navbar-desktop-height;
 	}
 
 	.navbar-hidden {
-		top: -$navbar-desktop-height;
+		top: -$navbar-desktop-height; // Hide with desktop height
 	}
 
 	.navbar-logo-image {
@@ -153,22 +133,4 @@ nav {
 			padding-right: 0;
 		}
 	}
-
-	.scrolled-navbar-wrapper {
-		max-width: none;
-	}
-
-	.navbar-menu {
-		flex-direction: row;
-		position: relative;
-		width: auto;
-	}
-}
-
-.navbar-menu-toggle {
-	display: none;
-}
-
-.navbar-menu-toggle {
-	cursor: pointer;
 }

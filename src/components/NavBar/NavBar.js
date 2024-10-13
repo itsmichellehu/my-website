@@ -15,6 +15,7 @@ function NavBar() {
         </nav>
     `;
 
+    // Insert the navbar HTML if it's not already in the document
     if (!document.getElementById("navbar")) {
         document.body.insertAdjacentHTML("afterbegin", navbarHTML);
     }
@@ -23,10 +24,14 @@ function NavBar() {
         const navbar = document.querySelector(".navbar");
         let lastScrollY = window.scrollY;
 
+        // Apply transition to navbar styles
         navbar.style.transition = "top 0.3s ease, opacity 0.3s ease";
 
-        const getNavbarHeight = () => (window.innerWidth >= 768 ? 64 : 48);
+        // Get the navbar's dynamic height
+        const getNavbarHeight = () => navbar.offsetHeight; // Now dynamically gets the actual navbar height
+        const navbarHeight = getNavbarHeight();
 
+        // Function to throttle events like scrolling
         const throttle = (func, limit) => {
             let lastFunc;
             let lastRan;
@@ -48,22 +53,25 @@ function NavBar() {
             };
         };
 
+        // Handle scroll event to hide/show the navbar based on scroll position
         const handleScroll = throttle(() => {
-            const navbarHeight = getNavbarHeight();
-
             if (window.scrollY <= 5) {
                 navbar.classList.remove("navbar-hidden");
             } else if (window.scrollY > lastScrollY) {
                 navbar.classList.add("navbar-hidden");
+                navbar.style.top = `-${navbarHeight}px`; // Hides the navbar by its height
             } else if (window.scrollY < lastScrollY) {
                 navbar.classList.remove("navbar-hidden");
+                navbar.style.top = "0"; // Resets the navbar to show
             }
 
             lastScrollY = window.scrollY;
         }, 100);
 
+        // Listen to scroll event
         window.addEventListener("scroll", handleScroll);
 
+        // Set active navigation item based on the current page
         const setActiveNavItem = () => {
             const navItems = document.querySelectorAll(".nav-item a");
             navItems.forEach((navItem) => {
