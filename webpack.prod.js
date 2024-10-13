@@ -5,6 +5,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const glob = require('glob');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const { PurgeCSSPlugin } = require('purgecss-webpack-plugin');
+const ImageMinimizerPlugin = require('image-minimizer-webpack-plugin'); // Import ImageMinimizerPlugin
 
 const PATHS = {
     src: path.join(__dirname, 'src')
@@ -32,13 +33,6 @@ module.exports = {
         path: path.resolve(__dirname, 'dist'),
         clean: true,
     },
-    optimization: {
-        minimize: true,
-        minimizer: [
-            `...`,
-            new CssMinimizerPlugin(),
-        ],
-    },
     stats: {
         errorDetails: true
     },
@@ -53,7 +47,8 @@ module.exports = {
                         presets: ['@babel/preset-env']
                     }
                 }
-            },{
+            },
+            {
                 test: /\.(scss|css)$/,
                 use: [
                     MiniCssExtractPlugin.loader,
@@ -72,14 +67,10 @@ module.exports = {
             {
                 test: /\.(png|jpe?g|gif|svg)$/i,
                 type: 'asset/resource',
+                generator: {
+                    filename: 'images/[name][contenthash][ext]',
+                },
                 use: [
-                    {
-                        loader: 'file-loader',
-                        options: {
-                            name: '[path][name].[ext]',
-                            outputPath: 'images',
-                        },
-                    },
                     {
                         loader: 'image-webpack-loader',
                         options: {
@@ -101,7 +92,7 @@ module.exports = {
                                 quality: 75,
                             },
                         },
-                    }
+                    },
                 ]
             }
         ]
@@ -112,7 +103,6 @@ module.exports = {
     plugins: [
         new MiniCssExtractPlugin({
             filename: '[name].css',
-            // chunkFilename: '[id].css',
         }),
         new PurgeCSSPlugin({
             paths: glob.sync(`${PATHS.src}/**/*`, { nodir: true }),
@@ -131,5 +121,31 @@ module.exports = {
             ]
         })
     ],
-    devtool: false, // Correctly disable source maps
+    optimization: {
+        minimize: true,
+        minimizer: [
+            `...`, // Keep Webpack defaults like Terser
+            new CssMinimizerPlugin(),
+            new ImageMinimizerPlugin({
+                minimizerOptions: {
+                    plugins: [
+                        ['mozjpeg', { progressive: true, quality: 75 }],
+                        ['optipng', { optimizationLevel: 5 }],
+                        ['pngquant', { quality: [0.65, 0.90] }],
+                        ['gifsicle', { interlaced: false }],
+                        ['svgo', {
+                            plugins: [
+                                { removeViewBox: false },
+                                { cleanupIDs: true },
+                            ],
+                        }],
+                    ],
+                },
+            }),
+        ],
+        splitChunks: {
+            chunks: 'all',
+        },
+    },
+    devtool: false, // Disable source maps for production
 };

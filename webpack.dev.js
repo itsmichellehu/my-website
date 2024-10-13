@@ -3,6 +3,15 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
+// Define HTML pages for dynamic generation
+const htmlPages = [
+    { template: './src/index.html', chunks: ['index'], filename: 'index.html' },
+    { template: './src/about.html', chunks: ['about'], filename: 'about.html' },
+    { template: './src/boardspace.html', chunks: ['boardspace'], filename: 'boardspace.html' },
+    { template: './src/postup.html', chunks: ['postup'], filename: 'postup.html' },
+    { template: './src/tastebuds.html', chunks: ['tastebuds'], filename: 'tastebuds.html' },
+];
+
 module.exports = {
     entry: {
         index: './src/js/index.js',
@@ -14,16 +23,19 @@ module.exports = {
     output: {
         filename: 'js/[name].js',
         path: path.resolve(__dirname, 'dist'),
-        clean: true,
+        clean: true,  // Clean output folder before build
     },
     mode: 'development',
-    cache: false,
+    cache: {
+        type: 'memory',  // Cache in memory for faster rebuilds
+    },
+    target: 'web',  // Ensures hot reloading is optimized for the web
     module: {
         rules: [
             {
                 test: /\.js$/,
                 exclude: /node_modules/,
-                use: 'babel-loader',  // Preset options are defined in babel config
+                use: 'babel-loader',  // Use Babel for transpiling JS
             },
             {
                 test: /\.(scss|css)$/,
@@ -34,27 +46,39 @@ module.exports = {
                         loader: 'sass-loader',
                         options: {
                             implementation: require('sass'),
-                            api: 'modern',
                             sassOptions: {
-                                outputStyle: 'expanded',  // Readable output in development
-                                sourceMap: true,          // Enable source maps in development
+                                outputStyle: 'expanded',
+                                sourceMap: true,  // Enable source maps
                             },
                         },
                     }
                 ],
             },
             {
-                test: /\.(png|jpg|jpeg|gif|svg)$/i,  // Combined handling for images and SVGs
-                type: 'asset/resource',
-                generator: {
-                    filename: 'assets/images/[name].[hash:6][ext]',  // Unified image output
-                },
+                test: /\.(jpg|jpeg|gif|png)$/, // Handle image files
+                type: 'asset',
+                parser: {
+                    dataUrlCondition: {
+                        maxSize: 30 * 1024,  // Inline assets smaller than 30KB
+                    }
+                }
             },
             {
-                test: /\.(mp4)$/,  // Handling for video files
-                type: 'asset/resource',
-                generator: {
-                    filename: 'assets/videos/[name][ext]',  // Video output
+                test: /\.svg$/, // Handle SVG files
+                type: 'asset',
+                parser: {
+                    dataUrlCondition: {
+                        maxSize: 10 * 1024,  // Inline SVGs smaller than 10KB
+                    }
+                }
+            },
+            {
+                test: /\.mp4$/,  // Handle video files
+                type: 'asset',
+                parser: {
+                    dataUrlCondition: {
+                        maxSize: 200 * 1024,  // Inline videos smaller than 200KB
+                    }
                 }
             },
         ]
@@ -64,47 +88,29 @@ module.exports = {
             filename: '[name].css',
             chunkFilename: '[id].css',
         }),
-        new HtmlWebpackPlugin({
-            template: './src/index.html',
-            chunks: ['index'],
-            filename: 'index.html'
-        }),
-        new HtmlWebpackPlugin({
-            template: './src/about.html',
-            chunks: ['about'],
-            filename: 'about.html'
-        }),
-        new HtmlWebpackPlugin({
-            template: './src/boardspace.html',
-            chunks: ['boardspace'],
-            filename: 'boardspace.html'
-        }),
-        new HtmlWebpackPlugin({
-            template: './src/tastebuds.html',
-            filename: 'tastebuds.html',
-            chunks: ['tastebuds']
-        }),
-        new HtmlWebpackPlugin({
-            template: './src/postup.html',
-            chunks: ['postup'],
-            filename: 'postup.html'
-        }),
+        // Dynamically create HtmlWebpackPlugin instances
+        ...htmlPages.map(page => new HtmlWebpackPlugin({
+            template: page.template,
+            filename: page.filename,
+            chunks: page.chunks,
+        })),
         new CopyWebpackPlugin({
             patterns: [
                 { from: path.resolve(__dirname, 'src/assets/images'), to: 'assets/images' },
                 { from: path.resolve(__dirname, 'src/assets/svg'), to: 'assets/svg' },
-                { from: path.resolve(__dirname, 'src/assets/videos'), to: 'assets/videos' }
+                { from: path.resolve(__dirname, 'src/assets/videos'), to: 'assets/videos' },
             ]
         })
     ],
     externals: {
-        jquery: 'jQuery',  // Keep jQuery as an external dependency
+        jquery: 'jQuery',
     },
     devServer: {
         static: path.resolve(__dirname, 'dist'),
         open: true,
-        hot: true,
-        watchFiles: ['**/*'],  // Watch all files
+        hot: true,  // Enable hot reloading
+        watchFiles: ['src/**/*'],
+        port: 8686,
     },
-    devtool: 'eval-source-map',
+    devtool: 'cheap-module-source-map',  // Faster rebuilds with more performant source maps
 };
