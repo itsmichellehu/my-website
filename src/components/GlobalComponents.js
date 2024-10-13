@@ -1,5 +1,5 @@
 import NavBar from '../components/NavBar/NavBar';
-import NavBarBackground from '../components/NavBarBackground/NavBarBackground';
+// import NavBarBackground from '../components/NavBarBackground/NavBarBackground';
 import BackToTopButton from '../components/BackToTopButton/BackToTopButton';
 import Footer from '../components/Footer/Footer';
 
@@ -17,7 +17,7 @@ const classAnimationMap = {
 
 document.addEventListener('DOMContentLoaded', () => {
     NavBar();
-    NavBarBackground();
+    // NavBarBackground();
     BackToTopButton();
     Footer();
 
