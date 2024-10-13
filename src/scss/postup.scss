@@ -43,6 +43,20 @@ main {
     background-color: $lightest-grey;
 }
 
+#the-solution.content-full-width {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    @include breakpoint(med) {
+        gap: 2.5rem;
+    }
+
+    @include breakpoint(lg) {
+        gap: 3rem;
+    }
+}
+
 // .navbar-top {
 //     position: fixed;
 //     width: 100%;

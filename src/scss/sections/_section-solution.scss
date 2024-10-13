@@ -16,46 +16,78 @@
 	justify-content: center;
 }
 
-.the-solution-prototype_grid-container {
-	display: grid;
-	grid-template-columns: 1fr;
-	grid-template-rows: auto auto auto;
-	margin: 0 auto;
-	gap: 2.5rem;
-	align-items: center;
-	width: 100%;
-	max-width: 90vw;
-}
-
-.the-solution-prototype_video {
-	width: 80%;
-	margin: 0 auto;
-	max-width: 18rem;
-}
-
-.the-solution-prototype_content {
-	display: block;
-	width: 100%;
-
-	h3 {
-		color: $black;
+.the-solution-prototype {
+	&_grid-container {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: auto auto auto;
+		margin: 0 auto;
+		gap: 2.5rem;
+		align-items: center;
+		width: 100%;
+		max-width: 90vw;
 	}
 
-	:last-child {
-		margin-bottom: 0;
+	&_video {
+		width: 80%;
+		margin: 0 auto;
+		max-width: 18rem;
 	}
-}
 
-.the-solution-prototype_subheading {
-	font-size: 1.35rem;
-	margin-bottom: 1.25rem;
-	color: $off-black !important;
-	line-height: 125%;
-}
+	&_content {
+		display: block;
+		width: 100%;
 
-.the-solution-prototype_body {
-	color: $medium-grey !important;
-	margin-bottom: 0.5rem;
+		h3 {
+			color: $black;
+		}
+
+		:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	&_subheading {
+		font-size: 1.35rem;
+		margin-bottom: 1.25rem;
+		color: $off-black !important;
+		line-height: 125%;
+	}
+
+	&_body {
+		color: $medium-grey !important;
+		margin-bottom: 0.5rem;
+	}
+
+	&_card {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 0.5rem;
+		padding: 1.5rem 2.5rem;
+		padding-right: 1rem;
+		border-radius: 0.25rem;
+		height: fit-content;
+		background-color: $lightest-grey;
+		border-left: 0.5rem solid $emphasis-blue;
+		margin-top: 2rem;
+		max-width: 32rem;
+
+		.card_list {
+			align-self: start;
+		}
+
+		.card_headline {
+			color: $emphasis-blue;
+			font-weight: 500;
+			margin-bottom: 0;
+			font-size: 1.25rem;
+		}
+
+		li {
+			font-size: 1.125rem;
+		}
+	}
 }
 
 @include breakpoint(med) {
@@ -77,10 +109,21 @@
 		&.grid-container-reverse {
 			grid-template-columns: 1fr auto;
 		}
+
+		&.the-final-prototype {
+			padding: 3rem 6rem;
+			column-gap: 6rem;
+		}
 	}
+
+
 
 	.the-solution-prototype_content {
 		max-width: 35rem;
+	}
+
+	.the-solution-prototype_headline {
+		font-size: 2.25rem;
 	}
 
 
