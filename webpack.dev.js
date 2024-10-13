@@ -2,8 +2,8 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const ESLintPlugin = require('eslint-webpack-plugin');
 
-// Define HTML pages for dynamic generation
 const htmlPages = [
     { template: './src/index.html', chunks: ['index'], filename: 'index.html' },
     { template: './src/about.html', chunks: ['about'], filename: 'about.html' },
@@ -23,19 +23,19 @@ module.exports = {
     output: {
         filename: 'js/[name].js',
         path: path.resolve(__dirname, 'dist'),
-        clean: true,  // Clean output folder before build
+        clean: true,
     },
     mode: 'development',
     cache: {
-        type: 'memory',  // Cache in memory for faster rebuilds
+        type: 'memory',
     },
-    target: 'web',  // Ensures hot reloading is optimized for the web
+    target: 'web',
     module: {
         rules: [
             {
                 test: /\.js$/,
                 exclude: /node_modules/,
-                use: 'babel-loader',  // Use Babel for transpiling JS
+                use: 'babel-loader',
             },
             {
                 test: /\.(scss|css)$/,
@@ -48,47 +48,58 @@ module.exports = {
                             implementation: require('sass'),
                             sassOptions: {
                                 outputStyle: 'expanded',
-                                sourceMap: true,  // Enable source maps
+                                sourceMap: true,
                             },
                         },
                     }
                 ],
             },
             {
-                test: /\.(jpg|jpeg|gif|png)$/, // Handle image files
+                test: /\.(jpg|jpeg|gif|png)$/,
                 type: 'asset',
                 parser: {
                     dataUrlCondition: {
-                        maxSize: 30 * 1024,  // Inline assets smaller than 30KB
+                        maxSize: 30 * 1024,
+                    }
+                },
+                use: [
+                    {
+                        loader: 'image-webpack-loader',
+                        options: {
+                            disable: true,
+                        },
+                    },
+                ],
+            },
+            {
+                test: /\.svg$/,
+                type: 'asset',
+                parser: {
+                    dataUrlCondition: {
+                        maxSize: 10 * 1024,
                     }
                 }
             },
             {
-                test: /\.svg$/, // Handle SVG files
+                test: /\.mp4$/,
                 type: 'asset',
                 parser: {
                     dataUrlCondition: {
-                        maxSize: 10 * 1024,  // Inline SVGs smaller than 10KB
-                    }
-                }
-            },
-            {
-                test: /\.mp4$/,  // Handle video files
-                type: 'asset',
-                parser: {
-                    dataUrlCondition: {
-                        maxSize: 200 * 1024,  // Inline videos smaller than 200KB
+                        maxSize: 200 * 1024,
                     }
                 }
             },
         ]
     },
     plugins: [
+        new ESLintPlugin({
+            extensions: ['js'],
+            exclude: 'node_modules',
+        }),
         new MiniCssExtractPlugin({
             filename: '[name].css',
             chunkFilename: '[id].css',
         }),
-        // Dynamically create HtmlWebpackPlugin instances
         ...htmlPages.map(page => new HtmlWebpackPlugin({
             template: page.template,
             filename: page.filename,
@@ -108,9 +119,9 @@ module.exports = {
     devServer: {
         static: path.resolve(__dirname, 'dist'),
         open: true,
-        hot: true,  // Enable hot reloading
+        hot: true,
         watchFiles: ['src/**/*'],
         port: 8686,
     },
-    devtool: 'cheap-module-source-map',  // Faster rebuilds with more performant source maps
+    devtool: 'cheap-module-source-map',
 };
