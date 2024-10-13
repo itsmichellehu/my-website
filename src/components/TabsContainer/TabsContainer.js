@@ -11,15 +11,12 @@ export default function initializeTabs() {
 
         tabButtons.forEach((button, index) => {
             button.addEventListener('click', function () {
-                const targetTab = this.getAttribute('data-tab');
-                tabButtons.forEach(btn => btn.classList.remove('active'));
-                tabContents.forEach(content => {
-                    if (content.id === targetTab) {
-                        content.classList.add('active');
-                    } else {
-                        content.classList.remove('active');
-                    }
+                tabButtons.forEach((btn, btnIndex) => {
+                    btn.classList.remove('active');
+                    tabContents[btnIndex].classList.remove('active');
                 });
+
+                tabContents[index].classList.add('active');
                 this.classList.add('active');
 
                 // Move the slider to the active tab
