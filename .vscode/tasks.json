@@ -1,0 +1,41 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Convert MOV to MP4",
+			"type": "shell",
+			"command": "ffmpeg",
+			"args": ["-i", "${file}", "-vcodec", "libx264", "-acodec", "aac", "${fileDirname}/${fileBasenameNoExtension}.mp4"],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"problemMatcher": []
+		},
+		{
+			"label": "Compress MP4",
+			"type": "shell",
+			"command": "ffmpeg",
+			"args": [
+				"-i",
+				"${file}",
+				"-vcodec",
+				"libx264",
+				"-crf",
+				"28", // Adjust quality (higher is more compression)
+				"-b:v",
+				"1M", // Video bitrate: 1 Mbps
+				"-acodec",
+				"aac",
+				"-b:a",
+				"128k", // Audio bitrate: 128 kbps
+				"${fileDirname}/${fileBasenameNoExtension}_compressed.mp4"
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": false
+			},
+			"problemMatcher": []
+		}
+	]
+}
