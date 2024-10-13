@@ -76,87 +76,9 @@
 }
 
 .user-persona_tabs.tabs-container {
-  width: 90%;
-  max-width: $content-max-width;
-  margin-top: 2rem;
-  margin: 0 auto;
-
   .tabs-menu {
-    display: flex;
-    align-items: center;
-    position: relative;
-    background-color: #12181f;
-    padding: 0.5rem;
-    overflow: hidden;
-    width: 100%;
     margin-left: auto;
     margin-right: auto;
-    height: 3.5rem;
-    border-radius: $tab-border-radius;
-    // box-shadow: 0 0 1px 0 rgba($off-black, 0.10), 0 6px 8px px rgba($off-black, 0.20);
-
-    .tabs-menu-slider {
-      position: absolute;
-      border-radius: $tab-border-radius;
-      height: 2.5rem;
-      background-color: #333;
-      box-shadow: 0 0 1px 0 rgba(#fff, 0.8), 0 6px 8px px rgba(#fff, 0.8);
-      width: calc(33% - 0.5rem);
-      transition: left 0.3s ease;
-    }
-  }
-
-  // Tab content
-  .tab-content {
-    display: none;
-    padding-top: 2rem !important;
-    padding-bottom: 0 !important;
-
-    > :last-child {
-      margin-bottom: 0;
-    }
-  }
-
-  .tab-content.active {
-    display: block;
-  }
-
-  // Individual tabs
-  .tab-button {
-    display: flex;
-    width: 33.33%;
-    align-items: center;
-    cursor: pointer;
-    border-radius: $tab-border-radius;
-    height: 2.5rem;
-    border: none;
-    transition: transform 0.3s ease, background-color 0.3s ease;
-    background-color: transparent;
-
-    p {
-      margin: auto;
-      width: 100%;
-      text-align: center;
-      font-weight: 400;
-      color: #e9e9e9;
-      z-index: 2;
-    }
-
-    &.active {
-      p {
-        color: white;
-        font-weight: 500;
-        margin: auto 0;
-      }
-    }
-
-    &:hover {
-      p {
-        color: white;
-        font-weight: 500;
-        margin: auto 0;
-      }
-    }
   }
 
   .total-satisfaction-method {
