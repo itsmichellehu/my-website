@@ -1,6 +1,20 @@
 {
+	"parser": "@babel/eslint-parser", // Use Babel ESLint parser
+	"parserOptions": {
+		"requireConfigFile": false, // No separate Babel config required
+		"ecmaVersion": 2020, // Allow parsing of modern ECMAScript features
+		"sourceType": "module", // Enable `import` and `export` syntax
+		"ecmaFeatures": {
+			"jsx": true // Enable JSX parsing (if using React)
+		}
+	},
+	"env": {
+		"browser": true, // Enable browser globals like `window`
+		"node": true, // Enable Node.js globals like `require`
+		"es6": true // Enable ES6 globals like `Promise`
+	},
 	"rules": {
-		"no-console": "off", // Example rule to turn off console warnings
+		"no-console": "off", // Disable warnings for `console.log` statements
 		"no-unused-vars": ["warn", { "vars": "all", "args": "after-used", "ignoreRestSiblings": false }]
 	}
 }
