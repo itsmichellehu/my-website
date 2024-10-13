@@ -19,11 +19,9 @@ export default function initializeTabs() {
                 tabContents[index].classList.add('active');
                 this.classList.add('active');
 
-                // Move the slider to the active tab
                 slider.style.left = `${this.offsetLeft}px`;
-                slider.style.width = `${this.offsetWidth}px`; // Adjust slider width to match the button
+                slider.style.width = `${this.offsetWidth}px`;
 
-                // Calculate the offsetLeft of the clicked tab button and adjust the tabsMenu scrollLeft
                 const offsetLeft = this.offsetLeft;
                 tabsMenu.scrollLeft = offsetLeft - tabsMenu.offsetWidth / 4;
             });
