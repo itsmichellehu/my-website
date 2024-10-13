@@ -1,7 +1,7 @@
 import '../scss/about.scss';
 
 // import '../components/NavBar/NavBar';
-import '../components/FaqAccordion/FaqAccordion';
+import { initializeFaqAccordion } from "../components/FaqAccordion/FaqAccordion";
 import '../components/Scrollable/scrollable';
 import '../components/ScrollButton/scroll-button';
 
@@ -15,4 +15,5 @@ document.addEventListener('DOMContentLoaded', () => {
     Footer();
     NavBar();
     ProgressBar();
+    initializeFaqAccordion();
 });
