@@ -2,12 +2,12 @@ const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const glob = require('glob');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
-const ImageMinimizerPlugin = require('image-minimizer-webpack-plugin');
-const TerserPlugin = require('terser-webpack-plugin');
+const { PurgeCSSPlugin } = require('purgecss-webpack-plugin');
 
 const PATHS = {
-    src: path.join(__dirname, 'src'),
+    src: path.join(__dirname, 'src')
 };
 
 const htmlPages = [
@@ -15,7 +15,7 @@ const htmlPages = [
     { template: 'about.html', chunks: ['about'] },
     { template: 'boardspace.html', chunks: ['boardspace'] },
     { template: 'postup.html', chunks: ['postup'] },
-    { template: 'tastebuds.html', chunks: ['tastebuds'] },
+    { template: 'tastebuds.html', chunks: ['tastebuds'] }
 ];
 
 module.exports = {
@@ -28,34 +28,32 @@ module.exports = {
         tastebuds: './src/js/tastebuds.js',
     },
     output: {
-        filename: 'js/[name].[contenthash].js',
+        filename: 'js/[name].js',
         path: path.resolve(__dirname, 'dist'),
         clean: true,
     },
+    optimization: {
+        minimize: true,
+        minimizer: [
+            `...`,
+            new CssMinimizerPlugin(),
+        ],
+    },
     stats: {
-        errorDetails: true,
+        errorDetails: true
     },
     module: {
         rules: [
             {
                 test: /\.js$/,
                 exclude: /node_modules/,
-                use: [
-                    {
-                        loader: 'babel-loader',
-                        options: {
-                            cacheDirectory: true,
-                            presets: [
-                                ['@babel/preset-env', {
-                                    useBuiltIns: 'usage',
-                                    corejs: 3,
-                                }]
-                            ],
-                        },
-                    },
-                ],
-            },
-            {
+                use: {
+                    loader: 'babel-loader',
+                    options: {
+                        presets: ['@babel/preset-env']
+                    }
+                }
+            }, {
                 test: /\.(scss|css)$/,
                 use: [
                     MiniCssExtractPlugin.loader,
@@ -74,10 +72,14 @@ module.exports = {
             {
                 test: /\.(png|jpe?g|gif|svg)$/i,
                 type: 'asset/resource',
-                generator: {
-                    filename: 'images/[name].[contenthash][ext]',
-                },
                 use: [
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            name: '[path][name].[ext]',
+                            outputPath: 'images',
+                        },
+                    },
                     {
                         loader: 'image-webpack-loader',
                         options: {
@@ -99,76 +101,35 @@ module.exports = {
                                 quality: 75,
                             },
                         },
-                    },
-                ],
-            },
-        ],
+                    }
+                ]
+            }
+        ]
+    },
+    externals: {
+        jquery: 'jQuery',
     },
     plugins: [
         new MiniCssExtractPlugin({
-            filename: '[name].[contenthash].css',
+            filename: '[name].css',
+            // chunkFilename: '[id].css',
+        }),
+        new PurgeCSSPlugin({
+            paths: glob.sync(`${PATHS.src}/**/*`, { nodir: true }),
+            safelist: {
+                standard: ['keep-this-class', /^dynamic-/]
+            },
         }),
         ...htmlPages.map(page => new HtmlWebpackPlugin({
             template: `./src/${page.template}`,
             filename: page.template,
-            chunks: page.chunks,
+            chunks: page.chunks
         })),
         new CopyWebpackPlugin({
             patterns: [
-                { from: 'src/assets', to: 'assets' },
-            ],
-        }),
+                { from: 'src/assets', to: 'assets' }
+            ]
+        })
     ],
-    optimization: {
-        minimize: true,
-        minimizer: [
-            new TerserPlugin({
-                parallel: true,
-                terserOptions: {
-                    compress: {
-                        drop_console: true,
-                    },
-                },
-            }),
-            new CssMinimizerPlugin({
-                parallel: true,
-            }),
-            new ImageMinimizerPlugin({
-                minimizer: {
-                    implementation: ImageMinimizerPlugin.imageminMinify,
-                    options: {
-                        plugins: [
-                            ['mozjpeg', { progressive: true, quality: 75 }],
-                            ['optipng', { optimizationLevel: 5 }],
-                            ['pngquant', { quality: [0.65, 0.90] }],
-                            ['gifsicle', { interlaced: true }],
-                            ['svgo', {
-                                plugins: [
-                                    { removeViewBox: false },
-                                    { cleanupIDs: true },
-                                ],
-                            }],
-                        ],
-                    },
-                },
-            }),
-        ],
-        splitChunks: {
-            chunks: 'all',
-            minSize: 50000,
-            maxSize: 400000,
-        },
-        runtimeChunk: 'single',
-    },
-    resolve: {
-        alias: {
-            '@components': path.resolve(__dirname, 'src/components/'),
-            '@scss': path.resolve(__dirname, 'src/scss/'),
-        },
-        extensions: ['.js', '.jsx'],
-    },
-    cache: {
-        type: 'filesystem',
-    },
-    devtool: false,
+    devtool: false, // Correctly disable source maps
 };
