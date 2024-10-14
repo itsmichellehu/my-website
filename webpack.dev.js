@@ -118,10 +118,12 @@ module.exports = {
     },
     devServer: {
         static: path.resolve(__dirname, 'dist'),
+        host: '0.0.0.0',
         open: true,
         hot: true,
         watchFiles: ['src/**/*'],
-        port: 8686,
+        port: 5688,
+        allowedHosts: 'all',
     },
     devtool: 'cheap-module-source-map',
 };
