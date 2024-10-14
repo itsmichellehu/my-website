@@ -9,7 +9,7 @@ function NavBar() {
                     <li class="nav-item"><a href="/"><span class="nav-link-text">Work</span></a></li>
                     <li class="nav-item"><a href="/about"><span class="nav-link-text">About</span></a></li>
                     <li class="nav-item"><a href="assets/files/MichelleHuResume.pdf" target="_blank" rel="noopener noreferrer"><span class="nav-link-text">Resume</span></a></li>
-                    <li data-scroll-target="footer" class="nav-item"><a role="button"><span class="nav-link-text">Connect with me</span></a></li>
+                    <li data-scroll-target="footer" class="nav-item last-child"><a role="button"><span class="nav-link-text">Connect with me</span></a></li>
                 </ul>
             </div>
         </nav>
