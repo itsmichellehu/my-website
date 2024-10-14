@@ -1,3 +1,5 @@
+import { gsap } from "gsap";
+
 var carousel = (function () {
   var activeID = 0,
     itemW = 1000,
@@ -12,6 +14,8 @@ var carousel = (function () {
     swipeDir,
     slideSpeed = 0.45,
     slideMeth = Power2.EaseInOut;
+
+  const Power2 = gsap.Power2;
 
   function init() {
     $carouselItems.css({
