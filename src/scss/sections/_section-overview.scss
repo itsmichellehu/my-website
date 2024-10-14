@@ -138,8 +138,6 @@
 		margin-bottom: 0.5rem !important;
 	}
 
-
-
 	// PostUp's tools
 	&__tools-flex-container {
 		display: flex;
@@ -201,10 +199,12 @@
 		}
 	}
 
+
 	&__button-wrapper {
 		display: flex;
 		justify-content: center;
 	}
+
 
 	@include breakpoint(med) {
 		gap: 1.5rem;
