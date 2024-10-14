@@ -1,5 +1,5 @@
 import NavBar from '../components/NavBar/NavBar';
-// import NavBarBackground from '../components/NavBarBackground/NavBarBackground';
+import NavBarBackground from '../components/NavBarBackground/NavBarBackground';
 import Footer from '../components/Footer/Footer';
 
 import ScrollToSection from '../components/ScrollToASection/ScrollToASection';
@@ -16,7 +16,7 @@ const classAnimationMap = {
 
 document.addEventListener('DOMContentLoaded', () => {
     NavBar();
-    // NavBarBackground();
+    NavBarBackground();
     Footer();
 
     AnimateInView({ classAnimationMap });

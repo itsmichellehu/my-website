@@ -1,24 +1,34 @@
 function NavBarBackground() {
-    document.addEventListener('scroll', function () {
-        const navbar = document.getElementById('navbar');
-        const sections = document.querySelectorAll('section');
-        let currentSection = '';
-        sections.forEach(section => {
-            const sectionTop = section.offsetTop;
-            const sectionHeight = section.clientHeight;
-            const scrollPosition = window.scrollY;
+    const navbar = document.getElementById('navbar');
+    const firstSection = document.querySelector('section');
+    const sectionTop = firstSection.offsetTop;
+    const sectionHeight = firstSection.clientHeight;
 
-            if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
-                currentSection = section.getAttribute('id');
+    const throttle = (callback, limit) => {
+        let waiting = false;
+        return function () {
+            if (!waiting) {
+                callback.apply(this, arguments);
+                waiting = true;
+                setTimeout(() => {
+                    waiting = false;
+                }, limit);
             }
-        });
+        };
+    };
 
-        navbar.style.backgroundColor = 'white';
+    const handleScroll = () => {
+        const scrollPosition = window.scrollY;
 
-        if (currentSection === 'hero') {
+        // Set navbar background to transparent if in the first section, white otherwise
+        if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
             navbar.style.backgroundColor = 'transparent';
+        } else {
+            navbar.style.backgroundColor = 'white';
         }
-    });
+    };
+
+    document.addEventListener('scroll', throttle(handleScroll, 100));
 }
 
 export default NavBarBackground;
