@@ -32,8 +32,9 @@ $hero-icon-button-size-bp-xl: 3rem;
 .hero {
 	display: flex;
 	background-color: white;
-	margin-top: $navbar-mobile-height;
 	width: 100vw;
+	margin: $navbar-mobile-height auto 1rem auto;
+	border-radius: 4px;
 }
 
 .hero-wrapper {
@@ -55,7 +56,6 @@ $hero-icon-button-size-bp-xl: 3rem;
 	overflow: hidden;
 	width: 100vw;
 	height: 55vh;
-	max-height: 28rem;
 	justify-self: center;
 }
 
@@ -84,13 +84,14 @@ $hero-icon-button-size-bp-xl: 3rem;
 .hero-headline {
 	color: $black;
 	font-family: Inter;
-	font-size: clamp(2.125rem, 5vw, 3.5rem) !important;
-	font-weight: 700;
+	font-size: clamp(2.125rem, 5vw, 4rem) !important;
+	font-weight: 600;
 	margin-bottom: 0.5rem;
-	width: fit-content;
+	width: 100%;
 	letter-spacing: -0.01rem;
 	line-height: 125%;
 	max-width: 26rem;
+	text-wrap: nowrap;
 }
 
 .hero-tagline-buttons-wrapper {
@@ -251,16 +252,15 @@ $hero-icon-button-size-bp-xl: 3rem;
 
 @include breakpoint(med) {
 	.hero {
-		padding-top: 2rem;
+		padding-top: 6.5rem;
+		margin: auto;
 	}
 
 	.hero-wrapper {
 		width: 90vw;
-		gap: 2rem;
-		grid-template-columns: 5fr 3fr;
+		gap: 4rem;
 		grid-template-rows: auto;
 		grid-template-areas: 'b a';
-		align-items: start;
 	}
 
 	.hero-headline {
@@ -272,8 +272,8 @@ $hero-icon-button-size-bp-xl: 3rem;
 	}
 
 	.hero-image-wrapper {
-		max-height: none;
 		width: 100%;
+		max-width: 30rem;
 		border-radius: 5px;
 	}
 
@@ -312,7 +312,7 @@ $hero-icon-button-size-bp-xl: 3rem;
 	}
 
 	.hero-wrapper {
-		gap: 3rem;
+		gap: 6rem;
 	}
 
 	.hero-content {
@@ -359,25 +359,25 @@ $hero-icon-button-size-bp-xl: 3rem;
 }
 
 @include breakpoint(lg) {
-	.hero-wrapper {
-		align-items: center;
-	}
+	// .hero-wrapper {
+	// 	align-items: center;
+	// }
 
 	.hero-headline {
-		color: #000;
-		font-weight: bolder;
-		line-height: 125%;
-		margin-bottom: 1rem;
+		line-height: 112%;
+		margin-bottom: 1.5rem;
+		max-width: 40rem;
+		letter-spacing: -0.03125rem;
 	}
 
 	.hero-intro {
 		font-size: 1.35rem;
-		max-width: 41rem;
+		max-width: 32rem;
 		line-height: 155%;
 	}
 
 	.hero-intro-highlight {
-		font-size: 1.55rem;
+		font-size: 1.45rem;
 	}
 
 	.hero-tagline {
