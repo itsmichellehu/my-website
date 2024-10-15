@@ -16,7 +16,6 @@
 		margin: auto;
 		width: 90vw;
 		gap: 1.5rem;
-		max-width: 90vw;
 		height: 100%;
 	}
 
@@ -39,6 +38,7 @@
 		line-height: 100%;
 		letter-spacing: -0.144px;
 		margin-bottom: 0.75rem;
+		width: fit-content;
 	}
 
 	&__tagline {
@@ -46,12 +46,17 @@
 		color: $medium-grey;
 		margin: 0 0 1rem;
 		font-size: 1.3rem;
-		font-weight: 400;
-		line-height: 135%;
+		font-weight: 450;
+		line-height: 140%;
+		max-width: 34rem;
+
+		&.postup-tagline {
+			max-width: 34rem;
+		}
 	}
 
 	&__tags-wrapper {
-		display: flex;
+		display: none;
 		gap: 0.5rem;
 		overflow-x: auto;
 		white-space: nowrap;
@@ -101,17 +106,14 @@
 			padding: 0;
 			margin: 0;
 			list-style: none;
+			gap: 0;
 
 			li {
-				color: $medium-grey;
-				font-weight: 400;
+				color: $dark-grey;
 				line-height: 155%;
 				font-size: 1rem;
-				margin-bottom: 0rem
-			}
-
-			li:last-child {
 				margin-bottom: 0;
+				font-weight: 350;
 			}
 		}
 	}
@@ -128,21 +130,21 @@
 
 	&__details-headline {
 		color: $black;
-		font-weight: 500;
+		font-weight: 450;
 		line-height: 125%;
 		margin-bottom: 0.25rem;
 		width: 100%;
 	}
 
 	&__details-headline-tools {
-		margin-bottom: 0.5rem !important;
+		margin-bottom: 0.25rem !important;
 	}
 
 	// PostUp's tools
 	&__tools-flex-container {
 		display: flex;
 		flex-direction: row;
-		gap: 0.5rem;
+		gap: 0.75rem;
 	}
 
 	// TasteBuds's tools
@@ -199,16 +201,22 @@
 		}
 	}
 
+	&__details-timeline-tools {
+		display: flex;
+		gap: 1rem;
+	}
 
 	&__button-wrapper {
 		display: flex;
 		justify-content: center;
 	}
+}
 
+@include breakpoint(med) {
+	.overview {
 
-	@include breakpoint(med) {
 		gap: 1.5rem;
-		padding-top: 2rem;
+		padding-top: 3rem;
 		max-height: 23rem;
 		justify-content: space-between;
 		flex: 1;
@@ -217,7 +225,7 @@
 			flex-direction: row;
 			gap: 2rem;
 			margin: 0 auto;
-			align-items: center;
+			align-items: stretch;
 		}
 
 		&_content-wrapper-boardspace {
@@ -228,23 +236,20 @@
 		}
 
 		&__header {
-			width: 75%;
-			max-width: 29rem;
-
-			&-postup {
-				max-width: 37rem;
-			}
+			// width: 75%;
+			flex-grow: 1;
 		}
 
 		&__title {
 			flex: auto;
-			font-size: 3.66rem !important;
+			font-size: 5.4rem !important;
 			margin-bottom: 1rem;
 		}
 
 		&__tagline {
-			margin-bottom: 1.25rem;
-			font-size: 1.5rem;
+			margin-bottom: 0;
+			font-size: 1.3125rem;
+			max-width: 34rem;
 		}
 
 		&__tags-wrapper {
@@ -263,58 +268,95 @@
 			gap: 1rem;
 		}
 
+		&__details-timeline-tools {
+			flex-direction: column;
+			align-items: stretch;
+		}
+
+		&__details-headline {
+			font-size: 1.15rem;
+			letter-spacing: 0.02rem;
+		}
+
 		&__details-list {
 			display: flex;
 			flex-direction: column;
 			gap: 0.25rem;
 			align-items: flex-start;
-		}
 
-		&__details-headline {
-			font-size: 1.25rem;
-		}
-
-		ul li {
-			font-size: 1.125rem;
-			text-wrap: nowrap;
-		}
-
-		&__tools-flex-container {
-			gap: 0.75rem;
+			ul li {
+				font-size: 1.125rem;
+				text-wrap: nowrap;
+			}
 		}
 
 		&__tools-logo-wrapper {
-			width: 3.5rem;
-			height: 3.5rem;
-			border-radius: 0.625rem;
+			width: 3rem;
+			height: 3rem;
+			border-radius: 0.55rem;
 
 			img {
-				width: 2.5rem;
+				width: 2rem;
 				height: auto;
 				margin: 0;
 			}
 
 			&--canva img {
-				width: 3.5rem;
-				height: 3.5rem;
+				width: 3rem;
+				height: 3rem;
 			}
 		}
 	}
 }
 
+$content-gap-lg: 5.5rem;
+
 @include breakpoint(lg) {
 	.overview {
 		gap: 3rem;
-		padding-top: 2rem;
+		padding-top: 3rem;
+		height: 40vh;
 
 		&__content-wrapper {
-			max-width: 55rem;
-			gap: 4rem;
+			height: fit-content;
+			flex-direction: row;
+			margin: 0 auto;
+			gap: $content-gap-lg;
+		}
+
+		&__details-container {
+			ul li {
+				font-weight: 350;
+				font-size: 1.125rem;
+			}
 		}
 
 		&__tools-grid-container {
 			grid-template-columns: repeat(4, 1fr);
 			grid-template-rows: auto;
+		}
+
+		&__tools-flex-container {
+			flex-direction: column;
+		}
+
+		&__title {
+			flex: auto;
+			font-size: 7.2rem !important;
+			margin-bottom: 1.5rem;
+		}
+
+		&__tagline {
+			font-size: 2rem;
+		}
+
+		&__details-timeline-tools {
+			flex-direction: row;
+			gap: $content-gap-lg;
+		}
+
+		&__details-list {
+			margin-top: 1.375rem;
 		}
 	}
 }
