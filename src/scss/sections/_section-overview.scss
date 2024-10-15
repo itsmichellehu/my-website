@@ -214,10 +214,9 @@
 
 @include breakpoint(med) {
 	.overview {
-
-		gap: 1.5rem;
+		gap: 1rem;
 		padding-top: 3rem;
-		max-height: 23rem;
+		max-height: 24rem;
 		justify-content: space-between;
 		flex: 1;
 
@@ -313,7 +312,6 @@ $content-gap-lg: 5.5rem;
 
 @include breakpoint(lg) {
 	.overview {
-		gap: 3rem;
 		padding-top: 3rem;
 		height: 40vh;
 
