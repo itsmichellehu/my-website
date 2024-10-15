@@ -15,7 +15,7 @@ function Footer() {
             <footer id="footer">
                 <div class="wrapper">
                     <p class="headline fadeInLeft_inView">Let's make a difference together.</p>
-                    <div class="fade-in-right">
+                    <div class="fadeInRight_inView">
                         <div class="social-links-wrapper">
                             <div class="social-link">
                                 <a href="https://www.linkedin.com/in/itsmichellehu" target="_blank"
