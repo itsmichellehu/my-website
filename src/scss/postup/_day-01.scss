@@ -38,6 +38,11 @@ $quote-text-size-med: 100%;
 	width: 100%;
 }
 
+.interview-quote-01,
+.interview-quote-02 {
+	margin-bottom: 1.5rem;
+}
+
 .interviewee-wrapper {
 	display: flex;
 	gap: 1rem;
@@ -117,6 +122,16 @@ $quote-text-size-med: 100%;
 	}
 }
 
+.interview-quote-insight {
+	color: $black;
+	font-size: 1.25rem;
+	font-weight: 500;
+	line-height: 150%;
+	margin-bottom: 1.5rem;
+	margin-top: 0;
+	text-align: left;
+}
+
 @include breakpoint(med) {
 	.interview-quotes_img-quotation-mark {
 		margin: 0;
@@ -143,7 +158,19 @@ $quote-text-size-med: 100%;
 			}
 		}
 	}
+
+	.interview-quote-01,
+	.interview-quote-02 {
+		margin-bottom: 2rem;
+	}
+
+	.interview-quote-insight {
+		width: $quote-text-size-med;
+		font-size: 1.75rem;
+		margin-bottom: 2.5rem;
+	}
 }
+
 
 .image-width-large {
 	width: 90%;
