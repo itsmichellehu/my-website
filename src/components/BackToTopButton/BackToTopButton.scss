@@ -41,6 +41,14 @@ $back-to-top-hover-color: #28282D;
     &.show {
         opacity: 1;
         visibility: visible;
+
+        &:hover {
+            background-color: $teal-accent;
+        }
+
+        &:active {
+            background-color: #288F87;
+        }
     }
 }
 
@@ -68,6 +76,10 @@ $back-to-top-hover-color: #28282D;
             .btn-back-to-top-svg {
                 stroke: white;
             }
+        }
+
+        &:active {
+            background-color: $teal-accent;
         }
     }
 }
