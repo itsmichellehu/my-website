@@ -43,14 +43,21 @@
 
 	.hero {
 		max-height: 36rem;
-		padding-top: calc($navbar-desktop-height * 2);
+		padding-top: 6rem;
 	}
 
-	.hero-video-postup,
 	.hero-video {
 		display: flex;
 		width: 90%;
-		max-width: 17rem;
 		margin: auto;
+		max-height: none;
+
+		&-postup {
+			max-width: 17rem;
+		}
+
+		&-tastebuds {
+			max-width: 28rem;
+		}
 	}
 }

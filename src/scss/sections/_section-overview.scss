@@ -102,9 +102,8 @@ $details-wrapper-gap: 1rem;
 
 	&__details-wrapper {
 		display: grid;
-		grid-template-columns: repeat(2, 1fr);
+		grid-template-columns: 1fr;
 		grid-template-rows: repeat(2, auto);
-		grid-template-areas: 'a b ' 'c c';
 		gap: 1rem 0.5rem;
 	}
 
@@ -221,7 +220,24 @@ $details-wrapper-gap: 1rem;
 		grid-area: c;
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
-		gap: 1rem;
+		gap: $details-wrapper-gap;
+	}
+
+	&__details-wrapper-01-tastebuds {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: $details-wrapper-gap;
+
+		>.involvement-list,
+		>.discipline-list {
+			grid-area: unset;
+		}
+	}
+
+	&__details-timeline-tools-tastebuds {
+		display: flex;
+		flex-direction: column;
+		gap: $details-wrapper-gap;
 	}
 
 	&__button-wrapper {
@@ -364,8 +380,9 @@ $details-wrapper-gap-lg: 5rem;
 		}
 
 		&__tools-grid-container {
-			grid-template-columns: repeat(4, 1fr);
-			grid-template-rows: auto;
+			grid-template-columns: repeat(2, 1fr);
+			grid-template-rows: repeat(2, 1fr);
+			gap: 0.75rem;
 		}
 	}
 }
