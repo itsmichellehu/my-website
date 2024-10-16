@@ -35,7 +35,7 @@ $details-wrapper-gap: 1rem;
 
 	&__title {
 		color: $black;
-		font-size: clamp(2.66rem, 7vw, 7.2rem);
+		font-size: clamp(2.66rem, 8vw, 7.2rem);
 		font-weight: 550;
 		line-height: 100%;
 		letter-spacing: 0.02rem;
@@ -48,6 +48,7 @@ $details-wrapper-gap: 1rem;
 		color: $medium-grey;
 		margin: 0;
 		font-size: 1.3rem;
+		font-size: clamp(1.3rem, 2.2vw, 2rem);
 		font-weight: 450;
 		line-height: 140%;
 		max-width: 34rem;
@@ -120,6 +121,7 @@ $details-wrapper-gap: 1rem;
 				font-size: 1rem;
 				margin-bottom: 0;
 				font-weight: 350;
+				text-wrap: nowrap;
 			}
 		}
 
@@ -261,7 +263,6 @@ $details-wrapper-gap: 1rem;
 
 		&__tagline {
 			margin-bottom: 0;
-			font-size: 1.3125rem;
 			max-width: 34rem;
 		}
 
@@ -281,10 +282,6 @@ $details-wrapper-gap: 1rem;
 			gap: 1rem;
 		}
 
-		&__details-timeline-tools {
-			flex-direction: column;
-		}
-
 		&__details-headline {
 			font-size: 1.15rem;
 			letter-spacing: 0.02rem;
@@ -293,13 +290,20 @@ $details-wrapper-gap: 1rem;
 		&__details-list {
 			display: flex;
 			flex-direction: column;
-			gap: 0.25rem;
 			align-items: flex-start;
 
-			ul li {
-				font-size: 1.125rem;
-				text-wrap: nowrap;
+			ul,
+			li {
+				width: 100%;
 			}
+		}
+
+		&__details-timeline-tools {
+			gap: 1rem;
+		}
+
+		&__details-headline-tools {
+			margin-bottom: 0.25rem;
 		}
 
 		&__tools-logo-wrapper {
@@ -321,7 +325,7 @@ $details-wrapper-gap: 1rem;
 	}
 }
 
-$details-wrapper-gap-lg: 2rem;
+$details-wrapper-gap-lg: 5rem;
 
 @include breakpoint(lg) {
 	.overview {
@@ -340,7 +344,16 @@ $details-wrapper-gap-lg: 2rem;
 		}
 
 		&__details-wrapper {
+			grid-template-columns: repeat(3, auto);
+			gap: $details-wrapper-gap-lg;
+			grid-template-areas: 'a b c';
 			margin-top: 1.375rem;
+		}
+
+		&__details-timeline-tools {
+			display: flex;
+			flex-direction: row;
+			gap: $details-wrapper-gap-lg;
 		}
 
 		&__details-container {
@@ -354,13 +367,13 @@ $details-wrapper-gap-lg: 2rem;
 			grid-template-columns: repeat(4, 1fr);
 			grid-template-rows: auto;
 		}
+	}
+}
 
+@include breakpoint(xl) {
+	.overview {
 		&__tools-flex-container {
-			flex-direction: row;
-		}
-
-		&__tagline {
-			font-size: 2rem;
+			flex-direction: column;
 		}
 	}
 }
