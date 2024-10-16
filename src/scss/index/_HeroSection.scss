@@ -84,8 +84,8 @@ $hero-icon-button-size-bp-xl: 3rem;
 .hero-headline {
 	color: $black;
 	font-family: Inter;
-	font-size: clamp(2.125rem, 5vw, 4rem) !important;
-	font-weight: 600;
+	font-size: clamp(2.125rem, 5.5vw, 5rem) !important;
+	font-weight: 550;
 	margin-bottom: 0.5rem;
 	width: 100%;
 	letter-spacing: -0.01rem;
@@ -268,6 +268,7 @@ $hero-icon-button-size-bp-xl: 3rem;
 	}
 
 	.hero-content {
+		height: 100%;
 		width: 100%;
 	}
 
@@ -312,11 +313,8 @@ $hero-icon-button-size-bp-xl: 3rem;
 	}
 
 	.hero-wrapper {
-		gap: 6rem;
-	}
-
-	.hero-content {
-		gap: 1.5rem;
+		gap: 4rem;
+		align-items: start;
 	}
 
 	.hero-tagline {
@@ -332,7 +330,7 @@ $hero-icon-button-size-bp-xl: 3rem;
 	.text-work-availability,
 	.text-current-location,
 	.text-slash {
-		font-size: 1rem;
+		font-size: 1.2rem;
 		line-height: 100%;
 	}
 
@@ -364,16 +362,17 @@ $hero-icon-button-size-bp-xl: 3rem;
 	// }
 
 	.hero-headline {
-		line-height: 112%;
+		line-height: 110%;
 		margin-bottom: 1.5rem;
-		max-width: 40rem;
-		letter-spacing: -0.03125rem;
+		max-width: fit-content;
+		letter-spacing: -0.125rem;
 	}
 
 	.hero-intro {
 		font-size: 1.35rem;
-		max-width: 32rem;
+		max-width: 40rem;
 		line-height: 155%;
+		margin-top: auto;
 	}
 
 	.hero-intro-highlight {
@@ -398,7 +397,7 @@ $hero-icon-button-size-bp-xl: 3rem;
 
 	.work-location-wrapper {
 		font-size: 1.125rem;
-		margin-bottom: 1.75rem;
+		margin-bottom: 2rem;
 	}
 }
 
@@ -414,7 +413,7 @@ $hero-icon-button-size-bp-xl: 3rem;
 	.text-work-availability,
 	.text-current-location,
 	.text-slash {
-		font-size: 1.125rem;
+		font-size: 1.25rem;
 		line-height: 100%;
 	}
 
