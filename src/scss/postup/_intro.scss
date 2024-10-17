@@ -1,13 +1,5 @@
-@use "../../scss/abstracts/all-abstracts" as *;
-
-@include breakpoint(med) {
-    #intro {
-        &.section-container {
-            padding-top: 6rem;
-        }
-
-        >.content-wrapper {
-            margin-top: 6rem;
-        }
-    }
-}
+// @use "../../scss/abstracts/all-abstracts" as *;
+//
+// #intro {
+//     padding-top:
+// }

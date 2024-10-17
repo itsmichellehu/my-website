@@ -23,12 +23,22 @@ $quote-text-size-med: 100%;
 	width: 90vw;
 	max-width: $content-max-width;
 	margin: auto;
+	position: relative;
 }
 
 .interview-quotes_img-quotation-mark {
+	display: none;
 	margin: 0;
 	margin-bottom: 1rem;
 	max-width: 3rem;
+
+	@include breakpoint(med) {
+		display: flex;
+		position: absolute;
+		margin: 0;
+		max-width: 12rem;
+		transform: translateX(-108px) translateY(-32px);
+	}
 }
 
 .interview-quotes_grid-container {
@@ -36,6 +46,15 @@ $quote-text-size-med: 100%;
 	grid-template-rows: auto;
 	margin: auto;
 	width: 100%;
+	margin-top: 2rem;
+
+	.blockquote-content {
+		padding: 1rem 1rem 1rem 1.5rem;
+	}
+
+	@include breakpoint(med) {
+		margin-top: 3rem;
+	}
 }
 
 .interview-quote-01,
@@ -133,12 +152,6 @@ $quote-text-size-med: 100%;
 }
 
 @include breakpoint(med) {
-	.interview-quotes_img-quotation-mark {
-		margin: 0;
-		max-width: 12rem;
-		transform: translateX(-84px) translateY(8px);
-	}
-
 	.interview-quotes_grid-container {
 		margin-bottom: 3rem;
 	}
