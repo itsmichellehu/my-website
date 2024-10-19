@@ -245,3 +245,15 @@
         font-weight: 500;
     }
 }
+
+.text-wrap {
+    text-wrap: wrap !important;
+}
+
+.text-nowrap {
+    text-wrap: nowrap !important;
+}
+
+.text-wrap-word {
+    text-wrap: wrap-word !important;
+}
