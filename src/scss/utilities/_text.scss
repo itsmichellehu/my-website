@@ -171,7 +171,7 @@
 
 // Secondary text styles
 .secondary-text {
-    color: $forest-green;
+    color: $black;
     font-size: 1.415rem;
     font-weight: 500;
     line-height: 135%;
@@ -191,16 +191,6 @@
     line-height: 115%;
     margin-bottom: 1rem;
     letter-spacing: 0rem;
-}
-
-.secondary-text.h5 {
-    font-weight: 500;
-    letter-spacing: 0;
-    line-height: 140%;
-    color: $forest-green;
-    font-size: 1.584rem !important;
-    margin-top: 2rem;
-    margin-bottom: 1rem;
 }
 
 // Adjust font-size for secondary text on medium screens
