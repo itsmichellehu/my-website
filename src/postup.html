@@ -170,22 +170,22 @@
           mobile app with the
           following scope and constraints:</p>
         <div class="flex-col gap-16 flex-row-sm mt-32 a-i-stretch">
-          <div class="project-proposal-card">
-            <div class="project-proposal-card_svg-wrapper">
-              <img src="assets/svg/constraint-business.svg" alt="" />
+          <div class="card project-proposal">
+            <div class="card_icon-wrapper">
+              <img class="card_icon" src="assets/svg/constraint-business.svg" alt="" />
             </div>
-            <p class="subheading">Scope</p>
+            <p class="card_heading">Scope</p>
             <ul>
               <li>Solution must be a mobile-app</li>
               <li>$5.99 monthly subscription</li>
               <li>Feature existing spaces</li>
             </ul>
           </div>
-          <div class="project-proposal-card">
-            <div class="project-proposal-card_svg-wrapper">
-              <img src="assets/svg/ic-paper-folder.svg" alt="" />
+          <div class="card project-proposal">
+            <div class="card_icon-wrapper">
+              <img class="card_icon" src="assets/svg/ic-paper-folder.svg" alt="" />
             </div>
-            <p class="subheading">Constraints</p>
+            <p class="card_heading">Constraints</p>
             <ul>
               <li>Limited research materials</li>
               <li>No access to PostUp personel</li>
@@ -821,87 +821,84 @@
           <img alt="" loading="lazy" src="assets/images/postup/prototype-checklist.jpeg"
             class="img-prototype-checklist" />
         </div>
-        <h3>Learning from past challenges</h3>
-        <p>The main challenge during prototyping trying to prototype more than one user flow. With
-          only one shot at testing and no time to
-          iterate, I wanted to prototype alternative routes to prevent task failures.
-        </p>
-        <p>I recalled learning in past projects that users often focus on essential features and
-          ignore
-          non-critical ones. So, I streamlined my prototype to a single user
-          flow and refined my testing strategy to reveal user behaviors and expectations without
-          covering every
-          possible route.</p>
+        <div class="content-wrapper">
+          <h3>Learning from past challenges</h3>
+          <p>The main challenge during prototyping trying to prototype more than one user flow. With
+            only one shot at testing and no time to
+            iterate, I wanted to prototype alternative routes to prevent task failures.
+          </p>
+          <p>I recalled learning in past projects that users often focus on essential features and
+            ignore
+            non-critical ones. So, I streamlined my prototype to a single user
+            flow and refined my testing strategy to reveal user behaviors and expectations without
+            covering every
+            possible route.</p>
+        </div>
       </section>
       <div id="stashed-features">
         <div class="content-wrapper overflow-visible">
           <header class="header-container header-container-postup-h3">
-            <h3>Stashed Features</h3>
+            <h3>Excluding secondary features Additional features</h3>
           </header>
-          <p>I set aside these features due to limited research support through verbal walkthroughs.
+          <p>Due to time constraints, I didn't prototype the following less critical features for
+            interactive testing. Instead, I planned on testing through verbal walkthroughs—asking
+            participants to describe how they would perform tasks and identify
+            UI elements without interacting with the screen. Learning from past projects, this would
+            allow me to efficiently assess
+            user flows and expectations while keeping the testing cost-effective.
           </p>
           <div class="stashed-features_wrapper">
             <ul class="stashed-features_grid-container">
-              <li class="stashed-features_card first-child">
-                <div class="stashed-features_card-wrapper">
-                  <div class="stashed-features_icon-wrapper">
-                    <img src="assets/svg/postup/stashed-feature-seating.svg" alt=""
-                      class="stashed-features_icon">
-                  </div>
-                  <div class="stashed-features_copy-wrapper">
-                    <p class="stashed-features_heading">Seating availability</p>
-                    <p class="stashed-features_body">
-                      This was mentioned by one interviewee.
-                      It could expedite a remote worker's journey and monetized.
-                    </p>
-                  </div>
+              <li class="card stashed-features first-child">
+                <div class="card_icon-wrapper">
+                  <img src="assets/svg/postup/stashed-feature-seating.svg" alt="" class="card_icon">
+                </div>
+                <div class="card_content">
+                  <p class="card_heading">Seating availability</p>
+                  <p class="card_body">
+                    This was mentioned by one interviewee.
+                    It could expedite a remote worker's journey and monetized.
+                  </p>
                 </div>
               </li>
-              <li class="stashed-features_card">
-                <div class="stashed-features_card-wrapper">
-                  <div class="stashed-features_icon-wrapper">
-                    <img src="assets/svg/postup/stashed-feature-reservation.svg" alt=""
-                      class="stashed-features_icon">
-                  </div>
-                  <div class="stashed-features_copy-wrapper">
-                    <p class="stashed-features_heading">Reservation system</p>
-                    <p class="stashed-features_body">
-                      This has great potential but its rarity in coffee shops is a challenge. It
-                      also
-                      could be monetized.
-                    </p>
-                  </div>
+              <li class="card stashed-features">
+                <div class="card_icon-wrapper">
+                  <img src="assets/svg/postup/stashed-feature-reservation.svg" alt=""
+                    class="card_icon">
+                </div>
+                <div class="card_content">
+                  <p class="card_heading">Reservation system</p>
+                  <p class="card_body">
+                    This has great potential but its rarity in coffee shops is a challenge. It
+                    also
+                    could be monetized.
+                  </p>
                 </div>
               </li>
-              <li class="stashed-features_card">
-                <div class="stashed-features_card-wrapper">
-                  <div class="stashed-features_icon-wrapper">
-                    <img src="assets/svg/postup/stashed-feature-search-bar.svg" alt=""
-                      class="stashed-features_icon">
-                  </div>
-                  <div class="stashed-features_copy-wrapper">
-                    <p class="stashed-features_heading">Home search bar</p>
-                    <p class="stashed-features_body">
-                      As a common user route, I anticipated some users opting
-                      for this route instead of the search page.
-                    </p>
-                  </div>
+              <li class="card stashed-features">
+                <div class="card_icon-wrapper">
+                  <img src="assets/svg/postup/stashed-feature-search-bar.svg" alt=""
+                    class="card_icon">
+                </div>
+                <div class="card_content">
+                  <p class="card_heading">Home search bar</p>
+                  <p class="card_body">
+                    As a common user route, I anticipated some users opting
+                    for this route instead of the search page.
+                  </p>
                 </div>
               </li>
-              <li class="stashed-features_card last-child">
-                <div class="stashed-features_card-wrapper">
-                  <div class="stashed-features_icon-wrapper">
-                    <img src="assets/svg/postup/stashed-feature-graph.svg" alt=""
-                      class="stashed-features_icon">
-                  </div>
-                  <div class="stashed-features_copy-wrapper">
-                    <p class="stashed-features_heading">Popular times</p>
-                    <p class="stashed-features_body">
-                      Given its popularity in other apps, it
-                      could enhance the UX and boost competitive
-                      advantage.
-                    </p>
-                  </div>
+              <li class="card stashed-features last-child">
+                <div class="card_icon-wrapper">
+                  <img src="assets/svg/postup/stashed-feature-graph.svg" alt="" class="card_icon">
+                </div>
+                <div class="card_content">
+                  <p class="card_heading">Popular times</p>
+                  <p class="card_body">
+                    Given its popularity in other apps, it
+                    could enhance the UX and boost competitive
+                    advantage.
+                  </p>
                 </div>
               </li>
             </ul>

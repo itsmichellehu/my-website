@@ -1,7 +1,7 @@
 @use "../../scss/abstracts/breakpoints-mixins" as *;
 @use "../../scss/abstracts/variables" as *;
 
-$stashed-feature-font-color: $black;
+$card-font-color: $black;
 
 // Stashed features
 .stashed-features {
@@ -66,95 +66,6 @@ $stashed-feature-font-color: $black;
 		}
 	}
 
-	&_card {
-		scroll-snap-align: center;
-		scroll-snap-stop: always;
-		display: flex;
-		flex-direction: column;
-		padding: 2rem;
-		border-radius: 1rem;
-		background-color: #f9f9f9;
-		height: fit-content;
-		width: 18.75rem;
-		transform: none !important;
-		box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.05);
-		aspect-ratio: 7/6;
-		overflow: hidden;
-
-		&.last-child {
-			margin-right: 5vw;
-		}
-
-		@include breakpoint(lg) {
-
-			&.first-child,
-			&.last-child {
-				margin: 0;
-			}
-		}
-	}
-
-	&_card-wrapper {
-		display: flex;
-		flex-direction: column;
-		position: relative;
-	}
-
-	&_icon-wrapper {
-		width: 2.75rem;
-		height: 2.75rem;
-		margin-bottom: 1rem;
-
-		@include breakpoint(med) {
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			opacity: 0.5;
-			z-index: 1;
-			-webkit-text-size-adjust: 100%;
-			padding: 0;
-			margin: 0;
-			box-sizing: border-box;
-			bottom: -3rem;
-			right: -1rem;
-			width: 8rem;
-			height: 8rem;
-			position: absolute;
-		}
-	}
-
-	&_icon {
-		width: 100%;
-	}
-
-	&_copy-wrapper {
-		width: 100%;
-		z-index: 2;
-
-		@include breakpoint(med) {
-			margin: auto;
-		}
-
-	}
-
-	&_heading {
-		font-size: 1.25rem;
-		font-weight: 500 !important;
-		margin-bottom: 0.5rem;
-		color: $stashed-feature-font-color !important;
-
-		@include breakpoint(med) {
-			font-size: 1.5rem;
-		}
-	}
-
-	&_body {
-		display: flex;
-		font-size: 1.125rem;
-		color: $stashed-feature-font-color !important;
-		margin-bottom: 0;
-	}
-
 	&_carousel-nav-arrow_wrapper {
 		display: flex;
 		gap: 1rem;
@@ -194,6 +105,31 @@ $stashed-feature-font-color: $black;
 
 		&:active {
 			background-color: #d0d0d0 !important;
+		}
+	}
+}
+
+.stashed-features.card {
+	scroll-snap-align: center;
+	scroll-snap-stop: always;
+	background-color: #f9f9f9;
+	width: 18.75rem;
+	height: fit-content;
+	aspect-ratio: 7/6;
+
+	&.last-child {
+		margin-right: 5vw;
+	}
+
+	@include breakpoint(lg) {
+
+		&.first-child,
+		&.last-child {
+			margin: 0;
+		}
+
+		.card_icon {
+			opacity: 0.8;
 		}
 	}
 }
