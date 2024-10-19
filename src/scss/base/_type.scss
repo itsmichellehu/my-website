@@ -89,10 +89,6 @@ h5 {
 // Typescale 1.250 Major Third
 
 @include breakpoint(med) {
-	p {
-		font-size: 1.125rem;
-	}
-
 	h1 {
 		font-size: 3.157rem;
 		letter-spacing: -0.04rem;
