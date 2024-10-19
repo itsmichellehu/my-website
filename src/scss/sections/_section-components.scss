@@ -223,8 +223,6 @@
 	}
 }
 
-.section-container>.subsection,
-.section-container>.content-wrapper,
-.section-container>.content :first-child {
+.section-container> :is(.subsection, .content-wrapper, .content):first-of-type {
 	margin-top: 0;
 }
