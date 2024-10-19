@@ -90,9 +90,19 @@ $quote-text-size-med: 100%;
 	}
 
 	&_insight {
-		width: $quote-text-size-med;
-		font-size: 1.75rem;
-		margin-bottom: 2.5rem;
+		color: $black;
+		font-size: 1.25rem;
+		font-weight: 500;
+		line-height: 150%;
+		margin-bottom: 1.5rem;
+		margin-top: 0;
+		text-align: left;
+
+		@include breakpoint(med) {
+			width: $quote-text-size-med;
+			font-size: 1.75rem;
+			margin-bottom: 2.5rem;
+		}
 	}
 }
 
@@ -101,13 +111,6 @@ $quote-text-size-med: 100%;
 }
 
 .interview-quotes_insight {
-	color: $black;
-	font-size: 1.25rem;
-	font-weight: 500;
-	line-height: 150%;
-	margin-bottom: 1.5rem;
-	margin-top: 0;
-	text-align: left;
 }
 
 .interview-quote-01,
