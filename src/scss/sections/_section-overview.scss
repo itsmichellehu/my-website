@@ -1,6 +1,7 @@
 @use "../abstracts/all-abstracts" as *;
 
 $details-wrapper-gap: 1rem;
+$details-wrapper-gap-xl: 5rem;
 
 .overview {
 	width: 100vw;
@@ -8,11 +9,12 @@ $details-wrapper-gap: 1rem;
 	flex-direction: column;
 	align-items: center;
 	justify-content: start;
-	padding: 1.75rem 0 0.5rem;
+	padding: 1.75rem 0 1rem;
 	height: fit-content;
 	gap: 1rem;
 
-	&__content-wrapper {
+	&__content-wrapper,
+	&__content-wrapper--boardspace {
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
@@ -20,41 +22,54 @@ $details-wrapper-gap: 1rem;
 		width: 90vw;
 		gap: 1.5rem;
 		height: 100%;
-	}
 
-	&_content-wrapper-boardspace {
-		display: flex;
-		flex-direction: column;
-		justify-content: space-between;
-		margin: auto;
-		width: 90vw;
-		gap: 1.5rem;
-		max-width: 90vw;
-		height: 100%;
+		&--boardspace {
+			max-width: 90vw;
+		}
+
+		@include breakpoint(med) {
+			flex-direction: row;
+			gap: 2rem;
+			margin: 0 auto;
+			align-items: stretch;
+		}
+
+		@include breakpoint(lg) {
+			height: fit-content;
+			margin: 0 auto;
+			gap: $details-wrapper-gap-xl;
+		}
 	}
 
 	&__title {
 		color: $black;
-		font-size: clamp(2.66rem, 8vw, 7.2rem);
+		font-size: clamp(2.66rem, 8vw, 7rem);
 		font-weight: 550;
 		line-height: 100%;
 		letter-spacing: 0.02rem;
 		margin-bottom: 0.75rem;
 		width: fit-content;
+
+		@include breakpoint(med) {
+			margin-bottom: 1rem;
+		}
+
+		@include breakpoint(lg) {
+			margin-bottom: 1.5rem;
+		}
 	}
 
 	&__tagline {
 		align-self: center;
 		color: $medium-grey;
 		margin: 0;
-		font-size: 1.3rem;
 		font-size: clamp(1.3rem, 2.2vw, 2rem);
 		font-weight: 450;
 		line-height: 140%;
 		max-width: 34rem;
 
-		&.postup-tagline {
-			max-width: 34rem;
+		@include breakpoint(med) {
+			margin-bottom: 0;
 		}
 	}
 
@@ -69,6 +84,10 @@ $details-wrapper-gap: 1rem;
 		&::-webkit-scrollbar {
 			display: none;
 		}
+
+		@include breakpoint(med) {
+			flex-wrap: wrap;
+		}
 	}
 
 	&__tag {
@@ -78,7 +97,6 @@ $details-wrapper-gap: 1rem;
 		justify-content: center;
 		align-items: center;
 		border-radius: 0.3125rem;
-
 		font-size: 0.75rem;
 		font-weight: 400;
 		line-height: 150%;
@@ -98,19 +116,33 @@ $details-wrapper-gap: 1rem;
 			background: $boardspace-tag-background;
 			color: $boardspace-tag-color;
 		}
+
+		@include breakpoint(med) {
+			height: 1.75rem;
+			font-size: 0.875rem;
+		}
 	}
 
-	&__details-wrapper {
+	&__details {
 		display: grid;
 		grid-template-columns: 1fr;
 		grid-template-rows: repeat(2, auto);
 		gap: 1rem 0.5rem;
+
+		@include breakpoint(lg) {
+			grid-template-columns: repeat(3, auto);
+			grid-template-rows: auto;
+			grid-template-areas: 'a b c';
+			gap: $details-wrapper-gap-xl;
+			margin-top: 1.375rem;
+		}
 	}
 
 	&__details-list {
 		ul {
 			padding: 0;
 			margin: 0;
+			margin-top: 0.25rem;
 			list-style: none;
 			gap: 0;
 
@@ -121,6 +153,8 @@ $details-wrapper-gap: 1rem;
 				margin-bottom: 0;
 				font-weight: 350;
 				text-wrap: nowrap;
+
+
 			}
 		}
 
@@ -130,6 +164,24 @@ $details-wrapper-gap: 1rem;
 
 		&.discipline-list {
 			grid-area: b;
+		}
+
+		@include breakpoint(med) {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+
+			ul,
+			li {
+				width: 100%;
+			}
+		}
+
+		@include breakpoint(lg) {
+			ul>li {
+				line-height: 160%;
+				font-size: 1.125rem;
+			}
 		}
 	}
 
@@ -141,6 +193,19 @@ $details-wrapper-gap: 1rem;
 		&-postup {
 			gap: 3rem;
 		}
+
+		@include breakpoint(med) {
+			flex-direction: column;
+			align-items: flex-start;
+			width: fit-content;
+		}
+
+		@include breakpoint(lg) {
+			ul li {
+				font-weight: 350;
+				font-size: 1.125rem;
+			}
+		}
 	}
 
 	&__details-headline {
@@ -149,25 +214,43 @@ $details-wrapper-gap: 1rem;
 		line-height: 125%;
 		margin-bottom: 0.25rem;
 		width: 100%;
+
+		@include breakpoint(med) {
+			font-size: 1.15rem;
+			letter-spacing: 0.02rem;
+		}
 	}
 
 	&__details-headline-tools {
 		margin-bottom: 0.5rem !important;
+
+		@include breakpoint(med) {
+			margin-bottom: 0.25rem;
+		}
 	}
 
-	// PostUp's tools
 	&__tools-flex-container {
 		display: flex;
 		flex-direction: row;
 		gap: 0.5rem;
 	}
 
-	// TasteBuds's tools
 	&__tools-grid-container {
 		display: grid;
 		grid-template-columns: repeat(4, 1fr);
 		gap: 0.5rem;
-		width: fit-content
+		width: fit-content;
+
+		@include breakpoint(lg) {
+			grid-template-columns: repeat(2, 1fr);
+			grid-template-rows: repeat(2, 1fr);
+		}
+
+		@include breakpoint(xxl) {
+			grid-template-columns: repeat(4, 1fr);
+			grid-template-rows: auto;
+			gap: 0.75rem;
+		}
 	}
 
 	&__boardspace-tools {
@@ -188,42 +271,60 @@ $details-wrapper-gap: 1rem;
 		border-radius: 0.5rem;
 		box-shadow: $fixed-shadow;
 
-		&--general,
-		&--figma,
-		&--miro,
-		&--white-bg {
-			padding: 0.5rem;
-			background: #2e3139;
-		}
-
-		&--miro {
-			background: #ffd12b;
-		}
-
-		&--white-bg {
-			background: #fff;
-		}
-
 		img {
 			width: 1.75rem;
 			height: auto;
-			margin: 0;
 		}
 
 		&--canva img {
 			width: 2.5rem;
 			height: 2.5rem;
 		}
+
+		&--miro {
+			background: #ffd12b;
+		}
+
+		&--general,
+		&--figma,
+		&--white-bg {
+			padding: 0.5rem;
+			background: #2e3139;
+		}
+
+		&--white-bg {
+			background: #fff;
+		}
+
+		@include breakpoint(med) {
+			width: 3rem;
+			height: 3rem;
+			border-radius: 0.55rem;
+
+			img {
+				width: 2rem;
+				height: auto;
+			}
+
+			&--canva img {
+				width: 3rem;
+				height: 3rem;
+			}
+		}
 	}
 
 	&__details-timeline-tools {
-		grid-area: c;
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 		gap: $details-wrapper-gap;
+
+		@include breakpoint(xl) {
+			display: flex;
+			flex-direction: column;
+		}
 	}
 
-	&__details-wrapper-01-tastebuds {
+	&__details-container-01 {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 		gap: $details-wrapper-gap;
@@ -232,9 +333,13 @@ $details-wrapper-gap: 1rem;
 		>.discipline-list {
 			grid-area: unset;
 		}
+
+		@include breakpoint(xl) {
+			gap: $details-wrapper-gap-xl;
+		}
 	}
 
-	&__details-timeline-tools-tastebuds {
+	&__details-timeline-tools {
 		display: flex;
 		flex-direction: column;
 		gap: $details-wrapper-gap;
@@ -244,156 +349,22 @@ $details-wrapper-gap: 1rem;
 		display: flex;
 		justify-content: center;
 	}
-}
 
-@include breakpoint(med) {
-	.overview {
-		gap: 1rem;
-		padding-top: 3rem;
-		max-height: 24rem;
-		justify-content: space-between;
+	@include breakpoint(med) {
 		flex: 1;
-
-		&__content-wrapper {
-			flex-direction: row;
-			gap: 2rem;
-			margin: 0 auto;
-			align-items: stretch;
-		}
-
-		&_content-wrapper-boardspace {
-			flex-direction: row;
-			gap: 2rem;
-			margin: 0 auto;
-			align-items: start;
-		}
-
-		&__header {
-			flex-grow: 1;
-		}
-
-		&__title {
-			flex: auto;
-			margin-bottom: 1rem;
-		}
-
-		&__tagline {
-			margin-bottom: 0;
-			max-width: 34rem;
-		}
-
-		&__tags-wrapper {
-			flex-wrap: wrap;
-		}
-
-		&__tag {
-			height: 1.75rem;
-			font-size: 0.875rem;
-		}
-
-		&__details-container {
-			flex-direction: column;
-			align-items: flex-start;
-			width: fit-content;
-			gap: 1rem;
-		}
-
-		&__details-headline {
-			font-size: 1.15rem;
-			letter-spacing: 0.02rem;
-		}
-
-		&__details-list {
-			display: flex;
-			flex-direction: column;
-			align-items: flex-start;
-
-			ul,
-			li {
-				width: 100%;
-			}
-		}
-
-		&__details-timeline-tools {
-			gap: 1rem;
-		}
-
-		&__details-headline-tools {
-			margin-bottom: 0.25rem;
-		}
-
-		&__tools-logo-wrapper {
-			width: 3rem;
-			height: 3rem;
-			border-radius: 0.55rem;
-
-			img {
-				width: 2rem;
-				height: auto;
-				margin: 0;
-			}
-
-			&--canva img {
-				width: 3rem;
-				height: 3rem;
-			}
-		}
-	}
-}
-
-$details-wrapper-gap-lg: 5rem;
-
-@include breakpoint(lg) {
-	.overview {
+		gap: 2rem;
+		justify-content: space-between;
+		max-height: 24rem;
 		padding-top: 3rem;
+	}
+
+	@include breakpoint(lg) {
 		height: 40vh;
-
-		&__title {
-			flex: auto;
-			margin-bottom: 1.5rem;
-		}
-
-		&__content-wrapper {
-			height: fit-content;
-			margin: 0 auto;
-			gap: $details-wrapper-gap-lg;
-		}
-
-		&__details-wrapper {
-			grid-template-columns: repeat(3, auto);
-			gap: $details-wrapper-gap-lg;
-			grid-template-areas: 'a b c';
-			margin-top: 1.375rem;
-		}
-
-		&__details-timeline-tools {
-			display: flex;
-			flex-direction: row;
-			gap: $details-wrapper-gap-lg;
-		}
-
-		&__details-container {
-			ul li {
-				font-weight: 350;
-				font-size: 1.125rem;
-			}
-		}
-
-		&__tools-grid-container {
-			grid-template-columns: repeat(2, 1fr);
-			grid-template-rows: repeat(2, 1fr);
-			gap: 0.75rem;
-		}
+		padding-top: 3rem;
+		gap: 3rem;
 	}
 }
 
-@include breakpoint(xl) {
-	.overview {
-		&__tools-flex-container {
-			flex-direction: column;
-		}
-	}
-}
 
 .scroll-button {
 	cursor: pointer;
