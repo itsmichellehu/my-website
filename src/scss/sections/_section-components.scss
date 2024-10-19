@@ -163,9 +163,12 @@
 
 // Header
 .header-container {
-	margin: 0 auto;
+	width: 90vw;
+	max-width: $content-max-width;
+	margin: 0 auto 2rem auto;
 
 	>h2 {
+		margin-bottom: 1.25rem;
 		color: $black;
 	}
 
@@ -185,18 +188,17 @@
 		}
 	}
 
-	&.header-container-postup-h2 {
-		width: 90vw;
-		max-width: $content-max-width;
-		margin-bottom: 2rem;
-
-		>h2 {
-			margin-bottom: 1.25rem;
-		}
-	}
-
 	&.header-container-postup-h3 {
+		margin-top: 2rem;
 		margin-bottom: 1rem;
+
+		@include breakpoint(med) {
+			margin-top: 3rem;
+		}
+
+		@include breakpoint(lg) {
+			margin-top: 5rem;
+		}
 	}
 }
 
