@@ -34,20 +34,8 @@
 		margin: 0 auto;
 		width: 100%;
 	}
-}
 
-@include breakpoint(med) {
-	.hero-overview-wrapper {
-		max-height: 100vh;
-	}
-
-	.hero {
-		max-height: 36rem;
-		padding-top: 6rem;
-	}
-
-	.hero-video {
-		display: flex;
+	@include breakpoint(med) {
 		width: 90%;
 		margin: auto;
 		max-height: none;
@@ -59,5 +47,16 @@
 		&-tastebuds {
 			max-width: 28rem;
 		}
+	}
+}
+
+@include breakpoint(med) {
+	.hero-overview-wrapper {
+		max-height: 100vh;
+	}
+
+	.hero {
+		max-height: 36rem;
+		padding-top: 6rem;
 	}
 }
