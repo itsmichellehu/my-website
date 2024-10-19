@@ -1,6 +1,6 @@
 @use "../../scss/abstracts/all-abstracts" as *;
 
-.test-findings-header-wrapper {
+.test-findings_header {
     display: flex;
     flex-direction: row;
     gap: 0.5rem;
@@ -12,13 +12,19 @@
     }
 }
 
-.test-findings_grid-container {
+.test-findings_grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
+    grid-template-rows: repeat(2, auto);
+    gap: 1rem;
     max-width: 80rem;
     margin: auto;
+    margin-top: 1rem;
     margin-bottom: 3rem;
+
+    @include breakpoint(med) {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr;
+    }
 }
 
 .test-findings_card {
