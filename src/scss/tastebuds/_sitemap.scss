@@ -83,13 +83,10 @@
 }
 
 .sitemap_list {
-	font-family: "Inter", sans-serif;
 	color: $forest-green;
-	padding: 0;
 	display: flex;
 	flex-direction: column;
-	gap: 0.5rem !important;
-	transform: translateX(-0.35rem);
+	gap: 0.25rem !important;
 	list-style-type: none;
 	margin: 0;
 	width: 100%;
