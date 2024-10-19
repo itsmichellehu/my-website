@@ -1,52 +1,60 @@
 @use "../../scss/abstracts/all-abstracts" as *;
 
+$blockquote_author-image-size: 2.5rem;
+
 blockquote {
   display: flex;
   flex-direction: row;
-  gap: 1rem;
   align-items: flex-end;
+  gap: 1rem;
   height: 100%;
   margin: 0;
 }
 
-.blockquote-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  align-self: center;
-  align-items: flex-start;
-  align-self: auto;
-  background-color: #fafafa;
-  border-left: 6px solid $medium-light-grey;
-  padding: 0 0 0 1.5rem;
+.blockquote {
+  &_content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: center;
+    align-items: flex-start;
+    align-self: auto;
+    background-color: #fafafa;
+    border-left: 6px solid $teal-accent;
+    padding: 0 0 0 1.5rem;
 
-  p:first-child {
-    @extend %quote-text;
-    margin: 0;
-    width: 95%;
-  }
-}
+    >p {
+      @extend %quote-text;
+      margin: 0;
+      width: 95%;
+    }
 
-.interviewee {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-
-  .img-interviewee {
-    @extend %hide-med;
+    @include breakpoint(med) {
+      padding: 0 1.5rem;
+    }
   }
 
-  p {
+  &_author {
+    @extend %flex-row;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  &_author-image {
+    border-radius: 25px;
+    margin: auto 0 0 0;
+    object-fit: cover;
+    width: $blockquote_author-image-size;
+    height: $blockquote_author-image-size;
+  }
+
+  &_author-name {
     color: $dark-grey;
-    font-family: "Inter", sans-serif;
     font-size: 1rem;
     margin-bottom: 0;
-    font-weight: 400;
-  }
-}
 
-@include breakpoint(med) {
-  .blockquote-content {
-    padding: 0 1.5rem;
+    @include breakpoint(med) {
+      font-size: 1.125rem;
+    }
   }
 }

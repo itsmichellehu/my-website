@@ -1,6 +1,6 @@
 @use "../abstracts/all-abstracts" as *;
 
-.interview-quotes-wrapper {
+.interview-quotes {
 	width: 100%;
 	margin: auto;
 	max-width: $content-max-width;
@@ -48,7 +48,7 @@
 			}
 		}
 
-		.img-interviewee {
+		.blockquote_author-image {
 			width: 2.5rem;
 			height: 2.5rem;
 			border-radius: 25px;
@@ -64,7 +64,7 @@
 		}
 	}
 
-	.blockquote-content {
+	.blockquote_content {
 		background-color: transparent;
 	}
 }
