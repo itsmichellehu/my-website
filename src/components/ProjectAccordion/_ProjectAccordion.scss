@@ -154,14 +154,14 @@ $minimalistic-accordion-header-color: $black;
 	}
 }
 
-$subdued-accordion-header-color: $medium-grey;
+$subdued-accordion-header-color: $off-black;
 
 .accordion.subdued {
 	border-radius: 0;
 	border: 0;
-	border-top: 1.5px solid $subdued-accordion-header-color !important;
-	border-bottom: 1.5px solid $subdued-accordion-header-color !important;
-	border-color: $subdued-accordion-header-color !important;
+	border-top: 1.5px solid $subdued-accordion-header-color;
+	border-bottom: 1.5px solid $subdued-accordion-header-color;
+	border-color: $subdued-accordion-header-color;
 	background-color: transparent;
 
 	p {
