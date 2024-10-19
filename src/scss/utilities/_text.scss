@@ -176,11 +176,12 @@
     font-weight: 500;
     line-height: 135%;
     margin-top: 1rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
 
     @include breakpoint(med) {
         font-size: 1.728rem;
-        margin-bottom: 1rem;
+        margin-bottom: 1.5rem;
+        line-height: 145%;
     }
 }
 
