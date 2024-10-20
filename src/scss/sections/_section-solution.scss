@@ -26,17 +26,80 @@
 		align-items: center;
 		width: 100%;
 		max-width: 90vw;
+		grid-template-areas: 'b' 'c' 'a';
+
+		&.intro-prototype {
+			grid-template-rows: repeat(2, auto);
+			grid-template-areas: 'b ' a;
+		}
+
+		@include breakpoint(med) {
+			align-items: start;
+			grid-template-columns: repeat(2, 1fr);
+			grid-template-rows: auto auto;
+			margin: auto;
+			align-items: center;
+			width: fit-content;
+			column-gap: 4rem;
+			background-color: white;
+			padding: 3rem 4rem;
+			grid-template-areas: 'b c'
+				'a a';
+
+
+			&.intro-prototype {
+				grid-template-columns: 1fr auto;
+				grid-template-rows: auto;
+				grid-template-areas: 'a  b';
+
+			}
+		}
+
+		@include breakpoint(lg) {
+			align-items: start;
+			grid-template-columns: auto 1fr auto;
+			grid-template-rows: auto;
+			grid-template-areas: 'b a c';
+			margin: auto;
+			align-items: center;
+			width: fit-content;
+			column-gap: 4rem;
+			background-color: white;
+			padding: 3rem 4rem;
+
+			&.grid-container-reverse {
+				grid-template-columns: 1fr auto;
+			}
+
+			&.the-final-prototype {
+				padding: 3rem 6rem;
+				column-gap: 6rem;
+			}
+		}
 	}
 
 	&_video {
 		width: 80%;
 		margin: 0 auto;
 		max-width: 18rem;
+
+		@include breakpoint(med) {
+			width: 100%;
+		}
+	}
+
+	&_video-previous {
+		grid-area: b;
+	}
+
+	&_video-iteration {
+		grid-area: c;
 	}
 
 	&_content {
-		display: block;
+		grid-area: a;
 		width: 100%;
+		min-width: 26rem;
 
 		h3 {
 			color: $black;
@@ -45,6 +108,28 @@
 		:last-child {
 			margin-bottom: 0;
 		}
+
+		@include breakpoint(lg) {
+			max-width: 35rem;
+		}
+	}
+
+	&_headline {
+		@include breakpoint(med) {
+			font-size: 2rem;
+			text-align: center;
+		}
+
+		@include breakpoint(lg) {
+			font-size: 2.5rem;
+		}
+	}
+
+	.card_headline {
+		color: $emphasis-blue;
+		font-weight: 500;
+		margin-bottom: 0;
+		font-size: 1.25rem;
 	}
 
 	&_subheading {
@@ -54,34 +139,27 @@
 		line-height: 125%;
 	}
 
-	&_body {
-		color: $medium-grey !important;
-		margin-bottom: 0.5rem;
-	}
-
 	&_card {
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
 		gap: 0.5rem;
+		margin: auto;
+		margin-top: 2rem;
 		padding: 1.5rem 2.5rem;
 		padding-right: 1rem;
 		border-radius: 0.25rem;
-		height: fit-content;
-		background-color: $lightest-grey;
 		border-left: 0.5rem solid $emphasis-blue;
-		margin-top: 2rem;
-		max-width: 32rem;
+		background-color: $lightest-grey;
+		width: fit-content;
+		height: fit-content;
 
-		.card_list {
-			align-self: start;
+		@include breakpoint(med) {
+			margin-top: 0;
 		}
 
-		.card_headline {
-			color: $emphasis-blue;
-			font-weight: 500;
-			margin-bottom: 0;
-			font-size: 1.25rem;
+		@include breakpoint(lg) {
+			max-width: 32rem;
 		}
 
 		li {
@@ -91,48 +169,16 @@
 				font-size: 1.25rem;
 			}
 		}
+
+		.card_list {
+			align-self: start;
+		}
 	}
 }
 
 @include breakpoint(med) {
 	.the-solution-prototype_wrapper {
 		max-width: 68rem;
-	}
-
-	.the-solution-prototype_grid-container {
-		align-items: start;
-		grid-template-columns: auto 1fr auto;
-		grid-template-rows: auto;
-		margin: auto;
-		align-items: center;
-		width: fit-content;
-		column-gap: 4rem;
-		background-color: white;
-		padding: 3rem 4rem;
-
-		&.grid-container-reverse {
-			grid-template-columns: 1fr auto;
-		}
-
-		&.the-final-prototype {
-			padding: 3rem 6rem;
-			column-gap: 6rem;
-		}
-	}
-
-
-
-	.the-solution-prototype_content {
-		max-width: 35rem;
-	}
-
-	.the-solution-prototype_headline {
-		font-size: 2.25rem;
-	}
-
-
-	.the-solution-prototype_video {
-		width: 100%;
 	}
 
 	.the-solution-prototype_subheading {
