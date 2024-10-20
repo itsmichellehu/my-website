@@ -191,21 +191,16 @@
 	aspect-ratio: 3 / 2;
 }
 
+#final-prototype {
+	@include breakpoint(med) {
+		background-color: $lightest-grey;
+	}
+}
+
 .final-prototype-carousel-item {
 	background-color: transparent;
 }
 
 .final-prototype-carousel-content-wrapper {
 	background-color: transparent;
-}
-
-#final-prototype {
-	border-top: 1px solid $light-grey;
-	border-bottom: 1px solid $light-grey;
-
-	background-color: white;
-
-	@include breakpoint(med) {
-		background-color: $lightest-grey;
-	}
 }
