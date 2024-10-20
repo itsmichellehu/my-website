@@ -1,4 +1,5 @@
 @use "../../scss/abstracts/breakpoints-mixins" as *;
+@use "../../scss/abstracts/flexbox-mixins" as *;
 @use "../../scss/abstracts/variables" as *;
 
 $card-font-color: $black;
@@ -7,22 +8,17 @@ $card-font-color: $black;
 .stashed-features {
 	&_wrapper {
 		cursor: grab;
-		display: flex;
-		flex-direction: row;
-		gap: 0.5rem;
-		justify-content: start;
-		margin: 1rem auto;
-		margin-top: 2rem;
+		@include flex(row, 0.5rem);
+		margin: 2rem auto;
+		width: 90vw;
+
 		overflow-x: scroll;
 		overflow-y: hidden;
 		scroll-snap-type: x mandatory;
 		cursor: default;
-		width: 90vw;
-
 		-ms-overflow-style: none;
 		scrollbar-width: none;
 
-		/* Hide scroll bar */
 		&::-webkit-scrollbar {
 			display: none;
 		}
@@ -32,10 +28,8 @@ $card-font-color: $black;
 			max-width: 78rem;
 			align-items: center;
 			justify-content: center;
-			margin-left: auto;
-			margin-right: auto;
-			cursor: default;
 			overflow: visible;
+			cursor: default;
 		}
 	}
 
@@ -44,18 +38,11 @@ $card-font-color: $black;
 		grid-template-columns: repeat(4, 1fr);
 		grid-template-rows: auto;
 		gap: 1rem;
-		/* Enable horizontal scroll */
-
 		max-width: none;
 		width: fit-content;
 
-		// li:first-child {
-		//
-		// }
-
 		@include breakpoint(xl) {
-			margin-left: auto;
-			margin-right: auto;
+			margin: 0 auto;
 			justify-self: center;
 			align-self: center;
 			overflow: visible;
@@ -107,29 +94,29 @@ $card-font-color: $black;
 			background-color: #d0d0d0 !important;
 		}
 	}
-}
 
-.stashed-features.card {
-	scroll-snap-align: center;
-	scroll-snap-stop: always;
-	background-color: #f9f9f9;
-	width: 18.75rem;
-	height: fit-content;
-	aspect-ratio: 7/6;
+	&.card {
+		scroll-snap-align: center;
+		scroll-snap-stop: always;
+		background-color: #f9f9f9;
+		width: 18.75rem;
+		height: fit-content;
+		aspect-ratio: 7/6;
 
-	&.last-child {
-		margin-right: 5vw;
-	}
-
-	@include breakpoint(lg) {
-
-		&.first-child,
 		&.last-child {
-			margin: 0;
+			margin-right: 5vw;
 		}
 
-		.card_icon {
-			opacity: 0.8;
+		@include breakpoint(lg) {
+
+			&.first-child,
+			&.last-child {
+				margin: 0;
+			}
+
+			.card_icon {
+				opacity: 0.8;
+			}
 		}
 	}
 }
