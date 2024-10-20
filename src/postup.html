@@ -602,7 +602,7 @@
         </button>
       </section>
     </section>
-    <section id="wednesday" class="section-container pb-0">
+    <section id="wednesday" class="section-container pb-0 border-0">
       <header class="header-container">
         <h2>
           <span>wednesday</span>
@@ -762,119 +762,111 @@
         </div>
       </div>
     </section>
-    <section id="thursday" class="section-container">
-      <section class="content-wrapper">
-        <header class="header-container">
-          <h2>
-            <span>thursday</span>
-            <br />
-            Prototype
-          </h2>
-          <img class="img-project-schedule" alt="" loading="lazy"
-            src="assets/images/postup/sprint-schedule-thurs.png" />
-        </header>
+    <section id="thursday" class="section-container pb-0 border-0">
+      <header class="header-container">
+          <span>thursday</span>
+          <br />
+          Prototype
+        </h2>
+        <img class="img-project-schedule" alt="" loading="lazy"
+          src="assets/images/postup/sprint-schedule-thurs.png" />
         <div class="design-checklist-text_wrapper">
-          <header class="header-container header-container-postup-h3">
-            <h3 class="design-checklist-heading">
-              <span>preparation</span>
-              <br />
-              Design checklist
-            </h3>
-          </header>
           <p>It was finally time to design and prototype! As I reviewed my work so far, I realized
             I made a mistake: Nina's journey
-            ends when she settles into the workspace, not when she chooses a workspace. To stay
-            organized, I
             sketched a new map to adjust my scope and brainstormed a list of
             features before prototyping.
+              organized, I
+              sketched a new map to adjust my scope and brainstormed a list of
+              features before prototyping.
+            </span>
           </p>
           <p class="hide-xl notes">This ended up helping a lot! 🥳</p>
         </div>
         <img alt="" loading="lazy" src="assets/images/postup/prototype-checklist.jpeg"
           class="img-prototype-checklist" />
-        <div class="content-wrapper">
-          <h3>Learning from past challenges</h3>
-          <p>The main challenge during prototyping trying to prototype more than one user flow. With
-            only one shot at testing and no time to
-            iterate, I wanted to prototype alternative routes to prevent task failures.
-          </p>
-          <p>I recalled learning in past projects that users often focus on essential features and
-            ignore
-            non-critical ones. So, I streamlined my prototype to a single user
-            flow and refined my testing strategy to reveal user behaviors and expectations without
-            covering every
-            possible route.</p>
+      </div>
+      <div class="content-wrapper overflow-visible">
+        <h4>Leveraging verbal walkthroughs to explore unbuilt areas</h4>
+        <p><span class="fw-medium">
+            I designed a limited prototype with only one user flow because I planned to
+            leverage verbal walkthroughs as well given the time crunch.
+          </span> With only
+          testing, I initially aimed to
+          prototype multiple user flows to
+          avoid task failures and most features. Instead, I planned on asking participants to
+          describe how they would navigate
+          and interact with any unbuilt areas. </p>
+        <div class="flex items-center mt-40">
+          <img src="assets/images/postup/prototype-v1-wireflow.png" alt=""
+            class="img-prototype-v1-wireflow">
         </div>
-      </section>
-      <div id="stashed-features">
-        <div class="content-wrapper overflow-visible">
-          <header class="header-container header-container-postup-h3">
-            <h3>Excluding secondary features Additional features</h3>
-          </header>
-          <p>Due to time constraints, I didn't prototype the following less critical features for
-            interactive testing. Instead, I planned on testing through verbal walkthroughs—asking
-            participants to describe how they would perform tasks and identify
-            UI elements without interacting with the screen. Learning from past projects, this would
-            allow me to efficiently assess
-            user flows and expectations while keeping the testing cost-effective.
-          </p>
-          <div class="stashed-features_wrapper">
-            <ul class="stashed-features_grid-container">
-              <li class="card stashed-features first-child">
-                <div class="card_icon-wrapper">
-                  <img src="assets/svg/postup/stashed-feature-seating.svg" alt="" class="card_icon">
-                </div>
-                <div class="card_content">
-                  <p class="card_heading">Seating availability</p>
-                  <p class="card_body">
-                    This was mentioned by one interviewee.
-                    It could expedite a remote worker's journey and monetized.
-                  </p>
-                </div>
-              </li>
-              <li class="card stashed-features">
-                <div class="card_icon-wrapper">
-                  <img src="assets/svg/postup/stashed-feature-reservation.svg" alt=""
-                    class="card_icon">
-                </div>
-                <div class="card_content">
-                  <p class="card_heading">Reservation system</p>
-                  <p class="card_body">
-                    This has great potential but its rarity in coffee shops is a challenge. It
-                    also
-                    could be monetized.
-                  </p>
-                </div>
-              </li>
-              <li class="card stashed-features">
-                <div class="card_icon-wrapper">
-                  <img src="assets/svg/postup/stashed-feature-search-bar.svg" alt=""
-                    class="card_icon">
-                </div>
-                <div class="card_content">
-                  <p class="card_heading">Home search bar</p>
-                  <p class="card_body">
-                    As a common user route, I anticipated some users opting
-                    for this route instead of the search page.
-                  </p>
-                </div>
-              </li>
-              <li class="card stashed-features last-child">
-                <div class="card_icon-wrapper">
-                  <img src="assets/svg/postup/stashed-feature-graph.svg" alt="" class="card_icon">
-                </div>
-                <div class="card_content">
-                  <p class="card_heading">Popular times</p>
-                  <p class="card_body">
-                    Given its popularity in other apps, it
-                    could enhance the UX and boost competitive
-                    advantage.
-                  </p>
-                </div>
-              </li>
-            </ul>
-          </div>
+      </div>
+      <div class="content-wrapper">
+        <h4>Ommitting features for more accurate insights
+        </h4>
+        <p>
+          Rather than building every feature, I left
+          out the features below because 1) they weren’t explicitly requested during user research,
+          but 2)
+          lightning demos suggest they might be expected, given their presence
+          in competitor tools.
+        </p>
+        <div class="stashed-features_wrapper">
+          <ul class="stashed-features_grid-container">
+            <li class="card stashed-features first-child">
+              <div class="card_icon-wrapper">
+                <img src="assets/svg/postup/stashed-feature-seating.svg" alt="" class="card_icon">
+              </div>
+              <div class="card_content">
+                <p class="card_heading">Seating availability</p>
+                <p class="card_body">
+                  This was mentioned by one interviewee.
+                  It could expedite a remote worker's journey and monetized.
+                </p>
+              </div>
+            </li>
+            <li class="card stashed-features">
+              <div class="card_icon-wrapper">
+                <img src="assets/svg/postup/stashed-feature-reservation.svg" alt=""
+                  class="card_icon">
+              </div>
+              <div class="card_content">
+                <p class="card_heading">Reservation system</p>
+                <p class="card_body">
+                  This has great potential but its rarity in coffee shops is a challenge. It
+                  also
+                  could be monetized.
+                </p>
+              </div>
+            </li>
+            <li class="card stashed-features">
+              <div class="card_icon-wrapper">
+                <img src="assets/svg/postup/stashed-feature-search-bar.svg" alt=""
+                  class="card_icon">
+              </div>
+              <div class="card_content">
+                <p class="card_heading">Home search bar</p>
+                <p class="card_body">
+                  As a common user route, I anticipated some users opting
+                  for this route instead of the search page.
+                </p>
+              </div>
+            </li>
+            <li class="card stashed-features last-child">
+              <div class="card_icon-wrapper">
+                <img src="assets/svg/postup/stashed-feature-graph.svg" alt="" class="card_icon">
+              <div class="card_content">
+                <p class="card_body">
+                  Given its popularity in other apps, it
+                  could enhance the UX and boost competitive
+                  advantage.
+                </p>
+              </div>
+            </li>
+          </ul>
         </div>
+        <p>
+          Instead of testing these assumptions directly, I planned to ask questions like
       </div>
       <section id="final-test-prototype" class="container-full-width">
         <header class="header-container mb-0 hide">

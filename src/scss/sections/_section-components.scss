@@ -152,12 +152,12 @@
 	padding: 2rem 0;
 
 	@include breakpoint(med) {
-		padding: 3rem 0;
+		padding: 4rem 0;
 		margin: 4rem 0;
 	}
 
 	@include breakpoint(lg) {
-		padding: 4rem 0;
+		padding: 6rem 0;
 	}
 }
 
