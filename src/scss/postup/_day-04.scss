@@ -1,46 +1,9 @@
 @use "../abstracts/all-abstracts" as *;
 
-// Thursday design checklist {
-.design-checklist {
-	gap: 2rem;
+.img-prototype-checklist {
+	display: flex;
 	width: 100%;
-
-	.img-prototype-checklist {
-		display: flex;
-		width: 100%;
-		height: auto;
-	}
-}
-
-.design-checklist-heading {
-	margin-top: 0;
-}
-
-@include breakpoint(med) {
-	.design-checklist {
-		display: flex;
-		flex-direction: row;
-		gap: 2rem;
-
-		.header-container {
-			margin-top: -0.5rem;
-			width: 100%;
-			margin-bottom: 0.5rem;
-
-			h3 {
-				margin-top: 0;
-				margin-bottom: 1rem;
-			}
-		}
-
-		.img-prototype-checklist {
-			width: calc(50% - 1rem);
-		}
-	}
-
-	.design-checklist-text_wrapper {
-		flex: 1;
-	}
+	height: auto;
 }
 
 .wireframes-heading {
