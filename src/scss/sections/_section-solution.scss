@@ -53,9 +53,14 @@
 				grid-template-areas: 'a  b';
 
 			}
+
+			&.grid-container-reverse {
+				grid-template-columns: 1fr auto;
+			}
 		}
 
-		@include breakpoint(lg) {
+
+		@include breakpoint(med) {
 			align-items: start;
 			grid-template-columns: auto 1fr auto;
 			grid-template-rows: auto;
@@ -66,10 +71,6 @@
 			column-gap: 4rem;
 			background-color: white;
 			padding: 3rem 4rem;
-
-			&.grid-container-reverse {
-				grid-template-columns: 1fr auto;
-			}
 
 			&.the-final-prototype {
 				padding: 3rem 6rem;
