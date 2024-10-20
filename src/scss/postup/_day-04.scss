@@ -23,13 +23,9 @@ $prototype-accordion-bg: #1e1e1e;
 }
 
 .final-test-prototype_wrapper {
-	display: flex;
-	flex-direction: column;
-	gap: 2.5rem;
+	@include flex(column, 2.5rem, center, center);
 	width: fit-content;
 	max-width: 90vw;
-	align-items: center;
-	justify-content: center;
 	margin: auto;
 }
 
