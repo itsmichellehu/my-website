@@ -314,14 +314,9 @@
 
 %quote-text {
   font-family: "Noto Serif", sans-serif !important;
-  font-style: normal !important;
-  font-weight: 400 !important;
   letter-spacing: 0.2px !important;
   line-height: 170% !important;
   margin-top: 0 !important;
-  overflow-wrap: normal !important;
-  width: 100% !important;
-  text-align: left !important;
   color: $medium-grey !important;
 
   @include breakpoint(lg) {
