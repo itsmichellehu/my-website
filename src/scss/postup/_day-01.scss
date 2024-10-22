@@ -38,11 +38,10 @@ $quote-text-size-med: 100%;
 	&_grid-container {
 		display: grid;
 		grid-template-rows: auto;
-		margin: 2rem auto auto auto;
+		margin: 2rem auto;
 		width: 100%;
 
 		@include breakpoint(med) {
-			margin-top: 3rem;
 			margin-bottom: 3rem;
 		}
 	}
@@ -94,25 +93,21 @@ $quote-text-size-med: 100%;
 		font-size: 1.25rem;
 		font-weight: 500;
 		line-height: 150%;
-		margin-bottom: 1.5rem;
+		margin-bottom: 2rem;
 		margin-top: 0;
 		text-align: left;
 
 		@include breakpoint(med) {
 			width: $quote-text-size-med;
 			font-size: 1.75rem;
-			margin-bottom: 2.5rem;
+			margin-bottom: 3rem;
 		}
 	}
 }
 
-.blockquote_content.postup-blockquote {
-	padding: 1.5rem;
-}
-
 .interview-quote-01,
 .interview-quote-02 {
-	margin-bottom: 1rem;
+	margin-bottom: 2rem;
 }
 
 .image-width-large {
