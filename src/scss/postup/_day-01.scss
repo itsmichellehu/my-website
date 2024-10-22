@@ -130,3 +130,24 @@ $quote-text-size-med: 100%;
 		margin-bottom: 4rem;
 	}
 }
+
+.user-persona-comparison {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: auto auto;
+	width: 90vw !important;
+	max-width: 96rem;
+	margin: 0 auto;
+	position: relative;
+	gap: 1rem;
+
+	p {
+		&:first-of-type {
+			color: $medium-grey;
+		}
+
+		&:last-of-type {
+			color: $black;
+		}
+	}
+}
