@@ -3,11 +3,7 @@
 $blockquote_author-image-size: 2.5rem;
 
 blockquote {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-end;
-  gap: 1rem;
-  height: 100%;
+  @include flex(row, 1rem, start, flex-end);
   margin: 0;
 }
 
@@ -19,18 +15,13 @@ blockquote {
     align-self: center;
     align-items: flex-start;
     align-self: auto;
-    background-color: #fafafa;
-    border-left: 6px solid $teal-accent;
-    padding: 0 0 0 1.5rem;
+    border-left: 4px solid #2Fa89F;
+    padding: 0 1.25rem;
 
     >p {
       @extend %quote-text;
       margin: 0;
       width: 95%;
-    }
-
-    @include breakpoint(med) {
-      padding: 0 1.5rem;
     }
   }
 
@@ -42,7 +33,7 @@ blockquote {
 
   &_author-image {
     border-radius: 25px;
-    margin: auto 0 0 0;
+    margin: auto 0 0.5rem 0;
     object-fit: cover;
     width: $blockquote_author-image-size;
     height: $blockquote_author-image-size;
