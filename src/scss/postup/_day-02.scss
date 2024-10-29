@@ -1,13 +1,13 @@
 @use "../abstracts/all-abstracts" as *;
 
-.crazy-8s {
+.storyboard-3-panel {
 	display: flex;
-	width: 100%;
-	margin-top: 1rem;
-	margin-bottom: 2.5rem;
+	width: 90vw;
+	max-width: 60rem;
+	margin: 1.5rem auto;
 
 	img {
-		width: 100%;
+		width: 108.5%;
 		margin: auto;
 	}
 }
@@ -18,15 +18,16 @@
 	align-items: center;
 	justify-content: center;
 	gap: 2.5rem;
-	margin: 2rem 0;
+	margin-top: 1rem;
 
 	img {
 		width: 100%;
 	}
 
-	@include breakpoint(xl) {
-		flex-direction: row;
-		// width: fit-content;
-		margin: 2.5rem 0;
-	}
+	//
+	// 	@include breakpoint(xl) {
+	// 		flex-direction: row;
+	// 		// width: fit-content;
+	// 		margin: 2.5rem 0;
+	// 	}
 }
