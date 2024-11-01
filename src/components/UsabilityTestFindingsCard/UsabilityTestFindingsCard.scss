@@ -28,7 +28,6 @@
         }
     }
 
-
     &_card {
         display: flex;
         flex-direction: column;
@@ -51,6 +50,10 @@
             font-weight: 500;
             margin-bottom: 0;
             font-size: 1.25rem;
+        }
+
+        .subheading {
+            margin-left: 0.25rem;
         }
 
         li {
