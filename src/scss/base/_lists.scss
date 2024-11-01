@@ -1,4 +1,5 @@
 @use "../abstracts/all-abstracts" as *;
+$list-bullet-text-spacing: 0.25rem;
 
 ul,
 ol {
@@ -9,12 +10,14 @@ ol {
 	gap: 0.5rem;
 	text-align: left;
 	list-style-position: outside;
+	margin-left: - calc($list-bullet-text-spacing);
 
 	li {
 		color: $off-black;
 		line-height: 150%;
 		text-align: left;
 		font-weight: normal;
+		padding-left: $list-bullet-text-spacing;
 
 		span {
 			font-weight: 500;
@@ -36,9 +39,18 @@ ol {
 	&.list-style-inside {
 		list-style-position: inside;
 	}
+
+	&.list-transform-none {
+		margin-left: 0;
+
+		li {
+			padding-left: 0;
+		}
+	}
 }
 
 .list-transform-none {
+
 	&.gap-8 {
 		li {
 			margin-bottom: 0.5rem;
