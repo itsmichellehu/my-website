@@ -30,6 +30,7 @@
 		gap: 2rem;
 		align-items: center;
 		width: 90%;
+		max-width: 28rem;
 		grid-template-areas: 'c' 'a';
 		justify-content: center;
 		padding: 2.5rem 1.5rem;
@@ -38,21 +39,20 @@
 
 		&.intro-prototype {
 			grid-template-rows: repeat(2, auto);
-			grid-template-areas: 'b ' a;
+			grid-template-areas: 'b' 'a';
 		}
 
 		@include breakpoint(med) {
 			max-width: 90vw;
 			align-items: start;
 			grid-template-columns: repeat(2, 1fr);
-			grid-template-rows: auto auto;
+			grid-template-rows: auto auto auto;
 			margin: auto;
 			align-items: center;
 			width: fit-content;
-			column-gap: 4rem;
 			background-color: white;
 			padding: 3rem 4rem;
-			grid-template-areas: 'b c'
+			grid-template-areas: 'd d' 'b c'
 				'a a';
 
 
@@ -60,7 +60,6 @@
 				grid-template-columns: 1fr auto;
 				grid-template-rows: auto;
 				grid-template-areas: 'a  b';
-
 			}
 
 			&.grid-container-reverse {
@@ -68,53 +67,66 @@
 			}
 		}
 
-
-		@include breakpoint(med) {
-			align-items: start;
-			grid-template-columns: 1fr auto auto;
-			grid-template-rows: auto;
-			grid-template-areas: 'a b c';
-			margin: auto;
-			align-items: center;
-			width: fit-content;
-			column-gap: 2rem;
-			background-color: white;
-			padding: 3rem 4rem;
-
-			&.the-final-prototype {
-				padding: 3rem 6rem;
-			}
-		}
+		//
+		// 		@include breakpoint(med) {
+		// 			align-items: start;
+		// 			grid-template-columns: 1fr auto auto;
+		// 			grid-template-rows: auto;
+		// 			grid-template-areas: 'a b c';
+		// 			margin: auto;
+		// 			align-items: center;
+		// 			width: fit-content;
+		// 			column-gap: 2rem;
+		// 			background-color: white;
+		// 			padding: 3rem 4rem;
+		//
+		// 			&.the-final-prototype {
+		// 				padding: 3rem 6rem;
+		// 			}
+		// 		}
 	}
 
 	&_video {
 		margin: 0 auto;
 		width: 70%;
+		max-width: 18rem;
 
 		@include breakpoint(med) {
 			width: 100%;
-			max-width: 18rem;
 			margin-bottom: 1.5rem;
 		}
-	}
 
-	&_video-previous {
-		grid-area: b;
-		display: none;
-		flex-direction: column;
-		align-items: center;
-
-		p {
-			color: $medium-grey
-		}
-
-		@include breakpoint(med) {
+		&-previous,
+		&-iteration {
 			display: flex;
-		}
-	}
+			flex-direction: column;
+			align-items: center;
 
-	&_video-iteration {
-		grid-area: c;
+			p {
+				margin-bottom: 0;
+			}
+		}
+
+		&-previous {
+			grid-area: b;
+			display: none;
+
+			p {
+				color: $medium-grey
+			}
+
+			@include breakpoint(med) {
+				display: flex;
+			}
+		}
+
+		&-iteration {
+			grid-area: c;
+
+			p {
+				color: $black;
+			}
+		}
 	}
 
 	&_content {
@@ -145,12 +157,14 @@
 	}
 
 	&_headline {
+		grid-area: d;
 		display: none;
 		text-align: center;
+		margin-bottom: 1rem;
 
 		@include breakpoint(med) {
-			display: flex;
-			font-size: 2rem;
+			display: block;
+			font-size: 1.75rem;
 		}
 
 		@include breakpoint(lg) {
