@@ -4,6 +4,11 @@
 	background: $lightest-grey;
 }
 
+.final-prototype-headline {
+	margin: auto;
+	margin-bottom: 1.5rem;
+}
+
 .the-solution-prototype_wrapper {
 	display: flex;
 	flex-direction: column;
@@ -20,13 +25,16 @@
 	&_grid-container {
 		display: grid;
 		grid-template-columns: 1fr;
-		grid-template-rows: auto auto auto;
+		grid-template-rows: auto auto;
 		margin: 0 auto;
-		gap: 2.5rem;
+		gap: 2rem;
 		align-items: center;
-		width: 100%;
-		max-width: 90vw;
-		grid-template-areas: 'b' 'c' 'a';
+		width: 90%;
+		grid-template-areas: 'c' 'a';
+		justify-content: center;
+		padding: 2.5rem 1.5rem;
+		border-radius: 1rem;
+		background-color: #fff;
 
 		&.intro-prototype {
 			grid-template-rows: repeat(2, auto);
@@ -34,6 +42,7 @@
 		}
 
 		@include breakpoint(med) {
+			max-width: 90vw;
 			align-items: start;
 			grid-template-columns: repeat(2, 1fr);
 			grid-template-rows: auto auto;
@@ -62,35 +71,46 @@
 
 		@include breakpoint(med) {
 			align-items: start;
-			grid-template-columns: auto 1fr auto;
+			grid-template-columns: 1fr auto auto;
 			grid-template-rows: auto;
-			grid-template-areas: 'b a c';
+			grid-template-areas: 'a b c';
 			margin: auto;
 			align-items: center;
 			width: fit-content;
-			column-gap: 4rem;
+			column-gap: 2rem;
 			background-color: white;
 			padding: 3rem 4rem;
 
 			&.the-final-prototype {
 				padding: 3rem 6rem;
-				column-gap: 6rem;
 			}
 		}
 	}
 
 	&_video {
-		width: 80%;
 		margin: 0 auto;
-		max-width: 18rem;
+		width: 70%;
 
 		@include breakpoint(med) {
 			width: 100%;
+			max-width: 18rem;
+			margin-bottom: 1.5rem;
 		}
 	}
 
 	&_video-previous {
 		grid-area: b;
+		display: none;
+		flex-direction: column;
+		align-items: center;
+
+		p {
+			color: $medium-grey
+		}
+
+		@include breakpoint(med) {
+			display: flex;
+		}
 	}
 
 	&_video-iteration {
@@ -99,8 +119,12 @@
 
 	&_content {
 		grid-area: a;
-		width: 100%;
-		min-width: 26rem;
+		margin: auto;
+
+		p {
+			margin-bottom: 0;
+			text-align: center;
+		}
 
 		h3 {
 			color: $black;
@@ -110,15 +134,23 @@
 			margin-bottom: 0;
 		}
 
+		@include breakpoint(med) {
+			width: 100%;
+			min-width: 26rem;
+		}
+
 		@include breakpoint(lg) {
 			max-width: 35rem;
 		}
 	}
 
 	&_headline {
+		display: none;
+		text-align: center;
+
 		@include breakpoint(med) {
+			display: flex;
 			font-size: 2rem;
-			text-align: center;
 		}
 
 		@include breakpoint(lg) {
@@ -163,17 +195,28 @@
 			max-width: 32rem;
 		}
 
+		.card_list {
+			align-self: start;
+		}
+	}
+
+	&_list {
+		margin: auto;
+		margin-top: 0;
+
 		li {
 			font-size: 1.125rem;
+			color: $medium-grey;
+
+			@include breakpoint(med) {
+				color: $black;
+			}
 
 			@include breakpoint(lg) {
 				font-size: 1.25rem;
 			}
 		}
 
-		.card_list {
-			align-self: start;
-		}
 	}
 }
 

@@ -43,6 +43,11 @@ main {
     background-color: $lightest-grey;
 }
 
+#final-prototype {
+    background-color: $lightest-grey;
+    border: 0;
+}
+
 #the-solution.content-full-width {
     display: flex;
     flex-direction: column;
