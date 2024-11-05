@@ -67,6 +67,12 @@
 			}
 		}
 
+		@include breakpoint(lg) {
+			grid-template-columns: 1fr auto auto;
+			grid-template-rows: auto auto;
+			grid-template-areas: 'd d d' 'a b c';
+		}
+
 		//
 		// 		@include breakpoint(med) {
 		// 			align-items: start;
@@ -136,6 +142,11 @@
 		p {
 			margin-bottom: 0;
 			text-align: center;
+
+			@include breakpoint(lg) {
+				text-align: left;
+				max-width: 24rem;
+			}
 		}
 
 		h3 {
@@ -149,10 +160,7 @@
 		@include breakpoint(med) {
 			width: 100%;
 			min-width: 26rem;
-		}
-
-		@include breakpoint(lg) {
-			max-width: 35rem;
+			max-width: 29.5rem;
 		}
 	}
 
@@ -168,7 +176,9 @@
 		}
 
 		@include breakpoint(lg) {
-			font-size: 2.5rem;
+			text-align: left;
+			font-size: 2rem;
+			max-width: 24rem;
 		}
 	}
 
