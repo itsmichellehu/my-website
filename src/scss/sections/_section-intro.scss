@@ -1,4 +1,14 @@
+@use "../abstracts/breakpoints-mixins" as *;
+
 .intro-headline {
-    font-size: 2.369rem;
+    font-size: 1.75rem;
     margin-bottom: 1rem;
+
+    @include breakpoint(med) {
+        font-size: 2.15rem;
+    }
+
+    @include breakpoint(lg) {
+        font-size: 2.369rem;
+    }
 }
