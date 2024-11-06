@@ -1,0 +1,21 @@
+/* src/LoadingComponent.scss */
+
+#loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #f0f0f0;
+    z-index: 2001;
+}
+
+#loading-text {
+    font-size: 2rem;
+    color: #333;
+    margin: auto;
+}
