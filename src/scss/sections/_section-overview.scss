@@ -2,6 +2,7 @@
 
 $details-wrapper-gap: 1rem;
 $details-wrapper-gap-xl: 5rem;
+$details-wrapper-gap-xxl: 8rem;
 
 .overview {
 	width: 100vw;
@@ -39,11 +40,15 @@ $details-wrapper-gap-xl: 5rem;
 			margin: 0 auto;
 			gap: $details-wrapper-gap-xl;
 		}
+
+		@include breakpoint(xxl) {
+			gap: $details-wrapper-gap-xxl;
+		}
 	}
 
 	&__title {
 		color: $black;
-		font-size: clamp(2.66rem, 8vw, 7rem);
+		font-size: clamp(2.66rem, 8vw, 6rem);
 		font-weight: 550;
 		line-height: 100%;
 		letter-spacing: 0.02rem;
@@ -318,7 +323,7 @@ $details-wrapper-gap-xl: 5rem;
 		grid-template-columns: repeat(2, 1fr);
 		gap: $details-wrapper-gap;
 
-		@include breakpoint(xl) {
+		@include breakpoint(lg) {
 			display: flex;
 			flex-direction: column;
 		}
@@ -356,6 +361,11 @@ $details-wrapper-gap-xl: 5rem;
 		height: 40vh;
 		padding-top: 3rem;
 		gap: 3rem;
+	}
+
+	@include breakpoint(xxl) {
+		height: 35vh;
+		max-height: none;
 	}
 }
 
