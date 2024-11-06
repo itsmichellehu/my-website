@@ -11,14 +11,25 @@ export default function initLoadingAnimation() {
     const loadingText = document.getElementById("loading-text");
     let percentage = 0;
 
+    if (!loadingText) {
+        console.error("Loading text element not found");
+        return;
+    }
+
     const interval = setInterval(() => {
         if (percentage < 100) {
             percentage++;
             loadingText.textContent = `${percentage}%`;
         } else {
             clearInterval(interval);
-            document.getElementById("loading-screen").style.display = "none";
-            document.getElementById("content").style.display = "block";
+            loadingScreen.style.display = "none";
+
+            const content = document.getElementById("content");
+            if (content) {
+                content.style.display = "block";
+            } else {
+                console.error("Content element not found");
+            }
         }
-    }, 30); // Adjust this value for speed
+    }, 60); // Adjust this value for speed
 }
