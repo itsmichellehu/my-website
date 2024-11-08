@@ -31,5 +31,5 @@ export default function initLoadingAnimation() {
                 console.error("Content element not found");
             }
         }
-    }, 60); // Adjust this value for speed
+    }, 30); // Adjust this value for speed
 }
