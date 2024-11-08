@@ -55,9 +55,9 @@
 	background-color: #f6f6f6;
 	overflow: hidden;
 	padding: 2rem 5vw;
-	aspect-ratio: 8 / 8;
+	aspect-ratio: 1 / 1;
 	width: 90vw;
-	max-height: 30rem;
+	max-height: 34rem;
 	transition: padding 0.3s ease-in-out;
 
 	&#postupBG {
@@ -251,7 +251,7 @@
 	font-family: Inter;
 	font-size: 1rem;
 	font-weight: 400;
-	line-height: 150%;
+	line-height: 160%;
 	margin-bottom: 0.75rem;
 	max-width: 35rem;
 }
@@ -291,7 +291,7 @@
 
 	.project-card {
 		display: grid;
-		grid-template-columns: 6fr 5fr;
+		grid-template-columns: 3fr 2fr;
 		grid-template-rows: auto;
 		grid-template-areas:
 			"a b";
@@ -350,6 +350,8 @@
 	}
 }
 
+$title-description-mb-lg: 1.5rem;
+
 @include breakpoint(lg) {
 	.project-card {
 		gap: 3rem;
@@ -361,9 +363,8 @@
 	}
 
 	.project-title {
-		font-size: 3.5rem;
-		letter-spacing: -0.1rem;
-		margin-bottom: 1.25rem;
+		font-size: 3.25rem;
+		margin-bottom: $title-description-mb-lg;
 	}
 
 	.project-tag {
@@ -373,7 +374,7 @@
 
 	.project-description {
 		font-size: 1.125rem;
-		margin-bottom: 1.25rem;
+		margin-bottom: $title-description-mb-lg;
 	}
 
 	.project-card-button-label {
@@ -382,10 +383,6 @@
 }
 
 @include breakpoint(xl) {
-	.project-title {
-		font-size: 4rem;
-		letter-spacing: -0.1rem;
-	}
 
 	.thumb-tastebuds,
 	.thumb-postup {

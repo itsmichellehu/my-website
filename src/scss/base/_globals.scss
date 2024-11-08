@@ -37,24 +37,17 @@ body {
 
 main {
 	position: relative;
+	background-color: white;
 }
 
 /* Reset margins and padding for the HTML and body */
-html,
-body {
+html {
 	margin: 0;
 	padding: 0;
 	overflow-x: hidden;
 	/* Prevent horizontal overflow */
 }
 
-/* For WebKit browsers (Chrome, Safari, Edge) */
-body {
-	margin: 0;
-	padding: 0;
-	overflow-y: scroll;
-	/* Ensure scrollbar is always visible */
-}
 
 //
 // ::-webkit-scrollbar-track {

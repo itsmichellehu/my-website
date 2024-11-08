@@ -16,6 +16,19 @@
 	max-height: 20.25rem;
 	padding-top: calc($navbar-mobile-height + 1rem);
 	width: 100%;
+
+	@include breakpoint(med) {
+		max-height: 36rem;
+		padding-top: 6rem;
+	}
+
+	@include breakpoint(xl) {
+		max-height: none;
+	}
+
+	@include breakpoint(xxl) {
+		height: 65vh;
+	}
 }
 
 .hero-video {
@@ -48,15 +61,11 @@
 			max-width: 28rem;
 		}
 	}
+
 }
 
 @include breakpoint(med) {
 	.hero-overview-wrapper {
 		max-height: 100vh;
-	}
-
-	.hero {
-		max-height: 36rem;
-		padding-top: 6rem;
 	}
 }

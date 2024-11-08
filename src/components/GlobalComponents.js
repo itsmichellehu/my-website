@@ -14,6 +14,14 @@ const classAnimationMap = {
     'bounceIn_inView': 'animate__bounceIn'
 };
 
+import initLoadingAnimation from '../components/LoadingScreen/LoadingScreen';
+
+document.addEventListener("DOMContentLoaded", () => {
+    initLoadingAnimation();
+    document.getElementById("content").style.display = "none"; // Ensure content is hidden initially
+});
+
+
 document.addEventListener('DOMContentLoaded', () => {
     NavBar();
     NavBarBackground();
