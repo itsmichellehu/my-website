@@ -29,7 +29,7 @@
 		margin: 0 auto;
 		gap: 2rem;
 		align-items: center;
-		width: 90%;
+		width: 90vw;
 		max-width: 28rem;
 		grid-template-areas: 'c' 'a';
 		justify-content: center;
@@ -42,18 +42,24 @@
 			grid-template-areas: 'b' 'a';
 		}
 
+		&.grid-container-reverse {
+			grid-template-columns: 1fr auto;
+		}
+
 		@include breakpoint(med) {
-			max-width: 90vw;
+			width: fit-content;
+			max-width: 80rem;
 			align-items: start;
 			grid-template-columns: repeat(2, 1fr);
 			grid-template-rows: auto auto auto;
 			margin: auto;
 			align-items: center;
-			width: fit-content;
 			background-color: white;
 			padding: 3rem 4rem;
 			grid-template-areas: 'd d' 'b c'
 				'a a';
+			gap: 5rem;
+			;
 
 
 			&.intro-prototype {
@@ -62,9 +68,6 @@
 				grid-template-areas: 'a  b';
 			}
 
-			&.grid-container-reverse {
-				grid-template-columns: 1fr auto;
-			}
 		}
 
 		@include breakpoint(lg) {
@@ -93,6 +96,7 @@
 	}
 
 	&_video {
+		grid-area: b;
 		margin: 0 auto;
 		width: 70%;
 		max-width: 18rem;
@@ -145,7 +149,7 @@
 
 			@include breakpoint(lg) {
 				text-align: left;
-				max-width: 24rem;
+				max-width: 30rem;
 			}
 		}
 
@@ -160,7 +164,7 @@
 		@include breakpoint(med) {
 			width: 100%;
 			min-width: 26rem;
-			max-width: 29.5rem;
+			max-width: 45rem;
 		}
 	}
 
