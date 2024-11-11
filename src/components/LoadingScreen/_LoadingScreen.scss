@@ -12,11 +12,12 @@
     justify-content: center;
     background-color: #f0f0f0;
     z-index: 2001;
-    transition: opacity 0.3s ease-in-out;
     opacity: 1;
+    transition: opacity 1s ease-in-out;
+    /* 1-second dissolve effect */
 }
 
-#loading-screen.hidden {
+#loading-screen.dissolve {
     opacity: 0;
     pointer-events: none;
 }
@@ -25,17 +26,8 @@
     font-family: 'Inter' sans-serif;
     font-size: 1.125rem;
     color: #4a4a4a;
-    animation: opacity 3s linear;
-}
-
-/* Keyframe animation for scaling effect */
-@keyframes opacity {
-    0% {
-        opacity: 10%
-    }
-
-    100% {
-        opacity: 100%;
-    }
     margin: auto;
+    opacity: 0.1;
+    /* Start with low opacity */
+    transition: opacity 0.3s ease-in-out;
 }

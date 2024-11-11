@@ -26,40 +26,39 @@ export default function initLoadingAnimation() {
     const main = document.querySelector('main');
     const footer = document.querySelector('footer');
 
-    if (nav) {
-        nav.style.display = 'none';
-    }
-    if (main) {
-        main.style.display = 'none';
-    }
-    if (footer) {
-        footer.style.display = 'none';
-    }
+    if (nav) nav.style.display = 'none';
+    if (main) main.style.display = 'none';
+    if (footer) footer.style.display = 'none';
 
     // Start the loading percentage update
     const interval = setInterval(() => {
         if (percentage < 100) {
             percentage++;
             loadingText.textContent = `${percentage}%`;
+
+            // Gradually increase the opacity of the text from 0.1 to 1
+            const opacity = 0.1 + (percentage / 100) * 0.9;
+            loadingText.style.opacity = opacity;
         } else {
             clearInterval(interval);
-            // Fade out the loading screen
-            loadingScreen.classList.add('hidden');
 
-            // Delay to allow the transition to complete
+            // Set the text to 100% opacity and pause for 2 seconds
+            loadingText.textContent = '100%';
+            loadingText.style.opacity = '1';
+
             setTimeout(() => {
-                loadingScreen.remove();
-                // Show <nav>, <main>, and <footer> elements
-                if (nav) {
-                    nav.style.display = 'flex'; // Assuming nav uses flex layout
-                }
-                if (main) {
-                    main.style.display = 'block'; // Main content typically uses block layout
-                }
-                if (footer) {
-                    footer.style.display = 'block'; // Footer typically uses block layout
-                }
-            }, 300); // Matches the CSS transition duration
+                // Start dissolving the loading screen (fade out over 1 second)
+                loadingScreen.classList.add('dissolve');
+
+                // Wait for the dissolve effect to complete
+                setTimeout(() => {
+                    loadingScreen.remove();
+                    // Show <nav>, <main>, and <footer> elements
+                    if (nav) nav.style.display = 'flex';
+                    if (main) main.style.display = 'block';
+                    if (footer) footer.style.display = 'block';
+                }, 1000); // 1 second dissolve effect
+            }, 1000); // Pause for 2 seconds at 100%
         }
     }, 30);
 }
