@@ -11,6 +11,8 @@ $hero-buttons-gap-bp-xl: 1rem;
 $hero-icon-button-size-bp-xl: 3rem;
 $edu-exp-width-lg: 11.1rem;
 $edu-exp-width-xl: 13rem;
+$edu-exp-height-lg: 2.65rem;
+$edu-exp-height-xl: 3.45rem;
 
 // Keyframes
 @keyframes pulse {
@@ -238,8 +240,12 @@ $edu-exp-width-xl: 13rem;
 		.education,
 		.work {
 			@include breakpoint(lg) {
-				height: 2.65rem;
+				height: $edu-exp-height-lg;
 				margin: auto;
+			}
+
+			@include breakpoint(xl) {
+				height: $edu-exp-height-xl;
 			}
 		}
 
@@ -254,6 +260,9 @@ $edu-exp-width-xl: 13rem;
 				border-color: $medium-grey;
 			}
 
+			@include breakpoint(xl) {
+				height: $edu-exp-height-xl;
+			}
 		}
 
 	}
