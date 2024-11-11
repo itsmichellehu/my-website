@@ -67,3 +67,27 @@ updateScrollbar();
 
 // Recalculate scrollbar on resize
 window.addEventListener('resize', updateScrollbar);
+
+
+import initLoadingAnimation from '../components/LoadingScreen/LoadingScreen';
+
+// Initialize the loading animation on initial load
+initLoadingAnimation();
+
+// Listen for route changes (for SPAs with client-side routing)
+window.addEventListener('popstate', () => {
+    initLoadingAnimation();
+});
+
+// Optional: Trigger animation manually on navigation (if using a custom router)
+document.addEventListener('click', (event) => {
+    const target = event.target.closest('a');
+    if (target && target.getAttribute('href').startsWith('/')) {
+        initLoadingAnimation();
+    }
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    initLoadingAnimation();
+    document.getElementById("content").style.display = "none"; // Ensure content is hidden initially
+});

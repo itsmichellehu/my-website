@@ -42,5 +42,4 @@ document.addEventListener('DOMContentLoaded', () => {
     initializeHideVideoControls();
     initLoadingAnimation();
     document.getElementById("content").style.display = "none"; // Ensure content is hidden initially
-
 });
