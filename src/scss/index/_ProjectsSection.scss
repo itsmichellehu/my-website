@@ -72,6 +72,7 @@ $title-description-mb-lg: 1.5rem;
 		column-gap: 1.75rem;
 		align-items: center;
 		padding: 2.5rem 0;
+		justify-content: space-between;
 	}
 
 	@include breakpoint(lg) {

@@ -100,7 +100,7 @@ $edu-exp-height-xl: 3.45rem;
 
 		@include breakpoint(med) {
 			grid-template-areas: 'b a';
-			grid-template-columns: repeat(2, auto);
+			grid-template-columns: 3fr 2fr;
 			gap: 2rem;
 			justify-content: space-between;
 		}
@@ -129,9 +129,9 @@ $edu-exp-height-xl: 3.45rem;
 		}
 
 		@include breakpoint(med) {
-			width: 35vw;
+			margin-left: auto;
+			width: 100%;
 			border-radius: 5px;
-			flex: 1 0 0;
 		}
 
 		@include breakpoint(lg) {
