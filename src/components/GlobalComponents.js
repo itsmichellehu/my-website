@@ -2,7 +2,7 @@ import NavBar from '../components/NavBar/NavBar';
 import NavBarBackground from '../components/NavBarBackground/NavBarBackground';
 import Footer from '../components/Footer/Footer';
 
-import ScrollToSection from '../components/ScrollToASection/ScrollToASection';
+import ScrollToSection from './ScrollToSection/ScrollToSection';
 import { initializeHideVideoControls } from '../components/HideVideoControls/HideVideoControls';
 
 import { AnimateInView } from "../components/AnimateInView/AnimateInView";

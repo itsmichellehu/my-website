@@ -1,3 +1,5 @@
+import './_ScrollToSection.scss';
+
 export default function ScrollToSection() {
     console.log('ScrollToSection initialized');
 
