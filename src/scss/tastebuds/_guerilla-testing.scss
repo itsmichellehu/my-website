@@ -10,16 +10,19 @@
 	padding-bottom: 16px;
 	padding-top: 36px;
 }
+
 .testing-outcomes-content.arrow {
 	align-self: center;
 	background-color: var(--transparent);
 	justify-content: center;
 }
+
 .testing-outcomes-content.padding-0 {
 	padding-left: 0;
 	padding-right: 0;
 	padding-top: 0;
 }
+
 .flex-block-40 {
 	align-self: stretch;
 	background-color: #fafafa;
@@ -31,6 +34,7 @@
 	margin-top: -20px;
 	padding-top: 40px;
 }
+
 .flex-block-40.gap-0 {
 	grid-column-gap: 0;
 	grid-row-gap: 0;
