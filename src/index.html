@@ -70,14 +70,17 @@
                         </div>
                     </div>
                 </div>
-                <button data-scroll-target="projects" class="scroll-button"
-                    aria-label="Scroll down to next section">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="44"
-                        viewBox="0 0 40 44" fill="none">
-                        <path d="M20 2V42M20 42L11.25 32.2833M20 42L28.75 32.2833" stroke="#1E1E1E"
-                            stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
-                </button>
+                <div class="scroll-button-wrapper">
+                    <button data-scroll-target="projects" class="scroll-button"
+                        aria-label="Scroll down to next section">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="44"
+                            viewBox="0 0 40 44" fill="none">
+                            <path d="M20 2V42M20 42L11.25 32.2833M20 42L28.75 32.2833"
+                                stroke="#1E1E1E" stroke-width="2.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                </div>
             </div>
             <section id="projects" class="projects-section">
                 <img src="assets/images/bg-ripped-paper.png" class="bg-ripped-paper" alt="">
@@ -85,7 +88,7 @@
                     <div id="project-boardspace" class="project-card project-boardspace">
                         <div class="project-link-boardspace">
                             <div class="project-thumb-container boardspace-thumb-container">
-                                <div class="project-thumb-wrapper">
+                                <div class="project-thumb-wrapper boardspace-thumb-wrapper">
                                     <video id="exclude-video-jquery"
                                         class="project-thumb thumb-boardspace" autoplay
                                         disablePictureInPicture loop muted playsinline
@@ -124,13 +127,21 @@
                         <div id="project-tastebuds" class="project-card project-tastebuds">
                             <div class="project-thumb-container tastebuds-thumb-container">
                                 <div class="project-thumb-wrapper">
-                                    <video id="exclude-video-jquery"
-                                        class="project-thumb thumb-tastebuds" autoplay="autoplay"
-                                        loop muted playsinline disablePictureInPicture>
-                                        <source src="assets/images/thumbs/thumb-tastebuds.mp4"
-                                            type="video/mp4">
-                                        Your browser does not support the video tag.
-                                    </video>
+                                    <div class="video-wrapper">
+                                        <video id="exclude-video-jquery"
+                                            class="project-thumb thumb-tastebuds"
+                                            autoplay="autoplay" loop muted playsinline
+                                            disablePictureInPicture>
+                                            <source
+                                                src="assets/images/thumbs/thumb-tastebuds-video-only.mp4"
+                                                type="video/mp4">
+                                            Your browser does not support the video tag.
+                                        </video>
+                                    </div>
+                                    <div class="thumb-image-wrapper">
+                                        <img src="assets/images/thumbs/thumb-tastebuds-static.png"
+                                            alt="">
+                                    </div>
                                 </div>
                             </div>
                             <div class="project-details-container">
@@ -164,14 +175,20 @@
                     <a href="postup" class="project-link project-postup">
                         <div id="project-postup" class="project-card project-postup mb-0">
                             <div class="project-thumb-container postup-thumb-container">
-                                <div class="project-thumb-wrapper">
-                                    <video id="exclude-video-jquery"
-                                        class="project-thumb thumb-postup" autoplay="autoplay" loop
-                                        muted playsinline disablePictureInPicture>
-                                        <source src="assets/images/thumbs/thumb-postup-double.mp4"
-                                            type="video/mp4">
-                                        Your browser does not support the video tag.
-                                    </video>
+                                <div class="project-thumb-wrapper postup-thumb-wrapper">
+                                    <div class="video-wrapper">
+                                        <video id="exclude-video-jquery"
+                                            class="project-thumb thumb-postup" autoplay="autoplay"
+                                            loop muted playsinline disablePictureInPicture>
+                                            <source src="assets/images/thumbs/thumb-postup.mp4"
+                                                type="video/mp4">
+                                            Your browser does not support the video tag.
+                                        </video>
+                                    </div>
+                                    <div class="thumb-image-wrapper">
+                                        <img src="assets/images/thumbs/thumb-postup-static.png
+                                        " alt="">
+                                    </div>
                                 </div>
                             </div>
                             <div class="project-details-container">

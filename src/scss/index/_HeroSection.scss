@@ -32,26 +32,54 @@ $edu-exp-height-xl: 3.45rem;
 	}
 }
 
+.scroll-button-wrapper {
+	display: none;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	position: absolute;
+	z-index: 4;
+	bottom: 2rem;
+
+	@include breakpoint(xl) {
+		display: flex;
+		margin-top: 1.5rem;
+	}
+}
+
+.scroll-button {
+	display: none;
+	margin: auto;
+}
+
 // Hero section
 .hero {
+	position: relative;
 	display: flex;
 	flex-direction: column;
 	width: 100vw;
 	margin: $navbar-mobile-height auto 1rem auto;
 	border-radius: 4px;
+	padding-bottom: 5rem;
 
 	@include breakpoint(med) {
 		padding-top: 8.5rem;
 		margin: auto;
+		padding-bottom: 6rem;
 	}
 
 	@include breakpoint(lg) {
 		margin-top: $navbar-desktop-height;
-		padding-top: 4rem;
 	}
 
 	@include breakpoint(xl) {
-		padding-top: 6rem;
+		padding-top: 8rem;
+		padding-bottom: 8rem;
+	}
+
+	@include breakpoint(xxl) {
+		padding-top: 12rem;
 	}
 
 	&-wrapper {
@@ -71,15 +99,18 @@ $edu-exp-height-xl: 3.45rem;
 		}
 
 		@include breakpoint(med) {
-			width: 90vw;
 			grid-template-areas: 'b a';
-			grid-template-columns: 1.5fr 1fr;
-			gap: 2.5rem;
+			grid-template-columns: repeat(2, auto);
+			gap: 2rem;
+			justify-content: space-between;
 		}
 
 		@include breakpoint(lg) {
-			grid-template-columns: 2fr 1fr;
 			gap: 3rem;
+		}
+
+		@include breakpoint(xl) {
+			gap: 4.5rem;
 		}
 	}
 
@@ -98,11 +129,13 @@ $edu-exp-height-xl: 3.45rem;
 		}
 
 		@include breakpoint(med) {
-			width: 100%;
-			max-width: 26.5rem;
+			width: 35vw;
 			border-radius: 5px;
 			flex: 1 0 0;
+		}
 
+		@include breakpoint(lg) {
+			max-width: 29rem;
 		}
 	}
 
@@ -112,14 +145,28 @@ $edu-exp-height-xl: 3.45rem;
 		width: 90vw;
 		flex-direction: column;
 		justify-self: center;
-		max-width: 49rem;
-		height: 100%;
+		max-width: 37rem;
 		gap: 1rem;
 
 		@include breakpoint(med) {
-			width: 100%;
+			width: 55vw;
 			margin-right: auto;
 			justify-content: space-between;
+			height: 90%;
+		}
+
+		@include breakpoint(lg) {
+			height: fit-content;
+			gap: 4.5rem;
+			max-width: 35rem;
+		}
+
+		@include breakpoint(xl) {
+			max-width: 42rem;
+		}
+
+		@include breakpoint(xxl) {
+			max-width: 49rem;
 		}
 	}
 
@@ -183,7 +230,7 @@ $edu-exp-height-xl: 3.45rem;
 
 		@include breakpoint(xl) {
 			font-size: 1.375rem;
-			width: 32rem;
+			width: 44rem;
 		}
 	}
 

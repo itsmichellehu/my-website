@@ -15,24 +15,9 @@
 .default-nav-color {
 	background-color: white !important;
 }
-
-.scroll-button {
-	display: none;
-
-	@include breakpoint(lg) {
-		display: flex;
-		margin-top: 1.5rem;
-	}
-
-	@include breakpoint(xl) {
-		display: flex;
-		margin-top: 2.5rem;
-	}
-}
-
 .hero-wrapper,
 .projects-wrapper {
-	max-width: 80rem !important;
+	max-width: 90rem !important;
 }
 
 main>.wrapper>section {
