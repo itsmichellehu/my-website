@@ -9,7 +9,8 @@ $hero-buttons-gap-bp-lg: 1rem;
 $hero-icon-button-size-bp-lg: 2.25rem;
 $hero-buttons-gap-bp-xl: 1rem;
 $hero-icon-button-size-bp-xl: 3rem;
-$edu-exp-width: 11.1rem;
+$edu-exp-width-lg: 11.1rem;
+$edu-exp-width-xl: 13rem;
 
 // Keyframes
 @keyframes pulse {
@@ -43,7 +44,7 @@ $edu-exp-width: 11.1rem;
 
 	@include breakpoint(lg) {
 		margin-top: $navbar-desktop-height;
-		padding-top: 3rem;
+		padding-top: 4rem;
 	}
 
 	@include breakpoint(xl) {
@@ -196,8 +197,12 @@ $edu-exp-width: 11.1rem;
 		margin-right: auto;
 
 		@include breakpoint(lg) {
-			grid-template-columns: $edu-exp-width 2px auto;
+			grid-template-columns: $edu-exp-width-lg 2px auto;
 			grid-template-areas: 'a c b';
+		}
+
+		@include breakpoint(xl) {
+			grid-template-columns: $edu-exp-width-xl 2px auto;
 		}
 
 		p {
@@ -216,7 +221,11 @@ $edu-exp-width: 11.1rem;
 			color: $off-black;
 
 			@include breakpoint(lg) {
-				width: $edu-exp-width;
+				width: $edu-exp-width-lg;
+			}
+
+			@include breakpoint(xl) {
+				width: $edu-exp-width-xl;
 			}
 		}
 
