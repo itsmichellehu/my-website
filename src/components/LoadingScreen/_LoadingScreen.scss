@@ -9,13 +9,32 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
     background-color: #f0f0f0;
     z-index: 2001;
+    transition: opacity 0.3s ease-in-out;
+    opacity: 1;
+}
+
+#loading-screen.hidden {
+    opacity: 0;
+    pointer-events: none;
 }
 
 #loading-text {
+    font-family: 'Inter' sans-serif;
     font-size: 1.125rem;
-    color: #333;
-    margin: auto;
+    color: #4a4a4a;
+    margin-bottom: 0;
+    animation: opacity 3s linear;
+}
+
+/* Keyframe animation for scaling effect */
+@keyframes opacity {
+    0% {
+        opacity: 10%
+    }
+
+    100% {
+        opacity: 100%;
+    }
 }

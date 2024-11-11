@@ -16,11 +16,21 @@ const classAnimationMap = {
 
 import initLoadingAnimation from '../components/LoadingScreen/LoadingScreen';
 
-document.addEventListener("DOMContentLoaded", () => {
+// Initialize the loading animation on initial load
+initLoadingAnimation();
+
+// Listen for route changes (for SPAs with client-side routing)
+window.addEventListener('popstate', () => {
     initLoadingAnimation();
-    document.getElementById("content").style.display = "none"; // Ensure content is hidden initially
 });
 
+// Optional: Trigger animation manually on navigation (if using a custom router)
+document.addEventListener('click', (event) => {
+    const target = event.target.closest('a');
+    if (target && target.getAttribute('href').startsWith('/')) {
+        initLoadingAnimation();
+    }
+});
 
 document.addEventListener('DOMContentLoaded', () => {
     NavBar();
@@ -30,4 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
     AnimateInView({ classAnimationMap });
     ScrollToSection();
     initializeHideVideoControls();
+    initLoadingAnimation();
+    document.getElementById("content").style.display = "none"; // Ensure content is hidden initially
+
 });
