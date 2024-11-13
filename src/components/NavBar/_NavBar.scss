@@ -33,6 +33,17 @@ nav {
 	align-items: center;
 	height: 100%;
 	width: 95%;
+
+	@include breakpoint(med) {
+		width: 90%;
+		max-width: $nav-footer-max-width;
+		gap: 0.5rem;
+		margin-top: 0.5rem;
+	}
+
+	@include breakpoint(xl) {
+		margin-top: 1rem;
+	}
 }
 
 .navbar-logo-wrapper {
@@ -125,13 +136,6 @@ nav {
 	.navbar-logo-image {
 		width: 1.75rem;
 		height: 1.75rem;
-	}
-
-	.navbar-wrapper {
-		width: 90%;
-		max-width: $nav-footer-max-width;
-		gap: 0.5rem;
-		margin-top: 0.5rem;
 	}
 
 	.navbar-menu {
