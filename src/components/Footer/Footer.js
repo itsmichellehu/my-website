@@ -42,9 +42,9 @@ function Footer() {
                                 </a>
                             </div>
                         </div>
-                        <div>
-                            <p class="email-link"><span class="email-link-text">mhu.contact@gmail.com</span>
-                                <span class="text-decoration-none">✉️</span></p>
+                        <div class="email-link-wrapper">
+                        <span class="text-decoration-none">✉️</span>
+                            <p class="email-link"><span class="email-link-text">mhu.contact@gmail.com</span></p>
                         </div>
                         <p class="tagline">Designed and coded with love by yours truly.</p>
                         <p class="copyright-text">Michelle Hu © 2024</p>

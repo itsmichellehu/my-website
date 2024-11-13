@@ -1,6 +1,6 @@
 @use '../../scss/abstracts/all-abstracts' as *;
 
-$content-margin-bottom: 0.75rem;
+$content-margin-bottom: 1.5rem;
 
 footer {
 	display: flex;
@@ -19,7 +19,7 @@ footer {
 	font-weight: 600;
 	margin-bottom: 0;
 	width: fit-content;
-	letter-spacing: -0.01rem;
+	letter-spacing: -0.075rem;
 	line-height: 125%;
 }
 
@@ -52,7 +52,7 @@ footer {
 	width: 90vw;
 	max-width: $nav-footer-max-width;
 	margin: auto;
-	gap: 1rem;
+	gap: 1.5rem;
 }
 
 .social-links-wrapper {
@@ -83,7 +83,6 @@ footer {
 }
 
 .social-link {
-	border-right: 2px solid $teal-accent;
 	padding-right: 0.75rem;
 
 	p {
@@ -97,10 +96,21 @@ footer {
 		color: $teal-accent !important;
 		margin-bottom: 0;
 	}
+
+	@include breakpoint(med) {
+		border-right: 2px solid $teal-accent;
+	}
+}
+
+.email-link-wrapper {
+	display: flex;
+	flex-direction: row;
+	gap: 0.5rem;
+	align-items: center;
+	margin-bottom: $content-margin-bottom !important;
 }
 
 .email-link {
-	margin-bottom: $content-margin-bottom !important;
 	@include hover-underline-self($medium-grey);
 }
 
