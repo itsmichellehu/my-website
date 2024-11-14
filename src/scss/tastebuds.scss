@@ -1,6 +1,5 @@
 // $primary-color: #4379df;
 // $primary-color: #0387e5;
-$tastebuds-bg-yellow: #F6E7C6;
 
 @use "abstracts/all-abstracts" as *;
 
@@ -77,12 +76,6 @@ $tastebuds-bg-yellow: #F6E7C6;
 .header-container.tastebuds {
 	margin-bottom: 1rem;
 }
-
-// body {
-// 	background-color: $tastebuds-bg-yellow;
-// }
-
-
 
 #hero {
 	background-color: $tastebuds-bg-yellow;
