@@ -42,7 +42,7 @@ $content-max-width: 45rem;
 $outline-stroke: 1.25px;
 
 // Components
-$nav-footer-max-width: 80rem;
+$nav-footer-max-width: 82rem;
 $progress-bar-height: 6px;
 $wireframe-max-height: 40rem;
 $large-button-active-color: $primary-green;
@@ -63,3 +63,10 @@ $postup-tag-background: #dcefeb;
 $postup-tag-color: #499888;
 
 $tastebuds-bg-yellow: #F6E7C6;
+
+$wrapper-gap-med: 2rem;
+$wrapper-gap-lg: 3rem;
+$wrapper-gap-xl: 4rem;
+
+$wrapper-grid-lg: 4fr minmax(0, 3fr);
+$wrapper-grid-xl: 4fr minmax(0, 30rem);
