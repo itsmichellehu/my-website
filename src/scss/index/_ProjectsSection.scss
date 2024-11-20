@@ -74,7 +74,7 @@ $bg-top-xxl: 10rem;
 	gap: 3rem;
 
 	@include breakpoint(med) {
-		gap: 0;
+		gap: 1.5rem;
 	}
 }
 
@@ -139,7 +139,6 @@ $bg-top-xxl: 10rem;
 	align-items: center;
 	border-radius: 3px;
 	overflow: hidden;
-	width: 90%;
 	max-height: 40rem;
 	transition: transform 0.3s ease-in-out;
 	margin: 0 auto;
