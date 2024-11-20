@@ -207,12 +207,11 @@ $bg-top-xxl: 10rem;
 	width: fit-content;
 	max-width: 30rem;
 	align-items: end;
-	gap: 0.25rem;
-	justify-content: center;
+	justify-content: space-between;
 
 	@include breakpoint(med) {
-
 		gap: 1rem;
+		justify-content: center;
 	}
 
 	@include breakpoint(xl) {
