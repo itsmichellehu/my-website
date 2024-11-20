@@ -8,10 +8,13 @@
     width: 90vw;
     max-width: 64rem;
 
+    .card-vertical {
+        margin-bottom: 0;
+    }
+
     @include breakpoint(med) {
         grid-template-columns: repeat(4, 1fr);
         margin: auto;
-        margin-bottom: 3rem;
     }
 }
 
