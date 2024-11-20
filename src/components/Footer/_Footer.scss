@@ -9,6 +9,18 @@ footer {
 	padding: 2.25rem 0 2rem 0;
 	background-color: $lightest-grey;
 	justify-content: start;
+
+	@include breakpoint(med) {
+		padding: 3rem 0;
+
+		button {
+			width: fit-content;
+		}
+	}
+
+	@include breakpoint(xl) {
+		padding: 5rem 0;
+	}
 }
 
 .headline {
@@ -21,6 +33,11 @@ footer {
 	width: fit-content;
 	letter-spacing: -0.075rem;
 	line-height: 125%;
+
+	@include breakpoint(med) {
+		max-width: 35rem;
+		letter-spacing: -0.125rem;
+	}
 }
 
 .tagline {
@@ -53,6 +70,13 @@ footer {
 	max-width: $nav-footer-max-width;
 	margin: auto;
 	gap: 1.5rem;
+
+	@include breakpoint(med) {
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+		gap: 2rem;
+	}
 }
 
 .social-links-wrapper {
@@ -115,26 +139,6 @@ footer {
 }
 
 @include breakpoint(med) {
-	footer {
-		padding: 3rem 0;
-
-		button {
-			width: fit-content;
-		}
-	}
-
-	.wrapper {
-		flex-direction: row;
-		align-items: center;
-		justify-content: space-between;
-		gap: 2rem;
-	}
-
-	.headline {
-		max-width: 35rem;
-		letter-spacing: -0.125rem;
-	}
-
 	.cta-buttons {
 		display: flex;
 		flex-direction: row;
