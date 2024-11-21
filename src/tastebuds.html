@@ -40,7 +40,7 @@
   <div class="progress-bar-container">
     <div class="progress-bar"></div>
   </div>
-  <main id="content">
+  <main>
     <section id="hero-overview" class="hero-overview-wrapper">
       <div id="hero" class="hero hero-tastebuds">
         <video id="exclude-video-jquery" autoplay="autoplay" autoplay loop muted
@@ -60,7 +60,7 @@
                 <p class="overview__details-headline">Involvement</p>
                 <ul>
                   <li>Product designer</li>
-                  <li>UX Researcher</li>
+                  <li>UX researcher</li>
                   <li>UX/UI designer</li>
                   <li>Service designer</li>
                   <li>Interaction designer</li>
@@ -125,19 +125,44 @@
       </section>
     </section>
     <section id="intro" class="section-container bg-lightest-grey border-0 equal-padding">
-      <section id="the-challenge" class="content-wrapper mt-0">
+      <section id="the-challenge">
         <header class="header-container">
           <h2 class="intro-headline">The challenge</h2>
         </header>
-        <p class="secondary-text teal-accent">"Why is it so hard to find a place to eat?"</p>
-        <p class="the-problem-text">In a nutshell, it's because most of us trust word-of-mouth
-          recommendations from friends the most and crowdsourced reviews the least. Rising
-          commercialization, endless search results, and biased reviews on platforms like Yelp and
-          Google leave diners frustrated and uncertain, often resulting in decision paralysis.
-          However, contacting friends for recommendations isn’t always practical or timely,
-          leading
-          diners to rely on online reviews despite their drawbacks. Additionally, existing social
-          recommendation apps are not tailored specifically for dining.</p>
+        <div class="content-max-width">
+          <div>
+            <img src="assets/images/tastebuds/the-challenge-comic-strip.png" alt=""
+              class="width-100 mt-8 mb-24">
+          </div>
+          <p class="secondary-text teal-accent">"Why is it so hard to find a place to eat?"</p>
+          <p class="the-problem-text">We’ve all been there—hungry and overwhelmed, scrolling through
+            endless Yelp results, discerning fake and conflicting reviews, and avoiding ads.
+            Our
+            friends claim they’re <em>“okay with anything”</em> but veto every suggestion. Often
+            times, when we do make a
+            decision, <span class="fw-medium">
+              we wonder if we’re missing out on
+              something better
+            </span>...
+            <br> <br>
+            The core issue is simple: <span class="fw-medium">
+              We trust our friends far more than we trust
+              strangers, but apps are more convenient.
+            </span> Tired of eating at the same restaurants, I was interested to understand how
+            common this frustration is. With no current solutions focused on dining recommendations
+            with friends and family, I decided to explore a potential one:
+          </p>
+          <div class="hmw-statements_wrapper">
+            <div class="card-vertical subdued-green">
+              <p>
+                So, how can I help diners make quick, confident decisions?
+              </p>
+            </div>
+            <div class="card-vertical subdued-green">
+              <p> How can I leverage word of mouth recommendations? </p>
+            </div>
+          </div>
+        </div>
       </section>
       <section id="the-process" class="content-wrapper">
         <header class="header-container">
@@ -163,7 +188,7 @@
           <div class="final-prototype_content">
             <h3>Discover dining experiences with personalized recommendations.
             </h3>
-            <p class=" final-prototype_body">
+            <p class="final-prototype_body">
               The final solution empowers
               diners to confidently discover dining options with people they trust. Leveraging
               word-of-mouth recommendations from friends, Tastebuds provides
@@ -894,7 +919,7 @@
           diners like Alex, Brandon, and Cleo would interact with the product to enhance their
           dining experience.</p>
       </section>
-      <div class="container-full-width bg-lightest-grey">
+      <div class="container-full-width mb-0 bg-lightest-grey">
         <div class="user-flow-tabs-container tabs-container" data-current="Tab 1"
           data-duration-in="300" data-duration-out="100" data-easing="ease">
           <div class="tabs-menu three-menu-items">
@@ -1077,10 +1102,12 @@
           <span>design</span>
           <h3>Exploring and refining through sketching</h3>
         </header>
-        <p>Drawing from my user flows and information architecture, I sketched how my ideas
-          would come together for diners. The challenge was ensuring the user flows would compose
+        <p>While sketching how my ideas
+          would come together for diners, the challenge was ensuring the user flows would compose
           an
-          efficient and resilient ecosystem for the solution. I spent a lot of time determining
+          efficient and resilient ecosystem for the solution. Essentially, all of my user flows are
+          connected: Each user flow supply and utilize user-generated data from each other. For
+          example, I spent a lot of time figuring out
           the
           user data needed to tailor dining recommendations and exploring how the user flows would
           individually and collectively support these data sets.
@@ -1095,7 +1122,7 @@
             review flow?</li>
         </ul>
       </section>
-      <div class="container-full-width bg-lightest-grey mt-40">
+      <div class="container-full-width mb-0 bg-lightest-grey mt-40">
         <div class="tabs-container mw-1024" data-current="Tab 1" data-duration-in="300"
           data-duration-out="100" data-easing="ease">
           <div class="tabs-menu three-menu-items">
@@ -1112,82 +1139,6 @@
           <div class="tab-content pb-0 active" id="tab1">
             <img class="mb-24 img-100"
               src="assets/images/tastebuds/route-1-sketches-all-condensed.png" alt="">
-            <p>I organized the data in a
-              spreadsheet to
-              identify the most dissatisfied diners. Through cross-data analysis, I compared
-              responses to uncover similarities, differences, and patterns, helping me
-              identify
-              potential correlations between aspects of the dining experience and levels of
-              dissatisfaction.</p>
-            <p>
-              The table below was used to calculate the satisfaction levels and findings in
-              the
-              first tab.
-            </p>
-            <img alt="" loading="lazy" src="assets/images/tastebuds/survey-data-table.png"
-              class="img-100">
-            <button class="accordion subdued mt-24 border-bottom-0">
-              <div class="accordion_header">
-                <p>Methodology</p>
-                <svg class="accordion_icon" width="40" height="40" viewBox="0 0 40 40" fill="none"
-                  xmlns="https://www.w3.org/2000/svg">
-                  <path d="M8 15L20 27L32 15" stroke-width="3.5" />
-                </svg>
-              </div>
-              <div class="accordion_content">
-                <p class="dark-grey">
-                  I measured individual user satisfaction levels based on several criteria:
-                  average
-                  time spent finding a place to eat, frequency of trying new restaurants,
-                  frequency of
-                  trying new dishes, and current methods used to make dining decisions. I then
-                  implemented
-                  a scoring system, assigning points to each satisfaction level: "Completely
-                  satisfied" received 5 points, while both "Completely dissatisfied" and "Mostly
-                  dissatisfied" received 0 points. Since there was only one data point
-                  for "Completely dissatisfied," I combined its score with "Mostly dissatisfied"
-                  to
-                  simplify calculations and maintain whole numbers in the ratings for clearer
-                  analysis.
-                </p>
-              </div>
-            </button>
-            <button class="accordion subdued mt-0">
-              <div class="accordion_header">
-                <p>How can TasteBuds retrieve information on 'ingredients'?</p>
-                <svg class="accordion_icon" width="40" height="40" viewBox="0 0 40 40" fill="none"
-                  xmlns="https://www.w3.org/2000/svg">
-                  <path d="M8 15L20 27L32 15" stroke-width="3.5" />
-                </svg>
-              </div>
-              <div class="accordion_content">
-                <p>
-                  With ingredients being the building blocks of food, I speculated that
-                  these
-                  preferences and restrictions would be key to generating relevant
-                  recommendations
-                  by targeting specific ingredients in menu item description.
-                  <br>
-                  <br> After some research, I learned that this can be engineered using
-                  Yelp
-                  and
-                  Google APIs. However, this idea was a key moment in my brainstorming
-                  phase
-                  because
-                  this gave me the idea of integrating restaurants into the
-                  mobile solution as users to update their information and menus. This
-                  also
-                  gave
-                  me
-                  the idea for a business strategy to generate revenue from restaurant
-                  partnerships,
-                  keeping the app free for diners and providing user
-                  insights to restaurants to enhance their offerings, thus enhancing the
-                  overall
-                  diner journey cycle.
-                </p>
-              </div>
-            </button>
           </div>
           <div class="tab-content pb-0" id="tab2">
             <h4 class="mt-0">

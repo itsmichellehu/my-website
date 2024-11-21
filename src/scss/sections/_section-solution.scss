@@ -271,6 +271,10 @@ $solution-padding-xxl: 3rem;
 		}
 
 		@include breakpoint(med) {
+			p {
+				text-align: left;
+			}
+
 			width: 100%;
 			min-width: 26rem;
 			max-width: 45rem;

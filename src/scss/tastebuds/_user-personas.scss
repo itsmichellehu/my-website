@@ -76,7 +76,12 @@
 }
 
 .user-persona_tabs.tabs-container {
+  margin-top: 1rem;
   margin-bottom: 2rem;
+
+  @include breakpoint(med) {
+    margin-top: 3rem;
+  }
 
   .tabs-menu {
     margin-left: auto;
