@@ -10,6 +10,7 @@ const htmlPages = [
     { template: './src/boardspace.html', chunks: ['boardspace'], filename: 'boardspace.html' },
     { template: './src/postup.html', chunks: ['postup'], filename: 'postup.html' },
     { template: './src/tastebuds.html', chunks: ['tastebuds'], filename: 'tastebuds.html' },
+    { template: './src/expressions.html', chunks: ['expressions'], filename: 'expressions.html' },
 ];
 
 module.exports = {
@@ -19,6 +20,7 @@ module.exports = {
         boardspace: './src/js/boardspace.js',
         postup: './src/js/postup.js',
         tastebuds: './src/js/tastebuds.js',
+        expressions: './src/js/expressions.js',
     },
     output: {
         filename: 'js/[name].js',

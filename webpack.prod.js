@@ -15,7 +15,8 @@ const htmlPages = [
     { template: 'about.html', chunks: ['about'] },
     { template: 'boardspace.html', chunks: ['boardspace'] },
     { template: 'postup.html', chunks: ['postup'] },
-    { template: 'tastebuds.html', chunks: ['tastebuds'] }
+    { template: 'tastebuds.html', chunks: ['tastebuds'] },
+    { template: 'expressions.html', chunks: ['expressions'] }
 ];
 
 module.exports = {
@@ -26,6 +27,7 @@ module.exports = {
         boardspace: './src/js/boardspace.js',
         postup: './src/js/postup.js',
         tastebuds: './src/js/tastebuds.js',
+        expressionsChurch: './src/js/expressions.js',
     },
     output: {
         filename: 'js/[name].js',
