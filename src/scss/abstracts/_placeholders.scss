@@ -1,11 +1,6 @@
 @use 'variables' as *;
 @use 'breakpoints-mixins' as *;
 
-// Components
-%container-border-bottom {
-  border-bottom: 1px solid $light-grey;
-}
-
 // Flex
 %flex-row {
   display: flex !important;

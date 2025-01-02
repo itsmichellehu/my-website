@@ -8,11 +8,6 @@ const ImageMinimizerPlugin = require('image-minimizer-webpack-plugin');
 module.exports = {
     entry: {
         index: './src/js/index.js',
-        about: './src/js/about.js',
-        boardspace: './src/js/boardspace.js',
-        postup: './src/js/postup.js',
-        tastebuds: './src/js/tastebuds.js',
-        expressions: './src/js/expressions.js',
     },
     output: {
         filename: 'js/[name].[contenthash].js', // Use contenthash for better caching in production
@@ -119,7 +114,7 @@ module.exports = {
             chunkFilename: 'css/[id].[contenthash].css',
         }),
         new CleanWebpackPlugin(), // Clean dist/ directory before each build
-        ...['index', 'about', 'boardspace', 'postup', 'tastebuds', 'expressions'].map(page => new HtmlWebpackPlugin({
+        ...['expressions',].map(page => new HtmlWebpackPlugin({
             template: `./src/${page}.html`,
             chunks: [page],
             filename: `${page}.html`

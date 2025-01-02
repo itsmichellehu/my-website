@@ -37,195 +37,240 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <title>Michelle Hu</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=east" />
 </head>
 
 <body>
-    <main id="content">
-        <div id="main-wrapper">
-            <div id="hero" class="hero">
-                <div class="hero-wrapper">
-                    <div class="hero-image-wrapper animate__animated animate__fadeInRight">
-                        <img class="img-hero hide-med"
-                            src="assets/images/michelle-hu-portrait-bw-full.png">
-                        <img class="img-hero show-med-flex"
-                            src="assets/images/michelle-portrait-bw.png">
-                    </div>
-                    <div class="hero-content animate__animated animate__fadeInLeft">
-                        <p class="hero-tagline "><span>Michelle Hu</span> is a product
-                            designer and
-                            developer based in Los Angeles with a knack at organized chaos.</p>
-                        <p class="hero-intro">With her background in marketing, service design, and
-                            sociology, she builds market-driven, scalable, and resilient solutions.
-                            From social good to business growth, she works to drive impact across
-                            sectors.</p>
-                        <div class="hero-experience">
-                            <p class="education">Graduated from UC Irvine
-                                & Springboard UX Design</p>
-                            <span class="divider"></span>
-                            <p class="work">
-                                Previously @ BoardSpace.
-                                Currently crafting a guide on dev for designers. Open to work!
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="scroll-button-wrapper">
-                    <button data-scroll-target="projects" class="scroll-button"
-                        aria-label="Scroll down to next section">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="44"
-                            viewBox="0 0 40 44" fill="none">
-                            <path d="M20 2V42M20 42L11.25 32.2833M20 42L28.75 32.2833"
-                                stroke="#1E1E1E" stroke-width="2.5" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                        </svg>
-                    </button>
+    <div class="texture-overlay"></div>
+    <section id="why-expressions" class="section_wrapper">
+        <div class="section_content">
+            <header></header>
+            <p class="large-text">
+                We believe Jesus can transform us from the inside out—
+            </p>
+            <div class="wrapper">
+                <img class="img-christopher-hug"
+                    src="https://vrwpaviv.elementor.cloud/wp-content/uploads/2024/12/expressions-cutout-hug.png"
+                    alt="">
+                <div class="card-bg-paper">
+                    <p>People can’t see God, but they can see his church, and we show that we know
+                        who
+                        God is by how we love others.</p>
                 </div>
             </div>
-            <section id="projects" class="projects-section">
-                <img src="assets/images/bg-ripped-paper-fafafa.png" class="bg-ripped-paper" alt="">
-                <div id="bg-projects-section"></div>
-                <div class="projects-wrapper">
-                    <div id="project-boardspace" class="project-card project-boardspace">
-                        <div class="project-link-boardspace">
-                            <div class="project-thumb-container boardspace-thumb-container">
-                                <div class="project-thumb-wrapper boardspace-thumb-wrapper">
-                                    <video id="exclude-video-jquery"
-                                        class="project-thumb thumb-boardspace" autoplay
-                                        disablePictureInPicture loop muted playsinline
-                                        autoplay="autoplay">
-                                        <source src="assets/images/thumbs/thumb-boardspace.mp4"
-                                            type="video/mp4">
-                                        Your browser does not support the video tag.
-                                    </video>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="project-details-container">
-                            <div class="project-details-wrapper project-boardspace">
-                                <p class="project-subheader">lead ux designer </p>
-                                <h3 class="project-title">BoardSpace</h3>
-                                <div class="project-tags-wrapper">
-                                    <div class="boardspace-tag project-tag text-transform-none">
-                                        UX/UI
-                                        Design</div>
-                                    <div class="boardspace-tag project-tag">atomic design system
-                                    </div>
-                                    <div class="boardspace-tag project-tag">Usability Testing
-                                    </div>
-                                </div>
-                                <p class="project-description">
-                                    Redesigning a B2B feature with an end-to-end scalable prototype
-                                    and building a new
-                                    atomic design system to improve the nonprofit board management
-                                    experience
-                                </p>
-                                <p class="boardspace-coming-soon">COMING SOON</p>
-                            </div>
-                        </div>
-                    </div>
-                    <a href="tastebuds" class="project-link project-tastebuds">
-                        <div id="project-tastebuds" class="project-card project-tastebuds">
-                            <div class="project-thumb-container tastebuds-thumb-container">
-                                <div class="project-thumb-wrapper">
-                                    <div class="video-wrapper">
-                                        <video id="exclude-video-jquery"
-                                            class="project-thumb thumb-tastebuds"
-                                            autoplay="autoplay" loop muted playsinline
-                                            disablePictureInPicture>
-                                            <source
-                                                src="assets/images/thumbs/thumb-tastebuds-video-only.mp4"
-                                                type="video/mp4">
-                                            Your browser does not support the video tag.
-                                        </video>
-                                    </div>
-                                    <div class="thumb-image-wrapper">
-                                        <img src="assets/images/thumbs/thumb-tastebuds-static.png"
-                                            alt="">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="project-details-container">
-                                <div class="project-details-wrapper">
-                                    <p class="project-subheader">product designer</p>
-                                    <h3 class="project-title">TasteBuds</h3>
-                                    <div class="project-tags-wrapper">
-                                        <div class="tastebuds-tag project-tag">product strategy
-                                        </div>
-                                        <div class="tastebuds-tag project-tag">growth design</div>
-                                        <div class="tastebuds-tag project-tag text-transform-none">
-                                            experience design</div>
-                                    </div>
-                                    <p class="project-description">Designing an end-to-end prototype
-                                        and
-                                        a growth-focused B2B monetization strategy, enhancing the
-                                        dining
-                                        experience with user-generated content and AI-driven
-                                        personalization</p>
-                                    <div class="project-card-button">
-                                        <p class="project-card-button-label">view
-                                            project</p>
-                                        <span class="material-symbols-outlined">
-                                            east
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="postup" class="project-link project-postup">
-                        <div id="project-postup" class="project-card project-postup mb-0">
-                            <div class="project-thumb-container postup-thumb-container">
-                                <div class="project-thumb-wrapper postup-thumb-wrapper">
-                                    <div class="video-wrapper">
-                                        <video id="exclude-video-jquery"
-                                            class="project-thumb thumb-postup" autoplay="autoplay"
-                                            loop muted playsinline disablePictureInPicture>
-                                            <source src="assets/images/thumbs/thumb-postup.mp4"
-                                                type="video/mp4">
-                                            Your browser does not support the video tag.
-                                        </video>
-                                    </div>
-                                    <div class="thumb-image-wrapper">
-                                        <img src="assets/images/thumbs/thumb-postup-static.png
-                                        " alt="">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="project-details-container">
-                                <div class="project-details-wrapper">
-                                    <p class="project-subheader">Product Designer</p>
-                                    <h3 class="project-title">PostUp</h3>
-                                    <div class="project-tags-wrapper">
-                                        <div class="postup-tag project-tag">Product Strategy</div>
-                                        <div class="postup-tag project-tag text-transform-none">
-                                            Growth
-                                            Design
-                                        </div>
-                                        <div class="postup-tag project-tag">monetization strategy
-                                        </div>
-                                    </div>
-                                    <p class="project-description">Designing a scalable
-                                        subscription-based B2B and B2C MVP in 7 days, and a
-                                        monetization
-                                        strategy to enhance the remote worker experience and drive
-                                        business revenue</p>
-                                    <div class="project-card-button">
-                                        <p class="project-card-button-label">view
-                                            project</p>
-                                        <span class="material-symbols-outlined">
-                                            east
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </section>
+            <p class="large-text">
+                Our vision?<br>
+                To be an expression of God’s love in the SGV.
+            </p>
+            <img class="img-laundry-love"
+                src="https://vrwpaviv.elementor.cloud/wp-content/uploads/2024/12/expressions-cutout-laundry-love-cropped.png"
+                alt="">
         </div>
-    </main>
-    <script type="module" src="js/index.bundle.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    </section>
+    <section id="values" class="section_wrapper">
+        <div class="section_content">
+            <header>
+                <h2 class="headline-text mb-0"><span class="outlined">our</span>
+                    <span class="filled">values</span>
+                </h2>
+                <img class="underline"
+                    src="https://vrwpaviv.elementor.cloud/wp-content/uploads/2024/12/headline-underline-values.png"
+                    alt="">
+            </header>
+            <div class="scroll-container">
+                <ul class="item-container">
+                    <li class="value card">
+                        <h3>Honoring</h3>
+                        <p>We believe everyone is created in God’s image with inherent dignity and
+                            worth.
+                            Therefore we honor all, giving greater honor to those who lack it.</p>
+                    </li>
+                    <li class="value card">
+                        <h3>Truthful</h3>
+                        <p>We believe truth brings light into darkness. Therefore, we teach the
+                            whole of
+                            God’s word, and model transparency as a church and individuals.</p>
+                    </li>
+                    <li class="value card">
+                        <h3>Peaceful</h3>
+                        <p>We believe in the reconciliation of all things through Christ. Therefore,
+                            we
+                            seek
+                            unity across racial, political, and generational lines.  </p>
+                    </li>
+                    <li class="value card">
+                        <h3>Welcoming</h3>
+                        <p>We believe God welcomes all through Christ. Therefore, we go out of our
+                            way
+                            to
+                            welcome everyone, just as God did in Christ for us.</p>
+                    </li>
+                    <li class="value card">
+                        <h3>Multiplying</h3>
+                        <p>We believe God welcomes all through Christ. Therefore, we go out of our
+                            way
+                            to
+                            welcome everyone, just as God did in Christ for us.</p>
+                    </li>
+                </ul>
+            </div>
+            <button class="primary-button white">
+                <p>Discover our values</p>
+            </button>
+        </div>
+        </div>
+    </section>
+    <section id="get-involved" class="section_wrapper">
+        <div class="section_content">
+            <header>
+                <h2><span class="outlined">get</span> <span class="filled">involved</span></h2>
+                <img class="underline"
+                    src="https://vrwpaviv.elementor.cloud/wp-content/uploads/2024/12/headline-underline-values.png"
+                    alt="">
+            </header>
+            <ul role="list" class="item-container">
+                <li id="card-community" role="listitem" class="scroll-item-card">
+                    <a class="card" href="">
+                        <div class="icon-container">
+                            <img src="https://vrwpaviv.elementor.cloud/wp-content/uploads/2024/12/artwork-find-community-large.webp"
+                                alt="">
+                        </div>
+                        <div class=" copy-container">
+                            <div>
+                                <h3 class="headline"> Community </h3>
+                                <p>
+                                    We offer community groups for young adults, women, men,
+                                    and
+                                    kids.
+                                </p>
+                            </div>
+                            <button class="primary-button black">
+                                <p>Find your community</p><span
+                                    class="material-symbols-outlined">east</span>
+                            </button>
+                        </div>
+                    </a>
+                </li>
+                <li id="card-give" role="listitem" class="scroll-item-card">
+                    <a href="" class="card">
+                        <div class="icon-container">
+                            <img
+                                src="https://vrwpaviv.elementor.cloud/wp-content/uploads/2024/12/artwork-give-large.webp">
+                        </div>
+                        <div class="copy-container">
+                            <div>
+                                <h3 class="headline">Give</h3>
+                                <p> Support our mission and vision.</p>
+                            </div>
+                            <button class="primary-button black">
+                                <p>Support our mission</p>
+                                <span class="material-symbols-outlined">east</span>
+                            </button>
+                        </div>
+                    </a>
+                </li>
+                <li id="card-service" role="listitem" class="scroll-item-card">
+                    <a href="" class="card">
+                        <div class="icon-container">
+                            <img src=" https://vrwpaviv.elementor.cloud/wp-content/uploads/2024/12/artwork-service-large.webp"
+                                alt="">
+                        </div>
+                        <div class="copy-container">
+                            <div>
+                                <h3 class="headline">Serve with us</h3>
+                                <p>
+                                    We have teams for many interests and skillsets.
+                                </p>
+                            </div>
+                            <button class="primary-button black">
+                                <p>Explore opportunities</p><span
+                                    class="material-symbols-outlined">east</span>
+                            </button>
+                        </div>
+                    </a>
+                </li>
+                <li id="card-prayer" role="listitem" class="scroll-item-card">
+                    <a class="card" href="">
+                        <div class="icon-container">
+                            <img
+                                src="https://vrwpaviv.elementor.cloud/wp-content/uploads/2024/12/artwork-prayer-large.webp">
+                        </div>
+                        <div class="copy-container">
+                            <div>
+                                <h3 class="headline">Prayer Request</h3>
+                                <p> Request a prayer from us.</p>
+                            </div>
+                            <button class="primary-button black">
+                                <p>Request a prayer</p><span
+                                    class="material-symbols-outlined">east</span>
+                            </button>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+            <button class="primary-button white">
+                <p>Explore opportunities</p>
+            </button>
+        </div>
+        </div>
+    </section>
+    <section id="community-groups" class="section_wrapper">
+        <div class="section_content">
+            <header>
+                <h2>
+                    <span class="outlined">our</span> <span class="filled">community
+                        groups</span>
+                </h2>
+                <img class="underline"
+                    src="https://vrwpaviv.elementor.cloud/wp-content/uploads/2024/12/headline-underline-values.png"
+                    alt="">
+            </header>
+            <div class="grid-container">
+                <div class="community-group">
+                    <img
+                        src="https://vrwpaviv.elementor.cloud/wp-content/uploads/2024/12/expressions-cutout-kid-01.png">
+                    <div class="label">
+                        <p>Kids</p>
+                    </div>
+                </div>
+                <div class="community-group align-self-end">
+                    <img
+                        src="https://vrwpaviv.elementor.cloud/wp-content/uploads/2024/12/expressions-cutout-young-adults.png">
+                    <div class="label">
+                        <p>Young adults</p>
+                    </div>
+                </div>
+                <div class="community-group align-self-start">
+                    <img
+                        src="https://vrwpaviv.elementor.cloud/wp-content/uploads/2024/12/expressions-cutout-kid-01.png">
+                    <div class="label">
+                        <p>Women</p>
+                    </div>
+                </div>
+                <div class="community-group align-self-end">
+                    <img
+                        src="https://vrwpaviv.elementor.cloud/wp-content/uploads/2024/12/expressions-cutout-kid-01.png">
+                    <div class="label">
+                        <p>Men</p>
+                    </div>
+                </div>
+            </div>
+            <div class="buttons_wrapper">
+                <button class="primary-button white">
+                    <p>Sign up for a group</p>
+                </button>
+                <button class="secondary-button">
+                    <p>Learn more</p>
+                </button>
+            </div>
+        </div>
+    </section>
 </body>
 
-</html>
+<body>

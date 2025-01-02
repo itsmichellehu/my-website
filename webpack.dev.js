@@ -6,21 +6,22 @@ const ESLintPlugin = require('eslint-webpack-plugin');
 
 const htmlPages = [
     { template: './src/index.html', chunks: ['index'], filename: 'index.html' },
-    { template: './src/about.html', chunks: ['about'], filename: 'about.html' },
-    { template: './src/boardspace.html', chunks: ['boardspace'], filename: 'boardspace.html' },
-    { template: './src/postup.html', chunks: ['postup'], filename: 'postup.html' },
-    { template: './src/tastebuds.html', chunks: ['tastebuds'], filename: 'tastebuds.html' },
-    { template: './src/expressions.html', chunks: ['expressions'], filename: 'expressions.html' },
+    { template: './src/get-involved.html', chunks: ['get-involved'], filename: 'get-involved.html' },
+    { template: './src/kids.html', chunks: ['kids'], filename: 'kids.html' },
+    { template: './src/visit-us.html', chunks: ['visit-us'], filename: 'visit-us.html' },
+    { template: './src/give.html', chunks: ['give'], filename: 'give.html' },
+    { template: './src/about-us.html', chunks: ['about-us'], filename: 'about-us.html' }
 ];
 
 module.exports = {
     entry: {
         index: './src/js/index.js',
-        about: './src/js/about.js',
-        boardspace: './src/js/boardspace.js',
-        postup: './src/js/postup.js',
-        tastebuds: './src/js/tastebuds.js',
-        expressions: './src/js/expressions.js',
+        about: './src/js/index.js',
+        leadership: './src/js/index.js',
+        getInvolved: './src/js/index.js',
+        kids: './src/js/index.js',
+        give: './src/js/index.js',
+        visit: './src/js/index.js',
     },
     output: {
         filename: 'js/[name].js',
@@ -124,7 +125,7 @@ module.exports = {
         open: true,
         hot: true,
         watchFiles: ['src/**/*'],
-        port: 5688,
+        port: 5668,
         allowedHosts: 'all',
     },
     devtool: 'cheap-module-source-map',

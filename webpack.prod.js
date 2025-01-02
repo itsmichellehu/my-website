@@ -12,22 +12,24 @@ const PATHS = {
 
 const htmlPages = [
     { template: 'index.html', chunks: ['index'] },
-    { template: 'about.html', chunks: ['about'] },
-    { template: 'boardspace.html', chunks: ['boardspace'] },
-    { template: 'postup.html', chunks: ['postup'] },
-    { template: 'tastebuds.html', chunks: ['tastebuds'] },
-    { template: 'expressions.html', chunks: ['expressions'] }
+    { template: 'about-us.html', chunks: ['about-us'] },
+    { template: 'leadership.html', chunks: ['leadership'] },
+    { template: 'get-involved.html', chunks: ['get-involved'] },
+    { template: 'kids.html', chunks: ['kids'] },
+    { template: 'visit-us.html', chunks: ['visit-us'] },
+    { template: 'give.html', chunks: ['give'] },
 ];
 
 module.exports = {
     mode: 'production',
     entry: {
         index: './src/js/index.js',
-        about: './src/js/about.js',
-        boardspace: './src/js/boardspace.js',
-        postup: './src/js/postup.js',
-        tastebuds: './src/js/tastebuds.js',
-        expressionsChurch: './src/js/expressions.js',
+        about: './src/js/index.js',
+        leadership: './src/js/index.js',
+        getInvolved: './src/js/index.js',
+        kids: './src/js/index.js',
+        give: './src/js/index.js',
+        visit: './src/js/index.js',
     },
     output: {
         filename: 'js/[name].js',
