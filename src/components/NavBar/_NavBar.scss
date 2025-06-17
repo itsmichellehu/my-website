@@ -31,7 +31,6 @@ nav {
 	justify-content: space-between;
 	margin: auto;
 	align-items: center;
-	height: 100%;
 	width: 95%;
 
 	@include breakpoint(med) {
@@ -77,7 +76,7 @@ nav {
 }
 
 .nav-link-text {
-	color: $dark-grey !important;
+	color: $off-black !important;
 	font-size: 0.889rem !important;
 	transition: color 0.3s ease-in-out, width 0.3s ease-in-out, transform 0.3s ease-in-out;
 	font-weight: 350;
@@ -92,7 +91,7 @@ nav {
 	list-style-type: none;
 	cursor: pointer;
 
-	@include hover-underline-target('.nav-link-text', $teal-accent, $teal-accent, 1.5px);
+	@include hover-underline-target(".nav-link-text", $teal-accent, $teal-accent, 1.5px);
 
 	a {
 		display: flex;

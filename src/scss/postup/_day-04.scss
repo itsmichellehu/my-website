@@ -27,6 +27,11 @@ $prototype-accordion-bg: #1e1e1e;
 	width: fit-content;
 	max-width: 90vw;
 	margin: auto;
+
+	@include breakpoint(lg) {
+		@include flex(row, 2.5rem, center, center);
+		width: 100%;
+	}
 }
 
 .prototype-walkthrough-section_grid-container {
