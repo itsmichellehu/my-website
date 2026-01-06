@@ -19,7 +19,6 @@ const htmlPages = [
 ];
 
 module.exports = {
-    mode: 'production',
     entry: {
         index: './src/js/index.js',
         about: './src/js/about.js',
