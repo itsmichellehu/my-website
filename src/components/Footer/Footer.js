@@ -1,17 +1,17 @@
-import { AnimateInView } from "../../components/AnimateInView/AnimateInView"; // Corrected import path
+import { AnimateInView } from "../AnimateInView/AnimateInView";
 
 const classAnimationMap = {
-    'fade-in': 'animate__fadeIn',
-    'fade-in-right': 'animate__fadeInRight',
-    'fade-in-left': 'animate__fadeInLeft',
-    'slide-up': 'animate__slideInUp',
-    'bounce-in': 'animate__bounceIn'
+	"fade-in": "animate__fadeIn",
+	"fade-in-right": "animate__fadeInRight",
+	"fade-in-left": "animate__fadeInLeft",
+	"slide-up": "animate__slideInUp",
+	"bounce-in": "animate__bounceIn"
 };
 
 function Footer() {
-    const existingFooter = document.querySelector("footer");
-    if (!existingFooter) {
-        const footerHTML = `
+	const existingFooter = document.querySelector("footer");
+	if (!existingFooter) {
+		const footerHTML = `
             <footer id="footer">
                 <div class="wrapper">
                     <p class="headline fadeInLeft_inView">Let's make a difference together.</p>
@@ -58,22 +58,22 @@ function Footer() {
             </footer>
         `;
 
-        document.body.insertAdjacentHTML("beforeend", footerHTML);
+		document.body.insertAdjacentHTML("beforeend", footerHTML);
 
-        // Add scroll event to the button
-        const scrollToProjectsButton = document.getElementById("scrollToProjects-2");
-        scrollToProjectsButton.addEventListener("click", () => {
-            const projectsSection = document.getElementById("projects");
-            if (projectsSection) {
-                projectsSection.scrollIntoView({ behavior: "smooth" });
-            }
-        });
+		// Add scroll event to the button
+		const scrollToProjectsButton = document.getElementById("scrollToProjects-2");
+		scrollToProjectsButton.addEventListener("click", () => {
+			const projectsSection = document.getElementById("projects");
+			if (projectsSection) {
+				projectsSection.scrollIntoView({ behavior: "smooth" });
+			}
+		});
 
-        // Ensure AnimateInView is called after the DOM is fully loaded
-        document.addEventListener('DOMContentLoaded', () => {
-            AnimateInView({ classAnimationMap });
-        });
-    }
+		// Ensure AnimateInView is called after the DOM is fully loaded
+		document.addEventListener("DOMContentLoaded", () => {
+			AnimateInView({ classAnimationMap });
+		});
+	}
 }
 
 export default Footer;
