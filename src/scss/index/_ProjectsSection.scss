@@ -97,8 +97,7 @@ $bg-top-xxl: 10rem;
 		display: grid;
 		grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
 		grid-template-rows: auto;
-		grid-template-areas:
-			"a b";
+		grid-template-areas: "a b";
 		align-items: center;
 		padding: 2.5rem 0;
 		justify-content: space-between;
@@ -123,8 +122,7 @@ $bg-top-xxl: 10rem;
 	margin: 0;
 	cursor: pointer;
 
-	@include hover-underline-target('.project-card-button-label', $teal-accent, $teal-accent);
-
+	@include hover-underline-target(".project-card-button-label", $teal-accent, $teal-accent);
 
 	&:hover .project-title {
 		color: $teal-accent;
@@ -158,7 +156,6 @@ $bg-top-xxl: 10rem;
 }
 
 .project-link {
-
 	&.project-tastebuds,
 	&.project-postup {
 		cursor: pointer;
@@ -186,12 +183,12 @@ $bg-top-xxl: 10rem;
 	transition: transform 0.3s ease-in-out;
 	color: $teal-accent !important;
 
-	>.material-symbols-outlined {
+	> .material-symbols-outlined {
 		font-size: 1.25rem;
 	}
 
 	@include breakpoint(lg) {
-		>.material-symbols-outlined {
+		> .material-symbols-outlined {
 			font-size: 1.5rem;
 			padding-bottom: 0.125rem;
 		}
@@ -241,7 +238,6 @@ $bg-top-xxl: 10rem;
 	/* or use 'contain' if you want the whole image visible */
 }
 
-
 .video-wrapper {
 	margin: 0;
 	overflow: hidden;
@@ -253,7 +249,6 @@ $bg-top-xxl: 10rem;
 		width: fit-content;
 		max-width: 100%;
 		height: 100%;
-
 	}
 
 	@include breakpoint(med) {
@@ -284,7 +279,6 @@ $bg-top-xxl: 10rem;
 
 .thumb-postup,
 .thumb-tastebuds {
-
 	@include breakpoint(med) {
 		max-height: 100%;
 		max-width: 50%;
@@ -335,7 +329,6 @@ $bg-top-xxl: 10rem;
 		&.project-boardspace {
 			margin-bottom: 0;
 		}
-
 	}
 }
 
@@ -389,7 +382,6 @@ $bg-top-xxl: 10rem;
 	max-width: fit-content;
 	padding-right: 5%;
 	margin-bottom: 1rem;
-
 
 	// Firefox scrollbar hide
 	scrollbar-width: none; // Firefox
@@ -480,10 +472,8 @@ $bg-top-xxl: 10rem;
 }
 
 @include breakpoint(med) {
-
 	.project-link:hover,
 	.project-card.project-boardspace:hover {
-
 		.tastebuds-thumb-container,
 		.postup-thumb-container {
 			transform: scale(1.05);

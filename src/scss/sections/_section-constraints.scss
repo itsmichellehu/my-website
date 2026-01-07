@@ -118,7 +118,6 @@
 	}
 }
 
-
 @include breakpoint(sm) {
 	.constraints-grid-container {
 		// width: 90vw;
@@ -126,7 +125,6 @@
 		grid-template-columns: repeat(2, 2.25rem);
 		grid-template-areas: "c b" "a d";
 		grid-template-rows: repeat(2, 1fr);
-
 	}
 
 	.constraints-grid-item.grid-item-01 {
@@ -208,7 +206,7 @@ $constraints-svg-med: 3rem;
 		grid-template-columns: 1fr $constraints-svg-med;
 		padding: $constraints-grid-item-padding-med;
 
-		ul>li {
+		ul > li {
 			font-size: 1.125rem;
 		}
 

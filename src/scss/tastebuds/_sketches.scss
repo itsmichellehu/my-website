@@ -31,7 +31,6 @@
 	img {
 		width: 100%;
 	}
-
 }
 
 // Grid container with Gif and 'Features' Card
@@ -45,11 +44,11 @@
 	grid-template-areas: "a b";
 	margin-bottom: 2rem;
 
-	>.featured-media {
+	> .featured-media {
 		grid-area: b;
 	}
 
-	>div {
+	> div {
 		grid-area: a;
 		// padding: 1.5rem 2rem 1.5rem 3rem;
 		// border-radius: 0.25rem;

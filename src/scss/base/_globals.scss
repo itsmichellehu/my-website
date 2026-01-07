@@ -34,7 +34,6 @@ body {
 	}
 }
 
-
 main {
 	position: relative;
 	background-color: white;
@@ -47,7 +46,6 @@ html {
 	overflow-x: hidden;
 	/* Prevent horizontal overflow */
 }
-
 
 //
 // ::-webkit-scrollbar-track {
@@ -137,7 +135,6 @@ a {
 		@include hover-underline-self($teal-accent);
 	}
 }
-
 
 figcaption {
 	margin-top: 1rem !important;

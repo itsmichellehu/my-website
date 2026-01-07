@@ -60,7 +60,7 @@ $quote-text-size-med: 100%;
 			border-top: 1px solid $medium-light-grey;
 		}
 
-		>div:first-child {
+		> div:first-child {
 			p {
 				color: $black;
 				font-size: 1.25rem;
@@ -78,7 +78,7 @@ $quote-text-size-med: 100%;
 			// column-gap: 1rem;
 			row-gap: 1rem;
 
-			>div:first-child {
+			> div:first-child {
 				width: $quote-text-size-med;
 
 				p {

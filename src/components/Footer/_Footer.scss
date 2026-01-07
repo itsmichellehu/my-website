@@ -1,4 +1,4 @@
-@use '../../scss/abstracts/all-abstracts' as *;
+@use "../../scss/abstracts/all-abstracts" as *;
 
 $content-margin-bottom: 1.5rem;
 
@@ -87,7 +87,7 @@ footer {
 	align-self: center;
 	margin-bottom: $content-margin-bottom;
 
-	>.header {
+	> .header {
 		font-size: 1.25rem !important;
 		font-weight: 500 !important;
 		margin-bottom: 0;

@@ -2,15 +2,13 @@
 
 @use "abstracts/all-abstracts" as *;
 
-@use "base/all-base";
+@use "base/all-base" as *;
 
 @use "utilities/all-utilities";
 
 @use "../components/global-components";
 
-@use "../components/home-components";
-
-@use "index/all-index";
+@use "index/all-index" as *;
 
 .default-nav-color {
 	background-color: white !important;
@@ -21,7 +19,7 @@
 	max-width: $nav-footer-max-width !important;
 }
 
-main>.wrapper>section {
+main > .wrapper > section {
 	width: 100vw;
 }
 
@@ -78,7 +76,6 @@ p {
 	align-self: stretch;
 	text-align: left;
 	letter-spacing: -0.25px;
-
 
 	@include breakpoint("mobile-lg") {
 		font-size: 1.125rem;

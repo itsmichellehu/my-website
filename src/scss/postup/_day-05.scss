@@ -15,17 +15,16 @@
 	border-radius: 5px;
 }
 
-.usability-test-details_grid-item>.subheading {
+.usability-test-details_grid-item > .subheading {
 	margin-bottom: 0.75rem;
 	color: $primary-color;
-
 }
 
 @include breakpoint(med) {
 	.usability-test-details_grid-container {
 		grid-template-columns: 1fr 1fr;
 		grid-template-rows: auto;
-		grid-template-areas: 'a b';
+		grid-template-areas: "a b";
 
 		.grid-item-questions {
 			grid-area: c;
@@ -72,7 +71,7 @@
 			text-align: left;
 		}
 
-		>p:last-child {
+		> p:last-child {
 			margin-bottom: 0;
 		}
 

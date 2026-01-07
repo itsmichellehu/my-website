@@ -10,7 +10,7 @@ ol {
 	gap: 0.5rem;
 	text-align: left;
 	list-style-position: outside;
-	margin-left: - calc($list-bullet-text-spacing);
+	margin-left: -calc($list-bullet-text-spacing);
 
 	li {
 		color: $off-black;
@@ -50,7 +50,6 @@ ol {
 }
 
 .list-transform-none {
-
 	&.gap-8 {
 		li {
 			margin-bottom: 0.5rem;
@@ -139,7 +138,6 @@ ul.list-none {
 }
 
 ul.list-item-black {
-
 	li {
 		color: $black;
 	}

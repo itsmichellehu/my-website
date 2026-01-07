@@ -3,24 +3,21 @@
 $diner-trends-border: 1px solid $black;
 
 .diner-trends-grid {
-	@include grid-container(2,
-		auto,
-		0.5rem,
-		0.5rem); // 3 columns, auto rows, 20px gaps
+	@include grid-container(2, auto, 0.5rem, 0.5rem); // 3 columns, auto rows, 20px gaps
 	// Using the grid-item mixin for the items
 	max-width: $content-max-width;
 	margin: auto;
 	margin-top: 2rem;
 	margin-bottom: 2rem;
 
-	>div {
+	> div {
 		// border: $diner-trends-border;
 		background-color: white;
 		padding: 2rem;
 		border-radius: 5px;
 		background-color: $lightest-grey;
 
-		>p {
+		> p {
 			color: $black;
 			text-align: left;
 			flex: 0 auto;
@@ -39,7 +36,7 @@ $diner-trends-border: 1px solid $black;
 	.item-5 {
 		@include grid-item(2, 1);
 
-		>p {
+		> p {
 			margin-bottom: 1.5rem;
 			text-align: center;
 			font-weight: 550;
@@ -51,11 +48,11 @@ $diner-trends-border: 1px solid $black;
 	@include flex(row, 1rem, stretch);
 	text-align: center;
 
-	>div {
+	> div {
 		@include flex(row, 1rem);
 		width: 100%;
 
-		>div {
+		> div {
 			text-align: center;
 
 			p {
@@ -77,18 +74,16 @@ $diner-trends-border: 1px solid $black;
 	column-gap: 0.5rem;
 	margin: 1.5rem 0;
 
-	>div {
+	> div {
 		display: flex;
 		flex-direction: row;
 		gap: 0.75rem;
 		align-items: center;
 		justify-content: center;
 		border: 2px solid $subdued-green;
-		;
 		padding: 1rem;
 		border-radius: 6px;
 		background-color: $lightest-green;
-
 
 		p {
 			color: $primary-green;
@@ -99,7 +94,6 @@ $diner-trends-border: 1px solid $black;
 			font-weight: 500;
 		}
 	}
-
 
 	.dining-factors-icon {
 		width: 2.5rem;
@@ -118,7 +112,7 @@ $diner-trends-border: 1px solid $black;
 	width: 5rem;
 	height: 5rem;
 	margin-bottom: 0.5rem;
-	fill: #C0DDFF;
+	fill: #c0ddff;
 }
 
 .ic-dining-factors-location {

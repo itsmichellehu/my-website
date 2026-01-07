@@ -50,7 +50,6 @@
 	width: 84.5px;
 }
 
-
 .ic-airbnb-strengths-checkmark {
 	display: flex;
 	width: 1rem;
@@ -106,7 +105,7 @@
 	@include breakpoint(lg) {
 		column-gap: 2.5rem;
 
-		div>p {
+		div > p {
 			font-size: 1.125rem;
 		}
 	}

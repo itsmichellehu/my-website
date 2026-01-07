@@ -27,7 +27,6 @@
 	}
 
 	@include breakpoint(med) {
-
 		h3 {
 			transform: translateX(4rem);
 			transform: translateY(4rem);
@@ -159,8 +158,6 @@
 		.subheading {
 			line-height: 130%;
 		}
-
-
 	}
 
 	video {
@@ -180,7 +177,7 @@
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 		grid-template-rows: repeat(2, auto);
-		grid-template-areas: 'a b' 'c d';
+		grid-template-areas: "a b" "c d";
 		gap: 1.5rem;
 		align-items: center;
 		justify-content: center;
@@ -195,7 +192,6 @@
 
 		p {
 			text-align: center;
-
 		}
 
 		p:first-child {
@@ -232,7 +228,6 @@
 		flex-direction: row;
 		align-items: center;
 
-
 		video {
 			width: 14rem;
 		}
@@ -251,9 +246,7 @@
 	}
 }
 
-
 @include breakpoint(med) {
-
 	.iterations-carousel_desktop-wrapper {
 		display: flex;
 		align-items: center;
@@ -270,9 +263,7 @@
 		width: 3rem;
 		height: 3rem;
 	}
-
 }
-
 
 .iterations-carousel-item_headline {
 	font-family: "Inter", sans-serif;

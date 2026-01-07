@@ -19,12 +19,12 @@
 		padding: 2.5rem 0;
 	}
 
-	>img,
+	> img,
 	figure {
 		margin: 1rem auto;
 	}
 
-	>.content,
+	> .content,
 	.content-wrapper,
 	.subsection {
 		max-width: $content-max-width;
@@ -33,7 +33,7 @@
 		align-items: left;
 		overflow-x: visible !important;
 
-		>figure>img {
+		> figure > img {
 			margin: 0;
 		}
 
@@ -59,7 +59,7 @@
 		}
 	}
 
-	>.content,
+	> .content,
 	.content-wrapper,
 	.subsection,
 	.content-full-width {
@@ -81,7 +81,7 @@
 			padding: 4rem 0;
 		}
 
-		>img,
+		> img,
 		figure {
 			margin: 2rem auto;
 		}
@@ -105,7 +105,7 @@
 	margin-top: 1rem;
 	overflow-x: visible !important;
 
-	>figure>img {
+	> figure > img {
 		margin: 0;
 	}
 
@@ -168,7 +168,7 @@
 	max-width: $content-max-width;
 	margin: 0 auto;
 
-	>h2 {
+	> h2 {
 		margin-bottom: 1.25rem;
 		color: $black;
 	}
@@ -184,7 +184,7 @@
 	&.short-v {
 		margin-bottom: 2rem;
 
-		>h3 {
+		> h3 {
 			margin-top: 0;
 		}
 	}
@@ -225,6 +225,6 @@
 	}
 }
 
-.section-container> :is(.subsection, .content-wrapper, .content):first-of-type {
+.section-container > :is(.subsection, .content-wrapper, .content):first-of-type {
 	margin-top: 0;
 }
