@@ -1,14 +1,14 @@
-import BackToTopButton from '../components/BackToTopButton/BackToTopButton';
-import ProgressBar from '../components/ProjectProgressBar/ProjectProgressBar';
+import BackToTopButton from "./BackToTopButton/BackToTopButton";
+import ProgressBar from "./ProjectProgressBar/ProjectProgressBar";
 
-// import { initializeAccordion } from '../components/ProjectAccordion/ProjectAccordion';
-import initializeTabs from '../components/TabsContainer/TabsContainer';
-import enableImageZoom from '../components/ImageZoom/ImageZoom';
+// import { initializeAccordion } from './ProjectAccordion/ProjectAccordion';
+import initializeTabs from "./TabsContainer/TabsContainer";
+import enableImageZoom from "./ImageZoom/ImageZoom";
 
-document.addEventListener('DOMContentLoaded', function () {
-    ProgressBar();
-    BackToTopButton();
-    // initializeAccordion();
-    enableImageZoom();
-    initializeTabs();
+document.addEventListener("DOMContentLoaded", function () {
+	ProgressBar();
+	BackToTopButton();
+	// initializeAccordion();
+	enableImageZoom();
+	initializeTabs();
 });
