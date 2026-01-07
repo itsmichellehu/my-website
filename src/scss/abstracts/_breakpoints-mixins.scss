@@ -1,6 +1,7 @@
 @use "sass:map";
+@use "sass:list";
+@use "sass:meta";
 
-// Media breakpoints
 $breakpoints: (
 	mobile-sm: 320px,
 	mobile-med: 375px,
@@ -17,11 +18,15 @@ $breakpoints: (
 );
 
 @mixin breakpoint($name) {
-	@if map.has-key($breakpoints, $name) {
-		@media (min-width: map.get($breakpoints, $name)) {
+	$width: if(
+		sass(meta.type-of($name) == number): $name; else: map.get($breakpoints, $name)
+	);
+
+	@if $width {
+		@media (min-width: $width) {
 			@content;
 		}
 	} @else {
-		@error "Unknown breakpoint: #{$name}. Please use one of: #{map.keys($breakpoints)}.";
+		@error "Unknown breakpoint: #{$name}. Use one of: #{list.join(map.keys($breakpoints), ", ")}, or pass a width (e.g., 900px).";
 	}
 }
