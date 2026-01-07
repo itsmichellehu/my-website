@@ -1,6 +1,6 @@
-@use "../../scss/abstracts/variables" as *;
-@use "../../scss/abstracts/breakpoints-mixins" as *;
-@use "../../scss/abstracts/placeholders" as *;
+@use "@scss/abstracts/variables" as *;
+@use "@scss/abstracts/breakpoints-mixins" as *;
+@use "@scss/abstracts/placeholders" as *;
 @use "../../components/NavBar/NavBar" as *;
 
 .hero-overview-wrapper {

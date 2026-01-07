@@ -1,4 +1,4 @@
-@use "../../scss/abstracts/all-abstracts" as *;
+@use "@scss/abstracts/all-abstracts" as *;
 
 .card-vertical {
 	display: flex;
@@ -36,7 +36,7 @@
 .card-vertical_subheader {
 	font-size: 1rem;
 	text-transform: uppercase;
-	font-family: 'Source Code Pro', monospace;
+	font-family: "Source Code Pro", monospace;
 	color: $dark-grey;
 	margin: 0;
 	letter-spacing: 1px;
