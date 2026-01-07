@@ -24,7 +24,8 @@ module.exports = {
 		path: path.resolve(__dirname, "dist"),
 		filename: "js/[name].[contenthash:8].js",
 		assetModuleFilename: "assets/[name].[contenthash:8][ext][query]",
-		clean: true
+		clean: true,
+		publicPath: "/" // adjust for your GitHub Pages repo name
 	},
 
 	module: {
