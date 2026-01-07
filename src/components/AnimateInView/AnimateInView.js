@@ -1,32 +1,33 @@
-import 'intersection-observer'; // Polyfill for older browsers
 import "./AnimateInView.scss";
 
-export function AnimateInView({ classAnimationMap, threshold = 0.1, rootMargin = '0px' } = {}) {
-  // Gather all elements based on classes from the map
-  const elements = Object.keys(classAnimationMap)
-    .flatMap(cls => Array.from(document.querySelectorAll(`.${cls}`)));
+export async function AnimateInView({ classAnimationMap, threshold = 0.1, rootMargin = "0px" } = {}) {
 
-  // Add the initial 'pre-animation' class to hide elements before they enter the viewport
-  elements.forEach(element => element.classList.add('pre-animation'));
+	const classes = Object.keys(classAnimationMap);
+	const selector = classes.map((cls) => `.${cls}`).join(",");
+	const elements = Array.from(document.querySelectorAll(selector));
 
-  const observer = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        // Find the matching class and corresponding animation
-        const targetClass = Object.keys(classAnimationMap).find(cls => entry.target.classList.contains(cls));
-        const animationClass = classAnimationMap[targetClass];
+	// Add pre-animation class and create a map for faster lookups
+	const classMap = new Map(classes.map((cls) => [cls, classAnimationMap[cls]]));
+	elements.forEach((el) => el.classList.add("pre-animation"));
 
-        if (animationClass) {
-          // Add Animate.css classes and remove the 'pre-animation' class to trigger fade-in
-          entry.target.classList.remove('pre-animation');
-          entry.target.classList.add('animate__animated', animationClass);
+	const observer = new IntersectionObserver(
+		(entries) => {
+			entries.forEach((entry) => {
+				if (entry.isIntersecting) {
+					// Find matching class
+					const targetClass = classes.find((cls) => entry.target.classList.contains(cls));
+					const animationClass = classMap.get(targetClass);
 
-          observer.unobserve(entry.target); // Stop observing after the animation triggers
-        }
-      }
-    });
-  }, { threshold, rootMargin });
+					if (animationClass) {
+						entry.target.classList.remove("pre-animation");
+						entry.target.classList.add("animate__animated", animationClass);
+						observer.unobserve(entry.target);
+					}
+				}
+			});
+		},
+		{ threshold, rootMargin }
+	);
 
-  // Observe each element
-  elements.forEach(element => observer.observe(element));
+	elements.forEach((el) => observer.observe(el));
 }
