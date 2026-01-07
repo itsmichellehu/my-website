@@ -1,10 +1,10 @@
+const path = require("path");
 const { merge } = require("webpack-merge");
 const common = require("./webpack.common");
 
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
-const CompressionPlugin = require("compression-webpack-plugin");
 
 module.exports = merge(common, {
 	mode: "production",
@@ -12,11 +12,7 @@ module.exports = merge(common, {
 
 	output: {
 		filename: "js/[name].[contenthash:8].js",
-		assetModuleFilename: "assets/images/[name].[contenthash:8][ext]"
-	},
-
-	module: {
-		rules: []
+		assetModuleFilename: "assets/[name].[contenthash:8][ext][query]"
 	},
 
 	optimization: {
@@ -42,21 +38,13 @@ module.exports = merge(common, {
 					format: { comments: false }
 				}
 			}),
-			new CssMinimizerPlugin(),
+			new CssMinimizerPlugin()
 		]
 	},
 
 	plugins: [
 		new MiniCssExtractPlugin({
 			filename: "css/[name].[contenthash:8].css"
-		}),
-
-		new CompressionPlugin({
-			algorithm: "brotliCompress",
-			test: /\.(js|css|html|svg)$/,
-			compressionOptions: { level: 11 },
-			threshold: 10240,
-			minRatio: 0.8
 		})
 	],
 
