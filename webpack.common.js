@@ -20,10 +20,8 @@ module.exports = {
 	},
 
 	resolve: {
-		extensions: [".js"],
-		alias: {
-			assets: path.resolve(__dirname, "src/assets")
-		}
+		extensions: ["", ".js"],
+		root: [path.resolve("./src")],
 	},
 
 	module: {
