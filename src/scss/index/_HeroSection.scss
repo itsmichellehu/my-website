@@ -86,7 +86,7 @@ $edu-exp-height-xl: 3.35rem;
 		display: grid;
 		grid-template-columns: 1fr;
 		grid-template-rows: repeat(2, auto);
-		grid-template-areas: 'a' 'b';
+		grid-template-areas: "a" "b";
 		width: 90vw;
 		margin: auto;
 		align-items: center;
@@ -99,7 +99,7 @@ $edu-exp-height-xl: 3.35rem;
 		}
 
 		@include breakpoint(med) {
-			grid-template-areas: 'b a';
+			grid-template-areas: "b a";
 			grid-template-columns: minmax(0, 4fr) 3fr;
 			grid-template-rows: auto;
 			gap: $wrapper-gap-med;
@@ -238,15 +238,16 @@ $edu-exp-height-xl: 3.35rem;
 		gap: 0.125rem;
 		grid-template-columns: 2px 1fr;
 		grid-template-rows: repeat(2, auto);
-		grid-template-areas: 'c a'
-			'c b';
+		grid-template-areas:
+			"c a"
+			"c b";
 		column-gap: 0.75rem;
 		justify-content: center;
 		margin-right: auto;
 
 		@include breakpoint(lg) {
 			grid-template-columns: $edu-exp-width-lg 2px auto;
-			grid-template-areas: 'a c b';
+			grid-template-areas: "a c b";
 		}
 
 		@include breakpoint(xl) {
@@ -311,7 +312,6 @@ $edu-exp-height-xl: 3.35rem;
 				height: $edu-exp-height-xl;
 			}
 		}
-
 	}
 }
 
@@ -358,9 +358,6 @@ $edu-exp-height-xl: 3.35rem;
 	}
 }
 
-
-
-
 .text-work-availability,
 .text-current-location,
 .text-slash {
@@ -390,7 +387,7 @@ $edu-exp-height-xl: 3.35rem;
 .green-dot {
 	width: 8px;
 	height: 8px;
-	background-color: #2Fa89F;
+	background-color: #2fa89f;
 	border-radius: 50%;
 	display: inline-block;
 	animation: pulse 2.5s infinite;
@@ -442,5 +439,5 @@ $edu-exp-height-xl: 3.35rem;
 
 // About Hero Buttons
 .ic-menu {
-	background-image: url(../assets/svg/home/ic-menu.svg);
+	background-image: url("assets/svg/home/ic-menu.svg");
 }
