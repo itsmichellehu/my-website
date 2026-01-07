@@ -19,43 +19,42 @@
 $super-light-grey: #fafafa;
 
 #hero {
-    background-color: #8BB7AA;
+	background-color: #80ada1;
 }
 
 /* iOS-specific styles */
 @media only screen and (min-device-width: 375px) and (max-device-width: 1024px) {
-
-    body,
-    #hero {
-        background-color: #8CB6AC;
-    }
+	body,
+	#hero {
+		background-color: #8cb6ac;
+	}
 }
 
 #overview {
-    background-color: transparent;
+	background-color: transparent;
 }
 
 #the-constraints {
-    background-color: $lightest-grey;
+	background-color: $lightest-grey;
 }
 
 #final-prototype {
-    background-color: $lightest-grey;
-    border: 0;
+	background-color: $lightest-grey;
+	border: 0;
 }
 
 #the-solution.content-full-width {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
 
-    @include breakpoint(med) {
-        gap: 2.5rem;
-    }
+	@include breakpoint(med) {
+		gap: 2.5rem;
+	}
 
-    @include breakpoint(lg) {
-        gap: 3rem;
-    }
+	@include breakpoint(lg) {
+		gap: 3rem;
+	}
 }
 
 // .navbar-top {
