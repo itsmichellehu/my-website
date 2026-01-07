@@ -10,10 +10,6 @@
 
 @use "index/all-index" as *;
 
-.default-nav-color {
-	background-color: white !important;
-}
-
 .hero-wrapper,
 .projects-wrapper {
 	max-width: $nav-footer-max-width !important;

@@ -1,4 +1,4 @@
-@use "../../scss/abstracts/all-abstracts" as *;
+@use "@scss/abstracts/all-abstracts" as *;
 
 $navbar-mobile-height: 3rem;
 $navbar-desktop-height: 4rem;
@@ -7,18 +7,13 @@ $navbar-logo-size-mobile: 1.5rem;
 
 nav {
 	display: flex;
-	position: fixed;
-	color: $black;
 	width: 100%;
 	align-items: center;
 	height: $navbar-mobile-height;
 	top: 0;
 	z-index: 2000;
 	transition: background-color 0.3s ease, top 0.3s ease;
-}
-
-.navbar {
-	background-color: transparent;
+	background-color: white;
 }
 
 .navbar-wrapper {
@@ -72,7 +67,7 @@ nav {
 }
 
 .nav-link-text {
-	color: $off-black !important;
+	color: $black;
 	font-size: 0.889rem !important;
 	transition: color 0.3s ease-in-out, width 0.3s ease-in-out, transform 0.3s ease-in-out;
 	font-weight: 350;
