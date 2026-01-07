@@ -22,14 +22,6 @@ $super-light-grey: #fafafa;
 	background-color: #80ada1;
 }
 
-/* iOS-specific styles */
-@media only screen and (min-device-width: 375px) and (max-device-width: 1024px) {
-	body,
-	#hero {
-		background-color: #8cb6ac;
-	}
-}
-
 #overview {
 	background-color: transparent;
 }
