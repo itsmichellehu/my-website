@@ -1,6 +1,7 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 const pages = ["index", "about", "boardspace", "postup", "tastebuds"];
 const isProduction = process.env.NODE_ENV === "production";
@@ -98,6 +99,15 @@ module.exports = {
 					inject: "body",
 					scriptLoading: "defer"
 				})
-		)
+		),
+		new CopyWebpackPlugin({
+			patterns: [
+				{
+					from: path.resolve(__dirname, "src/assets"),
+					to: "assets",
+					noErrorOnMissing: true
+				}
+			]
+		})
 	]
 };

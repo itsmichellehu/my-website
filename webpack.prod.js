@@ -5,16 +5,18 @@ const common = require("./webpack.common");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
-const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin");
+// const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin");
 
 module.exports = merge(common, {
 	mode: "production",
 	devtool: false,
 
 	output: {
+		path: path.resolve(__dirname, "dist"),
 		filename: "js/[name].[contenthash:8].js",
 		assetModuleFilename: "assets/[name].[contenthash:8][ext][query]",
-		publicPath: "/" // adjust for your GitHub Pages repo name
+		clean: true,
+		publicPath: "/"
 	},
 
 	optimization: {
@@ -38,15 +40,7 @@ module.exports = merge(common, {
 					format: { comments: false }
 				}
 			}),
-			new CssMinimizerPlugin(),
-			new ImageMinimizerPlugin({
-				minimizer: {
-					implementation: ImageMinimizerPlugin.imageminGenerate,
-					options: {
-						plugins: [["imagemin-webp", { quality: 100 }]]
-					}
-				}
-			})
+			new CssMinimizerPlugin()
 		]
 	},
 
