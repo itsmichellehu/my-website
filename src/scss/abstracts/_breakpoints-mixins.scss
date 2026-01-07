@@ -1,4 +1,6 @@
-//Media breakpoints
+@use "sass:map";
+
+// Media breakpoints
 $breakpoints: (
 	mobile-sm: 320px,
 	mobile-med: 375px,
@@ -11,17 +13,15 @@ $breakpoints: (
 	xxl: 1440px,
 	xxl-hero: 1480px,
 	xxxl: 1680px,
-	huge: 2000px,
+	huge: 2000px
 );
 
 @mixin breakpoint($name) {
-	@if map-has-key($breakpoints, $name) {
-		@media (min-width: map-get($breakpoints, $name)) {
+	@if map.has-key($breakpoints, $name) {
+		@media (min-width: map.get($breakpoints, $name)) {
 			@content;
 		}
-	}
-
-	@else {
-		@error "Unknown breakpoint: #{$name}. Please use one of: #{map-keys($breakpoints)}.";
+	} @else {
+		@error "Unknown breakpoint: #{$name}. Please use one of: #{map.keys($breakpoints)}.";
 	}
 }
