@@ -7,5 +7,11 @@
         }
     ],
     "liveSassCompile.settings.generateMap": false,
-    "livePreview.defaultPreviewPath": "/pages/home-page.html"
+    "livePreview.defaultPreviewPath": "/pages/home-page.html",
+    "liveshare.allowGuestDebugControl": true,
+    "liveshare.allowGuestTaskControl": true,
+    "liveshare.diagnosticLogging": true,
+    "liveshare.languages.allowGuestCommandControl": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "liveshare.diagnosticMode": true
 }
