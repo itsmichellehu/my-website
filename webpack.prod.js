@@ -1,134 +1,68 @@
-const path = require('path');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
-const glob = require('glob');
-const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
-const { PurgeCSSPlugin } = require('purgecss-webpack-plugin');
+const { merge } = require("webpack-merge");
+const common = require("./webpack.common");
 
-const PATHS = {
-    src: path.join(__dirname, 'src')
-};
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
+const TerserPlugin = require("terser-webpack-plugin");
+const CompressionPlugin = require("compression-webpack-plugin");
 
-const htmlPages = [
-    { template: 'index.html', chunks: ['index'] },
-    { template: 'about.html', chunks: ['about'] },
-    { template: 'boardspace.html', chunks: ['boardspace'] },
-    { template: 'postup.html', chunks: ['postup'] },
-    { template: 'tastebuds.html', chunks: ['tastebuds'] }
-];
+module.exports = merge(common, {
+	mode: "production",
+	devtool: false,
 
-module.exports = {
-    entry: {
-        index: './src/js/index.js',
-        about: './src/js/about.js',
-        boardspace: './src/js/boardspace.js',
-        postup: './src/js/postup.js',
-        tastebuds: './src/js/tastebuds.js',
-    },
-    output: {
-        filename: 'js/[name].js',
-        path: path.resolve(__dirname, 'dist'),
-        clean: true,
-    },
-    optimization: {
-        minimize: true,
-        minimizer: [
-            `...`,
-            new CssMinimizerPlugin(),
-        ],
-    },
-    stats: {
-        errorDetails: true
-    },
-    module: {
-        rules: [
-            {
-                test: /\.js$/,
-                exclude: /node_modules/,
-                use: {
-                    loader: 'babel-loader',
-                    options: {
-                        presets: ['@babel/preset-env']
-                    }
-                }
-            }, {
-                test: /\.(scss|css)$/,
-                use: [
-                    MiniCssExtractPlugin.loader,
-                    'css-loader',
-                    {
-                        loader: 'sass-loader',
-                        options: {
-                            implementation: require('sass'),
-                            sassOptions: {
-                                outputStyle: 'compressed',
-                            },
-                        },
-                    },
-                ],
-            },
-            {
-                test: /\.(png|jpe?g|gif|svg)$/i,
-                type: 'asset/resource',
-                use: [
-                    {
-                        loader: 'file-loader',
-                        options: {
-                            name: '[path][name].[ext]',
-                            outputPath: 'images',
-                        },
-                    },
-                    {
-                        loader: 'image-webpack-loader',
-                        options: {
-                            mozjpeg: {
-                                progressive: true,
-                                quality: 75,
-                            },
-                            optipng: {
-                                enabled: true,
-                            },
-                            pngquant: {
-                                quality: [0.65, 0.90],
-                                speed: 4,
-                            },
-                            gifsicle: {
-                                interlaced: false,
-                            },
-                            webp: {
-                                quality: 75,
-                            },
-                        },
-                    }
-                ]
-            }
-        ]
-    },
-    externals: {
-        jquery: 'jQuery',
-    },
-    plugins: [
-        new MiniCssExtractPlugin({
-            filename: '[name].css',
-            // chunkFilename: '[id].css',
-        }),
-        new PurgeCSSPlugin({
-            paths: glob.sync(`${PATHS.src}/**/*`, { nodir: true }),
-            safelist: {
-                standard: ['keep-this-class', /^dynamic-/]
-            },
-        }),
-        ...htmlPages.map(page => new HtmlWebpackPlugin({
-            template: `./src/${page.template}`,
-            filename: page.template,
-            chunks: page.chunks
-        })),
-        new CopyWebpackPlugin({
-            patterns: [
-                { from: 'src/assets', to: 'assets' }
-            ]
-        })
-    ],
-    devtool: false, // Correctly disable source maps
-};
+	output: {
+		filename: "js/[name].[contenthash:8].js",
+		assetModuleFilename: "assets/images/[name].[contenthash:8][ext]"
+	},
+
+	module: {
+		rules: []
+	},
+
+	optimization: {
+		minimize: true,
+		moduleIds: "deterministic",
+		runtimeChunk: "single",
+		splitChunks: {
+			chunks: "all",
+			cacheGroups: {
+				vendor: {
+					test: /[\\/]node_modules[\\/]/,
+					name: "vendors",
+					chunks: "all"
+				}
+			}
+		},
+		minimizer: [
+			new TerserPlugin({
+				parallel: true,
+				extractComments: false,
+				terserOptions: {
+					compress: { drop_console: true },
+					format: { comments: false }
+				}
+			}),
+			new CssMinimizerPlugin(),
+		]
+	},
+
+	plugins: [
+		new MiniCssExtractPlugin({
+			filename: "css/[name].[contenthash:8].css"
+		}),
+
+		new CompressionPlugin({
+			algorithm: "brotliCompress",
+			test: /\.(js|css|html|svg)$/,
+			compressionOptions: { level: 11 },
+			threshold: 10240,
+			minRatio: 0.8
+		})
+	],
+
+	performance: {
+		hints: "warning",
+		maxEntrypointSize: 512000,
+		maxAssetSize: 512000
+	}
+});
