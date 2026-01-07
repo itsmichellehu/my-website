@@ -8,7 +8,7 @@
         // Obtain handles to main elements
         var videoContainer = document.getElementById('videoContainer');
         var video = document.getElementById('video');
-        var videoControls = document.getElementById('video-controls');
+        var videoControls = document.getElementById('videoControls');
 
         // Hide the default controls
         video.controls = false;
