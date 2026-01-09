@@ -1,7 +1,7 @@
 import BackToTopButton from "./BackToTopButton/BackToTopButton";
 import ProgressBar from "./ProjectProgressBar/ProjectProgressBar";
-import "./HeroHeader/_HeroHeader.scss";
 import "@scss/sections/all-sections.scss";
+import "./ProjectComponents.scss";
 
 // import { initializeAccordion } from './ProjectAccordion/ProjectAccordion';
 import initializeTabs from "./TabsContainer/TabsContainer";
