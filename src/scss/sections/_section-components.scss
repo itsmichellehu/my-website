@@ -1,4 +1,4 @@
-@use "../abstracts/all-abstracts" as *;
+@use "@abstracts/all-abstracts" as *;
 
 .content-max-width {
 	width: 90vw;
@@ -136,13 +136,6 @@
 		margin-top: 6rem;
 	}
 }
-
-//
-// main {
-// 	div>img:only-child {
-// 		margin: 0;
-// 	}
-// }
 
 .container-full-width {
 	display: flex;

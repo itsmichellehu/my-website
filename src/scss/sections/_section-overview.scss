@@ -1,4 +1,4 @@
-@use "../abstracts/all-abstracts" as *;
+@use "@abstracts/all-abstracts" as *;
 
 $details-wrapper-gap: 1rem;
 $details-wrapper-gap-xl: 5rem;
@@ -22,9 +22,8 @@ $details-wrapper-gap-xxl: 8rem;
 		margin: auto;
 		width: 90vw;
 		gap: 1.5rem;
-		height: 100%;
 
-		&--boardspace {
+		&__boardspace {
 			max-width: 90vw;
 		}
 
@@ -36,7 +35,6 @@ $details-wrapper-gap-xxl: 8rem;
 		}
 
 		@include breakpoint(lg) {
-			height: fit-content;
 			margin: 0 auto;
 			gap: $details-wrapper-gap-xl;
 		}
@@ -353,18 +351,18 @@ $details-wrapper-gap-xxl: 8rem;
 		flex: 1;
 		gap: 2rem;
 		justify-content: space-between;
+		height: calc(40vh - $navbar-desktop-height);
 		max-height: 24rem;
 		padding-top: 3rem;
 	}
 
 	@include breakpoint(lg) {
-		height: 40vh;
 		padding-top: 3rem;
 		gap: 3rem;
 	}
 
 	@include breakpoint(xxl) {
-		height: 35vh;
+		height: calc(35vh);
 		max-height: none;
 	}
 }
