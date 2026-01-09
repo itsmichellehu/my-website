@@ -179,8 +179,8 @@ $solution-padding-xxl: 3rem;
 
 		@include breakpoint(lg) {
 			grid-template-columns: 1fr auto auto;
-			grid-template-rows: auto auto;
-			grid-template-areas: "d d d" "a b c";
+			grid-template-rows: auto;
+			grid-template-areas: "a b c";
 		}
 
 		//
@@ -211,6 +211,10 @@ $solution-padding-xxl: 3rem;
 		@include breakpoint(med) {
 			width: 100%;
 			margin-bottom: 1.5rem;
+		}
+
+		@include breakpoint(lg) {
+			margin-bottom: 0;
 		}
 
 		&-previous,
