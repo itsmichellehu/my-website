@@ -1,4 +1,6 @@
 import "@scss/pages/home/index.scss";
+import initLoadingAnimation from "./LoadingScreen/LoadingScreen";
+import "@components/LoadingScreen/register";
 
 // const scrollableContent = document.querySelector('.scrollable-content');
 // const scrollbarThumb = document.querySelector('.c-scrollbar_thumb');
@@ -33,6 +35,9 @@ const scrollbar = document.querySelector(".c-scrollbar");
 let scrollTimeout;
 
 function updateScrollbar() {
+	// Return early if elements don't exist
+	if (!scrollableContent || !scrollbarThumb || !scrollbar) return;
+
 	const contentHeight = scrollableContent.scrollHeight;
 	const containerHeight = scrollableContent.clientHeight;
 
@@ -65,26 +70,9 @@ updateScrollbar();
 
 // Recalculate scrollbar on resize
 window.addEventListener("resize", updateScrollbar);
-
-import initLoadingAnimation from "@components/LoadingScreen/LoadingScreen";
-
-// Initialize the loading animation on initial load
-initLoadingAnimation();
-
-// Listen for route changes (for SPAs with client-side routing)
-window.addEventListener("popstate", () => {
-	initLoadingAnimation();
-});
-
-// Optional: Trigger animation manually on navigation (if using a custom router)
-document.addEventListener("click", (event) => {
-	const target = event.target.closest("a");
-	if (target && target.getAttribute("href").startsWith("/")) {
-		initLoadingAnimation();
-	}
-});
-
 document.addEventListener("DOMContentLoaded", () => {
 	initLoadingAnimation();
-	document.getElementById("content").style.display = "none"; // Ensure content is hidden initially
 });
+
+// Loading animation is now initialized globally via
+// @components/LoadingScreen/register imported in main.js.
