@@ -22,9 +22,9 @@
 	flex-wrap: wrap !important;
 }
 
-%flex-start {
+%align-self-flex-start {
 	display: flex !important;
-	flex-direction: flex-start !important;
+	align-self: flex-start !important;
 }
 
 %flex-nowrap {

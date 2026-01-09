@@ -1,4 +1,4 @@
-@use "../abstracts/all-abstracts" as *;
+@use "@abstracts/all-abstracts" as *;
 
 html {
 	text-size-adjust: none;
@@ -38,7 +38,11 @@ body {
 main {
 	position: relative;
 	background-color: white;
-	margin-top: $navbar-mobile-height;
+	margin-top: $navbar-mobile-height !important;
+
+	@include breakpoint(med) {
+		margin-top: $navbar-desktop-height !important;
+	}
 }
 
 /* Reset margins and padding for the HTML and body */
@@ -98,6 +102,10 @@ summary {
 	display: block;
 }
 
+section {
+	width: 100vw;
+}
+
 hr {
 	box-sizing: content-box;
 	height: 0;
@@ -132,7 +140,7 @@ a {
 		font-size: 1.25rem;
 	}
 
-	span.anchor-text {
+	span.anchor-link {
 		font-weight: 400;
 		@include hover-underline-self($teal-accent);
 	}
