@@ -1,5 +1,5 @@
 import "@scss/pages/home/index.scss";
-import initLoadingAnimation from "./LoadingScreen/LoadingScreen";
+import initLoadingAnimation from "@components/LoadingScreen/LoadingScreen";
 import "@components/LoadingScreen/register";
 
 // const scrollableContent = document.querySelector('.scrollable-content');
