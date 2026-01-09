@@ -1,32 +1,38 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 
-const pages = ["index", "about", "boardspace", "postup", "tastebuds"];
+// const pages = ["index", "about", "boardspace", "postup", "tastebuds"];
+const pages = ["index", "about", "postup", "tastebuds"];
 const isProduction = process.env.NODE_ENV === "production";
 
 module.exports = {
 	resolve: {
-		extensions: [".js"],
-		roots: [path.resolve("./src")],
+		extensions: [".js", ".json"],
 		alias: {
+			"@": path.resolve(__dirname, "src/"),
+			"@assets": path.resolve(__dirname, "src/assets"),
+			"@js": path.resolve(__dirname, "src/js"),
+			"@components": path.resolve(__dirname, "src/components"),
 			"@scss": path.resolve(__dirname, "src/scss"),
-			"@components": path.resolve(__dirname, "src/components")
-		}
+			"@abstracts": path.resolve(__dirname, "src/scss/abstracts"),
+			"@base": path.resolve(__dirname, "src/scss/base"),
+			"@sections": path.resolve(__dirname, "src/scss/sections"),
+			"@utilities": path.resolve(__dirname, "src/scss/utilities"),
+			"@pages": path.resolve(__dirname, "src/scss/pages"),
+		},
 	},
 
-	entry: pages.reduce((entries, page) => {
-		entries[page] = `./src/js/${page}.js`;
-		return entries;
-	}, {}),
+	entry: {
+		main: "./src/js/main.js",
+	},
 
 	output: {
 		path: path.resolve(__dirname, "dist"),
 		filename: "js/[name].[contenthash:8].js",
 		assetModuleFilename: "assets/[name].[contenthash:8][ext][query]",
 		clean: true,
-		publicPath: "/" // adjust for your GitHub Pages repo name
+		publicPath: "./",
 	},
 
 	module: {
@@ -37,27 +43,26 @@ module.exports = {
 				use: {
 					loader: "babel-loader",
 					options: {
-						presets: ["@babel/preset-env"]
-					}
-				}
+						presets: ["@babel/preset-env"],
+					},
+				},
 			},
 
 			{
 				test: /\.(png|jpe?g|gif|svg|webp)$/i,
 				type: "asset/resource",
 				parser: {
-					dataUrlCondition: { maxSize: 4 * 1024 }
-				}
+					dataUrlCondition: { maxSize: 4 * 1024 },
+				},
 			},
 
 			{
 				test: /\.(mp4|webm)$/i,
 				type: "asset/resource",
 				generator: {
-					filename: "assets/videos/[name].[contenthash:8][ext]"
-				}
+					filename: "assets/videos/[name].[contenthash:8][ext]",
+				},
 			},
-
 			{
 				test: /\.(scss|css)$/,
 				use: [
@@ -69,24 +74,23 @@ module.exports = {
 							implementation: require("sass"),
 							sassOptions: {
 								includePaths: [
-									path.join(__dirname, "src"),
 									path.resolve(__dirname, "src/scss"),
-									path.join(__dirname, "src/components")
-								]
-							}
-						}
-					}
-				]
+									path.resolve(__dirname, "src/styles"),
+								],
+							},
+						},
+					},
+				],
 			},
 
 			{
 				test: /\.(woff2?|ttf|eot|otf)$/i,
 				type: "asset/resource",
 				generator: {
-					filename: "assets/fonts/[name].[contenthash:8][ext]"
-				}
-			}
-		]
+					filename: "assets/fonts/[name].[contenthash:8][ext]",
+				},
+			},
+		],
 	},
 
 	plugins: [
@@ -95,19 +99,20 @@ module.exports = {
 				new HtmlWebpackPlugin({
 					template: `./src/${page}.html`,
 					filename: `${page}.html`,
-					chunks: [page],
+					chunks: ["main"], // main.js on every page
 					inject: "body",
-					scriptLoading: "defer"
+					scriptLoading: "defer",
 				})
 		),
+
 		new CopyWebpackPlugin({
 			patterns: [
 				{
 					from: path.resolve(__dirname, "src/assets"),
 					to: "assets",
-					noErrorOnMissing: true
-				}
-			]
-		})
-	]
+					noErrorOnMissing: true,
+				},
+			],
+		}),
+	],
 };

@@ -1,11 +1,10 @@
 const path = require("path");
 const { merge } = require("webpack-merge");
-const common = require("./webpack.common");
+const common = require("./webpack.common.js");
 
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
-// const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin");
 
 module.exports = merge(common, {
 	mode: "production",
@@ -16,7 +15,7 @@ module.exports = merge(common, {
 		filename: "js/[name].[contenthash:8].js",
 		assetModuleFilename: "assets/[name].[contenthash:8][ext][query]",
 		clean: true,
-		publicPath: "/"
+		publicPath: "/",
 	},
 
 	optimization: {
@@ -27,9 +26,9 @@ module.exports = merge(common, {
 				vendor: {
 					test: /[\\/]node_modules[\\/]/,
 					name: "vendors",
-					chunks: "all"
-				}
-			}
+					chunks: "all",
+				},
+			},
 		},
 		minimizer: [
 			new TerserPlugin({
@@ -37,22 +36,46 @@ module.exports = merge(common, {
 				extractComments: false,
 				terserOptions: {
 					compress: { drop_console: true },
-					format: { comments: false }
-				}
+					format: { comments: false },
+				},
 			}),
-			new CssMinimizerPlugin()
-		]
+			new CssMinimizerPlugin(),
+		],
+	},
+
+	module: {
+		rules: [
+			{
+				test: /\.(scss|css)$/,
+				use: [
+					MiniCssExtractPlugin.loader,
+					"css-loader",
+					{
+						loader: "sass-loader",
+						options: {
+							implementation: require("sass"),
+							sassOptions: {
+								includePaths: [
+									path.resolve(__dirname, "src/scss"),
+									path.resolve(__dirname, "src/styles"),
+								],
+							},
+						},
+					},
+				],
+			},
+		],
 	},
 
 	plugins: [
 		new MiniCssExtractPlugin({
-			filename: "css/[name].[contenthash:8].css"
-		})
+			filename: "css/[name].[contenthash:8].css",
+		}),
 	],
 
 	performance: {
 		hints: "warning",
 		maxEntrypointSize: 512000,
-		maxAssetSize: 512000
-	}
+		maxAssetSize: 512000,
+	},
 });

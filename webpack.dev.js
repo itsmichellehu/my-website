@@ -1,13 +1,15 @@
 const path = require("path");
 const { merge } = require("webpack-merge");
-const common = require("./webpack.common");
+const common = require("./webpack.common.js");
 
 module.exports = merge(common, {
 	mode: "development",
 	devtool: "cheap-module-source-map",
 
 	output: {
-		filename: "js/[name].js"
+		path: path.resolve(__dirname, "dist"),
+		filename: "js/[name].js",
+		publicPath: "/",
 	},
 
 	devServer: {
@@ -16,6 +18,6 @@ module.exports = merge(common, {
 		open: true,
 		watchFiles: ["src/**/*"],
 		port: 9000,
-		allowedHosts: "all"
-	}
+		allowedHosts: "all",
+	},
 });
