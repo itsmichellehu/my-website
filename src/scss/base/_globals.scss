@@ -28,6 +28,7 @@ body {
 	overflow-x: hidden;
 	overflow-y: scroll;
 	position: relative;
+	height: 100vh;
 
 	@include breakpoint(med) {
 		background-color: white;
@@ -37,6 +38,7 @@ body {
 main {
 	position: relative;
 	background-color: white;
+	margin-top: $navbar-mobile-height;
 }
 
 /* Reset margins and padding for the HTML and body */
