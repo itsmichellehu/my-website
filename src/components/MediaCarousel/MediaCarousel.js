@@ -1,3 +1,5 @@
+import "./_MediaCarousel.scss";
+
 export default class MediaCarousel {
 	constructor(carouselContainerSelector) {
 		this.carouselContainer = document.querySelector(carouselContainerSelector);

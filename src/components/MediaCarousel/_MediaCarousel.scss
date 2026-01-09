@@ -1,6 +1,8 @@
-@use "@scss/abstracts/all-abstracts" as *;
-@use "./carousel-variables" as *;
-@forward "./carousel-variables";
+@use "@abstracts/all-abstracts" as *;
+
+$design-walkthrough-carousel-width: 90vw;
+$design-walkthrough-carousel-max-width: 80rem;
+$side-content-width: 20rem;
 
 .media-carousel-wrapper {
 	width: 100vw;
@@ -121,8 +123,6 @@
 		.subheading {
 			line-height: 130%;
 		}
-
-
 	}
 
 	video {
@@ -142,7 +142,7 @@
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 		grid-template-rows: repeat(2, auto);
-		grid-template-areas: 'a b' 'c d';
+		grid-template-areas: "a b" "c d";
 		gap: 1.5rem;
 		align-items: center;
 		justify-content: center;
@@ -157,7 +157,6 @@
 
 		p {
 			text-align: center;
-
 		}
 
 		p:first-child {
@@ -192,7 +191,6 @@
 		flex-direction: row;
 		align-items: center;
 
-
 		video {
 			width: 14rem;
 		}
@@ -210,7 +208,6 @@
 		}
 	}
 }
-
 
 // .media-carousel-item:last-child {
 // 	margin-right: 4rem;
