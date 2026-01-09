@@ -1,17 +1,12 @@
-import '../scss/about.scss';
+import "@pages/about/_index.scss";
 
-import '../components/GlobalComponents';
-import { initializeFaqAccordion } from "../components/FaqAccordion/FaqAccordion";
-import ProgressBar from '../components/ProjectProgressBar/ProjectProgressBar';
-import '../components/Scrollable/scrollable';
+import { initializeFaqAccordion } from "@components/FaqAccordion/FaqAccordion";
+import ProgressBar from "@components/ProjectProgressBar/ProjectProgressBar";
+import "@components/Scrollable/scrollable";
+import "@components/ToolboxSwiper/ToolboxSwiper";
 
-import BackToTopButton from '../components/BackToTopButton/BackToTopButton';
+document.addEventListener("DOMContentLoaded", () => {
+	ProgressBar();
 
-document.addEventListener('DOMContentLoaded', () => {
-    BackToTopButton();
-    Footer();
-    NavBar();
-    ProgressBar();
-
-    initializeFaqAccordion();
+	initializeFaqAccordion();
 });

@@ -1,6 +1,4 @@
-import "@scss/index.scss";
-import "../components/GlobalComponents";
-import "../components/ProjectComponents";
+import "@scss/pages/home/index.scss";
 
 // const scrollableContent = document.querySelector('.scrollable-content');
 // const scrollbarThumb = document.querySelector('.c-scrollbar_thumb');
@@ -68,7 +66,7 @@ updateScrollbar();
 // Recalculate scrollbar on resize
 window.addEventListener("resize", updateScrollbar);
 
-import initLoadingAnimation from "../components/LoadingScreen/LoadingScreen";
+import initLoadingAnimation from "@components/LoadingScreen/LoadingScreen";
 
 // Initialize the loading animation on initial load
 initLoadingAnimation();
