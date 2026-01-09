@@ -99,26 +99,16 @@ footer {
 
 	.anchor-link {
 		padding-right: 0.75rem;
-
-		p {
-			width: fit-content;
-			font-weight: 400 !important;
-			text-wrap: nowrap;
-			line-height: 100%;
-		}
-
-		a {
-			color: $teal-accent !important;
-			margin-bottom: 0;
-		}
+		color: $teal-accent !important;
+		margin-bottom: 0;
+		width: fit-content;
+		height: fit-content;
+		font-weight: 400 !important;
+		text-wrap: nowrap;
+		line-height: 100%;
 
 		@include breakpoint(med) {
 			border-right: 2px solid $teal-accent;
-		}
-
-		&:last-child {
-			padding-right: 0;
-			border: 0;
 		}
 	}
 
@@ -127,7 +117,9 @@ footer {
 		flex-direction: row;
 		gap: 0.5rem;
 		align-items: center;
-		margin-bottom: $content-margin-bottom !important;
+		margin-bottom: 0;
+		padding-right: 0;
+		border: 0;
 
 		@include breakpoint(med) {
 			display: flex;
