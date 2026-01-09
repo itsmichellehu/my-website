@@ -1,6 +1,7 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 // const pages = ["index", "about", "boardspace", "postup", "tastebuds"];
 const pages = ["index", "about", "postup", "tastebuds"];
@@ -29,8 +30,8 @@ module.exports = {
 
 	output: {
 		path: path.resolve(__dirname, "dist"),
-		filename: "js/[name].[contenthash:8].js",
-		assetModuleFilename: "assets/[name].[contenthash:8][ext][query]",
+		filename: "js/[name].js",
+		assetModuleFilename: "assets/[name].[ext][query]",
 		clean: true,
 		publicPath: "./",
 	},
@@ -85,20 +86,19 @@ module.exports = {
 			{
 				test: /\.(scss|css)$/,
 				use: [
-					"style-loader",
+					isProduction ? MiniCssExtractPlugin.loader : "style-loader",
 					"css-loader",
 					{
 						loader: "sass-loader",
 						options: {
 							implementation: require("sass"),
 							sassOptions: {
-								includePaths: [path.resolve(__dirname, "src/scss")],
+								includePaths: [path.resolve(__dirname, "../src/scss")],
 							},
 						},
 					},
 				],
 			},
-
 			{
 				test: /\.(woff2?|ttf|eot|otf)$/i,
 				type: "asset/resource",

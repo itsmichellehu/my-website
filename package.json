@@ -1,11 +1,11 @@
 {
 	"scripts": {
-		"start": "webpack serve --config webpack.dev.js --open",
-		"dev": "webpack serve --config webpack.dev.js --open",
-		"build": "webpack --config webpack.prod.js",
+		"start": "NODE_ENV=development webpack serve --config webpack.dev.js",
+		"dev": "NODE_ENV=development webpack serve --config webpack.dev.js",
+		"build": "NODE_ENV=production webpack --config webpack.prod.js",
 		"serve": "npx serve dist",
 		"check-deps": "node checkDependencies.js",
-		"clean": "rimraf node_modules/.cache dist"
+		"clean": "rimraf node_modules/.cache dist && npm install"
 	},
 	"devDependencies": {
 		"@babel/core": "^7.28.5",

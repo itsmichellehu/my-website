@@ -21,7 +21,7 @@ module.exports = merge(common, {
 		filename: "js/[name].[contenthash:8].js",
 		assetModuleFilename: "assets/[name].[contenthash:8][ext][query]",
 		clean: true,
-		publicPath: "/",
+		publicPath: "./",
 	},
 
 	optimization: {
@@ -50,28 +50,7 @@ module.exports = merge(common, {
 	},
 
 	module: {
-		rules: [
-			{
-				test: /\.(scss|css)$/,
-				use: [
-					MiniCssExtractPlugin.loader,
-					"css-loader",
-					{
-						loader: "sass-loader",
-						options: {
-							implementation: require("sass"),
-							sassOptions: {
-								includePaths: [
-									path.resolve(__dirname, "src/scss"),
-									path.resolve(__dirname, "src/styles"),
-								],
-								outputStyle: "compressed",
-							},
-						},
-					},
-				],
-			},
-		],
+		rules: [],
 	},
 
 	plugins: [
