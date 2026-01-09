@@ -1,4 +1,4 @@
-@use "@scss/abstracts/all-abstracts" as *;
+@use "@abstracts/all-abstracts" as *;
 
 nav {
 	display: flex;
@@ -9,6 +9,8 @@ nav {
 	z-index: 2000;
 	transition: background-color 0.3s ease, top 0.3s ease;
 	background-color: white;
+	position: fixed;
+	border-bottom: 1.25px solid $light-grey;
 }
 
 .navbar-wrapper {

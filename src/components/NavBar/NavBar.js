@@ -1,6 +1,8 @@
+import "./_NavBar.scss";
+
 function NavBar() {
 	const navbarHTML = `
-        <nav id="navbar" class="navbar default-nav-color">
+        <nav class="navbar default-nav-color">
             <div id="navbar-wrapper" class="navbar-wrapper">
                 <div class="navbar-logo-wrapper show-sm-flex">
                     <a href="/"><img src="assets/svg/home/logo-mhu-black.svg" class="navbar-logo-image" alt="Logo" /></a>
