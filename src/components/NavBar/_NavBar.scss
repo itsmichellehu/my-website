@@ -7,7 +7,9 @@ nav {
 	height: $navbar-mobile-height;
 	top: 0;
 	z-index: 2000;
-	transition: background-color 0.3s ease, top 0.3s ease;
+	transition:
+		background-color 0.3s ease,
+		top 0.3s ease;
 	background-color: white;
 	position: fixed;
 	border-bottom: 1.25px solid $light-grey;
@@ -25,7 +27,6 @@ nav {
 		width: 90%;
 		max-width: $nav-footer-max-width;
 		gap: 0.5rem;
-		margin-top: 0.5rem;
 	}
 
 	@include breakpoint(xl) {
@@ -42,6 +43,7 @@ nav {
 
 	a {
 		margin-bottom: 0;
+		padding: 0;
 	}
 }
 
@@ -66,7 +68,10 @@ nav {
 .nav-link-text {
 	color: $black;
 	font-size: 0.889rem !important;
-	transition: color 0.3s ease-in-out, width 0.3s ease-in-out, transform 0.3s ease-in-out;
+	transition:
+		color 0.3s ease-in-out,
+		width 0.3s ease-in-out,
+		transform 0.3s ease-in-out;
 	font-weight: 350;
 	margin: auto !important;
 	text-wrap: nowrap;
