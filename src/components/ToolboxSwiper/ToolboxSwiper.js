@@ -1,20 +1,36 @@
-var swiper = new Swiper(".mySwiper", {
-  pagination: {
-    el: ".swiper-pagination",
-  },
-});
+// src/js/components/ToolboxSwiper.js
+import "./_ToolboxSwiper.scss";
 
-var swiper = new Swiper(".hmuSwiper", {
-  effect: "cards",
-  grabCursor: true,
-});
+export default function ToolboxSwiper() {
+	const mySwiperEl = document.querySelector(".mySwiper");
+	const hmuSwiperEl = document.querySelector(".hmuSwiper");
 
-var swiper = new Swiper(".hmuSwiper", {
-  effect: "cards",
-  grabCursor: true,
-  loop: false // Ensure loop is false for proper direction handling
-});
+	if (!mySwiperEl && !hmuSwiperEl) return;
 
-document.getElementById('resetSwiper').addEventListener('click', function () {
-  swiper.slideTo(0, swiper.params.speed, true); // Use the default speed and enable a runCallback if needed
-});
+	let mySwiper;
+	let hmuSwiper;
+
+	if (mySwiperEl) {
+		mySwiper = new Swiper(".mySwiper", {
+			pagination: {
+				el: ".swiper-pagination",
+			},
+		});
+	}
+
+	if (hmuSwiperEl) {
+		hmuSwiper = new Swiper(".hmuSwiper", {
+			effect: "cards",
+			grabCursor: true,
+			loop: false,
+		});
+	}
+
+	const resetBtn = document.getElementById("resetSwiper");
+
+	if (resetBtn && hmuSwiper) {
+		resetBtn.addEventListener("click", () => {
+			hmuSwiper.slideTo(0, hmuSwiper.params.speed, true);
+		});
+	}
+}
