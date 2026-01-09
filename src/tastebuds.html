@@ -96,34 +96,31 @@
 		/>
 	</head>
 
-	<body>
+	<body data-page="tastebuds">
 		<div class="progress-bar-container">
 			<div class="progress-bar"></div>
 		</div>
 		<main>
 			<section
-				id="hero-overview"
+				id="hero"
 				class="hero-overview-wrapper"
 			>
-				<div
-					id="hero"
-					class="hero hero-tastebuds"
-				>
-					<video
-						id="exclude-video-jquery"
-						autoplay="autoplay"
-						autoplay
-						loop
-						muted
-						disablePictureInPicture
-						playsinline
-						class="hero-video hero-video-tastebuds"
-					>
-						<source
-							src="assets/images/thumbs/thumb-tastebuds-yellow-bg.mp4"
-							type="video/mp4"
-						/>
-					</video>
+				<div class="hero hero-tastebuds">
+					<div class="hero-video-wrapper">
+						<video
+							class="hero-video hero-video-tastebuds"
+							autoplay
+							loop
+							muted
+							disablePictureInPicture
+							playsinline
+						>
+							<source
+								src="assets/images/thumbs/thumb-tastebuds-yellow-bg.mp4"
+								type="video/mp4"
+							/>
+						</video>
+					</div>
 				</div>
 				<section
 					id="overview"
@@ -171,7 +168,7 @@
 										<div class="overview__tools-logo-wrapper overview__tools-logo-wrapper--figma">
 											<img
 												loading="lazy"
-												src="assets/images/toolbox-logos/figma.png"
+												src="assets/images/toolbox-logos/logo-figma.png"
 												alt=""
 											/>
 										</div>
@@ -186,14 +183,14 @@
 											<img
 												alt=""
 												loading="lazy"
-												src="assets/images/tastebuds/logo-miro.png"
+												src="assets/images/toolbox-logos/logo-miro.webp"
 											/>
 										</div>
 										<div class="overview__tools-logo-wrapper overview__tools-logo-wrapper--canva">
 											<img
 												alt=""
 												loading="lazy"
-												src="assets/images/tastebuds/logo-logo-canva.webp"
+												src="assets/images/toolbox-logos/logo-canva.webp"
 											/>
 										</div>
 									</div>
@@ -819,6 +816,7 @@
 													<div class="blockquote_author">
 														<img
 															alt="Responsive Image"
+															aria-hidden="true"
 															class="hide blockquote_author-image"
 															src="assets/images/postup/interview-adam.png"
 														/>
@@ -906,7 +904,7 @@
 									alt=""
 									class="img-competitor-logo"
 									loading="lazy"
-									src="assets/images/tastebuds/logo-yelp.webp"
+									src="assets/images/toolbox-logos/logo-yelp.webp"
 								/>
 								<p>Yelp</p>
 							</button>
@@ -919,7 +917,7 @@
 										alt=""
 										class="img-google-maps"
 										loading="lazy"
-										src="assets/images/tastebuds/logo-google-maps.webp"
+										src="assets/images/toolbox-logos/logo-google-maps.webp"
 									/>
 								</div>
 								<p>Google Maps</p>
@@ -3329,7 +3327,7 @@
 						if (carousel.scrollLeft > 0) {
 							carousel.scrollBy({
 								left: -carousel.clientWidth - 16,
-								behavior: "smooth"
+								behavior: "smooth",
 							});
 						}
 					});
@@ -3340,7 +3338,7 @@
 						if (carousel.scrollLeft < maxScrollLeft) {
 							carousel.scrollBy({
 								left: carousel.clientWidth + 16,
-								behavior: "smooth"
+								behavior: "smooth",
 							});
 						}
 					});
