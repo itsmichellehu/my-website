@@ -1,21 +1,26 @@
-@use "@scss/abstracts/variables" as *;
-@use "@scss/abstracts/breakpoints-mixins" as *;
-@use "@scss/abstracts/placeholders" as *;
-@use "../../components/NavBar/NavBar" as *;
+@use "@abstracts/all-abstracts" as *;
 
 .hero-overview-wrapper {
 	@extend %flex-col;
+// 
+// 	@include breakpoint(med) {
+// 		height: 100vh;
+// 	}
+
+	@include breakpoint(xl) {
+		max-height: 66rem;
+	}
 }
 
 .hero {
-	@extend %flex-start;
+	@extend %align-self-flex-start;
 	height: auto;
 	overflow: hidden;
 	min-height: 17rem;
-	height: 60vh;
+	height: calc(60vh - $navbar-mobile-height);
 	max-height: 20.25rem;
-	padding-top: calc($navbar-mobile-height + 1rem);
 	width: 100%;
+	padding-top: 2rem;
 
 	@include breakpoint(med) {
 		max-height: 36rem;
@@ -27,7 +32,7 @@
 	}
 
 	@include breakpoint(xxl) {
-		height: 65vh;
+		height: calc(55vh - $navbar-desktop-height);
 	}
 }
 
@@ -60,12 +65,5 @@
 		&-tastebuds {
 			max-width: 28rem;
 		}
-	}
-
-}
-
-@include breakpoint(med) {
-	.hero-overview-wrapper {
-		max-height: 100vh;
 	}
 }
