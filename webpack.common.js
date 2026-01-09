@@ -54,8 +54,27 @@ module.exports = {
 				parser: {
 					dataUrlCondition: { maxSize: 4 * 1024 },
 				},
+				use: [
+					{
+						loader: "image-webpack-loader",
+						options: {
+							optipng: {
+								enabled: false,
+							},
+							pngquant: {
+								quality: [0.75, 0.95],
+								speed: 4,
+							},
+							gifsicle: {
+								interlaced: false,
+							},
+							webp: {
+								quality: 100,
+							},
+						},
+					},
+				],
 			},
-
 			{
 				test: /\.(mp4|webm)$/i,
 				type: "asset/resource",
@@ -66,17 +85,14 @@ module.exports = {
 			{
 				test: /\.(scss|css)$/,
 				use: [
-					isProduction ? MiniCssExtractPlugin.loader : "style-loader",
+					"style-loader",
 					"css-loader",
 					{
 						loader: "sass-loader",
 						options: {
 							implementation: require("sass"),
 							sassOptions: {
-								includePaths: [
-									path.resolve(__dirname, "src/scss"),
-									path.resolve(__dirname, "src/styles"),
-								],
+								includePaths: [path.resolve(__dirname, "src/scss")],
 							},
 						},
 					},
@@ -100,7 +116,7 @@ module.exports = {
 					template: `./src/${page}.html`,
 					filename: `${page}.html`,
 					chunks: ["main"], // main.js on every page
-					inject: "body",
+					inject: "head",
 					scriptLoading: "defer",
 				})
 		),

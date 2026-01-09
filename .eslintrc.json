@@ -15,6 +15,51 @@
 	},
 	"rules": {
 		"no-console": "off", // Disable warnings for `console.log` statements
-		"no-unused-vars": ["warn", { "vars": "all", "args": "after-used", "ignoreRestSiblings": false }]
-	}
+		"no-unused-vars": [
+			"warn",
+			{
+				"vars": "all",
+				"args": "after-used",
+				"ignoreRestSiblings": false
+			}
+		],
+		"vue/html-self-closing": [
+			"error",
+			{
+				"html": {
+					"void": "never", // <- Remove / in <meta />
+					"normal": "always",
+					"component": "always"
+				},
+				"vue/html-self-closing": [
+					"error",
+					{
+						"html": {
+							"void": "never", // <- Remove / in <meta />
+							"normal": "always",
+							"component": "always"
+						}
+					}
+				],
+				"prettier/prettier": [
+					"error",
+					{
+						"singleAttributePerLine": false,
+						"htmlWhitespaceSensitivity": "ignore"
+					}
+				]
+			}
+		],
+		"prettier/prettier": [
+			"error",
+			{
+				"singleAttributePerLine": false,
+				"htmlWhitespaceSensitivity": "ignore"
+			}
+		]
+	},
+	"extends": [
+		"plugin:vue/vue3-recommended",
+		"plugin:prettier/recommended"
+	]
 }

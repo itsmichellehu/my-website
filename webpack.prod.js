@@ -1,10 +1,16 @@
 const path = require("path");
 const { merge } = require("webpack-merge");
 const common = require("./webpack.common.js");
+const glob = require("glob");
 
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
+const { PurgeCSSPlugin } = require("purgecss-webpack-plugin");
+
+const PATHS = {
+	src: path.join(__dirname, "src"),
+};
 
 module.exports = merge(common, {
 	mode: "production",
@@ -59,6 +65,7 @@ module.exports = merge(common, {
 									path.resolve(__dirname, "src/scss"),
 									path.resolve(__dirname, "src/styles"),
 								],
+								outputStyle: "compressed",
 							},
 						},
 					},
@@ -70,6 +77,12 @@ module.exports = merge(common, {
 	plugins: [
 		new MiniCssExtractPlugin({
 			filename: "css/[name].[contenthash:8].css",
+		}),
+
+		new PurgeCSSPlugin({
+			paths: glob.sync(`${PATHS.src}/**/*`, { nodir: true }),
+			only: ["main"], // Only process main bundle
+			safelist: ["html", "body"], // Keep essential selectors
 		}),
 	],
 
