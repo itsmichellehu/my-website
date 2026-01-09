@@ -1,3 +1,5 @@
+import './_TabsContainer.scss';
+
 export default function initializeTabs() {
     const tabContainers = document.querySelectorAll('.tabs-container');
 

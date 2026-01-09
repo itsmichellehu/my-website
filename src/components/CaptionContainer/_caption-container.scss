@@ -1,4 +1,4 @@
-@use "@scss/abstracts/all-abstracts" as *;
+@use "@abstracts/all-abstracts" as *;
 
 .caption-container {
 	height: fit-content;
@@ -17,5 +17,4 @@
 		width: 100%;
 		margin-right: 1rem;
 	}
-
 }
