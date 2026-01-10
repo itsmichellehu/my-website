@@ -29,6 +29,7 @@ blockquote {
 		@extend %flex-row;
 		align-items: center;
 		gap: 1rem;
+		margin-bottom: 0;
 	}
 
 	&_author-image {
