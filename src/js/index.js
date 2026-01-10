@@ -1,6 +1,4 @@
 import "@scss/pages/home/index.scss";
-import initLoadingAnimation from "@components/LoadingScreen/LoadingScreen";
-import "@components/LoadingScreen/register";
 
 // const scrollableContent = document.querySelector('.scrollable-content');
 // const scrollbarThumb = document.querySelector('.c-scrollbar_thumb');

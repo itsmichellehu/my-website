@@ -17,17 +17,16 @@ function NavBar() {
         </nav>
     `;
 
-	// Insert the navbar HTML if it's not already in the document
-	if (!document.getElementById("navbar")) {
+	if (!document.querySelector("navbar")) {
 		document.body.insertAdjacentHTML("afterbegin", navbarHTML);
 	}
 
-	window.addEventListener("DOMContentLoaded", () => {
 		const navbar = document.querySelector(".navbar");
 		let lastScrollY = window.scrollY;
 
 		// Apply transition to navbar styles
 		navbar.style.transition = "top 0.3s ease, opacity 0.3s ease";
+		navbar.style.top = "0"; // Ensure it's shown initially
 
 		// Get the navbar's dynamic height
 		const getNavbarHeight = () => navbar.offsetHeight; // Now dynamically gets the actual navbar height
@@ -77,14 +76,14 @@ function NavBar() {
 		const setActiveNavItem = () => {
 			const navItems = document.querySelectorAll(".nav-item a");
 			navItems.forEach((navItem) => {
-				if (navItem.href === window.location.href) {
+				if (navItem.pathname === window.location.pathname){
+
 					navItem.parentElement.classList.add("active");
 				}
 			});
 		};
 
 		setActiveNavItem();
-	});
 }
 
 export default NavBar;

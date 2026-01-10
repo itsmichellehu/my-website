@@ -1,82 +1,52 @@
 import "./_LoadingScreen.scss";
 
 export default function initLoadingAnimation() {
-	// Remove any existing loading screen
-	const existingLoadingScreen = document.getElementById("loading-screen");
-	if (existingLoadingScreen) {
-		existingLoadingScreen.remove();
+	// Wait for DOM to be ready
+	if (document.readyState === "loading") {
+		document.addEventListener("DOMContentLoaded", startAnimation);
+	} else {
+		startAnimation();
 	}
 
-	// Create a new loading screen element
-	const loadingScreen = document.createElement("div");
-	loadingScreen.id = "loading-screen";
-	loadingScreen.innerHTML = `<p id="loading-text">0%</p>`;
-	document.body.appendChild(loadingScreen);
+	function startAnimation() {
+		const loadingScreen = document.querySelector(".loading-screen");
+		const loadingText = loadingScreen?.querySelector(".loading-text");
 
-	const loadingText = document.getElementById("loading-text");
-	let percentage = 0;
+		if (!loadingScreen || !loadingText) return;
 
-	if (!loadingText) {
-		console.error("Loading text element not found");
-		return;
-	}
+		// Hide content and lock scroll
+		document.body.style.overflow = "hidden";
+		document.querySelector("nav")?.style.setProperty("display", "none");
+		document.querySelector("main")?.style.setProperty("display", "none");
+		document.querySelector("footer")?.style.setProperty("display", "none");
 
-	// Hide <nav>, <main>, and <footer> elements initially
-	const nav = document.querySelector("nav");
-	const main = document.querySelector("main");
-	const footer = document.querySelector("footer");
+		// Ensure loading screen is visible
+		loadingScreen.style.display = "flex";
 
-	if (nav) nav.style.display = "none";
-	if (main) main.style.display = "none";
-	if (footer) footer.style.display = "none";
+		let percentage = 0;
+		const interval = setInterval(() => {
+			if (percentage < 100) {
+				percentage++;
+				loadingText.textContent = `${percentage}%`;
+				loadingText.style.opacity = 0.1 + (percentage / 100) * 0.9;
+			} else {
+				clearInterval(interval);
+				loadingText.textContent = "100%";
+				loadingText.style.opacity = "1";
 
-	// Start the loading percentage update
-	const interval = setInterval(() => {
-		if (percentage < 100) {
-			percentage++;
-			loadingText.textContent = `${percentage}%`;
-
-			// Gradually increase the opacity of the text from 0.1 to 1
-			const opacity = 0.1 + (percentage / 100) * 0.9;
-			loadingText.style.opacity = opacity;
-		} else {
-			clearInterval(interval);
-
-			// Set the text to 100% opacity and pause for 2 seconds
-			loadingText.textContent = "100%";
-			loadingText.style.opacity = "1";
-
-			setTimeout(() => {
-				// Start dissolving the loading screen (fade out over 1 second)
-				loadingScreen.classList.add("dissolve");
-
-				// Wait for the dissolve effect to complete
 				setTimeout(() => {
-					loadingScreen.remove();
-					// Show <nav>, <main>, and <footer> elements
-					if (nav) nav.style.display = "flex";
-					if (main) main.style.display = "block";
-					if (footer) footer.style.display = "block";
-				}, 1000); // 1 second dissolve effect
-			}, 1000); // Pause for 2 seconds at 100%
-		}
-	}, 30);
-}
+					loadingScreen.classList.add("dissolve");
 
-// Auto-initialize on page load
-document.addEventListener("DOMContentLoaded", () => {
-	initLoadingAnimation();
-});
+					setTimeout(() => {
+						loadingScreen.remove();
+						document.body.style.overflow = "";
 
-// Listen for route changes
-window.addEventListener("popstate", () => {
-	initLoadingAnimation();
-});
-
-// Trigger on link clicks
-document.addEventListener("click", (event) => {
-	const target = event.target.closest("a");
-	if (target && target.getAttribute("href").startsWith("/")) {
-		initLoadingAnimation();
+						document.querySelector("nav")?.style.removeProperty("display");
+						document.querySelector("main")?.style.removeProperty("display");
+						document.querySelector("footer")?.style.removeProperty("display");
+					}, 1000);
+				}, 1000);
+			}
+		}, 30);
 	}
-});
+}
