@@ -1,7 +1,7 @@
 import "./_ProjectProgressBar.scss";
 
-function ProgressBar() {
-	const progressBarContainer = document.querySelector(".progress-bar-container");
+function initializeProgressBar() {
+	const progressBarContainer = document.querySelector(".progress-bar__container");
 	const progressBar = document.querySelector(".progress-bar");
 
 	// Initially hide the progress-bar-container
@@ -24,4 +24,4 @@ function ProgressBar() {
 	});
 }
 
-export default ProgressBar;
+export default initializeProgressBar;

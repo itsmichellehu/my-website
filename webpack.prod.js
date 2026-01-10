@@ -17,8 +17,8 @@ module.exports = merge(common, {
 	devtool: false,
 
 	output: {
-		path: path.resolve(__dirname, "dist"),
 		filename: "js/[name].[contenthash:8].js",
+		path: path.resolve(__dirname, "dist"),
 		assetModuleFilename: "assets/[name].[contenthash:8][ext][query]",
 		clean: true,
 		publicPath: "./",

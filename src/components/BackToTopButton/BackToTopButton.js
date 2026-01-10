@@ -1,6 +1,6 @@
 import "./_BackToTopButton.scss";
 
-function BackToTopButton() {
+export function BackToTopButton() {
 	const button = document.createElement("button");
 	button.className = "btn-back-to-top";
 	button.innerHTML = `
@@ -58,5 +58,3 @@ function BackToTopButton() {
 		window.scrollTo({ top: 0, behavior: "smooth" });
 	});
 }
-
-export default BackToTopButton;
