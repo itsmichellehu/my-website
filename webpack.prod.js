@@ -7,6 +7,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
 const { PurgeCSSPlugin } = require("purgecss-webpack-plugin");
+const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin");
 
 const PATHS = {
 	src: path.join(__dirname, "src"),
@@ -21,7 +22,7 @@ module.exports = merge(common, {
 		path: path.resolve(__dirname, "dist"),
 		assetModuleFilename: "assets/[name].[contenthash:8][ext][query]",
 		clean: true,
-		publicPath: "./",
+		publicPath: "/",
 	},
 
 	optimization: {
@@ -62,6 +63,19 @@ module.exports = merge(common, {
 			paths: glob.sync(`${PATHS.src}/**/*`, { nodir: true }),
 			only: ["main"], // Only process main bundle
 			safelist: ["html", "body"], // Keep essential selectors
+		}),
+		new ImageMinimizerPlugin({
+			minimizer: {
+				implementation: ImageMinimizerPlugin.imageminMinify,
+				options: {
+					plugins: [
+						["gifsicle", { interlaced: true }],
+						["mozjpeg", { quality: 75, progressive: true }],
+						["optipng", { optimizationLevel: 5 }],
+						["svgo", { name: "preset-default" }],
+					],
+				},
+			},
 		}),
 	],
 
