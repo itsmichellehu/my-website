@@ -64,19 +64,6 @@ module.exports = merge(common, {
 			only: ["main"], // Only process main bundle
 			safelist: ["html", "body"], // Keep essential selectors
 		}),
-		new ImageMinimizerPlugin({
-			minimizer: {
-				implementation: ImageMinimizerPlugin.imageminMinify,
-				options: {
-					plugins: [
-						["gifsicle", { interlaced: true }],
-						["mozjpeg", { quality: 75, progressive: true }],
-						["optipng", { optimizationLevel: 5 }],
-						["svgo", { name: "preset-default" }],
-					],
-				},
-			},
-		}),
 	],
 
 	performance: {

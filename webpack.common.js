@@ -50,7 +50,7 @@ module.exports = {
 			},
 
 			{
-				test: /\.(png|jpe?g|gif|svg|webp)$/i,
+				test: /\.(png|jpe?g|gif|webp)$/i,
 				type: "asset/resource",
 				parser: {
 					dataUrlCondition: { maxSize: 4 * 1024 },
@@ -66,15 +66,16 @@ module.exports = {
 								quality: [0.75, 0.95],
 								speed: 4,
 							},
-							gifsicle: {
-								interlaced: false,
-							},
 							webp: {
 								quality: 100,
 							},
 						},
 					},
 				],
+			},
+			{
+				test: /\.svg$/i,
+				type: "asset/resource",
 			},
 			{
 				test: /\.(mp4|webm)$/i,
