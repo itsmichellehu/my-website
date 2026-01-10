@@ -13,14 +13,8 @@ window.addEventListener("load", () => {
 	clearTimeout(loaderTimeout);
 });
 
-import BackToTopButton from "./BackToTopButton/BackToTopButton";
-
-import ScrollToSection from "./ScrollToSection/ScrollToSection";
-
 document.addEventListener("DOMContentLoaded", () => {
 	NavBar();
 	NavBarBackground();
 	Footer();
-	ScrollToSection();
-	BackToTopButton();
 });
