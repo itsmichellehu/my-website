@@ -11,7 +11,7 @@ $hero-icon-button-size-bp-xl: 3rem;
 $edu-exp-width-lg: 11.1rem;
 $edu-exp-width-xl: 12rem;
 $edu-exp-height-lg: 2.65rem;
-$edu-exp-height-xl: 3.35rem;
+$edu-exp-height-xl: 3rem;
 
 // Keyframes
 @keyframes pulse {
@@ -292,12 +292,8 @@ $edu-exp-height-xl: 3.35rem;
 		.education,
 		.work {
 			@include breakpoint(lg) {
-				height: $edu-exp-height-lg;
+				height: fit-content;
 				margin: auto;
-			}
-
-			@include breakpoint(xl) {
-				height: $edu-exp-height-xl;
 			}
 		}
 
