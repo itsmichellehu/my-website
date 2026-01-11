@@ -30,8 +30,11 @@
 		.tools-grid-item {
 			> div:first-child {
 				background-color: white;
-				box-shadow: -1px -1px 3px 0px rgba(0, 0, 0, 0.25) inset, 1px 1px 2px 0px rgba(255, 255, 255, 0.05) inset,
-					-1px -1px 6px 0px rgba(49, 49, 49, 0.25), 1px 1px 6px 0px rgba(0, 0, 0, 0.25);
+				box-shadow:
+					-1px -1px 3px 0px rgba(0, 0, 0, 0.25) inset,
+					1px 1px 2px 0px rgba(255, 255, 255, 0.05) inset,
+					-1px -1px 6px 0px rgba(49, 49, 49, 0.25),
+					1px 1px 6px 0px rgba(0, 0, 0, 0.25);
 			}
 		}
 	}
@@ -46,7 +49,7 @@
 }
 
 .section-dev-toolbox {
-	background-color: #1e1e1e;
+	background-color: $black;
 }
 
 .toolbox_section-wrapper {
@@ -157,56 +160,83 @@ $logo-img-width-mobile: 2.5rem;
 .logo- {
 	&bg-white {
 		background: #fff;
-		box-shadow: -1px -1px 3px 0px rgba(0, 0, 0, 0.25) inset, 1px 1px 2px 0px rgba(255, 255, 255, 0.05) inset,
-			-1px -1px 6px 0px rgba(49, 49, 49, 0.25), 1px 1px 6px 0px rgba(0, 0, 0, 0.25);
+		box-shadow:
+			-1px -1px 3px 0px rgba(0, 0, 0, 0.25) inset,
+			1px 1px 2px 0px rgba(255, 255, 255, 0.05) inset,
+			-1px -1px 6px 0px rgba(49, 49, 49, 0.25),
+			1px 1px 6px 0px rgba(0, 0, 0, 0.25);
 	}
 
 	&figma {
 		background: #2e3139;
-		box-shadow: -1px -1px 3px 0px rgba(0, 0, 0, 0.25) inset, 1px 1px 2px 0px rgba(255, 255, 255, 0.03) inset,
-			-1px -1px 6px 0px rgba(49, 49, 49, 0.15), 1px 1px 6px 0px rgba(0, 0, 0, 0.15);
+		box-shadow:
+			-1px -1px 3px 0px rgba(0, 0, 0, 0.25) inset,
+			1px 1px 2px 0px rgba(255, 255, 255, 0.03) inset,
+			-1px -1px 6px 0px rgba(49, 49, 49, 0.15),
+			1px 1px 6px 0px rgba(0, 0, 0, 0.15);
 	}
 
 	&miro {
 		background: #ffd12b;
-		box-shadow: -1px -1px 3px 0px rgba(0, 0, 0, 0.25) inset, 1px 1px 2px 0px rgba(255, 255, 255, 0.25) inset,
-			-1px -1px 6px 0px rgba(49, 49, 49, 0.15), 1px 1px 6px 0px rgba(0, 0, 0, 0.25);
+		box-shadow:
+			-1px -1px 3px 0px rgba(0, 0, 0, 0.25) inset,
+			1px 1px 2px 0px rgba(255, 255, 255, 0.25) inset,
+			-1px -1px 6px 0px rgba(49, 49, 49, 0.15),
+			1px 1px 6px 0px rgba(0, 0, 0, 0.25);
 	}
 
 	&webflow {
 		background: #136df5;
-		box-shadow: -1px -1px 3px 0px rgba(0, 0, 0, 0.25) inset, 1px 1px 2px 0px rgba(255, 255, 255, 0.25) inset,
-			-2px -2px 6px 0px rgba(49, 49, 49, 0.25), 1px 1px 6px 0px rgba(0, 0, 0, 0.25);
+		box-shadow:
+			-1px -1px 3px 0px rgba(0, 0, 0, 0.25) inset,
+			1px 1px 2px 0px rgba(255, 255, 255, 0.25) inset,
+			-2px -2px 6px 0px rgba(49, 49, 49, 0.25),
+			1px 1px 6px 0px rgba(0, 0, 0, 0.25);
 	}
 
 	&procreate {
 		background: #242424;
-		box-shadow: -1px -1px 3px 0px rgba(0, 0, 0, 0.25) inset, 1px 1px 3px 0px rgba(255, 255, 255, 0.1) inset,
-			-1px -1px 6px 0px rgba(49, 49, 49, 0.15), 1px 1px 6px 0px rgba(0, 0, 0, 0.15);
+		box-shadow:
+			-1px -1px 3px 0px rgba(0, 0, 0, 0.25) inset,
+			1px 1px 3px 0px rgba(255, 255, 255, 0.1) inset,
+			-1px -1px 6px 0px rgba(49, 49, 49, 0.15),
+			1px 1px 6px 0px rgba(0, 0, 0, 0.15);
 	}
 
 	&adobe {
 		background: #001e36;
-		box-shadow: -1px -1px 3px 0px rgba(0, 0, 0, 0.25) inset, 1px 1px 3px 0px rgba(255, 255, 255, 0.1) inset,
-			-1px -1px 6px 0px rgba(49, 49, 49, 0.15), 1px 1px 6px 0px rgba(0, 0, 0, 0.15);
+		box-shadow:
+			-1px -1px 3px 0px rgba(0, 0, 0, 0.25) inset,
+			1px 1px 3px 0px rgba(255, 255, 255, 0.1) inset,
+			-1px -1px 6px 0px rgba(49, 49, 49, 0.15),
+			1px 1px 6px 0px rgba(0, 0, 0, 0.15);
 	}
 
 	&adobeXD {
 		background: #470137;
-		box-shadow: -1px -1px 3px 0px rgba(0, 0, 0, 0.25) inset, 1px 1px 3px 0px rgba(255, 255, 255, 0.1) inset,
-			-1px -1px 6px 0px rgba(49, 49, 49, 0.15), 1px 1px 6px 0px rgba(0, 0, 0, 0.15);
+		box-shadow:
+			-1px -1px 3px 0px rgba(0, 0, 0, 0.25) inset,
+			1px 1px 3px 0px rgba(255, 255, 255, 0.1) inset,
+			-1px -1px 6px 0px rgba(49, 49, 49, 0.15),
+			1px 1px 6px 0px rgba(0, 0, 0, 0.15);
 	}
 
 	&github {
 		background: #242424 !important;
-		box-shadow: -1px -1px 3px 0px rgba(0, 0, 0, 0.25) inset, 1px 1px 3px 0px rgba(255, 255, 255, 0.1) inset,
-			-1px -1px 6px 0px rgba(49, 49, 49, 0.15), 1px 1px 6px 0px rgba(0, 0, 0, 0.15);
+		box-shadow:
+			-1px -1px 3px 0px rgba(0, 0, 0, 0.25) inset,
+			1px 1px 3px 0px rgba(255, 255, 255, 0.1) inset,
+			-1px -1px 6px 0px rgba(49, 49, 49, 0.15),
+			1px 1px 6px 0px rgba(0, 0, 0, 0.15);
 	}
 
 	&sass {
 		background-color: #c66393 !important;
-		box-shadow: -1px -1px 3px 0px rgba(0, 0, 0, 0.25) inset, 1px 1px 2px 0px rgba(255, 255, 255, 0.05) inset,
-			-1px -1px 6px 0px rgba(49, 49, 49, 0.25), 1px 1px 6px 0px rgba(0, 0, 0, 0.25);
+		box-shadow:
+			-1px -1px 3px 0px rgba(0, 0, 0, 0.25) inset,
+			1px 1px 2px 0px rgba(255, 255, 255, 0.05) inset,
+			-1px -1px 6px 0px rgba(49, 49, 49, 0.25),
+			1px 1px 6px 0px rgba(0, 0, 0, 0.25);
 	}
 }
 
@@ -338,8 +368,11 @@ $tool-grid-item-size: 4.5rem;
 
 		&github {
 			background: #242424;
-			box-shadow: -1px -1px 3px 0px rgba(0, 0, 0, 0.25) inset, 1px 1px 3px 0px rgba(255, 255, 255, 0.1) inset,
-				-1px -1px 6px 0px rgba(49, 49, 49, 0.15), 1px 1px 6px 0px rgba(0, 0, 0, 0.15);
+			box-shadow:
+				-1px -1px 3px 0px rgba(0, 0, 0, 0.25) inset,
+				1px 1px 3px 0px rgba(255, 255, 255, 0.1) inset,
+				-1px -1px 6px 0px rgba(49, 49, 49, 0.15),
+				1px 1px 6px 0px rgba(0, 0, 0, 0.15);
 		}
 
 		.swiper-wrapper {
@@ -415,7 +448,9 @@ $tool-grid-item-size: 4.5rem;
 			background-color: #ccc;
 			border-radius: 50%;
 			margin: 0 4px;
-			transition: background-color 0.3s, transform 0.3s;
+			transition:
+				background-color 0.3s,
+				transform 0.3s;
 		}
 
 		.swiper-pagination-bullet-active {

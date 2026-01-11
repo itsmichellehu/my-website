@@ -10,7 +10,7 @@ $details-wrapper-gap-xxl: 8rem;
 	flex-direction: column;
 	align-items: center;
 	justify-content: start;
-	padding: 2rem 0 1rem;
+	padding: 2rem 0;
 	height: fit-content;
 	gap: 1rem;
 
@@ -350,6 +350,7 @@ $details-wrapper-gap-xxl: 8rem;
 		height: calc(40vh - $navbar-desktop-height);
 		// max-height: 24rem;
 		padding-top: 3rem;
+		padding-bottom: 3rem;
 	}
 
 	@include breakpoint(lg) {

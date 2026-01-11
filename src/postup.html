@@ -27,20 +27,22 @@
 		<link rel="icon" type="image/png" href="https://michellehu.com/assets/images/logo-mhu-black-32.png" sizes="32x32" />
 		<link rel="apple-touch-icon" href="https://michellehu.com/assets/images/logo-mhu-black-180.png" />
 		<link rel="icon" type="image/png" href="https://michellehu.com/assets/images/logo-mhu-black-192.png" sizes="192x192" />
+		<link rel="stylesheet" href="/css/main.[hash].css" />
 	</head>
 
 	<body data-page="postup" class="with-loader">
-		<!-- <div class="loading-screen">
+		<div class="loading-screen">
 			<p class="loading-text">0%</p>
-		</div>> -->
+		</div>
+		>
 		<div class="progress-bar-container">
 			<div class="progress-bar"></div>
 		</div>
 		<main id="content">
-			<section id="hero" class="hero-overview-wrapper">
-				<div class="hero hero-postup">
-					<div class="hero-video-wrapper">
-						<video class="hero-video-postup" loop muted autoplay playsinline nodownload>
+			<section id="hero" class="project-hero__overview-wrapper">
+				<div class="project-hero hero-postup">
+					<div class="project-hero__video-wrapper">
+						<video class="project-hero__video-postup" loop muted autoplay playsinline nodownload>
 							<source src="assets/videos/postup/final-prototype-hero-compressed.mp4" type="video/mp4" />
 						</video>
 					</div>
@@ -98,9 +100,9 @@
 							</div>
 						</div>
 					</div>
-					<a href="#intro" class="scroll-button" aria-label="Scroll down to next section">
+					<!-- <a href="#intro" class="scroll-button" aria-label="Scroll down to next section">
 						<img src="assets/svg/ic-chevron-arrow__down--black.svg" loading="lazy" alt="Black down arrow icon" class="show-med-flex" />
-					</a>
+					</a> -->
 				</div>
 			</section>
 			<section id="intro" class="section-container bg-lightest-grey border-0 equal-padding">
@@ -193,7 +195,7 @@
 				<header class="header-container">
 					<h2>
 						<span>Monday</span>
-						<br>
+						<br />
 						Mapping the problem
 					</h2>
 					<img class="img-project-schedule" alt="" loading="lazy" src="assets/images/postup/sprint-schedule-monday.webp" />
@@ -202,7 +204,7 @@
 					<header class="header-container header-container-postup-h3">
 						<h3>
 							<span>user research</span>
-							<br>
+							<br />
 							Reviewing PostUp's research
 						</h3>
 					</header>
@@ -371,7 +373,7 @@
 				<header class="header-container">
 					<h2>
 						<span>Tuesday</span>
-						<br>
+						<br />
 						Sketch
 					</h2>
 					<img class="img-project-schedule" alt="" loading="lazy" src="assets/images/postup/sprint-schedule-tuesday.webp" />
@@ -380,7 +382,7 @@
 					<header class="header-container header-container-postup-h3">
 						<h3>
 							<span>competitive research</span>
-							<br>
+							<br />
 							Drawing inspiration from competitors
 						</h3>
 					</header>
@@ -397,7 +399,7 @@
 				<div class="content-wrapper mt-0">
 					<p class="airbnb-strengths_headline secondary-text text-center">
 						Among my demos, Airbnb was the winner. 🥳
-						<br>
+						<br />
 					</p>
 					<div class="airbnb-strengths_container">
 						<div class="img-airbnb-wrapper">
@@ -447,7 +449,7 @@
 					<header class="header-container header-container-postup-h3">
 						<h3>
 							<span>ideation</span>
-							<br>
+							<br />
 							Brainstorming 8 solutions in 8 minutes
 						</h3>
 					</header>
@@ -472,7 +474,7 @@
 				<header class="header-container">
 					<h2>
 						<span>wednesday</span>
-						<br>
+						<br />
 						Decide
 					</h2>
 					<img class="img-project-schedule" alt="" loading="lazy" src="assets/images/postup/sprint-schedule-wed.webp" />
@@ -481,7 +483,7 @@
 					<header class="header-container header-container-postup-h3">
 						<h3>
 							<span>storyboarding pt.2</span>
-							<br>
+							<br />
 							Completing the journey with user stories
 						</h3>
 					</header>
@@ -530,7 +532,7 @@
 								<p>
 									Being in a new city, Nina likely has little knowledge of her surroundings, so she's probably keen to explore nearby workspaces. Therefore, the ideal home screen
 									should show Nina a map that visually displays available options around her current location.
-									<br>
+									<br />
 								</p>
 							</div>
 						</div>
@@ -603,7 +605,7 @@
 				<header class="header-container">
 					<h2>
 						<span>thursday</span>
-						<br>
+						<br />
 						Prototype
 					</h2>
 					<img class="img-project-schedule" alt="" loading="lazy" src="assets/images/postup/sprint-schedule-thurs.webp" />
@@ -613,7 +615,7 @@
 						<p>
 							It was finally time to design and prototype! As I reviewed my work so far, I realized I made a mistake: Nina's journey ends when she settles into the workspace, not when
 							she chooses a workspace.
-							<span class="fw-medium"> To stay organized, I sketched a new map to adjust my scope and brainstormed a list of features before prototyping. </span>
+							<span class="fw-medium">To stay organized, I sketched a new map to adjust my scope and brainstormed a list of features before prototyping.</span>
 						</p>
 						<p class="hide-xl notes">This ended up helping a lot! 🥳</p>
 					</div>
@@ -622,7 +624,7 @@
 				<div class="content-wrapper overflow-visible">
 					<h4>Leveraging verbal walkthroughs to explore unbuilt areas</h4>
 					<p>
-						<span class="fw-medium"> I designed a limited prototype with only one user flow because I planned to leverage verbal walkthroughs as well given the time crunch. </span>
+						<span class="fw-medium">I designed a limited prototype with only one user flow because I planned to leverage verbal walkthroughs as well given the time crunch.</span>
 						With only one shot at testing, I initially aimed to prototype multiple user flows to avoid task failures and most features. Instead, I planned on asking participants to
 						describe how they would navigate and interact with any unbuilt areas.
 					</p>
@@ -686,7 +688,7 @@
 					<header class="header-container mb-0 hide">
 						<h3>
 							<span>prototype</span>
-							<br>
+							<br />
 							Design solutions
 						</h3>
 					</header>
@@ -695,7 +697,7 @@
 							<div class="the-solution-prototype_content">
 								<h2 class="intro-headline">
 									Streamlining decisions
-									<br>
+									<br />
 									with efficient results.
 								</h2>
 								<div class="the-solution-prototype_content-01">
@@ -789,7 +791,7 @@
 						<header class="header-container">
 							<h2>
 								<span>Friday</span>
-								<br>
+								<br />
 								Test
 							</h2>
 							<img class="img-project-schedule" alt="Sprint schedule for Friday" loading="lazy" src="assets/images/postup/sprint-schedule-friday.webp" />
@@ -860,19 +862,19 @@
 									<div class="usability-test-blockquote_content pt-16">
 										<p>
 											Interviewer: What did you enjoy about this?
-											<br>
-											<br>
+											<br />
+											<br />
 											Participant 01: I enjoyed all the information that it gave me very quickly. Right off the bat, I was able to know what was important to me... which was find
 											somewhere quiet and so right off the bat, I could see like, this is a no-noise-level like oops yeah, not allowed basically. And like, if that was just
 											exactly what I was looking for, then this would be the perfect place, and I wouldn't have to scroll down any further and waste an extra minute or so.
-											<br>
-											<br>
+											<br />
+											<br />
 											Interviewer: Okay. Sweet. Anything else?
-											<br>
-											<br>
+											<br />
+											<br />
 											Participant 01: It also has wifi, which I need to do my remote work
-											<br>
-											<br>
+											<br />
+											<br />
 											Interviewer: Okay, cool!
 										</p>
 									</div>
@@ -887,14 +889,14 @@
 					<header class="header-container">
 						<h2 class="mb-0">
 							<span>final wrap-up</span>
-							<br>
+							<br />
 							Iterations
 						</h2>
 					</header>
 					<p>
 						Given my test findings, I believe that the prototype can be improved by incorporating a few more features and further optimizing the user experience through reducing
 						touchpoints.
-						<br>
+						<br />
 					</p>
 					<ul class="off-black mb-32">
 						<li>Remove the search page and add a reservations page</li>
@@ -931,40 +933,40 @@
 								<ul class="monetization-map-accordion-list" type="1">
 									<li>
 										<span>User finds a workspace on PostUp</span>
-										<br>
+										<br />
 										The journey begins with a user searching for a suitable remote workspace using the PostUp app.
 									</li>
 									<li>
 										<span>Reserve table (premium feature for PostUp business partners):</span>
-										<br>
+										<br />
 										Users can reserve a table on PostUp at PostUp Partner locations, providing a convenience that can attract more customers to partner locations.
 									</li>
 									<li>
 										<span>Visit shop</span>
-										<br>
+										<br />
 										After reserving a table, users visit the physical location. This step transitions online engagement to offline activity, driving foot traffic to partner
 										businesses.
 									</li>
 									<li>
 										<span>Make purchase</span>
-										<br>
+										<br />
 										Users make a purchase at a partner location. This transaction is a critical touchpoint where value is exchanged, and user engagement is solidified.
 									</li>
 									<li>
 										<span>Scan Profile/QR Code</span>
-										<br>
+										<br />
 										Users scan a QR code linked to their PostUp profile to earn rewards. This step ensures the app tracks user activity and incentivizes continued use through the
 										rewards system.
 									</li>
 									<li>
 										<span>Earn Stamps/Points</span>
-										<br>
+										<br />
 										Users earn one stamp for visiting a new shop and points for in-person purchases. This dual rewards system encourages exploration of new locations and repeat
 										visits, fostering user loyalty.
 									</li>
 									<li>
 										<span>Redeem Rewards</span>
-										<br>
+										<br />
 										Accumulated points and stamps can be redeemed for rewards, such as a free coffee. This incentive boosts user spending and enhances the overall experience,
 										making users more likely to return.
 									</li>
@@ -991,7 +993,7 @@
 									<p>
 										Only PostUp Partners can access the in-app table reservation feature, enhancing user convenience and potentially attracting more customers. Users may filter
 										their search results for locations that offer reservations.
-										<br>
+										<br />
 									</p>
 								</div>
 								<div>
@@ -1029,7 +1031,7 @@
 						Overall, my strategies aim to establish a sustainable revenue model that enhances the overall remote working experience throughout their user journey. This collaboration could
 						incentivize businesses to enhance their amenities, catering to remote workers and in turn enriching the overall user experience for Postup subscribers. In sum, these strategies
 						offer additional revenue streams for PostUp while boosting the app's value proposition for both users and business partners.
-						<br>
+						<br />
 					</p>
 				</div>
 			</section>
@@ -1151,7 +1153,7 @@
 						<span class="semibold">earn PostUp points</span>
 						in-store with an purchase at an official PostUp partner location. If I had a team to ship this prototype, I would implement the designs from my monetization strategy and
 						develop the user flow for PostUp partners to integrate them into the ecosystem.
-						<br>
+						<br />
 					</p>
 					<h3>Personal growth</h3>
 					<p>
@@ -1159,7 +1161,7 @@
 						maximizing company resources and reducing business costs. In other words, I want to
 						<span class="semibold">learn to design as efficiently as possible to cut down business costs and accelerate business growth</span>
 						. Given the success of testing via verbal walkthroughs, I want to learn more cost-effective ways of usability testing.
-						<br>
+						<br />
 					</p>
 				</div>
 			</section>
@@ -1189,7 +1191,7 @@
 						—a social recommendation mobile app that connects diners with trusted friends and personalized suggestions. This sprint validated my research and test insights on user behavior
 						and motivations in TasteBuds. Both studies taught me the importance of novelty and innovation to enhance user engagement and prioritize user-centricity. This experience
 						definitely reinforced my commitment to research and anticipatory design, boosting my confidence in pursuing innovation!
-						<br>
+						<br />
 					</p>
 					<p>Overall, this was a very rewarding experience, and I can't wait to apply my learnings in my future projects!</p>
 				</div>
@@ -1210,14 +1212,14 @@
 							here
 						</a>
 						.
-						<br>
-						<br>
+						<br />
+						<br />
 						Feel free to reach out to me on
 						<a class="link-blue" href="https://www.linkedin.com/in/itsmichellehu" target="_blank" rel="noopener noreferrer">LinkedIn</a>
 						or via email at
 						<a class="link-blue" href="mailto:mhu.contact@gmail.com">mhu.contact@gmail.com</a>
 						to share feedback and/or discuss collaboration opportunities. Any and all communication is appreciated!
-						<br>
+						<br />
 					</p>
 				</div>
 			</section>

@@ -28,10 +28,6 @@ nav {
 		max-width: $nav-footer-max-width;
 		gap: 0.5rem;
 	}
-
-	@include breakpoint(xl) {
-		margin-top: 1rem;
-	}
 }
 
 .navbar-logo-wrapper {

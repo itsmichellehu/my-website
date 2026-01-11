@@ -20,16 +20,15 @@ $title-description-mb-lg: 1.25rem;
 	}
 
 	@include breakpoint(xl) {
-		padding: 10rem 0 6rem 0;
+		padding: 6rem 0;
 	}
-
 	//
 	// 	@include breakpoint(xxxl) {
 	// 		top: -3rem;
 	// 	}
 
 	@include breakpoint(huge) {
-		padding: 10rem 0 3rem 0;
+		padding: 8rem 0 3rem 0;
 	}
 }
 
@@ -168,7 +167,9 @@ $bg-top-xxl: 10rem;
 	font-size: 1rem;
 	font-weight: 500;
 	letter-spacing: 0.035rem;
-	transition: font-size 0.3s ease-in-out, font-weight 0.3s ease-in-out 0.3s;
+	transition:
+		font-size 0.3s ease-in-out,
+		font-weight 0.3s ease-in-out 0.3s;
 
 	@include breakpoint(lg) {
 		font-size: 1.125rem;
@@ -199,8 +200,8 @@ $bg-top-xxl: 10rem;
 	display: grid;
 	grid-template-columns: auto auto;
 	margin: auto;
-	height: fit-content;
-	width: fit-content;
+	height: auto;
+	width: 100%;
 	max-width: 30rem;
 	align-items: end;
 	justify-content: space-between;
@@ -217,7 +218,6 @@ $bg-top-xxl: 10rem;
 
 	&.boardspace-thumb-wrapper {
 		display: flex;
-
 		max-width: none;
 	}
 }
@@ -227,15 +227,14 @@ $bg-top-xxl: 10rem;
 	height: 90%;
 	overflow: hidden;
 	margin: 0;
-}
 
-.thumb-image-wrapper img {
-	margin: 0;
-	height: 100%;
-	width: fit-content;
-	max-width: 100%;
-	object-fit: contain;
-	/* or use 'contain' if you want the whole image visible */
+	img {
+		margin: 0;
+		height: 100%;
+		width: 100%;
+		max-width: 100%;
+		object-fit: contain;
+	}
 }
 
 .video-wrapper {
@@ -355,7 +354,7 @@ $bg-top-xxl: 10rem;
 }
 
 .project-subheader {
-	color: $off-black;
+	color: $black;
 	font-size: 0.87rem;
 	line-height: 100%;
 	font-weight: 400;
@@ -479,4 +478,11 @@ $bg-top-xxl: 10rem;
 			transform: scale(1.05);
 		}
 	}
+}
+
+video.lazy {
+	display: block;
+	width: 100%;
+	height: auto;
+	position: relative;
 }

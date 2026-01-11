@@ -78,7 +78,7 @@ $card-font-color: $black;
 		justify-content: center;
 		align-items: center;
 		border-radius: 100%;
-		background-color: #f0f0f0 !important;
+		background-color: $light-grey !important;
 		transition: opacity 0.3s ease-in-out;
 
 		@include breakpoint(med) {
@@ -98,7 +98,7 @@ $card-font-color: $black;
 	&.card {
 		scroll-snap-align: center;
 		scroll-snap-stop: always;
-		background-color: #f9f9f9;
+		background-color: $lightest-grey;
 		width: 18.75rem;
 		height: fit-content;
 		aspect-ratio: 7/6;

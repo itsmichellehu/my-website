@@ -15,7 +15,7 @@ $side-content-width: 20rem;
 		margin-top: 0;
 		font-weight: 500;
 		font-size: 2.25rem;
-		color: #1e1e1e !important;
+		color: $black !important;
 		text-align: center;
 		margin-bottom: 1.5rem !important;
 		width: 100%;
@@ -60,7 +60,7 @@ $side-content-width: 20rem;
 .media-carousel-item {
 	display: flex;
 	border-radius: 5px;
-	background-color: #f4f4f4;
+	background-color: $light-medium-grey;
 	align-items: center;
 	justify-content: center;
 	flex: 0 0 auto;
@@ -90,7 +90,7 @@ $side-content-width: 20rem;
 	max-width: $design-walkthrough-carousel-max-width;
 	justify-self: stretch;
 	border-radius: 5px;
-	background-color: #f4f4f4;
+	background-color: $light-medium-grey;
 
 	.carousel-content {
 		width: fit-content;
@@ -106,7 +106,7 @@ $side-content-width: 20rem;
 			letter-spacing: 0;
 			line-height: 130%;
 			margin-bottom: 1rem;
-			color: #1e1e1e;
+			color: $black;
 			font-size: 1.5rem;
 		}
 
@@ -230,7 +230,7 @@ $side-content-width: 20rem;
 		cursor: pointer;
 		width: 0.75rem;
 		height: 0.75rem;
-		background-color: #dbdbdb;
+		background-color: $medium-light-grey;
 		border-radius: 1rem;
 		transition: background-color 100ms linear;
 		overflow: hidden;
@@ -259,7 +259,7 @@ $side-content-width: 20rem;
 
 	p {
 		margin-bottom: 0;
-		color: $off-black;
+		color: $black;
 		font-size: 1rem;
 	}
 
@@ -292,7 +292,7 @@ $side-content-width: 20rem;
 
 	p {
 		margin-bottom: 0;
-		color: $off-black;
+		color: $black;
 		font-size: 1rem;
 	}
 

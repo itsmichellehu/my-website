@@ -26,6 +26,7 @@ module.exports = {
 
 	entry: {
 		main: "./src/js/main.js",
+		heroStyles: "./src/js/main.js",
 	},
 
 	output: {

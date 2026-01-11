@@ -145,19 +145,19 @@
 	}
 
 	&.off-black {
-		background-color: #1e1e1e;
+		background-color: $black;
 	}
 
 	&.dark-grey {
-		background-color: #757575;
+		background-color: $medium-grey;
 	}
 
 	&.medium-grey {
-		background-color: #dbdbdb;
+		background-color: $medium-light-grey;
 	}
 
 	&.light-grey {
-		background-color: #f9f9f9;
+		background-color: $lightest-grey;
 	}
 }
 

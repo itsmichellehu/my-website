@@ -1,6 +1,6 @@
 import { BackToTopButton } from "./BackToTopButton/BackToTopButton";
 import initializeProgressBar from "./ProjectProgressBar/ProjectProgressBar";
-import "@scss/sections/all-sections.scss";
+import "@scss/sections/_all-sections.scss";
 import "./ProjectComponents.scss";
 import { initializeTabs } from './TabsContainer/TabsContainer';
 

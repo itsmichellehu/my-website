@@ -16,8 +16,10 @@
 	cursor: pointer;
 	overflow: hidden;
 	background-color: #fff;
-	color: #1e1e1e;
-	transition: background-color 0.2s, transform 0.4s; // Transition for color and flex content
+	color: $black;
+	transition:
+		background-color 0.2s,
+		transform 0.4s; // Transition for color and flex content
 
 	p {
 		font-size: 1.125rem;

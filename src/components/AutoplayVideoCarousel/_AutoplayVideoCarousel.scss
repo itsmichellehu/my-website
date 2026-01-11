@@ -57,7 +57,7 @@ $side-content-width: 20rem;
 			justify-content: space-between;
 			margin-right: 4rem;
 			box-sizing: border-box;
-			background-color: #f4f4f4;
+			background-color: $light-medium-grey;
 			padding: 4rem 5rem;
 			gap: 4rem;
 			color: white;
@@ -73,7 +73,7 @@ $side-content-width: 20rem;
 				justify-content: space-between;
 				margin-right: 4rem;
 				box-sizing: border-box;
-				background-color: #f4f4f4;
+				background-color: $light-medium-grey;
 				padding: 2.5rem 4rem;
 				color: white;
 				border-radius: 2rem;
@@ -104,7 +104,7 @@ $side-content-width: 20rem;
 				letter-spacing: 0;
 				line-height: 130%;
 				margin-bottom: 1rem;
-				color: #1e1e1e;
+				color: $black;
 				font-size: 1.5rem;
 			}
 

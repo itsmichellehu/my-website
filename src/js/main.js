@@ -1,6 +1,14 @@
 import "@scss/main.scss";
 import "@components/GlobalComponents";
 
+document.addEventListener("DOMContentLoaded", () => {
+	if (document.querySelector("video.lazy")) {
+		import("./lazy-video.js").then(({ default: initLazyVideos }) => {
+			initLazyVideos();
+		});
+	}
+});
+
 const page = document.body.dataset.page;
 
 if (page === "home") import("./index");

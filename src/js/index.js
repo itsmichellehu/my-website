@@ -1,4 +1,4 @@
-import "@scss/pages/home/index.scss";
+import "@scss/pages/home/_index.scss";
 
 // const scrollableContent = document.querySelector('.scrollable-content');
 // const scrollbarThumb = document.querySelector('.c-scrollbar_thumb');

@@ -1,6 +1,6 @@
 @use "@abstracts/all-abstracts" as *;
 
-$prototype-accordion-bg: #1e1e1e;
+$prototype-accordion-bg: $black;
 
 .img-prototype-checklist {
 	display: flex;

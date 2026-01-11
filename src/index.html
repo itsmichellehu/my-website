@@ -42,6 +42,8 @@
 		<link rel="icon" type="image/png" href="/assets/images/logo-mhu-black-32.png" sizes="32x32" />
 		<link rel="icon" type="image/png" href="/assets/images/logo-mhu-black-192.png" sizes="192x192" />
 		<link rel="canonical" href="https://michellehu.com/" />
+		<script src="/js/main.[hash].js" defer></script>
+		<link rel="stylesheet" href="/css/main.[hash].css" />
 	</head>
 
 	<body data-page="home" class="with-loader">
@@ -49,10 +51,10 @@
 			<p class="loading-text">0%</p>
 		</div>
 		<main id="content">
-			<div id="hero" class="hero">
+			<section id="hero" class="hero">
 				<div class="hero-wrapper">
 					<div class="hero-image-wrapper animate__animated animate__fadeInRight">
-						<img class="img-hero" src="assets/images/michelle-portrait-bw-5x7@1x.webp" loading="lazy" alt="Black and white portrait of Michelle Hu" />
+						<img class="img-hero" src="assets/images/michelle-portrait-bw-5x7@1x.webp" loading="lazy" width="448" height="560" alt="Black and white portrait of Michelle Hu" />
 					</div>
 					<div class="hero-content animate__animated animate__fadeInLeft">
 						<p class="hero-tagline mb-0">
@@ -75,18 +77,98 @@
 						<img width="48" height="48" src="assets/svg/ic-arrow-down-stroke.svg" alt="Arrow down icon" loading="lazy" />
 					</a>
 				</div>
-			</div>
+			</section>
 			<section id="projects" class="projects-section">
 				<img src="assets/images/bg-ripped-paper-fafafa.png" class="bg-ripped-paper" alt="Ripped paper background texture" loading="lazy" />
 				<div id="bg-projects-section"></div>
 				<div class="projects-wrapper">
+					<a href="tastebuds" class="project-link project-tastebuds">
+						<div id="project-tastebuds" class="project-card project-tastebuds">
+							<div class="project-thumb-container tastebuds-thumb-container">
+								<div class="project-thumb-wrapper">
+									<div class="video-wrapper">
+										<video
+											class="project-thumb thumb-tastebuds lazy"
+											preload="none"
+											autoplay
+											playsinline
+											muted
+											loop
+											nodownload
+											poster="assets/images/thumbs/thumb-tastebuds-poster.webp">
+											<source data-src="assets/videos/tastebuds/final-prototype-home-discover.mp4" type="video/mp4" />
+											<source data-src="assets/videos/tastebuds/final-prototype-home-discover.webm" type="video/webm" />
+										</video>
+									</div>
+									<div class="thumb-image-wrapper">
+										<img src="assets/images/thumbs/thumb-tastebuds.webp" alt="" loading="lazy" />
+									</div>
+								</div>
+							</div>
+							<div class="project-details-container">
+								<div class="project-details-wrapper">
+									<p class="project-subheader">product designer</p>
+									<h3 class="project-title">TasteBuds</h3>
+									<div class="project-tags-wrapper">
+										<div class="tastebuds-tag project-tag">product strategy</div>
+										<div class="tastebuds-tag project-tag">growth design</div>
+										<div class="tastebuds-tag project-tag text-transform-none">experience design</div>
+									</div>
+									<p class="project-description">
+										Designing an end-to-end prototype and a growth-focused B2B monetization strategy, enhancing the dining experience with user-generated content and AI-driven
+										personalization
+									</p>
+									<div class="project-card-button">
+										<p class="project-card-button-label">view project</p>
+										<img src="assets/svg/ic-arrow-east.svg" alt="" class="ic-arrow-east" loading="lazy" />
+									</div>
+								</div>
+							</div>
+						</div>
+					</a>
+					<a href="postup" class="project-link project-postup">
+						<div id="project-postup" class="project-card project-postup mb-0">
+							<div class="project-thumb-container postup-thumb-container">
+								<div class="project-thumb-wrapper postup-thumb-wrapper">
+									<div class="video-wrapper">
+										<video class="project-thumb thumb-postup lazy" preload="none" autoplay playsinline muted loop nodownload poster="assets/images/thumbs/thumb-postup-poster.webp">
+											<source data-src="assets/images/thumbs/thumb-postup.mp4" type="video/mp4" />
+											<source data-src="assets/images/thumbs/thumb-postup.webm" type="video/webm" />
+										</video>
+									</div>
+									<div class="thumb-image-wrapper">
+										<img src="assets/images/thumbs/thumb-postup.webp" alt="" loading="lazy" />
+									</div>
+								</div>
+							</div>
+							<div class="project-details-container">
+								<div class="project-details-wrapper">
+									<p class="project-subheader">Product Designer</p>
+									<h3 class="project-title">PostUp</h3>
+									<div class="project-tags-wrapper">
+										<div class="postup-tag project-tag">Product Strategy</div>
+										<div class="postup-tag project-tag text-transform-none">Growth Design</div>
+										<div class="postup-tag project-tag">monetization strategy</div>
+									</div>
+									<p class="project-description">
+										Designing a scalable subscription-based B2B and B2C MVP in 7 days, and a monetization strategy to enhance the remote worker experience and drive business
+										revenue
+									</p>
+									<div class="project-card-button">
+										<p class="project-card-button-label">view project</p>
+										<img src="assets/svg/ic-arrow-east.svg" alt="" class="ic-arrow-east" loading="lazy" />
+									</div>
+								</div>
+							</div>
+						</div>
+					</a>
 					<div id="project-boardspace" class="project-card project-boardspace">
 						<div class="project-link-boardspace">
 							<div class="project-thumb-container boardspace-thumb-container">
 								<div class="project-thumb-wrapper boardspace-thumb-wrapper">
-									<video class="project-thumb thumb-boardspace" autoplay loop muted playsinline disablePictureInPicture nodownload>
-										<source src="assets/images/thumbs/thumb-boardspace.mp4" type="video/mp4" loading="lazy" />
-										Your browser does not support the video tag.
+									<video class="project-thumb thumb-boardspace lazy" preload="none" autoplay playsinline muted loop nodownload poster="assets/images/thumbs/thumb-boardspace.webp">
+										<source data-src="assets/videos/boardspace/thumb-boardspace.mp4" type="video/mp4" />
+										<source data-src="assets/videos/boardspace/thumb-boardspace.webm" type="video/webm" />
 									</video>
 								</div>
 							</div>
@@ -107,78 +189,6 @@
 							</div>
 						</div>
 					</div>
-					<a href="tastebuds" class="project-link project-tastebuds">
-						<div id="project-tastebuds" class="project-card project-tastebuds">
-							<div class="project-thumb-container tastebuds-thumb-container">
-								<div class="project-thumb-wrapper">
-									<div class="video-wrapper">
-										<video class="project-thumb thumb-tastebuds" loop muted playsinline disablePictureInPicture autoplay nodownload>
-											<source src="assets/images/thumbs/thumb-tastebuds-video-only.mp4" type="video/mp4" />
-											Your browser does not support the video tag.
-										</video>
-									</div>
-									<div class="thumb-image-wrapper">
-										<img src="assets/images/thumbs/thumb-tastebuds-static.png" alt="" loading="lazy" class="img-100" />
-									</div>
-								</div>
-							</div>
-							<div class="project-details-container">
-								<div class="project-details-wrapper">
-									<p class="project-subheader">product designer</p>
-									<h3 class="project-title">TasteBuds</h3>
-									<div class="project-tags-wrapper">
-										<div class="tastebuds-tag project-tag">product strategy</div>
-										<div class="tastebuds-tag project-tag">growth design</div>
-										<div class="tastebuds-tag project-tag text-transform-none">experience design</div>
-									</div>
-									<p class="project-description">
-										Designing an end-to-end prototype and a growth-focused B2B monetization strategy, enhancing the dining experience with user-generated content and AI-driven
-										personalization
-									</p>
-									<div class="project-card-button">
-										<p class="project-card-button-label">view project</p>
-										<span class="material-symbols-outlined"> east </span>
-									</div>
-								</div>
-							</div>
-						</div>
-					</a>
-					<a href="postup" class="project-link project-postup">
-						<div id="project-postup" class="project-card project-postup mb-0">
-							<div class="project-thumb-container postup-thumb-container">
-								<div class="project-thumb-wrapper postup-thumb-wrapper">
-									<div class="video-wrapper">
-										<video class="project-thumb thumb-postup" autoplay loop muted playsinline disablePictureInPicture nodownload>
-											<source src="assets/images/thumbs/thumb-postup.mp4" type="video/mp4" />
-											Your browser does not support the video tag.
-										</video>
-									</div>
-									<div class="thumb-image-wrapper">
-										<img src="assets/images/thumbs/thumb-postup-static.png" alt="" loading="lazy" />
-									</div>
-								</div>
-							</div>
-							<div class="project-details-container">
-								<div class="project-details-wrapper">
-									<p class="project-subheader">Product Designer</p>
-									<h3 class="project-title">PostUp</h3>
-									<div class="project-tags-wrapper">
-										<div class="postup-tag project-tag">Product Strategy</div>
-										<div class="postup-tag project-tag text-transform-none">Growth Design</div>
-										<div class="postup-tag project-tag">monetization strategy</div>
-									</div>
-									<p class="project-description">
-										Designing a scalable subscription-based B2B and B2C MVP in 7 days, and a monetization strategy to enhance the remote worker experience and drive business
-										revenue
-									</p>
-									<div class="project-card-button">
-										<p class="project-card-button-label">view project</p>
-										<span class="material-symbols-outlined"> east </span>
-									</div>
-								</div>
-							</div>
-						</div>
-					</a>
 				</div>
 			</section>
 		</main>

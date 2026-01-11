@@ -1,4 +1,4 @@
-import "@pages/postup/index.scss";
+import "@pages/postup/_index.scss";
 import "@components/ProjectComponents";
 
 function initializePostUpPage() {

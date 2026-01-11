@@ -56,7 +56,7 @@
 	padding: 1.5rem;
 	align-items: flex-start;
 	gap: 0.5rem;
-	background: #f9f9f9;
+	background: $lightest-grey;
 	border-radius: 0.5rem;
 	width: 100%;
 }
@@ -76,7 +76,7 @@
 }
 
 .card_headline {
-	color: #1e1e1e;
+	color: $black;
 	font-size: 1.5rem;
 	font-style: normal;
 	font-weight: 600;

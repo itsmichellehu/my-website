@@ -28,6 +28,7 @@ $quote-text-size-med: 100%;
 		display: none;
 		position: absolute;
 		margin: 0 0 1rem 0;
+		width: 3rem;
 
 		@include breakpoint(med) {
 			display: flex;

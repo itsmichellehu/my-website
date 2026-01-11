@@ -74,7 +74,7 @@
 }
 
 .link-blue {
-	color: #0281e3;
+	color: $link-blue;
 }
 
 .black {
@@ -156,7 +156,7 @@
 }
 
 .off-black {
-	color: $off-black !important;
+	color: $black !important;
 }
 
 .dark-grey {
@@ -223,7 +223,7 @@
 	}
 
 	&off-black {
-		background-color: $off-black !important;
+		background-color: $black !important;
 	}
 
 	&black {
@@ -231,6 +231,6 @@
 	}
 
 	&f4f4f4 {
-		background-color: #f4f4f4;
+		background-color: $light-medium-grey;
 	}
 }
