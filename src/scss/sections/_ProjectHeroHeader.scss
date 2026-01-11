@@ -32,7 +32,7 @@
 	}
 
 	@include breakpoint(xxl) {
-		height: calc(55vh - $navbar-desktop-height);
+		height: calc(60vh - $navbar-desktop-height);
 	}
 }
 

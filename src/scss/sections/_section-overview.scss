@@ -347,7 +347,8 @@ $details-wrapper-gap-xxl: 8rem;
 		flex: 1;
 		gap: 2rem;
 		justify-content: space-between;
-		height: calc(40vh - $navbar-desktop-height);
+		// height: calc(40vh - $navbar-desktop-height);
+		height: fit-content;
 		// max-height: 24rem;
 		padding-top: 3rem;
 		padding-bottom: 3rem;
@@ -359,7 +360,7 @@ $details-wrapper-gap-xxl: 8rem;
 	}
 
 	@include breakpoint(xxl) {
-		height: calc(35vh);
+		// height: calc(35vh);
 		max-height: none;
 	}
 }
