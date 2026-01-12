@@ -2,10 +2,10 @@
 
 .hero-overview-wrapper {
 	@extend %flex-col;
-//
-// 	@include breakpoint(med) {
-// 		height: 100vh;
-// 	}
+	//
+	// 	@include breakpoint(med) {
+	// 		height: 100vh;
+	// 	}
 
 	@include breakpoint(xl) {
 		max-height: 66rem;
@@ -57,13 +57,14 @@
 		width: 90%;
 		margin: auto;
 		max-height: none;
-
-		&-postup {
-			max-width: 17rem;
-		}
-
-		&-tastebuds {
-			max-width: 28rem;
-		}
+		max-width: 17rem;
+		//
+		// 		&-postup {
+		// 			max-width: 17rem;
+		// 		}
+		//
+		// 		&-tastebuds {
+		// 			max-width: 28rem;
+		// 		}
 	}
 }
