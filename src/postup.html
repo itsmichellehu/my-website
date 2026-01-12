@@ -27,7 +27,7 @@
 		<link rel="icon" type="image/png" href="https://michellehu.com/assets/images/logo-mhu-black-32.png" sizes="32x32" />
 		<link rel="apple-touch-icon" href="https://michellehu.com/assets/images/logo-mhu-black-180.png" />
 		<link rel="icon" type="image/png" href="https://michellehu.com/assets/images/logo-mhu-black-192.png" sizes="192x192" />
-		<link rel="stylesheet" href="/css/main.[hash].css" />
+		<script src="js/main.[hash].js" defer type="text/javascript"></script>
 		<style>
 			main,
 			nav,
@@ -49,6 +49,7 @@
 				z-index: 2001;
 				opacity: 1;
 				transition: opacity 1s ease-in-out;
+				/* 1-second dissolve effect */
 			}
 
 			.loading-screen.dissolve {
@@ -60,9 +61,11 @@
 				color: #4a4a4a;
 				margin: auto;
 				opacity: 0.1;
+				/* Start with low opacity */
 				transition: opacity 0.3s ease-in-out;
 			}
 		</style>
+		<link rel="stylesheet" href="css/main.[hash].css" type="text/css">
 	</head>
 
 	<body data-page="postup" class="with-loader">
