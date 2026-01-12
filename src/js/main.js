@@ -7,6 +7,12 @@ document.addEventListener("DOMContentLoaded", () => {
 			initLazyVideos();
 		});
 	}
+
+	if (document.querySelector(".tabs-container")) {
+		import("@components/TabsContainer/TabsContainer.js").then(({ default: initTabsContainers }) => {
+			initTabsContainers();
+		});
+	}
 });
 
 const page = document.body.dataset.page;
