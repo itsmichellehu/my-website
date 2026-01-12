@@ -2,7 +2,7 @@ import { BackToTopButton } from "./BackToTopButton/BackToTopButton";
 import initializeProgressBar from "./ProjectProgressBar/ProjectProgressBar";
 import "@scss/sections/_all-sections.scss";
 import "./ProjectComponents.scss";
-import { initializeTabs } from './TabsContainer/TabsContainer';
+import initTabsContainers from "./TabsContainer/TabsContainer";
 
 // import { initializeAccordion } from './ProjectAccordion/ProjectAccordion';
 import enableImageZoom from "./ImageZoom/ImageZoom";
@@ -12,5 +12,5 @@ document.addEventListener("DOMContentLoaded", function () {
 	BackToTopButton();
 	// initializeAccordion();
 	enableImageZoom();
-	initializeTabs();
+	initTabsContainers();
 });
