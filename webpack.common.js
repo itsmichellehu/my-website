@@ -26,7 +26,6 @@ module.exports = {
 
 	entry: {
 		main: "./src/js/main.js",
-		heroStyles: "./src/js/main.js",
 	},
 
 	output: {
@@ -34,7 +33,7 @@ module.exports = {
 		filename: "js/[name].js",
 		assetModuleFilename: "assets/[name].[ext][query]",
 		clean: true,
-		publicPath: "./",
+		publicPath: "/",
 	},
 
 	module: {
