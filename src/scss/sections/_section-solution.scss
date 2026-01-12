@@ -213,10 +213,6 @@ $solution-padding-xxl: 3rem;
 			margin-bottom: 1.5rem;
 		}
 
-		@include breakpoint(lg) {
-			margin-bottom: 0;
-		}
-
 		&-previous,
 		&-iteration {
 			display: flex;
