@@ -93,7 +93,7 @@ $tab-menu-padding: 0.25rem;
 		p {
 			text-align: center;
 			font-weight: 400;
-			color: $medium-grey;
+			color: $dark-grey;
 			font-size: 1.125rem;
 			z-index: 2;
 			margin: 0;
@@ -107,7 +107,7 @@ $tab-menu-padding: 0.25rem;
 		}
 
 		&:hover p {
-			color: white;
+			color: $black;
 			font-weight: 500;
 		}
 	}
