@@ -4,6 +4,7 @@
 .intro-headline {
 	font-size: 1.75rem;
 	margin-bottom: 1rem;
+	text-transform: uppercase;
 
 	@include breakpoint(med) {
 		font-size: 2.15rem;
