@@ -97,7 +97,7 @@ $edu-exp-height-xl: 3rem;
 
 		@include breakpoint(med) {
 			grid-template-areas: "b a";
-			grid-template-columns: minmax(0, 4fr) 3fr;
+			grid-template-columns: 2fr 1fr;
 			grid-template-rows: auto;
 			gap: $wrapper-gap-med;
 			justify-content: space-between;
@@ -117,10 +117,11 @@ $edu-exp-height-xl: 3rem;
 		grid-area: a;
 		display: flex;
 		overflow: hidden;
-		width: 100vw;
-		height: 45vh;
+		width: 100%;
+		// height: 60vh;
 		justify-self: center;
-		max-height: 28rem;
+		// max-height: 28rem;
+		justify-content: center;
 
 		@include breakpoint(mobile-lg) {
 			justify-content: center;
@@ -133,14 +134,30 @@ $edu-exp-height-xl: 3rem;
 			width: 100%;
 			border-radius: 5px;
 			align-items: center;
+			aspect-ratio: 4 / 5;
 		}
 
 		@include breakpoint(lg) {
-			max-width: 28rem;
+			max-width: 22rem;
 		}
 
 		@include breakpoint(xl) {
 			gap: $wrapper-gap-xl;
+		}
+
+		> img {
+			display: flex;
+			// overflow: hidden;
+			// margin: 0 auto 0 5rem;
+			margin: -2.5rem auto 0;
+			aspect-ratio: 4 / 5;
+			object-fit: cover;
+			width: 100%;
+
+			@include breakpoint(med) {
+				height: 100%;
+				margin: 0 auto;
+			}
 		}
 	}
 
@@ -176,7 +193,7 @@ $edu-exp-height-xl: 3rem;
 	&-tagline {
 		grid-area: c;
 		color: $off-black;
-		font-size: 1.65rem;
+		font-size: 1.5rem;
 		font-weight: 400;
 		line-height: 130%;
 		margin-bottom: 0;
@@ -187,17 +204,13 @@ $edu-exp-height-xl: 3rem;
 		}
 
 		@include breakpoint(sm) {
-			font-size: clamp(1.5rem, 3.2vw, 2.75rem);
+			font-size: clamp(1.75rem, 3.5vw, 2rem);
 			line-height: 135%;
 		}
 
 		@include breakpoint(xl) {
 			letter-spacing: -0.055rem;
 		}
-	}
-
-	&-tagline-2 {
-		font-size: 1.35rem;
 	}
 
 	&-location {
@@ -246,14 +259,14 @@ $edu-exp-height-xl: 3rem;
 		justify-content: center;
 		margin-right: auto;
 
-		@include breakpoint(lg) {
-			grid-template-columns: $edu-exp-width-lg 2px auto;
-			grid-template-areas: "a c b";
-		}
-
-		@include breakpoint(xl) {
-			grid-template-columns: $edu-exp-width-xl 2px auto;
-		}
+		// 		@include breakpoint(lg) {
+		// 			grid-template-columns: $edu-exp-width-lg 2px auto;
+		// 			grid-template-areas: "a c b";
+		// 		}
+		//
+		// 		@include breakpoint(xl) {
+		// 			grid-template-columns: $edu-exp-width-xl 2px auto;
+		// 		}
 
 		p {
 			font-size: 14px;
@@ -271,27 +284,27 @@ $edu-exp-height-xl: 3rem;
 			grid-area: a;
 			color: $off-black;
 			margin-bottom: 0;
-
-			@include breakpoint(lg) {
-				width: $edu-exp-width-lg;
-			}
-
-			@include breakpoint(xl) {
-				width: $edu-exp-width-xl;
-			}
+			//
+			// 			@include breakpoint(lg) {
+			// 				width: $edu-exp-width-lg;
+			// 			}
+			//
+			// 			@include breakpoint(xl) {
+			// 				width: $edu-exp-width-xl;
+			// 			}
 		}
 
 		.work {
 			grid-area: b;
 			color: $medium-grey;
-			max-width: 24rem;
+			// max-width: 24rem;
 		}
 
 		.education,
 		.work {
 			@include breakpoint(lg) {
 				height: fit-content;
-				margin: auto;
+				// margin: auto;
 			}
 		}
 
@@ -311,19 +324,6 @@ $edu-exp-height-xl: 3rem;
 				height: $edu-exp-height-xl;
 			}
 		}
-	}
-}
-
-.img-hero {
-	display: flex;
-	overflow: hidden;
-	margin-bottom: 0;
-	width: 100%;
-	object-fit: cover;
-
-	@include breakpoint(med) {
-		transform: none;
-		margin: 0 auto;
 	}
 }
 
