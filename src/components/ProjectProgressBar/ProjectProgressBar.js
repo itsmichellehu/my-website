@@ -7,28 +7,24 @@ function initializeProgressBar() {
 
 	if (!progressBarContainer || !progressBar) return;
 
-	// Initially hide the progress-bar-container
-	progressBarContainer.style.display = "none";
-
-	// Track current visibility so we only touch the DOM when it actually changes.
 	let isVisible = false;
 
-	onAnimationFrame(document, "scroll", () => {
+	function render() {
 		const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
 		const scrollHeight = document.documentElement.scrollHeight || document.body.scrollHeight;
 		const clientHeight = document.documentElement.clientHeight || window.innerHeight;
-		const scrollPercent = (scrollTop / (scrollHeight - clientHeight)) * 100;
-
-		progressBar.style.width = scrollPercent + "%";
-
-		// Hide the container at the very top, show it once scrolling begins —
-		// but only write to style.display when the state changes.
+		progressBar.style.width = `${(scrollTop / (scrollHeight - clientHeight)) * 100}%`;
 		const shouldBeVisible = scrollTop > 0;
 		if (shouldBeVisible !== isVisible) {
 			progressBarContainer.style.display = shouldBeVisible ? "block" : "none";
 			isVisible = shouldBeVisible;
 		}
-	});
+	}
+
+	// Run once at init so bar reflects position on page-restore / back-navigation.
+	render();
+
+	onAnimationFrame(document, "scroll", render);
 }
 
 export default initializeProgressBar;

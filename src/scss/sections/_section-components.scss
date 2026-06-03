@@ -97,11 +97,10 @@
 .content-wrapper,
 .subsection .content {
 	max-width: $content-max-width;
-	width: 90vw;
+	width: 90%;
 	margin: auto;
 	align-items: left;
 	margin-top: 1rem;
-	overflow-x: visible !important;
 
 	> figure > img {
 		margin: 0;
@@ -140,7 +139,7 @@
 	flex-direction: column;
 	gap: 1.5rem;
 	background-color: $lightest-grey;
-	width: 100vw;
+	width: 100%;
 	padding: 2rem 0;
 
 	@include breakpoint(med) {

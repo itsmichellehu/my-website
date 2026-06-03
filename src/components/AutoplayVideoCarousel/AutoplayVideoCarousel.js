@@ -332,18 +332,6 @@ class AutoplayVideoCarousel {
 	handleSlideClick() {
 		const video = this.carouselElement.carouselSlides[this.state.currentIndex].querySelector("video");
 		if (video) {
-			if (this.state.isPlaying) {
-				video.pause();
-				this.carouselElement.playPauseButton.classList.add("paused");
-				this.carouselElement.playIcon.style.display = "inline";
-				this.carouselElement.pauseIcon.style.display = "none";
-			} else {
-				video.play();
-				this.carouselElement.playPauseButton.classList.remove("paused");
-				this.carouselElement.playIcon.style.display = "none";
-				this.carouselElement.pauseIcon.style.display = "inline";
-			}
-			this.state.isPlaying = !this.state.isPlaying;
 			this.toggleVideoPlayState(video);
 		}
 	}
