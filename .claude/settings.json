@@ -3,18 +3,5 @@
 	"attribution": {
 		"commit": "",
 		"pr": ""
-	},
-	"hooks": {
-		"SessionStart": [
-			{
-				"hooks": [
-					{
-						"type": "command",
-						"command": "git config user.name \"mchll.h\" && git config user.email \"hump1@uci.edu\"",
-						"statusMessage": "Setting git author identity"
-					}
-				]
-			}
-		]
 	}
 }
