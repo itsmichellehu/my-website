@@ -56,19 +56,19 @@ $edu-exp-height-xl: 3rem;
 	display: flex;
 	flex-direction: column;
 	width: 100%;
-	margin: 0 auto 1rem auto;
+	// margin: 0 auto 1rem auto;
 	border-radius: 0.25rem;
-	padding-bottom: 3rem;
+	// padding-bottom: 2rem;
 	gap: 3rem;
 
 	@include breakpoint(med) {
-		padding-top: 4rem;
+		padding: 5rem 0;
 		margin: auto;
-		padding-bottom: 4rem;
 	}
 
 	@include breakpoint(lg) {
 		margin-top: $navbar-desktop-height;
+		// padding: 8rem 0;
 	}
 
 	@include breakpoint(xl) {
@@ -80,11 +80,11 @@ $edu-exp-height-xl: 3rem;
 	}
 
 	&-wrapper {
-		display: grid;
-		grid-template-columns: 1fr;
-		grid-template-rows: repeat(2, auto);
-		grid-template-areas: "a" "b";
-		width: 90vw;
+		// display: grid;
+		// grid-template-columns: 1fr;
+		// grid-template-rows: repeat(2, auto);
+		// grid-template-areas: "a" "b";
+		width: 100%;
 		margin: auto;
 		align-items: center;
 		gap: 1.25rem;
@@ -96,10 +96,12 @@ $edu-exp-height-xl: 3rem;
 		}
 
 		@include breakpoint(med) {
-			grid-template-areas: "b a";
-			grid-template-columns: 2fr 1fr;
-			grid-template-rows: auto;
-			gap: $wrapper-gap-med;
+			display: flex;
+			flex-direction: row-reverse;
+			// grid-template-areas: "b a";
+			// grid-template-columns: 4fr 3fr;
+			// grid-template-rows: auto;
+			gap: 2rem;
 			justify-content: space-between;
 		}
 
@@ -108,7 +110,7 @@ $edu-exp-height-xl: 3rem;
 		}
 
 		@include breakpoint(xl) {
-			grid-template-columns: $wrapper-grid-xl;
+			// grid-template-columns: $wrapper-grid-xl;
 			gap: $wrapper-gap-xl;
 		}
 	}
@@ -118,7 +120,7 @@ $edu-exp-height-xl: 3rem;
 		display: flex;
 		overflow: hidden;
 		width: 100%;
-		// height: 60vh;
+		height: 60vh;
 		justify-self: center;
 		// max-height: 28rem;
 		justify-content: center;
@@ -138,7 +140,7 @@ $edu-exp-height-xl: 3rem;
 		}
 
 		@include breakpoint(lg) {
-			max-width: 22rem;
+			max-width: 24rem;
 		}
 
 		@include breakpoint(xl) {
@@ -162,13 +164,14 @@ $edu-exp-height-xl: 3rem;
 	}
 
 	&-content {
-		grid-area: b;
+		// grid-area: b;
 		display: flex;
-		width: 90vw;
 		flex-direction: column;
 		justify-self: center;
+		width: 90vw;
 		max-width: 37rem;
-		gap: 1rem;
+		gap: 1.5rem;
+		padding: 1.5rem 0;
 
 		@include breakpoint(med) {
 			width: fit-content;
@@ -311,11 +314,11 @@ $edu-exp-height-xl: 3rem;
 		.divider {
 			grid-area: c;
 			border-right: 2.5px solid $off-black;
-			height: 3rem;
+			height: 100%;
 			width: 0;
 
 			@include breakpoint(lg) {
-				height: 2.65rem;
+				// height: 2.65rem;
 				border-color: $medium-grey;
 				opacity: 0.8;
 			}
