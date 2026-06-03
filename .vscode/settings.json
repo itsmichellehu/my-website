@@ -9,9 +9,26 @@
     "liveSassCompile.settings.generateMap": false,
     "livePreview.defaultPreviewPath": "/pages/home-page.html",
     "liveshare.allowGuestDebugControl": true,
+    "editor.autoClosingBrackets": "never",
+    "editor.autoClosingQuotes": "never",
+    "editor.autoClosingDelete": "never",
+    "editor.autoClosingOvertype": "never",
     "liveshare.allowGuestTaskControl": true,
     "liveshare.diagnosticLogging": true,
     "liveshare.languages.allowGuestCommandControl": true,
     "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "liveshare.diagnosticMode": true
+    "liveshare.diagnosticMode": true,
+    "emmet.preferences": {
+        "output.selfClosingStyle": "html",
+        "self_closing_tag": false
+    },
+    "[html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "html.autoClosingTags": false,
+    "emmet.syntaxProfiles": {
+        "html": {
+            "self_closing_tag": false
+        }
+    }
 }
