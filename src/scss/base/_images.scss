@@ -1,5 +1,11 @@
 @use "@abstracts/all-abstracts" as *;
 
+// Global safety net: no image should overflow its container / the viewport.
+img {
+	max-width: 100%;
+	height: auto;
+}
+
 // image.scss
 .img-width-1200 {
 	width: 90%;

@@ -11,9 +11,8 @@
 	flex-direction: column;
 	align-items: left;
 	padding: calc(4.12rem - 5px) 0;
-	width: 100vw;
+	width: 100%;
 	@extend %container-border-bottom;
-	overflow-x: visible !important;
 
 	&.equal-padding {
 		padding: 2.5rem 0;
@@ -31,7 +30,6 @@
 		width: 90vw;
 		margin: auto;
 		align-items: left;
-		overflow-x: visible !important;
 
 		> figure > img {
 			margin: 0;
@@ -142,7 +140,7 @@
 	flex-direction: column;
 	gap: 1.5rem;
 	background-color: $lightest-grey;
-	width: 100vw;
+	width: 100%;
 	padding: 2rem 0;
 
 	@include breakpoint(med) {

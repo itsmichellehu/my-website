@@ -4,7 +4,7 @@ html {
 	text-size-adjust: none;
 	margin: 0;
 	padding: 0;
-	width: 100vw;
+	width: 100%;
 	overflow-x: hidden;
 	-webkit-text-size-adjust: 100%; // Prevents adjustments of font size by mobile browsers
 	-ms-text-size-adjust: 100%; // For IE
@@ -28,7 +28,8 @@ body {
 	overflow-x: hidden;
 	overflow-y: scroll;
 	position: relative;
-	height: 100vh;
+	min-height: 100vh;
+	min-height: 100dvh; // dynamic viewport height: avoids mobile address-bar jumps
 
 	@include breakpoint(med) {
 		background-color: white;
@@ -96,7 +97,7 @@ summary {
 }
 
 section {
-	width: 100vw;
+	width: 100%;
 }
 
 hr {
