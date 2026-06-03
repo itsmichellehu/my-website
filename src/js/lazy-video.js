@@ -15,7 +15,8 @@ export default function initLazyVideos() {
 	});
 
 	if ("IntersectionObserver" in window) {
-		const lazyVideoObserver = new IntersectionObserver((entries, observer) => {
+		const lazyVideoObserver = new IntersectionObserver(
+			(entries, observer) => {
 			entries.forEach((entry) => {
 				if (entry.isIntersecting) {
 					const video = entry.target;
@@ -43,7 +44,11 @@ export default function initLazyVideos() {
 					lazyVideoObserver.unobserve(video);
 				}
 			});
-		});
+			},
+			// Start loading just before the video scrolls into view so playback
+			// is ready by the time it's visible.
+			{ rootMargin: "200px 0px" }
+		);
 
 		lazyVideos.forEach((lazyVideo) => {
 			lazyVideoObserver.observe(lazyVideo);
