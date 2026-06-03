@@ -1,4 +1,5 @@
 import "./_BackToTopButton.scss";
+import { onAnimationFrame } from "@js/utils/dom-events.js";
 
 export function BackToTopButton() {
 	const button = document.createElement("button");
@@ -12,13 +13,18 @@ export function BackToTopButton() {
     `;
 	document.body.appendChild(button);
 
-	let lastScrollTop = 0; // Track last scroll position to detect scroll direction
-	let hoverEffectApplied = false; // Track if hover effect is applied
-	const scrollHeight = document.documentElement.scrollHeight;
-	const clientHeight = document.documentElement.clientHeight;
+	let lastScrollTop = 0;
+	let hoverEffectApplied = false;
+	// clientHeight only changes on resize — cache it to avoid a layout read per frame.
+	// scrollHeight can grow as images/videos load, so it stays per-frame.
+	let clientHeight = document.documentElement.clientHeight;
+	window.addEventListener("resize", () => {
+		clientHeight = document.documentElement.clientHeight;
+	}, { passive: true });
 
-	window.addEventListener("scroll", () => {
+	onAnimationFrame(window, "scroll", () => {
 		const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+		const scrollHeight = document.documentElement.scrollHeight;
 
 		// Detect if user is scrolling down
 		const isScrollingDown = scrollTop > lastScrollTop;

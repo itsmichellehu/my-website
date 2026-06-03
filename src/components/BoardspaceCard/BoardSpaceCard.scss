@@ -17,7 +17,8 @@
 	gap: 1.5rem;
 	align-items: left;
 	justify-content: left;
-	min-width: 316px;
+	// Cap at the container width so the card never overflows narrow (<=320px) screens.
+	min-width: min(316px, 100%);
 	background: $lightest-grey;
 
 	p {

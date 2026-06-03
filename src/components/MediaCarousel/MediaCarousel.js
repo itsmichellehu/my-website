@@ -25,16 +25,21 @@ export default class MediaCarousel {
 	}
 
 	initializeEventListeners() {
-		// Touch events
-		this.itemsContainer.addEventListener("touchstart", this.touchStart.bind(this));
-		this.itemsContainer.addEventListener("touchend", this.touchEnd.bind(this));
-		this.itemsContainer.addEventListener("touchmove", this.touchMove.bind(this), { passive: true });
+		// Pre-bind handlers so mouse-move can be added/removed by the same reference.
+		this.onTouchMove = this.touchMove.bind(this);
+		this.onMouseMove = this.touchMove.bind(this);
 
-		// Mouse events for desktop
+		// Touch events
+		this.itemsContainer.addEventListener("touchstart", this.touchStart.bind(this), { passive: true });
+		this.itemsContainer.addEventListener("touchend", this.touchEnd.bind(this));
+		this.itemsContainer.addEventListener("touchmove", this.onTouchMove, { passive: true });
+
+		// Mouse events for desktop. mousemove is only attached during an active
+		// drag (added on mousedown, removed on mouseup/leave) so it doesn't fire
+		// on every pointer move over the carousel.
 		this.itemsContainer.addEventListener("mousedown", this.touchStart.bind(this));
 		this.itemsContainer.addEventListener("mouseup", this.touchEnd.bind(this));
 		this.itemsContainer.addEventListener("mouseleave", this.touchEnd.bind(this));
-		this.itemsContainer.addEventListener("mousemove", this.touchMove.bind(this));
 
 		// Dot navigation
 		this.dots.forEach((dot, index) => {
@@ -51,9 +56,14 @@ export default class MediaCarousel {
 		this.startPos = this.getPositionX(event);
 		this.animationID = requestAnimationFrame(this.animation.bind(this));
 		this.itemsContainer.classList.remove("smooth-return");
+		if (event.type === "mousedown") {
+			this.itemsContainer.addEventListener("mousemove", this.onMouseMove);
+		}
 	}
 
 	touchEnd() {
+		if (!this.isDragging) return;
+		this.itemsContainer.removeEventListener("mousemove", this.onMouseMove);
 		this.isDragging = false;
 		cancelAnimationFrame(this.animationID);
 		const movedBy = this.currentTranslate - this.prevTranslate;

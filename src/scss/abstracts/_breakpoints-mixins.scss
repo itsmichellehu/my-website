@@ -18,9 +18,7 @@ $breakpoints: (
 );
 
 @mixin breakpoint($name) {
-	$width: if(
-		sass(meta.type-of($name) == number): $name; else: map.get($breakpoints, $name)
-	);
+	$width: if(meta.type-of($name) == number, $name, map.get($breakpoints, $name));
 
 	@if $width {
 		@media (min-width: $width) {

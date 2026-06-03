@@ -1,3 +1,5 @@
+import { throttle } from "@js/utils/dom-events.js";
+
 // Export the breakpoints object
 export const breakpoints = {
   mobileS: 320,
@@ -8,6 +10,28 @@ export const breakpoints = {
   lg: 992,
   xl: 1200,
 };
+
+// All card icons share a single throttled resize listener instead of each card
+// registering its own (which previously leaked one listener per card).
+const cardIcons = [];
+
+const sizeIcon = (img) => {
+  if (window.innerWidth >= breakpoints.med) {
+    img.className = "iconSize-med";
+  } else if (window.innerWidth >= breakpoints.mobileM) {
+    img.className = "iconSize-sm";
+  }
+};
+
+let resizeListenerAttached = false;
+function ensureResizeListener() {
+  if (resizeListenerAttached) return;
+  resizeListenerAttached = true;
+  window.addEventListener(
+    "resize",
+    throttle(() => cardIcons.forEach(sizeIcon), 150)
+  );
+}
 
 // Export the cardSmall function
 export function cardSmall(iconSrc, iconSize, headline, containerSelector = '.values-grid') {
@@ -29,17 +53,8 @@ export function cardSmall(iconSrc, iconSize, headline, containerSelector = '.val
 
   cardContainer.appendChild(cardElement);
 
-  // Check if screen size is at least 'med', then set iconSize to 'med'
-  const setIconSize = () => {
-    if (window.innerWidth >= breakpoints.mobileM) {
-      img.className = 'iconSize-sm';
-    }
-    if (window.innerWidth >= breakpoints.med) {
-      img.className = 'iconSize-med';
-    }
-  };
-
-  // Call setIconSize initially and add a listener for resize events
-  setIconSize();
-  window.addEventListener('resize', setIconSize);
+  // Size this icon now, then let the shared resize listener keep it in sync.
+  sizeIcon(img);
+  cardIcons.push(img);
+  ensureResizeListener();
 }

@@ -51,27 +51,10 @@ module.exports = {
 
 			{
 				test: /\.(png|jpe?g|gif|webp)$/i,
-				type: "asset/resource",
+				type: "asset",
 				parser: {
 					dataUrlCondition: { maxSize: 4 * 1024 },
 				},
-				use: [
-					{
-						loader: "image-webpack-loader",
-						options: {
-							optipng: {
-								enabled: false,
-							},
-							pngquant: {
-								quality: [0.75, 0.95],
-								speed: 4,
-							},
-							webp: {
-								quality: 100,
-							},
-						},
-					},
-				],
 			},
 			{
 				test: /\.svg$/i,
