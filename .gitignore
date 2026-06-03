@@ -6,4 +6,10 @@ next-env.d.ts
 node_modules/*
 utils/*
 image-optimizer/*
+tastebuds-archive.html
 tastebuds-full-casestudy.html
+src/assets/videos/tastebuds/unused/*
+src/assets/unused/*
+
+src/assets/images/thumbs/op/optimize-videos.sh
+src/assets/images/thumbs/op/resize-videos.sh
