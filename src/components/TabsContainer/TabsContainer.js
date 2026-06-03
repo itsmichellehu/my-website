@@ -24,6 +24,19 @@ export default function initTabsContainers() {
 				});
 				this.classList.add("active");
 
+				// Lazy videos inside display:none panels are never intersected by the
+				// IntersectionObserver. Load their sources now that the tab is visible.
+				const activeContent = container.querySelector(`#${targetTab}`);
+				if (activeContent) {
+					activeContent.querySelectorAll("video.lazy").forEach((video) => {
+						video.querySelectorAll("source[data-src]").forEach((source) => {
+							source.src = source.dataset.src;
+						});
+						video.load();
+						video.classList.remove("lazy");
+					});
+				}
+
 				// Move the slider
 				slider.style.left = `${this.offsetLeft}px`;
 				slider.style.width = `${this.offsetWidth}px`;
