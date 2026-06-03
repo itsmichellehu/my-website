@@ -31,25 +31,6 @@ $edu-exp-height-xl: 3rem;
 	}
 }
 
-.scroll-button-wrapper {
-	display: none;
-	flex-direction: column;
-	align-items: end;
-	justify-content: end;
-	width: 90%;
-	z-index: 4;
-	bottom: 2rem;
-	margin: auto;
-
-	@include breakpoint(xl) {
-		display: flex;
-	}
-}
-
-.scroll-button {
-	display: none;
-}
-
 // Hero section
 .hero {
 	position: relative;
@@ -437,4 +418,23 @@ $edu-exp-height-xl: 3rem;
 		background-color: $large-button-active-color;
 		transition: border 0.3s;
 	}
+}
+
+.scroll-button-wrapper {
+	display: none;
+	flex-direction: column;
+	align-items: end;
+	justify-content: end;
+	width: 90%;
+	z-index: 4;
+	bottom: 2rem;
+	margin: auto;
+
+	@include breakpoint(xl) {
+		display: flex;
+	}
+}
+
+.scroll-button {
+	display: none;
 }
