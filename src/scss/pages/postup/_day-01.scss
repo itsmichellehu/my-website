@@ -129,13 +129,18 @@ $quote-text-size-med: 100%;
 
 .user-persona-comparison {
 	display: grid;
-	grid-template-columns: repeat(2, 1fr);
-	grid-template-rows: auto auto;
+	grid-template-columns: 1fr;
+	grid-template-rows: auto;
 	width: 90vw !important;
 	max-width: 96rem;
 	margin: 0 auto;
 	position: relative;
 	gap: 1rem;
+
+	@include breakpoint(med) {
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: auto auto;
+	}
 
 	p {
 		&:first-of-type {
