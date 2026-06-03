@@ -1,6 +1,10 @@
 class AutoplayVideoCarousel {
 	constructor(selector) {
 		this.carouselElement = document.querySelector(selector);
+		// Bind once so addEventListener/removeEventListener share the same
+		// reference; .bind() in those calls would create a new function each
+		// time and the remove would never match, leaking "ended" listeners.
+		this.handleVideoEnd = this.handleVideoEnd.bind(this);
 		this.initializeSelectors();
 		this.initializeState();
 		this.init();
@@ -211,11 +215,16 @@ class AutoplayVideoCarousel {
 		}
 	}
 
+	// Bind each video's progress listeners exactly once. Previously this ran on
+	// every navigation (called from updateCarousel + on every dot click), which
+	// re-attached play/pause/ended/timeupdate listeners and N dot-click handlers
+	// each time, leaking listeners unboundedly during interaction.
 	setupVideoProgressListener() {
-		const updateProgress = () => {
-			const video = this.carouselElement.carouselSlides[this.state.currentIndex].querySelector("video");
-			const activeDot = this.carouselElement.dots[this.state.currentIndex];
-			const progressBar = activeDot.querySelector(".progressBar");
+		this.carouselElement.carouselSlides.forEach((slide, index) => {
+			const video = slide.querySelector("video");
+			const dot = this.carouselElement.dots[index];
+			const progressBar = dot && dot.querySelector(".progressBar");
+			if (!video || !progressBar) return;
 
 			let animationFrameId;
 
@@ -227,35 +236,24 @@ class AutoplayVideoCarousel {
 				}
 			};
 
-			if (video && progressBar) {
-				video.addEventListener("play", () => {
-					animationFrameId = requestAnimationFrame(updateBar);
-				});
+			video.addEventListener("play", () => {
+				animationFrameId = requestAnimationFrame(updateBar);
+			});
 
-				video.addEventListener("pause", () => {
-					cancelAnimationFrame(animationFrameId);
-					const progress = (video.currentTime / video.duration) * 100;
-					progressBar.style.width = `${progress}%`;
-				});
+			video.addEventListener("pause", () => {
+				cancelAnimationFrame(animationFrameId);
+				progressBar.style.width = `${(video.currentTime / video.duration) * 100}%`;
+			});
 
-				video.addEventListener("ended", () => {
-					cancelAnimationFrame(animationFrameId);
-					// progressBar.style.width = '0%'; // Optionally reset progress bar
-				});
+			video.addEventListener("ended", () => {
+				cancelAnimationFrame(animationFrameId);
+			});
 
-				video.addEventListener("timeupdate", () => {
-					if (video.paused || video.ended) {
-						const progress = (video.currentTime / video.duration) * 100;
-						progressBar.style.width = `${progress}%`;
-					}
-				});
-			}
-		};
-
-		updateProgress();
-
-		this.carouselElement.dots.forEach((dot) => {
-			dot.addEventListener("click", updateProgress);
+			video.addEventListener("timeupdate", () => {
+				if (video.paused || video.ended) {
+					progressBar.style.width = `${(video.currentTime / video.duration) * 100}%`;
+				}
+			});
 		});
 	}
 
@@ -286,18 +284,17 @@ class AutoplayVideoCarousel {
 				this.carouselElement.dots[this.state.currentIndex].classList.add("active");
 			}
 		}
-		this.setupVideoProgressListener();
 	}
 
 	playCurrentVideo() {
 		this.carouselElement.carouselSlides.forEach((slide, index) => {
 			const video = slide.querySelector("video");
 			if (video) {
-				video.removeEventListener("ended", this.handleVideoEnd.bind(this));
+				video.removeEventListener("ended", this.handleVideoEnd);
 				if (index === this.state.currentIndex) {
 					if (this.state.isPlaying) {
 						video.play();
-						video.addEventListener("ended", this.handleVideoEnd.bind(this));
+						video.addEventListener("ended", this.handleVideoEnd);
 						this.updatePlayPauseButtonState(true);
 					}
 				} else {
