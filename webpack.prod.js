@@ -7,6 +7,9 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
 const { PurgeCSSPlugin } = require("purgecss-webpack-plugin");
+const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin");
+const CompressionPlugin = require("compression-webpack-plugin");
+const zlib = require("zlib");
 
 process.env.NODE_ENV = "production";
 
@@ -28,13 +31,26 @@ module.exports = merge(common, {
 
 	optimization: {
 		minimize: true,
+		// Split heavy libraries into their own long-cached chunks so a change to
+		// one (or to app code) doesn't bust the others, and pages only pay for
+		// what they import.
 		splitChunks: {
 			chunks: "all",
 			cacheGroups: {
+				gsap: {
+					test: /[\\/]node_modules[\\/]gsap[\\/]/,
+					name: "gsap",
+					priority: 20,
+				},
+				swiper: {
+					test: /[\\/]node_modules[\\/]swiper[\\/]/,
+					name: "swiper",
+					priority: 20,
+				},
 				vendor: {
 					test: /[\\/]node_modules[\\/]/,
 					name: "vendors",
-					chunks: "all",
+					priority: 10,
 				},
 			},
 		},
@@ -48,6 +64,19 @@ module.exports = merge(common, {
 				},
 			}),
 			new CssMinimizerPlugin(),
+			// Compress raster images, including those emitted by copy-webpack-plugin.
+			new ImageMinimizerPlugin({
+				minimizer: {
+					implementation: ImageMinimizerPlugin.sharpMinify,
+					options: {
+						encodeOptions: {
+							jpeg: { quality: 80 },
+							webp: { quality: 80 },
+							png: { quality: 80 },
+						},
+					},
+				},
+			}),
 		],
 	},
 
@@ -60,6 +89,25 @@ module.exports = merge(common, {
 			paths: glob.sync(`${PATHS.src}/**/*`, { nodir: true }),
 			only: ["main"], // Only process main bundle
 			safelist: ["html", "body"], // Keep essential selectors
+		}),
+
+		// Pre-compress text + media assets so the server can ship .br / .gz.
+		new CompressionPlugin({
+			filename: "[path][base].gz",
+			algorithm: "gzip",
+			test: /\.(js|css|html|svg|json|ttf|otf|eot)$/,
+			threshold: 10240,
+			minRatio: 0.8,
+		}),
+		new CompressionPlugin({
+			filename: "[path][base].br",
+			algorithm: "brotliCompress",
+			test: /\.(js|css|html|svg|json|ttf|otf|eot)$/,
+			compressionOptions: {
+				params: { [zlib.constants.BROTLI_PARAM_QUALITY]: 11 },
+			},
+			threshold: 10240,
+			minRatio: 0.8,
 		}),
 	],
 
