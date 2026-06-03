@@ -1,6 +1,8 @@
 function NavBarBackground() {
     const navbar = document.getElementById('navbar');
     const firstSection = document.querySelector('section');
+    if (!navbar || !firstSection) return;
+
     const sectionTop = firstSection.offsetTop;
     const sectionHeight = firstSection.clientHeight;
 
