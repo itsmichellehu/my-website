@@ -11,8 +11,6 @@ $lightest-green: #e5ebe7;
 
 $primary-color: $primary-green;
 
-$boardspace-tag-color: #d6e8ff;
-
 // Colors - greyscale
 $pure-black: #000;
 $black: #1e1e1e;
@@ -44,7 +42,6 @@ $outline-stroke: 1.25px;
 
 // Components
 $nav-footer-max-width: 82rem;
-$progress-bar-height: 6px;
 $wireframe-max-height: 40rem;
 $large-button-active-color: $primary-green;
 
@@ -53,6 +50,12 @@ $main-font: "Inter";
 $fixed-shadow: -1px -1px 2px rgba(49, 49, 49, 0.05), 1px 1px 2px rgba(0, 0, 0, 0.5),
 	inset -1px -1px 3px rgba(0, 0, 0, 0.05), inset 1px 1px 2px rgba(255, 255, 255, 0.05);
 $border-style: 1px solid #e4ebf3;
+
+// Semantic / UI
+$color-surface-overlay: rgba(0, 0, 0, 0.5);
+$color-annotation: #00bdd6;
+$color-status-success: #2b8c64;
+$color-status-info: #1d69dc;
 
 // Tags
 $boardspace-tag-color: #5488ca;

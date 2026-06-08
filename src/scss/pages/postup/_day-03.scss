@@ -11,7 +11,7 @@
 	max-width: $content-max-width;
 	width: 90vw;
 	margin: auto;
-	align-items: left;
+	align-items: flex-start;
 
 	:last-child {
 		margin-bottom: 0;

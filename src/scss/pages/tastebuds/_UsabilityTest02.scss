@@ -1,5 +1,7 @@
 @use "@abstracts/all-abstracts" as *;
-@use "@components/MediaCarousel/carousel-variables" as *;
+
+$design-walkthrough-carousel-width: 90vw;
+$design-walkthrough-carousel-max-width: 60rem;
 
 .test-findings-grid {
 	display: grid;
