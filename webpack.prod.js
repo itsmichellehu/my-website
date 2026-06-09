@@ -14,106 +14,98 @@ const zlib = require("zlib");
 process.env.NODE_ENV = "production";
 
 const PATHS = {
-	src: path.join(__dirname, "src"),
+  src: path.join(__dirname, "src"),
 };
 
 module.exports = merge(common, {
-	mode: "production",
-	devtool: false,
+  mode: "production",
+  devtool: false,
 
-	output: {
-		filename: "js/[name].[contenthash:8].js",
-		path: path.resolve(__dirname, "dist"),
-		assetModuleFilename: "assets/[name].[contenthash:8][ext][query]",
-		clean: true,
-		publicPath: "/",
-	},
+  output: {
+    filename: "js/[name].[contenthash:8].js",
+    path: path.resolve(__dirname, "dist"),
+    assetModuleFilename: "assets/[name].[contenthash:8][ext][query]",
+    clean: true,
+    publicPath: "/",
+  },
 
-	optimization: {
-		minimize: true,
-		// Split heavy libraries into their own long-cached chunks so a change to
-		// one (or to app code) doesn't bust the others, and pages only pay for
-		// what they import.
-		splitChunks: {
-			chunks: "all",
-			cacheGroups: {
-				gsap: {
-					test: /[\\/]node_modules[\\/]gsap[\\/]/,
-					name: "gsap",
-					priority: 20,
-				},
-				swiper: {
-					test: /[\\/]node_modules[\\/]swiper[\\/]/,
-					name: "swiper",
-					priority: 20,
-				},
-				vendor: {
-					test: /[\\/]node_modules[\\/]/,
-					name: "vendors",
-					priority: 10,
-				},
-			},
-		},
-		minimizer: [
-			new TerserPlugin({
-				parallel: true,
-				extractComments: false,
-				terserOptions: {
-					compress: { drop_console: true },
-					format: { comments: false },
-				},
-			}),
-			new CssMinimizerPlugin(),
-			// Compress raster images, including those emitted by copy-webpack-plugin.
-			new ImageMinimizerPlugin({
-				minimizer: {
-					implementation: ImageMinimizerPlugin.sharpMinify,
-					options: {
-						encodeOptions: {
-							jpeg: { quality: 80 },
-							webp: { quality: 80 },
-							png: { quality: 80 },
-						},
-					},
-				},
-			}),
-		],
-	},
+  optimization: {
+    minimize: true,
+    // Split heavy libraries into their own long-cached chunks so a change to
+    // one (or to app code) doesn't bust the others, and pages only pay for
+    // what they import.
+    splitChunks: {
+      chunks: "all",
+      cacheGroups: {
+        gsap: {
+          test: /[\\/]node_modules[\\/]gsap[\\/]/,
+          name: "gsap",
+          priority: 20,
+        },
+        swiper: {
+          test: /[\\/]node_modules[\\/]swiper[\\/]/,
+          name: "swiper",
+          priority: 20,
+        },
+        vendor: {
+          test: /[\\/]node_modules[\\/]/,
+          name: "vendors",
+          priority: 10,
+        },
+      },
+    },
+    minimizer: [
+      new TerserPlugin({
+        parallel: true,
+        extractComments: false,
+        terserOptions: {
+          compress: { drop_console: true },
+          format: { comments: false },
+        },
+      }),
+      new CssMinimizerPlugin(),
+      // TODO: image minification disabled — sharpMinify crashes on all SVGs
+      // emitted by asset/resource rules (test/exclude/minimizer.filter all
+      // fail to gate it in image-minimizer-webpack-plugin v4.1.4). Re-enable
+      // once the plugin is upgraded or the SVG asset pipeline is refactored.
+      // new ImageMinimizerPlugin({ minimizer: { implementation: ImageMinimizerPlugin.sharpMinify, ... } }),
+    ],
+  },
 
-	plugins: [
-		new MiniCssExtractPlugin({
-			filename: "css/[name].[contenthash:8].css",
-		}),
+  plugins: [
+    new MiniCssExtractPlugin({
+      filename: "css/[name].[contenthash:8].css",
+    }),
 
-		new PurgeCSSPlugin({
-			paths: glob.sync(`${PATHS.src}/**/*`, { nodir: true }),
-			only: ["main"], // Only process main bundle
-			safelist: ["html", "body"], // Keep essential selectors
-		}),
+    new PurgeCSSPlugin({
+      paths: glob.sync(`${PATHS.src}/**/*`, { nodir: true }),
+      only: ["main"], // Only process main bundle
+      safelist: ["html", "body"], // Keep essential selectors
+    }),
 
-		// Pre-compress text + media assets so the server can ship .br / .gz.
-		new CompressionPlugin({
-			filename: "[path][base].gz",
-			algorithm: "gzip",
-			test: /\.(js|css|html|svg|json|ttf|otf|eot)$/,
-			threshold: 10240,
-			minRatio: 0.8,
-		}),
-		new CompressionPlugin({
-			filename: "[path][base].br",
-			algorithm: "brotliCompress",
-			test: /\.(js|css|html|svg|json|ttf|otf|eot)$/,
-			compressionOptions: {
-				params: { [zlib.constants.BROTLI_PARAM_QUALITY]: 11 },
-			},
-			threshold: 10240,
-			minRatio: 0.8,
-		}),
-	],
+    // Pre-compress text + media assets so the server can ship .br / .gz.
+    new CompressionPlugin({
+      filename: "[path][base].gz",
+      algorithm: "gzip",
+      test: /\.(js|css|html|svg|json|ttf|otf|eot)$/,
+      threshold: 10240,
+      minRatio: 0.8,
+    }),
+    new CompressionPlugin({
+      filename: "[path][base].br",
+      algorithm: "brotliCompress",
+      test: /\.(js|css|html|svg|json|ttf|otf|eot)$/,
+      compressionOptions: {
+        params: { [zlib.constants.BROTLI_PARAM_QUALITY]: 11 },
+      },
+      threshold: 10240,
+      minRatio: 0.8,
+    }),
+  ],
 
-	performance: {
-		hints: "warning",
-		maxEntrypointSize: 512000,
-		maxAssetSize: 512000,
-	},
+  performance: {
+    hints: "warning",
+    maxEntrypointSize: 512000,
+    maxAssetSize: 512000,
+  },
 });

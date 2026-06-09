@@ -112,6 +112,11 @@ module.exports = {
           from: path.resolve(__dirname, "src/assets"),
           to: "assets",
           noErrorOnMissing: true,
+          // Don't copy OS junk into dist — .DS_Store reaches the image
+          // minimizer and crashes sharp ("received svg"/"exceeds pixel limit").
+          globOptions: {
+            ignore: ["**/.DS_Store"],
+          },
         },
       ],
     }),
