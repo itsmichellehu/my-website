@@ -62,10 +62,22 @@
 	grid-area: b;
 
 	img {
-		display: flex; // Removes any space below the image
-		width: fit-content; // Makes the image take up 100% of the container's width
-		height: 100%; // Maintains the image's aspect ratio initially
+		height: 100%;
 		top: 1rem;
+		max-width: none;
+	}
+
+	@include breakpoint(med) {
+		width: 100%;
+		border-radius: 3px;
+		overflow: hidden;
+		height: fit-content;
+		margin: 0;
+		aspect-ratio: 4 / 4;
+
+		img {
+			height: 100%;
+		}
 	}
 }
 
@@ -124,12 +136,21 @@
 		align-items: center;
 		justify-content: center;
 		grid-area: a;
+		width: 2rem;
+
+		> img {
+			width: 100%;
+		}
+
+		> img,
+		svg {
+			opacity: 0.75;
+		}
 
 		svg {
 			width: 2rem;
 			height: 2rem;
 			fill: $teal-accent;
-			opacity: 0.75;
 		}
 	}
 
@@ -189,19 +210,6 @@
 
 	.section-heading {
 		margin-bottom: 1.5rem;
-	}
-
-	.about_portrait-wrapper {
-		width: 100%;
-		border-radius: 3px;
-		overflow: hidden;
-		height: fit-content;
-		margin: 0;
-		aspect-ratio: 4 / 4;
-
-		img {
-			height: 100%;
-		}
 	}
 
 	.about_content-wrapper {
