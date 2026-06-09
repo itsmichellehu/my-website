@@ -80,7 +80,7 @@
 				transition: opacity 0.3s ease-in-out;
 			}
 		</style>
-		<link rel="stylesheet" href="css/main.[hash].css" type="text/css">
+		<link rel="stylesheet" href="css/main.[hash].css" type="text/css" />
 	</head>
 
 	<body data-page="home" class="with-loader">
@@ -116,11 +116,10 @@
 				</div>
 			</section>
 			<section id="projects">
-				<!-- <img src="assets/images/bg-ripped-paper-fafafa.png" class="bg-ripped-paper" alt="Ripped paper background texture" loading="lazy" /> -->
 				<img src="assets/images/bg-ripped-paper.png" class="bg-ripped-paper" alt="Ripped paper background texture" loading="lazy" />
 				<div class="projects-wrapper">
-					<a id="project-tastebuds" href="tastebuds" class="project-link project-tastebuds">
-						<div class="project-card">
+					<div id="project-tastebuds" href="tastebuds" class="project-tastebuds">
+						<a class="project-card">
 							<div class="project-thumb-container tastebuds-thumb-container">
 								<div class="project-thumb-wrapper">
 									<div class="video-wrapper">
@@ -161,53 +160,39 @@
 									</div>
 								</div>
 							</div>
-						</div>
-					</a>
-					<div class="project-container bg-lightest-grey">
-						<a id="project-postup" href="postup" class="project-link project-postup">
-							<div class="project-card project-postup">
-								<!-- <div class="mobile-only">
-									<p class="project-subheader">Product Designer</p>
-									<h3 class="project-title mb-0">PostUp</h3>
-								</div> -->
-								<div class="project-thumb-container postup-thumb-container">
-									<div class="project-thumb-wrapper postup-thumb-wrapper">
-										<div class="video-wrapper">
-											<video
-												class="project-thumb thumb-postup lazy"
-												preload="none"
-												autoplay
-												playsinline
-												muted
-												loop
-												nodownload
-												poster="assets/images/thumbs/thumb-postup-poster.webp">
-												<source data-src="assets/images/thumbs/thumb-postup.mp4" type="video/mp4" />
-												<source data-src="assets/images/thumbs/thumb-postup.webm" type="video/webm" />
-											</video>
-										</div>
-										<div class="thumb-image-wrapper">
-											<img src="assets/images/thumbs/thumb-postup.webp" alt="" loading="lazy" />
-										</div>
+						</a>
+					</div>
+					<div id="project-postup" href="postup" class="project-postup bg-lightest-grey">
+						<a class="project-card project-postup">
+							<div class="project-thumb-container postup-thumb-container">
+								<div class="project-thumb-wrapper postup-thumb-wrapper">
+									<div class="video-wrapper">
+										<video class="project-thumb thumb-postup lazy" preload="none" autoplay playsinline muted loop nodownload poster="assets/images/thumbs/thumb-postup-poster.webp">
+											<source data-src="assets/images/thumbs/thumb-postup.mp4" type="video/mp4" />
+											<source data-src="assets/images/thumbs/thumb-postup.webm" type="video/webm" />
+										</video>
+									</div>
+									<div class="thumb-image-wrapper">
+										<img src="assets/images/thumbs/thumb-postup.webp" alt="" loading="lazy" />
 									</div>
 								</div>
-								<div class="project-details-container">
-									<div class="project-details-wrapper">
-										<p class="project-subheader">Product Designer</p>
-										<h3 class="project-title">Postup</h3>
-										<div class="project-tags-wrapper">
-											<div class="postup-tag project-tag">Product Strategy</div>
-											<div class="postup-tag project-tag text-transform-none">Growth Design</div>
-											<div class="postup-tag project-tag">monetization strategy</div>
-										</div>
-										<p class="project-description">
-											Designing a scalable subscription-based B2B and B2C MVP in 7 days, and a monetization strategy to enhance the remote worker experience and drive business
-											revenue
-										</p>
-										<div class="project-card-button">
-											<p class="project-card-button-label">view project</p>
-											<img src="assets/svg/ic-arrow-east.svg" alt="" class="ic-arrow-east" loading="lazy" />
-										</div>
+							</div>
+							<div class="project-details-container">
+								<div class="project-details-wrapper">
+									<p class="project-subheader">Product Designer</p>
+									<h3 class="project-title">Postup</h3>
+									<div class="project-tags-wrapper">
+										<div class="postup-tag project-tag">Product Strategy</div>
+										<div class="postup-tag project-tag text-transform-none">Growth Design</div>
+										<div class="postup-tag project-tag">monetization strategy</div>
+									</div>
+									<p class="project-description">
+										Designing a scalable subscription-based B2B and B2C MVP in 7 days, and a monetization strategy to enhance the remote worker experience and drive business
+										revenue
+									</p>
+									<div class="project-card-button">
+										<p class="project-card-button-label">view project</p>
+										<img src="assets/svg/ic-arrow-east.svg" alt="" class="ic-arrow-east" loading="lazy" />
 									</div>
 								</div>
 							</div>
@@ -215,7 +200,6 @@
 					</div>
 					<div id="project-boardspace" class="project-link project-boardspace">
 						<div class="project-card">
-
 							<div class="project-thumb-container">
 								<div class="project-thumb-wrapper">
 									<video class="project-thumb thumb-boardspace lazy" preload="none" autoplay playsinline muted loop nodownload poster="assets/images/thumbs/thumb-boardspace.webp">
@@ -225,8 +209,8 @@
 								</div>
 							</div>
 							<div class="project-details-container">
-									<p class="project-subheader">lead ux designer</p>
-									<h3 class="project-title">BoardSpace</h3>
+								<p class="project-subheader">lead ux designer</p>
+								<h3 class="project-title">BoardSpace</h3>
 								<div class="project-details-wrapper">
 									<div class="project-tags-wrapper">
 										<div class="boardspace-tag project-tag text-transform-none">UX/UI Design</div>

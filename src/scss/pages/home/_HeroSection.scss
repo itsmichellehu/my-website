@@ -41,6 +41,7 @@ $edu-exp-height-xl: 3rem;
 	border-radius: 0.25rem;
 	// padding-bottom: 2rem;
 	gap: 3rem;
+	margin-bottom: 3rem;
 
 	@include breakpoint(med) {
 		padding: 5rem 0;
@@ -65,20 +66,21 @@ $edu-exp-height-xl: 3rem;
 		// grid-template-columns: 1fr;
 		// grid-template-rows: repeat(2, auto);
 		// grid-template-areas: "a" "b";
-		width: 100%;
 		margin: auto;
 		align-items: center;
-		gap: 1.25rem;
 		justify-content: center;
 		transition: align-items 0.3s ease-in-out;
+		display: flex;
+		flex-direction: column;
+		// gap: 0.5rem;
 
 		@include breakpoint(sm) {
 			gap: 1.75rem;
 		}
 
 		@include breakpoint(med) {
-			display: flex;
 			flex-direction: row-reverse;
+			width: 90%;
 			// grid-template-areas: "b a";
 			// grid-template-columns: 4fr 3fr;
 			// grid-template-rows: auto;
@@ -149,10 +151,10 @@ $edu-exp-height-xl: 3rem;
 		display: flex;
 		flex-direction: column;
 		justify-self: center;
-		width: 90vw;
+		width: 90%;
 		max-width: 37rem;
 		gap: 1.5rem;
-		padding: 1.5rem 0;
+		margin: 0 auto;
 
 		@include breakpoint(med) {
 			width: fit-content;
