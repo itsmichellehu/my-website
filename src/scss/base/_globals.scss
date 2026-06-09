@@ -6,6 +6,7 @@ html {
 	padding: 0;
 	width: 100%;
 	overflow-x: hidden;
+	scrollbar-gutter: stable; // reserves scrollbar space to prevent layout shift on short pages
 	-webkit-text-size-adjust: 100%; // Prevents adjustments of font size by mobile browsers
 	-ms-text-size-adjust: 100%; // For IE
 	scroll-behavior: smooth !important;
@@ -26,7 +27,6 @@ body {
 	text-align: left;
 	background-color: $light-grey;
 	overflow-x: hidden;
-	overflow-y: scroll;
 	position: relative;
 	min-height: 100vh;
 	min-height: 100dvh; // dynamic viewport height: avoids mobile address-bar jumps
