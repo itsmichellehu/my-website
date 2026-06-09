@@ -72,7 +72,7 @@ $edu-exp-height-xl: 3rem;
 		transition: align-items 0.3s ease-in-out;
 		display: flex;
 		flex-direction: column;
-		// gap: 0.5rem;
+		gap: 1.5rem;
 
 		@include breakpoint(sm) {
 			gap: 1.75rem;
