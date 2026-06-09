@@ -1,10 +1,6 @@
 @use "@abstracts/all-abstracts" as *;
 @use "@pages/about/about" as *;
 
-.section-wrapper {
-	width: 90vw;
-}
-
 .section-toolbox {
 	flex-direction: column;
 	align-items: center;
@@ -40,10 +36,6 @@
 	}
 }
 
-.section-toolbox {
-	display: grid;
-}
-
 .section-design-toolbox {
 	background-color: black;
 }
@@ -58,11 +50,17 @@
 	// grid-template-rows: auto auto;
 	display: block;
 	margin: auto;
-	width: fit-content;
 
-	h3 {
+	h2 {
 		width: fit-content;
 		text-wrap: nowrap;
+		margin-bottom: 2rem;
+	}
+
+	@include breakpoint(med) {
+		h2 {
+			margin-bottom: 0;
+		}
 	}
 }
 
@@ -82,7 +80,8 @@
 .dev-tools_grid-container {
 	display: grid;
 	margin: auto;
-	width: fit-content;
+	// width: fit-content;
+	width: 100%;
 	gap: 1.5rem;
 	// background-color: #262626;
 }
