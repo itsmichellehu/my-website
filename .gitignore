@@ -13,3 +13,5 @@ src/assets/unused/*
 
 src/assets/images/thumbs/op/optimize-videos.sh
 src/assets/images/thumbs/op/resize-videos.sh
+.cache-temp/
+.cache-tmp/*
