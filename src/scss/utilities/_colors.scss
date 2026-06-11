@@ -93,55 +93,6 @@
 	color: transparent !important;
 }
 
-// Background colors
-
-.bg- {
-	&-transparent {
-		background-color: transparent !important;
-	}
-
-	&lightest-green {
-		background-color: $lightest-green !important;
-		background: $lightest-green !important;
-	}
-
-	&light-blue {
-		background-color: var(--light-blue) !important;
-	}
-
-	&light-grey {
-		background-color: $light-grey !important;
-	}
-
-	&light-medium-grey {
-		background-color: $light-medium-grey !important;
-	}
-
-	&lightest-grey {
-		background-color: $lightest-grey !important;
-	}
-
-	&transparent {
-		background-color: transparent !important;
-	}
-
-	&medium-grey {
-		background-color: $medium-grey !important;
-	}
-
-	&medium-light-grey {
-		background-color: $medium-light-grey !important;
-	}
-
-	&dark-grey {
-		background-color: $dark-grey !important;
-	}
-
-	&white {
-		background-color: #fff !important;
-	}
-}
-
 // Colors - greyscale
 .white {
 	color: #ffffff !important;
@@ -209,7 +160,53 @@
 }
 
 // Background colors
+
 .bg- {
+	&-transparent {
+		background-color: transparent !important;
+	}
+
+	&lightest-green {
+		background-color: $lightest-green !important;
+		background: $lightest-green !important;
+	}
+
+	&light-blue {
+		background-color: var(--light-blue) !important;
+	}
+
+	&light-grey {
+		background-color: $light-grey !important;
+	}
+
+	&light-medium-grey {
+		background-color: $light-medium-grey !important;
+	}
+
+	&lightest-grey {
+		background-color: $lightest-grey !important;
+	}
+
+	&transparent {
+		background-color: transparent !important;
+	}
+
+	&medium-grey {
+		background-color: $medium-grey !important;
+	}
+
+	&medium-light-grey {
+		background-color: $medium-light-grey !important;
+	}
+
+	&dark-grey {
+		background-color: $dark-grey !important;
+	}
+
+	&white {
+		background-color: #fff !important;
+	}
+
 	&light-blue {
 		background-color: $light-blue !important;
 	}
