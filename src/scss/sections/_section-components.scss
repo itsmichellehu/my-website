@@ -44,7 +44,7 @@
 		}
 
 		&.large {
-			max-width: 1200px;
+			max-width: $content-max-width-lg;
 		}
 
 		&.xl {
@@ -116,7 +116,7 @@
 	}
 
 	&.large {
-		max-width: 1200px;
+		max-width: $content-max-width-lg;
 	}
 
 	&.xl {
