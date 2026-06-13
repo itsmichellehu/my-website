@@ -4,14 +4,13 @@
 		"dev": "webpack serve --config webpack.dev.js --mode development",
 		"build": "NODE_ENV=production webpack --config webpack.prod.js",
 		"serve": "npx serve dist",
-		"check-deps": "npx check-dependencies",
+		"check-deps": "npm ls --depth=0",
 		"clean": "rimraf node_modules/.cache dist"
 	},
 	"devDependencies": {
 		"@babel/core": "^7.28.5",
 		"@babel/preset-env": "^7.28.5",
 		"babel-loader": "^9.2.1",
-		"check-dependencies": "^2.0.0",
 		"compression-webpack-plugin": "^11.1.0",
 		"copy-webpack-plugin": "^12.0.2",
 		"css-loader": "^7.1.2",
