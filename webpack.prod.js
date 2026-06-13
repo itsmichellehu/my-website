@@ -7,9 +7,6 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
 const { PurgeCSSPlugin } = require("purgecss-webpack-plugin");
-const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin");
-const CompressionPlugin = require("compression-webpack-plugin");
-const zlib = require("zlib");
 
 process.env.NODE_ENV = "production";
 
@@ -64,11 +61,6 @@ module.exports = merge(common, {
         },
       }),
       new CssMinimizerPlugin(),
-      // TODO: image minification disabled — sharpMinify crashes on all SVGs
-      // emitted by asset/resource rules (test/exclude/minimizer.filter all
-      // fail to gate it in image-minimizer-webpack-plugin v4.1.4). Re-enable
-      // once the plugin is upgraded or the SVG asset pipeline is refactored.
-      // new ImageMinimizerPlugin({ minimizer: { implementation: ImageMinimizerPlugin.sharpMinify, ... } }),
     ],
   },
 
@@ -81,25 +73,6 @@ module.exports = merge(common, {
       paths: glob.sync(`${PATHS.src}/**/*`, { nodir: true }),
       only: ["main"], // Only process main bundle
       safelist: ["html", "body"], // Keep essential selectors
-    }),
-
-    // Pre-compress text + media assets so the server can ship .br / .gz.
-    new CompressionPlugin({
-      filename: "[path][base].gz",
-      algorithm: "gzip",
-      test: /\.(js|css|html|svg|json|ttf|otf|eot)$/,
-      threshold: 10240,
-      minRatio: 0.8,
-    }),
-    new CompressionPlugin({
-      filename: "[path][base].br",
-      algorithm: "brotliCompress",
-      test: /\.(js|css|html|svg|json|ttf|otf|eot)$/,
-      compressionOptions: {
-        params: { [zlib.constants.BROTLI_PARAM_QUALITY]: 11 },
-      },
-      threshold: 10240,
-      minRatio: 0.8,
     }),
   ],
 
