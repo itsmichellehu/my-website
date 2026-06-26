@@ -28,11 +28,6 @@ $prototype-accordion-bg: $black;
 	width: fit-content;
 	max-width: 90vw;
 	margin: auto;
-
-	@include breakpoint(lg) {
-		@include flex(row, 2.5rem, center, center);
-		width: 100%;
-	}
 }
 
 .prototype-walkthrough-section_grid-container {
