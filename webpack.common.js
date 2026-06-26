@@ -32,7 +32,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "js/[name].js",
-    assetModuleFilename: "assets/[name].[ext][query]",
+    assetModuleFilename: "assets/[name][ext][query]",
     clean: true,
     publicPath: "/",
   },
