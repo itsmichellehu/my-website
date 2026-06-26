@@ -15,7 +15,6 @@
 		font-family: Inter;
 		font-size: 0.775rem;
 		font-style: normal;
-		font-weight: 500;
 		line-height: 125%;
 		margin: auto;
 	}
@@ -101,11 +100,14 @@
 }
 
 .tools-grid-item {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 	color: #fff;
 	text-align: center;
 	font-family: "Inter" sans-serif;
 	font-style: normal;
-	font-weight: 500;
 	line-height: 135%;
 	/* 1.0125rem */
 	width: 3.75rem;
@@ -113,21 +115,22 @@
 	p {
 		margin: 0;
 		text-align: center;
-		margin: auto;
 		font-size: 12px;
 		letter-spacing: 0;
-		width: 100%;
 	}
 
-	> div:first-child {
-		display: flex;
+	.logo {
 		margin-bottom: 0.75rem;
-		padding: 0.5rem;
-		justify-content: center;
-		align-items: center;
 		width: 3.5rem;
 		height: 3.5rem;
 		border-radius: 0.625rem;
+	}
+
+	div.logo {
+		display: flex;
+		padding: 0.5rem;
+		justify-content: center;
+		align-items: center;
 
 		&height {
 			width: auto;
@@ -156,86 +159,55 @@
 // Logo styles
 $logo-img-width-mobile: 2.5rem;
 
+$logo-box-shadow:
+	-1px -1px 3px 0px rgba(0, 0, 0, 0.125) inset,
+	1px 1px 2px 0px rgba(255, 255, 255, 0.125) inset,
+	-2px -2px 4px 0px rgba(49, 49, 49, 0.125),
+	1px 1px 4px 0px rgba(0, 0, 0, 0.25);
 .logo- {
-	&bg-white {
+	&whiteBG {
 		background: #fff;
-		box-shadow:
-			-1px -1px 3px 0px rgba(0, 0, 0, 0.25) inset,
-			1px 1px 2px 0px rgba(255, 255, 255, 0.05) inset,
-			-1px -1px 6px 0px rgba(49, 49, 49, 0.25),
-			1px 1px 6px 0px rgba(0, 0, 0, 0.25);
+		box-shadow: $logo-box-shadow;
 	}
 
 	&figma {
 		background: #2e3139;
-		box-shadow:
-			-1px -1px 3px 0px rgba(0, 0, 0, 0.25) inset,
-			1px 1px 2px 0px rgba(255, 255, 255, 0.03) inset,
-			-1px -1px 6px 0px rgba(49, 49, 49, 0.15),
-			1px 1px 6px 0px rgba(0, 0, 0, 0.15);
+		box-shadow: $logo-box-shadow;
 	}
 
 	&miro {
 		background: #ffd12b;
-		box-shadow:
-			-1px -1px 3px 0px rgba(0, 0, 0, 0.25) inset,
-			1px 1px 2px 0px rgba(255, 255, 255, 0.25) inset,
-			-1px -1px 6px 0px rgba(49, 49, 49, 0.15),
-			1px 1px 6px 0px rgba(0, 0, 0, 0.25);
+		box-shadow: $logo-box-shadow;
 	}
 
 	&webflow {
 		background: #136df5;
-		box-shadow:
-			-1px -1px 3px 0px rgba(0, 0, 0, 0.25) inset,
-			1px 1px 2px 0px rgba(255, 255, 255, 0.25) inset,
-			-2px -2px 6px 0px rgba(49, 49, 49, 0.25),
-			1px 1px 6px 0px rgba(0, 0, 0, 0.25);
+		box-shadow: $logo-box-shadow;
 	}
 
 	&procreate {
 		background: #242424;
-		box-shadow:
-			-1px -1px 3px 0px rgba(0, 0, 0, 0.25) inset,
-			1px 1px 3px 0px rgba(255, 255, 255, 0.1) inset,
-			-1px -1px 6px 0px rgba(49, 49, 49, 0.15),
-			1px 1px 6px 0px rgba(0, 0, 0, 0.15);
+		box-shadow: $logo-box-shadow;
 	}
 
 	&adobe {
 		background: #001e36;
-		box-shadow:
-			-1px -1px 3px 0px rgba(0, 0, 0, 0.25) inset,
-			1px 1px 3px 0px rgba(255, 255, 255, 0.1) inset,
-			-1px -1px 6px 0px rgba(49, 49, 49, 0.15),
-			1px 1px 6px 0px rgba(0, 0, 0, 0.15);
+		box-shadow: $logo-box-shadow;
 	}
 
 	&adobeXD {
 		background: #470137;
-		box-shadow:
-			-1px -1px 3px 0px rgba(0, 0, 0, 0.25) inset,
-			1px 1px 3px 0px rgba(255, 255, 255, 0.1) inset,
-			-1px -1px 6px 0px rgba(49, 49, 49, 0.15),
-			1px 1px 6px 0px rgba(0, 0, 0, 0.15);
+		box-shadow: $logo-box-shadow;
 	}
 
 	&github {
 		background: #242424 !important;
-		box-shadow:
-			-1px -1px 3px 0px rgba(0, 0, 0, 0.25) inset,
-			1px 1px 3px 0px rgba(255, 255, 255, 0.1) inset,
-			-1px -1px 6px 0px rgba(49, 49, 49, 0.15),
-			1px 1px 6px 0px rgba(0, 0, 0, 0.15);
+		box-shadow: $logo-box-shadow;
 	}
 
 	&sass {
 		background-color: #c66393 !important;
-		box-shadow:
-			-1px -1px 3px 0px rgba(0, 0, 0, 0.25) inset,
-			1px 1px 2px 0px rgba(255, 255, 255, 0.05) inset,
-			-1px -1px 6px 0px rgba(49, 49, 49, 0.25),
-			1px 1px 6px 0px rgba(0, 0, 0, 0.25);
+		box-shadow: $logo-box-shadow;
 	}
 }
 
@@ -404,14 +376,13 @@ $tool-grid-item-size: 4.5rem;
 						font-family: "Inter" sans-serif;
 						font-size: 0.75rem;
 						font-style: normal;
-						font-weight: 500;
 						line-height: 135%;
 						/* 1.0125rem */
 						margin: auto;
 						text-wrap: nowrap;
 					}
 
-					> div:first-child {
+					> .logo {
 						display: flex;
 						margin-bottom: 0.75rem;
 						padding: 0.5rem;
