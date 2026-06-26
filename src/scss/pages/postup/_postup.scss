@@ -30,17 +30,27 @@ $super-light-grey: #fafafa;
 	}
 }
 
-#the-solution.content-full-width {
-	display: flex;
-	flex-direction: column;
-	gap: 2rem;
+#the-solution {
+	&.content-full-width {
+		display: flex;
+		flex-direction: column;
+		gap: 2rem;
 
-	@include breakpoint(med) {
-		gap: 2.5rem;
+		@include breakpoint(med) {
+			gap: 2.5rem;
+		}
+
+		@include breakpoint(lg) {
+			gap: 3rem;
+		}
 	}
 
-	@include breakpoint(lg) {
-		gap: 3rem;
+	.final-prototype_grid-container {
+		width: 100%;
+	}
+
+	.primary-prototype {
+		margin-bottom: 2rem;
 	}
 }
 

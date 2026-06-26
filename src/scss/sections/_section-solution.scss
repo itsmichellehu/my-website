@@ -144,7 +144,6 @@ $solution-padding-xxl: 3rem;
 		gap: 2rem;
 		align-items: center;
 		width: 90vw;
-		max-width: 28rem;
 		grid-template-areas: "a" "b";
 		justify-content: center;
 		padding: 1.5rem;
@@ -156,15 +155,12 @@ $solution-padding-xxl: 3rem;
 		// auto-place after the content in the wrong order. Override to give them
 		// explicit rows in the correct reading order: headline → text → video.
 		grid-template-rows: auto auto;
-		max-width: min(28rem, 90vw);
 
 		> .final-prototype_headline {
 			display: block;
 		}
 
 		@include breakpoint(sm) {
-			width: 95%;
-			max-width: $content-max-width-lg;
 			align-items: start;
 			grid-template-columns: 2fr 1fr;
 			grid-template-rows: 1fr;
