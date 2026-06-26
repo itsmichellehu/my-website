@@ -16,34 +16,30 @@ h6 {
 	}
 }
 
-.paragraph {
-	font-size: 1.125rem;
-	font-weight: 400;
-	color: $dark-grey;
-	line-height: 145%;
-	margin-bottom: 1.125rem;
-	font-family: "Inter", sans-serif;
-}
-
-p {
+p,
+li {
 	font-size: 1rem;
 	color: $dark-grey;
 	line-height: 150%;
-	margin-bottom: 1.5rem;
 	font-weight: 400;
 	text-align: left;
 	margin-top: 0;
-	margin-bottom: 1rem;
 	letter-spacing: -0.25px;
 
 	@include breakpoint(mobile-lg) {
 		font-size: 1.125rem;
-		margin-bottom: 1.125rem;
 	}
 
 	@include breakpoint(lg) {
 		font-size: 1.2rem;
 		line-height: 155%;
+	}
+}
+
+p {
+	margin-bottom: 1.5rem;
+	@include breakpoint(mobile-lg) {
+		margin-bottom: 1.125rem;
 	}
 }
 
