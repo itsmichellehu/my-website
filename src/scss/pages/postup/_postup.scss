@@ -20,6 +20,16 @@ $super-light-grey: #fafafa;
 	border: 0;
 }
 
+.final-prototype_video_wrapper {
+	display: flex;
+	gap: 2rem;
+	justify-content: center;
+
+	.final-prototype_video {
+		max-width: 13rem;
+	}
+}
+
 #the-solution.content-full-width {
 	display: flex;
 	flex-direction: column;
