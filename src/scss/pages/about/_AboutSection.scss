@@ -235,7 +235,7 @@
 }
 
 @include breakpoint(lg) {
-	.section-about {
+	#about {
 		margin-top: 3rem;
 		padding: 3rem 0;
 		padding-bottom: 3rem;
