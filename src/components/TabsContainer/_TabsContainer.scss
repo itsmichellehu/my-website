@@ -35,6 +35,11 @@ $tab-menu-padding: 0.25rem;
 		&.three-menu-items .tab-button {
 			width: 33.3333% !important;
 		}
+
+		&.four-menu-items .tabs-menu-slider,
+		&.four-menu-items .tab-button {
+			width: 25% !important;
+		}
 	}
 
 	&-menu-slider {
