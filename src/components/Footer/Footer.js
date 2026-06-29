@@ -29,7 +29,7 @@ function Footer() {
 				</div>
 			</div>
 			<p class="tagline">Designed and coded with love by yours truly.</p>
-			<p class="copyright-text">Michelle Hu © 2024</p>
+			<p class="copyright-text">Michelle Hu © 2026</p>
 			<div class="cta-buttons hide" aria-hidden="true">
 				<button id="scrollToProjects" class="btn-primary scroll-button">
 					See my work
