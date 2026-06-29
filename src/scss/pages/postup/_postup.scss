@@ -2,7 +2,9 @@
 @use "@abstracts/all-abstracts" as *;
 
 $super-light-grey: #fafafa;
-
+body {
+	background-color: #80ada1 !important;
+}
 .project-hero {
 	background-color: #80ada1 !important;
 }

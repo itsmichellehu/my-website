@@ -22,7 +22,7 @@ html {
 
 body {
 	font-family: "Inter", sans-serif;
-	padding: 0 !important;;
+	padding: 0 !important;
 	margin: 0 !important;
 	text-align: left;
 	background-color: $light-grey;
@@ -39,13 +39,7 @@ body {
 main {
 	position: relative;
 	background-color: white;
-	margin-top: $navbar-mobile-height !important;
-
-	@include breakpoint(med) {
-		margin-top: $navbar-desktop-height !important;
-	}
 }
-
 
 //
 // ::-webkit-scrollbar-track {

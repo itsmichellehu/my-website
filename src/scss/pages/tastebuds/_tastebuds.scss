@@ -63,12 +63,8 @@ $tab-border-radius: 2rem;
 	margin-bottom: 1rem;
 }
 
-.project-hero {
-	background-color: $tastebuds-bg-yellow !important;
-}
-
-#overview {
-	background-color: transparent;
+body, .project-hero {
+	background-color: $tastebuds-hero-bg;
 }
 
 #the-constraints {
@@ -95,6 +91,6 @@ $tab-border-radius: 2rem;
 // }
 
 .user-flow-tabs-container {
-    width: 95vw;
-    max-width: 1024px;
+	width: 95vw;
+	max-width: 1024px;
 }

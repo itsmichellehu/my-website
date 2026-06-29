@@ -17,22 +17,17 @@ function NavBar() {
         </nav>
     `;
 
-	if (!document.querySelector("navbar")) {
+	if (!document.querySelector(".navbar")) {
 		document.body.insertAdjacentHTML("afterbegin", navbarHTML);
 	}
 
 	const navbar = document.querySelector(".navbar");
 	let lastScrollY = window.scrollY;
 
-	// Apply transition to navbar styles
-	navbar.style.transition = "top 0.3s ease, opacity 0.3s ease";
-	navbar.style.top = "0"; // Ensure it's shown initially
+	navbar.style.top = "0";
 
-	// Get the navbar's dynamic height
-	const getNavbarHeight = () => navbar.offsetHeight; // Now dynamically gets the actual navbar height
-	const navbarHeight = getNavbarHeight();
+	const navbarHeight = navbar.offsetHeight;
 
-	// Function to throttle events like scrolling
 	const throttle = (func, limit) => {
 		let lastFunc;
 		let lastRan;
@@ -57,25 +52,44 @@ function NavBar() {
 		};
 	};
 
-	// Handle scroll event to hide/show the navbar based on scroll position
 	const handleScroll = throttle(() => {
 		if (window.scrollY <= 5) {
 			navbar.classList.remove("navbar-hidden");
 		} else if (window.scrollY > lastScrollY) {
 			navbar.classList.add("navbar-hidden");
-			navbar.style.top = `-${navbarHeight}px`; // Hides the navbar by its height
+			navbar.style.top = `-${navbarHeight}px`;
 		} else if (window.scrollY < lastScrollY) {
 			navbar.classList.remove("navbar-hidden");
-			navbar.style.top = "0"; // Resets the navbar to show
+			navbar.style.top = "0";
 		}
 
 		lastScrollY = window.scrollY;
 	}, 100);
 
-	// Listen to scroll event
 	window.addEventListener("scroll", handleScroll);
 
-	// Set active navigation item based on the current page
+	// Go transparent over the hero, white everywhere else
+	const hero = document.querySelector("#hero");
+
+	if (hero) {
+		navbar.classList.add("nav-transparent");
+
+		const observer = new IntersectionObserver(
+			([entry]) => {
+				if (entry.isIntersecting) {
+					navbar.classList.add("transition-none");
+					navbar.classList.add("nav-transparent");
+					requestAnimationFrame(() => navbar.classList.remove("transition-none"));
+				} else {
+					navbar.classList.remove("nav-transparent");
+				}
+			},
+			{ threshold: 0, rootMargin: `-${navbarHeight}px 0px 0px 0px` },
+		);
+
+		observer.observe(hero);
+	}
+
 	const setActiveNavItem = () => {
 		const navItems = document.querySelectorAll(".nav-item a");
 		navItems.forEach((navItem) => {
