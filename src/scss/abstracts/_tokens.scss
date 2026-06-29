@@ -1,0 +1,73 @@
+@use "sass:map";
+
+// =====================================================================
+// Design tokens — spacing + typography scales
+// =====================================================================
+// These capture the scales the codebase already uses (a 0.5rem spacing
+// step and a 1.25 modular type scale) as named, enforceable tokens.
+// Prefer space($step) and $text-* over hardcoded rem values so the
+// stylelint scale rule can catch drift.
+
+// ---- Spacing scale (0.25rem base unit) ----
+$spacing-scale: (
+  0: 0,
+  1: 0.25rem,
+  2: 0.5rem,
+  3: 0.75rem,
+  4: 1rem,
+  5: 1.25rem,
+  6: 1.5rem,
+  8: 2rem,
+  10: 2.5rem,
+  12: 3rem,
+  14: 3.5rem,
+  16: 4rem,
+  18: 4.5rem,
+  20: 5rem,
+  24: 6rem,
+);
+
+// space(4) -> 1rem. Errors at compile time on an unknown step, which is
+// the enforcement: you cannot reference an off-scale spacing value.
+@function space($step) {
+  @if not map.has-key($spacing-scale, $step) {
+    @error "space(#{$step}) is not on the spacing scale. Valid steps: #{map.keys($spacing-scale)}.";
+  }
+  @return map.get($spacing-scale, $step);
+}
+
+// ---- Type scale (1.25 modular ratio) ----
+$text-xs: 0.8rem;
+$text-sm: 0.875rem;
+$text-base: 1rem;
+$text-md: 1.125rem;
+$text-lg: 1.25rem;
+$text-xl: 1.562rem;
+$text-2xl: 1.953rem;
+$text-3xl: 2.441rem;
+$text-4xl: 3.157rem;
+
+$text-scale: (
+  xs: $text-xs,
+  sm: $text-sm,
+  base: $text-base,
+  md: $text-md,
+  lg: $text-lg,
+  xl: $text-xl,
+  2xl: $text-2xl,
+  3xl: $text-3xl,
+  4xl: $text-4xl,
+);
+
+@function text($name) {
+  @if not map.has-key($text-scale, $name) {
+    @error "text(#{$name}) is not on the type scale. Valid: #{map.keys($text-scale)}.";
+  }
+  @return map.get($text-scale, $name);
+}
+
+// ---- Line heights ----
+$leading-tight: 120%;
+$leading-snug: 130%;
+$leading-normal: 150%;
+$leading-relaxed: 160%;
