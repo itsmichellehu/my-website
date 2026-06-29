@@ -1,7 +1,7 @@
 import "./_NavBar.scss";
 
 function NavBar() {
-	const navbarHTML = `
+  const navbarHTML = `
         <nav class="navbar default-nav-color">
             <div id="navbar-wrapper" class="navbar-wrapper">
                 <div class="navbar-logo-wrapper show-sm-flex">
@@ -17,89 +17,95 @@ function NavBar() {
         </nav>
     `;
 
-	if (!document.querySelector(".navbar")) {
-		document.body.insertAdjacentHTML("afterbegin", navbarHTML);
-	}
+  if (!document.querySelector(".navbar")) {
+    document.body.insertAdjacentHTML("afterbegin", navbarHTML);
+  }
 
-	const navbar = document.querySelector(".navbar");
-	let lastScrollY = window.scrollY;
+  const navbar = document.querySelector(".navbar");
+  let lastScrollY = window.scrollY;
 
-	navbar.style.top = "0";
+  navbar.style.top = "0";
 
-	const navbarHeight = navbar.offsetHeight;
+  const navbarHeight = navbar.offsetHeight;
 
-	const throttle = (func, limit) => {
-		let lastFunc;
-		let lastRan;
-		return function () {
-			const context = this;
-			const args = arguments;
-			if (!lastRan) {
-				func.apply(context, args);
-				lastRan = Date.now();
-			} else {
-				clearTimeout(lastFunc);
-				lastFunc = setTimeout(
-					() => {
-						if (Date.now() - lastRan >= limit) {
-							func.apply(context, args);
-							lastRan = Date.now();
-						}
-					},
-					limit - (Date.now() - lastRan),
-				);
-			}
-		};
-	};
+  const throttle = (func, limit) => {
+    let lastFunc;
+    let lastRan;
+    return function () {
+      const context = this;
+      const args = arguments;
+      if (!lastRan) {
+        func.apply(context, args);
+        lastRan = Date.now();
+      } else {
+        clearTimeout(lastFunc);
+        lastFunc = setTimeout(
+          () => {
+            if (Date.now() - lastRan >= limit) {
+              func.apply(context, args);
+              lastRan = Date.now();
+            }
+          },
+          limit - (Date.now() - lastRan),
+        );
+      }
+    };
+  };
 
-	const handleScroll = throttle(() => {
-		if (window.scrollY <= 5) {
-			navbar.classList.remove("navbar-hidden");
-		} else if (window.scrollY > lastScrollY) {
-			navbar.classList.add("navbar-hidden");
-			navbar.style.top = `-${navbarHeight}px`;
-		} else if (window.scrollY < lastScrollY) {
-			navbar.classList.remove("navbar-hidden");
-			navbar.style.top = "0";
-		}
+  const handleScroll = throttle(() => {
+    const nearBottom =
+      window.innerHeight + window.scrollY >= document.body.offsetHeight - 100;
 
-		lastScrollY = window.scrollY;
-	}, 100);
+    if (window.scrollY <= 5 || nearBottom) {
+      navbar.classList.remove("navbar-hidden");
+      navbar.style.top = "0";
+    } else if (window.scrollY > lastScrollY) {
+      navbar.classList.add("navbar-hidden");
+      navbar.style.top = `-${navbarHeight}px`;
+    } else if (window.scrollY < lastScrollY) {
+      navbar.classList.remove("navbar-hidden");
+      navbar.style.top = "0";
+    }
 
-	window.addEventListener("scroll", handleScroll);
+    lastScrollY = window.scrollY;
+  }, 100);
 
-	// Go transparent over the hero, white everywhere else
-	const hero = document.querySelector("#hero");
+  window.addEventListener("scroll", handleScroll);
 
-	if (hero) {
-		navbar.classList.add("nav-transparent");
+  // Go transparent over the hero, white everywhere else
+  const hero = document.querySelector("#hero");
 
-		const observer = new IntersectionObserver(
-			([entry]) => {
-				if (entry.isIntersecting) {
-					navbar.classList.add("transition-none");
-					navbar.classList.add("nav-transparent");
-					requestAnimationFrame(() => navbar.classList.remove("transition-none"));
-				} else {
-					navbar.classList.remove("nav-transparent");
-				}
-			},
-			{ threshold: 0, rootMargin: `-${navbarHeight}px 0px 0px 0px` },
-		);
+  if (hero) {
+    navbar.classList.add("nav-transparent");
 
-		observer.observe(hero);
-	}
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          navbar.classList.add("transition-none");
+          navbar.classList.add("nav-transparent");
+          requestAnimationFrame(() =>
+            navbar.classList.remove("transition-none"),
+          );
+        } else {
+          navbar.classList.remove("nav-transparent");
+        }
+      },
+      { threshold: 0, rootMargin: `-${navbarHeight}px 0px 0px 0px` },
+    );
 
-	const setActiveNavItem = () => {
-		const navItems = document.querySelectorAll(".nav-item a");
-		navItems.forEach((navItem) => {
-			if (navItem.pathname === window.location.pathname) {
-				navItem.parentElement.classList.add("active");
-			}
-		});
-	};
+    observer.observe(hero);
+  }
 
-	setActiveNavItem();
+  const setActiveNavItem = () => {
+    const navItems = document.querySelectorAll(".nav-item a");
+    navItems.forEach((navItem) => {
+      if (navItem.pathname === window.location.pathname) {
+        navItem.parentElement.classList.add("active");
+      }
+    });
+  };
+
+  setActiveNavItem();
 }
 
 export default NavBar;
