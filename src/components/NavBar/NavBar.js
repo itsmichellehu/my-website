@@ -72,8 +72,9 @@ function NavBar() {
 
   window.addEventListener("scroll", handleScroll);
 
-  // Go transparent over the hero, white everywhere else
-  const hero = document.querySelector("#hero");
+  const hero = document.body.hasAttribute("data-nav-transparent")
+    ? document.querySelector("#hero")
+    : null;
 
   if (hero) {
     navbar.classList.add("nav-transparent");
