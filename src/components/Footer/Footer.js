@@ -22,7 +22,7 @@ function Footer() {
 				<a href="about" class="anchor-link">About me</a>
 				<a href="https://www.linkedin.com/in/itsmichellehu" target="_blank" rel="noopener noreferrer" class="anchor-link mobile-only">LinkedIn</a>
 				<a href="assets/files/MichelleHuResume.pdf" target="_blank" rel="noopener noreferrer" class="anchor-link">Resume</a>
-				<a href="mailto:mhu.contact@gmail.com" target="_blank" rel="noopener noreferrer" class="anchor-link mobile-only">Email me</a>
+				<a href="mailto:hello@michellehu.com" target="_blank" rel="noopener noreferrer" class="anchor-link mobile-only">Email me</a>
 				<div class="email-link-wrapper">
 					<a href="mailto:hello@michellehu.com" class="email-link">hello@michellehu.com</a>
 					<span class="text-decoration-none">✉️</span>

@@ -1,896 +1,866 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-PPN1THS2HD"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-      gtag("config", "G-PPN1THS2HD");
-    </script>
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PostUp Case Study by Michelle Hu</title>
-    <meta name="author" content="Michelle Hu" />
-    <meta name="designer" content="Michelle Hu" />
-    <meta
+<head>
+  <script async
+    src="https://www.googletagmanager.com/gtag/js?id=G-PPN1THS2HD"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+    gtag("config", "G-PPN1THS2HD");
+  </script>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PostUp Case Study by Michelle Hu</title>
+  <meta name="author" content="Michelle Hu" />
+  <meta name="designer" content="Michelle Hu" />
+  <meta
       name="description"
       content="A mobile app that connects remote workers to ideal public workspaces anywhere."
     />
-    <link rel="canonical" href="https://michellehu.com/postup" />
-    <meta content="PostUp by Michelle Hu" property="og:title" />
-    <meta property="og:url" content="https://michellehu.com/postup/?v=1" />
-    <meta property="og:type" content="website" />
-    <meta
+  <link rel="canonical" href="https://michellehu.com/postup" />
+  <meta content="PostUp by Michelle Hu" property="og:title" />
+  <meta property="og:url" content="https://michellehu.com/postup/?v=1" />
+  <meta property="og:type" content="website" />
+  <meta
       property="og:image"
       content="https://michellehu.com/assets/images/michelle-hu-portrait-bw-large.webp"
     />
-    <link
+  <link
       rel="icon"
       href="https://michellehu.com/assets/svg/logo-mhu-black.svg"
       type="image/x-icon"
     />
-    <link
+  <link
       rel="icon"
       type="image/png"
       href="https://michellehu.com/assets/images/logo-mhu-black-32.png"
       sizes="32x32"
     />
-    <link
+  <link
       rel="apple-touch-icon"
       href="https://michellehu.com/assets/images/logo-mhu-black-180.png"
     />
-    <link
+  <link
       rel="icon"
       type="image/png"
       href="https://michellehu.com/assets/images/logo-mhu-black-192.png"
       sizes="192x192"
     />
-    <script src="js/main.[hash].js" defer type="text/javascript"></script>
-    <style>
-      main,
-      nav,
-      footer {
-        opacity: 0;
-        transition: opacity 1s linear;
-      }
-      .loading-screen {
-        display: flex;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        background-color: #f0f0f0;
-        z-index: 2001;
-        opacity: 1;
-        transition: opacity 1s ease-in-out;
-        /* 1-second dissolve effect */
-      }
+  <script src="js/main.[hash].js" defer type="text/javascript"></script>
+  <style>
+    main,
+    nav,
+    footer {
+      opacity: 0;
+      transition: opacity 1s linear;
+    }
 
-      .loading-screen.dissolve {
-        opacity: 0;
-        pointer-events: none;
-      }
+    .loading-screen {
+      display: flex;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-color: #f0f0f0;
+      z-index: 2001;
+      opacity: 1;
+      transition: opacity 1s ease-in-out;
+      /* 1-second dissolve effect */
+    }
 
-      .loading-text {
-        color: #4a4a4a;
-        margin: auto;
-        opacity: 0.1;
-        /* Start with low opacity */
-        transition: opacity 0.3s ease-in-out;
-      }
-    </style>
-    <link rel="stylesheet" href="css/main.[hash].css" type="text/css" />
-  </head>
+    .loading-screen.dissolve {
+      opacity: 0;
+      pointer-events: none;
+    }
 
-  <body data-page="postup" class="with-loader">
-    <div class="loading-screen">
-      <p class="loading-text">0%</p>
-    </div>
-    <!-- <div class="progress-bar-container">
+    .loading-text {
+      color: #4a4a4a;
+      margin: auto;
+      opacity: 0.1;
+      /* Start with low opacity */
+      transition: opacity 0.3s ease-in-out;
+    }
+  </style>
+  <link rel="stylesheet" href="css/main.[hash].css" type="text/css" />
+</head>
+<body data-page="postup" class="with-loader">
+  <div class="loading-screen">
+    <p class="loading-text">0%</p>
+  </div>
+  <!-- <div class="progress-bar-container">
 			<div class="progress-bar"></div>
 		</div> -->
-    <main id="content">
-      <section id="hero" data-nav-color="#80ada1">
-        <div class="project-hero">
-          <div class="project-hero__video-wrapper">
-            <!-- <video class="project-thumb thumb-postup lazy" preload="none" autoplay playsinline muted loop nodownload poster="assets/images/thumbs/thumb-postup-poster.webp">
+  <main id="content">
+    <section id="hero" data-nav-color="#80ada1">
+      <div class="project-hero">
+        <div class="project-hero__video-wrapper">
+          <!-- <video class="project-thumb thumb-postup lazy" preload="none" autoplay playsinline muted loop nodownload poster="assets/images/thumbs/thumb-postup-poster.webp">
 							<source data-src="assets/images/thumbs/thumb-postup.mp4" type="video/mp4" />
 							<source data-src="assets/images/thumbs/thumb-postup.webm" type="video/webm" />
 						</video> -->
-            <video
-              preload="none"
-              class="project-hero__video project-hero__video-postup lazy"
-              loop
-              muted
-              autoplay
-              playsinline
-              nodownload
-            >
-              <source
+          <video preload="none"
+            class="project-hero__video project-hero__video-postup lazy" loop
+            muted autoplay playsinline nodownload>
+            <source
                 data-src="assets/videos/postup/final-prototype-hero-compressed.mp4"
                 type="video/mp4"
               />
-            </video>
-          </div>
+          </video>
         </div>
-        <div id="overview" class="overview">
-          <div class="overview__content-wrapper">
-            <header>
-              <h1 class="overview__title">PostUp</h1>
-              <p class="overview__tagline">
-                Connecting remote workers to ideal public workspaces anywhere.
-              </p>
-            </header>
-            <div class="overview__details">
-              <div class="overview__details-container-01">
-                <div class="overview__details-list involvement-list">
-                  <p class="overview__details-headline">Involvement</p>
-                  <ul>
-                    <li>Product designer</li>
-                    <li>UX/UI designer</li>
-                    <li>Service designer</li>
-                    <li>Interaction designer</li>
-                    <li>UX writer</li>
-                  </ul>
-                </div>
-                <div class="overview__details-list discipline-list">
-                  <p class="overview__details-headline">Disciplines</p>
-                  <ul>
-                    <li>UX/UI design</li>
-                    <li>Growth design</li>
-                    <li>Branding</li>
-                    <li>Product strategy</li>
-                    <li>Monetization strategy</li>
-                  </ul>
-                </div>
+      </div>
+      <div id="overview" class="overview">
+        <div class="overview__content-wrapper">
+          <header>
+            <h1 class="overview__title">PostUp</h1>
+            <p class="overview__tagline">
+              Connecting remote workers to ideal public workspaces anywhere.
+            </p>
+          </header>
+          <div class="overview__details">
+            <div class="overview__details-container-01">
+              <div class="overview__details-list involvement-list">
+                <p class="overview__details-headline">Involvement</p>
+                <ul>
+                  <li>Product designer</li>
+                  <li>UX/UI designer</li>
+                  <li>Service designer</li>
+                  <li>Interaction designer</li>
+                  <li>UX writer</li>
+                </ul>
               </div>
-              <div class="overview__details-timeline-tools">
+              <div class="overview__details-list discipline-list">
+                <p class="overview__details-headline">Disciplines</p>
+                <ul>
+                  <li>UX/UI design</li>
+                  <li>Growth design</li>
+                  <li>Branding</li>
+                  <li>Product strategy</li>
+                  <li>Monetization strategy</li>
+                </ul>
+              </div>
+            </div>
+            <div class="overview__details-timeline-tools">
+              <div class="overview__details-list">
+                <p class="overview__details-headline">Timeline</p>
+                <ul>
+                  <li>December 2023</li>
+                  <li>5-day design sprint</li>
+                </ul>
+              </div>
+              <div
+                class="overview__details-container overview__details-container-postup">
                 <div class="overview__details-list">
-                  <p class="overview__details-headline">Timeline</p>
-                  <ul>
-                    <li>December 2023</li>
-                    <li>5-day design sprint</li>
-                  </ul>
-                </div>
-                <div
-                  class="overview__details-container overview__details-container-postup"
-                >
-                  <div class="overview__details-list">
-                    <p
-                      class="overview__details-headline overview__details-headline-tools"
-                    >
-                      Tools
-                    </p>
-                    <div class="overview__tools-flex-container">
-                      <div
-                        class="overview__tools-logo-wrapper overview__tools-logo-wrapper--figma"
-                      >
-                        <img
+                  <p
+                    class="overview__details-headline overview__details-headline-tools">
+                    Tools
+                  </p>
+                  <div class="overview__tools-flex-container">
+                    <div
+                      class="overview__tools-logo-wrapper overview__tools-logo-wrapper--figma">
+                      <img
                           loading="lazy"
                           src="assets/images/toolbox-logos/logo-figma.webp"
                           alt="Figma logo"
                         />
-                      </div>
-                      <div
-                        class="overview__tools-logo-wrapper overview__tools-logo-wrapper--canva"
-                      >
-                        <img
+                    </div>
+                    <div
+                      class="overview__tools-logo-wrapper overview__tools-logo-wrapper--canva">
+                      <img
                           alt="Canva logo"
                           loading="lazy"
                           src="assets/images/toolbox-logos/logo-canva.webp"
                         />
-                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <!-- <a href="#intro" class="scroll-button" aria-label="Scroll down to next section">
+        </div>
+        <!-- <a href="#intro" class="scroll-button" aria-label="Scroll down to next section">
 						<img src="assets/svg/ic-chevron-arrow__down--black.svg" loading="lazy" alt="Black down arrow icon" class="show-med-flex" />
 					</a> -->
-        </div>
-      </section>
-      <section
-        id="intro"
-        class="section-container bg-lightest-grey border-0 equal-padding"
-      >
-        <section id="the-challenge" class="content-wrapper mt-0">
-          <header class="header-container">
-            <h2 class="intro-headline">The Challenge</h2>
-          </header>
-          <p>
-            PostUp is a startup building an online community for remote workers
-            and freelancers to share tips and advice. The team identified a
-            growing need for reliable information about public places, such as
-            libraries and coffee shops, where remote workers can be productive.
-            However, essential details, such as stable Wi-Fi, outlets, and
-            seating availability, are hard to find using tools like Google and
-            Yelp.
-          </p>
-          <p>
-            To address this need, PostUp required a subscription-based mobile
-            solution in 5 days with the following scope and constraints:
-          </p>
-          <div class="flex-col gap-16 flex-row-sm mt-32 a-i-stretch">
-            <div class="card project-proposal">
-              <div class="card_icon-wrapper">
-                <img
+      </div>
+    </section>
+    <section id="intro"
+      class="section-container bg-lightest-grey border-0 equal-padding">
+      <section id="the-challenge" class="content-wrapper mt-0">
+        <header class="header-container">
+          <h2 class="intro-headline">The Challenge</h2>
+        </header>
+        <p>
+          PostUp is a startup building an online community for remote workers
+          and freelancers to share tips and advice. The team identified a
+          growing need for reliable information about public places, such as
+          libraries and coffee shops, where remote workers can be productive.
+          However, essential details, such as stable Wi-Fi, outlets, and
+          seating availability, are hard to find using tools like Google and
+          Yelp.
+        </p>
+        <p>
+          To address this need, PostUp required a subscription-based mobile
+          solution in 5 days with the following scope and constraints:
+        </p>
+        <div class="flex-col gap-16 flex-row-sm mt-32 a-i-stretch">
+          <div class="card project-proposal">
+            <div class="card_icon-wrapper">
+              <img
                   loading="lazy"
                   class="card_icon"
                   src="assets/svg/constraint-business.svg"
                   alt="Business briefcase icon"
                 />
-              </div>
-              <p class="card_heading">Scope</p>
-              <ul>
-                <li>Mobile-app solution</li>
-                <li>Limited timeline: 5 days</li>
-                <li>$5.99 monthly subscription</li>
-                <li>Feature already existing spaces</li>
-              </ul>
             </div>
-            <div class="card project-proposal">
-              <div class="card_icon-wrapper">
-                <img
+            <p class="card_heading">Scope</p>
+            <ul>
+              <li>Mobile-app solution</li>
+              <li>Limited timeline: 5 days</li>
+              <li>$5.99 monthly subscription</li>
+              <li>Feature already existing spaces</li>
+            </ul>
+          </div>
+          <div class="card project-proposal">
+            <div class="card_icon-wrapper">
+              <img
                   class="card_icon"
                   src="assets/svg/ic-paper-folder.svg"
                   alt="Folder icon"
                   loading="lazy"
                 />
-              </div>
-              <p class="card_heading">Constraints</p>
-              <ul>
-                <li>Limited research materials</li>
-                <li>No access to PostUp personel</li>
-                <li>No additional iterations</li>
-                <li>No additional testing</li>
-                <li>No access to users</li>
-              </ul>
             </div>
-            <!-- <p>
+            <p class="card_heading">Constraints</p>
+            <ul>
+              <li>Limited research materials</li>
+              <li>No access to PostUp personel</li>
+              <li>No additional iterations</li>
+              <li>No additional testing</li>
+              <li>No access to users</li>
+            </ul>
+          </div>
+          <!-- <p>
 							Additionally, I uncovered an additional issue at large—a lack of suitable public workspaces. As a result, many waste valuable time searching for and visiting unsuitable
 							locations, leaving them frustrated and unproductive.
 						</p> -->
-          </div>
-        </section>
-        <section id="design-sprint-process" class="content-wrapper">
-          <header class="header-container mb-36">
-            <h2 class="intro-headline">The Solution</h2>
-          </header>
-          <div class="design-sprint-graphic">
-            <img
+        </div>
+      </section>
+      <section id="design-sprint-process" class="content-wrapper">
+        <header class="header-container mb-36">
+          <h2 class="intro-headline">The Solution</h2>
+        </header>
+        <div class="design-sprint-graphic">
+          <img
               alt=""
               loading="lazy"
               src="assets/images/postup/sprint-schedule-large-green.webp"
             />
-          </div>
-          <p class="mb-0">
-            Using a modified version of Google Ventures' (GV) design sprint, I
-            was able to rapidly prototype a solution. This modification helped a
-            lot working solo!
-          </p>
-        </section>
-        <section id="the-solution" class="content-full-width">
-          <div class="the-solution-prototype_wrapper">
-            <div class="final-prototype_grid-container primary-prototype">
-              <div class="the-solution-prototype_content">
-                <h2 class="intro-headline">Final solution</h2>
-                <p class="the-solution-prototype_body mb-16">
-                  The app centralizes essential workspace details for users to
-                  effortlessly find an available workspace anywhere that meets
-                  their needs. It delivers a seamless commute experience via a
-                  third-party API and exclusive features at partner locations.
-                </p>
-                <a
-                  href="#final-prototype"
-                  aria-label="Scroll down to jump to final prototype"
-                >
-                  <img
+        </div>
+        <p class="mb-0">
+          Using a modified version of Google Ventures' (GV) design sprint, I
+          was able to rapidly prototype a solution. This modification helped a
+          lot working solo!
+        </p>
+      </section>
+      <section id="the-solution" class="content-full-width">
+        <div class="the-solution-prototype_wrapper">
+          <div class="final-prototype_grid-container primary-prototype">
+            <div class="the-solution-prototype_content">
+              <h2 class="intro-headline">Final solution</h2>
+              <p class="the-solution-prototype_body mb-16">
+                The app centralizes essential workspace details for users to
+                effortlessly find an available workspace anywhere that meets
+                their needs. It delivers a seamless commute experience via a
+                third-party API and exclusive features at partner locations.
+              </p>
+              <a href="#final-prototype"
+                aria-label="Scroll down to jump to final prototype">
+                <img
                     src="assets/svg/ic-arrow-south-east.svg"
                     style="vertical-align: -8%"
                     alt=""
                     loading="lazy"
                   />
-                  <span class="teal-accent">
-                    <span class="hover-underline-self"
-                      >Jump to final prototype</span
-                    >
-                  </span>
-                </a>
-              </div>
-              <video
-                preload="none"
-                playsinline
-                autoplay
-                loop
-                muted
-                nodownload
-                class="the-solution-prototype_video lazy"
-              >
-                <source
+                <span class="teal-accent">
+                  <span class="hover-underline-self">Jump to final
+                    prototype</span>
+                </span>
+              </a>
+            </div>
+            <video preload="none" playsinline autoplay loop muted nodownload
+              class="the-solution-prototype_video lazy">
+              <source
                   data-src="assets/videos/postup/final-prototype-full.mp4"
                   type="video/mp4"
                 />
-              </video>
+            </video>
+          </div>
+          <div class="final-prototype_grid-container current-availability">
+            <div class="the-solution-prototype_content">
+              <h2 class="intro-headline">Monetization model</h2>
+              <p>
+                My monetization strategy aims to expand workspace options by
+                incentivizing business partnerships to enhance remote work
+                amenities, unlock exclusive user features, and drive scalable
+                growth.
+              </p>
             </div>
-            <div class="final-prototype_grid-container current-availability">
-              <div class="the-solution-prototype_content">
-                <h2 class="intro-headline">Monetization model</h2>
-                <p>
-                  My monetization strategy aims to expand workspace options by
-                  incentivizing business partnerships to enhance remote work
-                  amenities, unlock exclusive user features, and drive scalable
-                  growth.
-                </p>
-              </div>
-              <img
+            <img
                 class="the-solution-prototype_image"
                 src="assets/images/postup/final-prototype-current-availability.webp"
                 loading="lazy"
                 alt=""
               />
-            </div>
           </div>
-        </section>
+        </div>
       </section>
-      <section id="monday" class="section-container">
-        <header class="header-container">
-          <h2>
-            <span>Monday</span>
-            <br />
+    </section>
+    <section id="monday" class="section-container">
+      <header class="header-container">
+        <h2>
+          <span>Monday</span>
+          <br />
             Mapping the problem
-          </h2>
-          <img
+        </h2>
+        <img
             class="img-project-schedule"
             alt=""
             loading="lazy"
             src="assets/images/postup/sprint-schedule-monday.webp"
           />
-        </header>
-        <div class="content-wrapper">
-          <header class="header-container header-container-postup-h3">
-            <h3>
-              <span>user research</span>
-              <br />
+      </header>
+      <div class="content-wrapper">
+        <header class="header-container header-container-postup-h3">
+          <h3>
+            <span>user research</span>
+            <br />
               Reviewing PostUp's research
-            </h3>
-          </header>
-          <p>
-            On Day 1, I kicked off the sprint by reviewing the limited research
-            materials provided by PostUp. This included a
-            <a href="assets/files/MichelleHu_PostUp_ResearchSlideDeck.pdf">
-              <span class="link-underlined">slide deck</span>
-            </a>
-            with 8 interview quotes, a user persona, and a single recorded
-            interview. With no access to additional research or users, I
-            extracted the most relevant insights to guide my design decisions.
-            Here's what I found:
-          </p>
-          <ul class="mb-24">
-            <li>
-              Remote workers need Wi-Fi, quiet environments, outlets, and
-              restrooms
-            </li>
-            <li>
-              They rely on online reviews and photos, which are often unreliable
-            </li>
-            <li>Many arrive at workspaces only to find no seating available</li>
-            <li>
-              Their needs vary by tasks: quiet work, meetings, calls, and
-              duration of stay
-            </li>
-          </ul>
-          <div class="interview-quotes">
-            <div class="interview-quotes_grid-container">
-              <p class="interview-quotes_insight">
-                Stable Wi-Fi, quiet environments, outlets, restrooms, and
-                seating are essential for remote workers.
-                <span class="medium-grey"
-                  >They sift through reviews and photos for this info on Google
-                  and Yelp, which are often unreliable and/or unavailable.</span
-                >
-              </p>
-              <div>
-                <img
+          </h3>
+        </header>
+        <p>
+          On Day 1, I kicked off the sprint by reviewing the limited research
+          materials provided by PostUp. This included a
+          <a href="assets/files/MichelleHu_PostUp_ResearchSlideDeck.pdf">
+            <span class="link-underlined">slide deck</span>
+          </a>
+          with 8 interview quotes, a user persona, and a single recorded
+          interview. With no access to additional research or users, I
+          extracted the most relevant insights to guide my design decisions.
+          Here's what I found:
+        </p>
+        <ul class="mb-24">
+          <li>
+            Remote workers need Wi-Fi, quiet environments, outlets, and
+            restrooms
+          </li>
+          <li>
+            They rely on online reviews and photos, which are often unreliable
+          </li>
+          <li>Many arrive at workspaces only to find no seating available</li>
+          <li>
+            Their needs vary by tasks: quiet work, meetings, calls, and
+            duration of stay
+          </li>
+        </ul>
+        <div class="interview-quotes">
+          <div class="interview-quotes_grid-container">
+            <p class="interview-quotes_insight">
+              Stable Wi-Fi, quiet environments, outlets, restrooms, and
+              seating are essential for remote workers.
+              <span class="medium-grey">They sift through reviews and photos for
+                this info on Google
+                and Yelp, which are often unreliable and/or unavailable.</span>
+            </p>
+            <div>
+              <img
                   src="assets/svg/quotation-mark.svg"
                   class="interview-quotes_img-quotation-mark"
                   loading="lazy"
                   alt=""
                 />
-                <blockquote class="interview-quote-01">
-                  <img
+              <blockquote class="interview-quote-01">
+                <img
                     class="blockquote_author-image"
                     alt="Responsive Image"
                     src="assets/images/postup/interviewee-portrait-andy.webp"
                     loading="lazy"
                   />
-                  <div class="blockquote_content">
-                    <p class="mb-8">
-                      I usually need to jump on the computer for a video chat,
-                      so I need to make sure the Wifi is good . . . there isn't
-                      too much background noise. — Andy
-                    </p>
-                  </div>
-                </blockquote>
-                <blockquote class="interview-quote-02">
-                  <img
+                <div class="blockquote_content">
+                  <p class="mb-8">
+                    I usually need to jump on the computer for a video chat,
+                    so I need to make sure the Wifi is good . . . there isn't
+                    too much background noise. — Andy
+                  </p>
+                </div>
+              </blockquote>
+              <blockquote class="interview-quote-02">
+                <img
                     class="blockquote_author-image"
                     loading="lazy"
                     alt="Responsive Image"
                     src="assets/images/postup/interviewee-portrait-claire.webp"
                   />
-                  <div class="blockquote_content">
-                    <p class="mb-8">
-                      If a place has Wifi, outlets, and bathrooms—that's all
-                      need. If I need to buy some food or coffee to stay there,
-                      I really don't mind. — Claire
-                    </p>
-                  </div>
-                </blockquote>
-                <blockquote>
-                  <img
+                <div class="blockquote_content">
+                  <p class="mb-8">
+                    If a place has Wifi, outlets, and bathrooms—that's all
+                    need. If I need to buy some food or coffee to stay there,
+                    I really don't mind. — Claire
+                  </p>
+                </div>
+              </blockquote>
+              <blockquote>
+                <img
                     class="blockquote_author-image"
                     alt="Responsive Image"
                     src="assets/images/postup/interviewee-portrait-james.webp"
                     loading="lazy"
                   />
-                  <div class="blockquote_content">
-                    <p class="mb-8">
-                      I like to know how crowded a place is. If I'm doing
-                      independent work, I don't want it to be super loud. If I'm
-                      meeting clients or coworkers, I want to be sure we can get
-                      a place to sit and talk. — James
-                    </p>
-                  </div>
-                </blockquote>
-              </div>
+                <div class="blockquote_content">
+                  <p class="mb-8">
+                    I like to know how crowded a place is. If I'm doing
+                    independent work, I don't want it to be super loud. If I'm
+                    meeting clients or coworkers, I want to be sure we can get
+                    a place to sit and talk. — James
+                  </p>
+                </div>
+              </blockquote>
             </div>
-            <button class="accordion subdued">
-              <div class="accordion_header">
-                <p>See additional quotes and details</p>
-                <span class="ic-chevron-arrow off-black icon-sm"></span>
-              </div>
-              <div class="accordion_content">
-                <div class="interview-quotes mt-24">
-                  <div class="interview-quotes_grid-container mb-0">
-                    <div class="interview-quotes_grid-item pt-0">
-                      <div>
-                        <p>
-                          Spaces popular among remote workers feel more
-                          comfortable.
+          </div>
+          <button class="accordion subdued">
+            <div class="accordion_header">
+              <p>See additional quotes and details</p>
+              <span class="ic-chevron-arrow off-black icon-sm"></span>
+            </div>
+            <div class="accordion_content">
+              <div class="interview-quotes mt-24">
+                <div class="interview-quotes_grid-container mb-0">
+                  <div class="interview-quotes_grid-item pt-0">
+                    <div>
+                      <p>
+                        Spaces popular among remote workers feel more
+                        comfortable.
+                      </p>
+                    </div>
+                    <blockquote>
+                      <div class="blockquote_content">
+                        <p class="mb-8">
+                          I like to find places where other people go to
+                          work—they're usually more friendly towards me
+                          setting up my laptop and working. I like places that
+                          are used to people working there, so I don't have to
+                          get nervous that I'll be asked to leave while I'm in
+                          the middle of my work.
                         </p>
-                      </div>
-                      <blockquote>
-                        <div class="blockquote_content">
-                          <p class="mb-8">
-                            I like to find places where other people go to
-                            work—they're usually more friendly towards me
-                            setting up my laptop and working. I like places that
-                            are used to people working there, so I don't have to
-                            get nervous that I'll be asked to leave while I'm in
-                            the middle of my work.
-                          </p>
-                          <div class="blockquote_author">
-                            <img
+                        <div class="blockquote_author">
+                          <img
                               class="blockquote_author-image"
                               loading="lazy"
                               alt="Responsive Image"
                               src="assets/images/postup/interview-beth.webp"
                             />
-                            <p class="blockquote_author-name">Beth</p>
-                          </div>
+                          <p class="blockquote_author-name">Beth</p>
                         </div>
-                      </blockquote>
-                    </div>
-                    <div class="interview-quotes_grid-item">
-                      <div>
-                        <p>
-                          Interior photos help remote workers make informed
-                          decisions.
-                        </p>
                       </div>
-                      <blockquote>
-                        <div class="blockquote_content">
-                          <p class="mb-8">
-                            I usually look at pictures of the place before I go,
-                            just to make sure there's enough room for me and my
-                            coworker to take a table without feeling guilty.
-                          </p>
-                          <div class="blockquote_author">
-                            <img
+                    </blockquote>
+                  </div>
+                  <div class="interview-quotes_grid-item">
+                    <div>
+                      <p>
+                        Interior photos help remote workers make informed
+                        decisions.
+                      </p>
+                    </div>
+                    <blockquote>
+                      <div class="blockquote_content">
+                        <p class="mb-8">
+                          I usually look at pictures of the place before I go,
+                          just to make sure there's enough room for me and my
+                          coworker to take a table without feeling guilty.
+                        </p>
+                        <div class="blockquote_author">
+                          <img
                               class="blockquote_author-image"
                               alt="Responsive Image"
                               src="assets/images/postup/interview-adam.webp"
                               loading="lazy"
                             />
-                            <p class="blockquote_author-name">Adam</p>
-                          </div>
+                          <p class="blockquote_author-name">Adam</p>
                         </div>
-                      </blockquote>
-                    </div>
+                      </div>
+                    </blockquote>
                   </div>
                 </div>
               </div>
-            </button>
-          </div>
+            </div>
+          </button>
         </div>
-        <div class="content-wrapper">
-          <header class="header-container header-container-postup-h3">
-            <h3>Iterating a more effective user persona</h3>
-          </header>
-          <p>
-            Based on my insights, I realized the user persona PostUp provided
-            didn’t capture the whole story. I also found it text-heavy and hard
-            to scan, so I reworked it to better guide my design process.
-          </p>
-        </div>
-        <div class="container-full-width pv-48 mv-40">
-          <div class="user-persona-comparison">
-            <img
+      </div>
+      <div class="content-wrapper">
+        <header class="header-container header-container-postup-h3">
+          <h3>Iterating a more effective user persona</h3>
+        </header>
+        <p>
+          Based on my insights, I realized the user persona PostUp provided
+          didn’t capture the whole story. I also found it text-heavy and hard
+          to scan, so I reworked it to better guide my design process.
+        </p>
+      </div>
+      <div class="container-full-width pv-48 mv-40">
+        <div class="user-persona-comparison">
+          <img
               src="assets/images/postup/user-persona-nina-previous.webp"
               loading="lazy"
               alt=""
               class="img-100"
             />
-            <img
+          <img
               class="img-100 bg-white"
               alt=""
               loading="lazy"
               src="assets/images/postup/user-persona-nina.webp"
             />
-            <p>Original</p>
-            <div>
-              <p class="mb-8">Iteration</p>
-              <ul>
-                <li>More detailed and comprehensive</li>
-                <li>More scannable and readable</li>
-                <li>Easier to reference during design</li>
-              </ul>
-            </div>
+          <p>Original</p>
+          <div>
+            <p class="mb-8">Iteration</p>
+            <ul>
+              <li>More detailed and comprehensive</li>
+              <li>More scannable and readable</li>
+              <li>Easier to reference during design</li>
+            </ul>
           </div>
         </div>
-        <p class="content-max-width">
-          My new persona includes key details from user quotes and interviews.
-          The process of reworking the persona helped me better understand Nina.
-          My new persona helped me stay more focused on Nina’s specific needs
-          throughout the sprint, ensuring the app was aligned with user goals.
-        </p>
-        <div class="content-wrapper">
-          <header class="header-container header-container-postup-h3">
-            <h3>
-              <!-- <span>remote worker journey</span>
+      </div>
+      <p class="content-max-width">
+        My new persona includes key details from user quotes and interviews.
+        The process of reworking the persona helped me better understand Nina.
+        My new persona helped me stay more focused on Nina’s specific needs
+        throughout the sprint, ensuring the app was aligned with user goals.
+      </p>
+      <div class="content-wrapper">
+        <header class="header-container header-container-postup-h3">
+          <h3>
+            <!-- <span>remote worker journey</span>
             <br> -->
-              Brainstorming an end-to-end experience for Nina
-            </h3>
-          </header>
-          <div>
-            <p>
-              I mapped how the mobile solution could potentially be integrated
-              into Nina's journey, where the solution would prioritize Nina’s
-              specific work preferences and the tasks she’d perform. Based on my
-              insights, I created a flow that allows her to filter workspaces by
-              amenities like noise levels, distance, and seating availability.
-            </p>
-            <p>
-              With such a small research sample size, I began struggling to
-              determine the flexibility and customization remote workers may
-              need for varying personal preferences. At this point, I figured
-              functionalities like customizable presets would address this, but
-              I was nervous about feature creep.
-            </p>
-            <img
+            Brainstorming an end-to-end experience for Nina
+          </h3>
+        </header>
+        <div>
+          <p>
+            I mapped how the mobile solution could potentially be integrated
+            into Nina's journey, where the solution would prioritize Nina’s
+            specific work preferences and the tasks she’d perform. Based on my
+            insights, I created a flow that allows her to filter workspaces by
+            amenities like noise levels, distance, and seating availability.
+          </p>
+          <p>
+            With such a small research sample size, I began struggling to
+            determine the flexibility and customization remote workers may
+            need for varying personal preferences. At this point, I figured
+            functionalities like customizable presets would address this, but
+            I was nervous about feature creep.
+          </p>
+          <img
               class="mt-8 mb-32 img-100"
               alt=""
               loading="lazy"
               src="assets/images/postup/flow-chart-procreate.webp"
             />
-            <ol class="mb-32">
-              <li>
-                <span>Select remote work goal:</span>
-                quiet work, meeting, call
-              </li>
-              <li>
-                <span>Adjust search filters:</span>
-                amenities, noise level, distance, table sizes, etc.
-              </li>
-              <li>
-                <span>Initiate search</span>
-              </li>
-            </ol>
-          </div>
+          <ol class="mb-32">
+            <li>
+              <span>Select remote work goal:</span>
+              quiet work, meeting, call
+            </li>
+            <li>
+              <span>Adjust search filters:</span>
+              amenities, noise level, distance, table sizes, etc.
+            </li>
+            <li>
+              <span>Initiate search</span>
+            </li>
+          </ol>
         </div>
-      </section>
-      <section id="tuesday" class="section-container">
-        <header class="header-container">
-          <h2>
-            <span>Tuesday</span>
-            <br />
+      </div>
+    </section>
+    <section id="tuesday" class="section-container">
+      <header class="header-container">
+        <h2>
+          <span>Tuesday</span>
+          <br />
             Sketch
-          </h2>
-          <img
+        </h2>
+        <img
             class="img-project-schedule"
             alt=""
             loading="lazy"
             src="assets/images/postup/sprint-schedule-tuesday.webp"
           />
-        </header>
-        <div class="content-wrapper">
-          <header class="header-container header-container-postup-h3">
-            <h3>
-              <span>competitive research</span>
-              <br />
+      </header>
+      <div class="content-wrapper">
+        <header class="header-container header-container-postup-h3">
+          <h3>
+            <span>competitive research</span>
+            <br />
               Drawing inspiration from competitors
-            </h3>
-          </header>
-          <p class="mb-0">
-            I wanted to create a clean interface with search and product
-            comparison features, so I performed lightning demos of Airbnb,
-            Google Maps, Credit Karma, and Betterment to gather insights into
-            best practices and user expectations. I specifically selected
-            screens that display features like search filters, search results,
-            and individual products.
-          </p>
-        </div>
-        <div class="content-wrapper large mv-40">
-          <div>
-            <img
+          </h3>
+        </header>
+        <p class="mb-0">
+          I wanted to create a clean interface with search and product
+          comparison features, so I performed lightning demos of Airbnb,
+          Google Maps, Credit Karma, and Betterment to gather insights into
+          best practices and user expectations. I specifically selected
+          screens that display features like search filters, search results,
+          and individual products.
+        </p>
+      </div>
+      <div class="content-wrapper large mv-40">
+        <div>
+          <img
               class="img-100"
               alt=""
               loading="lazy"
               src="assets/images/postup/lightning-demos.webp"
             />
-          </div>
         </div>
-        <div class="content-wrapper mt-0">
-          <p class="airbnb-strengths_headline secondary-text text-center">
-            Among my demos, Airbnb was the winner. 🥳
-            <br />
-          </p>
-          <div class="airbnb-strengths_container">
-            <div class="img-airbnb-wrapper">
-              <img
+      </div>
+      <div class="content-wrapper mt-0">
+        <p class="airbnb-strengths_headline secondary-text text-center">
+          Among my demos, Airbnb was the winner. 🥳
+          <br />
+        </p>
+        <div class="airbnb-strengths_container">
+          <div class="img-airbnb-wrapper">
+            <img
                 alt=""
                 class="img-airbnb"
                 loading="lazy"
                 src="assets/images/postup/artwork-airbnb-winner.webp"
               />
-            </div>
-            <div class="airbnb-strengths_content-grid">
-              <div>
-                <img
+          </div>
+          <div class="airbnb-strengths_content-grid">
+            <div>
+              <img
                   alt="Green circle icon with a white checkmark inside"
                   class="ic-airbnb-strengths-checkmark"
                   loading="lazy"
                   src="assets/svg/ic-checkmark-circle.svg"
                 />
-                <p>Clean layout</p>
-              </div>
-              <div>
-                <img
+              <p>Clean layout</p>
+            </div>
+            <div>
+              <img
                   alt=""
                   class="ic-airbnb-strengths-checkmark"
                   loading="lazy"
                   src="assets/svg/ic-checkmark-circle.svg"
                 />
-                <p>Intuitive design</p>
-              </div>
-              <div>
-                <img
+              <p>Intuitive design</p>
+            </div>
+            <div>
+              <img
                   alt=""
                   class="ic-airbnb-strengths-checkmark"
                   loading="lazy"
                   src="assets/svg/ic-checkmark-circle.svg"
                 />
-                <p>Clear structure</p>
-              </div>
-              <div>
-                <img
+              <p>Clear structure</p>
+            </div>
+            <div>
+              <img
                   alt=""
                   class="ic-airbnb-strengths-checkmark"
                   loading="lazy"
                   src="assets/svg/ic-checkmark-circle.svg"
                 />
-                <p>Clear typography</p>
-              </div>
-              <div>
-                <img
+              <p>Clear typography</p>
+            </div>
+            <div>
+              <img
                   alt=""
                   class="ic-airbnb-strengths-checkmark"
                   loading="lazy"
                   src="assets/svg/ic-checkmark-circle.svg"
                 />
-                <p>Easy navigation</p>
-              </div>
-              <div>
-                <img
+              <p>Easy navigation</p>
+            </div>
+            <div>
+              <img
                   alt=""
                   class="ic-airbnb-strengths-checkmark"
                   loading="lazy"
                   src="assets/svg/ic-checkmark-circle.svg"
                 />
-                <p>Optimized user flow</p>
-              </div>
+              <p>Optimized user flow</p>
             </div>
           </div>
-          <button class="accordion subdued mb-16">
-            <div class="accordion_header">
-              <p>What are lightning demos?</p>
-              <img
+        </div>
+        <button class="accordion subdued mb-16">
+          <div class="accordion_header">
+            <p>What are lightning demos?</p>
+            <img
                 alt=""
                 class="accordion_icon"
                 loading="lazy"
                 src="assets/svg/ic-chevron-arrow__down--black.svg"
               />
-            </div>
-            <div class="accordion_content">
-              <p>
-                Lightning demos are quick demonstrations that showcase various
-                existing products, designs, or concepts related to the sprint's
-                problem. They offer inspiration, diverse perspectives, and
-                insights within a limited timeframe, aiding the sprint team in
-                generating ideas and understanding relevant solutions for the
-                sprint's objectives.
-              </p>
-            </div>
-          </button>
-        </div>
-        <div class="content-wrapper mb-32">
-          <header class="header-container header-container-postup-h3">
-            <h3>
-              <span>ideation</span>
-              <br />
+          </div>
+          <div class="accordion_content">
+            <p>
+              Lightning demos are quick demonstrations that showcase various
+              existing products, designs, or concepts related to the sprint's
+              problem. They offer inspiration, diverse perspectives, and
+              insights within a limited timeframe, aiding the sprint team in
+              generating ideas and understanding relevant solutions for the
+              sprint's objectives.
+            </p>
+          </div>
+        </button>
+      </div>
+      <div class="content-wrapper mb-32">
+        <header class="header-container header-container-postup-h3">
+          <h3>
+            <span>ideation</span>
+            <br />
               Brainstorming 8 solutions in 8 minutes
-            </h3>
-          </header>
-          <p>
-            Drawing from my lightning demos, I brainstormed solutions by diving
-            into a Crazy Eights exercise, where I sketched a frame per minute
-            over 8 minutes. I felt a bit intimidated at first, but I ended up
-            really enjoying the process and found it really productive. All of
-            these sketches inspired the remainder of my design process!
-          </p>
-          <div class="crazy-8s-container">
-            <img
+          </h3>
+        </header>
+        <p>
+          Drawing from my lightning demos, I brainstormed solutions by diving
+          into a Crazy Eights exercise, where I sketched a frame per minute
+          over 8 minutes. I felt a bit intimidated at first, but I ended up
+          really enjoying the process and found it really productive. All of
+          these sketches inspired the remainder of my design process!
+        </p>
+        <div class="crazy-8s-container">
+          <img
               src="assets/images/postup/crazy-8s-01.webp"
               alt=""
               loading="lazy"
             />
-            <img
+          <img
               src="assets/images/postup/crazy-8s-02.webp"
               alt=""
               loading="lazy"
             />
-          </div>
-          <p>
-            Finally, I selected the most promising screen from my sketches and
-            created a 3-panel storyboard to illustrate the interactions before
-            and after. I chose the search results screen as a hub for Nina's
-            decision-making, centralizing essential information to expedite her
-            process of elimination.
-          </p>
         </div>
-        <div class="storyboard-3-panel">
-          <img
+        <p>
+          Finally, I selected the most promising screen from my sketches and
+          created a 3-panel storyboard to illustrate the interactions before
+          and after. I chose the search results screen as a hub for Nina's
+          decision-making, centralizing essential information to expedite her
+          process of elimination.
+        </p>
+      </div>
+      <div class="storyboard-3-panel">
+        <img
             alt=""
             loading="lazy"
             src="assets/images/postup/storyboard-3-panel.webp"
           />
-        </div>
-      </section>
-      <section id="wednesday" class="section-container pb-0 border-0">
-        <header class="header-container">
-          <h2>
-            <span>wednesday</span>
-            <br />
+      </div>
+    </section>
+    <section id="wednesday" class="section-container pb-0 border-0">
+      <header class="header-container">
+        <h2>
+          <span>wednesday</span>
+          <br />
             Decide
-          </h2>
-          <img
+        </h2>
+        <img
             class="img-project-schedule"
             alt=""
             loading="lazy"
             src="assets/images/postup/sprint-schedule-wed.webp"
           />
-        </header>
-        <div class="content-wrapper">
-          <header class="header-container header-container-postup-h3">
-            <h3>
-              <span>storyboarding pt.2</span>
-              <br />
+      </header>
+      <div class="content-wrapper">
+        <header class="header-container header-container-postup-h3">
+          <h3>
+            <span>storyboarding pt.2</span>
+            <br />
               Completing the journey with user stories
-            </h3>
-          </header>
-          <p class="mb-32">
-            On day 3, I expanded the 3-panel storyboard into a detailed
-            comic-style narrative of Nina's journey using PostUp in a new city.
-            This helped me immerse myself in Nina's perspective to deepen
-            empathy for her needs and identify potential features that could
-            meet those needs.
-          </p>
-          <div class="content-grid mb-32">
-            <div>
-              <img
+          </h3>
+        </header>
+        <p class="mb-32">
+          On day 3, I expanded the 3-panel storyboard into a detailed
+          comic-style narrative of Nina's journey using PostUp in a new city.
+          This helped me immerse myself in Nina's perspective to deepen
+          empathy for her needs and identify potential features that could
+          meet those needs.
+        </p>
+        <div class="content-grid mb-32">
+          <div>
+            <img
                 class="img-100"
                 alt=""
                 loading="lazy"
                 src="assets/images/postup/storyboard-full.webp"
               />
-            </div>
-            <aside>
-              <p class="mt-0">
-                This was really fun! By leveraging my filmmaking storyboard
-                experience, this felt effective than traditional user flows.
-              </p>
-            </aside>
           </div>
-          <p class="secondary-text mt-0 mb-20">
-            Placing Nina in an unfamiliar city allowed me to anticipate diverse
-            user behaviors and needs.
-          </p>
-          <p class="mt-16">
-            By asking "How might Nina react?" and "What actions might she take
-            next?", I identified key touchpoints to develop user stories and
-            flows. This approach aligns with my principles of creating scalable
-            and adaptable solutions, which further developed my user flow. Here
-            are some highlights:
-          </p>
+          <aside>
+            <p class="mt-0">
+              This was really fun! By leveraging my filmmaking storyboard
+              experience, this felt effective than traditional user flows.
+            </p>
+          </aside>
         </div>
-        <div class="container-full-width pv-40">
-          <div
-            class="tabs-container four-menu-items"
-            data-current="Tab 1"
-            data-duration-in="300"
-            data-duration-out="100"
-            data-easing="ease"
-          >
-            <div class="tabs-menu">
-              <button class="tab-button active" data-tab="tab1">
-                <p>Home</p>
-              </button>
-              <button class="tab-button" data-tab="tab2">
-                <p>Search</p>
-              </button>
-              <button class="tab-button" data-tab="tab3">
-                <p>Filters</p>
-              </button>
-              <button class="tab-button" data-tab="tab4">
-                <p>Reviews</p>
-              </button>
-            </div>
-            <div id="tab1" class="tab-content active">
-              <p class="subheading mb-24">
-                What might Nina want to see when she opens PostUp?
-              </p>
-              <div class="tab-content-grid">
-                <img
+        <p class="secondary-text mt-0 mb-20">
+          Placing Nina in an unfamiliar city allowed me to anticipate diverse
+          user behaviors and needs.
+        </p>
+        <p class="mt-16">
+          By asking "How might Nina react?" and "What actions might she take
+          next?", I identified key touchpoints to develop user stories and
+          flows. This approach aligns with my principles of creating scalable
+          and adaptable solutions, which further developed my user flow. Here
+          are some highlights:
+        </p>
+      </div>
+      <div class="container-full-width pv-40">
+        <div class="tabs-container four-menu-items" data-current="Tab 1"
+          data-duration-in="300" data-duration-out="100" data-easing="ease">
+          <div class="tabs-menu">
+            <button class="tab-button active" data-tab="tab1">
+              <p>Home</p>
+            </button>
+            <button class="tab-button" data-tab="tab2">
+              <p>Search</p>
+            </button>
+            <button class="tab-button" data-tab="tab3">
+              <p>Filters</p>
+            </button>
+            <button class="tab-button" data-tab="tab4">
+              <p>Reviews</p>
+            </button>
+          </div>
+          <div id="tab1" class="tab-content active">
+            <p class="subheading mb-24">
+              What might Nina want to see when she opens PostUp?
+            </p>
+            <div class="tab-content-grid">
+              <img
                   alt="Storyboard panel: Map view showing nearby workspace options with user quote 'Let's see what's around me...'"
                   loading="lazy"
                   src="assets/images/postup/storyboard-explore-nearby.webp"
                 />
-                <p>
-                  Being in a new city, Nina likely has little knowledge of her
-                  surroundings, so she's probably keen to explore nearby
-                  workspaces. Therefore, the ideal home screen should show Nina
-                  a map that visually displays available options around her
-                  current location.
-                  <br />
-                </p>
-              </div>
+              <p>
+                Being in a new city, Nina likely has little knowledge of her
+                surroundings, so she's probably keen to explore nearby
+                workspaces. Therefore, the ideal home screen should show Nina
+                a map that visually displays available options around her
+                current location.
+                <br />
+              </p>
             </div>
-            <div id="tab2" class="tab-content">
-              <div>
-                <p class="subheading">Where should Nina "search by task"?</p>
-                <!-- <blockquote>
+          </div>
+          <div id="tab2" class="tab-content">
+            <div>
+              <p class="subheading">Where should Nina "search by task"?</p>
+              <!-- <blockquote>
                   <div class="blockquote_content pv-16">
                     <p>
                       "Sometimes, removing just one button can significantly
@@ -898,551 +868,530 @@
                     </p>
                   </div>
                 </blockquote> -->
-                <p>
-                  Upon expanding my storyboard, I realized two design errors
-                  from days 1 and 2.
-                </p>
-                <div class="tab-content-grid">
-                  <img
+              <p>
+                Upon expanding my storyboard, I realized two design errors
+                from days 1 and 2.
+              </p>
+              <div class="tab-content-grid">
+                <img
                     alt=""
                     class="img-sketch-filters"
                     loading="lazy"
                     src="assets/images/postup/storyboard-filter-panel.webp"
                   />
-                  <div>
-                    <p>
-                      <span class="fw-medium">Day 1:</span>
-                      Optimizing search process by taking users directly to
-                      search results after task-selection might backfire if the
-                      presets are even slight inaccurate.
-                    </p>
-                    <p>
-                      <span class="fw-medium">Day 2:</span>
-                      The lack of transparency behind the presets if located on
-                      the 'Discover' page might be confusing.
-                    </p>
-                  </div>
-                </div>
                 <div>
-                  <img
+                  <p>
+                    <span class="fw-medium">Day 1:</span>
+                    Optimizing search process by taking users directly to
+                    search results after task-selection might backfire if the
+                    presets are even slight inaccurate.
+                  </p>
+                  <p>
+                    <span class="fw-medium">Day 2:</span>
+                    The lack of transparency behind the presets if located on
+                    the 'Discover' page might be confusing.
+                  </p>
+                </div>
+              </div>
+              <div>
+                <img
                     alt="Comic strip of four panels showing a user searching for workspaces on a mobile phone."
                     class="mt-0 mb-24 img-100"
                     loading="lazy"
                     src="assets/images/postup/storyboard-search-flow.webp"
                   />
-                  <p>
-                    <span class="fw-medium">Solution:</span>
-                    Create a 'Search page' that allows people to conduct a 'New
-                    search' or select 'Customizable presets'.
-                  </p>
-                </div>
-                <div></div>
-              </div>
-            </div>
-            <div id="tab3" class="tab-content">
-              <div>
-                <p class="subheading">
-                  What if Nina realizes she has additional needs?
-                </p>
                 <p>
-                  With a new 'Search' page, I was able to display the details on
-                  the preset filters to ensure transparency. As for my conflict
-                  regarding whether or not Nina should be able to adjust filters
-                  immediately after task selection, after reviewing my user
-                  research, I realized most people share the same preferences
-                  across all tasks! Being taken to a filters page each time Nina
-                  selects a preset could be counterproductive. She can also just
-                  conduct a new search. Besides, testing may reveal the ideal
-                  flow!
+                  <span class="fw-medium">Solution:</span>
+                  Create a 'Search page' that allows people to conduct a 'New
+                  search' or select 'Customizable presets'.
                 </p>
               </div>
-              <img
+              <div></div>
+            </div>
+          </div>
+          <div id="tab3" class="tab-content">
+            <div>
+              <p class="subheading">
+                What if Nina realizes she has additional needs?
+              </p>
+              <p>
+                With a new 'Search' page, I was able to display the details on
+                the preset filters to ensure transparency. As for my conflict
+                regarding whether or not Nina should be able to adjust filters
+                immediately after task selection, after reviewing my user
+                research, I realized most people share the same preferences
+                across all tasks! Being taken to a filters page each time Nina
+                selects a preset could be counterproductive. She can also just
+                conduct a new search. Besides, testing may reveal the ideal
+                flow!
+              </p>
+            </div>
+            <img
                 class="img-100 mt-0"
                 alt=""
                 loading="lazy"
                 src="assets/images/postup/storyboard-filters.webp"
               />
-            </div>
-            <div id="tab4" class="tab-content">
-              <div class="subsection margin-0">
-                <p class="subheading">
-                  In addition to the workspace environment, what else might Nina
-                  want to learn?
-                </p>
-                <img
+          </div>
+          <div id="tab4" class="tab-content">
+            <div class="subsection margin-0">
+              <p class="subheading">
+                In addition to the workspace environment, what else might Nina
+                want to learn?
+              </p>
+              <img
                   alt=""
                   class="img-100 mv-24"
                   loading="lazy"
                   src="assets/images/postup/storyboard-reviews-flow.webp"
                 />
-                <p>
-                  The final highlight of my storyboard evolution was adding a
-                  'Reviews' section for each workspace. After Nina learns about
-                  the workspace's details, she might want to see what other
-                  people have to say or seek more details, especially since
-                  that's what she's used to doing with her existing tools. For a
-                  more intuitive experience, users may navigate between the
-                  pages by swiping horizontally.
-                </p>
-              </div>
+              <p>
+                The final highlight of my storyboard evolution was adding a
+                'Reviews' section for each workspace. After Nina learns about
+                the workspace's details, she might want to see what other
+                people have to say or seek more details, especially since
+                that's what she's used to doing with her existing tools. For a
+                more intuitive experience, users may navigate between the
+                pages by swiping horizontally.
+              </p>
             </div>
           </div>
         </div>
-      </section>
-      <section id="thursday" class="section-container pb-0 border-0">
-        <header class="header-container">
-          <h2>
-            <span>thursday</span>
-            <br />
+      </div>
+    </section>
+    <section id="thursday" class="section-container pb-0 border-0">
+      <header class="header-container">
+        <h2>
+          <span>thursday</span>
+          <br />
             Prototype
-          </h2>
-          <img
+        </h2>
+        <img
             class="img-project-schedule"
             alt=""
             loading="lazy"
             src="assets/images/postup/sprint-schedule-thurs.webp"
           />
-        </header>
-        <div class="content-wrapper">
-          <div>
-            <p>
-              It was finally time to design and prototype! As I reviewed my work
-              so far, I realized I made a mistake: Nina's journey ends when she
-              settles into the workspace, not when she chooses a workspace.
-              <span class="fw-medium"
-                >To stay organized, I sketched a new map to adjust my scope and
-                brainstormed a list of features before prototyping.</span
-              >
-            </p>
-            <p class="hide-xl notes">This ended up helping a lot! 🥳</p>
-          </div>
-          <img
+      </header>
+      <div class="content-wrapper">
+        <div>
+          <p>
+            It was finally time to design and prototype! As I reviewed my work
+            so far, I realized I made a mistake: Nina's journey ends when she
+            settles into the workspace, not when she chooses a workspace.
+            <span class="fw-medium">To stay organized, I sketched a new map to
+              adjust my scope and
+              brainstormed a list of features before prototyping.</span>
+          </p>
+          <p class="hide-xl notes">This ended up helping a lot! 🥳</p>
+        </div>
+        <img
             alt=""
             loading="lazy"
             src="assets/images/postup/prototype-checklist.webp"
             class="img-prototype-checklist"
           />
-        </div>
-        <div class="content-wrapper overflow-visible">
-          <h4>Leveraging verbal walkthroughs to explore unbuilt areas</h4>
-          <p>
-            <span class="fw-medium"
-              >I designed a limited prototype with only one user flow because I
-              planned to leverage verbal walkthroughs as well given the time
-              crunch.</span
-            >
-            With only one shot at testing, I initially aimed to prototype
-            multiple user flows to avoid task failures and most features.
-            Instead, I planned on asking participants to describe how they would
-            navigate and interact with any unbuilt areas.
-          </p>
-          <div class="flex items-center mt-40">
-            <img
+      </div>
+      <div class="content-wrapper overflow-visible">
+        <h4>Leveraging verbal walkthroughs to explore unbuilt areas</h4>
+        <p>
+          <span class="fw-medium">I designed a limited prototype with only one
+            user flow because I
+            planned to leverage verbal walkthroughs as well given the time
+            crunch.</span>
+          With only one shot at testing, I initially aimed to prototype
+          multiple user flows to avoid task failures and most features.
+          Instead, I planned on asking participants to describe how they would
+          navigate and interact with any unbuilt areas.
+        </p>
+        <div class="flex items-center mt-40">
+          <img
               class="img-prototype-v1-wireflow"
               loading="lazy"
               alt=""
               src="assets/images/postup/prototype-v1-wireflow.webp"
             />
-          </div>
         </div>
-        <div class="content-wrapper">
-          <h4>Ommitting features for more accurate insights</h4>
-          <p>
-            Rather than building every feature, I left out the features below
-            because 1) they weren’t explicitly requested during user research,
-            but 2) lightning demos suggest they might be expected, given their
-            presence in competitor tools.
-          </p>
-          <div class="stashed-features_wrapper">
-            <ul class="stashed-features_grid-container">
-              <li class="card stashed-features first-child">
-                <div class="card_icon-wrapper">
-                  <img
+      </div>
+      <div class="content-wrapper">
+        <h4>Ommitting features for more accurate insights</h4>
+        <p>
+          Rather than building every feature, I left out the features below
+          because 1) they weren’t explicitly requested during user research,
+          but 2) lightning demos suggest they might be expected, given their
+          presence in competitor tools.
+        </p>
+        <div class="stashed-features_wrapper">
+          <ul class="stashed-features_grid-container">
+            <li class="card stashed-features first-child">
+              <div class="card_icon-wrapper">
+                <img
                     class="card_icon"
                     loading="lazy"
                     alt=""
                     src="assets/svg/postup/stashed-feature-seating.svg"
                   />
-                </div>
-                <div class="card_content">
-                  <p class="card_heading">Seating availability</p>
-                  <p class="card_body">
-                    This was mentioned by one interviewee. It could expedite a
-                    remote worker's journey and monetized.
-                  </p>
-                </div>
-              </li>
-              <li class="card stashed-features">
-                <div class="card_icon-wrapper">
-                  <img
+              </div>
+              <div class="card_content">
+                <p class="card_heading">Seating availability</p>
+                <p class="card_body">
+                  This was mentioned by one interviewee. It could expedite a
+                  remote worker's journey and monetized.
+                </p>
+              </div>
+            </li>
+            <li class="card stashed-features">
+              <div class="card_icon-wrapper">
+                <img
                     src="assets/svg/postup/stashed-feature-reservation.svg"
                     alt=""
                     class="card_icon"
                     loading="lazy"
                   />
-                </div>
-                <div class="card_content">
-                  <p class="card_heading">Reservation system</p>
-                  <p class="card_body">
-                    This has great potential but its rarity in coffee shops is a
-                    challenge. It also could be monetized.
-                  </p>
-                </div>
-              </li>
-              <li class="card stashed-features">
-                <div class="card_icon-wrapper">
-                  <img
+              </div>
+              <div class="card_content">
+                <p class="card_heading">Reservation system</p>
+                <p class="card_body">
+                  This has great potential but its rarity in coffee shops is a
+                  challenge. It also could be monetized.
+                </p>
+              </div>
+            </li>
+            <li class="card stashed-features">
+              <div class="card_icon-wrapper">
+                <img
                     src="assets/svg/postup/stashed-feature-search-bar.svg"
                     alt=""
                     class="card_icon"
                     loading="lazy"
                   />
-                </div>
-                <div class="card_content">
-                  <p class="card_heading">Home search bar</p>
-                  <p class="card_body">
-                    As a common user route, I anticipated some users opting for
-                    this route instead of the search page.
-                  </p>
-                </div>
-              </li>
-              <li class="card stashed-features last-child">
-                <div class="card_icon-wrapper">
-                  <img
+              </div>
+              <div class="card_content">
+                <p class="card_heading">Home search bar</p>
+                <p class="card_body">
+                  As a common user route, I anticipated some users opting for
+                  this route instead of the search page.
+                </p>
+              </div>
+            </li>
+            <li class="card stashed-features last-child">
+              <div class="card_icon-wrapper">
+                <img
                     src="assets/svg/postup/stashed-feature-graph.svg"
                     alt=""
                     class="card_icon"
                     loading="lazy"
                   />
-                </div>
-                <div class="card_content">
-                  <p class="card_heading">Popular times</p>
-                  <p class="card_body">
-                    Given its popularity in other apps, it could enhance the UX
-                    and boost competitive advantage.
-                  </p>
-                </div>
-              </li>
-            </ul>
-          </div>
-          <p>
-            Instead of testing these assumptions directly, I planned to ask
-            questions like “What did you expect to see but didn’t?” and "What
-            are some features that might help that you didn't see?" This would
-            ensure user feedback reflects genuine remote worker needs and avoid
-            false positives, such as users interacting with these features just
-            because they were available.
-          </p>
-        </div>
-        <section id="final-test-prototype" class="container-full-width mb-0">
-          <header class="header-container mb-0 hide">
-            <h3>
-              <span>prototype</span>
-              <br />
-              Design solutions
-            </h3>
-          </header>
-          <div class="final-test-prototype_wrapper">
-            <div class="final-prototype_grid-container">
-              <div class="the-solution-prototype_content">
-                <h2 class="intro-headline">
-                  Streamlining decisions
-                  <br />
-                  with efficient results.
-                </h2>
-                <div>
-                  <p class="the-solution-prototype_subheading">
-                    2-step search flow
-                  </p>
-                  <p>
-                    Users can explore nearby workspaces on the home screen or
-                    search by task. Since most remote workers share similar
-                    preferences, I designed preset filters to for common tasks
-                    to streamline the search process.
-                  </p>
-                  <p class="the-solution-prototype_subheading">
-                    Intuitive commute experience
-                  </p>
-                  <p>
-                    To support business trips, commute times are dynamically
-                    adjusted based on walkability score via Google Maps
-                    integration. Low walkability display driving durations,
-                    while high walkability show walking times.
-                  </p>
-                  <p class="the-solution-prototype_subheading">
-                    Scannable workspace details upfront
-                  </p>
-                  <p>
-                    I designed the search results to be scannable and
-                    comprehensive by presenting key details like suitable work,
-                    amenity icons, and interior photos. Users can assess
-                    workspaces without clicking into each listing.
-                  </p>
-                </div>
               </div>
-              <video
-                preload="none"
-                playsinline
-                autoplay
-                loop
-                muted
-                nodownload
-                class="the-solution-prototype_video lazy"
-                loading="lazy"
-              >
-                <source
+              <div class="card_content">
+                <p class="card_heading">Popular times</p>
+                <p class="card_body">
+                  Given its popularity in other apps, it could enhance the UX
+                  and boost competitive advantage.
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <p>
+          Instead of testing these assumptions directly, I planned to ask
+          questions like “What did you expect to see but didn’t?” and "What
+          are some features that might help that you didn't see?" This would
+          ensure user feedback reflects genuine remote worker needs and avoid
+          false positives, such as users interacting with these features just
+          because they were available.
+        </p>
+      </div>
+      <section id="final-test-prototype" class="container-full-width mb-0">
+        <header class="header-container mb-0 hide">
+          <h3>
+            <span>prototype</span>
+            <br />
+              Design solutions
+          </h3>
+        </header>
+        <div class="final-test-prototype_wrapper">
+          <div class="final-prototype_grid-container">
+            <div class="the-solution-prototype_content">
+              <h2 class="intro-headline">
+                Streamlining decisions
+                <br />
+                  with efficient results.
+              </h2>
+              <div>
+                <p class="the-solution-prototype_subheading">
+                  2-step search flow
+                </p>
+                <p>
+                  Users can explore nearby workspaces on the home screen or
+                  search by task. Since most remote workers share similar
+                  preferences, I designed preset filters to for common tasks
+                  to streamline the search process.
+                </p>
+                <p class="the-solution-prototype_subheading">
+                  Intuitive commute experience
+                </p>
+                <p>
+                  To support business trips, commute times are dynamically
+                  adjusted based on walkability score via Google Maps
+                  integration. Low walkability display driving durations,
+                  while high walkability show walking times.
+                </p>
+                <p class="the-solution-prototype_subheading">
+                  Scannable workspace details upfront
+                </p>
+                <p>
+                  I designed the search results to be scannable and
+                  comprehensive by presenting key details like suitable work,
+                  amenity icons, and interior photos. Users can assess
+                  workspaces without clicking into each listing.
+                </p>
+              </div>
+            </div>
+            <video preload="none" playsinline autoplay loop muted nodownload
+              class="the-solution-prototype_video lazy" loading="lazy">
+              <source
                   data-src="assets/videos/postup/prototype-v1-search-results.mp4"
                   type="video/mp4"
                 />
-              </video>
-            </div>
-            <button class="content-max-width accordion subdued mb-16 hide">
-              <div class="accordion_header">
-                <p>See details</p>
-                <img
+            </video>
+          </div>
+          <button class="content-max-width accordion subdued mb-16 hide">
+            <div class="accordion_header">
+              <p>See details</p>
+              <img
                   class="accordion_icon"
                   src="assets/svg/ic-chevron-arrow__down--black.svg"
                   alt="Chevron arrow down icon"
                   loading="lazy"
                 />
-              </div>
-              <div class="accordion_content">
+            </div>
+            <div class="accordion_content">
+              <p class="the-solution-prototype_subheading">
+                Scannable search results
+              </p>
+              <p class="white">
+                Search results provide a quick overview of essential
+                information for each workspace, such as walk time, suitable
+                work, amenities, and seating availability at PostUp Partner
+                locations. This design reduces the need to visit each
+                workspace profile, optimizing the search process.
+              </p>
+              <p class="the-solution-prototype_subheading">
+                Intuitive commute experience
+              </p>
+              <p class="white">
+                Since remote workers travel frequently, the commute time is
+                dynamically adjusted based on their search area's walkability
+                score through Google Maps integration: Low walkability display
+                driving duration, while high walkability show walking times.
+              </p>
+            </div>
+          </button>
+          <div class="final-prototype_grid-container">
+            <div class="the-solution-prototype_content">
+              <h2 class="intro-headline">Combatting choice paralysis.</h2>
+              <div class="mb-24">
                 <p class="the-solution-prototype_subheading">
-                  Scannable search results
+                  Single-page for efficient navigation
                 </p>
-                <p class="white">
-                  Search results provide a quick overview of essential
-                  information for each workspace, such as walk time, suitable
-                  work, amenities, and seating availability at PostUp Partner
-                  locations. This design reduces the need to visit each
-                  workspace profile, optimizing the search process.
+                <p>
+                  I wanted to provide efficient navigation, prevent cognitive
+                  overload, and enhance trust and engagement. I consolidated
+                  my sketches into a single-page layout to prioritize
+                  displaying details above-the-fold, used a minimalistic
+                  design, stored additional details in "Info" icon buttons,
+                  and leveraged social proof by displaying each reviewer's
+                  occupation.
                 </p>
+              </div>
+              <div>
                 <p class="the-solution-prototype_subheading">
-                  Intuitive commute experience
+                  Comprehensive, scannable details
                 </p>
-                <p class="white">
-                  Since remote workers travel frequently, the commute time is
-                  dynamically adjusted based on their search area's walkability
-                  score through Google Maps integration: Low walkability display
-                  driving duration, while high walkability show walking times.
+                <p>
+                  I crafted minimal, scannable copy and included "Info" icon
+                  buttons for additional details to simplify the interface. I
+                  was inspired by clothing size charts to ensure users have
+                  access to essential information without feeling overwhelmed.
                 </p>
               </div>
-            </button>
-            <div class="final-prototype_grid-container">
-              <div class="the-solution-prototype_content">
-                <h2 class="intro-headline">Combatting choice paralysis.</h2>
-                <div class="mb-24">
-                  <p class="the-solution-prototype_subheading">
-                    Single-page for efficient navigation
-                  </p>
-                  <p>
-                    I wanted to provide efficient navigation, prevent cognitive
-                    overload, and enhance trust and engagement. I consolidated
-                    my sketches into a single-page layout to prioritize
-                    displaying details above-the-fold, used a minimalistic
-                    design, stored additional details in "Info" icon buttons,
-                    and leveraged social proof by displaying each reviewer's
-                    occupation.
-                  </p>
-                </div>
-                <div>
-                  <p class="the-solution-prototype_subheading">
-                    Comprehensive, scannable details
-                  </p>
-                  <p>
-                    I crafted minimal, scannable copy and included "Info" icon
-                    buttons for additional details to simplify the interface. I
-                    was inspired by clothing size charts to ensure users have
-                    access to essential information without feeling overwhelmed.
-                  </p>
-                </div>
-              </div>
-              <video
-                preload="none"
-                loading="lazy"
-                playsinline
-                autoplay
-                loop
-                nodownload
-                class="the-solution-prototype_video lazy"
-              >
-                <source
+            </div>
+            <video preload="none" loading="lazy" playsinline autoplay loop
+              nodownload class="the-solution-prototype_video lazy">
+              <source
                   data-src="assets/videos/postup/prototype-v1-workspace-profile.mp4"
                   type="video/mp4"
                 />
-              </video>
-            </div>
-            <button class="accordion subdued content-max-width">
-              <div class="accordion_header">
-                <p>See details</p>
-                <img
+            </video>
+          </div>
+          <button class="accordion subdued content-max-width">
+            <div class="accordion_header">
+              <p>See details</p>
+              <img
                   class="accordion_icon"
                   src="assets/svg/ic-chevron-arrow__down--black.svg"
                   alt="Black chevron arrow down icon"
                   loading="lazy"
                 />
-              </div>
-              <div class="accordion_content">
-                <p class="the-solution-prototype_subheading">
-                  Workspace profile
-                </p>
-                <p>
-                  I consolidated my previous sketches of the workspace profile
-                  into a single-page layout to prioritize comprehensive
-                  work-environment details above-the-fold, arranged by order of
-                  importance. The profiles focus on workspace interior instead
-                  of food. I leveraged social proof by designing each review to
-                  display the author's occupation to enhance credibility and
-                  engagement.
-                </p>
-                <p class="the-solution-prototype_subheading">
-                  Comprehensive environment details
-                </p>
-                <p>
-                  I focused on content strategy in this section by crafting
-                  minimal, easy-to-comprehend copy that is scannable to reduce
-                  information overload. Since remote workers value details, I
-                  included an "Info" icon button to store additional details;
-                  this design is inspired by clothing size charts.
-                </p>
-              </div>
-            </button>
-          </div>
-        </section>
+            </div>
+            <div class="accordion_content">
+              <p class="the-solution-prototype_subheading">
+                Workspace profile
+              </p>
+              <p>
+                I consolidated my previous sketches of the workspace profile
+                into a single-page layout to prioritize comprehensive
+                work-environment details above-the-fold, arranged by order of
+                importance. The profiles focus on workspace interior instead
+                of food. I leveraged social proof by designing each review to
+                display the author's occupation to enhance credibility and
+                engagement.
+              </p>
+              <p class="the-solution-prototype_subheading">
+                Comprehensive environment details
+              </p>
+              <p>
+                I focused on content strategy in this section by crafting
+                minimal, easy-to-comprehend copy that is scannable to reduce
+                information overload. Since remote workers value details, I
+                included an "Info" icon button to store additional details;
+                this design is inspired by clothing size charts.
+              </p>
+            </div>
+          </button>
+        </div>
       </section>
-      <section id="friday" class="section-container">
-        <div class="content-wrapper">
-          <div>
-            <header class="header-container">
-              <h2>
-                <span>Friday</span>
-                <br />
+    </section>
+    <section id="friday" class="section-container">
+      <div class="content-wrapper">
+        <div>
+          <header class="header-container">
+            <h2>
+              <span>Friday</span>
+              <br />
                 Test
-              </h2>
-              <img
+            </h2>
+            <img
                 class="img-project-schedule"
                 alt="Sprint schedule for Friday"
                 loading="lazy"
                 src="assets/images/postup/sprint-schedule-friday.webp"
               />
-            </header>
-            <p>
-              On my last day, I conducted remote usability testing over Zoom
-              with 5 participants, including both college students and working
-              professionals who frequently work in public spaces and use mobile
-              apps to find locations. Overall, my participants loved the
-              prototype! They didn't find any essential details missing and
-              there was minimal confusion.
-            </p>
-            <div class="test-findings-grid mv-32">
-              <div class="test-findings_card border-top-green">
-                <div class="test-findings_header">
-                  <p class="subheading">Design validation</p>
-                  <img
+          </header>
+          <p>
+            On my last day, I conducted remote usability testing over Zoom
+            with 5 participants, including both college students and working
+            professionals who frequently work in public spaces and use mobile
+            apps to find locations. Overall, my participants loved the
+            prototype! They didn't find any essential details missing and
+            there was minimal confusion.
+          </p>
+          <div class="test-findings-grid mv-32">
+            <div class="test-findings_card border-top-green">
+              <div class="test-findings_header">
+                <p class="subheading">Design validation</p>
+                <img
                     alt="Green checkmark circle icon"
                     class="img-design-validation"
                     loading="lazy"
                     src="assets/images/tastebuds/icon-checkmark-circle-filled-green.webp"
                   />
-                </div>
-                <ul>
-                  <li>
-                    Users loved the intuitive navigation and quick access to
-                    workspace details
-                  </li>
-                  <li>Everyone praised the visual design</li>
-                  <li>
-                    All users completed tasks efficiently and wished the tool
-                    existed
-                  </li>
-                </ul>
               </div>
-              <div class="test-findings_card border-top-red">
-                <div class="test-findings_header">
-                  <p class="subheading">Areas of improvement</p>
-                  <img
+              <ul>
+                <li>
+                  Users loved the intuitive navigation and quick access to
+                  workspace details
+                </li>
+                <li>Everyone praised the visual design</li>
+                <li>
+                  All users completed tasks efficiently and wished the tool
+                  existed
+                </li>
+              </ul>
+            </div>
+            <div class="test-findings_card border-top-red">
+              <div class="test-findings_header">
+                <p class="subheading">Areas of improvement</p>
+                <img
                     alt="Red cancel circle icon"
                     class="img-design-invalidation"
                     loading="lazy"
                     src="assets/svg/ic-x-circle.svg"
                   />
-                </div>
-                <ul>
-                  <li>
-                    Some users found a few icons and labels confusing, but they
-                    acknowledged that the app provided unique details not
-                    available in their current solutions
-                  </li>
-                  <li>
-                    Minor suggestions included highlighting lighting and
-                    restroom availability
-                  </li>
-                </ul>
               </div>
-            </div>
-            <div class="usability-test-details_grid-item hide">
-              <p class="subheading">Objectives</p>
               <ul>
-                <li>Identify unmet needs and unnecessary features</li>
                 <li>
-                  Uncover the primary user route(s), behaviors, and expectations
+                  Some users found a few icons and labels confusing, but they
+                  acknowledged that the app provided unique details not
+                  available in their current solutions
                 </li>
-                <li>Evaluate pending features</li>
+                <li>
+                  Minor suggestions included highlighting lighting and
+                  restroom availability
+                </li>
               </ul>
             </div>
-            <div class="usability-test-details_grid-container">
-              <div
-                class="usability-test-details_grid-item grid-item-questions hide"
-              >
-                <p class="subheading">A few questions I asked</p>
-                <ol>
-                  <li>Identify unmet needs and unnecessary features</li>
-                  <li>
-                    Uncover the primary user route(s), behaviors, and
-                    expectations
-                  </li>
-                  <li>Evaluate pending features</li>
-                </ol>
-              </div>
+          </div>
+          <div class="usability-test-details_grid-item hide">
+            <p class="subheading">Objectives</p>
+            <ul>
+              <li>Identify unmet needs and unnecessary features</li>
+              <li>
+                Uncover the primary user route(s), behaviors, and expectations
+              </li>
+              <li>Evaluate pending features</li>
+            </ul>
+          </div>
+          <div class="usability-test-details_grid-container">
+            <div
+              class="usability-test-details_grid-item grid-item-questions hide">
+              <p class="subheading">A few questions I asked</p>
+              <ol>
+                <li>Identify unmet needs and unnecessary features</li>
+                <li>
+                  Uncover the primary user route(s), behaviors, and
+                  expectations
+                </li>
+                <li>Evaluate pending features</li>
+              </ol>
             </div>
           </div>
-          <div>
-            <p>
-              Here's an excerpt from the usability test with participant #1,
-              where she offers positive feedback on the prototype after
-              completing her given task:
-            </p>
-            <div class="mv-32">
-              <iframe
-                allow="autoplay; encrypted-media"
-                src="https://www.youtube.com/embed/DGbAqmEvDzQ?rel=0&controls=1&autoplay=0&mute=0&start=0"
-                style="
+        </div>
+        <div>
+          <p>
+            Here's an excerpt from the usability test with participant #1,
+            where she offers positive feedback on the prototype after
+            completing her given task:
+          </p>
+          <div class="mv-32">
+            <iframe allow="autoplay; encrypted-media"
+              src="https://www.youtube.com/embed/DGbAqmEvDzQ?rel=0&controls=1&autoplay=0&mute=0&start=0"
+              style="
                   pointer-events: auto;
                   border: 0;
                   width: 100%;
                   height: auto;
-                "
-                class="interview-recording-video"
-                title="PostUp Usability Testing: Participant 02"
-              ></iframe>
-            </div>
-            <button class="accordion subdued mt-0">
-              <div class="accordion_header">
-                <p>See interview transcript</p>
-                <img
+                " class="interview-recording-video"
+              title="PostUp Usability Testing: Participant 02"></iframe>
+          </div>
+          <button class="accordion subdued mt-0">
+            <div class="accordion_header">
+              <p>See interview transcript</p>
+              <img
                   class="accordion_icon"
                   src="assets/svg/ic-chevron-arrow__down--black.svg"
                   alt="Black chevron arrow down icon"
                   loading="lazy"
                 />
-              </div>
-              <div class="accordion_content">
-                <blockquote>
-                  <div class="pt-16">
-                    <p>
-                      Interviewer: What did you enjoy about this?
-                      <br />
-                      <br />
+            </div>
+            <div class="accordion_content">
+              <blockquote>
+                <div class="pt-16">
+                  <p>
+                    Interviewer: What did you enjoy about this?
+                    <br />
+                    <br />
                       Participant 01: I enjoyed all the information that it gave
                       me very quickly. Right off the bat, I was able to know
                       what was important to me... which was find somewhere quiet
@@ -1452,630 +1401,590 @@
                       then this would be the perfect place, and I wouldn't have
                       to scroll down any further and waste an extra minute or
                       so.
-                      <br />
-                      <br />
+                    <br />
+                    <br />
                       Interviewer: Okay. Sweet. Anything else?
-                      <br />
-                      <br />
+                    <br />
+                    <br />
                       Participant 01: It also has wifi, which I need to do my
                       remote work
-                      <br />
-                      <br />
+                    <br />
+                    <br />
                       Interviewer: Okay, cool!
-                    </p>
-                  </div>
-                </blockquote>
-              </div>
-            </button>
-          </div>
+                  </p>
+                </div>
+              </blockquote>
+            </div>
+          </button>
         </div>
-      </section>
-      <section id="iterations-monetization" class="section-container border-0">
-        <div class="content-wrapper">
-          <header class="header-container">
-            <h2 class="mb-0">
-              <span>final wrap-up</span>
-              <br />
-              Iterations
-            </h2>
-          </header>
-          <p>
-            Given my test findings, I believe that the prototype can be improved
-            by incorporating a few more features and further optimizing the user
-            experience through reducing touchpoints.
+      </div>
+    </section>
+    <section id="iterations-monetization" class="section-container border-0">
+      <div class="content-wrapper">
+        <header class="header-container">
+          <h2 class="mb-0">
+            <span>final wrap-up</span>
             <br />
-          </p>
-          <ul class="off-black mb-32">
-            <li>Remove the search page and add a reservations page</li>
-            <li>Remove searching by type of work</li>
-            <li>Implement filters directly on Discover page</li>
-            <li>Add respective star rating to map icons for more context</li>
-            <li>Add workspace detail on lighting</li>
-            <li>Add workspace detail on restroom capacity</li>
-            <li>
-              Replace standardized details on work environment with explicit
-              details
-            </li>
-          </ul>
-          <header class="header-container header-container-postup-h3">
-            <h3>Business monetization strategy</h3>
-          </header>
-          <p>
-            I also brainstormed a monetization strategy that can increase
-            business revenue streams for PostUp. Considering the growing trend
-            toward remote work, I see a promising opportunity for a mutually
-            beneficial collaboration between PostUp and local businesses.
-            Therefore, I propose an
-            <span
-              >additional subscription and referral model that invites
-              businesses to become a “PostUp Partner”</span
-            >
-            to access
-            <span>premium in-app business features</span>
-            below:
-          </p>
-        </div>
-        <div class="container-full-width pv-32">
-          <div class="content-wrapper">
-            <div class="monetization-map-container mb-48">
-              <img
+              Iterations
+          </h2>
+        </header>
+        <p>
+          Given my test findings, I believe that the prototype can be improved
+          by incorporating a few more features and further optimizing the user
+          experience through reducing touchpoints.
+          <br />
+        </p>
+        <ul class="off-black mb-32">
+          <li>Remove the search page and add a reservations page</li>
+          <li>Remove searching by type of work</li>
+          <li>Implement filters directly on Discover page</li>
+          <li>Add respective star rating to map icons for more context</li>
+          <li>Add workspace detail on lighting</li>
+          <li>Add workspace detail on restroom capacity</li>
+          <li>
+            Replace standardized details on work environment with explicit
+            details
+          </li>
+        </ul>
+        <header class="header-container header-container-postup-h3">
+          <h3>Business monetization strategy</h3>
+        </header>
+        <p>
+          I also brainstormed a monetization strategy that can increase
+          business revenue streams for PostUp. Considering the growing trend
+          toward remote work, I see a promising opportunity for a mutually
+          beneficial collaboration between PostUp and local businesses.
+          Therefore, I propose an
+          <span>additional subscription and referral model that invites
+            businesses to become a “PostUp Partner”</span>
+          to access
+          <span>premium in-app business features</span>
+          below:
+        </p>
+      </div>
+      <div class="container-full-width pv-32">
+        <div class="content-wrapper">
+          <div class="monetization-map-container mb-48">
+            <img
                 class="img-100"
                 alt="Monetization strategy map"
                 loading="lazy"
                 src="assets/images/postup/monetization-strategy-map.webp"
               />
-            </div>
-            <button class="accordion subdued mb-40">
-              <div class="accordion_header">
-                <p>See customer journey details</p>
-                <img
+          </div>
+          <button class="accordion subdued mb-40">
+            <div class="accordion_header">
+              <p>See customer journey details</p>
+              <img
                   class="accordion_icon"
                   loading="lazy"
                   alt="Black chevron arrow down icon"
                   src="assets/svg/ic-chevron-arrow__down--black.svg"
                 />
-              </div>
-              <div class="accordion_content">
-                <ul class="monetization-map-accordion-list" type="1">
-                  <li>
-                    <span>User finds a workspace on PostUp</span>
-                    <br />
+            </div>
+            <div class="accordion_content">
+              <ul class="monetization-map-accordion-list" type="1">
+                <li>
+                  <span>User finds a workspace on PostUp</span>
+                  <br />
                     The journey begins with a user searching for a suitable
                     remote workspace using the PostUp app.
-                  </li>
-                  <li>
-                    <span
-                      >Reserve table (premium feature for PostUp business
-                      partners):</span
-                    >
-                    <br />
+                </li>
+                <li>
+                  <span>Reserve table (premium feature for PostUp business
+                    partners):</span>
+                  <br />
                     Users can reserve a table on PostUp at PostUp Partner
                     locations, providing a convenience that can attract more
                     customers to partner locations.
-                  </li>
-                  <li>
-                    <span>Visit shop</span>
-                    <br />
+                </li>
+                <li>
+                  <span>Visit shop</span>
+                  <br />
                     After reserving a table, users visit the physical location.
                     This step transitions online engagement to offline activity,
                     driving foot traffic to partner businesses.
-                  </li>
-                  <li>
-                    <span>Make purchase</span>
-                    <br />
+                </li>
+                <li>
+                  <span>Make purchase</span>
+                  <br />
                     Users make a purchase at a partner location. This
                     transaction is a critical touchpoint where value is
                     exchanged, and user engagement is solidified.
-                  </li>
-                  <li>
-                    <span>Scan Profile/QR Code</span>
-                    <br />
+                </li>
+                <li>
+                  <span>Scan Profile/QR Code</span>
+                  <br />
                     Users scan a QR code linked to their PostUp profile to earn
                     rewards. This step ensures the app tracks user activity and
                     incentivizes continued use through the rewards system.
-                  </li>
-                  <li>
-                    <span>Earn Stamps/Points</span>
-                    <br />
+                </li>
+                <li>
+                  <span>Earn Stamps/Points</span>
+                  <br />
                     Users earn one stamp for visiting a new shop and points for
                     in-person purchases. This dual rewards system encourages
                     exploration of new locations and repeat visits, fostering
                     user loyalty.
-                  </li>
-                  <li>
-                    <span>Redeem Rewards</span>
-                    <br />
+                </li>
+                <li>
+                  <span>Redeem Rewards</span>
+                  <br />
                     Accumulated points and stamps can be redeemed for rewards,
                     such as a free coffee. This incentive boosts user spending
                     and enhances the overall experience, making users more
                     likely to return.
-                  </li>
-                </ul>
-              </div>
+                </li>
+              </ul>
+            </div>
+          </button>
+        </div>
+        <div class="tabs-container margin-auto" data-current="Tab 1"
+          data-duration-in="300" data-duration-out="100" data-easing="ease">
+          <div class="tabs-menu three-menu-items">
+            <button class="tab-button" data-tab="tab1">
+              <p>Reservations</p>
+            </button>
+            <button class="tab-button" data-tab="tab2">
+              <p>User analytics</p>
+            </button>
+            <button class="tab-button" data-tab="tab3">
+              <p>Rewards</p>
             </button>
           </div>
-          <div
-            class="tabs-container margin-auto"
-            data-current="Tab 1"
-            data-duration-in="300"
-            data-duration-out="100"
-            data-easing="ease"
-          >
-            <div class="tabs-menu three-menu-items">
-              <button class="tab-button" data-tab="tab1">
-                <p>Reservations</p>
-              </button>
-              <button class="tab-button" data-tab="tab2">
-                <p>User analytics</p>
-              </button>
-              <button class="tab-button" data-tab="tab3">
-                <p>Rewards</p>
-              </button>
-            </div>
-            <div id="tab1" class="tab-content active">
-              <div class="reservation-system">
-                <div>
-                  <h4>Reservation system</h4>
-                  <p>
-                    Only PostUp Partners can access the in-app table reservation
-                    feature, enhancing user convenience and potentially
-                    attracting more customers. Users may filter their search
-                    results for locations that offer reservations.
-                    <br />
-                  </p>
-                </div>
-                <div>
-                  <img
+          <div id="tab1" class="tab-content active">
+            <div class="reservation-system">
+              <div>
+                <h4>Reservation system</h4>
+                <p>
+                  Only PostUp Partners can access the in-app table reservation
+                  feature, enhancing user convenience and potentially
+                  attracting more customers. Users may filter their search
+                  results for locations that offer reservations.
+                  <br />
+                </p>
+              </div>
+              <div>
+                <img
                     alt="Reservation system interfazzce"
                     loading="lazy"
                     src="assets/images/postup/reservation-system.webp"
                   />
-                </div>
               </div>
             </div>
-            <div id="tab2" class="tab-content">
-              <div>
-                <h4 class="mt-0">Data analytics</h4>
-                <p>
-                  PostUp can offer valuable insights derived from user behavior,
-                  like traffic trends and user preferences, enabling partners to
-                  better understand their customer base, thereby allowing them
-                  to tailor their services and improve customer satisfaction.
-                </p>
-              </div>
-            </div>
-            <div id="tab3" class="tab-content">
-              <header class="header-container">
-                <h4 class="mt-0">Exclusive promotions</h4>
-              </header>
+          </div>
+          <div id="tab2" class="tab-content">
+            <div>
+              <h4 class="mt-0">Data analytics</h4>
               <p>
-                PostUp partners can offer exclusive in-app promotions,
-                encouraging engagement and customer acquisition. Subscribers may
-                filter for locations with ongoing promotions.
-              </p>
-              <h4>Rewards system</h4>
-              <p>
-                Partners may offer exclusive rewards for users. Using a unique
-                QR code, users may earn points and stamps for their activities,
-                which can be redeemed for tangible rewards, encouraging frequent
-                use and loyalty.
+                PostUp can offer valuable insights derived from user behavior,
+                like traffic trends and user preferences, enabling partners to
+                better understand their customer base, thereby allowing them
+                to tailor their services and improve customer satisfaction.
               </p>
             </div>
           </div>
+          <div id="tab3" class="tab-content">
+            <header class="header-container">
+              <h4 class="mt-0">Exclusive promotions</h4>
+            </header>
+            <p>
+              PostUp partners can offer exclusive in-app promotions,
+              encouraging engagement and customer acquisition. Subscribers may
+              filter for locations with ongoing promotions.
+            </p>
+            <h4>Rewards system</h4>
+            <p>
+              Partners may offer exclusive rewards for users. Using a unique
+              QR code, users may earn points and stamps for their activities,
+              which can be redeemed for tangible rewards, encouraging frequent
+              use and loyalty.
+            </p>
+          </div>
         </div>
-        <div class="content-wrapper mt-0">
-          <header class="header-container">
-            <h3>Conclusion</h3>
-          </header>
-          <p>
-            Overall, my strategies aim to establish a sustainable revenue model
-            that enhances the overall remote working experience throughout their
-            user journey. This collaboration could incentivize businesses to
-            enhance their amenities, catering to remote workers and in turn
-            enriching the overall user experience for Postup subscribers. In
-            sum, these strategies offer additional revenue streams for PostUp
-            while boosting the app's value proposition for both users and
-            business partners.
-            <br />
-          </p>
-        </div>
-      </section>
-      <section id="final-prototype" class="section-container equal-padding">
-        <h2 class="text-center">Final Prototype</h2>
-        <div class="container-full-width pv-0 mv-0 bg-transparent">
-          <div class="final-prototype_grid-container">
-            <div class="final-prototype_content">
-              <h3 class="final-prototype_headline hide-med">
-                With on-page amenity filters, search and compare workspaces
-                effortlessly
-              </h3>
-              <h3 class="final-prototype_headline show-med-block">
-                Find nearby workspaces that meet your needs
-              </h3>
-              <p>
-                The previous 'Search' page is replaced by 'Reservations'. Users
-                can now find workspaces by toggling
-                <span class="fw-medium">amenity filters</span>
-                directly in the 'Explore' page.
-              </p>
-            </div>
-            <div class="final-prototype_video_wrapper">
-              <div class="final-prototype_video-previous">
-                <img
+      </div>
+      <div class="content-wrapper mt-0">
+        <header class="header-container">
+          <h3>Conclusion</h3>
+        </header>
+        <p>
+          Overall, my strategies aim to establish a sustainable revenue model
+          that enhances the overall remote working experience throughout their
+          user journey. This collaboration could incentivize businesses to
+          enhance their amenities, catering to remote workers and in turn
+          enriching the overall user experience for Postup subscribers. In
+          sum, these strategies offer additional revenue streams for PostUp
+          while boosting the app's value proposition for both users and
+          business partners.
+          <br />
+        </p>
+      </div>
+    </section>
+    <section id="final-prototype" class="section-container equal-padding">
+      <h2 class="text-center">Final Prototype</h2>
+      <div class="container-full-width pv-0 mv-0 bg-transparent">
+        <div class="final-prototype_grid-container">
+          <div class="final-prototype_content">
+            <h3 class="final-prototype_headline hide-med">
+              With on-page amenity filters, search and compare workspaces
+              effortlessly
+            </h3>
+            <h3 class="final-prototype_headline show-med-block">
+              Find nearby workspaces that meet your needs
+            </h3>
+            <p>
+              The previous 'Search' page is replaced by 'Reservations'. Users
+              can now find workspaces by toggling
+              <span class="fw-medium">amenity filters</span>
+              directly in the 'Explore' page.
+            </p>
+          </div>
+          <div class="final-prototype_video_wrapper">
+            <div class="final-prototype_video-previous">
+              <img
                   loading="lazy"
                   src="assets/images/postup/prototype-v1-search-results.webp"
                   alt=""
                   class="final-prototype_video"
                 />
-                <p>Previous</p>
-              </div>
-              <div class="final-prototype_video-iteration">
-                <video
-                  preload="none"
-                  class="final-prototype_video lazy"
-                  playsinline
-                  loop
-                  muted
-                  nodownload
-                >
-                  <source
+              <p>Previous</p>
+            </div>
+            <div class="final-prototype_video-iteration">
+              <video preload="none" class="final-prototype_video lazy"
+                playsinline loop muted nodownload>
+                <source
                     data-src="assets/videos/postup/final-prototype-white-bg-search.mp4"
                     type="video/mp4"
                   />
-                </video>
-                <p>Iteration</p>
-              </div>
+              </video>
+              <p>Iteration</p>
             </div>
           </div>
-          <div class="final-prototype_grid-container the-final-prototype">
-            <div class="final-prototype_content">
-              <h3 class="final-prototype_headline hide-med">
-                Assess workspaces even quicker with more transparency and
-                clarity
-              </h3>
-              <h3 class="final-prototype_headline show-med-block">
-                Assess workspaces effortlessly
-              </h3>
-              <p>
-                Location icons on the map now displays ratings. To aid
-                scannability, search results now use
-                <span class="fw-medium"
-                  >clear text labels to indicate work suitability</span
-                >
-                , rather than icons.
-              </p>
-            </div>
-            <div class="final-prototype_video_wrapper">
-              <div class="final-prototype_video-previous">
-                <img
+        </div>
+        <div class="final-prototype_grid-container the-final-prototype">
+          <div class="final-prototype_content">
+            <h3 class="final-prototype_headline hide-med">
+              Assess workspaces even quicker with more transparency and
+              clarity
+            </h3>
+            <h3 class="final-prototype_headline show-med-block">
+              Assess workspaces effortlessly
+            </h3>
+            <p>
+              Location icons on the map now displays ratings. To aid
+              scannability, search results now use
+              <span class="fw-medium">clear text labels to indicate work
+                suitability</span>
+              , rather than icons.
+            </p>
+          </div>
+          <div class="final-prototype_video_wrapper">
+            <div class="final-prototype_video-previous">
+              <img
                   loading="lazy"
                   src="assets/images/postup/prototype-v1-search-results-only.webp"
                   alt=""
                   class="final-prototype_video"
                 />
-                <p>Previous</p>
-              </div>
-              <div class="final-prototype_video-iteration">
-                <video
-                  preload="none"
-                  loading="lazy"
-                  class="final-prototype_video final-prototype_video-iteration lazy"
-                  playsinline
-                  loop
-                  muted
-                  nodownload
-                >
-                  <source
+              <p>Previous</p>
+            </div>
+            <div class="final-prototype_video-iteration">
+              <video preload="none" loading="lazy"
+                class="final-prototype_video final-prototype_video-iteration lazy"
+                playsinline loop muted nodownload>
+                <source
                     data-src="assets/videos/postup/final-prototype-search-results-list-2.mp4"
                     type="video/mp4"
                   />
-                </video>
-                <p>Iteration</p>
-              </div>
+              </video>
+              <p>Iteration</p>
             </div>
           </div>
-          <div class="final-prototype_grid-container the-final-prototype">
-            <div class="final-prototype_content">
-              <h3 class="final-sprototype_headline hide-med">
-                With more workspace details and table reservations, there are no
-                more surprises
-              </h3>
-              <h3 class="final-prototype_headline show-med-block">
-                Find the perfect workspace every time
-              </h3>
-              <p>
-                The refined workspace profile includes a fixed bottom
-                navigation, new content hierarchy, more details, and simplified
-                labels. New features include
-                <span class="fw-medium">real-time seating availability</span>
-                ,
-                <span class="fw-medium">reservations</span>
-                , and
-                <span class="fw-medium">menu previews</span>
-                .
-              </p>
-            </div>
-            <div class="final-prototype_video_wrapper">
-              <div class="final-prototype_video-previous">
-                <img
+        </div>
+        <div class="final-prototype_grid-container the-final-prototype">
+          <div class="final-prototype_content">
+            <h3 class="final-sprototype_headline hide-med">
+              With more workspace details and table reservations, there are no
+              more surprises
+            </h3>
+            <h3 class="final-prototype_headline show-med-block">
+              Find the perfect workspace every time
+            </h3>
+            <p>
+              The refined workspace profile includes a fixed bottom
+              navigation, new content hierarchy, more details, and simplified
+              labels. New features include
+              <span class="fw-medium">real-time seating availability</span>
+              ,
+              <span class="fw-medium">reservations</span>
+              , and
+              <span class="fw-medium">menu previews</span>
+              .
+            </p>
+          </div>
+          <div class="final-prototype_video_wrapper">
+            <div class="final-prototype_video-previous">
+              <img
                   loading="lazy"
                   src="assets/images/postup/prototype-v1-listing.webp"
                   alt=""
                   class="final-prototype_video"
                 />
-                <p>Previous</p>
-              </div>
-              <div class="final-prototype_video-iteration">
-                <video
-                  preload="none"
-                  loading="lazy"
-                  class="final-prototype_video lazy"
-                  playsinline
-                  muted
-                  nodownload
-                >
-                  <source
+              <p>Previous</p>
+            </div>
+            <div class="final-prototype_video-iteration">
+              <video preload="none" loading="lazy"
+                class="final-prototype_video lazy" playsinline muted nodownload>
+                <source
                     data-src="assets/videos/postup/final-prototype-workspace-profile.mp4"
                     type="video/mp4"
                   />
-                </video>
-                <p>Iteration</p>
-              </div>
+              </video>
+              <p>Iteration</p>
             </div>
           </div>
-          <div class="hide">
-            <button class="accordion subdued mb-16">
-              <div class="accordion_header">
-                <p>See details</p>
-                <img
+        </div>
+        <div class="hide">
+          <button class="accordion subdued mb-16">
+            <div class="accordion_header">
+              <p>See details</p>
+              <img
                   class="accordion_icon"
                   src="assets/svg/ic-chevron-arrow__down--black.svg"
                   alt="Black chevron arrow down icon"
                   loading="lazy"
                 />
-              </div>
-              <div class="accordion_content">
-                <p class="final-prototype_subheading">Workspace profile</p>
-                <p>
-                  I consolidated my previous sketches of the workspace profile
-                  into a single-page layout to prioritize comprehensive
-                  work-environment details above-the-fold, arranged by order of
-                  importance. The profiles focus on workspace interior instead
-                  of food. I leveraged social proof by designing each review to
-                  display the author's occupation to enhance credibility and
-                  engagement.
-                </p>
-                <p class="final-prototype_subheading">
-                  Comprehensive environment details
-                </p>
-                <p>
-                  I focused on content strategy in this section by crafting
-                  minimal, easy-to-comprehend copy that is scannable to reduce
-                  information overload. Since remote workers value details, I
-                  included an "Info" icon button to store additional details;
-                  this design is inspired by clothing size charts.
-                </p>
-              </div>
-            </button>
-          </div>
+            </div>
+            <div class="accordion_content">
+              <p class="final-prototype_subheading">Workspace profile</p>
+              <p>
+                I consolidated my previous sketches of the workspace profile
+                into a single-page layout to prioritize comprehensive
+                work-environment details above-the-fold, arranged by order of
+                importance. The profiles focus on workspace interior instead
+                of food. I leveraged social proof by designing each review to
+                display the author's occupation to enhance credibility and
+                engagement.
+              </p>
+              <p class="final-prototype_subheading">
+                Comprehensive environment details
+              </p>
+              <p>
+                I focused on content strategy in this section by crafting
+                minimal, easy-to-comprehend copy that is scannable to reduce
+                information overload. Since remote workers value details, I
+                included an "Info" icon button to store additional details;
+                this design is inspired by clothing size charts.
+              </p>
+            </div>
+          </button>
         </div>
-      </section>
-      <section id="next-steps" class="section-container">
-        <div class="content-wrapper">
-          <header class="header-container">
-            <h2>Next Steps</h2>
-          </header>
-          <h3>Shipping the MVP</h3>
-          <p class="mb-40">
-            If I had more time, I would conduct another round of usability
-            testing to validate my iterations. I would also
-            <span>further optimize the user experience</span>
+      </div>
+    </section>
+    <section id="next-steps" class="section-container">
+      <div class="content-wrapper">
+        <header class="header-container">
+          <h2>Next Steps</h2>
+        </header>
+        <h3>Shipping the MVP</h3>
+        <p class="mb-40">
+          If I had more time, I would conduct another round of usability
+          testing to validate my iterations. I would also
+          <span>further optimize the user experience</span>
+          and
+          <span>iterate screens for the rewards system, exclusive promotions,
             and
-            <span
-              >iterate screens for the rewards system, exclusive promotions, and
-              reservation system</span
-            >
-            . I would
-            <span>extend and complete the user flow</span>
-            to include
-            <span>reserving a table</span>
-            and the final interaction with the app—
-            <span>earn PostUp points</span>
-            in-store with an purchase at an official PostUp partner location. If
-            I had a team to ship this prototype, I would implement the designs
-            from my monetization strategy and develop the user flow for PostUp
-            partners to integrate them into the ecosystem.
-            <br />
-          </p>
-          <h3>Personal growth</h3>
-          <p>
-            A long-term goal of mine is to increasingly streamline my design
-            process. I aim to learn and develop efficient design strategies to
-            streamline the product design cycle, maximizing company resources
-            and reducing business costs. In other words, I want to
-            <span
-              >learn to design as efficiently as possible to cut down business
-              costs and accelerate business growth</span
-            >
-            . Given the success of testing via verbal walkthroughs, I want to
-            learn more cost-effective ways of usability testing.
-            <br />
-          </p>
-        </div>
-      </section>
-      <section id="reflection" class="section-container pb-64">
-        <div class="content-wrapper">
-          <header class="header-container">
-            <h2>Reflection</h2>
-          </header>
-          <h3>Challenges</h3>
-          <p class="mb-40">
-            This was my first time conducting a design sprint, and writing this
-            case study helped me realize how much I've grown since my previous
-            project, TasteBuds, which has been a very affirming experience.
-            Challenging myself to develop a monetization strategy for a
-            scalable, resilient product was incredibly rewarding. Leveraging my
-            business acumen to create a user-friendly and profitable product was
-            really exciting. This definitely reinforced my choice of product
-            design over solely UX design, given my diverse skill set and
-            appreciation for the entire product lifecycle.
-          </p>
-          <h3>Lessons Learned</h3>
-          <h4>User behavior and expectations</h4>
-          <p class="mb-40">
-            As I progress as a product designer, understanding user behavior and
-            expectations has empowered me to anticipate needs and optimize
-            usability tests. My favorite parts of this project was further
-            streamlining my design process and navigating project constraints,
-            especially in creating more effective user flows and designing
-            cost-effective usability tests to maximize business revenue.
-          </p>
-          <h4>Expanding on TasteBuds</h4>
-          <p>
-            Designing PostUp gave me the opportunity to expand my prior case
-            study on my previous project
-            <em>TasteBuds</em>
-            —a social recommendation mobile app that connects diners with
-            trusted friends and personalized suggestions. This sprint validated
-            my research and test insights on user behavior and motivations in
-            TasteBuds. Both studies taught me the importance of novelty and
-            innovation to enhance user engagement and prioritize
-            user-centricity. This experience definitely reinforced my commitment
-            to research and anticipatory design, boosting my confidence in
-            pursuing innovation!
-            <br />
-          </p>
-          <p>
-            Overall, this was a very rewarding experience, and I can't wait to
-            apply my learnings in my future projects!
-          </p>
-        </div>
-      </section>
-      <section id="thank-you" class="section-container border-0">
-        <div class="content-wrapper">
-          <header class="header-container">
-            <h2>Thank you!</h2>
-          </header>
-          <p>
-            Thank you for reading my case study! Feel free to experience my
-            prototype: Find somewhere quiet to do some remote work nearby,
-            reserve a table, and scan your profile QR code to earn points on an
-            in-person purchase. Open the prototype in a new page
-            <a
-              class="link-blue"
-              href="https://www.figma.com/embed?embed_host=share&amp;url=https://www.figma.com/file/SRNmggXDwqHlVJB2ZgAWX7/PostUp?type=design&amp;node-id=239:46459&amp;mode=design&amp;t=p67fIzAwwMAvWfjh-1"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              here
-            </a>
-            .
-            <br />
-            <br />
+            reservation system</span>
+          . I would
+          <span>extend and complete the user flow</span>
+          to include
+          <span>reserving a table</span>
+          and the final interaction with the app—
+          <span>earn PostUp points</span>
+          in-store with an purchase at an official PostUp partner location. If
+          I had a team to ship this prototype, I would implement the designs
+          from my monetization strategy and develop the user flow for PostUp
+          partners to integrate them into the ecosystem.
+          <br />
+        </p>
+        <h3>Personal growth</h3>
+        <p>
+          A long-term goal of mine is to increasingly streamline my design
+          process. I aim to learn and develop efficient design strategies to
+          streamline the product design cycle, maximizing company resources
+          and reducing business costs. In other words, I want to
+          <span>learn to design as efficiently as possible to cut down business
+            costs and accelerate business growth</span>
+          . Given the success of testing via verbal walkthroughs, I want to
+          learn more cost-effective ways of usability testing.
+          <br />
+        </p>
+      </div>
+    </section>
+    <section id="reflection" class="section-container pb-64">
+      <div class="content-wrapper">
+        <header class="header-container">
+          <h2>Reflection</h2>
+        </header>
+        <h3>Challenges</h3>
+        <p class="mb-40">
+          This was my first time conducting a design sprint, and writing this
+          case study helped me realize how much I've grown since my previous
+          project, TasteBuds, which has been a very affirming experience.
+          Challenging myself to develop a monetization strategy for a
+          scalable, resilient product was incredibly rewarding. Leveraging my
+          business acumen to create a user-friendly and profitable product was
+          really exciting. This definitely reinforced my choice of product
+          design over solely UX design, given my diverse skill set and
+          appreciation for the entire product lifecycle.
+        </p>
+        <h3>Lessons Learned</h3>
+        <h4>User behavior and expectations</h4>
+        <p class="mb-40">
+          As I progress as a product designer, understanding user behavior and
+          expectations has empowered me to anticipate needs and optimize
+          usability tests. My favorite parts of this project was further
+          streamlining my design process and navigating project constraints,
+          especially in creating more effective user flows and designing
+          cost-effective usability tests to maximize business revenue.
+        </p>
+        <h4>Expanding on TasteBuds</h4>
+        <p>
+          Designing PostUp gave me the opportunity to expand my prior case
+          study on my previous project
+          <em>TasteBuds</em>
+          —a social recommendation mobile app that connects diners with
+          trusted friends and personalized suggestions. This sprint validated
+          my research and test insights on user behavior and motivations in
+          TasteBuds. Both studies taught me the importance of novelty and
+          innovation to enhance user engagement and prioritize
+          user-centricity. This experience definitely reinforced my commitment
+          to research and anticipatory design, boosting my confidence in
+          pursuing innovation!
+          <br />
+        </p>
+        <p>
+          Overall, this was a very rewarding experience, and I can't wait to
+          apply my learnings in my future projects!
+        </p>
+      </div>
+    </section>
+    <section id="thank-you" class="section-container border-0">
+      <div class="content-wrapper">
+        <header class="header-container">
+          <h2>Thank you!</h2>
+        </header>
+        <p>
+          Thank you for reading my case study! Feel free to experience my
+          prototype: Find somewhere quiet to do some remote work nearby,
+          reserve a table, and scan your profile QR code to earn points on an
+          in-person purchase. Open the prototype in a new page
+          <a class="link-blue"
+            href="https://www.figma.com/embed?embed_host=share&amp;url=https://www.figma.com/file/SRNmggXDwqHlVJB2ZgAWX7/PostUp?type=design&amp;node-id=239:46459&amp;mode=design&amp;t=p67fIzAwwMAvWfjh-1"
+            target="_blank" rel="noopener noreferrer">
+            here
+          </a>
+          .
+          <br />
+          <br />
             Feel free to reach out to me on
-            <a
-              class="link-blue"
-              href="https://www.linkedin.com/in/itsmichellehu"
-              target="_blank"
-              rel="noopener noreferrer"
-              >LinkedIn</a
-            >
-            or via email at
-            <a class="link-blue" href="mailto:mhu.contact@gmail.com"
-              >mhu.contact@gmail.com</a
-            >
-            to share feedback and/or discuss collaboration opportunities. Any
-            and all communication is appreciated!
-            <br />
-          </p>
-        </div>
-      </section>
-    </main>
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        var accordions = document.querySelectorAll(".accordion");
+          <a class="link-blue" href="https://www.linkedin.com/in/itsmichellehu"
+            target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          or via email at
+          <a class="link-blue"
+            href="mailto:hello@michellehu.com">hello@michellehu.com</a>
+          to share feedback and/or discuss collaboration opportunities. Any
+          and all communication is appreciated!
+          <br />
+        </p>
+      </div>
+    </section>
+  </main>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var accordions = document.querySelectorAll(".accordion");
 
-        accordions.forEach(function (accordion) {
-          accordion.addEventListener("click", function () {
-            // Toggle the active class for the clicked accordion
-            this.classList.toggle("accordion-active");
+      accordions.forEach(function (accordion) {
+        accordion.addEventListener("click", function () {
+          // Toggle the active class for the clicked accordion
+          this.classList.toggle("accordion-active");
 
-            // Find the corresponding content section
-            var content = this.querySelector(".accordion_content");
+          // Find the corresponding content section
+          var content = this.querySelector(".accordion_content");
 
-            // Expand if active, collapse if not
-            if (this.classList.contains("accordion-active")) {
-              content.style.maxHeight = content.scrollHeight + "px";
-            } else {
-              content.style.maxHeight = 0;
-            }
-          });
-        });
-      });
-    </script>
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        const container = document.querySelector(".stashed-features_wrapper");
-        const cards = document.querySelectorAll(".stashed-features_card");
-        if (!container || cards.length === 0) return;
-
-        let cardWidth = cards[0].getBoundingClientRect().width;
-        let currentIndex = 0;
-
-        const handleWheel = (event) => {
-          event.preventDefault();
-          cardWidth = cards[0].getBoundingClientRect().width; // keep responsive widths
-          currentIndex =
-            event.deltaY > 0
-              ? Math.min(currentIndex + 1, cards.length - 1)
-              : Math.max(currentIndex - 1, 0);
-          container.scrollTo({
-            left: cardWidth * currentIndex,
-            behavior: "smooth",
-          });
-        };
-
-        container.addEventListener("wheel", handleWheel, { passive: false });
-        window.addEventListener("resize", () => {
-          cardWidth = cards[0].getBoundingClientRect().width;
-        });
-      });
-    </script>
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        const prevButton = document.getElementById("prevButton");
-        const nextButton = document.getElementById("nextButton");
-        const carousel = document.querySelector(
-          ".stashed-features_grid-container",
-        );
-        if (!prevButton || !nextButton || !carousel) return;
-
-        const updatePrevButtonOpacity = () => {
-          prevButton.style.transition = "opacity 0.3s ease-in-out";
-          prevButton.style.opacity = carousel.scrollLeft === 0 ? "0.5" : "1";
-        };
-
-        updatePrevButtonOpacity();
-
-        prevButton.addEventListener("click", () => {
-          if (carousel.scrollLeft > 0) {
-            carousel.scrollBy({
-              left: -carousel.clientWidth,
-              behavior: "smooth",
-            });
+          // Expand if active, collapse if not
+          if (this.classList.contains("accordion-active")) {
+            content.style.maxHeight = content.scrollHeight + "px";
+          } else {
+            content.style.maxHeight = 0;
           }
         });
-
-        nextButton.addEventListener("click", () => {
-          carousel.scrollBy({ left: carousel.clientWidth, behavior: "smooth" });
-        });
-
-        carousel.addEventListener("scroll", updatePrevButtonOpacity);
       });
-    </script>
-    <script>
-      vid = document.querySelector("video");
-      vid.disablePictureInPicture = true;
-    </script>
-  </body>
+    });
+  </script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const container = document.querySelector(".stashed-features_wrapper");
+      const cards = document.querySelectorAll(".stashed-features_card");
+      if (!container || cards.length === 0) return;
+
+      let cardWidth = cards[0].getBoundingClientRect().width;
+      let currentIndex = 0;
+
+      const handleWheel = (event) => {
+        event.preventDefault();
+        cardWidth = cards[0].getBoundingClientRect().width; // keep responsive widths
+        currentIndex =
+          event.deltaY > 0
+            ? Math.min(currentIndex + 1, cards.length - 1)
+            : Math.max(currentIndex - 1, 0);
+        container.scrollTo({
+          left: cardWidth * currentIndex,
+          behavior: "smooth",
+        });
+      };
+
+      container.addEventListener("wheel", handleWheel, { passive: false });
+      window.addEventListener("resize", () => {
+        cardWidth = cards[0].getBoundingClientRect().width;
+      });
+    });
+  </script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const prevButton = document.getElementById("prevButton");
+      const nextButton = document.getElementById("nextButton");
+      const carousel = document.querySelector(
+        ".stashed-features_grid-container",
+      );
+      if (!prevButton || !nextButton || !carousel) return;
+
+      const updatePrevButtonOpacity = () => {
+        prevButton.style.transition = "opacity 0.3s ease-in-out";
+        prevButton.style.opacity = carousel.scrollLeft === 0 ? "0.5" : "1";
+      };
+
+      updatePrevButtonOpacity();
+
+      prevButton.addEventListener("click", () => {
+        if (carousel.scrollLeft > 0) {
+          carousel.scrollBy({
+            left: -carousel.clientWidth,
+            behavior: "smooth",
+          });
+        }
+      });
+
+      nextButton.addEventListener("click", () => {
+        carousel.scrollBy({ left: carousel.clientWidth, behavior: "smooth" });
+      });
+
+      carousel.addEventListener("scroll", updatePrevButtonOpacity);
+    });
+  </script>
+  <script>
+    vid = document.querySelector("video");
+    vid.disablePictureInPicture = true;
+  </script>
+</body>
 </html>
