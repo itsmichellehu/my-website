@@ -1,0 +1,52 @@
+@use "@abstracts/all-abstracts" as *;
+
+// Grid breakout layout: the section owns a centered grid with named
+// column tracks; children opt into a width by role. Replaces the
+// dual-role .content-wrapper + width-modifier pattern.
+// Pattern reference: Ryan Mulligan, "Layout Breakouts with CSS Grid".
+//
+//   <section class="layout">
+//     <p>…</p>                        // content column (default)
+//     <div class="popout">…</div>     // wider showcase
+//     <figure class="full">…</figure> // edge to edge
+//   </section>
+//
+// Track model (symmetric, centered): nested start/end line pairs.
+// content = $layout-content, popout = $layout-popout, full = $layout-full.
+// Each outer level adds a flanking track equal to half the width
+// difference to the next inner level. Line names match the class names,
+// so .popout → grid-column: popout and .full → grid-column: full.
+
+.layout {
+  $popout-pad: calc((#{$layout-popout} - #{$layout-content}) / 2);
+  $full-pad: calc((#{$layout-full} - #{$layout-popout}) / 2);
+
+  display: grid;
+  grid-template-columns:
+    [full-start] minmax($layout-gutter, 1fr)
+    [popout-start] minmax(0, $full-pad)
+    [content-start] minmax(0, $popout-pad)
+    min(#{$layout-content}, calc(100% - 2 * #{$layout-gutter}))
+    minmax(0, $popout-pad) [content-end]
+    minmax(0, $full-pad) [popout-end]
+    minmax($layout-gutter, 1fr) [full-end];
+
+  > * {
+    grid-column: content;
+  }
+
+  > .popout {
+    grid-column: popout;
+  }
+
+  > .full {
+    grid-column: full;
+  }
+
+  // full-bleed media should fill its track with no inherited gutters
+  > .full > img,
+  > .full > figure {
+    width: 100%;
+    margin: 0;
+  }
+}
