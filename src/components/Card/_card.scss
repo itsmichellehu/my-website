@@ -5,7 +5,6 @@
 	max-width: 1032px;
 	width: 95%;
 	margin: 0 auto;
-	margin-bottom: 6rem;
 	border-radius: 1.5rem;
 	height: fit-content;
 	overflow: hidden;
@@ -13,10 +12,6 @@
 
 	@include breakpoint(lg) {
 		padding: 3rem;
-	}
-
-	&.width-fit-content {
-		width: fit-content;
 	}
 
 	&.medium {

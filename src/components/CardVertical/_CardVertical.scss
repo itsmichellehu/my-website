@@ -4,15 +4,11 @@
 	display: flex;
 	flex-direction: column;
 	gap: 0.5rem;
-	margin: 0.5rem auto 2rem auto;
 	padding: 1rem !important;
 	background-color: #f6f6f6;
-	border-radius: 6px;
+	border-radius: 0.25rem;
 	height: 100%;
-
-	p {
-		font-weight: 400;
-	}
+	color: $black;
 
 	p:last-child {
 		margin-bottom: 0;
@@ -20,11 +16,6 @@
 
 	&.subdued-green {
 		border: 2px solid $subdued-green;
-		background-color: $lightest-green;
-
-		p {
-			color: $forest-green;
-		}
 	}
 }
 
