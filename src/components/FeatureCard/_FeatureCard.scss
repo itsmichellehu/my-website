@@ -1,0 +1,192 @@
+@use "@abstracts/all-abstracts" as *;
+
+// Global feature card: icon + headline + optional body.
+// Rendered from data via FeatureCard.js, or written statically with the
+// same classes. Ported from postup's _day-04-stashed-features.scss.
+
+$feature-card-font-color: $black;
+
+.feature-card-grid {
+  &_wrapper {
+    @include flex(row, space(2));
+    cursor: grab;
+    margin: space(8) auto;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    @include breakpoint(lg) {
+      max-width: 78rem;
+      align-items: center;
+      justify-content: center;
+      overflow: visible;
+      cursor: default;
+    }
+  }
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: space(4);
+  width: 100%;
+
+  @include breakpoint(xl) {
+    margin: 0 auto;
+    justify-self: center;
+    align-self: center;
+    overflow: visible;
+
+    li:last-child {
+      margin: 0;
+    }
+  }
+
+  &_nav-arrow_wrapper {
+    display: flex;
+    gap: space(4);
+    list-style-type: none;
+    justify-content: flex-end;
+    flex-direction: row;
+
+    li {
+      padding: 0;
+      transform: none;
+      width: fit-content;
+    }
+
+    @include breakpoint(lg) {
+      display: none;
+    }
+  }
+
+  &_nav-arrow {
+    width: 3rem;
+    height: 3rem;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    background-color: $light-grey !important;
+    transition: opacity 0.3s ease-in-out;
+
+    @include breakpoint(med) {
+      width: 3.25rem;
+      height: 3.25rem;
+    }
+
+    &:hover {
+      background-color: #e0e0e0 !important;
+    }
+
+    &:active {
+      background-color: #d0d0d0 !important;
+    }
+  }
+}
+
+.feature-card {
+  display: flex;
+  flex-direction: column;
+  padding: space(6);
+  border-radius: $border-radius;
+  position: relative;
+  overflow: hidden;
+  scroll-snap-align: center;
+  scroll-snap-stop: always;
+  background-color: $lightest-grey;
+  height: 100%;
+  aspect-ratio: 7/6;
+
+  &_icon-wrapper {
+    width: 2rem;
+    height: 2rem;
+    margin-bottom: space(4);
+
+    @include breakpoint(med) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0.5;
+      z-index: 1;
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      bottom: space(4);
+      right: space(4);
+      width: 8rem;
+      height: 8rem;
+      position: absolute;
+    }
+  }
+
+  &_icon,
+  &_icon-wrapper svg {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+  }
+
+  &_content {
+    width: 100%;
+    z-index: 2;
+
+    @include breakpoint(med) {
+      margin: auto;
+    }
+  }
+
+  &_heading {
+    font-size: text(lg);
+    font-weight: 500 !important;
+    margin-bottom: space(2);
+    color: $feature-card-font-color !important;
+
+    @include breakpoint(med) {
+      font-size: text(xl);
+    }
+  }
+
+  &_body {
+    display: flex;
+    font-size: text(md);
+    color: $feature-card-font-color !important;
+    margin-bottom: 0;
+  }
+
+  @include breakpoint(lg) {
+    padding: space(8);
+
+    &.first-child,
+    &.last-child {
+      margin: 0;
+    }
+  }
+}
+
+// Compact variant: keeps the carousel/grid container, but the icon stays a
+// small inline glyph at the top of the card (no oversized faded background)
+// and the card sizes to its content instead of a fixed aspect ratio.
+.feature-card-grid_wrapper--compact .feature-card {
+  aspect-ratio: auto;
+
+  &_icon-wrapper {
+    position: static;
+    width: 2rem;
+    height: 2rem;
+    margin: 0 0 space(4);
+    opacity: 1;
+
+    @include breakpoint(med) {
+      position: static;
+      width: 3rem;
+      height: 3rem;
+      margin: 0 0 space(4);
+      opacity: 1;
+    }
+  }
+}

@@ -6,11 +6,14 @@ import initTabsContainers from "./TabsContainer/TabsContainer";
 
 // import { initializeAccordion } from './ProjectAccordion/ProjectAccordion';
 import enableImageZoom from "./ImageZoom/ImageZoom";
+import initFeatureCards from "./FeatureCard/FeatureCard";
 
 document.addEventListener("DOMContentLoaded", function () {
-	initializeProgressBar();
-	BackToTopButton();
-	// initializeAccordion();
-	enableImageZoom();
-	initTabsContainers();
+  initializeProgressBar();
+  BackToTopButton();
+  // initializeAccordion();
+  enableImageZoom();
+  initTabsContainers();
 });
+
+initFeatureCards();
