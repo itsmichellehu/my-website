@@ -36,6 +36,26 @@ $spacing-scale: (
   @return map.get($spacing-scale, $step);
 }
 
+// ---- Semantic spacing roles ----
+// Spacing named by JOB, not size. Prefer these over raw space() in new
+// code: "space between sections" has ONE answer everywhere, which is
+// what keeps long case studies consistent. Each maps to a scale step.
+// Section/block use clamp() so rhythm scales down on mobile.
+$space-section: clamp(
+  #{space(10)},
+  6vw,
+  #{space(16)}
+); // between major sections (2.5–4rem)
+$space-block: clamp(
+  #{space(6)},
+  4vw,
+  #{space(8)}
+); // between blocks in a section (1.5–2rem)
+$space-element: space(4); // between stacked elements (heading → body) — 1rem
+$space-tight: space(2); // related items (label → value, icon → text) — 0.5rem
+$space-inset: space(6); // default padding inside cards/components — 1.5rem
+$space-inset-lg: space(12); // padding inside large containers — 3rem
+
 // ---- Type scale (1.25 modular ratio) ----
 $text-xs: 0.8rem;
 $text-sm: 0.875rem;
