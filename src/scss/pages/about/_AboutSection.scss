@@ -4,7 +4,7 @@
 
 .scroll-button {
   cursor: pointer;
-  font-size: 1.125rem;
+  font-size: text(md);
   background-color: transparent;
   text-decoration: none;
   border: 0;
@@ -90,7 +90,7 @@
   gap: space(8);
 
   p {
-    font-size: 1.125rem;
+    font-size: text(md);
   }
 }
 
@@ -172,7 +172,7 @@
     p {
       color: $off-black;
       font-family: Inter;
-      font-size: 1.125rem;
+      font-size: text(md);
       font-style: normal;
       line-height: 125%;
       /* 1.09375rem */
@@ -229,7 +229,7 @@
     }
 
     .grid-item-02 p {
-      font-size: 0.8125rem;
+      font-size: text(xs);
     }
   }
 }

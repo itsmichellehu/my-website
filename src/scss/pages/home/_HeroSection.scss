@@ -214,16 +214,16 @@ $edu-exp-height-xl: 3rem;
     /* 1.925rem */
     letter-spacing: -0.02rem;
     margin-bottom: space(2);
-    font-size: 1.125rem;
+    font-size: text(md);
     max-width: 44rem;
 
     @include breakpoint(med) {
-      font-size: 1rem;
+      font-size: text(base);
       margin-bottom: 0;
     }
 
     @include breakpoint(lg) {
-      font-size: 1.125rem;
+      font-size: text(md);
     }
 
     @include breakpoint(xl) {
@@ -260,7 +260,7 @@ $edu-exp-height-xl: 3rem;
       height: fit-content;
 
       @include breakpoint(xl) {
-        font-size: 1rem;
+        font-size: text(base);
         letter-spacing: -0.02rem;
       }
     }
@@ -318,7 +318,7 @@ $edu-exp-height-xl: 3rem;
   flex-direction: row;
   align-items: center;
   gap: space(2);
-  font-size: 1rem !important;
+  font-size: text(base) !important;
   font-weight: 450;
   line-height: 130%;
 
@@ -338,7 +338,7 @@ $edu-exp-height-xl: 3rem;
 
   @include breakpoint(lg) {
     gap: space(3);
-    font-size: 1.125rem;
+    font-size: text(md);
   }
 }
 
@@ -364,7 +364,7 @@ $edu-exp-height-xl: 3rem;
   margin-bottom: space(2);
 
   @include breakpoint(lg) {
-    font-size: 1.125rem;
+    font-size: text(md);
   }
 }
 

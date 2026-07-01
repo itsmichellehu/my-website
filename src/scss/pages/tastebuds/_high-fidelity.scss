@@ -15,13 +15,13 @@
   .heading-01 {
     grid-area: a;
     margin-bottom: space(2);
-    font-size: 1rem;
+    font-size: text(base);
   }
 
   .heading-02 {
     grid-area: b;
     margin-bottom: space(2);
-    font-size: 1rem;
+    font-size: text(base);
   }
 
   .img-1 {
@@ -77,13 +77,13 @@
   .heading-01 {
     grid-area: a;
     margin-bottom: space(2);
-    font-size: 1rem;
+    font-size: text(base);
   }
 
   .heading-02 {
     grid-area: b;
     margin-bottom: space(2);
-    font-size: 1rem;
+    font-size: text(base);
   }
 
   .img-1 {
@@ -136,13 +136,13 @@
   .heading-01 {
     grid-area: a;
     margin-bottom: space(2);
-    font-size: 1rem;
+    font-size: text(base);
   }
 
   .heading-02 {
     grid-area: b;
     margin-bottom: space(2);
-    font-size: 1rem;
+    font-size: text(base);
   }
 
   .img-1 {
@@ -189,7 +189,7 @@
   }
 
   .subheading {
-    font-size: 1.125rem;
+    font-size: text(md);
     color: $medium-grey;
     text-align: center;
     font-weight: 400;

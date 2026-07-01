@@ -81,7 +81,7 @@
       }
 
       p {
-        font-size: 1rem;
+        font-size: text(base);
       }
     }
   }
@@ -137,7 +137,7 @@
   }
 
   p {
-    font-size: 1rem;
+    font-size: text(base);
     margin-bottom: 0;
     text-wrap: balance;
 
@@ -202,7 +202,7 @@
     width: 100%;
     margin: 0;
     font-weight: 500;
-    font-size: 1.25rem;
+    font-size: text(lg);
     color: $black;
   }
 }
@@ -279,7 +279,7 @@
       }
 
       p {
-        font-size: 1.125rem;
+        font-size: text(md);
         margin-bottom: 0;
       }
     }

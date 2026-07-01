@@ -21,7 +21,7 @@ $userflow-walkthrough-border-radius: 1rem;
   margin-bottom: space(6);
 
   :first-child {
-    font-size: 1rem;
+    font-size: text(base);
     text-transform: uppercase;
     font-family: "Source Code Pro", monospace;
     color: $dark-grey;
@@ -89,7 +89,7 @@ $userflow-walkthrough-border-radius: 1rem;
 }
 
 .userflow-walkthrough_card_subheader {
-  font-size: 1rem;
+  font-size: text(base);
   text-transform: uppercase;
   font-family: "Source Code Pro", monospace;
   color: #e6e6e6d2;

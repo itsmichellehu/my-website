@@ -81,7 +81,7 @@
     font-weight: 500;
     letter-spacing: 0;
     line-height: 130%;
-    font-size: 1.125rem;
+    font-size: text(md);
     text-transform: none;
     margin-bottom: space(6) !important;
     color: $black;
@@ -131,7 +131,7 @@
     background-color: #fff;
 
     p {
-      font-size: 0.889rem;
+      font-size: text(sm);
       margin: 0;
     }
   }

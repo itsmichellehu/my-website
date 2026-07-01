@@ -76,11 +76,11 @@
         color: $emphasis-blue;
         font-weight: 500;
         margin-bottom: 0;
-        font-size: 1.25rem;
+        font-size: text(lg);
       }
 
       li {
-        font-size: 1.125rem;
+        font-size: text(md);
       }
     }
   }
@@ -103,7 +103,7 @@
   }
 
   .subheading {
-    font-size: 1.125rem;
+    font-size: text(md);
   }
 }
 
