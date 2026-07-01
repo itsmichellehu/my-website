@@ -1,40 +1,40 @@
 @use "@abstracts/all-abstracts" as *;
 
 .finding-card {
-	border: 1px solid #dbdbdb;
-	border-radius: $border-radius;
-	overflow: hidden;
-	margin-bottom: 1.5rem;
+  border: 1px solid #dbdbdb;
+  border-radius: $border-radius;
+  overflow: hidden;
+  margin-bottom: space(6);
 }
 
 .finding-highlight {
-	background: #e5ebe7;
-	padding: 1rem 1.25rem;
-	display: flex;
-	gap: 0.75rem;
-	align-items: flex-start;
+  background: #e5ebe7;
+  padding: space(4) space(5);
+  display: flex;
+  gap: space(3);
+  align-items: flex-start;
 }
 
 .finding-icon {
-	width: 1.125rem;
-	height: 1.125rem;
-	flex-shrink: 0;
+  width: 1.125rem;
+  height: 1.125rem;
+  flex-shrink: 0;
 }
 
 .finding-insight {
-	color: $primary-green;
-	margin: 0;
+  color: $primary-green;
+  margin: 0;
 }
 
 .finding-body {
-	padding: 1.125rem 1.25rem;
+  padding: 1.125rem 1.25rem;
 }
 
 .finding-body-title {
-	font-family: "IBM Plex Mono", monospace;
-	font-size: 0.6rem;
-	letter-spacing: 0.08em;
-	text-transform: uppercase;
-	color: #becec4;
-	margin-bottom: 0.75rem;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.6rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #becec4;
+  margin-bottom: space(3);
 }

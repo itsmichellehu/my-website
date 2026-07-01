@@ -1,121 +1,121 @@
 @use "@abstracts/all-abstracts" as *;
 
 .route-1-sketches_container {
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	gap: 1rem;
-	margin-top: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: space(4);
+  margin-top: space(6);
 }
 
 .sketches-walkthrough__wrapper {
-	margin-bottom: 3rem;
-	padding-bottom: 3rem;
-	border-bottom: 1px solid $medium-light-grey;
+  margin-bottom: space(12);
+  padding-bottom: space(12);
+  border-bottom: 1px solid $medium-light-grey;
 
-	&.border-0 {
-		border: 0;
-	}
+  &.border-0 {
+    border: 0;
+  }
 
-	header {
-		// border-bottom: 1px solid $dark-grey;
-		margin: 0;
-		margin-bottom: 1rem;
+  header {
+    // border-bottom: 1px solid $dark-grey;
+    margin: 0;
+    margin-bottom: space(4);
 
-		p.subheading {
-			margin-bottom: 0.5rem;
-			font-size: 1.35rem;
-			font-weight: 500;
-		}
-	}
+    p.subheading {
+      margin-bottom: space(2);
+      font-size: 1.35rem;
+      font-weight: 500;
+    }
+  }
 
-	img {
-		width: 100%;
-	}
+  img {
+    width: 100%;
+  }
 }
 
 // Grid container with Gif and 'Features' Card
 .sketches-walkthrough_grid-container {
-	display: grid;
-	grid-template-columns: 2fr 1fr;
-	grid-template-rows: auto;
-	column-gap: 2rem;
-	row-gap: 1rem;
-	// align-items: center;
-	grid-template-areas: "a b";
-	margin-bottom: 2rem;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: auto;
+  column-gap: space(8);
+  row-gap: space(4);
+  // align-items: center;
+  grid-template-areas: "a b";
+  margin-bottom: space(8);
 
-	> .featured-media {
-		grid-area: b;
-	}
+  > .featured-media {
+    grid-area: b;
+  }
 
-	> div {
-		grid-area: a;
-		// padding: 1.5rem 2rem 1.5rem 3rem;
-		// border-radius: 0.25rem;
-		// height: fit-content;
-		// background-color: $light-grey;
+  > div {
+    grid-area: a;
+    // padding: 1.5rem 2rem 1.5rem 3rem;
+    // border-radius: 0.25rem;
+    // height: fit-content;
+    // background-color: $light-grey;
 
-		.sketches-walkthrough__card {
-			display: flex;
-			flex-direction: column;
-			align-items: flex-start;
-			gap: 0.5rem;
-			padding: 1.5rem 3rem;
-			border-radius: 0.25rem;
-			height: fit-content;
-			background-color: $lightest-grey;
-			border-left: 0.5rem solid $emphasis-blue;
-			margin-top: 1.5rem;
-			max-width: 25rem;
-		}
+    .sketches-walkthrough__card {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: space(2);
+      padding: space(6) space(12);
+      border-radius: 0.25rem;
+      height: fit-content;
+      background-color: $lightest-grey;
+      border-left: 0.5rem solid $emphasis-blue;
+      margin-top: space(6);
+      max-width: 25rem;
+    }
 
-		.card--list {
-			align-self: start;
+    .card--list {
+      align-self: start;
 
-			.card--headline {
-				color: $emphasis-blue;
-				font-weight: 500;
-				margin-bottom: 0;
-				font-size: 1.25rem;
-			}
+      .card--headline {
+        color: $emphasis-blue;
+        font-weight: 500;
+        margin-bottom: 0;
+        font-size: 1.25rem;
+      }
 
-			li {
-				font-size: 1.125rem;
-			}
-		}
-	}
+      li {
+        font-size: 1.125rem;
+      }
+    }
+  }
 }
 
 .sketches-walkthrough_content {
-	ol {
-		margin: 0;
-		font-weight: 500;
+  ol {
+    margin: 0;
+    font-weight: 500;
 
-		li {
-			color: $black !important;
+    li {
+      color: $black !important;
 
-			p:first-child {
-				margin-bottom: 0.5rem;
-				font-size: 1.35rem;
-				font-weight: 500;
-			}
-		}
-	}
+      p:first-child {
+        margin-bottom: space(2);
+        font-size: 1.35rem;
+        font-weight: 500;
+      }
+    }
+  }
 
-	.subheading {
-		font-size: 1.125rem;
-	}
+  .subheading {
+    font-size: 1.125rem;
+  }
 }
 
 .section-subheading.sketches {
-	margin-bottom: 1.5rem;
+  margin-bottom: space(6);
 }
 
 .sketches-walkthrough_img--flow {
-	width: 50rem;
+  width: 50rem;
 }
 
 .img-route-1-sketches-all {
-	width: 90vw;
-	max-width: 80rem;
+  width: 90vw;
+  max-width: 80rem;
 }
