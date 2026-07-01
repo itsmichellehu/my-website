@@ -38,22 +38,22 @@ $edu-exp-height-xl: 3rem;
   flex-direction: column;
   width: 100%;
   border-radius: 0.25rem;
-  gap: 3rem;
-  margin-bottom: 3rem;
+  gap: space(12);
+  margin-bottom: space(12);
   padding-top: $navbar-mobile-height;
 
   @include breakpoint(med) {
     padding: 5rem 0;
-    padding-top: calc(#{$navbar-desktop-height} + 3rem);
+    padding-top: calc(#{$navbar-desktop-height} + #{space(12)});
     margin: auto;
   }
 
   @include breakpoint(lg) {
-    padding-top: calc(#{$navbar-desktop-height} + 4rem);
+    padding-top: calc(#{$navbar-desktop-height} + #{space(16)});
   }
 
   @include breakpoint(xl) {
-    gap: 2rem;
+    gap: space(8);
   }
 
   @include breakpoint(huge) {
@@ -71,7 +71,7 @@ $edu-exp-height-xl: 3rem;
     transition: align-items 0.3s ease-in-out;
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: space(6);
 
     @include breakpoint(sm) {
       gap: 1.75rem;
@@ -83,7 +83,7 @@ $edu-exp-height-xl: 3rem;
       // grid-template-areas: "b a";
       // grid-template-columns: 4fr 3fr;
       // grid-template-rows: auto;
-      gap: 2rem;
+      gap: space(8);
       justify-content: space-between;
     }
 
@@ -152,19 +152,19 @@ $edu-exp-height-xl: 3rem;
     justify-self: center;
     width: 90%;
     max-width: 37rem;
-    gap: 1.5rem;
+    gap: space(6);
     margin: 0 auto;
 
     @include breakpoint(med) {
       width: fit-content;
       max-width: 100%;
       margin-right: auto;
-      gap: 1.5rem;
+      gap: space(6);
     }
 
     @include breakpoint(lg) {
       height: fit-content;
-      gap: 3rem;
+      gap: space(12);
       width: fit-content;
       max-width: none;
     }
@@ -204,7 +204,7 @@ $edu-exp-height-xl: 3rem;
     font-size: clamp(1.125rem, 3.5vw, 1.5rem) !important;
 
     @include breakpoint(lg) {
-      margin-bottom: 3rem;
+      margin-bottom: space(12);
     }
   }
 
@@ -213,7 +213,7 @@ $edu-exp-height-xl: 3rem;
     line-height: 150%;
     /* 1.925rem */
     letter-spacing: -0.02rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: space(2);
     font-size: 1.125rem;
     max-width: 44rem;
 
@@ -240,7 +240,7 @@ $edu-exp-height-xl: 3rem;
     grid-template-areas:
       "c a"
       "c b";
-    column-gap: 0.75rem;
+    column-gap: space(3);
     justify-content: center;
     margin-right: auto;
 
@@ -317,7 +317,7 @@ $edu-exp-height-xl: 3rem;
   display: none;
   flex-direction: row;
   align-items: center;
-  gap: 0.5rem;
+  gap: space(2);
   font-size: 1rem !important;
   font-weight: 450;
   line-height: 130%;
@@ -337,7 +337,7 @@ $edu-exp-height-xl: 3rem;
   }
 
   @include breakpoint(lg) {
-    gap: 0.75rem;
+    gap: space(3);
     font-size: 1.125rem;
   }
 }
@@ -361,7 +361,7 @@ $edu-exp-height-xl: 3rem;
 }
 
 .work-location-wrapper {
-  margin-bottom: 0.5rem;
+  margin-bottom: space(2);
 
   @include breakpoint(lg) {
     font-size: 1.125rem;
@@ -386,7 +386,7 @@ $edu-exp-height-xl: 3rem;
   border-radius: 4px;
   width: $hero-icon-button-size;
   height: $hero-icon-button-size;
-  padding: 0.5rem;
+  padding: space(2);
   margin: 0;
   background-color: $black;
   border: 0;
@@ -428,7 +428,7 @@ $edu-exp-height-xl: 3rem;
   justify-content: end;
   width: 90%;
   z-index: 4;
-  bottom: 2rem;
+  bottom: space(8);
   margin: auto;
 
   @include breakpoint(xl) {

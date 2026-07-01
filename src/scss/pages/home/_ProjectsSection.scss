@@ -7,453 +7,457 @@ $bg-top-xl: 6rem;
 $bg-top-xxl: 10rem;
 
 .bg-ripped-paper {
-	position: absolute;
-	width: 100%;
-	top: 0;
-	transform: scaleX(-1);
-	z-index: 2;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  transform: scaleX(-1);
+  z-index: 2;
 }
 
 // Projects
 #projects {
-	position: relative;
-	width: 100%;
-	padding: 2rem 0;
-	margin-top: 2rem;
+  position: relative;
+  width: 100%;
+  padding: space(8) 0;
+  margin-top: space(8);
 
-	@include breakpoint(lg) {
-		padding: 5rem 0;
-		margin-top: 0;
-	}
+  @include breakpoint(lg) {
+    padding: 5rem 0;
+    margin-top: 0;
+  }
 
-	@include breakpoint(xl) {
-		padding: 6rem 0;
-	}
+  @include breakpoint(xl) {
+    padding: 6rem 0;
+  }
 
-	// 	@include breakpoint(xxxl) {
-	// 		top: -3rem;
-	// 	}
+  // 	@include breakpoint(xxxl) {
+  // 		top: -3rem;
+  // 	}
 
-	@include breakpoint(huge) {
-		padding: 8rem 0 3rem 0;
-	}
+  @include breakpoint(huge) {
+    padding: 8rem 0 3rem 0;
+  }
 }
 
 #bg-projects-section {
-	display: flex;
-	position: absolute;
-	height: 100%;
-	width: 100%;
-	top: $bg-top-base;
-	height: calc(100% - $bg-top-base);
+  display: flex;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: $bg-top-base;
+  height: calc(100% - $bg-top-base);
 
-	@include breakpoint(med) {
-		top: 8rem;
-		height: calc(100% - $bg-top-med);
-	}
+  @include breakpoint(med) {
+    top: 8rem;
+    height: calc(100% - $bg-top-med);
+  }
 
-	@include breakpoint(xl) {
-		top: 6rem;
-		height: calc(100% - $bg-top-xl);
-	}
+  @include breakpoint(xl) {
+    top: 6rem;
+    height: calc(100% - $bg-top-xl);
+  }
 
-	@include breakpoint(xxl) {
-		top: 10rem;
-		height: calc(100% - $bg-top-xxl);
-	}
+  @include breakpoint(xxl) {
+    top: 10rem;
+    height: calc(100% - $bg-top-xxl);
+  }
 }
 
 .projects-wrapper {
-	z-index: 2;
-	position: relative;
-	transition: padding 0.3s ease;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	width: 100%;
-	margin: auto;
+  z-index: 2;
+  position: relative;
+  transition: padding 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin: auto;
 }
 
 .project-card {
-	display: flex;
-	flex-direction: column;
-	gap: 3rem;
-	align-items: flex-start;
-	width: 90%;
-	margin: auto;
-	padding: 3rem 0;
-	cursor: pointer;
-	transition: transform 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  gap: space(12);
+  align-items: flex-start;
+  width: 90%;
+  margin: auto;
+  padding: space(12) 0;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
 
-	&.project-tastebuds {
-		padding-top: 0;
-	}
+  &.project-tastebuds {
+    padding-top: 0;
+  }
 
-	@include breakpoint(med) {
-		flex-direction: row;
-		// grid-template-rows: auto;
-		// grid-template-areas: "a b";
-		align-items: center;
-		padding: 2.5rem 0;
-		justify-content: space-between;
-		gap: $wrapper-gap-med;
-	}
+  @include breakpoint(med) {
+    flex-direction: row;
+    // grid-template-rows: auto;
+    // grid-template-areas: "a b";
+    align-items: center;
+    padding: space(10) 0;
+    justify-content: space-between;
+    gap: $wrapper-gap-med;
+  }
 
-	@include breakpoint(lg) {
-		// grid-template-columns: $wrapper-grid-lg;
-		gap: $wrapper-gap-lg;
-		padding: 3rem 0;
-	}
+  @include breakpoint(lg) {
+    // grid-template-columns: $wrapper-grid-lg;
+    gap: $wrapper-gap-lg;
+    padding: space(12) 0;
+  }
 
-	@include breakpoint(xl) {
-		// grid-template-columns: $wrapper-grid-xl;
-		gap: $wrapper-gap-xl;
-		margin: 1rem 0;
-	}
+  @include breakpoint(xl) {
+    // grid-template-columns: $wrapper-grid-xl;
+    gap: $wrapper-gap-xl;
+    margin: 1rem 0;
+  }
 
-	@include hover-underline-target(".project-card-button-label", $teal-accent, $teal-accent);
+  @include hover-underline-target(
+    ".project-card-button-label",
+    $teal-accent,
+    $teal-accent
+  );
 
-	&:hover {
-		.tastebuds-thumb-container,
-		.postup-thumb-container {
-			transform: scale(1.05);
-		}
+  &:hover {
+    .tastebuds-thumb-container,
+    .postup-thumb-container {
+      transform: scale(1.05);
+    }
 
-		.project-title {
-			color: $black;
-			color: $teal-accent;
-			transition: color 0.3s ease-in-out;
-		}
-	}
-	&.project-boardspace {
-		cursor: default;
+    .project-title {
+      color: $black;
+      color: $teal-accent;
+      transition: color 0.3s ease-in-out;
+    }
+  }
+  &.project-boardspace {
+    cursor: default;
 
-		&:hover .coming-soon {
-			color: #a8a8a8 !important;
-		}
+    &:hover .coming-soon {
+      color: #a8a8a8 !important;
+    }
 
-		.project-details-wrapper {
-			// margin-bottom: 0.75rem;
+    .project-details-wrapper {
+      // margin-bottom: 0.75rem;
 
-			@include breakpoint(med) {
-				margin-bottom: 0;
-			}
-		}
-	}
+      @include breakpoint(med) {
+        margin-bottom: 0;
+      }
+    }
+  }
 }
 
 .project-thumb-container {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	overflow: hidden;
-	max-height: 40rem;
-	transition: transform 0.3s ease-in-out;
-	margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  max-height: 40rem;
+  transition: transform 0.3s ease-in-out;
+  margin: 0 auto;
 
-	&#postupBG {
-		background-color: #8bb4ac;
-	}
+  &#postupBG {
+    background-color: #8bb4ac;
+  }
 
-	@include breakpoint(med) {
-		width: 100%;
-		height: 100%;
-	}
+  @include breakpoint(med) {
+    width: 100%;
+    height: 100%;
+  }
 
-	&.boardspace-thumb-container {
-		width: 100%;
-	}
+  &.boardspace-thumb-container {
+    width: 100%;
+  }
 }
 
 .project-card-button-label {
-	color: $teal-accent;
-	text-transform: uppercase;
-	font-size: 1rem;
-	font-weight: 500;
-	letter-spacing: 0.035rem;
-	transition:
-		font-size 0.3s ease-in-out,
-		font-weight 0.3s ease-in-out 0.3s;
+  color: $teal-accent;
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.035rem;
+  transition:
+    font-size 0.3s ease-in-out,
+    font-weight 0.3s ease-in-out 0.3s;
 
-	@include breakpoint(lg) {
-		font-size: 1.125rem;
-	}
+  @include breakpoint(lg) {
+    font-size: 1.125rem;
+  }
 }
 
 .project-card-button {
-	display: flex;
-	position: relative;
-	align-items: center;
-	gap: 0.25rem;
-	transition: transform 0.3s ease-in-out;
-	color: $teal-accent !important;
+  display: flex;
+  position: relative;
+  align-items: center;
+  gap: space(1);
+  transition: transform 0.3s ease-in-out;
+  color: $teal-accent !important;
 }
 
 .project-thumb-wrapper {
-	display: grid;
-	grid-template-columns: auto auto;
-	margin: auto;
-	height: auto;
-	width: 100%;
-	max-width: 30rem;
-	align-items: end;
-	justify-content: space-between;
+  display: grid;
+  grid-template-columns: auto auto;
+  margin: auto;
+  height: auto;
+  width: 100%;
+  max-width: 30rem;
+  align-items: end;
+  justify-content: space-between;
 
-	@include breakpoint(med) {
-		gap: 1rem;
-		justify-content: center;
-	}
+  @include breakpoint(med) {
+    gap: space(4);
+    justify-content: center;
+  }
 
-	@include breakpoint(xl) {
-		gap: 2rem;
-		max-width: 40rem;
-	}
+  @include breakpoint(xl) {
+    gap: space(8);
+    max-width: 40rem;
+  }
 
-	&.boardspace-thumb-wrapper {
-		display: flex;
-		max-width: none;
-	}
+  &.boardspace-thumb-wrapper {
+    display: flex;
+    max-width: none;
+  }
 }
 
 .thumb-image-wrapper {
-	width: fit-content;
-	height: 90%;
-	overflow: hidden;
-	margin: 0;
+  width: fit-content;
+  height: 90%;
+  overflow: hidden;
+  margin: 0;
 
-	> img {
-		margin: 0;
-		height: 100%;
-		width: 100%;
-		max-width: 100%;
-		object-fit: contain;
-	}
+  > img {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    max-width: 100%;
+    object-fit: contain;
+  }
 }
 
 .video-wrapper {
-	margin: 0;
-	overflow: hidden;
-	// border-radius: 1rem 1rem 1.125rem 1.125rem;
-	width: fit-content;
-	height: 100%;
+  margin: 0;
+  overflow: hidden;
+  // border-radius: 1rem 1rem 1.125rem 1.125rem;
+  width: fit-content;
+  height: 100%;
 
-	> video {
-		width: fit-content;
-		max-width: 100%;
-		height: 100%;
-	}
-	//
-	// 	@include breakpoint(med) {
-	// 		border-radius: 1.65rem 1.65rem 1.75rem 1.75rem;
-	// 	}
-	//
-	// 	@include breakpoint(lg) {
-	// 		border-radius: 2rem 2rem 2.125rem 2.125rem;
-	// 	}
-	//
-	// 	@include breakpoint(xl) {
-	// 		border-radius: 3.5rem 3.5rem 3.4rem 3.4rem;
-	// 	}
+  > video {
+    width: fit-content;
+    max-width: 100%;
+    height: 100%;
+  }
+  //
+  // 	@include breakpoint(med) {
+  // 		border-radius: 1.65rem 1.65rem 1.75rem 1.75rem;
+  // 	}
+  //
+  // 	@include breakpoint(lg) {
+  // 		border-radius: 2rem 2rem 2.125rem 2.125rem;
+  // 	}
+  //
+  // 	@include breakpoint(xl) {
+  // 		border-radius: 3.5rem 3.5rem 3.4rem 3.4rem;
+  // 	}
 }
 
 .project-thumb {
-	display: flex;
-	transition: transform 0.3s ease-in-out;
+  display: flex;
+  transition: transform 0.3s ease-in-out;
 }
 
 .thumb {
-	&-boardspace {
-		max-width: 100%;
+  &-boardspace {
+    max-width: 100%;
 
-		@include breakpoint(sm) {
-			width: auto;
-		}
-	}
+    @include breakpoint(sm) {
+      width: auto;
+    }
+  }
 
-	&-postup,
-	&-tastebuds {
-		@include breakpoint(med) {
-			max-height: 100%;
-			max-width: 50%;
-			object-fit: contain;
-		}
-	}
+  &-postup,
+  &-tastebuds {
+    @include breakpoint(med) {
+      max-height: 100%;
+      max-width: 50%;
+      object-fit: contain;
+    }
+  }
 }
 
 .project-boardspace .coming-soon {
-	width: fit-content;
-	color: #a8a8a8 !important;
-	font-weight: 500;
-	font-size: 1.125rem;
-	transition: transform 0.3s ease-in-out;
-	margin-bottom: 0;
+  width: fit-content;
+  color: #a8a8a8 !important;
+  font-weight: 500;
+  font-size: 1.125rem;
+  transition: transform 0.3s ease-in-out;
+  margin-bottom: 0;
 
-	@include breakpoint(med) {
-		color: #cccccc !important;
-	}
+  @include breakpoint(med) {
+    color: #cccccc !important;
+  }
 }
 
 .project-details-container {
-	display: flex;
-	flex-direction: column;
-	width: 100%;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 
-	@include breakpoint(sm) {
-		width: 100%;
-	}
+  @include breakpoint(sm) {
+    width: 100%;
+  }
 
-	@include breakpoint(med) {
-		grid-area: b;
-		padding: 0;
-		margin-top: 0;
-	}
+  @include breakpoint(med) {
+    grid-area: b;
+    padding: 0;
+    margin-top: 0;
+  }
 }
 
 .project-details-wrapper {
-	display: block;
+  display: block;
 
-	@include breakpoint(med) {
-		margin-bottom: 0;
-	}
+  @include breakpoint(med) {
+    margin-bottom: 0;
+  }
 }
 
 .project-title {
-	font-size: 2rem;
-	line-height: 100%;
-	margin-bottom: 1rem;
-	font-weight: 600;
-	transition: color 0.3s ease-in-out;
-	color: $black;
-	font-size: clamp(3rem, 3.4vw, 3.25rem);
+  font-size: 2rem;
+  line-height: 100%;
+  margin-bottom: space(4);
+  font-weight: 600;
+  transition: color 0.3s ease-in-out;
+  color: $black;
+  font-size: clamp(3rem, 3.4vw, 3.25rem);
 
-	@include breakpoint(med) {
-		letter-spacing: -0.0125rem;
-		margin-bottom: 1.125rem;
-	}
+  @include breakpoint(med) {
+    letter-spacing: -0.0125rem;
+    margin-bottom: 1.125rem;
+  }
 
-	@include breakpoint(lg) {
-		margin-bottom: $title-description-mb-lg;
-	}
+  @include breakpoint(lg) {
+    margin-bottom: $title-description-mb-lg;
+  }
 
-	@include breakpoint(xl) {
-		margin-bottom: 1.75rem;
-	}
+  @include breakpoint(xl) {
+    margin-bottom: 1.75rem;
+  }
 }
 
 .project-subheader {
-	color: $black;
-	font-size: 0.87rem;
-	line-height: 100%;
-	font-weight: 400;
-	letter-spacing: 0.05rem;
-	text-transform: uppercase;
-	margin-bottom: 0.75rem;
+  color: $black;
+  font-size: 0.87rem;
+  line-height: 100%;
+  font-weight: 400;
+  letter-spacing: 0.05rem;
+  text-transform: uppercase;
+  margin-bottom: space(3);
 
-	@include breakpoint(lg) {
-		font-size: 0.9rem;
-		margin-bottom: 1rem;
-	}
+  @include breakpoint(lg) {
+    font-size: 0.9rem;
+    margin-bottom: space(4);
+  }
 }
 
 // Tags
 .project-tags-wrapper {
-	display: flex;
-	flex-direction: row;
-	flex-wrap: nowrap;
-	gap: 0.25rem;
-	overflow-x: scroll;
-	white-space: nowrap;
-	scroll-behavior: smooth;
-	width: 95%;
-	max-width: fit-content;
-	padding-right: 5%;
-	margin-bottom: 1rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: space(1);
+  overflow-x: scroll;
+  white-space: nowrap;
+  scroll-behavior: smooth;
+  width: 95%;
+  max-width: fit-content;
+  padding-right: 5%;
+  margin-bottom: space(4);
 
-	// Firefox scrollbar hide
-	scrollbar-width: none; // Firefox
+  // Firefox scrollbar hide
+  scrollbar-width: none; // Firefox
 
-	// Internet Explorer and Legacy Edge scrollbar hide
-	-ms-overflow-style: none; // IE and Edge
+  // Internet Explorer and Legacy Edge scrollbar hide
+  -ms-overflow-style: none; // IE and Edge
 
-	// Webkit browsers (Chrome, Safari, newer Edge) scrollbar hide
-	&::-webkit-scrollbar {
-		display: none; // Chrome, Safari, Edge
-	}
+  // Webkit browsers (Chrome, Safari, newer Edge) scrollbar hide
+  &::-webkit-scrollbar {
+    display: none; // Chrome, Safari, Edge
+  }
 
-	@include breakpoint(sm) {
-		overflow-x: visible;
-		white-space: wrap;
-		width: 90%;
-		padding-right: 0;
-	}
+  @include breakpoint(sm) {
+    overflow-x: visible;
+    white-space: wrap;
+    width: 90%;
+    padding-right: 0;
+  }
 
-	@include breakpoint(med) {
-		margin-bottom: 1.05rem;
-		width: 100%;
-	}
+  @include breakpoint(med) {
+    margin-bottom: 1.05rem;
+    width: 100%;
+  }
 
-	@include breakpoint(lg) {
-		gap: 0.5rem;
-		margin-bottom: $title-description-mb-lg;
-	}
+  @include breakpoint(lg) {
+    gap: space(2);
+    margin-bottom: $title-description-mb-lg;
+  }
 }
 
 .project-tag {
-	display: flex;
-	height: 1.5rem;
-	padding: 0 0.5rem;
-	justify-content: center;
-	align-items: center;
-	border-radius: 0.3125rem;
-	font-size: 0.75rem;
-	font-weight: 400;
-	line-height: 150%;
-	text-transform: capitalize;
-	text-wrap: nowrap;
+  display: flex;
+  height: 1.5rem;
+  padding: 0 space(2);
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.3125rem;
+  font-size: 0.75rem;
+  font-weight: 400;
+  line-height: 150%;
+  text-transform: capitalize;
+  text-wrap: nowrap;
 
-	@include breakpoint(lg) {
-		height: 1.75rem;
-		font-size: 0.875rem;
-	}
+  @include breakpoint(lg) {
+    height: 1.75rem;
+    font-size: 0.875rem;
+  }
 
-	@include breakpoint(xl) {
-		padding: 0 0.75rem;
-		font-size: 1rem;
-		height: 2rem;
-	}
+  @include breakpoint(xl) {
+    padding: 0 space(3);
+    font-size: 1rem;
+    height: 2rem;
+  }
 }
 
 .boardspace-tag {
-	background: $boardspace-tag-background;
-	color: $boardspace-tag-color;
+  background: $boardspace-tag-background;
+  color: $boardspace-tag-color;
 }
 
 .tastebuds-tag {
-	background: $tastebuds-tag-background;
-	color: $tastebuds-tag-color;
+  background: $tastebuds-tag-background;
+  color: $tastebuds-tag-color;
 }
 
 .postup-tag {
-	background: $postup-tag-background;
-	color: $postup-tag-color;
+  background: $postup-tag-background;
+  color: $postup-tag-color;
 }
 
 .project-description {
-	color: $dark-grey;
-	font-family: Inter;
-	font-size: 1rem;
-	font-weight: 400;
-	line-height: 160%;
-	margin-bottom: 1rem;
+  color: $dark-grey;
+  font-family: Inter;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 160%;
+  margin-bottom: space(4);
 
-	@include breakpoint(lg) {
-		font-size: 1.125rem;
-		margin-bottom: $title-description-mb-lg;
-	}
+  @include breakpoint(lg) {
+    font-size: 1.125rem;
+    margin-bottom: $title-description-mb-lg;
+  }
 
-	@include breakpoint(xxl) {
-		font-size: 1.25rem;
-		margin-bottom: 2rem;
-	}
+  @include breakpoint(xxl) {
+    font-size: 1.25rem;
+    margin-bottom: space(8);
+  }
 }
