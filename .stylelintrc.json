@@ -5,7 +5,7 @@
     "scale-unlimited/declaration-strict-value": [
       ["/^margin/", "/^padding/", "gap", "row-gap", "column-gap", "font-size"],
       {
-        "severity": "warning",
+        "severity": "error",
         "disableFix": true,
         "ignoreValues": [
           "0",
