@@ -16,7 +16,7 @@
   // background-color: $lightest-grey;
 
   .notion-affinity-map_grid-item {
-    background-color: #fff;
+    background-color: $white;
     padding: space(4);
     border: 1.5px solid $light-grey;
 
@@ -32,7 +32,7 @@
   }
 
   .bg-white-zoomed {
-    background-color: #fff;
+    background-color: $white;
     padding: space(4);
     border: 1.5px solid $light-grey;
   }

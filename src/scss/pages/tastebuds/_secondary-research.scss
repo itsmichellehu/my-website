@@ -1,14 +1,14 @@
 @use "@abstracts/all-abstracts" as *;
 
 .finding-card {
-  border: 1px solid #dbdbdb;
+  border: 1px solid $medium-light-grey;
   border-radius: $border-radius;
   overflow: hidden;
   margin-bottom: space(6);
 }
 
 .finding-highlight {
-  background: #e5ebe7;
+  background: $lightest-green;
   padding: space(4) space(5);
   display: flex;
   gap: space(3);
@@ -32,9 +32,9 @@
 
 .finding-body-title {
   font-family: "IBM Plex Mono", monospace;
-  font-size: 0.6rem;
+  font-size: $text-xs;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: #becec4;
+  color: $subdued-green;
   margin-bottom: space(3);
 }

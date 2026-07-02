@@ -54,12 +54,12 @@
     padding-right: 0;
     align-items: flex-start;
     align-self: auto;
-    background-color: #fafafa;
+    background-color: $lightest-grey;
     border-left: 6px solid $light-grey;
 
     p {
       font-family: "Noto Serif", sans-serif;
-      font-size: 1rem;
+      font-size: $text-base;
       font-style: normal;
       font-weight: 400;
       letter-spacing: 0.2px;
@@ -96,7 +96,7 @@
       p {
         color: $medium-light-grey;
         font-family: Inter, sans-serif;
-        font-size: 1rem;
+        font-size: $text-base;
         margin-bottom: 0;
       }
     }
@@ -118,7 +118,7 @@
   font-family: "Inter", sans-serif;
   list-style: outside;
   list-style-type: decimal;
-  color: white;
+  color: $white;
   margin-top: space(4);
 
   li {
@@ -127,7 +127,7 @@
 
     span {
       font-weight: 500;
-      font-size: 1.2rem;
+      font-size: $text-lg;
     }
   }
 }

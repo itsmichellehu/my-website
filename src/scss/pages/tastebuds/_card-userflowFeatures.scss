@@ -31,7 +31,7 @@ $userflow-walkthrough-border-radius: 1rem;
   }
 
   :last-child {
-    font-size: 1.5rem;
+    font-size: $text-xl;
     color: $black;
     margin: 0;
     margin-bottom: space(2);
@@ -74,7 +74,7 @@ $userflow-walkthrough-border-radius: 1rem;
     text-align: left;
     margin-bottom: 0;
     color: $black;
-    font-size: 1.35rem;
+    font-size: $text-lg;
     font-weight: normal;
   }
 
@@ -98,7 +98,7 @@ $userflow-walkthrough-border-radius: 1rem;
 }
 
 .userflow-walkthrough_card_headline {
-  font-size: 1.5rem;
+  font-size: $text-xl;
   margin: 0;
   margin-bottom: 0.5;
   font-weight: 500;
@@ -144,6 +144,6 @@ $userflow-walkthrough-border-radius: 1rem;
   }
 
   span {
-    color: white;
+    color: $white;
   }
 }

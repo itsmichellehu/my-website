@@ -23,7 +23,7 @@
     margin: auto;
     padding: space(8);
     width: 100%;
-    background-color: #f6f6f6;
+    background-color: $lightest-medium-grey;
     border-radius: 1rem;
     margin-bottom: space(8);
   }
@@ -78,7 +78,7 @@
 
     p {
       margin: 0;
-      font-size: 0.889rem;
+      font-size: $text-sm;
     }
 
     img {
@@ -97,7 +97,7 @@
 
       p {
         margin: 0;
-        font-size: 1rem;
+        font-size: $text-base;
       }
     }
   }
@@ -106,7 +106,7 @@
     column-gap: space(10);
 
     div > p {
-      font-size: 1.125rem;
+      font-size: $text-md;
     }
   }
 }

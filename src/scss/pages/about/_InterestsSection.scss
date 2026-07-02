@@ -1,5 +1,4 @@
-@use "@abstracts/breakpoints-mixins" as *;
-@use "@abstracts/variables" as *;
+@use "@abstracts/all-abstracts" as *;
 
 #interests {
   padding: space(12) 0;
@@ -10,7 +9,7 @@
   }
 
   h2 {
-    color: white;
+    color: $white;
     margin-bottom: space(6);
   }
 }
@@ -29,7 +28,7 @@
 
   h2 {
     display: block;
-    color: white;
+    color: $white;
     margin-bottom: space(6);
     width: fit-content;
     text-align: center;
@@ -76,7 +75,7 @@
 
 .card_headline {
   color: $black;
-  font-size: 1.5rem;
+  font-size: $text-xl;
   font-style: normal;
   font-weight: 600;
   line-height: 110%;
@@ -118,11 +117,11 @@
 // New design!
 .section-interests-mobile-swiper {
   display: none;
-  background-color: black;
+  background-color: $pure-black;
 
   h2 {
     display: block;
-    color: white;
+    color: $white;
     margin-bottom: space(6);
     width: fit-content;
   }
@@ -140,13 +139,13 @@
     align-items: flex-start;
     gap: space(2);
     border-radius: 0.1rem;
-    background: #ffff;
+    background: $white;
 
     transition: transform 1s ease;
   }
 
   .card_headline {
-    font-size: 1.5rem;
+    font-size: $text-xl;
   }
 
   @include breakpoint(med) {
@@ -155,7 +154,7 @@
 }
 
 #resetSwiper {
-  color: white;
+  color: $white;
 }
 
 // Old design black boring cards -yawns-
@@ -170,9 +169,9 @@
     align-items: center;
     justify-content: center;
     padding: 0 space(6);
-    font-size: 22px;
+    font-size: $text-lg;
     font-weight: bold;
-    color: #fff;
+    color: $white;
     border-radius: 2px;
     background:
       linear-gradient(
@@ -180,30 +179,30 @@
         rgba(255, 255, 255, 0.15) 0%,
         rgba(255, 255, 255, 0.15) 100%
       ),
-      #000;
+      $pure-black;
 
     transition: transform 1s ease;
 
     .emoji {
-      font-size: 2rem;
+      font-size: $text-2xl;
       margin-top: -space(2);
       margin-bottom: space(2);
     }
 
     .headline {
-      font-size: 1.25rem;
+      font-size: $text-lg;
       font-weight: 600;
       line-height: 110%;
       /* 1.375rem */
       letter-spacing: -0.0375rem;
-      color: white;
+      color: $white;
       margin-bottom: space(2);
     }
 
     .body {
-      color: #fff;
+      color: $white;
       font-family: Inter;
-      font-size: 0.875rem;
+      font-size: $text-sm;
       font-style: normal;
       font-weight: 500;
       line-height: 130%;
@@ -215,7 +214,7 @@
       display: block;
       color: #479cff;
       font-family: Inter;
-      font-size: 0.875rem;
+      font-size: $text-sm;
       font-style: normal;
       font-weight: 500;
       line-height: 130%;

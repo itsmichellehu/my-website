@@ -22,7 +22,7 @@ $diner-trends-border: 1px solid $black;
 
   > div {
     // border: $diner-trends-border;
-    background-color: white;
+    background-color: $white;
     padding: space(8);
     border-radius: 5px;
     background-color: $lightest-grey;
@@ -33,7 +33,7 @@ $diner-trends-border: 1px solid $black;
       flex: 0 auto;
       align-self: auto;
       margin: 0;
-      font-size: 1.4rem;
+      font-size: $text-xl;
       font-weight: 500;
       line-height: 150%;
 

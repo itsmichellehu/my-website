@@ -14,7 +14,7 @@
   padding: space(6);
   border-radius: 1rem;
   height: 100%;
-  background-color: white;
+  background-color: $white;
   background-color: $lightest-green;
 }
 
@@ -23,7 +23,7 @@
   text-align: left;
   margin-bottom: 0;
   color: $primary-green;
-  font-size: 1.35rem;
+  font-size: $text-lg;
   font-weight: 500;
 
   &::first-letter {
@@ -70,7 +70,7 @@
   p {
     margin: 0;
     line-height: 14px;
-    font-size: 14px;
+    font-size: $text-sm;
     align-self: center;
   }
 

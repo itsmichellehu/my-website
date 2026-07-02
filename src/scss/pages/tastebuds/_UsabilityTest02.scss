@@ -23,8 +23,8 @@ $design-walkthrough-carousel-max-width: 60rem;
     margin: 0;
     line-height: 145%;
     font-weight: 500;
-    font-size: 2.55rem !important;
-    color: #4a4a4a !important;
+    font-size: $text-3xl !important;
+    color: $off-black !important;
     width: 100%;
   }
 
@@ -104,7 +104,7 @@ $design-walkthrough-carousel-max-width: 60rem;
 
   svg {
     width: 100%;
-    fill: #555555;
+    fill: $dark-grey;
   }
 
   :hover {
@@ -124,7 +124,7 @@ $design-walkthrough-carousel-max-width: 60rem;
     line-height: 130%;
     margin-bottom: space(4);
     color: $black;
-    font-size: 1.5rem;
+    font-size: $text-xl;
   }
 }
 
@@ -135,7 +135,7 @@ $design-walkthrough-carousel-max-width: 60rem;
   border-radius: 2rem;
   align-items: center;
   justify-content: center;
-  color: white;
+  color: $white;
   margin: 0;
   height: 100%;
   justify-self: stretch;
@@ -148,13 +148,13 @@ $design-walkthrough-carousel-max-width: 60rem;
     margin: auto;
 
     p {
-      font-size: 1.125rem;
+      font-size: $text-md;
     }
 
     .design-walkthrough-grid_card {
       width: fit-content;
       max-width: 30rem;
-      background-color: white;
+      background-color: $white;
     }
 
     .subheading {
@@ -277,5 +277,5 @@ $design-walkthrough-carousel-max-width: 60rem;
   line-height: 130%;
   margin-bottom: space(4);
   color: $black;
-  font-size: 1.5rem;
+  font-size: $text-xl;
 }

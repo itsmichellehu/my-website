@@ -16,7 +16,7 @@
   grid-template-columns: 1fr 3fr;
   align-items: stretch;
   align-self: start;
-  background-color: #fff;
+  background-color: $white;
   border-radius: 0.5rem;
   overflow: hidden;
   width: fit-content;
@@ -41,7 +41,7 @@
 }
 
 .card_grid-item .card_content p {
-  font-size: 1rem;
+  font-size: $text-base;
   margin-bottom: space(2);
 }
 
@@ -78,7 +78,7 @@
   grid-template-columns: 1fr 3fr;
   align-items: stretch;
   align-self: start;
-  background-color: #fff;
+  background-color: $white;
   border-radius: 0.5rem;
   overflow: hidden;
   min-width: 0;
@@ -109,7 +109,7 @@
 
 .grid-cards .grid-item .content p {
   padding-bottom: space(2);
-  font-size: 1rem;
+  font-size: $text-base;
 }
 
 #projectBrief.grid-01 > .grid-02 {
@@ -124,7 +124,7 @@
   grid-template-columns: 1fr 3fr;
   align-items: stretch;
   align-self: start;
-  background-color: #fff;
+  background-color: $white;
   border-radius: 0.5rem;
   overflow: hidden;
   min-width: 0;
@@ -155,7 +155,7 @@
 
 #projectBrief.grid-01 > .grid-02 > .grid-item .content p {
   margin: 0;
-  font-size: 0.889rem;
+  font-size: $text-sm;
 }
 
 .grid-methods-header {
@@ -197,7 +197,7 @@
   }
 
   > p {
-    font-size: 0.75rem;
+    font-size: $text-xs;
     font-weight: 500;
     line-height: 125%;
     letter-spacing: 0.42px;
@@ -206,15 +206,15 @@
 }
 
 .accordion .accordionHeader {
-  background-color: #fff;
-  border-left: 0.5rem solid #dc1d25;
+  background-color: $white;
+  border-left: 0.5rem solid $invalid-red;
   border-width: 0 0 0 0.5rem;
   cursor: pointer;
   padding: space(4);
   width: 100%;
   outline: 0;
   overflow: hidden;
-  font-size: 1rem;
+  font-size: $text-base;
   font-weight: 500;
   line-height: 130%;
   display: flex;
@@ -226,17 +226,17 @@
 }
 
 .accordion .accordionHeader:hover {
-  background-color: #f6f6f6;
+  background-color: $lightest-medium-grey;
   color: $emphasis-blue;
 }
 
 .accordion .accordionHeader:active {
-  background-color: #eee;
+  background-color: $light-grey;
   color: $dark-grey;
 }
 
 .accordion .accordionContent {
-  border-left: 0.5rem solid #dc1d25;
+  border-left: 0.5rem solid $invalid-red;
   max-height: 0;
   overflow: hidden;
   background-color: $light-medium-grey;
@@ -245,7 +245,7 @@
 
 .accordion .accordionContent p {
   padding: space(4);
-  font-size: 0.89rem;
+  font-size: $text-sm;
   margin: 0;
 }
 
@@ -264,9 +264,9 @@
 
 .quote_text {
   align-self: stretch;
-  color: #565656;
+  color: $dark-grey;
   font-family: "Noto Serif", serif;
-  font-size: 1rem;
+  font-size: $text-base;
   font-weight: 350;
   line-height: 145%;
 }
@@ -283,7 +283,7 @@
 
 .quote_author_text {
   color: $dark-grey;
-  font-size: 1rem;
+  font-size: $text-base;
 }
 
 .quote_author img {
@@ -348,7 +348,7 @@
 }
 
 #lightbox-lfWireframes .image-wrapper img {
-  border: 0.5px solid #000;
+  border: 0.5px solid $pure-black;
 }
 
 .image-wrapper {
@@ -359,12 +359,12 @@
 }
 
 .caption {
-  font-size: 1rem;
+  font-size: $text-base;
   text-align: center;
 }
 
 .lightbox .caption {
-  color: #fff;
+  color: $white;
 }
 
 .lightbox-content {
