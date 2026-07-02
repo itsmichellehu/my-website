@@ -4,7 +4,7 @@ $diner-trends-border: 1px solid $black;
 
 // Dining-factors feature cards: tint the inline SVG icon (was .dining-factors__icon).
 [data-dining-factors] .feature-card_icon-wrapper svg {
-  fill: #c0ddff;
+  fill: $tastebuds-icon-fill;
 }
 
 .diner-trends-grid {

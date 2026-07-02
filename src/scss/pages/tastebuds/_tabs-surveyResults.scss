@@ -11,7 +11,7 @@
     display: flex;
     align-items: center;
     position: relative;
-    background-color: #12181f;
+    background-color: $tastebuds-dark-bg;
     padding: space(2);
     overflow: hidden;
     width: 100%;
@@ -25,10 +25,10 @@
       position: absolute;
       border-radius: $tab-border-radius;
       height: 2.5rem;
-      background-color: #333;
+      background-color: $off-black;
       box-shadow:
-        0 0 1px 0 rgba(#fff, 0.8),
-        0 6px 8px px rgba(#fff, 0.8);
+        0 0 1px 0 rgba($white, 0.8),
+        0 6px 8px px rgba($white, 0.8);
       width: calc(33% - 0.5rem);
       transition: left 0.3s ease;
     }
@@ -68,7 +68,7 @@
       width: 100%;
       text-align: center;
       font-weight: 400;
-      color: #e9e9e9;
+      color: $medium-light-grey;
       font-size: $text-lg;
       z-index: 2;
     }

@@ -49,6 +49,7 @@
   transform: rotate(-45deg) translateX(-0.6rem);
   margin-left: space(1);
   margin-top: space(1);
+  // stylelint-disable-next-line scale-unlimited/declaration-strict-value
   margin-left: 2px;
 }
 

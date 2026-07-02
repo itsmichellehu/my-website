@@ -100,7 +100,7 @@
 }
 
 .notes {
-  color: #00bdd6;
+  color: $color-annotation;
   font-family: "Noto Serif", sans-serif !important;
 }
 
@@ -148,7 +148,7 @@
 .section-subheading {
   @extend %subheading;
   font-size: $text-xl;
-  color: #28746f;
+  color: $primary-green;
   margin-top: space(8);
   margin-bottom: space(4);
   width: 100%;

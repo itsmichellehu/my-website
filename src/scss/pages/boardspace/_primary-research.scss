@@ -61,11 +61,11 @@
   gap: space(4);
   padding: space(3);
   align-items: center;
-  background-color: #d3eaff;
+  background-color: $boardspace-card-bg;
   border-radius: 5px;
   overflow: hidden;
   min-width: 0;
-  border: 0px solid #c0e1ff;
+  border: 0px solid $boardspace-card-border;
 
   p {
     margin: 0;

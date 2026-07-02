@@ -94,6 +94,7 @@
 
   @include breakpoint(lg) {
     height: 3rem;
+    // stylelint-disable-next-line scale-unlimited/declaration-strict-value
     padding: 0.625rem 1.25rem;
     font-size: $text-lg;
   }
@@ -101,6 +102,7 @@
   @include breakpoint(xl) {
     height: 3.5rem;
     border-radius: 5rem;
+    // stylelint-disable-next-line scale-unlimited/declaration-strict-value
     padding: 0.625rem 1.25rem;
     font-size: $text-lg;
   }

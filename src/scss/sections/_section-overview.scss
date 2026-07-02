@@ -290,14 +290,14 @@ $details-wrapper-gap-xxl: space(24);
     }
 
     &--miro {
-      background: #ffd12b;
+      background: $overview-icon-miro;
     }
 
     &--general,
     &--figma,
     &--white-bg {
       padding: space(2);
-      background: #2e3139;
+      background: $overview-icon-dark;
     }
 
     &--white-bg {

@@ -9,7 +9,7 @@
   overflow: hidden;
 
   .img-screener-survey {
-    border-bottom: 1px solid #eae8e2;
+    border-bottom: 1px solid $tastebuds-border-warm;
     width: 100%;
   }
 
@@ -70,7 +70,7 @@
   .img-screener-survey {
     width: 35%;
     height: fit-content;
-    border-bottom: 1px solid #eae8e2;
+    border-bottom: 1px solid $tastebuds-border-warm;
   }
 
   .content-container > div:nth-child(2) > div {
@@ -237,8 +237,8 @@
 }
 
 .quotation-mark {
-  --primary-color: #076261;
-  --swiper-theme-color: #007aff;
+  --primary-color: #{$tastebuds-primary};
+  --swiper-theme-color: #{$tastebuds-swiper-theme};
   --swiper-navigation-size: 44px;
   font-family: "Inter", sans-serif;
   text-align: left;
