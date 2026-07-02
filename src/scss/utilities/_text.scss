@@ -1,6 +1,4 @@
-@use "@abstracts/variables" as *;
-@use "@abstracts/breakpoints-mixins" as *;
-@use "@abstracts/placeholders" as *;
+@use "@abstracts/all-abstracts" as *;
 
 // -----------------------------------
 // Typography Utilities
@@ -8,72 +6,72 @@
 
 // Font weight utilities
 .fw-300 {
-	font-weight: 300 !important;
+  font-weight: 300 !important;
 }
 
 .fw-400 {
-	font-weight: 400 !important;
+  font-weight: 400 !important;
 }
 
 .fw-500 {
-	font-weight: 500 !important;
+  font-weight: 500 !important;
 }
 
 .fw-550 {
-	font-weight: 550 !important;
+  font-weight: 550 !important;
 }
 
 .fw-600,
 .fw-semibold,
 .bold {
-	font-weight: 600 !important;
+  font-weight: 600 !important;
 }
 
 .fw-bold {
-	font-weight: 600 !important;
+  font-weight: 600 !important;
 }
 
 .fw-normal {
-	font-weight: 400 !important;
+  font-weight: 400 !important;
 }
 
 .fw-medium {
-	color: $black;
-	font-weight: 500 !important;
+  color: $black;
+  font-weight: 500 !important;
 }
 
 // Font-size utilities
 .fz-20 {
-	font-size: 1.25rem !important;
+  font-size: $text-lg !important;
 }
 
 // Text decoration and transform utilities
 .text-decoration-none {
-	text-decoration: none !important;
+  text-decoration: none !important;
 }
 
 .text-transform-none {
-	text-transform: none !important;
+  text-transform: none !important;
 }
 
 .lowercase {
-	text-transform: lowercase !important;
+  text-transform: lowercase !important;
 }
 
 .uppercase {
-	text-transform: uppercase !important;
+  text-transform: uppercase !important;
 }
 
 .italic {
-	font-style: italic !important;
+  font-style: italic !important;
 }
 
 .underline {
-	text-decoration: underline !important;
+  text-decoration: underline !important;
 }
 
 .line-height-100 {
-	line-height: 100% !important;
+  line-height: 100% !important;
 }
 
 // -----------------------------------
@@ -82,59 +80,59 @@
 
 // Font family: Noto Serif
 .noto-serif {
-	font-family: "Noto Serif", serif !important;
-	color: $black;
-	font-size: 1.125rem;
-	font-weight: 500;
-	line-height: 160%; // 28.8px
+  font-family: "Noto Serif", serif !important;
+  color: $black;
+  font-size: $text-md;
+  font-weight: 500;
+  line-height: 160%; // 28.8px
 }
 
 .quote-text {
-	font-family: "Noto Serif", serif !important;
-	font-style: normal;
-	font-weight: 400;
-	letter-spacing: 3%;
-	line-height: 160%;
-	color: $black;
-	font-size: 1rem;
-	margin: 0;
-	overflow-wrap: normal;
+  font-family: "Noto Serif", serif !important;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 3%;
+  line-height: 160%;
+  color: $black;
+  font-size: $text-base;
+  margin: 0;
+  overflow-wrap: normal;
 }
 
 .notes {
-	color: #00bdd6;
-	font-family: "Noto Serif", sans-serif !important;
+  color: #00bdd6;
+  font-family: "Noto Serif", sans-serif !important;
 }
 
 // Font family: Source Code Pro
 .source-code-pro {
-	font-family: "Source Code Pro", monospace !important;
-	font-optical-sizing: auto;
-	font-weight: 400;
-	font-style: normal;
-	font-size: 1.125rem;
-	letter-spacing: 1px;
+  font-family: "Source Code Pro", monospace !important;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: $text-md;
+  letter-spacing: 1px;
 
-	&-300 {
-		font-weight: 300;
-	}
+  &-300 {
+    font-weight: 300;
+  }
 
-	&-500 {
-		font-weight: 500;
-	}
+  &-500 {
+    font-weight: 500;
+  }
 }
 
 .subheader {
-	font-family: "Source Code Pro", monospace;
-	color: $forest-green;
-	font-size: 1rem;
-	font-weight: 400;
-	letter-spacing: 1px;
-	line-height: 125%;
-	text-transform: uppercase;
-	margin: 0;
-	padding: 0;
-	height: fit-content;
+  font-family: "Source Code Pro", monospace;
+  color: $forest-green;
+  font-size: $text-base;
+  font-weight: 400;
+  letter-spacing: 1px;
+  line-height: 125%;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0;
+  height: fit-content;
 }
 
 // -----------------------------------
@@ -143,18 +141,18 @@
 
 // Tab content subheading
 .subheading {
-	@extend %subheading;
+  @extend %subheading;
 }
 
 // Section subheading with additional styles
 .section-subheading {
-	@extend %subheading;
-	font-size: 1.5rem;
-	color: #28746f;
-	margin-top: 2rem;
-	margin-bottom: 1rem;
-	width: 100%;
-	text-align: left;
+  @extend %subheading;
+  font-size: $text-xl;
+  color: #28746f;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  width: 100%;
+  text-align: left;
 }
 
 // -----------------------------------
@@ -163,22 +161,22 @@
 
 // Secondary text styles
 .secondary-text {
-	color: $black;
-	font-size: 1.415rem;
-	font-weight: 500;
-	line-height: 135%;
-	margin-top: 1rem;
-	margin-bottom: 1rem;
+  color: $black;
+  font-size: $text-xl;
+  font-weight: 500;
+  line-height: 135%;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 
-	@include breakpoint(med) {
-		font-size: 1.728rem;
-		margin-bottom: 1.5rem;
-		line-height: 145%;
-	}
+  @include breakpoint(med) {
+    font-size: $text-2xl;
+    margin-bottom: 1.5rem;
+    line-height: 145%;
+  }
 
-	@include breakpoint(med) {
-		font-size: 1.665rem;
-	}
+  @include breakpoint(med) {
+    font-size: $text-2xl;
+  }
 }
 
 // -----------------------------------
@@ -187,38 +185,38 @@
 
 .text-align-center,
 .text-center {
-	text-align: center !important;
+  text-align: center !important;
 }
 
 .text-align-right {
-	text-align: right;
+  text-align: right;
 }
 
 .text-align-left {
-	text-align: left;
+  text-align: left;
 }
 
 .text-wrap {
-	text-wrap: wrap !important;
+  text-wrap: wrap !important;
 }
 
 .text-nowrap {
-	text-wrap: nowrap !important;
+  text-wrap: nowrap !important;
 }
 
 .text-wrap-word {
-	text-wrap: wrap-word !important;
+  text-wrap: wrap-word !important;
 }
 
 .small {
-	font-size: 0.75rem;
-	font-weight: 500;
+  font-size: $text-xs;
+  font-weight: 500;
 }
 
 .text-red {
-	color: #dc1d25;
+  color: $invalid-red;
 }
 
 .text-blue {
-	color: #4479df;
+  color: $emphasis-blue;
 }
