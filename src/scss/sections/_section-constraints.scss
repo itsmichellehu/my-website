@@ -41,7 +41,7 @@
   width: 100%;
   text-align: left;
   padding: space(5) 5vw;
-  background-color: #fff;
+  background-color: $white;
   height: fit-content;
 
   ul {
@@ -93,7 +93,7 @@
 
 .project-proposal.card {
   padding-left: space(10);
-  background-color: #fff;
+  background-color: $white;
   width: 100%;
   flex: 1;
 

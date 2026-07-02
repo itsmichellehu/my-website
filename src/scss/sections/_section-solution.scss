@@ -34,7 +34,7 @@ $solution-padding-xxl: space(12);
     justify-content: center;
     padding: $solution-padding;
     border-radius: 1rem;
-    background-color: white;
+    background-color: $white;
     height: fit-content;
 
     @include breakpoint(med) {
@@ -127,7 +127,7 @@ $solution-padding-xxl: space(12);
   padding: space(4);
   margin: auto;
   border-radius: 0.5rem;
-  background: var(--Colors-White, #fff);
+  background: var(--Colors-White, $white);
   box-shadow: 1.5px 1.5px 4px 0px rgba(0, 0, 0, 0.1);
 
   img {
@@ -148,7 +148,7 @@ $solution-padding-xxl: space(12);
     justify-content: center;
     padding: space(6);
     border-radius: 1rem;
-    background-color: white;
+    background-color: $white;
 
     // .the-final-prototype has 4 named areas (a, b, c, d). On mobile the base
     // template only covers a and b, so c (iteration video) and d (headline)
@@ -166,7 +166,7 @@ $solution-padding-xxl: space(12);
       grid-template-rows: 1fr;
       margin: auto;
       align-items: center;
-      background-color: white;
+      background-color: $white;
       padding: space(8);
       grid-template-areas: "a b";
       gap: space(12);
@@ -198,7 +198,7 @@ $solution-padding-xxl: space(12);
     // 			align-items: center;
     // 			width: fit-content;
     // 			column-gap: 2rem;
-    // 			background-color: white;
+    // 			background-color: $white;
     // 			padding: 3rem 4rem;
     //
     // 			&.the-final-prototype {

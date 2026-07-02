@@ -301,7 +301,7 @@ $details-wrapper-gap-xxl: space(24);
     }
 
     &--white-bg {
-      background: #fff;
+      background: $white;
     }
 
     @include breakpoint(med) {
