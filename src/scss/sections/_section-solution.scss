@@ -92,7 +92,7 @@ $solution-padding-xxl: space(12);
     margin-bottom: 0;
 
     @include breakpoint(xl) {
-      font-size: 1.2rem;
+      font-size: $text-lg;
     }
   }
 
@@ -284,13 +284,13 @@ $solution-padding-xxl: space(12);
       }
 
       h3 {
-        font-size: 1.75rem;
+        font-size: $text-xl;
       }
     }
 
     @include breakpoint(lg) {
       h3 {
-        font-size: 2rem;
+        font-size: $text-2xl;
       }
     }
   }
@@ -318,11 +318,11 @@ $solution-padding-xxl: space(12);
     color: $emphasis-blue;
     font-weight: 500;
     margin-bottom: 0;
-    font-size: 1.25rem;
+    font-size: $text-lg;
   }
 
   &_subheading {
-    font-size: 1.35rem;
+    font-size: $text-lg;
     margin-bottom: space(5);
     color: $off-black !important;
     line-height: 125%;
@@ -361,7 +361,7 @@ $solution-padding-xxl: space(12);
     margin-top: 0;
 
     li {
-      font-size: 1.125rem;
+      font-size: $text-md;
       color: $medium-grey;
 
       @include breakpoint(med) {
@@ -369,7 +369,7 @@ $solution-padding-xxl: space(12);
       }
 
       @include breakpoint(lg) {
-        font-size: 1.25rem;
+        font-size: $text-lg;
       }
     }
   }
@@ -377,7 +377,7 @@ $solution-padding-xxl: space(12);
 
 @include breakpoint(med) {
   .the-solution-prototype_subheading {
-    font-size: 1.2rem;
+    font-size: $text-lg;
     color: $off-black !important;
     font-weight: 500 !important;
   }

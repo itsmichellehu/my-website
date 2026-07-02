@@ -25,7 +25,7 @@
   margin: 0 auto;
 
   .subheading {
-    font-size: 1.25rem;
+    font-size: $text-lg;
   }
 }
 
@@ -54,7 +54,7 @@
     transform: none;
 
     li {
-      font-size: 1rem;
+      font-size: $text-base;
       line-height: 160%;
       color: $dark-grey;
       transform: none;
@@ -102,7 +102,7 @@
     z-index: 2;
 
     li {
-      font-size: 1.125rem;
+      font-size: $text-md;
       color: $black;
     }
 
@@ -207,7 +207,7 @@ $constraints-svg-med: 3rem;
     padding: $constraints-grid-item-padding-med;
 
     ul > li {
-      font-size: 1.125rem;
+      font-size: $text-md;
     }
 
     .svg-wrapper {
