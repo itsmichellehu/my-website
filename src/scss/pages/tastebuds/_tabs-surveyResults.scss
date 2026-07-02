@@ -12,7 +12,7 @@
     align-items: center;
     position: relative;
     background-color: #12181f;
-    padding: 0.5rem;
+    padding: space(2);
     overflow: hidden;
     width: 100%;
     margin-left: auto;
@@ -107,7 +107,7 @@
 
 .total-satisfaction-method {
   border: 1px solid $medium-light-grey;
-  padding: 16px;
+  padding: space(4);
   margin: auto;
   color: $dark-grey;
 

@@ -3,57 +3,57 @@
 
 $super-light-grey: #fafafa;
 body {
-	background-color: #80ada1 !important;
+  background-color: #80ada1 !important;
 }
 .project-hero {
-	background-color: #80ada1 !important;
+  background-color: #80ada1 !important;
 }
 
 #overview {
-	background-color: transparent;
+  background-color: transparent;
 }
 
 #the-constraints {
-	background-color: $lightest-grey;
+  background-color: $lightest-grey;
 }
 
 #final-prototype {
-	background-color: $lightest-grey;
-	border: 0;
+  background-color: $lightest-grey;
+  border: 0;
 }
 
 .final-prototype_video_wrapper {
-	display: flex;
-	gap: 2rem;
-	justify-content: center;
+  display: flex;
+  gap: space(8);
+  justify-content: center;
 
-	.final-prototype_video {
-		max-width: 13rem;
-	}
+  .final-prototype_video {
+    max-width: 13rem;
+  }
 }
 
 #the-solution {
-	&.content-full-width {
-		display: flex;
-		flex-direction: column;
-		gap: 2rem;
+  &.content-full-width {
+    display: flex;
+    flex-direction: column;
+    gap: space(8);
 
-		@include breakpoint(med) {
-			gap: 2.5rem;
-		}
+    @include breakpoint(med) {
+      gap: space(10);
+    }
 
-		@include breakpoint(lg) {
-			gap: 3rem;
-		}
-	}
+    @include breakpoint(lg) {
+      gap: space(12);
+    }
+  }
 
-	.final-prototype_grid-container {
-		width: 100%;
-	}
+  .final-prototype_grid-container {
+    width: 100%;
+  }
 
-	.primary-prototype {
-		margin-bottom: 2rem;
-	}
+  .primary-prototype {
+    margin-bottom: space(8);
+  }
 }
 
 // .navbar-top {

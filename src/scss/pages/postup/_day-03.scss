@@ -1,19 +1,18 @@
-@use "@abstracts/variables" as *;
-@use "@abstracts/breakpoints-mixins" as *;
+@use "@abstracts/all-abstracts" as *;
 
 // Wednesday
 .postup-full-storyboard {
-	margin-bottom: 2rem;
+  margin-bottom: space(8);
 }
 
 .storyboarding-content {
-	display: block;
-	max-width: $content-max-width;
-	width: 90vw;
-	margin: auto;
-	align-items: flex-start;
+  display: block;
+  max-width: $content-max-width;
+  width: 90vw;
+  margin: auto;
+  align-items: flex-start;
 
-	:last-child {
-		margin-bottom: 0;
-	}
+  :last-child {
+    margin-bottom: 0;
+  }
 }

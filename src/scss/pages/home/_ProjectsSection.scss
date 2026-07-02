@@ -22,12 +22,12 @@ $bg-top-xxl: 10rem;
   margin-top: space(8);
 
   @include breakpoint(lg) {
-    padding: 5rem 0;
+    padding: space(20) 0;
     margin-top: 0;
   }
 
   @include breakpoint(xl) {
-    padding: 6rem 0;
+    padding: space(24) 0;
   }
 
   // 	@include breakpoint(xxxl) {
@@ -108,7 +108,7 @@ $bg-top-xxl: 10rem;
   @include breakpoint(xl) {
     // grid-template-columns: $wrapper-grid-xl;
     gap: $wrapper-gap-xl;
-    margin: 1rem 0;
+    margin: space(4) 0;
   }
 
   @include hover-underline-target(
@@ -333,7 +333,7 @@ $bg-top-xxl: 10rem;
 
   @include breakpoint(med) {
     letter-spacing: -0.0125rem;
-    margin-bottom: 1.125rem;
+    margin-bottom: space(4);
   }
 
   @include breakpoint(lg) {
@@ -341,7 +341,7 @@ $bg-top-xxl: 10rem;
   }
 
   @include breakpoint(xl) {
-    margin-bottom: 1.75rem;
+    margin-bottom: space(8);
   }
 }
 
@@ -393,7 +393,7 @@ $bg-top-xxl: 10rem;
   }
 
   @include breakpoint(med) {
-    margin-bottom: 1.05rem;
+    margin-bottom: space(4);
     width: 100%;
   }
 

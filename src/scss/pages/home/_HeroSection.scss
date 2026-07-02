@@ -2,11 +2,11 @@
 
 // Variables
 $hero-icon-button-size: 2rem;
-$hero-buttons-gap-bp-med: 1rem;
+$hero-buttons-gap-bp-med: space(4);
 $hero-icon-button-size-bp-med: 2.25rem;
-$hero-buttons-gap-bp-lg: 1rem;
+$hero-buttons-gap-bp-lg: space(4);
 $hero-icon-button-size-bp-lg: 2.25rem;
-$hero-buttons-gap-bp-xl: 1rem;
+$hero-buttons-gap-bp-xl: space(4);
 $hero-icon-button-size-bp-xl: 3rem;
 $edu-exp-width-lg: 11.1rem;
 $edu-exp-width-xl: 12rem;
@@ -43,7 +43,7 @@ $edu-exp-height-xl: 3rem;
   padding-top: $navbar-mobile-height;
 
   @include breakpoint(med) {
-    padding: 5rem 0;
+    padding: space(20) 0;
     padding-top: calc(#{$navbar-desktop-height} + #{space(12)});
     margin: auto;
   }
@@ -74,7 +74,7 @@ $edu-exp-height-xl: 3rem;
     gap: space(6);
 
     @include breakpoint(sm) {
-      gap: 1.75rem;
+      gap: space(8);
     }
 
     @include breakpoint(med) {
@@ -133,7 +133,7 @@ $edu-exp-height-xl: 3rem;
       display: flex;
       // overflow: hidden;
       // margin: 0 auto 0 5rem;
-      margin: -2.5rem auto 0;
+      margin: -space(10) auto 0;
       aspect-ratio: 4 / 5;
       object-fit: cover;
       width: 100%;
