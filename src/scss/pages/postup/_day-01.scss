@@ -64,7 +64,7 @@ $quote-text-size-med: 100%;
     > div:first-child {
       p {
         color: $black;
-        font-size: 1.25rem;
+        font-size: $text-lg;
         font-weight: 500;
         line-height: 150%;
         margin-bottom: 0;
@@ -83,7 +83,7 @@ $quote-text-size-med: 100%;
         width: $quote-text-size-med;
 
         p {
-          font-size: 1.75rem;
+          font-size: $text-xl;
         }
       }
     }
@@ -91,7 +91,7 @@ $quote-text-size-med: 100%;
 
   &_insight {
     color: $black;
-    font-size: 1.25rem;
+    font-size: $text-lg;
     font-weight: 500;
     line-height: 150%;
     margin-top: 0;
@@ -99,7 +99,7 @@ $quote-text-size-med: 100%;
 
     @include breakpoint(med) {
       width: $quote-text-size-med;
-      font-size: 1.75rem;
+      font-size: $text-xl;
       margin-bottom: space(8);
     }
   }

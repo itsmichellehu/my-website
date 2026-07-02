@@ -23,7 +23,7 @@
 
     p.subheading {
       margin-bottom: space(2);
-      font-size: 1.35rem;
+      font-size: $text-lg;
       font-weight: 500;
     }
   }
@@ -96,7 +96,7 @@
 
       p:first-child {
         margin-bottom: space(2);
-        font-size: 1.35rem;
+        font-size: $text-lg;
         font-weight: 500;
       }
     }
