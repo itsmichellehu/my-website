@@ -39,7 +39,7 @@
     color: var(--off-black);
     width: 20px;
     height: 20px;
-    margin-top: 4px;
+    margin-top: space(1);
     transform: rotate(90deg);
   }
 }
@@ -47,8 +47,8 @@
 .ic-arrow_jump-to-section {
   vertical-align: baseline;
   transform: rotate(-45deg) translateX(-0.6rem);
-  margin-left: 0.25rem;
-  margin-top: 4px;
+  margin-left: space(1);
+  margin-top: space(1);
   margin-left: 2px;
 }
 

@@ -97,7 +97,7 @@ $details-wrapper-gap-xxl: space(24);
   &__tag {
     display: flex;
     height: 1.5rem;
-    padding: 0 0.5rem;
+    padding: 0 space(2);
     justify-content: center;
     align-items: center;
     border-radius: 0.3125rem;

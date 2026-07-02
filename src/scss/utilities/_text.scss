@@ -149,8 +149,8 @@
   @extend %subheading;
   font-size: $text-xl;
   color: #28746f;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
+  margin-top: space(8);
+  margin-bottom: space(4);
   width: 100%;
   text-align: left;
 }
@@ -165,12 +165,12 @@
   font-size: $text-xl;
   font-weight: 500;
   line-height: 135%;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+  margin-top: space(4);
+  margin-bottom: space(4);
 
   @include breakpoint(med) {
     font-size: $text-2xl;
-    margin-bottom: 1.5rem;
+    margin-bottom: space(6);
     line-height: 145%;
   }
 

@@ -1,4 +1,5 @@
 @use "@abstracts/variables" as *;
+@use "@abstracts/tokens" as *;
 @use "@abstracts/breakpoints-mixins" as *;
 
 /* Heading and paragraph base styles */
@@ -18,46 +19,46 @@ h6 {
 
 p,
 li {
-	font-size: 1rem;
+	font-size: $text-base;
 	color: $off-black;
 	line-height: 150%;
 	font-weight: 400;
 	margin-top: 0;
 
 	@include breakpoint(mobile-lg) {
-		font-size: 1.125rem;
+		font-size: $text-md;
 	}
 }
 
 p {
-	margin-bottom: 1.5rem;
+	margin-bottom: space(6);
 
 	@include breakpoint(mobile-lg) {
-		margin-bottom: 1.125rem;
+		margin-bottom: space(4);
 	}
 }
 
 // Major Third typescale 1.250
 h1 {
-	font-size: 2.441rem;
+	font-size: $text-3xl;
 	font-weight: 550;
 	color: $black;
 	line-height: 120%;
 	letter-spacing: -0.04rem;
-	margin-bottom: 1.5rem;
+	margin-bottom: space(6);
 }
 
 h2 {
-	font-size: 1.953rem;
+	font-size: $text-2xl;
 	font-weight: 550;
 	color: $black;
 	line-height: 125%;
-	margin-bottom: 1rem;
+	margin-bottom: space(4);
 	letter-spacing: -0.0525rem;
 }
 
 h3 {
-	font-size: 1.562rem;
+	font-size: $text-xl;
 	font-weight: 500;
 	color: $teal-accent;
 	letter-spacing: 0;
@@ -65,46 +66,46 @@ h3 {
 }
 
 h4 {
-	font-size: 1.25rem;
+	font-size: $text-lg;
 	font-weight: 500;
 	color: $black;
 	letter-spacing: 0;
 	line-height: 130%;
-	margin-bottom: 1.25rem;
+	margin-bottom: space(5);
 }
 
 h5 {
-	font-size: 1.152rem;
+	font-size: $text-md;
 	font-weight: 500;
 	color: $secondary-green;
 	letter-spacing: 0;
 	line-height: 140%;
-	margin-bottom: 0.5rem;
+	margin-bottom: space(2);
 }
 
 // Typescale 1.250 Major Third
 
 @include breakpoint(med) {
 	h1 {
-		font-size: 3.157rem;
+		font-size: $text-4xl;
 		letter-spacing: -0.04rem;
-		margin-bottom: 2.5rem;
+		margin-bottom: space(10);
 	}
 
 	h2 {
-		font-size: 3.157rem;
+		font-size: $text-4xl;
 		letter-spacing: -0.02rem;
-		margin-bottom: 2rem;
+		margin-bottom: space(8);
 	}
 
 	h3 {
-		font-size: 2.369rem;
+		font-size: $text-3xl;
 		font-weight: 550;
 	}
 
 	h4 {
-		font-size: 1.777rem;
-		margin-bottom: 1.25rem;
+		font-size: $text-xl;
+		margin-bottom: space(5);
 	}
 
 	//
@@ -115,18 +116,18 @@ h5 {
 
 .section-heading {
 	color: $black;
-	font-size: 2.8rem;
+	font-size: $text-3xl;
 	font-style: normal;
 	font-weight: 600;
 	line-height: 120%;
 	letter-spacing: -0.05rem;
-	margin-bottom: 2rem;
+	margin-bottom: space(8);
 }
 
 .noto-serif {
 	color: $black;
 	font-family: "Noto Serif", serif;
-	font-size: 1.125rem;
+	font-size: $text-md;
 	font-weight: 350;
 	line-height: 160%; // 28.8px
 }

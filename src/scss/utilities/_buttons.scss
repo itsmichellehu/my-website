@@ -4,7 +4,7 @@
 .btn-secondary {
   display: flex;
   height: 2.25rem;
-  padding: 0.5rem 1rem !important;
+  padding: space(2) space(4) !important;
   border-radius: 1.5625rem; // Note: You might want to ensure this matches the .btn styles if intended
   text-align: center;
   cursor: pointer;

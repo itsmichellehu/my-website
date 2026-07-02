@@ -7,7 +7,7 @@ ol {
 	flex-direction: column;
 	align-self: center;
 	margin-bottom: 0;
-	gap: 0.5rem;
+	gap: space(2);
 	list-style-position: outside;
 	margin-left: -calc($list-bullet-text-spacing);
 
@@ -19,12 +19,12 @@ ol {
 		}
 
 		@include breakpoint(med) {
-			font-size: 1.125rem;
+			font-size: $text-md;
 		}
 	}
 
 	&.gap--medium {
-		gap: 1rem;
+		gap: space(4);
 	}
 
 	&.list-style-inside {
@@ -43,7 +43,7 @@ ol {
 .list-transform-none {
 	&.gap-8 {
 		li {
-			margin-bottom: 0.5rem;
+			margin-bottom: space(2);
 		}
 	}
 }
@@ -72,7 +72,7 @@ ul.list-none {
 
 	&.gap-8 {
 		li {
-			margin-bottom: 0.5rem;
+			margin-bottom: space(2);
 		}
 	}
 }

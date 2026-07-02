@@ -48,43 +48,43 @@
 .flex-wrap,
 .flex-wrap-reverse {
 	&-8 {
-		gap: 0.5rem;
+		gap: space(2);
 	}
 
 	&-16 {
-		gap: 1rem;
+		gap: space(4);
 	}
 
 	&-24 {
-		gap: 1.5rem;
+		gap: space(6);
 	}
 
 	&-32 {
-		gap: 2rem;
+		gap: space(8);
 	}
 
 	&-40 {
-		gap: 2.5rem;
+		gap: space(10);
 	}
 
 	&-48 {
-		gap: 3rem;
+		gap: space(12);
 	}
 
 	&-56 {
-		gap: 3.5rem;
+		gap: space(14);
 	}
 
 	&-64 {
-		gap: 4rem;
+		gap: space(16);
 	}
 
 	&-72 {
-		gap: 4.5rem;
+		gap: space(18);
 	}
 
 	&-80 {
-		gap: 5rem;
+		gap: space(20);
 	}
 }
 
@@ -120,22 +120,22 @@
 
 .gap {
 	&-8 {
-		gap: 0.5rem;
+		gap: space(2);
 	}
 
 	&-16 {
-		gap: 1rem;
+		gap: space(4);
 	}
 
 	&-24 {
-		gap: 1.5rem;
+		gap: space(6);
 	}
 
 	&-32 {
-		gap: 2rem;
+		gap: space(8);
 	}
 
 	&-40 {
-		gap: 2.5rem;
+		gap: space(10);
 	}
 }
