@@ -1,26 +1,22 @@
-// ProjectAccordion.js
-function toggleAccordion(header) {
-  const accordion = header.parentElement;
-  const content = accordion.querySelector('.accordion__content');
-  const icon = header.querySelector('.accordion__icon');
-
-  content.classList.toggle('active');
-  icon.classList.toggle('rotate');
-
-  if (content.classList.contains('active')) {
-    content.style.maxHeight = content.scrollHeight + 'px';
-  } else {
-    content.style.maxHeight = 0;
-  }
-}
+const onReady = (fn) =>
+  document.readyState === "loading"
+    ? document.addEventListener("DOMContentLoaded", fn)
+    : fn();
 
 function initializeAccordion() {
-  document.querySelectorAll('.accordion').forEach(accordion => {
-    const header = accordion.querySelector('.accordion__header');
-    header.addEventListener('click', function () {
-      toggleAccordion(this);
+  onReady(() => {
+    document.querySelectorAll(".accordion").forEach((accordion) => {
+      accordion.addEventListener("click", function () {
+        this.classList.toggle("accordion-active");
+        const content = this.querySelector(".accordion_content");
+        if (this.classList.contains("accordion-active")) {
+          content.style.maxHeight = content.scrollHeight + "px";
+        } else {
+          content.style.maxHeight = 0;
+        }
+      });
     });
   });
 }
 
-export { toggleAccordion, initializeAccordion };
+export { initializeAccordion };

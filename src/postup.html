@@ -1263,7 +1263,7 @@
               prototype! They didn't find any essential details missing and
               there was minimal confusion.
             </p>
-            <div class="test-findings-grid mv-32">
+            <div class="test-findings_grid mv-32">
               <div class="test-findings_card border-top-green">
                 <div class="test-findings_header">
                   <p class="subheading">Design validation</p>
@@ -1920,28 +1920,6 @@
         </div>
       </section>
     </main>
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        var accordions = document.querySelectorAll(".accordion");
-
-        accordions.forEach(function (accordion) {
-          accordion.addEventListener("click", function () {
-            // Toggle the active class for the clicked accordion
-            this.classList.toggle("accordion-active");
-
-            // Find the corresponding content section
-            var content = this.querySelector(".accordion_content");
-
-            // Expand if active, collapse if not
-            if (this.classList.contains("accordion-active")) {
-              content.style.maxHeight = content.scrollHeight + "px";
-            } else {
-              content.style.maxHeight = 0;
-            }
-          });
-        });
-      });
-    </script>
     <script>
       vid = document.querySelector("video");
       vid.disablePictureInPicture = true;
