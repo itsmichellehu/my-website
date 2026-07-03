@@ -205,7 +205,7 @@
   }
 }
 
-.accordion .accordionHeader {
+.accordion .accordion_header {
   background-color: $white;
   border-left: 0.5rem solid $invalid-red;
   border-width: 0 0 0 0.5rem;
@@ -225,17 +225,17 @@
     transform 0.4s;
 }
 
-.accordion .accordionHeader:hover {
+.accordion .accordion_header:hover {
   background-color: $lightest-medium-grey;
   color: $emphasis-blue;
 }
 
-.accordion .accordionHeader:active {
+.accordion .accordion_header:active {
   background-color: $light-grey;
   color: $dark-grey;
 }
 
-.accordion .accordionContent {
+.accordion .accordion_content {
   border-left: 0.5rem solid $invalid-red;
   max-height: 0;
   overflow: hidden;
@@ -243,56 +243,28 @@
   transition: max-height 0.2s ease-out;
 }
 
-.accordion .accordionContent p {
+.accordion .accordion_content p {
   padding: space(4);
   font-size: $text-sm;
   margin: 0;
 }
 
-.quote {
-  display: flex;
-  position: relative;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
+.blockquote--boardspace {
   margin-bottom: space(2);
   padding: space(4) space(4) space(4) space(6);
-  width: 100%;
   background-color: $lightest-grey;
-  border-left: 0.25rem solid $medium-grey;
-}
 
-.quote_text {
-  align-self: stretch;
-  color: $dark-grey;
-  font-family: "Noto Serif", serif;
-  font-size: $text-base;
-  font-weight: 350;
-  line-height: 145%;
-}
+  .blockquote_content {
+    border-left: 0.25rem solid $medium-grey;
+    padding: 0;
+    background: none;
 
-.quote_author {
-  display: flex;
-  align-items: center;
-  gap: space(4);
-  position: relative;
-  align-self: stretch;
-  width: 100%;
-  flex: 0 0 auto;
-}
-
-.quote_author_text {
-  color: $dark-grey;
-  font-size: $text-base;
-}
-
-.quote_author img {
-  position: relative;
-  width: 2.5rem;
-  height: 2.5rem;
-  border-radius: 1.5rem;
-  background-size: cover;
-  background-position: 50% 50%;
+    > p {
+      color: $dark-grey;
+      font-weight: 350;
+      line-height: 145%;
+    }
+  }
 }
 
 #sketchesIntro .item {
