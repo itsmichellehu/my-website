@@ -6,7 +6,12 @@ import initTabsContainers from "./TabsContainer/TabsContainer";
 import { initializeAccordion } from "./ProjectAccordion/ProjectAccordion";
 import initFeatureCards from "./FeatureCard/FeatureCard";
 
-document.addEventListener("DOMContentLoaded", function () {
+const onReady = (fn) =>
+  document.readyState === "loading"
+    ? document.addEventListener("DOMContentLoaded", fn)
+    : fn();
+
+onReady(() => {
   initializeProgressBar();
   BackToTopButton();
   initializeAccordion();
