@@ -1845,38 +1845,74 @@
         </div>
         <div class="notion-affinity-maps_container mt-32">
           <div class="notion-affinity-maps_grid">
-            <div class="overlay" id="overlay"></div>
             <div class="notion-affinity-map_grid-item">
-              <img
+              <button
+                  type="button"
                   class="img-zoomable"
-                  src="assets/images/tastebuds/notion-affinity-map-01-route-3.webp"
-                  alt=""
-                  loading="lazy"
-                />
+                  popovertarget="zoom-notion-affinity-map-01"
+                  aria-label="Enlarge affinity map: Route 3"
+                >
+                <img
+                    src="assets/images/tastebuds/notion-affinity-map-01-route-3.webp"
+                    alt=""
+                    loading="lazy"
+                  />
+              </button>
+              <div class="img-zoom-popover" id="zoom-notion-affinity-map-01" popover>
+                <img src="assets/images/tastebuds/notion-affinity-map-01-route-3.webp" alt="Affinity map: Route 3" />
+              </div>
             </div>
             <div class="height-100">
-              <img
-                  class="img-100 img-zoomable bg-white-zoomed"
-                  src="assets/images/tastebuds/notion-affinity-map-02.webp"
-                  alt=""
-                  loading="lazy"
-                />
+              <button
+                  type="button"
+                  class="img-zoomable bg-white-zoomed"
+                  popovertarget="zoom-notion-affinity-map-02"
+                  aria-label="Enlarge affinity map 2"
+                >
+                <img
+                    class="img-100"
+                    src="assets/images/tastebuds/notion-affinity-map-02.webp"
+                    alt=""
+                    loading="lazy"
+                  />
+              </button>
+              <div class="img-zoom-popover" id="zoom-notion-affinity-map-02" popover>
+                <img src="assets/images/tastebuds/notion-affinity-map-02.webp" alt="Affinity map 2" />
+              </div>
             </div>
             <div class="notion-affinity-map_grid-item bg-light-green">
-              <img
+              <button
+                  type="button"
                   class="img-zoomable bg-light-green"
-                  src="assets/images/tastebuds/notion-affinity-map-03.webp"
-                  alt=""
-                  loading="lazy"
-                />
+                  popovertarget="zoom-notion-affinity-map-03"
+                  aria-label="Enlarge affinity map 3"
+                >
+                <img
+                    src="assets/images/tastebuds/notion-affinity-map-03.webp"
+                    alt=""
+                    loading="lazy"
+                  />
+              </button>
+              <div class="img-zoom-popover" id="zoom-notion-affinity-map-03" popover>
+                <img src="assets/images/tastebuds/notion-affinity-map-03.webp" alt="Affinity map 3" />
+              </div>
             </div>
             <div class="notion-affinity-map_grid-item">
-              <img
+              <button
+                  type="button"
                   class="img-zoomable"
-                  src="assets/images/tastebuds/notion-affinity-map-04.webp"
-                  alt=""
-                  loading="lazy"
-                />
+                  popovertarget="zoom-notion-affinity-map-04"
+                  aria-label="Enlarge affinity map 4"
+                >
+                <img
+                    src="assets/images/tastebuds/notion-affinity-map-04.webp"
+                    alt=""
+                    loading="lazy"
+                  />
+              </button>
+              <div class="img-zoom-popover" id="zoom-notion-affinity-map-04" popover>
+                <img src="assets/images/tastebuds/notion-affinity-map-04.webp" alt="Affinity map 4" />
+              </div>
             </div>
           </div>
         </div>
@@ -2326,26 +2362,5 @@
       </div>
     </section>
   </main>
-  <script>
-    document.querySelectorAll(".img-zoomable").forEach((img) => {
-      img.addEventListener("click", function () {
-        const rect = img.getBoundingClientRect();
-        const xOrigin =
-          ((rect.left + rect.width / 2) / window.innerWidth) * 100;
-        const yOrigin =
-          ((rect.top + rect.height / 2) / window.innerHeight) * 100;
-
-        img.style.transformOrigin = `${xOrigin}% ${yOrigin}%`;
-
-        img.classList.toggle("img-zoomed");
-        document.getElementById("overlay").classList.toggle("active");
-      });
-    });
-
-    document.getElementById("overlay").addEventListener("click", function () {
-      document.querySelector(".img-zoomed").classList.remove("img-zoomed");
-      this.classList.remove("active");
-    });
-  </script>
 </body>
 </html>
