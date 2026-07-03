@@ -1,15 +1,11 @@
 import { BackToTopButton } from "./BackToTopButton/BackToTopButton";
 import initializeProgressBar from "./ProjectProgressBar/ProjectProgressBar";
-import initTabsContainers from "./TabsContainer/TabsContainer";
 
 import { initializeAccordion } from "./ProjectAccordion/ProjectAccordion";
 import initFeatureCards from "./FeatureCard/FeatureCard";
 
 import "./Blockquote/Blockquote";
-import "./CardVertical/CardVertical";
-import "./DesignWalkthroughGrid/DesignWalkthroughGrid";
 import "./GridAsideRight/GridAsideRight";
-import "./SmallCard/SmallCard";
 import "./UsabilityTestFindingsCard/UsabilityTestFindingsCard";
 
 const onReady = (fn) =>
@@ -22,7 +18,6 @@ const domReadyInits = [
   initializeProgressBar,
   BackToTopButton,
   initializeAccordion,
-  initTabsContainers,
   initFeatureCards,
 ];
 
