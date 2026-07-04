@@ -35,6 +35,11 @@ function wireCarousel(wrapper, grid) {
 
   let currentIndex = 0;
   const handleWheel = (event) => {
+    const atStart = currentIndex === 0;
+    const atEnd = currentIndex === cards.length - 1;
+    if ((event.deltaY < 0 && atStart) || (event.deltaY > 0 && atEnd)) {
+      return; // let the page scroll normally once the carousel has no more room
+    }
     event.preventDefault();
     const cardWidth = cards[0].getBoundingClientRect().width;
     currentIndex =
