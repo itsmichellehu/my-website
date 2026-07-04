@@ -1,3 +1,5 @@
+import "./_FeatureCard.scss";
+
 const onReady = (fn) =>
   document.readyState === "loading"
     ? document.addEventListener("DOMContentLoaded", fn)
