@@ -2,10 +2,14 @@ import "@pages/tastebuds/_index.scss";
 import "@components/ProjectComponents";
 import "@components/CardVertical/CardVertical";
 import "@components/DesignWalkthroughGrid/DesignWalkthroughGrid";
+import ProgressBar from "@components/ProjectProgressBar/ProjectProgressBar";
 import "./tastebuds-feature-cards";
 
-document.addEventListener("DOMContentLoaded", () => {
-  console.log("Main TasteBuds page loaded");
-});
+const onReady = (fn) =>
+  document.readyState === "loading"
+    ? document.addEventListener("DOMContentLoaded", fn)
+    : fn();
 
-document.addEventListener("DOMContentLoaded", function () {});
+onReady(() => {
+  ProgressBar();
+});

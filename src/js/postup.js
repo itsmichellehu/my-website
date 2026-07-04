@@ -1,17 +1,14 @@
 import "@pages/postup/_index.scss";
 import "@components/ProjectComponents";
 import "@components/SmallCard/SmallCard";
+import ProgressBar from "@components/ProjectProgressBar/ProjectProgressBar";
 import "./postup-feature-cards";
 
-function initializePostUpPage() {
-  console.log("Post Up Page Initialized!");
-}
+const onReady = (fn) =>
+  document.readyState === "loading"
+    ? document.addEventListener("DOMContentLoaded", fn)
+    : fn();
 
-initializePostUpPage();
-
-document.addEventListener("DOMContentLoaded", () => {
-  console.log("Main PostUp page loaded");
-  // Additional initialization code for this page
+onReady(() => {
+  ProgressBar();
 });
-
-document.addEventListener("DOMContentLoaded", () => {});
