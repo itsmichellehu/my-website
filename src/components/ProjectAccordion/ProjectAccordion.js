@@ -4,8 +4,9 @@ import "./_ProjectAccordion.scss";
 function initializeAccordion() {
   document.querySelectorAll(".accordion").forEach((accordion) => {
     accordion.addEventListener("click", function () {
-      this.classList.toggle("accordion-active");
       const content = this.querySelector(".accordion_content");
+      if (!content) return;
+      this.classList.toggle("accordion-active");
       if (this.classList.contains("accordion-active")) {
         content.style.maxHeight = content.scrollHeight + "px";
       } else {
