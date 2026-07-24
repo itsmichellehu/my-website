@@ -35,7 +35,15 @@
 
   // Container-owned vertical rhythm: children are spaced consistently by
   // the grid, so individual elements don't carry their own margins. This
-  // is what keeps long case studies even.
+  // is what keeps long case studies even. Legacy elements (base `p`,
+  // `.header-container` > heading) still carry their own margin-bottom
+  // from the pre-.layout system; zero it here so it doesn't stack with
+  // row-gap. Scoped to .layout's direct children only — the same
+  // selectors keep their margin everywhere still on the legacy system.
+  > * {
+    margin-bottom: 0;
+  }
+
   row-gap: $space-block;
 
   display: grid;
