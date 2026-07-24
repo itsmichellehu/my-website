@@ -198,7 +198,7 @@ $details-wrapper-gap-xxl: space(24);
     flex-direction: row;
     gap: space(4);
 
-    &-postup {
+    &--postup {
       gap: space(12);
     }
 
@@ -229,7 +229,7 @@ $details-wrapper-gap-xxl: space(24);
     }
   }
 
-  &__details-headline-tools {
+  &__details-headline--tools {
     margin-bottom: space(2) !important;
 
     @include breakpoint(med) {
