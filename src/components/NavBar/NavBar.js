@@ -1,4 +1,5 @@
 import "./_NavBar.scss";
+import { onAnimationFrame } from "@js/utils/dom-events.js";
 
 function NavBar() {
   const navbarHTML = `
@@ -28,31 +29,9 @@ function NavBar() {
 
   const navbarHeight = navbar.offsetHeight;
 
-  const throttle = (func, limit) => {
-    let lastFunc;
-    let lastRan;
-    return function () {
-      const context = this;
-      const args = arguments;
-      if (!lastRan) {
-        func.apply(context, args);
-        lastRan = Date.now();
-      } else {
-        clearTimeout(lastFunc);
-        lastFunc = setTimeout(
-          () => {
-            if (Date.now() - lastRan >= limit) {
-              func.apply(context, args);
-              lastRan = Date.now();
-            }
-          },
-          limit - (Date.now() - lastRan),
-        );
-      }
-    };
-  };
-
-  const handleScroll = throttle(() => {
+  // Coalesce scroll work onto animation frames (passive by default), matching
+  // BackToTopButton and ProjectProgressBar. Replaces a hand-rolled throttle.
+  onAnimationFrame(window, "scroll", () => {
     const nearBottom =
       window.innerHeight + window.scrollY >= document.body.offsetHeight - 100;
 
@@ -68,9 +47,7 @@ function NavBar() {
     }
 
     lastScrollY = window.scrollY;
-  }, 100);
-
-  window.addEventListener("scroll", handleScroll);
+  });
 
   const hero = document.body.hasAttribute("data-nav-transparent")
     ? document.querySelector("#hero")
