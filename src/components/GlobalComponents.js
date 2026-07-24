@@ -3,7 +3,9 @@ import Footer from "./Footer/Footer";
 
 import initLoadingAnimation from "./LoadingScreen/LoadingScreen";
 
-document.addEventListener("DOMContentLoaded", () => {
+import { onReady } from "@js/utils/dom-events";
+
+onReady(() => {
   initLoadingAnimation();
   NavBar();
   Footer();

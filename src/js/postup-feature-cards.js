@@ -5,10 +5,7 @@ import reservationIcon from "@assets/svg/postup/calendar.svg?inline";
 import searchBarIcon from "@assets/svg/postup/search-bar.svg?inline";
 import popularTimesIcon from "@assets/svg/postup/bar-chart.svg?inline";
 
-const onReady = (fn) =>
-  document.readyState === "loading"
-    ? document.addEventListener("DOMContentLoaded", fn)
-    : fn();
+import { onReady } from "@js/utils/dom-events";
 
 const cards = [
   {

@@ -4,11 +4,7 @@ import "@components/CardVertical/CardVertical";
 import "@components/DesignWalkthroughGrid/DesignWalkthroughGrid";
 import ProgressBar from "@components/ProjectProgressBar/ProjectProgressBar";
 import "./tastebuds-feature-cards";
-
-const onReady = (fn) =>
-  document.readyState === "loading"
-    ? document.addEventListener("DOMContentLoaded", fn)
-    : fn();
+import { onReady } from "@js/utils/dom-events";
 
 onReady(() => {
   ProgressBar();

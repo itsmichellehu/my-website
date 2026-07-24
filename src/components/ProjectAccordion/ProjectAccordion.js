@@ -1,9 +1,5 @@
 import "./_ProjectAccordion.scss";
-
-const onReady = (fn) =>
-  document.readyState === "loading"
-    ? document.addEventListener("DOMContentLoaded", fn)
-    : fn();
+import { onReady } from "@js/utils/dom-events";
 
 function initializeAccordion() {
   onReady(() => {

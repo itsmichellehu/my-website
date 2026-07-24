@@ -1,6 +1,18 @@
 // Shared helpers for performant DOM event handling.
 
 /**
+ * Run `fn` once the DOM is ready. Safe for async/deferred chunks: if the
+ * document has already finished parsing by the time this runs, `fn` fires
+ * immediately instead of waiting on a DOMContentLoaded that already passed.
+ *
+ * @param {() => void} fn
+ */
+export const onReady = (fn) =>
+	document.readyState === "loading"
+		? document.addEventListener("DOMContentLoaded", fn)
+		: fn();
+
+/**
  * Coalesce a high-frequency event (scroll, resize) onto animation frames so the
  * callback runs at most once per frame. Returns an unsubscribe function.
  *

@@ -8,10 +8,7 @@ import "./Blockquote/Blockquote";
 import "./GridAsideRight/GridAsideRight";
 import "./UsabilityTestFindingsCard/UsabilityTestFindingsCard";
 
-const onReady = (fn) =>
-  document.readyState === "loading"
-    ? document.addEventListener("DOMContentLoaded", fn)
-    : fn();
+import { onReady } from "@js/utils/dom-events";
 
 // Shared init registry for case-study pages (tastebuds, postup, boardspace).
 const domReadyInits = [

@@ -4,10 +4,7 @@ import typeOfFoodIcon from "@assets/svg/tastebuds/factor-type-of-food.svg?inline
 import locationIcon from "@assets/svg/tastebuds/factor-location.svg?inline";
 import wordOfMouthIcon from "@assets/svg/tastebuds/factor-word-of-mouth.svg?inline";
 
-const onReady = (fn) =>
-  document.readyState === "loading"
-    ? document.addEventListener("DOMContentLoaded", fn)
-    : fn();
+import { onReady } from "@js/utils/dom-events";
 
 const cards = [
   {
