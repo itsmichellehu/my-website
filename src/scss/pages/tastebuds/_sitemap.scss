@@ -3,12 +3,16 @@
 .sitemap {
   &_wrapper {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     grid-template-rows: auto auto;
     gap: space(2);
     margin: auto;
     align-items: center;
     justify-content: center;
+
+    @include breakpoint(sm) {
+      grid-template-columns: repeat(3, 1fr);
+    }
 
     @include breakpoint(lg) {
       grid-template-columns: repeat(5, 1fr);
