@@ -6,62 +6,69 @@
 
 $feature-card-font-color: $black;
 
-.feature-card-grid {
-  &_wrapper {
-    @include flex(row, space(2));
-    cursor: grab;
-    margin: space(8) auto;
-    overflow-x: scroll;
-    overflow-y: hidden;
-    scroll-snap-type: x mandatory;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-
-    &::-webkit-scrollbar {
-      display: none;
-    }
-
-    @include breakpoint(lg) {
-      max-width: 78rem;
-      align-items: center;
-      justify-content: center;
-      overflow: visible;
-      cursor: default;
-    }
-  }
-
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
+// Track + layout in one element. Authored as an empty <ul class="feature-cards">
+// in the page HTML; FeatureCard.js fills it with <li class="feature-card"> items.
+// Mobile: a horizontal scroll-snap track. Desktop: a static grid row.
+.feature-cards {
+  margin: space(8) auto;
+  display: flex;
+  flex-direction: row;
+  align-self: stretch;
   gap: space(4);
   width: 100%;
+  margin-left: 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 
-  @include breakpoint(xl) {
+  // The block renders as a <ul>, so the base `ul, ol` reset (_lists.scss) forces
+  // flex-direction: column, align-self: center, and a negative margin-left.
+  // The row/stretch/margin-left declarations above override all three.
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  // Desktop: no scrolling — lay the cards out in a single static row.
+  @include breakpoint(lg) {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+    overflow: visible;
     margin: 0 auto;
     justify-self: center;
     align-self: center;
-    overflow: visible;
+    max-width: 78rem;
 
     li:last-child {
       margin: 0;
     }
   }
 
-  &_nav-arrow_wrapper {
-    display: flex;
-    gap: space(4);
-    list-style-type: none;
-    justify-content: flex-end;
-    flex-direction: row;
-
-    li {
-      padding: 0;
-      transform: none;
-      width: fit-content;
+  // Compact variant: the icon stays a small inline glyph at the top of the card
+  // (no oversized faded background) and cards size to content, not a fixed ratio.
+  &--compact {
+    .feature-card {
+      aspect-ratio: auto;
     }
 
-    @include breakpoint(lg) {
-      display: none;
+    .feature-card_icon-wrapper {
+      position: static;
+      width: 2rem;
+      height: 2rem;
+      margin: 0 0 space(4);
+      opacity: 1;
+
+      @include breakpoint(med) {
+        position: static;
+        width: 3rem;
+        height: 3rem;
+        margin: 0 0 space(4);
+        opacity: 1;
+      }
     }
   }
 
@@ -86,6 +93,24 @@ $feature-card-font-color: $black;
     &:active {
       background-color: #d0d0d0 !important;
     }
+
+    &_wrapper {
+      display: flex;
+      gap: space(4);
+      list-style-type: none;
+      justify-content: flex-end;
+      flex-direction: row;
+
+      li {
+        padding: 0;
+        transform: none;
+        width: fit-content;
+      }
+
+      @include breakpoint(lg) {
+        display: none;
+      }
+    }
   }
 }
 
@@ -99,15 +124,19 @@ $feature-card-font-color: $black;
   scroll-snap-align: center;
   scroll-snap-stop: always;
   background-color: $lightest-grey;
-  height: 100%;
   aspect-ratio: 7/6;
+  flex: 0 0 85%;
 
+  // Mobile: each card takes ~85% of the track so the next one peeks at the
+  // edge; flex-shrink: 0 keeps them from collapsing into the viewport width.
   &_icon-wrapper {
     width: 2rem;
     height: 2rem;
     margin-bottom: space(4);
+  }
 
-    @include breakpoint(med) {
+  @include breakpoint(med) {
+    &_icon-wrapper {
       display: flex;
       align-items: center;
       justify-content: center;
@@ -134,10 +163,6 @@ $feature-card-font-color: $black;
   &_content {
     width: 100%;
     z-index: 2;
-
-    @include breakpoint(med) {
-      margin: auto;
-    }
   }
 
   &_heading {
@@ -145,48 +170,22 @@ $feature-card-font-color: $black;
     font-weight: 500 !important;
     margin-bottom: space(2);
     color: $feature-card-font-color !important;
-
-    @include breakpoint(med) {
-      font-size: text(xl);
-    }
   }
 
   &_body {
     display: flex;
-    font-size: text(md);
     color: $feature-card-font-color !important;
     margin-bottom: 0;
   }
 
   @include breakpoint(lg) {
+    flex: initial;
+    height: 100%;
     padding: space(8);
 
     &.first-child,
     &.last-child {
       margin: 0;
-    }
-  }
-}
-
-// Compact variant: keeps the carousel/grid container, but the icon stays a
-// small inline glyph at the top of the card (no oversized faded background)
-// and the card sizes to its content instead of a fixed aspect ratio.
-.feature-card-grid_wrapper--compact .feature-card {
-  aspect-ratio: auto;
-
-  &_icon-wrapper {
-    position: static;
-    width: 2rem;
-    height: 2rem;
-    margin: 0 0 space(4);
-    opacity: 1;
-
-    @include breakpoint(med) {
-      position: static;
-      width: 3rem;
-      height: 3rem;
-      margin: 0 0 space(4);
-      opacity: 1;
     }
   }
 }

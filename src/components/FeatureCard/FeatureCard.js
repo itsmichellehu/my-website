@@ -26,67 +26,65 @@ function cardMarkup(item, index, total) {
 		</li>`;
 }
 
-function wireCarousel(wrapper, grid) {
-  const cards = grid.querySelectorAll(".feature-card");
+// Swiping is handled natively by CSS scroll-snap on the track (see
+// _FeatureCard.scss); JS only wires the optional prev/next buttons, which
+// drive the same snap positions. No wheel hijacking — that fought the
+// browser's native scroll and caused the carousel to jump.
+function wireCarousel(track) {
+  const cards = track.querySelectorAll(".feature-card");
   if (cards.length === 0) return;
 
-  let currentIndex = 0;
-  const handleWheel = (event) => {
-    const atStart = currentIndex === 0;
-    const atEnd = currentIndex === cards.length - 1;
-    if ((event.deltaY < 0 && atStart) || (event.deltaY > 0 && atEnd)) {
-      return; // let the page scroll normally once the carousel has no more room
-    }
-    event.preventDefault();
-    const cardWidth = cards[0].getBoundingClientRect().width;
-    currentIndex =
-      event.deltaY > 0
-        ? Math.min(currentIndex + 1, cards.length - 1)
-        : Math.max(currentIndex - 1, 0);
-    wrapper.scrollTo({ left: cardWidth * currentIndex, behavior: "smooth" });
-  };
-  wrapper.addEventListener("wheel", handleWheel, { passive: false });
-
-  const prevButton = wrapper.parentElement?.querySelector(
+  const prevButton = track.parentElement?.querySelector(
     "[data-feature-cards-prev]",
   );
-  const nextButton = wrapper.parentElement?.querySelector(
+  const nextButton = track.parentElement?.querySelector(
     "[data-feature-cards-next]",
   );
   if (!prevButton || !nextButton) return;
 
+  // Per-card stride = distance between adjacent card left edges, so it already
+  // includes the flex gap. Falls back to the card's own width for a lone card.
+  const cardStride = () =>
+    cards.length > 1
+      ? cards[1].getBoundingClientRect().left -
+        cards[0].getBoundingClientRect().left
+      : cards[0].getBoundingClientRect().width;
+
+  // Derive the index from live scroll position so the buttons and any manual
+  // swipe share one source of truth (no private counter to drift out of sync).
+  const currentIndex = () => Math.round(track.scrollLeft / cardStride());
+
+  const scrollToIndex = (index) => {
+    const clamped = Math.max(0, Math.min(index, cards.length - 1));
+    track.scrollTo({ left: cardStride() * clamped, behavior: "smooth" });
+  };
+
   const updatePrevOpacity = () => {
-    prevButton.style.opacity = wrapper.scrollLeft === 0 ? "0.5" : "1";
+    prevButton.style.opacity = track.scrollLeft === 0 ? "0.5" : "1";
   };
   updatePrevOpacity();
 
-  prevButton.addEventListener("click", () => {
-    wrapper.scrollBy({ left: -wrapper.clientWidth, behavior: "smooth" });
-  });
-  nextButton.addEventListener("click", () => {
-    wrapper.scrollBy({ left: wrapper.clientWidth, behavior: "smooth" });
-  });
-  wrapper.addEventListener("scroll", updatePrevOpacity);
+  prevButton.addEventListener("click", () => scrollToIndex(currentIndex() - 1));
+  nextButton.addEventListener("click", () => scrollToIndex(currentIndex() + 1));
+  track.addEventListener("scroll", updatePrevOpacity);
 }
 
-export function renderFeatureCards(wrapper, items) {
-  if (!wrapper || !Array.isArray(items) || items.length === 0) return;
+// `track` is the <ul class="feature-cards"> authored in the page HTML. We fill
+// it with <li> cards in place — the track IS the scroll/snap + layout element.
+export function renderFeatureCards(track, items) {
+  if (!track || !Array.isArray(items) || items.length === 0) return;
 
-  const grid = document.createElement("ul");
-  grid.className = "feature-card-grid";
-  grid.innerHTML = items
+  track.innerHTML = items
     .map((item, i) => cardMarkup(item, i, items.length))
     .join("");
 
-  wrapper.innerHTML = "";
-  wrapper.appendChild(grid);
-  wireCarousel(wrapper, grid);
+  wireCarousel(track);
 }
 
 // Caller (ProjectComponents.js) already runs this inside onReady.
 export function initFeatureCards() {
-  document.querySelectorAll("[data-feature-cards]").forEach((wrapper) => {
-    const raw = wrapper.getAttribute("data-feature-cards");
+  document.querySelectorAll("[data-feature-cards]").forEach((track) => {
+    const raw = track.getAttribute("data-feature-cards");
     if (!raw) return; // empty marker: a page module renders this one
     let items;
     try {
@@ -94,7 +92,7 @@ export function initFeatureCards() {
     } catch {
       return;
     }
-    renderFeatureCards(wrapper, items);
+    renderFeatureCards(track, items);
   });
 }
 
