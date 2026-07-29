@@ -31,7 +31,7 @@ nav {
   @include breakpoint(med) {
     width: 90%;
     max-width: $nav-footer-max-width;
-    gap: 0.5rem;
+    gap: space(2);
   }
 }
 
@@ -99,7 +99,7 @@ nav {
     min-height: 44px;
     width: fit-content;
     margin-bottom: 0;
-    padding: 0 0.5rem;
+    padding: 0 space(2);
   }
 }
 
@@ -149,6 +149,6 @@ nav {
   }
 
   .nav-item a {
-    padding: 0 1rem;
+    padding: 0 space(4);
   }
 }

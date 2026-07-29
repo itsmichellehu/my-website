@@ -16,7 +16,7 @@ blockquote {
     align-items: flex-start;
     align-self: auto;
     border-left: 4px solid $teal-accent;
-    padding: 0 1.25rem;
+    padding: 0 space(5);
 
     > p {
       @extend %quote-text;
@@ -28,13 +28,13 @@ blockquote {
   &_author {
     @extend %flex-row;
     align-items: center;
-    gap: 1rem;
+    gap: space(4);
     margin-bottom: 0;
   }
 
   &_author-image {
     border-radius: 25px;
-    margin: auto 0 0.5rem 0;
+    margin: auto 0 space(2) 0;
     object-fit: cover;
     width: $blockquote_author-image-size;
     height: $blockquote_author-image-size;

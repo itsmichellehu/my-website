@@ -3,8 +3,8 @@
 .card-vertical {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
-  padding: 1rem !important;
+  gap: space(2);
+  padding: space(4) !important;
   background-color: $lightest-medium-grey;
   border-radius: 0.25rem;
   height: 100%;
@@ -37,6 +37,6 @@
   font-size: $text-xl;
   color: $black;
   margin: 0;
-  margin-bottom: 0.5rem;
+  margin-bottom: space(2);
   font-weight: 500;
 }

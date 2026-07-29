@@ -6,3 +6,5 @@ node_modules/
 utils/
 docs/
 archive/
+# Disposable session cache for the task sync hook
+.remember/.task-map.json
