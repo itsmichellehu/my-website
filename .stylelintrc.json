@@ -3,7 +3,17 @@
   "plugins": ["stylelint-declaration-strict-value"],
   "rules": {
     "scale-unlimited/declaration-strict-value": [
-      ["/^margin/", "/^padding/", "gap", "row-gap", "column-gap", "font-size"],
+      [
+        "/^margin/",
+        "/^padding/",
+        "gap",
+        "row-gap",
+        "column-gap",
+        "grid-gap",
+        "grid-row-gap",
+        "grid-column-gap",
+        "font-size"
+      ],
       {
         "severity": "error",
         "disableFix": true,
