@@ -1,30 +1,60 @@
+@use "sass:math";
 @use "@abstracts/all-abstracts" as *;
 
-.test-findings_header {
-  display: flex;
-  flex-direction: row;
-  gap: space(2);
-  align-items: center;
-  margin-bottom: space(1);
+// Findings card: a titled, colour-coded list of takeaways from any research
+// or testing activity. Every case study needs the same three, so the variant
+// names describe the ROLE, not the colour:
+//
+//   .test-findings_card--positive   successes / validated designs
+//   .test-findings_card--negative   pain points / areas of improvement
+//   .test-findings_card--neutral    notes / observations
+//
+// Markup shape (cards always live inside the grid, even when there is one):
+//
+//   <div class="test-findings_grid">
+//     <div class="test-findings_card test-findings_card--positive">
+//       <div class="test-findings_header"><p class="subheading">Successes</p></div>
+//       <ul> <li>…</li> </ul>
+//     </div>
+//   </div>
+//
+// The bullet icon comes from the variant, not from markup — pages never
+// hand-write an <img>, so the icon can't drift between sections or pages.
 
-  p {
-    margin-bottom: 0;
-  }
-}
+$findings-icon-size: 1.15rem;
+$findings-icon-gap: space(3);
+
+// Width of the hanging marker column: the icon plus the gap before the text.
+$findings-icon-column: calc(#{$findings-icon-size} + #{$findings-icon-gap});
+
+// How far the marker hangs left of the text. The card's left padding is
+// widened by this much so the overhanging icon still clears the card edge.
+// Tracks the gap: widening the icon-to-text gap grows the marker column,
+// which would otherwise push the icon toward the card edge.
+$findings-icon-overhang: space(5);
 
 .test-findings {
   &_grid {
     display: grid;
-    grid-template-rows: repeat(2, auto);
+    grid-template-columns: 1fr;
     gap: space(4);
     max-width: 80rem;
-    margin: auto;
-    margin-top: space(4);
-    margin-bottom: space(12);
+    margin: space(4) auto space(12);
 
+    // Two up once there's room; a lone card spans the row on its own, so the
+    // same wrapper serves one card or a pair.
     @include breakpoint(med) {
       grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: 1fr;
+    }
+
+    // Three-card sections (successes / pain points / notes) read as one row
+    // rather than a pair plus an orphan. Opt-in via the modifier so the
+    // column count stays declared in markup, and only at `lg` — a third
+    // column at `med` squeezes every card below a comfortable measure.
+    &--thirds {
+      @include breakpoint(lg) {
+        grid-template-columns: repeat(3, 1fr);
+      }
     }
   }
 
@@ -34,15 +64,87 @@
     align-items: flex-start;
     gap: space(2);
     padding: space(6);
-    padding-left: space(6);
     border-radius: 0.25rem;
-    height: fit-content;
-    background-color: $lightest-grey;
     height: 100%;
+    background-color: $lightest-grey;
+    border-top: 0.5rem solid $medium-grey;
 
+    // The base `ul, ol` rule (_lists.scss) pulls lists left by
+    // $list-bullet-text-spacing and pads each `li` back by the same amount.
+    // Both are zeroed here so the card's own padding is the only thing
+    // setting the text edge — otherwise the hanging marker below is measured
+    // from a moved origin and the list drifts right of its heading.
     ul {
       margin: 0;
       width: 100%;
+      list-style: none;
+      padding: 0;
+
+      > li {
+        padding-left: 0;
+      }
+    }
+
+    li {
+      font-size: $text-md;
+      position: relative;
+    }
+
+    // True `list-style-position: outside`: a real outside marker sits in the
+    // list's MARGIN, so text starts at the content edge and the marker hangs
+    // to the left of it. Recreating that with a background image means
+    // indenting each item by the marker column, then pulling the whole list
+    // back by the same amount — the net text position is unchanged, and the
+    // icon overhangs. Wrapped lines still align under the first line's text.
+    //
+    // Only icon-bearing variants do this; neutral has no marker, so a
+    // reserved column would just be an empty gap.
+    //
+    &--positive ul > li,
+    &--negative ul > li {
+      padding-left: $findings-icon-column;
+      // Text keeps starting at the list's own edge while the icon overhangs
+      // into the space to its left — what an outside marker does.
+      margin-left: calc(-1 * #{$findings-icon-column});
+    }
+
+    // Only variants that define an icon get a marker. Neutral stays clean.
+    &--positive li::before,
+    &--negative li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      // Centre the icon on the first line box. $leading-normal is a percentage,
+      // so it's converted to a unitless factor before multiplying against 1em —
+      // calc() can't multiply a length by a percentage.
+      top: calc(
+        (1em * math.div($leading-normal, 100%) - #{$findings-icon-size}) / 2
+      );
+      width: $findings-icon-size;
+      height: $findings-icon-size;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+    }
+
+    &--positive {
+      border-top-color: $color-status-success;
+
+      li::before {
+        background-image: url("@assets/svg/ic-checkmark-circle.svg");
+      }
+    }
+
+    &--negative {
+      border-top-color: $invalid-red;
+
+      li::before {
+        background-image: url("@assets/svg/ic-x-circle.svg");
+      }
+    }
+
+    &--neutral {
+      border-top-color: $color-status-info;
     }
 
     .card_headline {
@@ -52,55 +154,32 @@
       font-size: $text-lg;
     }
 
-    .subheading {
-      margin-left: space(1);
-    }
-
-    li {
-      font-size: $text-md;
-    }
-
-    &.border-top-green {
-      border-top: 0.5rem solid #2b8c64;
-
-      ul {
-        list-style: none;
-        padding: 0;
-
-        li::before {
-          content: "";
-          display: inline-block;
-          width: 1rem;
-          height: 1rem;
-          background: url("/src/assets/svg/ic-checkmark-circle.svg") no-repeat
-            center / contain;
-          vertical-align: middle;
-          margin-right: space(2);
-        }
-      }
-    }
-
-    &.border-top-red {
-      border-top: 0.5rem solid $invalid-red;
-    }
-
-    &.border-top-blue {
-      border-top: 0.5rem solid #1d69dc;
-    }
+    // The left gutter is widened by the part of the marker column that hangs
+    // past the text ($findings-icon-overhang), so an overhanging icon clears
+    // the card edge instead of pressing against it. Adding the FULL column
+    // would push the heading a marker-width right and make the icons read as
+    // their own column rather than as markers on the text.
+    //
+    // Applied to EVERY variant, not just the icon-bearing ones: cards sit
+    // side by side in the grid, so a neutral card with a narrower gutter
+    // breaks the shared heading baseline across the row.
+    padding-left: calc(#{space(6)} + #{$findings-icon-overhang});
 
     @include breakpoint(med) {
-      padding-left: space(10);
+      padding: space(8);
+      padding-left: calc(#{space(8)} + #{$findings-icon-overhang});
     }
   }
 
   &_header {
-    @include flex(row, 0.5rem, center);
-  }
-}
+    display: flex;
+    flex-direction: row;
+    gap: space(2);
+    align-items: center;
+    margin-bottom: space(1);
 
-.img-design-validation,
-.img-design-invalidation {
-  width: 1.25rem;
-  height: auto;
-  align-self: center;
+    p {
+      margin-bottom: 0;
+    }
+  }
 }
