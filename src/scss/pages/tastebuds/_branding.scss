@@ -1,12 +1,12 @@
 @use "@abstracts/all-abstracts" as *;
 
 .branding-wrapper {
-	width: fit-content;
-	margin: auto;
+  width: fit-content;
+  margin: auto;
 
-	img {
-		width: 100%;
-	}
+  img {
+    width: 100%;
+  }
 }
 
 //
@@ -16,44 +16,44 @@
 // }
 
 .branding-colors_grid-container {
-	display: grid;
-	grid-template-columns: 1.5fr 1fr;
-	gap: 2rem;
-	margin-bottom: 1.5rem;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: space(8);
+  margin-bottom: space(6);
 }
 
 .branding-components_grid-container {
-	display: grid;
-	grid-template-columns: repeat(2, 1fr);
-	gap: 2rem;
-	width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: space(8);
+  width: 100%;
 }
 
 .branding-components_grid-container-02 {
-	display: grid;
-	grid-template-columns: repeat(2, auto);
-	grid-template-rows: repeat(2, auto);
-	gap: 2rem;
-	grid-template-areas: "a b" "c c";
-	width: 100%;
-	height: fit-content;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: repeat(2, auto);
+  gap: space(8);
+  grid-template-areas: "a b" "c c";
+  width: 100%;
+  height: fit-content;
 
-	> div {
-		height: fit-content;
-	}
+  > div {
+    height: fit-content;
+  }
 }
 
 .branding-components_search-bar {
-	grid-area: a;
+  grid-area: a;
 }
 
 .branding-components_badges {
-	grid-area: b;
-	width: 4rem;
+  grid-area: b;
+  width: 4rem;
 }
 
 .branding-components_8-point-grid {
-	grid-area: c;
+  grid-area: c;
 }
 
 // .img-branding-buttons {
@@ -69,108 +69,108 @@
 // }
 
 .style-guide-flex-container {
-	@include flex(row, 4rem);
-	// background-color: $light-grey;
-	border: 1px solid $medium-light-grey;
-	padding: 2rem;
-	width: fit-content;
+  @include flex(row, 4rem);
+  // background-color: $light-grey;
+  border: 1px solid $medium-light-grey;
+  padding: space(8);
+  width: fit-content;
 
-	> div > p {
-		-webkit-text-size-adjust: 100%;
-		margin-top: 0;
-		font-weight: 500;
-		letter-spacing: 0;
-		line-height: 130%;
-		font-size: 1.125rem;
-		text-transform: none;
-		margin-bottom: 1.5rem !important;
-		color: $black;
-	}
+  > div > p {
+    -webkit-text-size-adjust: 100%;
+    margin-top: 0;
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: 130%;
+    font-size: text(md);
+    text-transform: none;
+    margin-bottom: space(6) !important;
+    color: $black;
+  }
 
-	.button-styles_wrapper {
-		width: 100%;
-	}
+  .button-styles_wrapper {
+    width: 100%;
+  }
 }
 
 .color-palette {
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	grid-template-rows: auto;
-	gap: 1rem;
-	width: fit-content;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  gap: space(4);
+  width: fit-content;
 }
 
 .button-style {
-	@include flex(row, 2rem, space-between, center);
-	width: 100%;
+  @include flex(row, 2rem, space-between, center);
+  width: 100%;
 
-	p {
-		margin-bottom: 0;
-	}
+  p {
+    margin-bottom: 0;
+  }
 
-	img {
-		height: 2.5rem;
-		width: auto;
-	}
+  img {
+    height: 2.5rem;
+    width: auto;
+  }
 
-	.small-secondary {
-		height: 1rem;
-	}
+  .small-secondary {
+    height: 1rem;
+  }
 }
 
 .branding-color-swatch {
-	text-align: center;
-	width: 9rem;
-	border-radius: 0.25rem;
+  text-align: center;
+  width: 9rem;
+  border-radius: 0.25rem;
 
-	> div {
-		border-radius: 0 0 0.25rem 0.25rem;
-		border: 2px solid $light-grey;
-		border-top: 0;
-		padding: 0.5rem 0;
-		background-color: #fff;
+  > div {
+    border-radius: 0 0 0.25rem 0.25rem;
+    border: 2px solid $light-grey;
+    border-top: 0;
+    padding: space(2) 0;
+    background-color: $white;
 
-		p {
-			font-size: 0.889rem;
-			margin: 0;
-		}
-	}
+    p {
+      font-size: text(sm);
+      margin: 0;
+    }
+  }
 
-	&.yellow {
-		background-color: #ffb11a;
-	}
+  &.yellow {
+    background-color: $tastebuds-brand-yellow;
+  }
 
-	&.blue {
-		background-color: #2d8dff;
-	}
+  &.blue {
+    background-color: $tastebuds-brand-blue;
+  }
 
-	&.off-black {
-		background-color: $black;
-	}
+  &.off-black {
+    background-color: $black;
+  }
 
-	&.dark-grey {
-		background-color: $medium-grey;
-	}
+  &.dark-grey {
+    background-color: $medium-grey;
+  }
 
-	&.medium-grey {
-		background-color: $medium-light-grey;
-	}
+  &.medium-grey {
+    background-color: $medium-light-grey;
+  }
 
-	&.light-grey {
-		background-color: $lightest-grey;
-	}
+  &.light-grey {
+    background-color: $lightest-grey;
+  }
 }
 
 .img-branding-color-swatch {
-	width: 7rem;
-	border-top-left-radius: 0.25rem;
-	border-top-right-radius: 0.25rem;
+  width: 7rem;
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
 }
 
 @include breakpoint(med) {
-	.color-palette {
-		grid-template-columns: repeat(2, 1fr);
-	}
+  .color-palette {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 // Color palette and button styles

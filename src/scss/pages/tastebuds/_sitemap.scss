@@ -1,85 +1,87 @@
 @use "@abstracts/all-abstracts" as *;
 
 .sitemap {
-	&_wrapper {
-		display: grid;
-		grid-template-columns: repeat(3, 1fr);
-		grid-template-rows: auto auto;
-		gap: 0.5rem;
-		margin: auto;
-		margin-bottom: 2rem;
-		width: 95%;
-		max-width: $content-max-width;
-		align-items: stretch;
-		justify-content: stretch;
-		color: $black;
+  &_wrapper {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: auto auto;
+    gap: space(2);
+    margin: auto;
+    align-items: center;
+    justify-content: center;
 
-		@include breakpoint(lg) {
-			grid-template-columns: repeat(5, 1fr);
-			grid-template-rows: 1fr;
-			width: fit-content;
-			max-width: 95%;
-		}
+    @include breakpoint(sm) {
+      grid-template-columns: repeat(3, 1fr);
+    }
 
-		ul {
-			margin: 0;
-			width: 100%;
-		}
+    @include breakpoint(lg) {
+      grid-template-columns: repeat(5, 1fr);
+      grid-template-rows: 1fr;
+      width: fit-content;
+      max-width: 95%;
+    }
 
-		li {
-			color: $dark-grey;
-			font-size: 1rem;
-			text-wrap: nowrap;
-			padding-left: 0;
-		}
-	}
+    ul {
+      margin: 0;
+      width: 100%;
+    }
 
-	&_card {
-		@include flex(column, 0.5rem);
-		width: 100%;
-		margin: auto; // Center the container
-		padding: 1.5rem;
-		border-radius: 1rem;
-		height: 100%;
-		background-color: white;
-		background-color: $lightest-green;
-	}
+    li {
+      color: $dark-grey;
+      font-size: text(base);
+      text-wrap: nowrap;
+      padding-left: 0;
+    }
+  }
 
-	&_headline {
-		width: 100%;
-		text-align: left;
-		margin-bottom: 0;
-		color: $primary-green;
-		font-size: 1.35rem;
-		font-weight: 500;
+  &_card {
+    @include flex(column, 0.5rem);
+    width: 100%;
+    margin: auto; // Center the container
+    padding: space(6);
+    border-radius: 1rem;
+    height: 100%;
+    background-color: $white;
+    background-color: $lightest-green;
+    min-width: 14rem;
+    max-width: 17rem;
+  }
 
-		&::first-letter {
-			text-transform: capitalize;
-		}
-	}
+  &_headline {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 0;
+    color: $primary-green;
+    font-size: $text-lg;
+    font-weight: 500;
 
-	&_icon {
-		width: 2.5rem;
-		height: 2.5rem;
-		margin-bottom: 0.5rem;
-		fill: $primary-green;
-	}
+    &::first-letter {
+      text-transform: capitalize;
+    }
+  }
 
-	.img-sitemap {
-		background-color: #fff;
-		padding: 2rem;
-		margin-top: 1rem;
-		margin-bottom: 1rem;
-		width: 100%;
-	}
+  &_icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-bottom: space(2);
+    fill: $primary-green;
+  }
 
-	&_list {
-		color: $forest-green;
-		display: flex;
-		flex-direction: column;
-		gap: 0.25rem !important;
-		list-style-type: none;
-		margin: 0;
-		width: 100%;
-	}
+  .img-sitemap {
+    background-color: $white;
+    padding: space(8);
+    margin-top: space(4);
+    margin-bottom: space(4);
+    width: 100%;
+  }
+
+  &_list {
+    color: $forest-green;
+    display: flex;
+    flex-direction: column;
+    gap: space(1) !important;
+    list-style-type: none;
+    margin: 0;
+    width: 100%;
+  }
 }

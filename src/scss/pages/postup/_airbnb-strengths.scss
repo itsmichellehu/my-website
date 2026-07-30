@@ -1,112 +1,112 @@
 @use "@abstracts/all-abstracts" as *;
 
 .airbnb-strengths_headline {
-	margin-bottom: 0.5rem;
+  margin-bottom: space(2);
 
-	@include breakpoint(med) {
-		margin-bottom: 1.5rem;
-		margin-top: 2.5rem;
-	}
+  @include breakpoint(med) {
+    margin-bottom: space(6);
+    margin-top: space(10);
+  }
 }
 
 .airbnb-strengths_container {
-	@include flex(row, 1rem, center);
-	padding-top: 1rem;
-	width: 100%;
-	height: fit-content;
-	max-width: $content-max-width;
-	margin-bottom: 1.5rem;
+  @include flex(row, 1rem, center);
+  padding-top: space(4);
+  width: 100%;
+  height: fit-content;
+  max-width: $content-max-width;
+  margin-bottom: space(6);
 
-	@include breakpoint(med) {
-		align-items: center;
-		gap: 2rem;
-		margin: auto;
-		padding: 1.75rem;
-		width: 100%;
-		background-color: #f6f6f6;
-		border-radius: 1rem;
-		margin-bottom: 2rem;
-	}
+  @include breakpoint(med) {
+    align-items: center;
+    gap: space(8);
+    margin: auto;
+    padding: space(8);
+    width: 100%;
+    background-color: $lightest-medium-grey;
+    border-radius: 1rem;
+    margin-bottom: space(8);
+  }
 
-	@include breakpoint(lg) {
-		flex-direction: row;
-		gap: 3rem;
-	}
+  @include breakpoint(lg) {
+    flex-direction: row;
+    gap: space(12);
+  }
 }
 
 .img-airbnb-wrapper {
-	display: none;
-	width: 4rem;
-	height: 4rem;
-	align-items: flex-end;
-	justify-content: flex-end;
-	margin-left: 1.34rem;
+  display: none;
+  width: 4rem;
+  height: 4rem;
+  align-items: flex-end;
+  justify-content: flex-end;
+  margin-left: space(5);
 
-	@extend %show-med-flex;
+  @extend %show-med-flex;
 }
 
 .img-airbnb {
-	max-width: none;
-	width: 84.5px;
+  max-width: none;
+  width: 84.5px;
 }
 
 .ic-airbnb-strengths-checkmark {
-	display: flex;
-	width: 1rem;
-	height: 1rem;
+  display: flex;
+  width: 1rem;
+  height: 1rem;
 
-	@include breakpoint(med) {
-		width: 1.25rem;
-		height: 1.25rem;
-	}
+  @include breakpoint(med) {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
 }
 
 .airbnb-strengths_content-grid {
-	display: grid;
-	grid-template-columns: repeat(2, 1fr);
-	grid-template-rows: repeat(3, auto);
-	row-gap: 1rem;
-	column-gap: 0;
-	margin: 0;
-	width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, auto);
+  row-gap: space(4);
+  column-gap: 0;
+  margin: 0;
+  width: 100%;
 
-	div {
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-		gap: 0.75rem;
+  div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: space(3);
 
-		p {
-			margin: 0;
-			font-size: 0.889rem;
-		}
+    p {
+      margin: 0;
+      font-size: $text-sm;
+    }
 
-		img {
-			margin: 0;
-		}
-	}
+    img {
+      margin: 0;
+    }
+  }
 
-	@include breakpoint(med) {
-		grid-template-columns: repeat(2, 1fr);
-		grid-template-rows: repeat(3, auto);
-		row-gap: 1rem;
-		column-gap: 2rem;
+  @include breakpoint(med) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, auto);
+    row-gap: space(4);
+    column-gap: space(8);
 
-		div {
-			gap: 1rem;
+    div {
+      gap: space(4);
 
-			p {
-				margin: 0;
-				font-size: 1rem;
-			}
-		}
-	}
+      p {
+        margin: 0;
+        font-size: $text-base;
+      }
+    }
+  }
 
-	@include breakpoint(lg) {
-		column-gap: 2.5rem;
+  @include breakpoint(lg) {
+    column-gap: space(10);
 
-		div > p {
-			font-size: 1.125rem;
-		}
-	}
+    div > p {
+      font-size: $text-md;
+    }
+  }
 }

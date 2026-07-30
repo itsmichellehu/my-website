@@ -3,247 +3,247 @@
 @use "about" as *;
 
 .scroll-button {
-	cursor: pointer;
-	font-size: 1.125rem;
-	background-color: transparent;
-	text-decoration: none;
-	border: 0;
-	height: auto;
-	margin: 0;
-	padding: 0;
-	transition: transform 0.2s ease;
-	width: fit-content;
-	height: fit-content;
+  cursor: pointer;
+  font-size: text(md);
+  background-color: transparent;
+  text-decoration: none;
+  border: 0;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  transition: transform 0.2s ease;
+  width: fit-content;
+  height: fit-content;
 
-	&:hover {
-		transform: scale(1.05);
-	}
+  &:hover {
+    transform: scale(1.05);
+  }
 
-	img {
-		height: 3rem;
-		width: 3rem;
-		margin: auto;
-		transition: opacity 0.3s ease;
+  img {
+    height: 3rem;
+    width: 3rem;
+    margin: auto;
+    transition: opacity 0.3s ease;
 
-		&:hover {
-			opacity: 0.35;
-		}
+    &:hover {
+      opacity: 0.35;
+    }
 
-		&:active {
-			opacity: 0.75;
-		}
-	}
+    &:active {
+      opacity: 0.75;
+    }
+  }
 }
 
 .section-container {
-	padding-bottom: $about-section-padding-mobile;
+  padding-bottom: $about-section-padding-mobile;
 }
 
 .about_wrapper {
-	display: grid;
-	grid-template-areas: "b" "a" "c";
-	width: 100vw;
-	max-width: 40rem;
-	margin: auto;
-	align-items: start;
+  display: grid;
+  grid-template-areas: "b" "a" "c";
+  width: 100vw;
+  max-width: 40rem;
+  margin: auto;
+  align-items: start;
 }
 
 .about_portrait-wrapper {
-	display: flex;
-	width: 100vw; // Ensures the container takes up the full width of its parent
-	overflow: hidden; // Prevents any overflow (optional based on your design needs)
-	border-radius: 1px;
-	align-items: center;
-	justify-content: center;
-	margin: auto;
-	margin-bottom: 1.5rem;
-	height: 50vh;
-	max-height: 28rem;
-	grid-area: b;
+  display: flex;
+  width: 100vw; // Ensures the container takes up the full width of its parent
+  overflow: hidden; // Prevents any overflow (optional based on your design needs)
+  border-radius: 1px;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  margin-bottom: space(6);
+  height: 50vh;
+  max-height: 28rem;
+  grid-area: b;
 
-	img {
-		height: 100%;
-		top: 1rem;
-		max-width: none;
-	}
+  img {
+    height: 100%;
+    top: 1rem;
+    max-width: none;
+  }
 
-	@include breakpoint(med) {
-		width: 100%;
-		border-radius: 3px;
-		overflow: hidden;
-		height: fit-content;
-		margin: 0;
-		aspect-ratio: 4 / 4;
+  @include breakpoint(med) {
+    width: 100%;
+    border-radius: 3px;
+    overflow: hidden;
+    height: fit-content;
+    margin: 0;
+    aspect-ratio: 4 / 4;
 
-		img {
-			height: 100%;
-		}
-	}
+    img {
+      height: 100%;
+    }
+  }
 }
 
 .about_content-wrapper {
-	display: flex;
-	flex-direction: column;
-	width: 90vw;
-	margin: auto;
-	grid-area: a;
-	gap: 2rem;
+  display: flex;
+  flex-direction: column;
+  width: 90vw;
+  margin: auto;
+  grid-area: a;
+  gap: space(8);
 
-	p {
-		font-size: 1.125rem;
-	}
+  p {
+    font-size: text(md);
+  }
 }
 
 .about-details_container {
-	width: 100vw;
-	// background-color: $lightest-grey;
+  width: 100vw;
+  // background-color: $lightest-grey;
 }
 
 .about-details_wrapper {
-	display: grid;
-	grid-template-columns: auto;
-	grid-template-rows: repeat(6, 1fr);
-	gap: 1.5rem;
-	align-items: start;
-	justify-content: start;
-	width: 90vw;
-	max-width: 68rem;
-	margin: auto;
-	margin-top: 1rem;
-	grid-area: c;
-	// padding: 1.75rem 0;
-	// border: 1px solid $light-grey;
-	// border-width: 1px 0;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: repeat(6, 1fr);
+  gap: space(6);
+  align-items: start;
+  justify-content: start;
+  width: 90vw;
+  max-width: 68rem;
+  margin: auto;
+  margin-top: space(4);
+  grid-area: c;
+  // padding: 1.75rem 0;
+  // border: 1px solid $light-grey;
+  // border-width: 1px 0;
 }
 
 .about-details_grid-container {
-	display: grid;
-	grid-template-columns: auto 1fr;
-	grid-template-rows: auto auto;
-	/* Automatic row sizing based on content */
-	column-gap: 1.5rem;
-	row-gap: 0.25rem;
-	grid-template-areas: "a b" "a c";
-	align-items: center;
-	justify-content: center;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto auto;
+  /* Automatic row sizing based on content */
+  column-gap: space(6);
+  row-gap: space(1);
+  grid-template-areas: "a b" "a c";
+  align-items: center;
+  justify-content: center;
 
-	&:last-child {
-		margin-bottom: 0;
-	}
+  &:last-child {
+    margin-bottom: 0;
+  }
 
-	.grid-item-01 {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		grid-area: a;
-		width: 2rem;
+  .grid-item-01 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-area: a;
+    width: 2rem;
 
-		> img {
-			width: 100%;
-		}
+    > img {
+      width: 100%;
+    }
 
-		svg {
-			width: 2rem;
-			height: 2rem;
-			fill: $teal-accent;
-		}
-	}
+    svg {
+      width: 2rem;
+      height: 2rem;
+      fill: $teal-accent;
+    }
+  }
 
-	.grid-item-02 {
-		grid-area: b;
+  .grid-item-02 {
+    grid-area: b;
 
-		p {
-			color: $medium-grey;
-			font-family: Inter;
-			font-size: 0.6875rem;
-			font-style: normal;
-			font-weight: 500;
-			line-height: 100%;
-			/* 0.6875rem */
-			letter-spacing: 0.04125rem;
-			text-transform: uppercase;
-			margin-bottom: 0;
-		}
-	}
+    p {
+      color: $medium-grey;
+      font-family: Inter;
+      font-size: $text-xs;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 100%;
+      /* 0.6875rem */
+      letter-spacing: 0.04125rem;
+      text-transform: uppercase;
+      margin-bottom: 0;
+    }
+  }
 
-	.grid-item-03 {
-		grid-area: c;
+  .grid-item-03 {
+    grid-area: c;
 
-		p {
-			color: $off-black;
-			font-family: Inter;
-			font-size: 1.125rem;
-			font-style: normal;
-			line-height: 125%;
-			/* 1.09375rem */
-			margin-bottom: 0;
-		}
-	}
+    p {
+      color: $off-black;
+      font-family: Inter;
+      font-size: text(md);
+      font-style: normal;
+      line-height: 125%;
+      /* 1.09375rem */
+      margin-bottom: 0;
+    }
+  }
 }
 
 @include breakpoint(sm) {
-	.about-details_wrapper {
-		grid-template-rows: repeat(3, 1fr);
-		grid-template-columns: repeat(2, 1fr);
-		column-gap: 1.5rem;
-	}
+  .about-details_wrapper {
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: space(6);
+  }
 }
 
 @include breakpoint(med) {
-	.section-container {
-		padding: 4rem 0;
-	}
+  .section-container {
+    padding: space(16) 0;
+  }
 
-	.about_wrapper {
-		grid-template-areas: "a a b" "a a c" "a a c";
-		width: 90vw;
-		max-width: 68rem;
-		gap: 1.5rem 5rem;
-		align-items: baseline;
-		margin-top: 1rem;
-	}
+  .about_wrapper {
+    grid-template-areas: "a a b" "a a c" "a a c";
+    width: 90vw;
+    max-width: 68rem;
+    gap: space(6) space(20);
+    align-items: baseline;
+    margin-top: space(4);
+  }
 
-	.section-heading {
-		margin-bottom: 1.5rem;
-	}
+  .section-heading {
+    margin-bottom: space(6);
+  }
 
-	.about_content-wrapper {
-		width: 100%;
-		height: 100%;
-	}
+  .about_content-wrapper {
+    width: 100%;
+    height: 100%;
+  }
 
-	.about-details_wrapper {
-		grid-area: c;
-		grid-template-columns: 1fr;
-		grid-template-rows: repeat(6, 1fr);
-		width: 100%;
-		min-width: 10rem;
-	}
+  .about-details_wrapper {
+    grid-area: c;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 1fr);
+    width: 100%;
+    min-width: 10rem;
+  }
 
-	.about-details_grid-container {
-		row-gap: 0.5rem;
+  .about-details_grid-container {
+    row-gap: space(2);
 
-		.grid-item-01 img {
-			width: 1.75rem;
-			height: 1.75rem;
-		}
+    .grid-item-01 img {
+      width: 1.75rem;
+      height: 1.75rem;
+    }
 
-		.grid-item-02 p {
-			font-size: 0.8125rem;
-		}
-	}
+    .grid-item-02 p {
+      font-size: text(xs);
+    }
+  }
 }
 
 @include breakpoint(lg) {
-	#about {
-		margin-top: 3rem;
-		padding: 3rem 0;
-		padding-bottom: 3rem;
-	}
+  #about {
+    margin-top: space(12);
+    padding: space(12) 0;
+    padding-bottom: space(12);
+  }
 }
 
 @include breakpoint(xl) {
-	.about-details_wrapper {
-		column-gap: 2rem;
-	}
+  .about-details_wrapper {
+    column-gap: space(8);
+  }
 }

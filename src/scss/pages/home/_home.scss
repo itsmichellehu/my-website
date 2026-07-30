@@ -1,30 +1,30 @@
-@use "@abstracts/variables" as *;
+@use "@abstracts/all-abstracts" as *;
 
 .hero-wrapper,
 .projects-wrapper {
-	max-width: $nav-footer-max-width !important;
+  max-width: $nav-footer-max-width !important;
 }
 
 footer {
-	background-color: white;
+  background-color: $white;
 }
 
 h1 {
-	color: $black;
-	font-size: 1.625rem;
-	font-style: normal;
-	font-weight: 600;
-	line-height: 125%;
-	/* 2.03125rem */
-	letter-spacing: -0.01625rem;
+  color: $black;
+  font-size: $text-xl;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 125%;
+  /* 2.03125rem */
+  letter-spacing: -0.01625rem;
 }
 
 h2 {
-	font-size: 1.75rem;
-	line-height: 110%;
+  font-size: $text-xl;
+  line-height: 110%;
 }
 
 p {
-	color: $off-black;
-	align-self: stretch;
+  color: $off-black;
+  align-self: stretch;
 }

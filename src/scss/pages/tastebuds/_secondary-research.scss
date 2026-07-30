@@ -1,0 +1,40 @@
+@use "@abstracts/all-abstracts" as *;
+
+.finding-card {
+  border: 1px solid $medium-light-grey;
+  border-radius: $border-radius;
+  overflow: hidden;
+  margin-bottom: space(6);
+}
+
+.finding-highlight {
+  background: $lightest-green;
+  padding: space(4) space(5);
+  display: flex;
+  gap: space(3);
+  align-items: flex-start;
+}
+
+.finding-icon {
+  width: 1.125rem;
+  height: 1.125rem;
+  flex-shrink: 0;
+}
+
+.finding-insight {
+  color: $primary-green;
+  margin: 0;
+}
+
+.finding-body {
+  padding: space(4) space(5);
+}
+
+.finding-body-title {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: $text-xs;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: $subdued-green;
+  margin-bottom: space(3);
+}

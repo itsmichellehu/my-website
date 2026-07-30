@@ -1,0 +1,71 @@
+@use "@abstracts/all-abstracts" as *;
+
+.interview-quotes {
+  width: 100%;
+  max-width: $content-max-width;
+  margin: auto;
+  position: relative;
+
+  &_img-quotation-mark {
+    margin: 0 0 space(4) 0;
+    max-width: 5rem;
+  }
+
+  &_grid-container,
+  .grid-container {
+    display: grid;
+    grid-template-rows: auto;
+    width: 100%;
+    margin: auto;
+  }
+
+  &_grid-item {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+    column-gap: space(5);
+    align-items: center;
+    padding: space(8) 0;
+    row-gap: space(4);
+    width: 100%;
+
+    &:nth-child(n + 2) {
+      border-top: 1px solid $medium-light-grey;
+    }
+
+    > div:first-child {
+      p {
+        color: $black;
+        font-size: $text-lg;
+        font-weight: 500;
+        line-height: 150%;
+        margin-bottom: 0;
+        margin-top: 0;
+        text-align: left;
+      }
+    }
+
+    @include breakpoint(med) {
+      grid-template-rows: auto;
+      row-gap: space(4);
+
+      > div:first-child p {
+        font-size: $text-xl;
+      }
+    }
+  }
+
+  &_insight {
+    color: $black;
+    font-size: $text-lg;
+    font-weight: 500;
+    line-height: 150%;
+    margin-top: 0;
+    text-align: left;
+
+    @include breakpoint(med) {
+      font-size: $text-xl;
+      margin-bottom: space(8);
+    }
+  }
+}

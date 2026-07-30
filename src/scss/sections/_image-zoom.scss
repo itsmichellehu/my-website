@@ -1,0 +1,42 @@
+@use "@abstracts/all-abstracts" as *;
+
+.img-zoomable {
+  display: block;
+  width: 100%;
+  border: none;
+  padding: 0;
+  background: none;
+  font: inherit;
+  cursor: zoom-in;
+
+  img {
+    display: block;
+    width: 100%;
+  }
+}
+
+.img-zoom-popover {
+  border: none;
+  padding: 0;
+  margin: auto;
+  max-width: 90vw;
+  max-height: 90vh;
+  background: transparent;
+
+  &:popover-open {
+    display: flex;
+  }
+
+  &::backdrop {
+    background-color: rgb(0 0 0 / 50%);
+  }
+
+  img {
+    display: block;
+    max-width: 90vw;
+    max-height: 90vh;
+    width: auto;
+    height: auto;
+    cursor: zoom-out;
+  }
+}

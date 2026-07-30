@@ -1,51 +1,42 @@
 @use "@abstracts/all-abstracts" as *;
 
 .card-vertical {
-	display: flex;
-	flex-direction: column;
-	gap: 0.5rem;
-	margin: 0.5rem auto 2rem auto;
-	padding: 1rem !important;
-	background-color: #f6f6f6;
-	border-radius: 6px;
-	height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: space(2);
+  padding: space(4) !important;
+  background-color: $lightest-medium-grey;
+  border-radius: 0.25rem;
+  height: 100%;
+  color: $black;
 
-	p {
-		font-weight: 400;
-	}
+  p:last-child {
+    margin-bottom: 0;
+  }
 
-	p:last-child {
-		margin-bottom: 0;
-	}
-
-	&.subdued-green {
-		border: 2px solid $subdued-green;
-		background-color: $lightest-green;
-
-		p {
-			color: $forest-green;
-		}
-	}
+  &.subdued-green {
+    border: 2px solid $subdued-green;
+  }
 }
 
 .card-vertical_icon {
-	width: 2.5rem;
-	height: 2.5rem;
+  width: 2.5rem;
+  height: 2.5rem;
 }
 
 .card-vertical_subheader {
-	font-size: 1rem;
-	text-transform: uppercase;
-	font-family: "Source Code Pro", monospace;
-	color: $dark-grey;
-	margin: 0;
-	letter-spacing: 1px;
+  font-size: $text-base;
+  text-transform: uppercase;
+  font-family: "Source Code Pro", monospace;
+  color: $dark-grey;
+  margin: 0;
+  letter-spacing: 1px;
 }
 
 .card-vertical_headline {
-	font-size: 1.5rem;
-	color: $black;
-	margin: 0;
-	margin-bottom: 0.5rem;
-	font-weight: 500;
+  font-size: $text-xl;
+  color: $black;
+  margin: 0;
+  margin-bottom: space(2);
+  font-weight: 500;
 }

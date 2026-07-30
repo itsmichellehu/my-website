@@ -2,232 +2,232 @@
 
 // Brand colors
 .teal-accent {
-	color: $teal-accent !important;
+  color: $teal-accent !important;
 }
 
 .hot-pink {
-	color: $hot-pink-accent !important;
+  color: $hot-pink-accent !important;
 }
 
 .primary-green {
-	color: $primary-green !important;
+  color: $primary-green !important;
 }
 
 .secondary-green {
-	color: $secondary-green !important;
+  color: $secondary-green !important;
 }
 
 .forest-green {
-	color: $forest-green !important;
+  color: $forest-green !important;
 }
 
 .medium-green {
-	color: $medium-green !important;
+  color: $medium-green !important;
 }
 
 .subdued-green {
-	color: $subdued-green !important;
+  color: $subdued-green !important;
 }
 
 .lightest-green {
-	color: $lightest-green !important;
+  color: $lightest-green !important;
 }
 
 .teal {
-	color: $teal !important;
+  color: $teal !important;
 }
 
 .dark-grey {
-	color: $dark-grey !important;
+  color: $dark-grey !important;
 }
 
 .off-black {
-	color: $off-black !important;
+  color: $off-black !important;
 }
 
 .emphasis-blue {
-	color: $emphasis-blue !important;
+  color: $emphasis-blue !important;
 }
 
 .medium-grey {
-	color: $medium-grey !important;
+  color: $medium-grey !important;
 }
 
 .lightest-grey {
-	color: $lightest-grey !important;
+  color: $lightest-grey !important;
 }
 
 .invalid-red {
-	color: $invalid-red !important;
+  color: $invalid-red !important;
 }
 
 .medium-light-grey {
-	color: $medium-light-grey !important;
+  color: $medium-light-grey !important;
 }
 
 .light-grey {
-	color: $light-grey !important;
+  color: $light-grey !important;
 }
 
 .light-blue {
-	color: $light-blue !important;
+  color: $light-blue !important;
 }
 
 .link-blue {
-	color: $link-blue;
+  color: $link-blue;
 }
 
 .black {
-	color: $black !important;
+  color: $black !important;
 }
 
 .sub-grey {
-	color: $sub-grey !important;
+  color: $sub-grey !important;
 }
 
 .emphasis {
-	color: $emphasis !important;
+  color: $emphasis !important;
 }
 
 .transparent {
-	color: transparent !important;
+  color: transparent !important;
 }
 
 // Colors - greyscale
 .white {
-	color: #ffffff !important;
+  color: $white !important;
 }
 
 .pure-black {
-	color: $pure-black !important;
+  color: $pure-black !important;
 }
 
 .black {
-	color: $black !important;
+  color: $black !important;
 }
 
 .off-black {
-	color: $black !important;
+  color: $black !important;
 }
 
 .dark-grey {
-	color: $dark-grey !important;
+  color: $dark-grey !important;
 }
 
 .medium-grey {
-	color: $medium-grey !important;
+  color: $medium-grey !important;
 }
 
 .medium-light-grey {
-	color: $medium-light-grey !important;
+  color: $medium-light-grey !important;
 }
 
 .light-grey {
-	color: $light-grey !important;
+  color: $light-grey !important;
 }
 
 .lightest-grey {
-	color: $lightest-grey !important;
+  color: $lightest-grey !important;
 }
 
 .sub-grey {
-	color: $sub-grey !important;
+  color: $sub-grey !important;
 }
 
 // Colors
 .emphasis-blue {
-	color: $emphasis-blue !important;
+  color: $emphasis-blue !important;
 }
 
 .invalid-red {
-	color: $invalid-red !important;
+  color: $invalid-red !important;
 }
 
 .light-blue {
-	color: $light-blue !important;
+  color: $light-blue !important;
 }
 
 .emphasis {
-	color: $emphasis !important;
+  color: $emphasis !important;
 }
 
 .primary-bg {
-	color: $primary-bg !important;
+  color: $primary-bg !important;
 }
 
 .primary-color {
-	color: $primary-color !important;
+  color: $primary-color !important;
 }
 
 // Background colors
 
 .bg- {
-	&-transparent {
-		background-color: transparent !important;
-	}
+  &-transparent {
+    background-color: transparent !important;
+  }
 
-	&lightest-green {
-		background-color: $lightest-green !important;
-		background: $lightest-green !important;
-	}
+  &lightest-green {
+    background-color: $lightest-green !important;
+    background: $lightest-green !important;
+  }
 
-	&light-blue {
-		background-color: var(--light-blue) !important;
-	}
+  &light-blue {
+    background-color: var(--light-blue) !important;
+  }
 
-	&light-grey {
-		background-color: $light-grey !important;
-	}
+  &light-grey {
+    background-color: $light-grey !important;
+  }
 
-	&light-medium-grey {
-		background-color: $light-medium-grey !important;
-	}
+  &light-medium-grey {
+    background-color: $light-medium-grey !important;
+  }
 
-	&lightest-grey {
-		background-color: $lightest-grey !important;
-	}
+  &lightest-grey {
+    background-color: $lightest-grey !important;
+  }
 
-	&transparent {
-		background-color: transparent !important;
-	}
+  &transparent {
+    background-color: transparent !important;
+  }
 
-	&medium-grey {
-		background-color: $medium-grey !important;
-	}
+  &medium-grey {
+    background-color: $medium-grey !important;
+  }
 
-	&medium-light-grey {
-		background-color: $medium-light-grey !important;
-	}
+  &medium-light-grey {
+    background-color: $medium-light-grey !important;
+  }
 
-	&dark-grey {
-		background-color: $dark-grey !important;
-	}
+  &dark-grey {
+    background-color: $dark-grey !important;
+  }
 
-	&white {
-		background-color: #fff !important;
-	}
+  &white {
+    background-color: $white !important;
+  }
 
-	&light-blue {
-		background-color: $light-blue !important;
-	}
+  &light-blue {
+    background-color: $light-blue !important;
+  }
 
-	&lightest-grey {
-		background-color: $lightest-grey !important;
-	}
+  &lightest-grey {
+    background-color: $lightest-grey !important;
+  }
 
-	&dark-grey {
-		background-color: $dark-grey !important;
-	}
+  &dark-grey {
+    background-color: $dark-grey !important;
+  }
 
-	&off-black {
-		background-color: $black !important;
-	}
+  &off-black {
+    background-color: $black !important;
+  }
 
-	&black {
-		background-color: $black !important;
-	}
+  &black {
+    background-color: $black !important;
+  }
 
-	&f4f4f4 {
-		background-color: $light-medium-grey;
-	}
+  &f4f4f4 {
+    background-color: $light-medium-grey;
+  }
 }

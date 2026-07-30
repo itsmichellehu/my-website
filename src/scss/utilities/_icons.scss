@@ -1,120 +1,121 @@
 @use "@abstracts/all-abstracts" as *;
 
 .svg-icon {
-	color: $black;
-	text-align: left;
-	object-fit: fill;
-	width: 1rem;
-	height: 1rem;
-	margin-top: 0;
-	line-height: 175%;
+  color: $black;
+  text-align: left;
+  object-fit: fill;
+  width: 1rem;
+  height: 1rem;
+  margin-top: 0;
+  line-height: 175%;
 
-	&:hover {
-		cursor: pointer;
-	}
+  &:hover {
+    cursor: pointer;
+  }
 
-	&.sparkle {
-		color: var(--accent-yellow);
-		min-width: 24px;
-		max-width: 24px;
-		min-height: 24px;
-		max-height: 24px;
-	}
+  &.sparkle {
+    color: var(--accent-yellow);
+    min-width: 24px;
+    max-width: 24px;
+    min-height: 24px;
+    max-height: 24px;
+  }
 
-	&.friends,
-	&.search {
-		width: 22px;
-		height: 22px;
-	}
+  &.friends,
+  &.search {
+    width: 22px;
+    height: 22px;
+  }
 
-	&.user {
-		height: 26px;
-	}
+  &.user {
+    height: 26px;
+  }
 
-	&.blue {
-		color: $emphasis-blue;
-	}
+  &.blue {
+    color: $emphasis-blue;
+  }
 
-	&.arrow {
-		color: var(--off-black);
-		width: 20px;
-		height: 20px;
-		margin-top: 4px;
-		transform: rotate(90deg);
-	}
+  &.arrow {
+    color: var(--off-black);
+    width: 20px;
+    height: 20px;
+    margin-top: space(1);
+    transform: rotate(90deg);
+  }
 }
 
 .ic-arrow_jump-to-section {
-	vertical-align: baseline;
-	transform: rotate(-45deg) translateX(-0.6rem);
-	margin-left: 0.25rem;
-	margin-top: 4px;
-	margin-left: 2px;
+  vertical-align: baseline;
+  transform: rotate(-45deg) translateX(-0.6rem);
+  margin-left: space(1);
+  margin-top: space(1);
+  // stylelint-disable-next-line scale-unlimited/declaration-strict-value
+  margin-left: 2px;
 }
 
 .ic-arrow-east {
-	font-size: 2rem;
-	margin-bottom: 0;
+  font-size: $text-2xl;
+  margin-bottom: 0;
 }
 
 .ic-material-symbol-check {
-	transform: translateY(6px);
+  transform: translateY(6px);
 }
 
 .icon {
-	display: inline-block;
+  display: inline-block;
 
-	&-xxs {
-		width: 0.5rem;
-		height: 0.5rem;
-	}
-	&-xs {
-		width: 1rem;
-		height: 1rem;
-	}
-	&-sm {
-		width: 1.5rem;
-		height: 1.5rem;
-	}
-	&-md {
-		width: 2rem;
-		height: 2rem;
-	}
-	&-lg {
-		width: 2.5rem;
-		height: 2.5rem;
-	}
-	&-xl {
-		width: 3rem;
-		height: 3rem;
-	}
-	&-xxl {
-		width: 4rem;
-		height: 4rem;
-	}
-	&-huge {
-		width: 5rem;
-		height: 5rem;
-	}
+  &-xxs {
+    width: 0.5rem;
+    height: 0.5rem;
+  }
+  &-xs {
+    width: 1rem;
+    height: 1rem;
+  }
+  &-sm {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  &-md {
+    width: 2rem;
+    height: 2rem;
+  }
+  &-lg {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+  &-xl {
+    width: 3rem;
+    height: 3rem;
+  }
+  &-xxl {
+    width: 4rem;
+    height: 4rem;
+  }
+  &-huge {
+    width: 5rem;
+    height: 5rem;
+  }
 }
 
 .ic-chevron-arrow {
-	display: inline-block;
-	width: 1.5rem;
-	height: 1.5rem;
-	background-color: currentColor;
-	mask: url("@assets/svg/ic-chevron-arrow.svg") no-repeat center;
-	mask-size: contain;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: currentColor;
+  mask: url("@assets/svg/ic-chevron-arrow.svg") no-repeat center;
+  mask-size: contain;
 
-	&.east {
-		transform: rotate(90deg);
-	}
+  &.east {
+    transform: rotate(90deg);
+  }
 
-	&.west {
-		transform: rotate(-90deg);
-	}
+  &.west {
+    transform: rotate(-90deg);
+  }
 
-	&.north {
-		transform: rotate(180deg);
-	}
+  &.north {
+    transform: rotate(180deg);
+  }
 }

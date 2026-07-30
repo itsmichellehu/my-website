@@ -1,19 +1,19 @@
-@use "@abstracts/breakpoints-mixins" as *;
+@use "@abstracts/all-abstracts" as *;
 
 #research-process {
-	header h2 {
-		margin-bottom: 0;
-	}
+  header h2 {
+    margin-bottom: 0;
+  }
 }
 
 .design-sprint-graphic {
-	margin: 2rem auto 1.5rem auto;
+  margin: space(8) auto space(6) auto;
 
-	img {
-		width: 100%;
-	}
+  img {
+    width: 100%;
+  }
 
-	@include breakpoint(med) {
-		margin: 1rem auto 2rem auto;
-	}
+  @include breakpoint(med) {
+    margin: space(4) auto space(8) auto;
+  }
 }

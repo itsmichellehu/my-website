@@ -1,0 +1,37 @@
+{
+  "customSyntax": "postcss-scss",
+  "plugins": ["stylelint-declaration-strict-value"],
+  "rules": {
+    "scale-unlimited/declaration-strict-value": [
+      [
+        "/^margin/",
+        "/^padding/",
+        "gap",
+        "row-gap",
+        "column-gap",
+        "grid-gap",
+        "grid-row-gap",
+        "grid-column-gap",
+        "font-size"
+      ],
+      {
+        "severity": "error",
+        "disableFix": true,
+        "ignoreValues": [
+          "0",
+          "auto",
+          "inherit",
+          "initial",
+          "unset",
+          "/^100%$/",
+          "/space\\(/",
+          "/text\\(/",
+          "/calc\\(/",
+          "/clamp\\(/",
+          "/min\\(/",
+          "/max\\(/"
+        ]
+      }
+    ]
+  }
+}

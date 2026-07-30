@@ -2,11 +2,11 @@
 
 // Variables
 $hero-icon-button-size: 2rem;
-$hero-buttons-gap-bp-med: 1rem;
+$hero-buttons-gap-bp-med: space(4);
 $hero-icon-button-size-bp-med: 2.25rem;
-$hero-buttons-gap-bp-lg: 1rem;
+$hero-buttons-gap-bp-lg: space(4);
 $hero-icon-button-size-bp-lg: 2.25rem;
-$hero-buttons-gap-bp-xl: 1rem;
+$hero-buttons-gap-bp-xl: space(4);
 $hero-icon-button-size-bp-xl: 3rem;
 $edu-exp-width-lg: 11.1rem;
 $edu-exp-width-xl: 12rem;
@@ -38,22 +38,22 @@ $edu-exp-height-xl: 3rem;
   flex-direction: column;
   width: 100%;
   border-radius: 0.25rem;
-  gap: 3rem;
-  margin-bottom: 3rem;
+  gap: space(12);
+  margin-bottom: space(12);
   padding-top: $navbar-mobile-height;
 
   @include breakpoint(med) {
-    padding: 5rem 0;
-    padding-top: calc(#{$navbar-desktop-height} + 3rem);
+    padding: space(20) 0;
+    padding-top: calc(#{$navbar-desktop-height} + #{space(12)});
     margin: auto;
   }
 
   @include breakpoint(lg) {
-    padding-top: calc(#{$navbar-desktop-height} + 4rem);
+    padding-top: calc(#{$navbar-desktop-height} + #{space(16)});
   }
 
   @include breakpoint(xl) {
-    gap: 2rem;
+    gap: space(8);
   }
 
   @include breakpoint(huge) {
@@ -71,10 +71,10 @@ $edu-exp-height-xl: 3rem;
     transition: align-items 0.3s ease-in-out;
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: space(6);
 
     @include breakpoint(sm) {
-      gap: 1.75rem;
+      gap: space(8);
     }
 
     @include breakpoint(med) {
@@ -83,7 +83,7 @@ $edu-exp-height-xl: 3rem;
       // grid-template-areas: "b a";
       // grid-template-columns: 4fr 3fr;
       // grid-template-rows: auto;
-      gap: 2rem;
+      gap: space(8);
       justify-content: space-between;
     }
 
@@ -133,7 +133,7 @@ $edu-exp-height-xl: 3rem;
       display: flex;
       // overflow: hidden;
       // margin: 0 auto 0 5rem;
-      margin: -2.5rem auto 0;
+      margin: -space(10) auto 0;
       aspect-ratio: 4 / 5;
       object-fit: cover;
       width: 100%;
@@ -152,19 +152,19 @@ $edu-exp-height-xl: 3rem;
     justify-self: center;
     width: 90%;
     max-width: 37rem;
-    gap: 1.5rem;
+    gap: space(6);
     margin: 0 auto;
 
     @include breakpoint(med) {
       width: fit-content;
       max-width: 100%;
       margin-right: auto;
-      gap: 1.5rem;
+      gap: space(6);
     }
 
     @include breakpoint(lg) {
       height: fit-content;
-      gap: 3rem;
+      gap: space(12);
       width: fit-content;
       max-width: none;
     }
@@ -178,7 +178,7 @@ $edu-exp-height-xl: 3rem;
   &-tagline {
     grid-area: c;
     color: $off-black;
-    font-size: 1.5rem;
+    font-size: $text-xl;
     font-weight: 400;
     line-height: 130%;
     margin-bottom: 0;
@@ -204,7 +204,7 @@ $edu-exp-height-xl: 3rem;
     font-size: clamp(1.125rem, 3.5vw, 1.5rem) !important;
 
     @include breakpoint(lg) {
-      margin-bottom: 3rem;
+      margin-bottom: space(12);
     }
   }
 
@@ -213,34 +213,35 @@ $edu-exp-height-xl: 3rem;
     line-height: 150%;
     /* 1.925rem */
     letter-spacing: -0.02rem;
-    margin-bottom: 0.5rem;
-    font-size: 1.125rem;
+    margin-bottom: space(2);
+    font-size: text(md);
     max-width: 44rem;
 
     @include breakpoint(med) {
-      font-size: 1rem;
+      font-size: text(base);
       margin-bottom: 0;
     }
 
     @include breakpoint(lg) {
-      font-size: 1.125rem;
+      font-size: text(md);
     }
 
     @include breakpoint(xl) {
-      font-size: 1.375rem;
+      font-size: $text-lg;
     }
   }
 
   &-experience {
     display: grid;
     align-items: center;
+    // stylelint-disable-next-line scale-unlimited/declaration-strict-value
     gap: 0.125rem;
     grid-template-columns: 2px 1fr;
     grid-template-rows: repeat(2, auto);
     grid-template-areas:
       "c a"
       "c b";
-    column-gap: 0.75rem;
+    column-gap: space(3);
     justify-content: center;
     margin-right: auto;
 
@@ -254,13 +255,13 @@ $edu-exp-height-xl: 3rem;
     // 		}
 
     p {
-      font-size: 14px;
+      font-size: $text-sm;
       line-height: 155%;
       margin-bottom: 0;
       height: fit-content;
 
       @include breakpoint(xl) {
-        font-size: 1rem;
+        font-size: text(base);
         letter-spacing: -0.02rem;
       }
     }
@@ -317,15 +318,15 @@ $edu-exp-height-xl: 3rem;
   display: none;
   flex-direction: row;
   align-items: center;
-  gap: 0.5rem;
-  font-size: 1rem !important;
+  gap: space(2);
+  font-size: text(base) !important;
   font-weight: 450;
   line-height: 130%;
 
   p {
     margin-bottom: 0;
     text-wrap: nowrap;
-    color: #888;
+    color: $medium-grey;
   }
 
   .text-work-availability {
@@ -337,8 +338,8 @@ $edu-exp-height-xl: 3rem;
   }
 
   @include breakpoint(lg) {
-    gap: 0.75rem;
-    font-size: 1.125rem;
+    gap: space(3);
+    font-size: text(md);
   }
 }
 
@@ -346,12 +347,12 @@ $edu-exp-height-xl: 3rem;
 .text-current-location,
 .text-slash {
   @include breakpoint(lg) {
-    font-size: 1.2rem;
+    font-size: $text-lg;
     line-height: 100%;
   }
 
   @include breakpoint(xl) {
-    font-size: 1.25rem;
+    font-size: $text-lg;
     line-height: 100%;
   }
 
@@ -361,21 +362,22 @@ $edu-exp-height-xl: 3rem;
 }
 
 .work-location-wrapper {
-  margin-bottom: 0.5rem;
+  margin-bottom: space(2);
 
   @include breakpoint(lg) {
-    font-size: 1.125rem;
+    font-size: text(md);
   }
 }
 
 .green-dot {
   width: 8px;
   height: 8px;
-  background-color: #71c4bd;
+  background-color: $teal-accent;
   border-radius: 50%;
   display: inline-block;
   animation: pulse 2.5s infinite;
   box-shadow: 0px 0px 8px rgba(32, 217, 198, 0.75);
+  // stylelint-disable-next-line scale-unlimited/declaration-strict-value
   margin-left: 0.15rem;
 }
 
@@ -386,7 +388,7 @@ $edu-exp-height-xl: 3rem;
   border-radius: 4px;
   width: $hero-icon-button-size;
   height: $hero-icon-button-size;
-  padding: 0.5rem;
+  padding: space(2);
   margin: 0;
   background-color: $black;
   border: 0;
@@ -428,7 +430,7 @@ $edu-exp-height-xl: 3rem;
   justify-content: end;
   width: 90%;
   z-index: 4;
-  bottom: 2rem;
+  bottom: space(8);
   margin: auto;
 
   @include breakpoint(xl) {

@@ -1,26 +1,20 @@
-// ProjectAccordion.js
-function toggleAccordion(header) {
-  const accordion = header.parentElement;
-  const content = accordion.querySelector('.accordion__content');
-  const icon = header.querySelector('.accordion__icon');
+import "./_ProjectAccordion.scss";
 
-  content.classList.toggle('active');
-  icon.classList.toggle('rotate');
-
-  if (content.classList.contains('active')) {
-    content.style.maxHeight = content.scrollHeight + 'px';
-  } else {
-    content.style.maxHeight = 0;
-  }
-}
-
+// Caller (ProjectComponents.js) already runs this inside onReady.
 function initializeAccordion() {
-  document.querySelectorAll('.accordion').forEach(accordion => {
-    const header = accordion.querySelector('.accordion__header');
-    header.addEventListener('click', function () {
-      toggleAccordion(this);
+  document.querySelectorAll(".accordion").forEach((accordion) => {
+    const header = accordion.querySelector(".accordion_header");
+    const content = accordion.querySelector(".accordion_content");
+    if (!header || !content) return;
+    header.addEventListener("click", () => {
+      accordion.classList.toggle("accordion-active");
+      if (accordion.classList.contains("accordion-active")) {
+        content.style.maxHeight = content.scrollHeight + "px";
+      } else {
+        content.style.maxHeight = 0;
+      }
     });
   });
 }
 
-export { toggleAccordion, initializeAccordion };
+export { initializeAccordion };

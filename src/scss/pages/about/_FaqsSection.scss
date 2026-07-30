@@ -2,21 +2,21 @@
 
 // FAQs
 #faqs {
-	display: none;
+  display: none;
 
-	h2 {
-		margin-bottom: 1.5rem;
-	}
+  h2 {
+    margin-bottom: space(6);
+  }
 }
 
 .faqs-wrapper {
-	max-width: 42rem;
-	margin: 2.5rem auto;
+  max-width: 42rem;
+  margin: space(10) auto;
 }
 
 @include breakpoint(med) {
-	.faqs-wrapper {
-		max-width: $content-max-width;
-		margin: 5rem auto;
-	}
+  .faqs-wrapper {
+    max-width: $content-max-width;
+    margin: space(20) auto;
+  }
 }

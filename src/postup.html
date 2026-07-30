@@ -51,7 +51,6 @@
       href="https://michellehu.com/assets/images/logo-mhu-black-192.png"
       sizes="192x192"
     />
-    <script src="js/main.[hash].js" defer type="text/javascript"></script>
     <style>
       main,
       nav,
@@ -90,15 +89,14 @@
         transition: opacity 0.3s ease-in-out;
       }
     </style>
-    <link rel="stylesheet" href="css/main.[hash].css" type="text/css" />
   </head>
   <body data-page="postup" class="with-loader" data-nav-transparent>
     <div class="loading-screen">
       <p class="loading-text">0%</p>
     </div>
-    <!-- <div class="progress-bar-container">
-			<div class="progress-bar"></div>
-		</div> -->
+    <div class="progress-bar__container">
+      <div class="progress-bar"></div>
+    </div>
     <main id="content">
       <section id="hero" data-nav-color="#80ada1">
         <div class="project-hero">
@@ -163,11 +161,11 @@
                   </ul>
                 </div>
                 <div
-                  class="overview__details-container overview__details-container-postup"
+                  class="overview__details-container overview__details-container--postup"
                 >
                   <div class="overview__details-list">
                     <p
-                      class="overview__details-headline overview__details-headline-tools"
+                      class="overview__details-headline overview__details-headline--tools"
                     >
                       Tools
                     </p>
@@ -205,7 +203,7 @@
         id="intro"
         class="section-container bg-lightest-grey border-0 equal-padding"
       >
-        <section id="the-challenge" class="content-wrapper mt-0">
+        <section id="the-challenge" class="layout">
           <header class="header-container">
             <h2 class="intro-headline">The Challenge</h2>
           </header>
@@ -222,7 +220,7 @@
             To address this need, PostUp required a subscription-based mobile
             solution in 5 days with the following scope and constraints:
           </p>
-          <div class="flex-col gap-16 flex-row-sm mt-32 a-i-stretch">
+          <div class="popout flex-col gap-16 flex-row-sm a-i-stretch">
             <div class="card project-proposal">
               <div class="card_icon-wrapper">
                 <img
@@ -1053,78 +1051,7 @@
             but 2) lightning demos suggest they might be expected, given their
             presence in competitor tools.
           </p>
-          <div class="stashed-features_wrapper">
-            <ul class="stashed-features_grid-container">
-              <li class="card stashed-features first-child">
-                <div class="card_icon-wrapper">
-                  <img
-                    class="card_icon"
-                    loading="lazy"
-                    alt=""
-                    src="assets/svg/postup/stashed-feature-seating.svg"
-                  />
-                </div>
-                <div class="card_content">
-                  <p class="card_heading">Seating availability</p>
-                  <p class="card_body">
-                    This was mentioned by one interviewee. It could expedite a
-                    remote worker's journey and monetized.
-                  </p>
-                </div>
-              </li>
-              <li class="card stashed-features">
-                <div class="card_icon-wrapper">
-                  <img
-                    src="assets/svg/postup/stashed-feature-reservation.svg"
-                    alt=""
-                    class="card_icon"
-                    loading="lazy"
-                  />
-                </div>
-                <div class="card_content">
-                  <p class="card_heading">Reservation system</p>
-                  <p class="card_body">
-                    This has great potential but its rarity in coffee shops is a
-                    challenge. It also could be monetized.
-                  </p>
-                </div>
-              </li>
-              <li class="card stashed-features">
-                <div class="card_icon-wrapper">
-                  <img
-                    src="assets/svg/postup/stashed-feature-search-bar.svg"
-                    alt=""
-                    class="card_icon"
-                    loading="lazy"
-                  />
-                </div>
-                <div class="card_content">
-                  <p class="card_heading">Home search bar</p>
-                  <p class="card_body">
-                    As a common user route, I anticipated some users opting for
-                    this route instead of the search page.
-                  </p>
-                </div>
-              </li>
-              <li class="card stashed-features last-child">
-                <div class="card_icon-wrapper">
-                  <img
-                    src="assets/svg/postup/stashed-feature-graph.svg"
-                    alt=""
-                    class="card_icon"
-                    loading="lazy"
-                  />
-                </div>
-                <div class="card_content">
-                  <p class="card_heading">Popular times</p>
-                  <p class="card_body">
-                    Given its popularity in other apps, it could enhance the UX
-                    and boost competitive advantage.
-                  </p>
-                </div>
-              </li>
-            </ul>
-          </div>
+          <ul class="feature-cards" data-feature-cards></ul>
           <p>
             Instead of testing these assumptions directly, I planned to ask
             questions like “What did you expect to see but didn’t?” and "What
@@ -1334,7 +1261,7 @@
               prototype! They didn't find any essential details missing and
               there was minimal confusion.
             </p>
-            <div class="test-findings-grid mv-32">
+            <div class="test-findings_grid mv-32">
               <div class="test-findings_card border-top-green">
                 <div class="test-findings_header">
                   <p class="subheading">Design validation</p>
@@ -1683,7 +1610,7 @@
       <section id="final-prototype" class="section-container equal-padding">
         <h2 class="text-center">Final Prototype</h2>
         <div class="container-full-width pv-0 mv-0 bg-transparent">
-          <div class="final-prototype_grid-container">
+          <div class="final-prototype_grid-container-comparison">
             <div class="final-prototype_content">
               <h3 class="final-prototype_headline hide-med">
                 With on-page amenity filters, search and compare workspaces
@@ -1727,7 +1654,7 @@
               </div>
             </div>
           </div>
-          <div class="final-prototype_grid-container the-final-prototype">
+          <div class="final-prototype_grid-container-comparison">
             <div class="final-prototype_content">
               <h3 class="final-prototype_headline hide-med">
                 Assess workspaces even quicker with more transparency and
@@ -1774,9 +1701,9 @@
               </div>
             </div>
           </div>
-          <div class="final-prototype_grid-container the-final-prototype">
+          <div class="final-prototype_grid-container-comparison">
             <div class="final-prototype_content">
-              <h3 class="final-sprototype_headline hide-med">
+              <h3 class="final-prototype_headline hide-med">
                 With more workspace details and table reservations, there are no
                 more surprises
               </h3>
@@ -1991,88 +1918,6 @@
         </div>
       </section>
     </main>
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        var accordions = document.querySelectorAll(".accordion");
-
-        accordions.forEach(function (accordion) {
-          accordion.addEventListener("click", function () {
-            // Toggle the active class for the clicked accordion
-            this.classList.toggle("accordion-active");
-
-            // Find the corresponding content section
-            var content = this.querySelector(".accordion_content");
-
-            // Expand if active, collapse if not
-            if (this.classList.contains("accordion-active")) {
-              content.style.maxHeight = content.scrollHeight + "px";
-            } else {
-              content.style.maxHeight = 0;
-            }
-          });
-        });
-      });
-    </script>
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        const container = document.querySelector(".stashed-features_wrapper");
-        const cards = document.querySelectorAll(".stashed-features_card");
-        if (!container || cards.length === 0) return;
-
-        let cardWidth = cards[0].getBoundingClientRect().width;
-        let currentIndex = 0;
-
-        const handleWheel = (event) => {
-          event.preventDefault();
-          cardWidth = cards[0].getBoundingClientRect().width; // keep responsive widths
-          currentIndex =
-            event.deltaY > 0
-              ? Math.min(currentIndex + 1, cards.length - 1)
-              : Math.max(currentIndex - 1, 0);
-          container.scrollTo({
-            left: cardWidth * currentIndex,
-            behavior: "smooth",
-          });
-        };
-
-        container.addEventListener("wheel", handleWheel, { passive: false });
-        window.addEventListener("resize", () => {
-          cardWidth = cards[0].getBoundingClientRect().width;
-        });
-      });
-    </script>
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        const prevButton = document.getElementById("prevButton");
-        const nextButton = document.getElementById("nextButton");
-        const carousel = document.querySelector(
-          ".stashed-features_grid-container",
-        );
-        if (!prevButton || !nextButton || !carousel) return;
-
-        const updatePrevButtonOpacity = () => {
-          prevButton.style.transition = "opacity 0.3s ease-in-out";
-          prevButton.style.opacity = carousel.scrollLeft === 0 ? "0.5" : "1";
-        };
-
-        updatePrevButtonOpacity();
-
-        prevButton.addEventListener("click", () => {
-          if (carousel.scrollLeft > 0) {
-            carousel.scrollBy({
-              left: -carousel.clientWidth,
-              behavior: "smooth",
-            });
-          }
-        });
-
-        nextButton.addEventListener("click", () => {
-          carousel.scrollBy({ left: carousel.clientWidth, behavior: "smooth" });
-        });
-
-        carousel.addEventListener("scroll", updatePrevButtonOpacity);
-      });
-    </script>
     <script>
       vid = document.querySelector("video");
       vid.disablePictureInPicture = true;

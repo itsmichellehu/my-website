@@ -1,16 +1,21 @@
 import { BackToTopButton } from "./BackToTopButton/BackToTopButton";
 import initializeProgressBar from "./ProjectProgressBar/ProjectProgressBar";
-import "@scss/sections/_all-sections.scss";
-import "./ProjectComponents.scss";
-import initTabsContainers from "./TabsContainer/TabsContainer";
 
-// import { initializeAccordion } from './ProjectAccordion/ProjectAccordion';
-import enableImageZoom from "./ImageZoom/ImageZoom";
+import { initializeAccordion } from "./ProjectAccordion/ProjectAccordion";
+import initFeatureCards from "./FeatureCard/FeatureCard";
 
-document.addEventListener("DOMContentLoaded", function () {
-	initializeProgressBar();
-	BackToTopButton();
-	// initializeAccordion();
-	enableImageZoom();
-	initTabsContainers();
-});
+import "./Blockquote/Blockquote";
+import "./GridAsideRight/GridAsideRight";
+import "./UsabilityTestFindingsCard/UsabilityTestFindingsCard";
+
+import { onReady } from "@js/utils/dom-events";
+
+// Shared init registry for case-study pages (tastebuds, postup, boardspace).
+const domReadyInits = [
+  initializeProgressBar,
+  BackToTopButton,
+  initializeAccordion,
+  initFeatureCards,
+];
+
+onReady(() => domReadyInits.forEach((init) => init()));

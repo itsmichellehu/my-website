@@ -1,48 +1,48 @@
 @use "@abstracts/all-abstracts" as *;
 
 .notion-affinity-maps_container {
-	width: 100vw;
-	// background-color: $lightest-grey;
+  width: 100vw;
+  // background-color: $lightest-grey;
 }
 
 .notion-affinity-maps_grid {
-	display: grid;
-	grid-template-columns: 1fr;
-	grid-template-rows: repeat(4, auto);
-	grid-gap: 1rem;
-	width: 80%;
-	margin: auto;
-	margin-bottom: 1rem;
-	// background-color: $lightest-grey;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(4, auto);
+  grid-gap: space(4);
+  width: 80%;
+  margin: auto;
+  margin-bottom: space(4);
+  // background-color: $lightest-grey;
 
-	.notion-affinity-map_grid-item {
-		background-color: #fff;
-		padding: 1rem;
-		border: 1.5px solid $light-grey;
+  .notion-affinity-map_grid-item {
+    background-color: $white;
+    padding: space(4);
+    border: 1.5px solid $light-grey;
 
-		&.bg-light-green {
-			background-color: #eef3ec;
-			padding: 1rem;
-			border: 1.5px solid $light-grey;
-		}
+    &.bg-light-green {
+      background-color: $lightest-green;
+      padding: space(4);
+      border: 1.5px solid $light-grey;
+    }
 
-		img {
-			width: 100%;
-		}
-	}
+    img {
+      width: 100%;
+    }
+  }
 
-	.bg-white-zoomed {
-		background-color: #fff;
-		padding: 1rem;
-		border: 1.5px solid $light-grey;
-	}
+  .bg-white-zoomed {
+    background-color: $white;
+    padding: space(4);
+    border: 1.5px solid $light-grey;
+  }
 
-	@include breakpoint(lg) {
-		grid-template-columns: repeat(2, 1fr);
-		grid-template-rows: 1fr 1fr;
-	}
+  @include breakpoint(lg) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr 1fr;
+  }
 }
 
 .height-100 {
-	height: 100%;
+  height: 100%;
 }

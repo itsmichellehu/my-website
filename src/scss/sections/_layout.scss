@@ -1,0 +1,125 @@
+@use "@abstracts/all-abstracts" as *;
+
+// Grid breakout layout: the section owns a centered grid with named
+// column tracks; children opt into a width by role. Replaces the
+// dual-role .content-wrapper + width-modifier pattern.
+// Pattern reference: Ryan Mulligan, "Layout Breakouts with CSS Grid".
+//
+//   <section class="layout">
+//     <p>…</p>                        // content column (default)
+//     <div class="popout">…</div>     // wider showcase
+//     <figure class="full">…</figure> // edge to edge
+//   </section>
+//
+// Track model (symmetric, centered): nested start/end line pairs.
+// content = $layout-content, popout = $layout-popout, full = $layout-full.
+// Each outer level adds a flanking track equal to half the width
+// difference to the next inner level. Line names match the class names,
+// so .popout → grid-column: popout and .full → grid-column: full.
+
+// Between-section rhythm: a .layout section gets consistent space above it
+// when it follows another section. Adjacent-sibling (+) so the first
+// section never gets a top margin, and so a migrated .layout still spaces
+// correctly from a legacy .content-wrapper / .section-container neighbor.
+.layout + .layout,
+.content-wrapper + .layout,
+.section-container + .layout,
+.layout + .content-wrapper,
+.layout + .section-container {
+  margin-top: $space-section;
+}
+
+.layout {
+  $popout-pad: calc((#{$layout-popout} - #{$layout-content}) / 2);
+  $full-pad: calc((#{$layout-full} - #{$layout-popout}) / 2);
+
+  // Container-owned vertical rhythm: children are spaced consistently by
+  // the grid, so individual elements don't carry their own margins. This
+  // is what keeps long case studies even. Legacy elements (base `p`,
+  // `.header-container` > heading) still carry their own margin-bottom
+  // from the pre-.layout system; zero it here so it doesn't stack with
+  // row-gap. Scoped to .layout's direct children only — the same
+  // selectors keep their margin everywhere still on the legacy system.
+  > * {
+    margin-bottom: 0;
+  }
+
+  row-gap: $space-block;
+
+  display: grid;
+  grid-template-columns:
+    [full-start] minmax($layout-gutter, 1fr)
+    minmax(0, $full-pad)
+    [popout-start] minmax(0, $popout-pad)
+    [content-start] min(#{$layout-content}, calc(100% - 2 * #{$layout-gutter}))
+    [content-end]
+    minmax(0, $popout-pad) [popout-end]
+    minmax(0, $full-pad)
+    minmax($layout-gutter, 1fr) [full-end];
+
+  > * {
+    grid-column: content;
+  }
+
+  > .popout {
+    grid-column: popout;
+  }
+
+  > .full {
+    grid-column: full;
+  }
+
+  // full-bleed media should fill its track with no inherited gutters
+  > .full > img,
+  > .full > figure {
+    width: 100%;
+    margin: 0;
+  }
+
+  // Group: a wrapper that spans the whole grid and re-exposes the SAME
+  // column tracks to its own children via subgrid. Use it when a logical
+  // block needs its own element (e.g. an #id anchor) but its children
+  // still need to break out: text stays in `content` (45rem), media can
+  // use `.popout` / `.full`. Without this, anything nested in a plain div
+  // is trapped at the div's width.
+  > .layout__group {
+    grid-column: full;
+    display: grid;
+    grid-template-columns: subgrid;
+    row-gap: $space-block;
+
+    > * {
+      grid-column: content;
+    }
+
+    > .popout {
+      grid-column: popout;
+    }
+
+    > .full {
+      grid-column: full;
+    }
+  }
+}
+
+// Stack: container-owned vertical rhythm for non-grid contexts. Spaces
+// direct children consistently so elements stop carrying their own
+// margins. Tune the gap per use with the modifiers.
+// Pattern reference: Every Layout, "The Stack".
+.stack {
+  display: flex;
+  flex-direction: column;
+  gap: $space-element;
+
+  &--tight {
+    gap: $space-tight;
+  }
+
+  &--block {
+    gap: $space-block;
+  }
+
+  &--section {
+    gap: $space-section;
+  }
+}

@@ -59,6 +59,12 @@ module.exports = {
       },
       {
         test: /\.svg$/i,
+        resourceQuery: /inline/,
+        type: "asset/source",
+      },
+      {
+        test: /\.svg$/i,
+        resourceQuery: { not: [/inline/] },
         type: "asset/resource",
       },
       {

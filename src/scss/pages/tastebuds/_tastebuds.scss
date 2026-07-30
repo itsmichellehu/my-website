@@ -60,15 +60,16 @@ $tab-border-radius: 2rem;
 // }
 
 .header-container.tastebuds {
-	margin-bottom: 1rem;
+  margin-bottom: space(4);
 }
 
-body, .project-hero {
-	background-color: $tastebuds-hero-bg;
+body,
+.project-hero {
+  background-color: $tastebuds-hero-bg;
 }
 
 #the-constraints {
-	background-color: $lightest-grey;
+  background-color: $lightest-grey;
 }
 
 // .navbar-top {
@@ -91,6 +92,6 @@ body, .project-hero {
 // }
 
 .user-flow-tabs-container {
-	width: 95vw;
-	max-width: 1024px;
+  width: 95vw;
+  max-width: 1024px;
 }

@@ -41,6 +41,12 @@ $content-max-width: 45rem;
 $outline-stroke: 1.25px;
 $content-max-width-lg: 65rem;
 
+// Flow layout (grid breakout) — width by content role
+$layout-content: 45rem;
+$layout-popout: 65rem;
+$layout-full: 90rem;
+$layout-gutter: 1.25rem;
+
 // Components
 $nav-footer-max-width: 82rem;
 $wireframe-max-height: 40rem;
@@ -49,11 +55,13 @@ $large-button-active-color: $primary-green;
 // Type
 $main-font: "Inter";
 $fixed-shadow:
-	-1px -1px 2px rgba(49, 49, 49, 0.05),
-	1px 1px 2px rgba(0, 0, 0, 0.5),
-	inset -1px -1px 3px rgba(0, 0, 0, 0.05),
-	inset 1px 1px 2px rgba(255, 255, 255, 0.05);
+  -1px -1px 2px rgba(49, 49, 49, 0.05),
+  1px 1px 2px rgba(0, 0, 0, 0.5),
+  inset -1px -1px 3px rgba(0, 0, 0, 0.05),
+  inset 1px 1px 2px rgba(255, 255, 255, 0.05);
 $border-style: 1px solid #e4ebf3;
+
+$border-radius: 0.25rem;
 
 // Semantic / UI
 $color-surface-overlay: rgba(0, 0, 0, 0.5);
@@ -72,6 +80,19 @@ $postup-tag-color: #499888;
 $tastebuds-hero-bg: #f6e7c6;
 $postup-hero-bg: #80ada1;
 
+// Case-study accent colors
+$overview-icon-miro: #ffd12b;
+$overview-icon-dark: #2e3139;
+$tastebuds-brand-yellow: #ffb11a;
+$tastebuds-brand-blue: #2d8dff;
+$tastebuds-primary: #076261;
+$tastebuds-swiper-theme: #007aff;
+$tastebuds-dark-bg: #12181f;
+$tastebuds-border-warm: #eae8e2;
+$tastebuds-icon-fill: #c0ddff;
+$boardspace-card-bg: #d3eaff;
+$boardspace-card-border: #c0e1ff;
+$link-highlight: #479cff;
 $wrapper-gap-med: 2rem;
 $wrapper-gap-lg: 3rem;
 $wrapper-gap-xl: 4rem;

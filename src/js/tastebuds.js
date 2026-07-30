@@ -1,10 +1,4 @@
 import "@pages/tastebuds/_index.scss";
 import "@components/ProjectComponents";
-
-// import '@components/Carousel/carousel';
-
-document.addEventListener("DOMContentLoaded", () => {
-	console.log("Main TasteBuds page loaded");
-});
-
-document.addEventListener("DOMContentLoaded", function () {});
+import "@components/CardVertical/CardVertical";
+import "./tastebuds-feature-cards";

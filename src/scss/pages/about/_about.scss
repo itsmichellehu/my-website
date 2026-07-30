@@ -1,5 +1,7 @@
-$about-section-padding-mobile: 3rem;
+@use "@abstracts/all-abstracts" as *;
+
+$about-section-padding-mobile: space(12);
 
 .section-wrapper {
-	width: 90dvw;
+  width: 90dvw;
 }

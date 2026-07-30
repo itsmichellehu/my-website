@@ -1,0 +1,191 @@
+@use "@abstracts/all-abstracts" as *;
+
+// Global feature card: icon + headline + optional body.
+// Rendered from data via FeatureCard.js, or written statically with the
+// same classes. Ported from postup's _day-04-stashed-features.scss.
+
+$feature-card-font-color: $black;
+
+// Track + layout in one element. Authored as an empty <ul class="feature-cards">
+// in the page HTML; FeatureCard.js fills it with <li class="feature-card"> items.
+// Mobile: a horizontal scroll-snap track. Desktop: a static grid row.
+.feature-cards {
+  margin: space(8) auto;
+  display: flex;
+  flex-direction: row;
+  align-self: stretch;
+  gap: space(4);
+  width: 100%;
+  margin-left: 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+  // The block renders as a <ul>, so the base `ul, ol` reset (_lists.scss) forces
+  // flex-direction: column, align-self: center, and a negative margin-left.
+  // The row/stretch/margin-left declarations above override all three.
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  // Desktop: no scrolling — lay the cards out in a single static row.
+  @include breakpoint(lg) {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+    overflow: visible;
+    margin: 0 auto;
+    justify-self: center;
+    align-self: center;
+    max-width: 78rem;
+
+    li:last-child {
+      margin: 0;
+    }
+  }
+
+  // Compact variant: the icon stays a small inline glyph at the top of the card
+  // (no oversized faded background) and cards size to content, not a fixed ratio.
+  &--compact {
+    .feature-card {
+      aspect-ratio: auto;
+    }
+
+    .feature-card_icon-wrapper {
+      position: static;
+      width: 2rem;
+      height: 2rem;
+      margin: 0 0 space(4);
+      opacity: 1;
+
+      @include breakpoint(med) {
+        position: static;
+        width: 3rem;
+        height: 3rem;
+        margin: 0 0 space(4);
+        opacity: 1;
+      }
+    }
+  }
+
+  &_nav-arrow {
+    width: 3rem;
+    height: 3rem;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    background-color: $light-grey !important;
+    transition: opacity 0.3s ease-in-out;
+
+    @include breakpoint(med) {
+      width: 3.25rem;
+      height: 3.25rem;
+    }
+
+    &:hover {
+      background-color: #e0e0e0 !important;
+    }
+
+    &:active {
+      background-color: #d0d0d0 !important;
+    }
+
+    &_wrapper {
+      display: flex;
+      gap: space(4);
+      list-style-type: none;
+      justify-content: flex-end;
+      flex-direction: row;
+
+      li {
+        padding: 0;
+        transform: none;
+        width: fit-content;
+      }
+
+      @include breakpoint(lg) {
+        display: none;
+      }
+    }
+  }
+}
+
+.feature-card {
+  display: flex;
+  flex-direction: column;
+  padding: space(6);
+  border-radius: $border-radius;
+  position: relative;
+  overflow: hidden;
+  scroll-snap-align: center;
+  scroll-snap-stop: always;
+  background-color: $lightest-grey;
+  aspect-ratio: 7/6;
+  flex: 0 0 85%;
+
+  // Mobile: each card takes ~85% of the track so the next one peeks at the
+  // edge; flex-shrink: 0 keeps them from collapsing into the viewport width.
+  &_icon-wrapper {
+    width: 2rem;
+    height: 2rem;
+    margin-bottom: space(4);
+  }
+
+  @include breakpoint(med) {
+    &_icon-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0.5;
+      z-index: 1;
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      bottom: space(4);
+      right: space(4);
+      width: 8rem;
+      height: 8rem;
+      position: absolute;
+    }
+  }
+
+  &_icon,
+  &_icon-wrapper svg {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+  }
+
+  &_content {
+    width: 100%;
+    z-index: 2;
+  }
+
+  &_heading {
+    font-size: text(lg);
+    font-weight: 500 !important;
+    margin-bottom: space(2);
+    color: $feature-card-font-color !important;
+  }
+
+  &_body {
+    display: flex;
+    color: $feature-card-font-color !important;
+    margin-bottom: 0;
+  }
+
+  @include breakpoint(lg) {
+    flex: initial;
+    height: 100%;
+    padding: space(8);
+
+    &.first-child,
+    &.last-child {
+      margin: 0;
+    }
+  }
+}
