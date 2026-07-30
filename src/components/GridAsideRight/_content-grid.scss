@@ -3,12 +3,12 @@
 .content-grid {
   display: grid;
   grid-template-rows: auto;
-  gap: 1rem;
+  gap: space(4);
   width: 90vw;
   max-width: $content-max-width;
   margin: auto;
   /* Center the container */
-  margin-bottom: 1.25rem;
+  margin-bottom: space(5);
 
   p:last-child {
     margin-bottom: 0;
@@ -23,7 +23,7 @@
   }
 
   .img-wrapper {
-    padding: 2rem 0;
+    padding: space(8) 0;
   }
 
   aside {
@@ -61,8 +61,8 @@
       /* Side notes in the second column */
       min-width: 15vw;
       max-width: 100%;
-      margin-top: 1rem;
-      margin-left: 1.5rem;
+      margin-top: space(4);
+      margin-left: space(6);
     }
   }
 
@@ -104,10 +104,10 @@
         /* Side notes in the second column */
         min-width: 20vw;
         max-width: 320px;
-        padding-left: 1.5rem;
+        padding-left: space(6);
 
         p {
-          margin-top: 1rem;
+          margin-top: space(4);
         }
       }
     }

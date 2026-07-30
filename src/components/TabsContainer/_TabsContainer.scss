@@ -9,7 +9,7 @@ $tab-menu-padding: 0.25rem;
   &-container {
     width: 95dvw;
     max-width: $content-max-width;
-    margin: 2rem auto 0;
+    margin: space(8) auto 0;
   }
 
   &-menu {
@@ -64,11 +64,11 @@ $tab-menu-padding: 0.25rem;
 
   &-content {
     display: none;
-    padding: 2rem 1rem 0 1rem;
+    padding: space(8) space(4) 0 space(4);
 
     > div,
     blockquote {
-      margin-bottom: 2rem;
+      margin-bottom: space(8);
     }
 
     > :last-child {
@@ -85,7 +85,7 @@ $tab-menu-padding: 0.25rem;
     @extend %flex-row;
     align-items: center;
     justify-content: center;
-    gap: 0.75rem;
+    gap: space(3);
     width: 25%;
     height: $tab-button-height;
     border: none;
@@ -128,9 +128,9 @@ $tab-menu-padding: 0.25rem;
   &-content-grid {
     display: grid;
     align-items: center;
-    gap: 2rem;
+    gap: space(8);
     width: 100%;
-    margin-bottom: 2rem;
+    margin-bottom: space(8);
 
     img {
       margin: 0;
@@ -138,7 +138,7 @@ $tab-menu-padding: 0.25rem;
     }
 
     p {
-      margin-bottom: 0.5rem;
+      margin-bottom: space(2);
 
       &:last-child {
         margin: 0;
@@ -155,7 +155,7 @@ $tab-menu-padding: 0.25rem;
     }
 
     &-content {
-      padding: 2rem 1rem 0 1rem;
+      padding: space(8) space(4) 0 space(4);
     }
 
     &-button {
@@ -178,6 +178,6 @@ $tab-menu-padding: 0.25rem;
   line-height: 150%;
 
   li {
-    padding-bottom: 1rem;
+    padding-bottom: space(4);
   }
 }

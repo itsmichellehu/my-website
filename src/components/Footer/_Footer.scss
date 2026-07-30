@@ -1,17 +1,17 @@
 @use "@abstracts/all-abstracts" as *;
 
-$content-margin-bottom: 1.5rem;
+$content-margin-bottom: space(6);
 
 footer {
   display: flex;
   flex-direction: column;
-  gap: 1.25rem;
-  padding: 2.25rem 0 2rem 0;
+  gap: space(5);
+  padding: space(8) 0 space(8) 0;
   background-color: white;
   justify-content: start;
 
   @include breakpoint(med) {
-    padding: 3rem 0;
+    padding: space(12) 0;
 
     button {
       width: fit-content;
@@ -20,12 +20,12 @@ footer {
     .cta-buttons {
       display: flex;
       flex-direction: row;
-      gap: 1rem;
+      gap: space(4);
     }
   }
 
   @include breakpoint(xl) {
-    padding: 5rem 0;
+    padding: space(20) 0;
   }
 
   .headline {
@@ -74,23 +74,23 @@ footer {
     width: 90vw;
     max-width: $nav-footer-max-width;
     margin: auto;
-    gap: 1.5rem;
+    gap: space(6);
 
     @include breakpoint(med) {
       flex-direction: row;
       align-items: center;
       justify-content: space-between;
-      gap: 2rem;
+      gap: space(8);
     }
   }
 
   .social-links-wrapper {
     display: flex;
     flex-direction: row;
-    gap: 0.75rem;
+    gap: space(3);
     width: fit-content;
     align-self: center;
-    margin-bottom: 1rem;
+    margin-bottom: space(4);
 
     @include breakpoint(med) {
       margin-bottom: $content-margin-bottom;
@@ -98,7 +98,7 @@ footer {
   }
 
   .anchor-link {
-    padding-right: 0.75rem;
+    padding-right: space(3);
     color: $teal-accent !important;
     margin-bottom: 0;
     width: fit-content;
@@ -118,7 +118,7 @@ footer {
   .email-link-wrapper {
     display: none;
     flex-direction: row;
-    gap: 0.5rem;
+    gap: space(2);
     align-items: center;
     margin-bottom: 0;
     padding-right: 0;
