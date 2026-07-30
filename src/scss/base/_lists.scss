@@ -77,57 +77,6 @@ ul.list-none {
   }
 }
 
-.list {
-  display: flex;
-  flex-direction: column;
-  line-height: 150%;
-  list-style-type: decimal;
-  margin: 0;
-  grid-column-gap: 16px;
-  grid-row-gap: 16px;
-
-  &.margin-bottom {
-    grid-column-gap: 1px;
-    grid-row-gap: 1px;
-  }
-
-  &.margin-bottom._0 {
-    align-items: flex-start;
-    align-self: auto;
-    flex: 0 auto;
-    grid-column-gap: 16px;
-    grid-row-gap: 16px;
-  }
-
-  &.numerical {
-    padding-bottom: 0;
-  }
-
-  &.gap-8 {
-    align-items: flex-start;
-    align-self: flex-start;
-    grid-column-gap: 8px;
-    grid-row-gap: 8px;
-    list-style-type: disc;
-    text-align: left;
-
-    &.numbered {
-      list-style-type: decimal;
-    }
-  }
-
-  &._24px {
-    grid-column-gap: 24px;
-    grid-row-gap: 24px;
-  }
-
-  &--dark {
-    li {
-      color: $sub-grey;
-    }
-  }
-}
-
 ul.list-item-black {
   li {
     color: $black;
