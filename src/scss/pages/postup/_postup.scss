@@ -21,16 +21,6 @@ body {
   border: 0;
 }
 
-.final-prototype_video_wrapper {
-  display: flex;
-  gap: space(8);
-  justify-content: center;
-
-  .final-prototype_video {
-    max-width: 13rem;
-  }
-}
-
 #the-solution {
   &.content-full-width {
     display: flex;
