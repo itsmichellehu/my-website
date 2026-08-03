@@ -7,95 +7,16 @@
 $solution-padding: space(10);
 $solution-padding-xxl: space(12);
 
-.the-solution-prototype {
-  &_wrapper {
-    @include flex(column, space(6));
-    width: 90vw;
-    margin: auto;
-    max-width: 82.5rem;
-
-    @include breakpoint(xxl) {
-      display: grid;
-      grid-template-columns: 2fr 1fr;
-      gap: space(6);
-    }
-  }
-
-  &_grid {
-    display: grid;
-    grid-template-rows: repeat(2, auto);
-    grid-template-areas: "b" "a";
-    margin: 0 auto;
-    gap: space(8);
-    align-items: center;
-    width: 90%;
-    max-width: 28rem;
-    grid-template-areas: "c" "a";
-    justify-content: center;
-    padding: $solution-padding;
-    border-radius: 1rem;
-    background-color: $white;
-    height: fit-content;
-
-    @include breakpoint(med) {
-      grid-template-columns: 2fr 1fr;
-      grid-template-rows: auto;
-      grid-template-areas: "a b";
-      width: 100%;
-      max-width: none;
-    }
-
-    @include breakpoint(xl) {
-      padding: space(12);
-      gap: space(20);
-    }
-  }
-
-  &_body {
-    color: $medium-grey !important;
-    margin-bottom: 0;
-
-    @include breakpoint(xl) {
-      font-size: $text-lg;
-    }
-  }
-
-  &_content {
-    grid-area: a;
-  }
-
-  &_video,
-  &_image {
-    grid-area: b;
-    margin: 0 auto;
-    width: 70%;
-    max-width: 18rem;
-
-    @include breakpoint(med) {
-      width: 100%;
-    }
-  }
-
-  &_video {
-    margin-bottom: space(6);
-
-    @include breakpoint(med) {
-      margin-bottom: 0;
-    }
-  }
-}
-
-.img-seating-available {
-  grid-area: c;
-  display: flex;
-  padding: space(4);
+.the-solution-prototype_wrapper {
+  @include flex(column, space(6));
+  width: 90vw;
   margin: auto;
-  border-radius: 0.5rem;
-  background: var(--Colors-White, $white);
-  box-shadow: 1.5px 1.5px 4px 0px rgba(0, 0, 0, 0.1);
+  max-width: 82.5rem;
 
-  img {
-    width: 15rem;
+  @include breakpoint(xxl) {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: space(6);
   }
 }
 
@@ -114,10 +35,6 @@ $solution-padding-xxl: space(12);
     padding: space(6);
     border-radius: 1rem;
     background-color: $white;
-
-    > .final-prototype_headline {
-      display: block;
-    }
 
     @include breakpoint(med) {
       align-items: start;
@@ -180,11 +97,14 @@ $solution-padding-xxl: space(12);
     }
 
     &-iteration {
-      grid-area: c;
-
       p {
         color: $black;
       }
+    }
+
+    &-media {
+      width: 100%;
+      height: auto;
     }
   }
 
@@ -192,61 +112,43 @@ $solution-padding-xxl: space(12);
     grid-area: a;
     margin: auto;
 
-    p {
-      margin-bottom: 0;
+    p,
+    h3 {
       text-align: center;
     }
 
     h3 {
       color: $black;
-      text-align: center;
     }
 
-    :last-child {
+    p:last-child {
       margin-bottom: 0;
     }
 
     @include breakpoint(med) {
       width: 100%;
-      // min-width: min(26rem, 100%);
       max-width: 45rem;
 
       p,
       h3 {
         text-align: left;
       }
-
-      h3 {
-        font-size: $text-xl;
-      }
-    }
-
-    @include breakpoint(lg) {
-      h3 {
-        font-size: $text-2xl;
-      }
     }
   }
 
-  //
-  // 	&_headline {
-  // 		grid-area: d;
-  // 		display: none;
-  // 		text-align: center;
-  // 		margin-bottom: 0;
-  //
-  // 		@include breakpoint(med) {
-  // 			display: block;
-  // 			font-size: 1.75rem;
-  // 			margin-bottom: 2rem;
-  // 		}
-  //
-  // 		@include breakpoint(xl) {
-  // 			text-align: left;
-  // 			font-size: 2rem;
-  // 			max-width: 24rem;
-  // 		}
-  // 	}
+  &_headline {
+    color: $black;
+    text-align: center;
+
+    @include breakpoint(med) {
+      text-align: left;
+      font-size: $text-xl;
+    }
+
+    @include breakpoint(lg) {
+      font-size: $text-2xl;
+    }
+  }
 
   .card_headline {
     color: $emphasis-blue;
@@ -255,11 +157,24 @@ $solution-padding-xxl: space(12);
     font-size: $text-lg;
   }
 
-  &_subheading {
-    font-size: $text-lg;
-    margin-bottom: space(5);
-    color: $off-black !important;
-    line-height: 125%;
+  &_body {
+    color: $medium-grey !important;
+    margin-bottom: 0;
+
+    @include breakpoint(xl) {
+      font-size: $text-lg;
+    }
+  }
+
+  &_image {
+    grid-area: b;
+    margin: 0 auto;
+    width: 70%;
+    max-width: 18rem;
+
+    @include breakpoint(med) {
+      width: 100%;
+    }
   }
 
   &_card {
@@ -307,13 +222,10 @@ $solution-padding-xxl: space(12);
       }
     }
   }
-}
 
-@include breakpoint(med) {
-  .the-solution-prototype_subheading {
+  &_subheading {
     font-size: $text-lg;
-    color: $off-black !important;
-    font-weight: 500 !important;
+    color: $black !important;
   }
 }
 

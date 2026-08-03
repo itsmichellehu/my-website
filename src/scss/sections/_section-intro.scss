@@ -1,19 +1,5 @@
 @use "@abstracts/all-abstracts" as *;
 
-.intro-headline {
-  font-size: $text-2xl;
-  margin-bottom: space(4);
-  text-transform: capitalize;
-
-  @include breakpoint(med) {
-    font-size: $text-2xl;
-  }
-
-  @include breakpoint(lg) {
-    font-size: $text-3xl;
-  }
-}
-
 .hmw-statements_wrapper {
   display: flex;
   flex-direction: column;
