@@ -167,31 +167,6 @@
   span {
     @extend %subheader;
   }
-
-  .secondary-text {
-    margin: 0;
-  }
-
-  &.short-v {
-    margin-bottom: space(8);
-
-    > h3 {
-      margin-top: 0;
-    }
-  }
-
-  &.header-container-postup-h3 {
-    margin-top: space(8);
-    margin-bottom: space(4);
-
-    @include breakpoint(med) {
-      margin-top: space(12);
-    }
-
-    @include breakpoint(lg) {
-      margin-top: space(20);
-    }
-  }
 }
 
 .img-project-schedule {
