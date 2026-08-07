@@ -14,6 +14,13 @@ $bg-top-xxl: 10rem;
   z-index: 2;
 }
 
+.bg-ripped-paper-footer {
+  width: 100%;
+  top: 0;
+  transform: scaleX(-1);
+  z-index: 2;
+}
+
 // Projects
 #projects {
   position: relative;
@@ -22,45 +29,16 @@ $bg-top-xxl: 10rem;
   margin-top: space(8);
 
   @include breakpoint(lg) {
-    padding: space(20) 0;
+    padding: space(12) 0;
     margin-top: 0;
   }
 
   @include breakpoint(xl) {
-    padding: space(24) 0;
+    padding: space(16) 0;
   }
-
-  // 	@include breakpoint(xxxl) {
-  // 		top: -3rem;
-  // 	}
-
   @include breakpoint(huge) {
     // stylelint-disable-next-line scale-unlimited/declaration-strict-value
     padding: 8rem 0 3rem 0;
-  }
-}
-
-#bg-projects-section {
-  display: flex;
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  top: $bg-top-base;
-  height: calc(100% - $bg-top-base);
-
-  @include breakpoint(med) {
-    top: 8rem;
-    height: calc(100% - $bg-top-med);
-  }
-
-  @include breakpoint(xl) {
-    top: 6rem;
-    height: calc(100% - $bg-top-xl);
-  }
-
-  @include breakpoint(xxl) {
-    top: 10rem;
-    height: calc(100% - $bg-top-xxl);
   }
 }
 
@@ -71,8 +49,19 @@ $bg-top-xxl: 10rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
   margin: auto;
+
+  >:first-child {
+    margin-top: 2rem;
+
+    @include breakpoint(med) {
+      margin-top: 3rem;
+    }
+
+    @include breakpoint(lg) {
+      margin-top: 4rem;
+    }
+  }
 }
 
 .project-card {
@@ -85,10 +74,7 @@ $bg-top-xxl: 10rem;
   padding: space(12) 0;
   cursor: pointer;
   transition: transform 0.3s ease-in-out;
-
-  &.project-tastebuds {
-    padding-top: 0;
-  }
+  max-width: $nav-footer-max-width;
 
   @include breakpoint(med) {
     flex-direction: row;
@@ -109,38 +95,36 @@ $bg-top-xxl: 10rem;
   @include breakpoint(xl) {
     // grid-template-columns: $wrapper-grid-xl;
     gap: $wrapper-gap-xl;
-    margin: space(4) 0;
+    margin: space(4) auto;
   }
 
-  @include hover-underline-target(
-    ".project-card-button-label",
+  @include hover-underline-target(".project-card-button-label",
     $teal-accent,
-    $teal-accent
-  );
+    $teal-accent );
 
   &:hover {
-    .tastebuds-thumb-container,
-    .postup-thumb-container {
-      transform: scale(1.05);
-    }
+    transform: scale(1.05);
 
     .project-title {
       color: $black;
       color: $teal-accent;
       transition: color 0.3s ease-in-out;
     }
+
+    .coming-soon {
+      color: $teal !important;
+    }
   }
+
   &.project-boardspace {
     cursor: default;
 
-    &:hover .coming-soon {
-      color: $medium-grey !important;
+    &:hover {
+      transform: none;
     }
 
-    .project-details-wrapper {
-      // margin-bottom: 0.75rem;
-
-      @include breakpoint(med) {
+    @include breakpoint(med) {
+      .project-details-wrapper {
         margin-bottom: 0;
       }
     }
@@ -156,10 +140,6 @@ $bg-top-xxl: 10rem;
   max-height: 40rem;
   transition: transform 0.3s ease-in-out;
   margin: 0 auto;
-
-  &#postupBG {
-    background-color: $medium-green;
-  }
 
   @include breakpoint(med) {
     width: 100%;
@@ -227,7 +207,7 @@ $bg-top-xxl: 10rem;
   overflow: hidden;
   margin: 0;
 
-  > img {
+  >img {
     margin: 0;
     height: 100%;
     width: 100%;
@@ -243,11 +223,12 @@ $bg-top-xxl: 10rem;
   width: fit-content;
   height: 100%;
 
-  > video {
+  >video {
     width: fit-content;
     max-width: 100%;
     height: 100%;
   }
+
   //
   // 	@include breakpoint(med) {
   // 		border-radius: 1.65rem 1.65rem 1.75rem 1.75rem;

@@ -1,7 +1,6 @@
 @use "@abstracts/all-abstracts" as *;
 
-.hero-wrapper,
-.projects-wrapper {
+.hero-wrapper {
   max-width: $nav-footer-max-width !important;
 }
 
