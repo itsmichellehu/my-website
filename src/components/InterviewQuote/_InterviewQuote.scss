@@ -1,0 +1,46 @@
+@use "@abstracts/all-abstracts" as *;
+
+$interview-quote_author-image-size: 2.5rem;
+
+.interview-quote {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-self: center;
+  align-items: flex-start;
+  align-self: auto;
+  border-left: 4px solid $teal-accent;
+  padding: 0 space(5);
+
+  > p {
+    @extend %quote-text;
+    margin: 0;
+    width: 95%;
+  }
+
+
+  &_author {
+    @extend %flex-row;
+    align-items: center;
+    gap: space(4);
+    margin-bottom: 0;
+  }
+
+  &_author-image {
+    border-radius: 25px;
+    margin: auto 0 space(2) 0;
+    object-fit: cover;
+    width: $interview-quote_author-image-size;
+    height: $interview-quote_author-image-size;
+  }
+
+  &_author-name {
+    color: $dark-grey;
+    font-size: $text-base;
+    margin-bottom: 0;
+
+    @include breakpoint(med) {
+      font-size: $text-md;
+    }
+  }
+}

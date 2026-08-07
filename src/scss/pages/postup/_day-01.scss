@@ -14,26 +14,14 @@
 }
 
 .interview-quotes {
-  width: 90vw;
+  margin: space(8) auto;
 
-  &_img-quotation-mark {
-    display: none;
-    position: absolute;
-    width: 3rem;
-
-    @include breakpoint(med) {
-      display: flex;
-      max-width: 12rem;
-      transform: translateX(-108px) translateY(-32px);
-    }
+  figure {
+    margin: 0 0 space(8) 0;
   }
 
-  &_grid-container {
-    margin: space(8) auto;
-
-    @include breakpoint(med) {
-      margin-bottom: space(12);
-    }
+  @include breakpoint(med) {
+    margin-bottom: space(12);
   }
 }
 

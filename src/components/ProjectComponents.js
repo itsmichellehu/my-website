@@ -4,7 +4,7 @@ import initializeProgressBar from "./ProjectProgressBar/ProjectProgressBar";
 import { initializeAccordion } from "./ProjectAccordion/ProjectAccordion";
 import initFeatureCards from "./FeatureCard/FeatureCard";
 
-import "./Blockquote/Blockquote";
+import "./InterviewQuote/InterviewQuote";
 import "./GridAsideRight/GridAsideRight";
 import "./UsabilityTestFindingsCard/UsabilityTestFindingsCard";
 
