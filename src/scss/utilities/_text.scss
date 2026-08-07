@@ -166,20 +166,16 @@
 // Secondary text styles
 .secondary-text {
   color: $black;
-  font-size: $text-xl;
+  font-size: $text-lg;
   font-weight: 500;
   line-height: 135%;
   margin-top: space(4);
   margin-bottom: space(4);
 
   @include breakpoint(med) {
-    font-size: $text-2xl;
+    font-size: $text-xl;
     margin-bottom: space(6);
     line-height: 145%;
-  }
-
-  @include breakpoint(med) {
-    font-size: $text-2xl;
   }
 }
 
