@@ -1,0 +1,119 @@
+@use "@abstracts/all-abstracts" as *;
+
+// Thumbnail trigger: a bare button wrapping the image, so the whole thumb is
+// one keyboard-reachable control.
+.img-zoomable {
+  display: block;
+  width: 100%;
+  border: none;
+  padding: 0;
+  background: none;
+  font: inherit;
+  cursor: zoom-in;
+
+  img {
+    display: block;
+    width: 100%;
+  }
+}
+
+// The lightbox. Fills the viewport so there is no dead zone around the image
+// where a click would hit the popover box instead of dismissing.
+.img-zoom-popover {
+  border: none;
+  padding: 0;
+  margin: auto;
+  width: 100dvw;
+  height: 100dvh;
+  background-color: transparent;
+
+  &:popover-open {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &::backdrop {
+    background-color: rgb(0 0 0 / 75%);
+  }
+
+  img {
+    display: block;
+    max-width: 90vw;
+    max-height: 90vh;
+    width: auto;
+    height: auto;
+
+    // Transparent PNGs would otherwise sit straight on the dark backdrop.
+    // Set on the image, not the popover, so the fill matches the image bounds
+    // rather than the 90vw/90vh box.
+    background-color: $white;
+    padding: space(1);
+
+    // Custom gestures own this surface; without it the browser scrolls or
+    // page-zooms instead of forwarding pointermove.
+    touch-action: none;
+    transform-origin: center center;
+    user-select: none;
+    -webkit-user-drag: none;
+
+    // Keep the image on its own compositor layer so a pinch only recomposites
+    // rather than repainting the bitmap each frame.
+    backface-visibility: hidden;
+
+    // The cursor names the NEXT click's action, not the current state. At fit
+    // there is nothing left to reveal, so the click closes. Scoped with :not()
+    // rather than relying on .is-zoomed coming later in source order.
+    &:not(.is-zoomed) {
+      cursor: zoom-out;
+    }
+
+    &.is-zoomed {
+      // Scoped to the zoomed state: a permanent will-change holds the layer
+      // (and its memory) for every popover on the page, zoomed or not.
+      will-change: transform;
+      cursor: grab;
+
+      &:active {
+        cursor: grabbing;
+      }
+    }
+  }
+}
+
+// Escape is not discoverable, and touch devices have no Esc key at all.
+.img-zoom-close {
+  position: fixed;
+  top: space(5);
+  left: space(4);
+
+  // WCAG 2.5.5 target size: 44x44 is the floor. space(12) = 3rem = 48px.
+  display: flex;
+  width: space(12);
+  height: space(12);
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 50%;
+  background-color: $white;
+  color: $black;
+  cursor: pointer;
+  font-size: text(2xl);
+  line-height: 1;
+
+  &:hover {
+    background-color: #ffffff7b;
+  }
+
+  // WCAG 2.4.7: keyboard users get a visible ring; mouse users don't.
+  &:focus-visible {
+    outline: 3px solid $teal;
+    outline-offset: 3px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .img-zoom-popover img {
+    transition: none !important;
+  }
+}
