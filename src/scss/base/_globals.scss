@@ -211,7 +211,10 @@ textarea {
   /* 1 */
   line-height: 1.15;
   /* 1 */
-  margin: inherit;
+  // normalize.css specifies `margin: 0` here. `inherit` made every form
+  // control copy its parent's margin, so a button inside a container with
+  // margin silently gained that same margin (48px on .crazy-8s-container).
+  margin: 0;
 }
 
 ::selection {
