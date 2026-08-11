@@ -82,30 +82,27 @@
 // Font Families and Specific Text Styles
 // -----------------------------------
 
-// Font family: Noto Serif
-.noto-serif {
-  font-family: "Noto Serif", serif !important;
+.section-heading {
   color: $black;
-  font-size: $text-md;
-  font-weight: 500;
-  line-height: 160%; // 28.8px
-}
-
-.quote-text {
-  font-family: "Noto Serif", serif !important;
+  font-size: $text-3xl;
   font-style: normal;
-  font-weight: 400;
-  letter-spacing: 3%;
-  line-height: 160%;
-  color: $black;
-  font-size: $text-base;
-  margin: 0;
-  overflow-wrap: normal;
+  font-weight: 600;
+  line-height: 120%;
+  letter-spacing: -0.05rem;
+  margin-bottom: space(8);
 }
 
 .notes {
   color: $color-annotation;
   font-family: "Noto Serif", sans-serif !important;
+}
+
+// Font family: Noto Serif
+.noto-serif {
+  font-family: "Noto Serif", serif !important;
+  color: $black;
+  font-size: $text-md;
+  line-height: 150%;
 }
 
 // Font family: Source Code Pro

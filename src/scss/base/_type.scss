@@ -114,21 +114,3 @@ h5 {
   // 		font-size: 1.350rem;
   // 	}
 }
-
-.section-heading {
-  color: $black;
-  font-size: $text-3xl;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 120%;
-  letter-spacing: -0.05rem;
-  margin-bottom: space(8);
-}
-
-.noto-serif {
-  color: $black;
-  font-family: "Noto Serif", serif;
-  font-size: $text-md;
-  font-weight: 350;
-  line-height: 160%; // 28.8px
-}

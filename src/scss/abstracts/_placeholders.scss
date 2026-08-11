@@ -319,7 +319,7 @@
 	color: $medium-grey !important;
 
 	@include breakpoint(lg) {
-		font-size: $text-lg !important;
+		font-size: $text-md !important;
 	}
 }
 

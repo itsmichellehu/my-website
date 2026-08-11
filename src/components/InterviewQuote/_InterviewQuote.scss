@@ -12,12 +12,18 @@ $interview-quote_author-image-size: 2.5rem;
   border-left: 4px solid $teal-accent;
   padding: 0 space(5);
 
-  > p {
+  >p {
     @extend %quote-text;
     margin: 0;
     width: 95%;
+    font-family: "Noto Serif", serif !important;
+    font-weight: 400;
+    letter-spacing: 3%;
+    line-height: 150%;
+    color: $black;
+    font-size: $text-base;
+    overflow-wrap: normal;
   }
-
 
   &_author {
     @extend %flex-row;
