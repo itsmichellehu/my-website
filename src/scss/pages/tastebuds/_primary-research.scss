@@ -19,7 +19,7 @@
     gap: space(4);
     width: 100%;
 
-    > div {
+    >div {
       width: 100%;
     }
   }
@@ -73,7 +73,7 @@
     border-bottom: 1px solid $tastebuds-border-warm;
   }
 
-  .content-container > div:nth-child(2) > div {
+  .content-container>div:nth-child(2)>div {
     .satisfaction-level {
       img {
         width: 1.5rem;
@@ -152,11 +152,11 @@
   max-width: $content-max-width;
   margin: space(8) auto;
 
-  > div:first-child {
+  >div:first-child {
     flex: content;
   }
 
-  > div:last-child {
+  >div:last-child {
     margin-top: calc(32px + 56px);
   }
 
@@ -172,6 +172,7 @@
   border: 1.25px solid $medium-light-grey;
   overflow: hidden;
   border-radius: 5px;
+  margin: 0 !important;
 }
 
 .survey-results-cards-wrapper {
@@ -205,15 +206,6 @@
     font-size: text(lg);
     color: $black;
   }
-}
-
-.img-survey-results_wrapper {
-  box-sizing: border-box;
-  padding: space(6);
-  background-color: $white;
-  border: 1.25px solid $medium-light-grey;
-  overflow: hidden;
-  border-radius: 5px;
 }
 
 .likert-mood.large {
