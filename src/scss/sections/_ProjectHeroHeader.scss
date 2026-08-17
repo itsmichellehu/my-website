@@ -2,10 +2,9 @@
 
 .project-hero {
   @extend %align-self-flex-start;
-  height: auto;
   overflow: hidden;
   min-height: 17rem;
-  height: calc(60vh - $navbar-mobile-height);
+  height: calc(60vh - #{$navbar-mobile-height});
   max-height: 20.25rem;
   width: 100%;
   padding-top: calc(#{$navbar-mobile-height} + 1rem);
@@ -37,14 +36,6 @@
       margin: auto;
       max-height: none;
       max-width: 17rem;
-      //
-      // 		&-postup {
-      // 			max-width: 17rem;
-      // 		}
-      //
-      // 		&-tastebuds {
-      // 			max-width: 28rem;
-      // 		}
     }
   }
 
@@ -53,6 +44,6 @@
   }
 
   @include breakpoint(xxl) {
-    height: calc(60vh - $navbar-desktop-height);
+    height: calc(60vh - #{$navbar-desktop-height});
   }
 }
