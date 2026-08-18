@@ -1,3 +1,7 @@
+// Must precede the webpack.common.js require: that module reads
+// process.env.NODE_ENV at require time to pick the CSS loader.
+process.env.NODE_ENV = "production";
+
 const path = require("path");
 const { merge } = require("webpack-merge");
 const common = require("./webpack.common.js");
@@ -7,8 +11,6 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
 const { PurgeCSSPlugin } = require("purgecss-webpack-plugin");
-
-process.env.NODE_ENV = "production";
 
 const PATHS = {
   src: path.join(__dirname, "src"),
