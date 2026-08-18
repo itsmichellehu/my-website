@@ -10,7 +10,7 @@ $feature-card-font-color: $black;
 // in the page HTML; FeatureCard.js fills it with <li class="feature-card"> items.
 // Mobile: a horizontal scroll-snap track. Desktop: a static grid row.
 .feature-cards {
-  margin: space(8) auto;
+  margin: space(4) auto;
   display: flex;
   flex-direction: row;
   align-self: stretch;
