@@ -282,7 +282,6 @@
   display: grid;
   grid-template-columns: 1fr;
   gap: space(4);
-  margin-bottom: space(6);
 
   @include breakpoint(med) {
     grid-template-columns: repeat(3, 1fr);
