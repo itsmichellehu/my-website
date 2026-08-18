@@ -71,11 +71,3 @@ updateScrollbar();
 
 // Recalculate scrollbar on resize
 window.addEventListener("resize", updateScrollbar);
-if (process.env.NODE_ENV === "production") {
-  document.addEventListener("DOMContentLoaded", () => {
-    initLoadingAnimation();
-  });
-}
-
-// Loading animation is now initialized globally via
-// @components/LoadingScreen/register imported in main.js.
