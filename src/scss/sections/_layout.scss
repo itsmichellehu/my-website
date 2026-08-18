@@ -21,6 +21,7 @@
 // when it follows another section. Adjacent-sibling (+) so the first
 // section never gets a top margin, and so a migrated .layout still spaces
 // correctly from a legacy .content-wrapper / .section-container neighbor.
+
 .layout + .layout,
 .content-wrapper + .layout,
 .section-container + .layout,
@@ -32,17 +33,6 @@
 .layout {
   $popout-pad: calc((#{$layout-popout} - #{$layout-content}) / 2);
   $full-pad: calc((#{$layout-full} - #{$layout-popout}) / 2);
-
-  // Container-owned vertical rhythm: children are spaced consistently by
-  // the grid, so individual elements don't carry their own margins. This
-  // is what keeps long case studies even. Legacy elements (base `p`,
-  // `.header-container` > heading) still carry their own margin-bottom
-  // from the pre-.layout system; zero it here so it doesn't stack with
-  // row-gap. Scoped to .layout's direct children only — the same
-  // selectors keep their margin everywhere still on the legacy system.
-  > * {
-    margin-bottom: 0;
-  }
 
   row-gap: $space-block;
 
@@ -56,18 +46,6 @@
     minmax(0, $popout-pad) [popout-end]
     minmax(0, $full-pad)
     minmax($layout-gutter, 1fr) [full-end];
-
-  > * {
-    grid-column: content;
-  }
-
-  > .popout {
-    grid-column: popout;
-  }
-
-  > .full {
-    grid-column: full;
-  }
 
   // full-bleed media should fill its track with no inherited gutters
   > .full > img,
@@ -87,18 +65,38 @@
     display: grid;
     grid-template-columns: subgrid;
     row-gap: $space-block;
+  }
+}
 
-    > * {
-      grid-column: content;
-    }
+// Child placement + margin reset, shared by .layout and its subgrid groups.
+// Container-owned vertical rhythm: row-gap does the spacing, so children
+// don't carry their own margins. Legacy elements (base `p`,
+// `.header-container` > heading) still ship margin from the pre-.layout
+// system; zero it here so it doesn't stack with row-gap. Scoped to direct
+// children only, so the same selectors keep their margin everywhere still
+// on the legacy system.
+.layout,
+.layout > .layout__group {
+  > * {
+    grid-column: content;
+    margin-block: 0;
+  }
 
-    > .popout {
-      grid-column: popout;
-    }
+  > .popout {
+    grid-column: popout;
+  }
 
-    > .full {
-      grid-column: full;
-    }
+  > .full {
+    grid-column: full;
+  }
+
+  // `.header-container > h2` (0-1-1) out-specifies the bare `> *` reset
+  // above, so a legacy heading keeps its own margin-bottom and stacks it
+  // with row-gap. Reach it at grandchild depth (0-1-2) rather than
+  // reaching for !important.
+  > * > h2,
+  > * > h3 {
+    margin-block: 0;
   }
 }
 
