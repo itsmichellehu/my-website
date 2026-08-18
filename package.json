@@ -8,7 +8,9 @@
     "check-deps": "npm ls --depth=0",
     "clean": "rimraf node_modules/.cache dist",
     "lint:css": "stylelint \"src/scss/**/*.scss\" \"src/components/**/*.scss\"",
-    "lint:css:fix": "stylelint \"src/scss/**/*.scss\" \"src/components/**/*.scss\" --fix"
+    "lint:css:fix": "stylelint \"src/scss/**/*.scss\" \"src/components/**/*.scss\" --fix",
+    "lint:js": "eslint .",
+    "lint:js:fix": "eslint . --fix"
   },
   "devDependencies": {
     "@babel/core": "^7.28.5",
