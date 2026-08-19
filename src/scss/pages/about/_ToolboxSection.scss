@@ -1,0 +1,182 @@
+@use "@abstracts/all-abstracts" as *;
+@use "about" as *;
+
+$logo-box-shadow:
+  -1px -1px 3px 0 rgba(0, 0, 0, 0.125) inset,
+  1px 1px 2px 0 rgba(255, 255, 255, 0.125) inset,
+  -2px -2px 4px 0 rgba(49, 49, 49, 0.125),
+  1px 1px 4px 0 rgba(0, 0, 0, 0.25);
+
+$logo-size: space(14);
+$logo-size-med: space(16);
+$tool-grid-item-size: space(18);
+
+.section-toolbox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: $about-section-padding-mobile 0;
+  background-color: $black;
+
+  p {
+    margin: auto;
+    color: $white;
+    font-size: $text-xs;
+    line-height: $leading-snug;
+    text-align: center;
+  }
+
+  @include breakpoint(med) {
+    padding: space(16) 0;
+  }
+
+  @include breakpoint(lg) {
+    padding: space(24) 0;
+  }
+}
+
+.toolbox_section-wrapper {
+  display: block;
+  margin: auto;
+
+  h2 {
+    width: fit-content;
+    margin-bottom: space(8);
+    text-wrap: nowrap;
+  }
+
+  @include breakpoint(med) {
+    display: flex;
+    justify-content: space-between;
+    gap: space(8);
+
+    h2 {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.toolbox_content-wrapper {
+  @include breakpoint(med) {
+    width: fit-content;
+  }
+}
+
+.design-tools_grid-container,
+.dev-tools_grid-container {
+  display: grid;
+  width: 100%;
+  margin: auto;
+  grid-template-columns: repeat(4, 1fr);
+  gap: space(6);
+}
+
+.design-tools_grid-container {
+  grid-template-rows: auto auto;
+
+  p {
+    color: $off-black;
+  }
+}
+
+.dev-tools_grid-container {
+  grid-template-rows: 1fr;
+}
+
+.tools-grid-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: $logo-size;
+  color: $white;
+  line-height: $leading-snug;
+  text-align: center;
+
+  p {
+    margin: 0;
+    font-size: $text-xs;
+    letter-spacing: 0;
+    text-align: center;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: $logo-size;
+    height: $logo-size;
+    margin-bottom: space(3);
+    padding: space(2);
+    border-radius: space(3);
+
+    @include breakpoint(med) {
+      width: $logo-size-med;
+      height: $logo-size-med;
+      padding: space(3);
+    }
+  }
+
+  @include breakpoint(med-lg) {
+    width: $tool-grid-item-size;
+
+    .logo {
+      width: $tool-grid-item-size;
+      height: $tool-grid-item-size;
+    }
+  }
+}
+
+// Constrains inline SVG logos, which carry large intrinsic width/height
+// attributes (Webflow ships 1080x674) and would otherwise render at full size.
+// Matches both markup shapes in about.html: a <div class="logo"> wrapping an
+// svg/img, and an <svg class="logo"> carrying the class itself.
+.tools-grid-item .logo svg,
+.img-tool-logo {
+  width: 100%;
+  height: auto;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.logo- {
+  &whiteBG {
+    background: $white;
+    box-shadow: $logo-box-shadow;
+  }
+
+  &figma {
+    background: #2e3139;
+    box-shadow: $logo-box-shadow;
+  }
+
+  &miro {
+    background: #ffd12b;
+    box-shadow: $logo-box-shadow;
+  }
+
+  &webflow {
+    background: #136df5;
+    box-shadow: $logo-box-shadow;
+  }
+
+  &procreate {
+    background: #242424;
+    box-shadow: $logo-box-shadow;
+  }
+
+  &adobeXD {
+    background: #470137;
+    box-shadow: $logo-box-shadow;
+  }
+}
+
+.heading-dev-tools {
+  margin-bottom: space(8);
+
+  @include breakpoint(med) {
+    width: 100%;
+    margin-bottom: 0;
+  }
+}
