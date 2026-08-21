@@ -17,12 +17,16 @@ function skipLoadingAnimation() {
 }
 
 onReady(() => {
+  // NavBar and Footer inject <nav>/<footer>, so they must mount before either
+  // path touches those elements: the skip path sets `opacity: 1` on them, and
+  // querying earlier silently no-ops via `?.`, leaving them stuck at 0.
+  NavBar();
+  Footer();
+  initImageZoom();
+
   if (process.env.NODE_ENV === "production") {
     initLoadingAnimation();
   } else {
     skipLoadingAnimation();
   }
-  NavBar();
-  Footer();
-  initImageZoom();
 });
