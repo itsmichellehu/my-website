@@ -140,36 +140,48 @@ $tool-grid-item-size: space(18);
   object-fit: contain;
 }
 
-.logo- {
-  &whiteBG {
-    background: $white;
-    box-shadow: $logo-box-shadow;
-  }
+// Applied only to the branded variants below, never to bare `.logo`.
+// about.html has three unbranded `.logo` elements that must stay shadowless.
+// A mixin, not a placeholder: extending would hoist all six selectors to this
+// position, and would fail if a variant ever needed it inside a breakpoint.
+@mixin logo-surface {
+  box-shadow: $logo-box-shadow;
+}
 
-  &figma {
-    background: #2e3139;
-    box-shadow: $logo-box-shadow;
-  }
+.logo-white-bg {
+  @include logo-surface;
 
-  &miro {
-    background: #ffd12b;
-    box-shadow: $logo-box-shadow;
-  }
+  background: $white;
+}
 
-  &webflow {
-    background: #136df5;
-    box-shadow: $logo-box-shadow;
-  }
+.logo-figma {
+  @include logo-surface;
 
-  &procreate {
-    background: #242424;
-    box-shadow: $logo-box-shadow;
-  }
+  background: #2e3139;
+}
 
-  &adobeXD {
-    background: #470137;
-    box-shadow: $logo-box-shadow;
-  }
+.logo-miro {
+  @include logo-surface;
+
+  background: #ffd12b;
+}
+
+.logo-webflow {
+  @include logo-surface;
+
+  background: #136df5;
+}
+
+.logo-procreate {
+  @include logo-surface;
+
+  background: #242424;
+}
+
+.logo-adobe-xd {
+  @include logo-surface;
+
+  background: #470137;
 }
 
 .heading-dev-tools {
