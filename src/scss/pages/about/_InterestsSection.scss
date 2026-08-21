@@ -1,6 +1,7 @@
 @use "@abstracts/all-abstracts" as *;
 
 #interests {
+  background: #f9f9f9;
   padding: space(12) 0;
 
   @include breakpoint(med) {
@@ -39,23 +40,26 @@
   }
 }
 
-.interest-grid-container {
+.interests-grid-container {
   display: grid;
   align-self: center;
   margin: auto;
   width: 100%;
-  grid-template-columns: auto;
-  grid-template-rows: repeat(6, 1fr);
+  grid-template-columns: 1fr;
+  grid-auto-rows: 1fr;
   row-gap: space(4);
   column-gap: space(4);
 }
 
 .interest-card {
-  padding: space(6);
+  display: flex;
+  flex-direction: column;
+  padding: space(8);
   align-items: flex-start;
   gap: space(2);
-  background: $lightest-grey;
-  border-radius: 0.5rem;
+  border-radius: 1rem;
+  background: $white;
+  box-shadow: 2px 4px 8px 0 rgba(0, 0, 0, 0.08);
   width: 100%;
 }
 
@@ -64,24 +68,19 @@
   flex-direction: column;
   justify-self: stretch;
   gap: space(2);
-  column-gap: space(6);
   align-self: stretch;
-  border-radius: 0.1875rem;
-  // border: 2px solid #cc4d4d;
   height: 100%;
-  margin: auto;
-  width: fit-content;
+  margin: 0;
+  width: 100%;
 }
 
 .card_headline {
   color: $black;
-  font-size: $text-xl;
+  font-size: text(xl);
   font-style: normal;
   font-weight: 600;
   line-height: 110%;
-  /* 2.2rem */
   margin-bottom: 0;
-  grid-area: b;
   height: fit-content;
 }
 
@@ -91,16 +90,13 @@
   font-style: normal;
   font-weight: 400;
   line-height: 145%;
-  /* 1.25rem */
   margin-bottom: 0;
-  grid-area: c;
 }
 
 .interest-card-graphic {
-  width: 5rem;
-  opacity: 0.75;
-  grid-area: a;
-  margin-bottom: space(2);
+  width: 3rem;
+  height: 3rem;
+  flex-shrink: 0;
 }
 
 @include breakpoint(sm) {
@@ -108,9 +104,14 @@
     margin-bottom: space(6);
   }
 
-  .interest-grid-container {
+  .interests-grid-container {
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: auto auto auto;
+  }
+}
+
+@include breakpoint(lg) {
+  .interests-grid-container {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
@@ -174,11 +175,9 @@
     color: $white;
     border-radius: 2px;
     background:
-      linear-gradient(
-        0deg,
+      linear-gradient(0deg,
         rgba(255, 255, 255, 0.15) 0%,
-        rgba(255, 255, 255, 0.15) 100%
-      ),
+        rgba(255, 255, 255, 0.15) 100%),
       $pure-black;
 
     transition: transform 1s ease;
