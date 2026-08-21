@@ -54,7 +54,7 @@ $solution-padding-xxl: space(12);
   }
 
   &_grid-container {
-    max-width: 68rem;
+    max-width: $layout-wide;
   }
 
   &_grid-container-comparison {

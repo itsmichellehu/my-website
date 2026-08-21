@@ -74,7 +74,7 @@ $bg-top-xxl: 10rem;
   padding: space(12) 0;
   cursor: pointer;
   transition: transform 0.3s ease-in-out;
-  max-width: $nav-footer-max-width;
+  max-width: $layout-wide;
 
   @include breakpoint(med) {
     flex-direction: row;

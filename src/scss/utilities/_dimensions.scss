@@ -1,3 +1,5 @@
+@use "@abstracts/all-abstracts" as *;
+
 // utilities/_dimensions.scss
 .width-100 {
 	width: 100%;
@@ -17,11 +19,6 @@
 
 .mw-1024 {
 	max-width: 64rem !important;
-	margin: auto;
-}
-
-.mw-1088 {
-	max-width: 68rem !important;
 	margin: auto;
 }
 

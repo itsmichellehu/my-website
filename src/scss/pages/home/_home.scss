@@ -1,7 +1,7 @@
 @use "@abstracts/all-abstracts" as *;
 
 .hero-wrapper {
-  max-width: $nav-footer-max-width !important;
+  max-width: $layout-wide !important;
 }
 
 footer {

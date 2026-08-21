@@ -30,7 +30,7 @@ nav {
 
   @include breakpoint(med) {
     width: 90%;
-    max-width: $nav-footer-max-width;
+    max-width: $layout-wide;
     gap: space(2);
   }
 }
@@ -85,12 +85,10 @@ nav {
   list-style-type: none;
   cursor: pointer;
 
-  @include hover-underline-target(
-    ".nav-link-text",
+  @include hover-underline-target(".nav-link-text",
     $teal-accent,
     $teal-accent,
-    1.5px
-  );
+    1.5px);
 
   a {
     display: flex;
