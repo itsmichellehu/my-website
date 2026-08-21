@@ -1,8 +1,7 @@
 @use "@abstracts/all-abstracts" as *;
 @use "about" as *;
 
-$logo-box-shadow:
-  -1px -1px 3px 0 rgba(0, 0, 0, 0.125) inset,
+$logo-box-shadow: -1px -1px 3px 0 rgba(0, 0, 0, 0.125) inset,
   1px 1px 2px 0 rgba(255, 255, 255, 0.125) inset,
   -2px -2px 4px 0 rgba(49, 49, 49, 0.125),
   1px 1px 4px 0 rgba(0, 0, 0, 0.25);
@@ -37,19 +36,56 @@ $tool-grid-item-size: space(18);
 }
 
 .toolbox_section-wrapper {
-  display: block;
+  display: flex;
+  flex-direction: column;
   margin: auto;
 
   h2 {
     width: fit-content;
     margin-bottom: space(8);
-    text-wrap: nowrap;
+
+    span {
+      display: block;
+    }
+
+    // Hold the base size through `med`: the global h2 rule in base/_type.scss
+    // jumps to $text-4xl at 768px, which widens this heading enough to squeeze
+    // the adjacent tools grid. Let it scale up at `lg` instead.
+    @include breakpoint(med) {
+      margin: 0;
+      font-size: $text-3xl;
+      letter-spacing: -0.0525rem;
+    }
+
+    @include breakpoint(xl) {
+      font-size: $text-4xl;
+      letter-spacing: -0.02rem;
+    }
+  }
+}
+
+#dev-toolbox .toolbox_section-wrapper {
+  align-items: end;
+}
+
+@include breakpoint(sm) {
+  .toolbox_section-wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center !important;
+    gap: space(8);
   }
 
-  @include breakpoint(med) {
-    display: flex;
-    justify-content: space-between;
-    gap: space(8);
+  #design-toolbox .tools_grid-container {
+    max-width: 17rem;
+  }
+
+  #dev-toolbox .tools_grid-container {
+    max-width: 12rem;
+  }
+
+  #dev-toolbox .toolbox_section-wrapper {
+    flex-direction: row-reverse;
 
     h2 {
       margin-bottom: 0;
@@ -57,31 +93,61 @@ $tool-grid-item-size: space(18);
   }
 }
 
-.toolbox_content-wrapper {
-  @include breakpoint(med) {
+@include breakpoint(med) {
+  #dev-toolbox .tools_grid-container {
+    max-width: none;
+  }
+}
+
+.heading-design-tools,
+.heading-dev-tools {
+  @include breakpoint(lg) {
+    text-wrap: nowrap;
     width: fit-content;
   }
 }
 
-.design-tools_grid-container,
-.dev-tools_grid-container {
-  display: grid;
-  width: 100%;
-  margin: auto;
-  grid-template-columns: repeat(4, 1fr);
-  gap: space(6);
+.toolbox_content-wrapper {
+  margin: auto 0;
 }
 
-.design-tools_grid-container {
-  grid-template-rows: auto auto;
+.tools_grid-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: start;
+  justify-content: start;
+  gap: space(4);
+  width: 100%;
+}
 
+#design-toolbox .tools_grid-container,
+#dev-toolbox .tools_grid-container {
+  // Labels are visually hidden, not removed: they keep each tool named for
+  // assistive tech (logo <img>s carry alt="" and the inline SVGs have no
+  // <title>) and stay in the DOM for the planned hover tooltip.
   p {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
     color: $off-black;
+    white-space: nowrap;
+    clip-path: inset(50%);
   }
 }
 
-.dev-tools_grid-container {
-  grid-template-rows: 1fr;
+#dev-toolbox {
+  .logo {
+    padding: space(1);
+  }
+}
+
+@include breakpoint(lg) {
+  #design-toolbox .tools_grid-container {
+    max-width: 21rem;
+  }
 }
 
 .tools-grid-item {
@@ -89,14 +155,14 @@ $tool-grid-item-size: space(18);
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: $logo-size;
+  max-width: $tool-grid-item-size;
   color: $white;
   line-height: $leading-snug;
   text-align: center;
 
   p {
     margin: 0;
-    font-size: $text-xs;
+    font-size: $text-sm;
     letter-spacing: 0;
     text-align: center;
   }
@@ -107,24 +173,20 @@ $tool-grid-item-size: space(18);
     justify-content: center;
     width: $logo-size;
     height: $logo-size;
-    margin-bottom: space(3);
-    padding: space(2);
     border-radius: space(3);
-
-    @include breakpoint(med) {
-      width: $logo-size-med;
-      height: $logo-size-med;
-      padding: space(3);
-    }
+    padding: space(2);
   }
 
-  @include breakpoint(med-lg) {
-    width: $tool-grid-item-size;
+  .logo-sass {
+    padding: space(1);
+  }
 
-    .logo {
-      width: $tool-grid-item-size;
-      height: $tool-grid-item-size;
-    }
+  .logo-javascript {
+    padding: 0;
+  }
+
+  .logo-adobe-xd {
+    padding: 0;
   }
 }
 
@@ -138,6 +200,37 @@ $tool-grid-item-size: space(18);
   height: auto;
   max-height: 100%;
   object-fit: contain;
+}
+
+.heading-design-tools {
+  flex: 1;
+}
+
+.heading-dev-tools {
+  margin-bottom: space(8);
+  margin-left: auto;
+  text-align: right;
+
+  @include breakpoint(med) {
+    width: 100%;
+    margin-bottom: 0;
+  }
+}
+
+@include breakpoint(lg) {
+  .tools-grid-item {
+    flex-basis: $tool-grid-item-size;
+
+    .logo {
+      padding: space(3);
+      width: $tool-grid-item-size;
+      height: $tool-grid-item-size;
+    }
+  }
+
+  #dev-toolbox .tools_grid-container {
+    flex-wrap: nowrap;
+  }
 }
 
 // Applied only to the branded variants below, never to bare `.logo`.
@@ -178,17 +271,13 @@ $tool-grid-item-size: space(18);
   background: #242424;
 }
 
-.logo-adobe-xd {
-  @include logo-surface;
-
-  background: #470137;
+.logo-adobe {
+  background: #001E36;
+  padding: 0;
 }
 
-.heading-dev-tools {
-  margin-bottom: space(8);
-
-  @include breakpoint(med) {
-    width: 100%;
-    margin-bottom: 0;
-  }
+.logo.logo-adobe-xd {
+  @include logo-surface;
+  background: transparent;
+  padding: 0;
 }

@@ -1,6 +1,5 @@
 @use "abstracts/all-abstracts";
 @use "base/all-base";
-@use "utilities/all-utilities";
 @use "sections/FinalPrototype";
 @use "sections/interview-quotes";
 @use "sections/ProjectHeroHeader";
@@ -10,3 +9,4 @@
 @use "sections/section-intro";
 @use "sections/section-overview";
 @use "sections/section-solution";
+@use "utilities/all-utilities";

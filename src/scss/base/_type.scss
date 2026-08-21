@@ -15,6 +15,12 @@ h6 {
   &::first-letter {
     text-transform: capitalize;
   }
+
+  &.first-letter-lowercase {
+    &::first-letter {
+      text-transform: lowercase;
+    }
+  }
 }
 
 p,
