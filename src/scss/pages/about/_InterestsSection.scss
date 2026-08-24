@@ -1,222 +1,90 @@
 @use "@abstracts/all-abstracts" as *;
 
+$card-content-gap: space(4);
+
 #interests {
-  background: #f9f9f9;
+  background: $lightest-grey;
   padding: space(12) 0;
 
   @include breakpoint(med) {
-    display: block;
     padding: space(20) 0;
   }
+}
 
-  h2 {
-    color: $white;
-    margin-bottom: space(6);
+.interests-heading {
+  width: 100%;
+  color: $black;
+  margin-bottom: space(8);
+
+  @include breakpoint(med) {
+    margin-bottom: space(10);
   }
 }
 
-.interests-section-heading-wrapper {
-  margin-bottom: space(2);
-}
-
-.interests-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: fit-content;
-  margin: auto;
-  padding: 0;
-
-  h2 {
-    display: block;
-    color: $white;
-    margin-bottom: space(6);
-    width: fit-content;
-    text-align: center;
-  }
-
-  h3 {
-    width: 100%;
-  }
-}
-
-.interests-grid-container {
+ul.interests-grid-container {
   display: grid;
   align-self: center;
-  margin: auto;
-  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+  width: 90dvw;
   grid-template-columns: 1fr;
   grid-auto-rows: 1fr;
-  row-gap: space(4);
-  column-gap: space(4);
+  gap: space(4);
+  max-width: $layout-wide;
+
+  li {
+    font-size: inherit;
+  }
+
+  @include breakpoint(sm) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include breakpoint(lg) {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 .interest-card {
   display: flex;
   flex-direction: column;
-  padding: space(8);
   align-items: flex-start;
-  gap: space(2);
+  gap: $card-content-gap;
+  width: 100%;
+  height: 100%;
+  padding: space(12) space(8);
   border-radius: 1rem;
   background: $white;
   box-shadow: 2px 4px 8px 0 rgba(0, 0, 0, 0.08);
-  width: 100%;
+
+  .copy-container {
+    display: flex;
+    flex-direction: column;
+    gap: $card-content-gap;
+  }
 }
 
-.card_content-wrapper {
-  display: flex;
-  flex-direction: column;
-  justify-self: stretch;
-  gap: space(2);
-  align-self: stretch;
-  height: 100%;
-  margin: 0;
-  width: 100%;
-}
-
-.card_headline {
-  color: $black;
-  font-size: text(xl);
-  font-style: normal;
-  font-weight: 600;
-  line-height: 110%;
-  margin-bottom: 0;
-  height: fit-content;
-}
-
-.card_body {
-  color: $dark-grey;
-  font-size: text(base);
-  font-style: normal;
-  font-weight: 400;
-  line-height: 145%;
-  margin-bottom: 0;
-}
-
-.interest-card-graphic {
+.interest-card-icon {
   width: 3rem;
   height: 3rem;
   flex-shrink: 0;
+  margin-bottom: space(4);
 }
 
-@include breakpoint(sm) {
-  .interests-section-heading-wrapper {
-    margin-bottom: space(6);
-  }
-
-  .interests-grid-container {
-    grid-template-columns: repeat(2, 1fr);
-  }
+.interest-card-title {
+  color: $black;
+  font-size: text(lg);
+  font-weight: 600;
+  line-height: 135%;
+  height: fit-content;
+  margin-bottom: 0;
 }
 
-@include breakpoint(lg) {
-  .interests-grid-container {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-// New design!
-.section-interests-mobile-swiper {
-  display: none;
-  background-color: $pure-black;
-
-  h2 {
-    display: block;
-    color: $white;
-    margin-bottom: space(6);
-    width: fit-content;
-  }
-
-  .swiper {
-    margin: auto;
-    height: fit-content;
-  }
-
-  .swiper-slide {
-    display: flex;
-    max-width: 20rem;
-    padding: space(3);
-    flex-direction: column;
-    align-items: flex-start;
-    gap: space(2);
-    border-radius: 0.1rem;
-    background: $white;
-
-    transition: transform 1s ease;
-  }
-
-  .card_headline {
-    font-size: $text-xl;
-  }
-
-  @include breakpoint(med) {
-    display: none;
-  }
-}
-
-#resetSwiper {
-  color: $white;
-}
-
-// Old design black boring cards -yawns-
-#hmu-swiper-old,
-.swiper {
-  width: 85vw;
-  height: 220px;
-
-  .swiper-slide {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 0 space(6);
-    font-size: $text-lg;
-    font-weight: bold;
-    color: $white;
-    border-radius: 2px;
-    background:
-      linear-gradient(0deg,
-        rgba(255, 255, 255, 0.15) 0%,
-        rgba(255, 255, 255, 0.15) 100%),
-      $pure-black;
-
-    transition: transform 1s ease;
-
-    .emoji {
-      font-size: $text-2xl;
-      margin-top: -space(2);
-      margin-bottom: space(2);
-    }
-
-    .headline {
-      font-size: $text-lg;
-      font-weight: 600;
-      line-height: 110%;
-      /* 1.375rem */
-      letter-spacing: -0.0375rem;
-      color: $white;
-      margin-bottom: space(2);
-    }
-
-    .body {
-      color: $white;
-      font-family: Inter;
-      font-size: $text-sm;
-      font-style: normal;
-      font-weight: 500;
-      line-height: 130%;
-      /* 1.1375rem */
-      margin-bottom: 0;
-    }
-
-    a {
-      display: block;
-      color: $link-highlight;
-      font-family: Inter;
-      font-size: $text-sm;
-      font-style: normal;
-      font-weight: 500;
-      line-height: 130%;
-    }
-  }
+.interest-card-text {
+  color: $off-black;
+  font-size: text(base);
+  font-weight: 400;
+  line-height: 150%;
+  margin-bottom: 0;
 }
